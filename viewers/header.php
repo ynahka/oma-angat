@@ -19,7 +19,7 @@
                     CSS LINK PART START
         =======================================-->
         <!-- FAVICON -->
-        <link rel="icon" href="images/single-logo.png">
+        <link rel="icon" href="images/oma-angat-logo-solo.svg">
 
         <!-- FONTS -->
         <link rel="stylesheet" href="fonts/flaticon/flaticon.css">
