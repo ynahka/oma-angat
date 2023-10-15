@@ -1,0 +1,16 @@
+
+*.min.css
+*.css.map
+*.min.js
+*.min.css.map
+*.min.js.map
+*.gz
+*.tgz
+*.zip
+/css/custom
+/vendor
+
+# Composer
+composer.json
+.vscode
+composer.lock
