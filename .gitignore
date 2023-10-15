@@ -7,7 +7,7 @@
 *.gz
 *.tgz
 *.zip
-/css/custom
+/css
 /vendor
 
 # Composer
