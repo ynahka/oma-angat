@@ -1250,7 +1250,7 @@
                     FEATURED PART START
         =======================================-->
         <section class="section feature-part">
-            <div class="container">
+            <div class="container featured">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-heading">
@@ -1562,7 +1562,7 @@
                     COUNTDOWN PART START
         =======================================-->
         <section class="section countdown-part">
-            <div class="container">
+            <div class="container featured">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mx-auto">
                         <div class="countdown-content">
@@ -1602,7 +1602,7 @@
                     NEW ITEM PART START
         =======================================-->
         <section class="section newitem-part">
-            <div class="container">
+            <div class="container featured">
                 <div class="row">
                     <div class="col">
                         <div class="section-heading">
@@ -1937,7 +1937,7 @@
                     NICHE PART START
         =======================================-->
         <section class="section niche-part">
-            <div class="container">
+            <div class="container featured">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-heading">
@@ -3564,7 +3564,7 @@
                       BLOG PART START
         =======================================-->
         <section class="section blog-part">
-            <div class="container">
+            <div class="container featured">
                 <div class="row">
                     <div class="col-12">
                         <div class="section-heading">
