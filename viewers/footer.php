@@ -31,7 +31,7 @@
                                 <li>
                                     <i class="icofont-ui-touch-phone" href="#"> </i>
                                     <p>
-                                        <span>(+639) 120 225 070</span>
+                                        <span>(+63) 912 022 5970</span>
                                     </p>
                                 </li>
                                 <li>
@@ -82,20 +82,16 @@
                         </div>
                     </div> -->
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="footer-bottom">
-                            <p class="footer-copytext">Copyrights &copy; 2023 - <a target="_blank" href="index.php">Oma-Angat Virtual Agri-Market</a></p>
-                            <!-- <div class="footer-card">
-                                <a href="#"><img src="images/payment/jpg/01.jpg" alt="payment"></a>
-                                <a href="#"><img src="images/payment/jpg/02.jpg" alt="payment"></a>
-                                <a href="#"><img src="images/payment/jpg/03.jpg" alt="payment"></a>
-                                <a href="#"><img src="images/payment/jpg/04.jpg" alt="payment"></a>
-                            </div> -->
-                        </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="col-sm-12">
+                        <p class="footer-copytext">Copyright &copy; 2023 - <a target="_blank" href="index.php">Oma-Angat Virtual Agri-Market</a></p>
                     </div>
                 </div>
             </div>
+            
         </footer>
         <!--=====================================
                       FOOTER PART END

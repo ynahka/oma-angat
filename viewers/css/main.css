@@ -6060,7 +6060,7 @@ tbody tr td:last-child {
             FOOTER PART STYLE
 ======================================*/
 .footer-part {
-  padding-top: 95px;
+  padding-top: 50px;
   background-color: var(--secondary);
 }
 
@@ -6079,7 +6079,7 @@ tbody tr td:last-child {
 }
 
 .footer-logo img {
-  width: 180px;
+  width: 130px;
 }
 
 .footer-desc {
@@ -6121,8 +6121,8 @@ tbody tr td:last-child {
 }
 
 .footer-social li a:hover {
-  color: var(--primary);
-  background: var(--white);
+  color: var(--intro-bg);
+  background: var(--hovercolor);
 }
 
 .footer-title {
@@ -6143,7 +6143,7 @@ tbody tr td:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 .footer-contact li:last-child {
@@ -6152,7 +6152,7 @@ tbody tr td:last-child {
 
 .footer-contact li i {
   font-size: 20px;
-  margin-right: 15px;
+  margin-right: 8px;
   color: var(--primary);
 }
 
@@ -6184,7 +6184,7 @@ tbody tr td:last-child {
 }
 
 .footer-links ul li a:hover {
-  color: var(--intro-bg) ;
+  color: var(--hovercolor) ;
 }
 
 .footer-app {
@@ -6203,28 +6203,22 @@ tbody tr td:last-child {
 .footer-bottom {
   margin-top: 60px;
   padding: 20px 35px 15px;
-  border-radius: 8px 8px 0px 0px;
-  background: var(--primary);
-  border-top: 1px solid var(--border);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background: var(--hovercolor);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-copytext {
   font-size: 15px;
   color: var(--white);
+  text-align: center;
+  
 }
-
 
 .footer-copytext a {
   color: var(--white);
+  align-items: center;
 }
 
 .footer-copytext a:hover {
