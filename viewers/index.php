@@ -689,48 +689,56 @@
         <!--=====================================
                     SUGGEST PART START
         =======================================-->
+        <?php
+        $items = [
+           [
+              "name"=>"vegetables",
+              "img"=>"images/suggest/vegetables.svg",
+             
+              "url"=>"shop-1column.php",
+              
+           ],
+           [
+              "name"=>"fruits",
+              "img"=>"images/suggest/fruits.svg",
+              "total_items"=>89,
+              "url"=>"shop-1column.php",
+              
+           ],
+           [
+              "name"=>"Grains",
+              "img"=>"images/suggest/grains.svg",
+           
+              "url"=>"shop-1column.php",
+              
+           ],
+           [
+              "name"=>"eggs",
+              "img"=>"images/suggest/eggs.svg",
+            
+              "url"=>"shop-1column.php",
+              
+           ],
+           [
+              "name"=>"dry fish",
+              "img"=>"images/suggest/dried-fish.svg",
+              "total_items"=>23,
+              "url"=>"shop-1column.php",
+              
+           ]
+        ];
+        ?>
+
         <section class="section suggest-part">
             <div class="container">
                 <ul class="suggest-slider slider-arrow">
-                    <li>
-                        <a class="suggest-card" href="shop-1column.php">
-                            <img src="images/suggest/vegetables-2.png" alt="suggest">
-                            <h5>vegetables <span>34 items</span></h5>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="suggest-card" href="shop-1column.php">
-                            <img src="images/suggest/fruits.png" alt="suggest">
-                            <h5>fruits <span>89 items</span></h5>
-                        </a>
-                    </li>
-            
-                    <li>
-                        <a class="suggest-card" href="shop-1column.php">
-                            <img src="images/suggest/dairy.png" alt="suggest">
-                            <h5>dairy farm <span>83 items</span></h5>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="suggest-card" href="shop-1column.php">
-                            <img src="images/suggest/seafoods.png" alt="suggest">
-                            <h5>sea foods <span>40 items</span></h5>
-                        </a>
-                    </li>
-              
-                    <li>
-                        <a class="suggest-card" href="shop-1column.php">
-                            <img src="images/suggest/dried-fish.png" alt="suggest">
-                            <h5>dry fish <span>23 items</span></h5>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="suggest-card" href="shop-1column.php">
-                            <img src="images/suggest/rice.png" alt="suggest">
-                            <h5>Rice <span>23 items</span></h5>
-                        </a>
-                    </li>
-
+                    <?php foreach($items as $item) :?>
+                        <li>
+                            <a class="suggest-card" href="<?php echo $item['url']?>">
+                                <img src="<?php echo $item['img']?>">
+                            </a>
+                        </li>
+                    <?php endforeach;?>
                 </ul>
             </div>
         </section>

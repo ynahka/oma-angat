@@ -46,9 +46,9 @@
                             <h3 class="footer-title">About Oma-Angat</h3>
                             <div class="footer-links">
                                 <ul>
-                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">About</a></li>
                                     <li><a href="#">Oma-Angat Team</a></li>
-                                    <li><a href="#">Oma-ongat Policies</a></li>
+                                    <li><a href="#">Terms and Conditions</a></li>
                                     <li><a href="#">Privacy Policy</a></li>
                                     <li><a href="#">Donation for Farmers</a></li>
                                     <li><a href="#">Harvesting Calendar</a></li>

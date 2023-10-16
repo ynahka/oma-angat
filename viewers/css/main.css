@@ -1723,6 +1723,7 @@ tbody tr td:last-child {
 .suggest-card {
   position: relative;
 }
+
 .suggest-part {
   box-shadow: 0px 8px 16px 0px rgb(85, 115, 95, 0.2);
 }
@@ -1745,7 +1746,7 @@ tbody tr td:last-child {
 
 .suggest-card:hover::before {
   /* background: rgb(76, 100, 75, 0.8); */
-  border: 1px solid var(--primary);
+  border: 3px solid var(--primary);
 }
 
 .suggest-card img:hover::before {
@@ -3919,7 +3920,7 @@ tbody tr td:last-child {
 
 .header-top-welcome p {
   font-size: 15px;
-  color: var(--primary);
+  color: var(--header);
   letter-spacing: 0.6px;
   font-weight: 500;
   font-family: var(--pfamily);
@@ -3983,7 +3984,7 @@ tbody tr td:last-child {
 }
 
 .header-top-list li a {
-  color: var(--primary);
+  color: var(--header);
   letter-spacing: 0.6px;
   font-weight: 520;
   font-size: 15px;
@@ -6213,6 +6214,7 @@ tbody tr td:last-child {
   font-size: 15px;
   color: var(--white);
   text-align: center;
+  letter-spacing: 0.5px;
   
 }
 
