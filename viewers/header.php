@@ -25,6 +25,9 @@
         <link rel="stylesheet" href="fonts/flaticon/flaticon.css">
         <link rel="stylesheet" href="fonts/icofont/icofont.min.css">
         <link rel="stylesheet" href="fonts/fontawesome/fontawesome.min.css">
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
 
         <!-- VENDOR -->
         <link rel="stylesheet" href="vendor/venobox/venobox.min.css">

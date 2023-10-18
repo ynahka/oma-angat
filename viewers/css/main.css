@@ -1,6 +1,12 @@
 /*========================================
             ALL COMMON PART STYLE
 =========================================*/
+
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 :root {
   --h1size: 50px;
@@ -17,7 +23,7 @@
   --h5height: 26px;
   --h6height: 26px;
   --bodyheight: 26px;
-  --pfamily: Inter;
+  --pfamily: 'Inter', sans-serif;
   --red: #ff3838;
   --gray: #777777;
   --text: #555555;
