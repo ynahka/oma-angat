@@ -17,7 +17,7 @@
   --h5height: 26px;
   --h6height: 26px;
   --bodyheight: 26px;
-  --pfamily: Robito;
+  --pfamily: Inter;
   --red: #ff3838;
   --gray: #777777;
   --text: #555555;
@@ -1722,6 +1722,7 @@ tbody tr td:last-child {
 =========================================*/
 .suggest-card {
   position: relative;
+
 }
 
 .suggest-part {
