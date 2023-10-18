@@ -103,7 +103,7 @@
                         <div class="navbar-content">
                             <ul class="navbar-list">
                                 <li class="navbar-item dropdown">
-                                    <a class="navbar-link dropdown-arrow" href="#">Shop</a>
+                                    <a class="navbar-link dropdown-arrow" href="#">Market</a>
                                     <ul class="dropdown-position-list">
                                         <li><a href="home-standard.php">Home Standard</a></li>
                                     </ul>

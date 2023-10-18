@@ -25,8 +25,13 @@
         <link rel="stylesheet" href="fonts/flaticon/flaticon.css">
         <link rel="stylesheet" href="fonts/icofont/icofont.min.css">
         <link rel="stylesheet" href="fonts/fontawesome/fontawesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
         <link rel="preconnect" href="https://rsms.me/">
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <!-- Font-awesome -->
+        <script src="https://kit.fontawesome.com/34a0fb1f6d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 
 
         <!-- VENDOR -->

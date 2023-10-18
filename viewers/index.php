@@ -580,7 +580,7 @@
                                 <p>Our Virtual Agri-market ensures fair compensation for your dedication. <br> Your hard work nourishes not just the land but also the community.</p>
                                 <div class="banner-btn-1">
                                     <a class="btn btn-banner" href="offer.php">
-                                    <i class="icofont-share"></i>
+                                    <i class="fa-solid fa-store"></i>
                                         <span>start selling</span>
                                     </a>
                                 </div>
@@ -3494,7 +3494,7 @@
         <!--=====================================
                   TESTIMONIAL PART START
         =======================================-->
-        <section class="section testimonial-part">
+        <!-- <section class="section testimonial-part">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -3562,189 +3562,11 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!--=====================================
-                   TESTIMONIAL PART END
-        =======================================-->
-
-
-        <!--=====================================
-                      BLOG PART START
-        =======================================-->
-        <section class="section blog-part">
-            <div class="container featured">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-heading">
-                            <h2>Read our articles</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="blog-slider slider-arrow">
-                            <div class="blog-card">
-                                <div class="blog-media">
-                                    <a class="blog-img" href="#">
-                                        <img src="images/blog/01.png" alt="blog">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <ul class="blog-meta">
-                                        <li>
-                                            <i class="fas fa-user"></i>
-                                            <span>admin</span>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <span>february 02, 2021</span>
-                                        </li>
-                                    </ul>
-                                    <h4 class="blog-title">
-                                        <a href="blog-details.php">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
-                                    </h4>
-                                    <p class="blog-desc">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae deleniti nam dignissimos sequi ...
-                                    </p>
-                                    <a class="blog-btn" href="#">
-                                        <span>read more</span>
-                                        <i class="icofont-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="blog-card">
-                                <div class="blog-media">
-                                    <a class="blog-img" href="#">
-                                        <img src="images/blog/02.png" alt="blog">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <ul class="blog-meta">
-                                        <li>
-                                            <i class="fas fa-user"></i>
-                                            <span>admin</span>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <span>february 02, 2021</span>
-                                        </li>
-                                    </ul>
-                                    <h4 class="blog-title">
-                                        <a href="blog-details.php">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
-                                    </h4>
-                                    <p class="blog-desc">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae deleniti nam dignissimos sequi ...
-                                    </p>
-                                    <a class="blog-btn" href="#">
-                                        <span>read more</span>
-                                        <i class="icofont-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="blog-card">
-                                <div class="blog-media">
-                                    <a class="blog-img" href="#">
-                                        <img src="images/blog/03.png" alt="blog">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <ul class="blog-meta">
-                                        <li>
-                                            <i class="fas fa-user"></i>
-                                            <span>admin</span>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <span>february 02, 2021</span>
-                                        </li>
-                                    </ul>
-                                    <h4 class="blog-title">
-                                        <a href="blog-details.php">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
-                                    </h4>
-                                    <p class="blog-desc">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae deleniti nam dignissimos sequi ...
-                                    </p>
-                                    <a class="blog-btn" href="#">
-                                        <span>read more</span>
-                                        <i class="icofont-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="blog-card">
-                                <div class="blog-media">
-                                    <a class="blog-img" href="#">
-                                        <img src="images/blog/04.png" alt="blog">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <ul class="blog-meta">
-                                        <li>
-                                            <i class="fas fa-user"></i>
-                                            <span>admin</span>
-                                        </li>
-                                        <li>
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <span>february 02, 2021</span>
-                                        </li>
-                                    </ul>
-                                    <h4 class="blog-title">
-                                        <a href="blog-details.php">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
-                                    </h4>
-                                    <p class="blog-desc">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae deleniti nam dignissimos sequi ...
-                                    </p>
-                                    <a class="blog-btn" href="#">
-                                        <span>read more</span>
-                                        <i class="icofont-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-btn-25">
-                            <a href="blog-grid.php" class="btn btn-outline">
-                                <i class="fas fa-eye"></i>
-                                <span>view all blog</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--=====================================
-                      BLOG PART END
-        =======================================-->
-
-<!-- 
-        =====================================
-                    NEWSLETTER PART START
-        =======================================-->
-        <!-- <section class="news-part" style="background: url(images/newsletter.png) no-repeat center;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-5 col-lg-6 col-xl-7">
-                        <div class="news-text">
-                            <h2>Get 20% Discount for Subscriber</h2>
-                            <p>Lorem ipsum dolor consectetur adipisicing accusantium</p>
-                        </div>
-                    </div>
-                    <div class="col-md-7 col-lg-6 col-xl-5">
-                        <form class="news-form">
-                            <input type="text" placeholder="Enter Your Email Address">
-                            <button><span><i class="icofont-ui-email"></i>Subscribe</span></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
         </section> -->
         <!--=====================================
-                    NEWSLETTER PART END
-        ======================================= -->
-
-        
+                   TESTIMONIAL PART END
+        =======================================-->    
+            
         <?php include('footer.php'); ?>
         <?php include('js-vendor.php'); ?>
 

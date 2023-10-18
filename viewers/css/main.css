@@ -3927,9 +3927,9 @@ tbody tr td:last-child {
 
 .header-top-welcome p {
   font-size: 15px;
-  color: var(--header);
+  color: var(--primary);
   letter-spacing: 0.6px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: var(--pfamily);
 }
 
@@ -3991,9 +3991,9 @@ tbody tr td:last-child {
 }
 
 .header-top-list li a {
-  color: var(--header);
+  color: var(--primary);
   letter-spacing: 0.6px;
-  font-weight: 520;
+  font-weight: 400;
   font-size: 15px;
   font-family: var(--pfamily);
   white-space: nowrap;
