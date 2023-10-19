@@ -4412,13 +4412,18 @@ tbody tr td:last-child {
 }
 
 .navbar-item {
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 .navbar-item:last-child {
   margin-right: 0px;
 }
 
+.navbar-item i {
+    font-size: 20px;
+    margin-right: 5px;
+    color: var(--primary);
+}
 .navbar-link {
   padding: 15px 0px;
   font-weight: 500;
@@ -4509,6 +4514,7 @@ tbody tr td:last-child {
   margin-right: 8px;
   color: var(--primary);
 }
+
 
 .navbar-info p small {
   font-size: 14px;
@@ -6091,9 +6097,11 @@ tbody tr td:last-child {
 }
 
 .footer-desc {
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+  text-transform:uppercase;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .footer-social li {
@@ -6103,6 +6111,7 @@ tbody tr td:last-child {
 }
 .footer-social{
   text-align: center;
+  margin-top: 5px;
 }
 
 .footer-social li:last-child {
@@ -6134,6 +6143,7 @@ tbody tr td:last-child {
 }
 
 .footer-title {
+  font-size: 18px;
   margin-bottom: 10px;
   letter-spacing: -0.3px;
   text-transform:uppercase;

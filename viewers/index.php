@@ -576,7 +576,7 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                             <div class="banner-content">
-                                <h1><span class="highlight">Are you a Farmer? </span> <br> Start selling and watch your fields grow </h1>
+                                <h1><span class="highlight">Are you a Farmer? </span> <br> Join and watch your fields grow </h1>
                                 <p>Our Virtual Agri-market ensures fair compensation for your dedication. <br> Your hard work nourishes not just the land but also the community.</p>
                                 <div class="banner-btn-1">
                                     <a class="btn btn-banner" href="offer.php">

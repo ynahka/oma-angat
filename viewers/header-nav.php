@@ -73,15 +73,15 @@
 
                     <div class="header-widget-group">
                         <a href="notification.php" class="header-widget" title="Notifications">
-                            <i class="icofont-tasks-alt"></i>
+                            <i class="fa-solid fa-bell"></i>
                             <sup>0</sup>
                         </a>
                         <a href="wishlist.php" class="header-widget" title="Wishlist">
-                            <i class="fas fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
                             <sup>0</sup>
                         </a>
                         <button class="header-widget header-cart" title="Cartlist">
-                            <i class="fas fa-shopping-basket"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
                             <sup>9+</sup>
                         </button>
                     </div>
@@ -103,19 +103,47 @@
                         <div class="navbar-content">
                             <ul class="navbar-list">
                                 <li class="navbar-item dropdown">
-                                    <a class="navbar-link dropdown-arrow" href="#">Market</a>
+                                    <a href="#"><i class="fa-solid fa-house"></i></a>
+                                    <a class="navbar-link" href="index.php">Home</a>
+                                </li>
+                                <li class="navbar-item dropdown">
+                                    <a href="#"><i class="fa-solid fa-comments"></i></a>
+                                    <a class="navbar-link" href="blog-author.php" >Feed</a>
+                                </li>
+                                <li class="navbar-item dropdown">
+                                    <a href="#"><i class="fa-solid fa-store"></i></a>
+                                    <a class="navbar-link dropdown-arrow" href="#">Shop</a>
                                     <ul class="dropdown-position-list">
-                                        <li><a href="home-standard.php">Home Standard</a></li>
+                                        <li><a href="faq.php">Farmer's Market</a></li>
+                                        <li><a href="offer.php">Category</a></li>
+                                        <li><a href="profile.php">Product</a></li>
                                     </ul>
                                 </li>
-                                <li class="navbar-item dropdown-megamenu">
-                                    <a class="navbar-link dropdown-arrow" href="#">shop</a>
+                                <!-- <li class="navbar-item dropdown">
+                                    <a class="navbar-link dropdown-arrow" href="#">pages</a>
+                                    <ul class="dropdown-position-list">
+                                        <li><a href="faq.php">faqs</a></li>
+                                        <li><a href="offer.php">offers</a></li>
+                                        <li><a href="profile.php">my profile</a></li>
+                                        <li><a href="wallet.php">my wallet</a></li>
+                                        <li><a href="about.php">about us</a></li>
+                                        <li><a href="contact.php">contact us</a></li>
+                                        <li><a href="privacy.php">privacy policy</a></li>
+                                        <li><a href="coming-soon.php">coming soon</a></li>
+                                        <li><a href="blank-page.php">blank page</a></li>
+                                        <li><a href="error.php">404 Error</a></li>
+                                        <li><a href="email-template.php">email template</a></li>
+                                    </ul>
+                                </li> -->
+                            
+                                <!-- <li class="navbar-item dropdown-megamenu">
+                                    <a class="navbar-link dropdown-arrow" href="#">Shop</a>
                                     <div class="megamenu">
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-lg-3">
                                                     <div class="megamenu-wrap">
-                                                        <h5 class="megamenu-title">shop pages</h5>
+                                                        <h5 class="megamenu-title">Farmer's Market</h5>
                                                         <ul class="megamenu-list">
                                                             <li><a href="shop-1column.php">shop 1 column</a></li>
                                                             <li><a href="shop-2column.php">shop 2 column</a></li>
@@ -124,11 +152,11 @@
                                                 </div>
                                                 <div class="col-lg-3">
                                                     <div class="megamenu-wrap">
-                                                        <h5 class="megamenu-title">product pages</h5>
+                                                        <h5 class="megamenu-title">Category</h5>
                                                         <ul class="megamenu-list">
-                                                            <!-- <li><a href="product-tab.php">product single tab</a></li>
+                                                             <li><a href="product-tab.php">product single tab</a></li>
                                                             <li><a href="product-grid.php">product single grid</a></li>
-                                                            <li><a href="product-video.php">product single video</a></li> -->
+                                                            <li><a href="product-video.php">product single video</a></li>
                                                             <li><a href="product-simple.php">product single simple</a></li>
                                                         </ul>
                                                     </div>
@@ -159,23 +187,8 @@
                                         </div>
                                     </div>
                                 </li>
+                                
                                 <li class="navbar-item dropdown">
-                                    <a class="navbar-link dropdown-arrow" href="#">pages</a>
-                                    <ul class="dropdown-position-list">
-                                        <li><a href="faq.php">faqs</a></li>
-                                        <li><a href="offer.php">offers</a></li>
-                                        <li><a href="profile.php">my profile</a></li>
-                                        <li><a href="wallet.php">my wallet</a></li>
-                                        <li><a href="about.php">about us</a></li>
-                                        <li><a href="contact.php">contact us</a></li>
-                                        <li><a href="privacy.php">privacy policy</a></li>
-                                        <li><a href="coming-soon.php">coming soon</a></li>
-                                        <li><a href="blank-page.php">blank page</a></li>
-                                        <li><a href="error.php">404 Error</a></li>
-                                        <li><a href="email-template.php">email template</a></li>
-                                    </ul>
-                                </li>
-                                <!-- <li class="navbar-item dropdown">
                                     <a class="navbar-link dropdown-arrow" href="#">authentic</a>
                                     <ul class="dropdown-position-list">
                                         <li><a href="login.php">login</a></li>
@@ -194,15 +207,16 @@
                                     </ul>
                                 </li> -->
                             </ul>
+                            
                             <div class="navbar-info-group">
                                 <div class="navbar-info">
-                                    <a href="#"><i class="icofont-calendar"></i></a>
+                                    <a href="#"><i class="fa-solid fa-calendar-days"></i></a>
                                     <p>
                                         <small><a href="#" title="Reserve Product">Harvesting Calendar</a></small>
                                     </p>
                                 </div>
                                 <div class="navbar-info">
-                                    <a href="#"><i class="icofont-exchange"></i></a>
+                                    <a href="#"><i class="fa-solid fa-hand-holding-medical"></i></a>
                                     <p>
                                         <small><a href="#" title="Help a Farmer">Donation</a></small>
                                     </p>

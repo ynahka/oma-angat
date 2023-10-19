@@ -13,7 +13,7 @@
                             <ul class="footer-social">
                                 <li><a class="icofont-facebook" href="#"></a></li>
                                 <li><a class="icofont-instagram" href="#"></a></li>
-                                <li><a class="icofont-ui-email" href="#"></a></li>
+                                <li><a class="fa-solid fa-envelope"></a></li>
 
                             </ul>
                         </div>
@@ -23,19 +23,19 @@
                             <h3 class="footer-title">contact us</h3>
                             <ul class="footer-contact">
                                 <li>
-                                    <i class="icofont-ui-email" href="#" ></i>
+                                    <i class="fa-solid fa-envelope" href="#" ></i>
                                     <p>
                                         <span>oma-angat@gmail.com</span>
                                     </p>
                                 </li>
                                 <li>
-                                    <i class="icofont-ui-touch-phone" href="#"> </i>
+                                    <i class="fa-solid fa-phone" href="#"> </i>
                                     <p>
                                         <span>(+63) 912 022 5970</span>
                                     </p>
                                 </li>
                                 <li>
-                                    <i class="icofont-location-pin" href="#"></i>
+                                    <i class="fa-solid fa-location-dot" href="#"></i>
                                     <p>CSB2, Bicol University Main Campus, Legazpi, Philippines </p>
                                 </li>
                             </ul>
