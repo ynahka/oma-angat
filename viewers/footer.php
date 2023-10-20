@@ -13,7 +13,7 @@
                             <ul class="footer-social">
                                 <li><a class="icofont-facebook" href="#"></a></li>
                                 <li><a class="icofont-instagram" href="#"></a></li>
-                                <li><a class="fa-solid fa-envelope"></a></li>
+                                <li><a class="fa-regular fa-envelope"></a></li>
 
                             </ul>
                         </div>
@@ -87,7 +87,7 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="col-sm-12">
-                        <p class="footer-copytext">Copyright &copy; 2023 - <a target="_blank" href="index.php">Oma-Angat Virtual Agri-Market</a></p>
+                        <p class="footer-copytext">Copyright &copy; 2023 - <a target="_blank" href="index.php">Oma-Angat, Virtual Agri-Market</a></p>
                     </div>
                 </div>
             </div>

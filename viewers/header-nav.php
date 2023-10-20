@@ -102,7 +102,14 @@
                     <div class="col-lg-12">
                         <div class="navbar-content">
                             <ul class="navbar-list">
-                                <li class="navbar-item dropdown">
+                                <style>
+                                    .navbar-item.active {
+                                        background-color: #F5F5F5; /* You can replace the color with your own */
+                                        color: #000; /* You can replace the color with your own */
+                                    }
+                                </style>
+
+                                <li class="navbar-item dropdown active">
                                     <a href="#"><i class="fa-solid fa-house"></i></a>
                                     <a class="navbar-link" href="index.php">Home</a>
                                 </li>
@@ -119,93 +126,6 @@
                                         <li><a href="profile.php">Product</a></li>
                                     </ul>
                                 </li>
-                                <!-- <li class="navbar-item dropdown">
-                                    <a class="navbar-link dropdown-arrow" href="#">pages</a>
-                                    <ul class="dropdown-position-list">
-                                        <li><a href="faq.php">faqs</a></li>
-                                        <li><a href="offer.php">offers</a></li>
-                                        <li><a href="profile.php">my profile</a></li>
-                                        <li><a href="wallet.php">my wallet</a></li>
-                                        <li><a href="about.php">about us</a></li>
-                                        <li><a href="contact.php">contact us</a></li>
-                                        <li><a href="privacy.php">privacy policy</a></li>
-                                        <li><a href="coming-soon.php">coming soon</a></li>
-                                        <li><a href="blank-page.php">blank page</a></li>
-                                        <li><a href="error.php">404 Error</a></li>
-                                        <li><a href="email-template.php">email template</a></li>
-                                    </ul>
-                                </li> -->
-                            
-                                <!-- <li class="navbar-item dropdown-megamenu">
-                                    <a class="navbar-link dropdown-arrow" href="#">Shop</a>
-                                    <div class="megamenu">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-lg-3">
-                                                    <div class="megamenu-wrap">
-                                                        <h5 class="megamenu-title">Farmer's Market</h5>
-                                                        <ul class="megamenu-list">
-                                                            <li><a href="shop-1column.php">shop 1 column</a></li>
-                                                            <li><a href="shop-2column.php">shop 2 column</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <div class="megamenu-wrap">
-                                                        <h5 class="megamenu-title">Category</h5>
-                                                        <ul class="megamenu-list">
-                                                             <li><a href="product-tab.php">product single tab</a></li>
-                                                            <li><a href="product-grid.php">product single grid</a></li>
-                                                            <li><a href="product-video.php">product single video</a></li>
-                                                            <li><a href="product-simple.php">product single simple</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <div class="megamenu-wrap">
-                                                        <h5 class="megamenu-title">user action</h5>
-                                                        <ul class="megamenu-list">
-                                                            <li><a href="wishlist.php">wishlist</a></li>
-                                                            <li><a href="compare.php">compare</a></li>
-                                                            <li><a href="checkout.php">checkout</a></li>
-                                                            <li><a href="orderlist.php">order history</a></li>
-                                                            <li><a href="invoice.php">order invoice</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <div class="megamenu-wrap">
-                                                        <h5 class="megamenu-title">other pages</h5>
-                                                        <ul class="megamenu-list">
-                                                            <li><a href="all-category.php">all Category</a></li>
-                                                            <li><a href="brand-list.php">brand list</a></li>
-                                                            <li><a href="brand-single.php">brand single</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                                <li class="navbar-item dropdown">
-                                    <a class="navbar-link dropdown-arrow" href="#">authentic</a>
-                                    <ul class="dropdown-position-list">
-                                        <li><a href="login.php">login</a></li>
-                                        <li><a href="register.php">register</a></li>
-                                        <li><a href="reset-password.php">reset password</a></li>
-                                        <li><a href="change-password.php">change password</a></li>
-                                    </ul>
-                                </li> -->
-                                <!-- <li class="navbar-item dropdown">
-                                    <a class="navbar-link dropdown-arrow" href="#">blogs</a>
-                                    <ul class="dropdown-position-list">
-                                        <li><a href="blog-grid.php">blog grid</a></li>
-                                        <li><a href="blog-standard.php">blog standard</a></li>
-                                        <li><a href="blog-details.php">blog details</a></li>
-                                        <li><a href="blog-author.php">blog author</a></li>
-                                    </ul>
-                                </li> -->
                             </ul>
                             
                             <div class="navbar-info-group">
