@@ -44,6 +44,8 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/user-auth.css">
+        <link rel="stylesheet" href="css/landing-page.css">
+        <link rel="stylesheet" href="css/profile.css">
         <link rel="stylesheet" href="css/home-grid.css">
 
         <!-- Additional CSS Files -->

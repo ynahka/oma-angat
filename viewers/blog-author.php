@@ -856,6 +856,7 @@
 
         <?php include('footer.php'); ?>
         <?php include('js-vendor.php'); ?>
+
     </body>
 </html>
 
