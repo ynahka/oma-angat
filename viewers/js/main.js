@@ -81,6 +81,74 @@ $('.header-user').on('click', function(){
     });
 });
 
+// ========================================
+//         Underline Active State FUNCTION
+// ========================================
+// $(function(){
+//     var current =(/index.php/);
+//     $('.navbar-item a').each(function(){
+//         var $this = $(this);
+//         // if the current path is like this link, make it active
+//         if($this.attr('href').indexOf(current) !== -1){
+//             $this.addClass('active');
+//         }
+//     })
+// })
+
+// window.onload = function() {
+//     var path = window.location.pathname;
+//     var navItems = document.querySelectorAll('.navbar-item a');
+//     navItems.forEach(function(navItem) {
+//         if (navItem.getAttribute('href') === path) {
+//             navItem.classList.add('active');
+//         }
+//     });
+// }
+
+// $(window).on('load', function() {
+//     $('.preloader').fadeOut();
+//     $('.animated-row').each(function() {
+//         var $this = $(this);
+//         $this.find('.animate').each(function(i) {
+//             var $item = $(this);
+//             var animation = $item.data('animate');
+//             $item.on('inview', function(event, isInView) {
+//                 if (isInView) {
+//                     setTimeout(function() {
+//                         $item.addClass('animated ' + animation).removeClass('animate');
+//                     }, i * 50);
+//                 } else if (!screencheck(767)) {
+//                     $item.removeClass('animated ' + animation).addClass('animate');
+//                 }
+//             });
+//         });
+//     });
+// });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var navLinks = document.getElementsByClassName("navbar-item");
+
+    for (var i = 0; i < navLinks.length; i++) {
+        if (navLinks[i].getElementsByTagName("a")[0].href === document.URL) {
+            navLinks[i].classList.add("active");
+        }
+    }
+});
+
+// window.onload = function() {
+//     var navLinks = document.getElementsByClassName("navbar-item");
+
+//     for (var i = 0; i < navLinks.length; i++) {
+//         if (navLinks[i].getElementsByTagName("a")[0].href === document.URL) {
+//             navLinks[i].classList.add("active");
+//         }
+//     }
+// }
+
+
+
+
+
 
 //========================================
 //         CART SIDEBAR FUNCTION

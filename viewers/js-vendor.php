@@ -18,14 +18,15 @@
         <script src="js/slick.js"></script>
         <script src="js/main.js"></script> 
         <!-- additional js -->
-        <!-- <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/jquery-2.1.0.min.js"></script>
         <script src="js/jquery.js"></script>
         <script src="js/fullpage.min.js"></script>
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/jquery.inview.min.js"></script>
         <script src="js/scrolloverflow.js"></script>
         <script src="js/form.js"></script>
-        <script src="js/custom.js"></script> -->
+        <script src="js/custom.js"></script>
+        
         <!--=====================================
                     JS LINK PART END
         =======================================-->

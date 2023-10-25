@@ -459,7 +459,7 @@ button:focus {
   background: var(--primary);
 }
 
-.menu-badge {
+.navbar-item-badge {
   font-size: 10px;
   padding: 0px 5px;
   margin-left: 5px;
@@ -656,17 +656,17 @@ button:focus {
   background: var(--chalk);
 }
 
-.dropdown-megamenu {
+.dropdown-meganavbar-item {
   position: static;
 }
 
-.dropdown-megamenu:hover .megamenu {
+.dropdown-meganavbar-item:hover .meganavbar-item {
   visibility: visible;
   opacity: 1;
   top: 199px;
 }
 
-.megamenu {
+.meganavbar-item {
   position: absolute;
   top: 230px;
   left: 50%;
@@ -689,16 +689,16 @@ button:focus {
   -o-transition: all linear .3s;
 }
 
-.megamenu-scroll {
+.meganavbar-item-scroll {
   height: 380px;
   overflow-y: scroll;
 }
 
-.megamenu-wrap {
+.meganavbar-item-wrap {
   margin-bottom: 30px;
 }
 
-.megamenu-title {
+.meganavbar-item-title {
   padding-bottom: 18px;
   margin-bottom: 20px;
   position: relative;
@@ -706,7 +706,7 @@ button:focus {
   border-bottom: 1px solid var(--border);
 }
 
-.megamenu-title::before {
+.meganavbar-item-title::before {
   position: absolute;
   content: "";
   bottom: -2px;
@@ -716,11 +716,11 @@ button:focus {
   background: var(--primary);
 }
 
-.megamenu-list {
+.meganavbar-item-list {
   border-left: 1px solid var(--border);
 }
 
-.megamenu-list li a {
+.meganavbar-item-list li a {
   width: 100%;
   border-radius: 5px;
   padding: 5px 0px 5px 25px;
@@ -734,18 +734,18 @@ button:focus {
   -o-transition: all linear .3s;
 }
 
-.megamenu-list li a:hover {
+.meganavbar-item-list li a:hover {
   color: var(--primary);
   background: var(--chalk);
 }
 
-.megamenu-promo a img {
+.meganavbar-item-promo a img {
   width: 100%;
   border-radius: 3px;
 }
 
 @media (max-width: 1199px) {
-  .megamenu {
+  .meganavbar-item {
     width: 100%;
   }
 }
@@ -4413,6 +4413,7 @@ tbody tr td:last-child {
 
 .navbar-item {
   margin-right: 40px;
+  position: relative;
 }
 
 .navbar-item:last-child {
@@ -4474,6 +4475,27 @@ tbody tr td:last-child {
 .navbar-focus-list li a:hover {
   color: var(--hovercolor);
 }
+
+.navbar-item:hover::before, .navbar-item:active::before, .navbar-item.active::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar-item::before, .navbar-item.active::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 
 .navbar-focus-list li a i {
   font-size: 18px;
@@ -5340,7 +5362,7 @@ tbody tr td:last-child {
   color: var(--primary);
 }
 
-.mobile-menu {
+.mobile-navbar-item {
   position: fixed;
   bottom: 0px;
   left: 0px;
@@ -5365,8 +5387,8 @@ tbody tr td:last-child {
   display: none;
 }
 
-.mobile-menu a,
-.mobile-menu button {
+.mobile-navbar-item a,
+.mobile-navbar-item button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5386,39 +5408,39 @@ tbody tr td:last-child {
   position: relative;
 }
 
-.mobile-menu a:hover,
-.mobile-menu button:hover {
+.mobile-navbar-item a:hover,
+.mobile-navbar-item button:hover {
   background: var(--chalk);
 }
 
-.mobile-menu a:hover i,
-.mobile-menu button:hover i {
+.mobile-navbar-item a:hover i,
+.mobile-navbar-item button:hover i {
   color: var(--primary);
 }
 
-.mobile-menu a:hover span,
-.mobile-menu button:hover span {
+.mobile-navbar-item a:hover span,
+.mobile-navbar-item button:hover span {
   color: var(--primary);
 }
 
-.mobile-menu a i,
-.mobile-menu button i {
+.mobile-navbar-item a i,
+.mobile-navbar-item button i {
   font-size: 15px;
   margin-bottom: 5px;
   color: var(--text);
   text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
 }
 
-.mobile-menu a span,
-.mobile-menu button span {
+.mobile-navbar-item a span,
+.mobile-navbar-item button span {
   font-size: 10px;
   line-height: 12px;
   color: var(--text);
   text-transform: uppercase;
 }
 
-.mobile-menu a sup,
-.mobile-menu button sup {
+.mobile-navbar-item a sup,
+.mobile-navbar-item button sup {
   position: absolute;
   top: -5px;
   left: 75%;
@@ -5436,13 +5458,13 @@ tbody tr td:last-child {
   text-shadow: var(--primary-tshadow);
 }
 
-.mobile-menu a .fas fa-shopping-basket,
-.mobile-menu button .fas fa-shopping-basket {
+.mobile-navbar-item a .fas fa-shopping-basket,
+.mobile-navbar-item button .fas fa-shopping-basket {
   font-size: 18px;
 }
 
 @media (max-width: 991px) {
-  .mobile-menu {
+  .mobile-navbar-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -46,8 +46,9 @@
                     </a>
 
                     <!-- LOGIN PAGE -->
-                    <a href="login.php" class="header-widget" title="Join">
-                        <button>Get Started</button>
+                    <a href="login.html" class="header-widget" title="My Account">
+                        <img src="images/user.png" alt="user">
+                        <span>join</span>
                     </a>
 
                     <!-- <?php
@@ -102,16 +103,23 @@
                     <div class="col-lg-12">
                         <div class="navbar-content">
                             <ul class="navbar-list">
-                                <li class="navbar-item dropdown">
+                                <style>
+                                    .navbar-item.active {
+                                        background-color: #F5F5F5; /* You can replace the color with your own */
+                                        color: #000; /* You can replace the color with your own */
+                                    }
+                                </style>
+
+                                <li class="navbar-item dropdown active">
                                     <a href="#"><i class="fa-solid fa-house"></i></a>
                                     <a class="navbar-link" href="index.php">Home</a>
                                 </li>
-                                <li class="navbar-item dropdown ">
-                                    <a href="#0"><i class="fa-solid fa-comments"></i></a>
+                                <li class="navbar-item dropdown">
+                                    <a href="#"><i class="fa-solid fa-comments"></i></a>
                                     <a class="navbar-link" href="blog-author.php" >Feed</a>
                                 </li>
-                                <li class="navbar-item dropdown ">
-                                    <a href="#0"><i class="fa-solid fa-store"></i></a>
+                                <li class="navbar-item dropdown">
+                                    <a href="#"><i class="fa-solid fa-store"></i></a>
                                     <a class="navbar-link dropdown-arrow" href="#">Shop</a>
                                     <ul class="dropdown-position-list">
                                         <li><a href="faq.php">Farmer's Market</a></li>
@@ -123,7 +131,7 @@
                             
                             <div class="navbar-info-group">
                                 <div class="navbar-info">
-                                    <a href="#"><i class="fa-regular fa-calendar"></i></i></a>
+                                    <a href="#"><i class="fa-solid fa-calendar-days"></i></a>
                                     <p>
                                         <small><a href="#" title="Reserve Product">Harvesting Calendar</a></small>
                                     </p>
