@@ -249,7 +249,7 @@
                                                     </div>
                                                 </div>
                                                
-                                                
+
                                                 <div class="col">
                                                     <div class="megamenu-wrap">
                                                         <h5 class="megamenu-title">dairy farms</h5>
@@ -833,7 +833,7 @@
         <!--=====================================
                     MOBILE-MENU PART START
         =======================================-->
-        <div class="mobile-menu">
+        <div class="mobile-navbar-item">
             <a href="index.html" title="Home Page">
                 <i class="fas fa-home"></i>
                 <span>Home</span>

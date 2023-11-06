@@ -274,7 +274,7 @@
         <!--=====================================
                     MOBILE-MENU PART START
         =======================================-->
-        <div class="mobile-menu">
+        <div class="mobile-navbar-item">
             <a href="index.html" title="Home Page">
                 <i class="fas fa-home"></i>
                 <span>Home</span>
