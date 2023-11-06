@@ -123,13 +123,13 @@
                             
                             <div class="navbar-info-group">
                                 <div class="navbar-info">
-                                    <a href="#"><i class="fa-regular fa-calendar"></i></i></a>
+                                    <a href="#0"><i class="fa-regular fa-calendar"></i></i></a>
                                     <p>
                                         <small><a href="#" title="Reserve Product">Harvesting Calendar</a></small>
                                     </p>
                                 </div>
                                 <div class="navbar-info">
-                                    <a href="#"><i class="fa-solid fa-hand-holding-heart"></i></a>
+                                    <a href="#0"><i class="fa-solid fa-hand-holding-heart"></i></a>
                                     <p>
                                         <small><a href="#" title="Help a Farmer">Donation</a></small>
                                     </p>

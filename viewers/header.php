@@ -39,6 +39,8 @@
         <link rel="stylesheet" href="vendor/slickslider/slick.min.css">
         <link rel="stylesheet" href="vendor/niceselect/nice-select.min.css">
         <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    
 
         <!-- CUSTOM -->
         <link rel="stylesheet" href="css/main.css">

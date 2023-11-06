@@ -28,6 +28,7 @@
                         <li><a href="#">carrot</a></li>
                     </ul>
                 </li>
+
                 <li class="category-item">
                     <a class="category-link dropdown-link" href="#">
                         <i class="flaticon-groceries"></i>
@@ -284,6 +285,7 @@
                 </a>
             </div>
         </aside>
+
         <!--=====================================
                     CART SIDEBAR PART END
         =======================================-->

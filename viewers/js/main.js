@@ -125,17 +125,7 @@ $('.header-user').on('click', function(){
 //     });
 // });
 
-document.addEventListener("DOMContentLoaded", function() {
-    var navLinks = document.getElementsByClassName("navbar-item");
-
-    for (var i = 0; i < navLinks.length; i++) {
-        if (navLinks[i].getElementsByTagName("a")[0].href === document.URL) {
-            navLinks[i].classList.add("active");
-        }
-    }
-});
-
-// window.onload = function() {
+// document.addEventListener("DOMContentLoaded", function() {
 //     var navLinks = document.getElementsByClassName("navbar-item");
 
 //     for (var i = 0; i < navLinks.length; i++) {
@@ -143,7 +133,18 @@ document.addEventListener("DOMContentLoaded", function() {
 //             navLinks[i].classList.add("active");
 //         }
 //     }
-// }
+// });
+
+window.onload = function() {
+    var path = window.location.pathname;
+    var navLinks = document.getElementsByClassName("navbar-item");
+
+    for (var i = 0; i < navLinks.length; i++) {
+        if (navLinks[i].getElementsByTagName("a")[0].pathname === path) {
+            navLinks[i].classList.add("active");
+        }
+    }
+}
 
 
 
