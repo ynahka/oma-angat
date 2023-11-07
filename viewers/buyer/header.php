@@ -13,7 +13,7 @@
                     META-TAG PART END
         =======================================-->
         <!-- WEBPAGE TITLE -->
-        <title>Virtual Agri-Market</title>
+        <title>Oma-Angat Virtual Agri-Market</title>
 
         <!--=====================================
                     CSS LINK PART START
