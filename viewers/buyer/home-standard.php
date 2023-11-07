@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'buyer-header.php'; ?>
+    <?php include 'header.php'; ?>
     <link rel="stylesheet" href="css/home-standard.css">
  
     <body>
@@ -224,7 +224,7 @@
         <!--=====================================
                     MOBILE-MENU PART START
         =======================================-->
-        <div class="mobile-menu">
+        <div class="mobile-navbar-item">
             <a href="index.html" title="Home Page">
                 <i class="fas fa-home"></i>
                 <span>Home</span>

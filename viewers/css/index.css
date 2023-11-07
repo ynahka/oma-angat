@@ -60,7 +60,7 @@
   color: var(--intro-bg);
   font-weight: bolder;
   font-size: 60px;
-  margin-left: 100px;
+  margin-left: 0px;
   /* letter-spacing: 2.5px; */
 }
 
@@ -74,7 +74,7 @@
   line-height: 25px;
   margin-bottom: 50px;
   color: var(--chalk);
-  margin-left: 100px;
+  margin-left: 0px;
   
 }
 
@@ -123,7 +123,7 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
   .banner-content h1 {
-    font-size: 32px;
+    font-size: 30px;
     line-height: 42px;
   }
   .banner-btn .btn {

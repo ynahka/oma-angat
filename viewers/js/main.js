@@ -135,16 +135,16 @@ $('.header-user').on('click', function(){
 //     }
 // });
 
-window.onload = function() {
-    var path = window.location.pathname;
-    var navLinks = document.getElementsByClassName("navbar-item");
+// window.onload = function() {
+//     var path = window.location.pathname;
+//     var navLinks = document.getElementsByClassName("navbar-item");
 
-    for (var i = 0; i < navLinks.length; i++) {
-        if (navLinks[i].getElementsByTagName("a")[0].pathname === path) {
-            navLinks[i].classList.add("active");
-        }
-    }
-}
+//     for (var i = 0; i < navLinks.length; i++) {
+//         if (navLinks[i].getElementsByTagName("a")[0].pathname === path) {
+//             navLinks[i].classList.add("active");
+//         }
+//     }
+// }
 
 
 

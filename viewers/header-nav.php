@@ -102,7 +102,7 @@
                     <div class="col-lg-12">
                         <div class="navbar-content">
                             <ul class="navbar-list">
-                                <li class="navbar-item dropdown">
+                                <li class="navbar-item dropdown active">
                                     <a href="#"><i class="fa-solid fa-house"></i></a>
                                     <a class="navbar-link" href="index.php">Home</a>
                                 </li>
