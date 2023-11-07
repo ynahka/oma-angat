@@ -13,7 +13,7 @@
                     META-TAG PART END
         =======================================-->
         <!-- WEBPAGE TITLE -->
-        <title>Oma-Angat Virtual Agri-Market</title>
+        <title>Oma-Angat</title>
 
         <!--=====================================
                     CSS LINK PART START
@@ -39,7 +39,6 @@
         <link rel="stylesheet" href="vendor/slickslider/slick.min.css">
         <link rel="stylesheet" href="vendor/niceselect/nice-select.min.css">
         <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     
 
         <!-- CUSTOM -->
@@ -49,10 +48,10 @@
         <link rel="stylesheet" href="css/home-grid.css">
 
         <!-- Additional CSS Files -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet"  href="css/animation/fullpage.min.css">
         <link rel="stylesheet"  href="css/animation/owl.carousel.css">
-        <link rel="stylesheet"  href="css/animation/animate.css"> -->
+        <link rel="stylesheet"  href="css/animation/animate.css">
         <!--=====================================
                     CSS LINK PART END
         =======================================-->

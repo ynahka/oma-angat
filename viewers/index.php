@@ -180,7 +180,7 @@
                     <div class="cart-info-group">
                         <div class="cart-info">
                             <h6><a href="product-single.php">existing product name</a></h6>
-                            <p>Unit Price - $8.75</p>
+                            <p>Unit Price - P8.75</p>
                         </div>
                         <div class="cart-action-group">
                             <div class="product-action">
@@ -188,7 +188,7 @@
                                 <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
-                            <h6>$56.98</h6>
+                            <h6>P56.98</h6>
                         </div>
                     </div>
                 </li> 
@@ -200,7 +200,7 @@
                     <div class="cart-info-group">
                         <div class="cart-info">
                             <h6><a href="product-single.php">existing product name</a></h6>
-                            <p>Unit Price - $8.75</p>
+                            <p>Unit Price - P8.75</p>
                         </div>
                         <div class="cart-action-group">
                             <div class="product-action">
@@ -208,7 +208,7 @@
                                 <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
-                            <h6>$56.98</h6>
+                            <h6>P56.98</h6>
                         </div>
                     </div>
                 </li>
@@ -220,7 +220,7 @@
                     <div class="cart-info-group">
                         <div class="cart-info">
                             <h6><a href="product-single.php">existing product name</a></h6>
-                            <p>Unit Price - $8.75</p>
+                            <p>Unit Price - P8.75</p>
                         </div>
                         <div class="cart-action-group">
                             <div class="product-action">
@@ -228,7 +228,7 @@
                                 <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
-                            <h6>$56.98</h6>
+                            <h6>P56.98</h6>
                         </div>
                     </div>
                 </li>
@@ -240,7 +240,7 @@
                     <div class="cart-info-group">
                         <div class="cart-info">
                             <h6><a href="product-single.php">existing product name</a></h6>
-                            <p>Unit Price - $8.75</p>
+                            <p>Unit Price - P8.75</p>
                         </div>
                         <div class="cart-action-group">
                             <div class="product-action">
@@ -248,7 +248,7 @@
                                 <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
-                            <h6>$56.98</h6>
+                            <h6>P56.98</h6>
                         </div>
                     </div>
                 </li>
@@ -260,7 +260,7 @@
                     <div class="cart-info-group">
                         <div class="cart-info">
                             <h6><a href="product-single.php">existing product name</a></h6>
-                            <p>Unit Price - $8.75</p>
+                            <p>Unit Price - P8.75</p>
                         </div>
                         <div class="cart-action-group">
                             <div class="product-action">
@@ -268,7 +268,7 @@
                                 <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
-                            <h6>$56.98</h6>
+                            <h6>P56.98</h6>
                         </div>
                     </div>
                 </li>
@@ -281,7 +281,7 @@
                 </form>
                 <a class="cart-checkout-btn" href="checkout.php">
                     <span class="checkout-label">Proceed to Checkout</span>
-                    <span class="checkout-price">$369.78</span>
+                    <span class="checkout-price">P369.78</span>
                 </a>
             </div>
         </aside>
@@ -484,8 +484,8 @@
                                         <a href="product-video.php">(3 reviews)</a>
                                     </div>
                                     <h3 class="view-price">
-                                        <del>$38.00</del>
-                                        <span>$24.00<small>/per kilo</small></span>
+                                        <del>P38.00</del>
+                                        <span>P24.00<small>/per kilo</small></span>
                                     </h3>
                                     <p class="view-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit non tempora magni repudiandae sint suscipit tempore quis maxime explicabo veniam eos reprehenderit fuga</p>
                                     <div class="view-list-group">
@@ -548,7 +548,7 @@
                         <div class="col-md-6 col-lg-6">
                             <div class="banner-content-1">
                                 <h1><span class="highlight">Shop Local and</span> Support Farmers <span class="highlight"></span> </h1>
-                                <p>With our Virtual Agri-Market, you're not just buying food, you're investing in sustainable agriculture and empowering local farmers. <br> Shop with us today to savor the taste of affordability and support the heart of our agricultural communities.</p>
+                                <p>With our Virtual Agri-Market, you're not just buying food, you're investing in sustainable agriculture and empowering local farmers. Shop with us today to savor the taste of affordability and support the heart of our agricultural communities.</p>
                                 <div class="banner-btn">
                                     <a class="btn btn-banner" href="login.php">
                                     <i class="fas fa-shopping-basket"></i>
@@ -579,9 +579,9 @@
                         <div class="col-md-6 col-lg-6">
                             <div class="banner-content">
                                 <h1><span class="highlight">Are you a Farmer? </span> <br> Join and watch your fields grow </h1>
-                                <p>Our Virtual Agri-market ensures fair compensation for your dedication. <br> Your hard work nourishes not just the land but also the community.</p>
+                                <p>Our Virtual Agri-market ensures fair compensation for your dedication. Your hard work nourishes not just the land but also the community.</p>
                                 <div class="banner-btn-1">
-                                    <a class="btn btn-banner" href="offer.php">
+                                    <a class="btn btn-banner" href="login.php">
                                     <i class="fa-solid fa-store"></i>
                                         <span>start selling</span>
                                     </a>
@@ -692,7 +692,7 @@
                     SUGGEST PART START
         =======================================-->
         <?php
-        $items = [
+        $Pitems = [
            [
               "name"=>"vegetables",
               "img"=>"images/suggest/vegetables.svg",
@@ -734,10 +734,10 @@
         <section class="section suggest-part">
             <div class="container">
                 <ul class="suggest-slider slider-arrow">
-                    <?php foreach($items as $item) :?>
+                    <?php foreach($Pitems as $Pitem) :?>
                         <li>
-                            <a class="suggest-card" href="<?php echo $item['url']?>">
-                                <img src="<?php echo $item['img']?>">
+                            <a class="suggest-card" href="<?php echo $Pitem['url']?>">
+                                <img src="<?php echo $Pitem['img']?>">
                             </a>
                         </li>
                     <?php endforeach;?>
@@ -793,8 +793,8 @@
                                     <a href="product-video.php">fresh green chilis</a>
                                 </h6>
                                 <h6 class="product-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <button class="product-add" title="Add to Cart">
                                     <i class="fas fa-shopping-basket"></i>
@@ -840,8 +840,8 @@
                                     <a href="product-video.php">fresh green chilis</a>
                                 </h6>
                                 <h6 class="product-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <button class="product-add" title="Add to Cart">
                                     <i class="fas fa-shopping-basket"></i>
@@ -886,8 +886,8 @@
                                     <a href="product-video.php">fresh green chilis</a>
                                 </h6>
                                 <h6 class="product-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <button class="product-add" title="Add to Cart">
                                     <i class="fas fa-shopping-basket"></i>
@@ -932,8 +932,8 @@
                                     <a href="product-video.php">fresh green chilis</a>
                                 </h6>
                                 <h6 class="product-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <button class="product-add" title="Add to Cart">
                                     <i class="fas fa-shopping-basket"></i>
@@ -978,8 +978,8 @@
                                     <a href="product-video.php">fresh green chilis</a>
                                 </h6>
                                 <h6 class="product-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <button class="product-add" title="Add to Cart">
                                     <i class="fas fa-shopping-basket"></i>
@@ -1024,8 +1024,8 @@
                                     <a href="product-video.php">fresh green chilis</a>
                                 </h6>
                                 <h6 class="product-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <button class="product-add" title="Add to Cart">
                                     <i class="fas fa-shopping-basket"></i>
@@ -1070,8 +1070,8 @@
                                     <a href="product-video.php">fresh green chilis</a>
                                 </h6>
                                 <h6 class="product-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <button class="product-add" title="Add to Cart">
                                     <i class="fas fa-shopping-basket"></i>
@@ -1116,8 +1116,8 @@
                                     <a href="product-video.php">fresh green chilis</a>
                                 </h6>
                                 <h6 class="product-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <button class="product-add" title="Add to Cart">
                                     <i class="fas fa-shopping-basket"></i>
@@ -1162,8 +1162,8 @@
                                     <a href="product-video.php">fresh green chilis</a>
                                 </h6>
                                 <h6 class="product-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <button class="product-add" title="Add to Cart">
                                     <i class="fas fa-shopping-basket"></i>
@@ -1208,8 +1208,8 @@
                                     <a href="product-video.php">fresh green chilis</a>
                                 </h6>
                                 <h6 class="product-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <button class="product-add" title="Add to Cart">
                                     <i class="fas fa-shopping-basket"></i>
@@ -1300,8 +1300,8 @@
                                     <a href="product-video.php">(3 Reviews)</a>
                                 </div>
                                 <h6 class="feature-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
                                 <button class="product-add" title="Add to Cart">
@@ -1347,8 +1347,8 @@
                                     <a href="product-video.php">(3 Reviews)</a>
                                 </div>
                                 <h6 class="feature-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
                                 <button class="product-add" title="Add to Cart">
@@ -1394,8 +1394,8 @@
                                     <a href="product-video.php">(3 Reviews)</a>
                                 </div>
                                 <h6 class="feature-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
                                 <button class="product-add" title="Add to Cart">
@@ -1441,8 +1441,8 @@
                                     <a href="product-video.php">(3 Reviews)</a>
                                 </div>
                                 <h6 class="feature-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
                                 <button class="product-add" title="Add to Cart">
@@ -1488,8 +1488,8 @@
                                     <a href="product-video.php">(3 Reviews)</a>
                                 </div>
                                 <h6 class="feature-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
                                 <button class="product-add" title="Add to Cart">
@@ -1535,8 +1535,8 @@
                                     <a href="product-video.php">(3 Reviews)</a>
                                 </div>
                                 <h6 class="feature-price">
-                                    <del>$34</del>
-                                    <span>$28<small>/piece</small></span>
+                                    <del>P34</del>
+                                    <span>P28<small>/piece</small></span>
                                 </h6>
                                 <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
                                 <button class="product-add" title="Add to Cart">
@@ -1654,8 +1654,8 @@
                                             <a href="product-video.php">fresh green chilis</a>
                                         </h6>
                                         <h6 class="product-price">
-                                            <del>$34</del>
-                                            <span>$28<small>/piece</small></span>
+                                            <del>P34</del>
+                                            <span>P28<small>/piece</small></span>
                                         </h6>
                                         <button class="product-add" title="Add to Cart">
                                             <i class="fas fa-shopping-basket"></i>
@@ -1700,8 +1700,8 @@
                                             <a href="product-video.php">fresh green chilis</a>
                                         </h6>
                                         <h6 class="product-price">
-                                            <del>$34</del>
-                                            <span>$28<small>/piece</small></span>
+                                            <del>P34</del>
+                                            <span>P28<small>/piece</small></span>
                                         </h6>
                                         <button class="product-add" title="Add to Cart">
                                             <i class="fas fa-shopping-basket"></i>
@@ -1746,8 +1746,8 @@
                                             <a href="product-video.php">fresh green chilis</a>
                                         </h6>
                                         <h6 class="product-price">
-                                            <del>$34</del>
-                                            <span>$28<small>/piece</small></span>
+                                            <del>P34</del>
+                                            <span>P28<small>/piece</small></span>
                                         </h6>
                                         <button class="product-add" title="Add to Cart">
                                             <i class="fas fa-shopping-basket"></i>
@@ -1792,8 +1792,8 @@
                                             <a href="product-video.php">fresh green chilis</a>
                                         </h6>
                                         <h6 class="product-price">
-                                            <del>$34</del>
-                                            <span>$28<small>/piece</small></span>
+                                            <del>P34</del>
+                                            <span>P28<small>/piece</small></span>
                                         </h6>
                                         <button class="product-add" title="Add to Cart">
                                             <i class="fas fa-shopping-basket"></i>
@@ -1838,8 +1838,8 @@
                                             <a href="product-video.php">fresh green chilis</a>
                                         </h6>
                                         <h6 class="product-price">
-                                            <del>$34</del>
-                                            <span>$28<small>/piece</small></span>
+                                            <del>P34</del>
+                                            <span>P28<small>/piece</small></span>
                                         </h6>
                                         <button class="product-add" title="Add to Cart">
                                             <i class="fas fa-shopping-basket"></i>
@@ -1884,8 +1884,8 @@
                                             <a href="product-video.php">fresh green chilis</a>
                                         </h6>
                                         <h6 class="product-price">
-                                            <del>$34</del>
-                                            <span>$28<small>/piece</small></span>
+                                            <del>P34</del>
+                                            <span>P28<small>/piece</small></span>
                                         </h6>
                                         <button class="product-add" title="Add to Cart">
                                             <i class="fas fa-shopping-basket"></i>
@@ -2012,8 +2012,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2058,8 +2058,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2104,8 +2104,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2150,8 +2150,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2196,8 +2196,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2242,8 +2242,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2288,8 +2288,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2334,8 +2334,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2380,8 +2380,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2426,8 +2426,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2477,8 +2477,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2523,8 +2523,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2569,8 +2569,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2615,8 +2615,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2661,8 +2661,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2707,8 +2707,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2753,8 +2753,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2799,8 +2799,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2845,8 +2845,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2891,8 +2891,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2942,8 +2942,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -2988,8 +2988,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -3034,8 +3034,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -3080,8 +3080,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -3126,8 +3126,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -3172,8 +3172,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -3218,8 +3218,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -3264,8 +3264,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -3310,8 +3310,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -3356,8 +3356,8 @@
                                         <a href="product-video.php">fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>$34</del>
-                                        <span>$28<small>/piece</small></span>
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
                                     </h6>
                                     <button class="product-add" title="Add to Cart">
                                         <i class="fas fa-shopping-basket"></i>
@@ -3568,7 +3568,7 @@
         <!--=====================================
                    TESTIMONIAL PART END
         =======================================-->    
-            
+
         <?php include('footer.php'); ?>
         <?php include('js-vendor.php'); ?>
     </body>
