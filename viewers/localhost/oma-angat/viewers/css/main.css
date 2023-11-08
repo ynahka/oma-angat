@@ -2,11 +2,6 @@
             ALL COMMON PART STYLE
 =========================================*/
 
-:root { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  :root { font-family: 'Inter var', sans-serif; }
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 :root {
   --h1size: 50px;
@@ -30,7 +25,7 @@
   --lighttext: #cfe2ce;
   --lighter: #f8fffa;
   /* --blue: #1494a9; */
-  --lighter: #ffffff;
+  --white: #ffffff;
   --chalk: #f5f5f5;
   --green: #2D452F;
   /* --purple: #b12fad; */
@@ -55,6 +50,11 @@
   --instagram: #F77737;
   --primary-bshadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
   --primary-tshadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
 }
 
 * {
@@ -107,8 +107,8 @@ body {
 }
 
 body {
-  color: var(--primary);
-  background: var(--secondary);
+  color: var(--text);
+  background: var(--primary);
   font-size: var(--bodysize);
   font-family: var(--pfamily);
   line-height: var(--bodyheight);
@@ -215,7 +215,7 @@ button:focus {
         ALL COMPONENTS PART STYLE
 =========================================*/
 .section {
-  margin-bottom: 100px 0;
+  margin-bottom: 100px;
 }
 
 .inner-section {
@@ -223,16 +223,16 @@ button:focus {
 }
 
 .section-heading {
-  text-align: left;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .section-heading h2{
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 48px;
-  text-transform:none;
-  margin-bottom: none;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .section-btn-50 {
@@ -330,7 +330,7 @@ button:focus {
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-  color: var(--lighter);
+  color: var(--white);
   padding: 0px 8px;
 }
 
@@ -353,7 +353,7 @@ button:focus {
   width: 48px;
   height: 48px;
   font-size: 15px;
-  color: var(--lighter);
+  color: var(--white);
   line-height: 48px;
   text-align: center;
   display: none;
@@ -412,7 +412,7 @@ button:focus {
   font-size: 15px;
   font-weight: 540;
   text-transform: uppercase;
-  padding: 14px 28px;
+  padding: 14px 32px;
   border-radius: 6px;
   border: 1.5px solid var(--hovercolor);
 }
@@ -446,22 +446,20 @@ button:focus {
   line-height: 1.5;
 }
 .btn-outline:hover {
-  color:  var(--lighter);
+  color: white;
   background: var(--hovercolor);
 }
 
 .btn-banner{
-  color: var(--lighter);
-  background: var(--primary);
+  color: var(--chalk);
+  border-color: white;
   font-weight: 540;
   line-height: 1.5;
 }
 
 .btn-banner:hover {
-  font-weight: 540;
-  line-height: 1.5;
-  color:  var(--lighter);
-  background: var(--hovercolor);
+  color: white;
+  background: var(--primary);
 }
 
 .navbar-item-badge {
@@ -473,7 +471,7 @@ button:focus {
   letter-spacing: 0.3px;
   display: inline-block;
   text-transform: uppercase;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--red);
   text-shadow: var(--primary-tshadow);
 }
@@ -567,7 +565,7 @@ button:focus {
   border-radius: 8px;
   padding: 10px 15px 10px 35px;
   color: var(--text);
-  background: var(--lighter);
+  background: var(--white);
   position: relative;
   white-space: nowrap;
   text-transform: capitalize;
@@ -612,7 +610,7 @@ button:focus {
   opacity: 0;
   padding: 10px;
   border-radius: 8px;
-  background: var(--lighter);
+  background: var(--white);
   border: 1px solid var(--border);
   -webkit-box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
@@ -634,7 +632,7 @@ button:focus {
   border-radius: 3px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  background: var(--lighter);
+  background: var(--white);
   border-top: 1px solid var(--border);
   border-left: 1px solid var(--border);
 }
@@ -646,7 +644,7 @@ button:focus {
   border-radius: 8px;
   padding: 8px 15px;
   color: var(--text);
-  background: var(--lighter);
+  background: var(--white);
   white-space: nowrap;
   text-transform: capitalize;
   transition: all linear .3s;
@@ -679,7 +677,7 @@ button:focus {
   width: 1180px;
   border-radius: 8px;
   padding: 30px;
-  background: var(--lighter);
+  background: var(--white);
   border: 1px solid var(--border);
   -webkit-box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
@@ -863,7 +861,7 @@ button:focus {
   letter-spacing: 0.5px;
   text-align: center;
   text-transform: uppercase;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -905,7 +903,7 @@ button:focus {
   letter-spacing: 0.5px;
   text-align: center;
   text-transform: uppercase;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -926,7 +924,7 @@ button:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .nav-tabs li {
@@ -1014,7 +1012,7 @@ button:focus {
 }
 
 .page-item .active {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -1028,11 +1026,11 @@ button:focus {
   border: none;
   padding: 0px;
   color: var(--text);
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .page-link:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -1125,7 +1123,7 @@ button:focus {
   text-align: center;
   border-radius: 50%;
   color: var(--primary);
-  background: var(--lighter);
+  background: var(--white);
   text-shadow: var(--primary-tshadow);
   -webkit-box-shadow: var(--primary-bshadow);
           box-shadow: var(--primary-bshadow);
@@ -1142,7 +1140,7 @@ button:focus {
 
 .dandik:hover,
 .bamdik:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -1274,7 +1272,7 @@ button:focus {
 }
 
 .product-action button i:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -1285,7 +1283,7 @@ button:focus {
   padding: 6px 0px;
   border-radius: 6px;
   text-align: center;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
   text-shadow: var(--primary-tshadow);
 }
@@ -1305,7 +1303,7 @@ thead tr th {
   text-align: center;
   text-transform: capitalize;
   padding: 12px 20px;
-  color: var(--lighter);
+  color: var(--white);
   border-right: 1px solid var(--border);
 }
 
@@ -1399,13 +1397,13 @@ tbody tr td:last-child {
 }
 
 .table-shop .product-add {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
 .table-shop .action-plus i,
 .table-shop .action-minus i {
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .table-action a i {
@@ -1426,31 +1424,31 @@ tbody tr td:last-child {
 
 .table-action .view i {
   color: var(--green);
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .table-action .view i:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--green);
 }
 
 .table-action .wish i {
   color: var(--green);
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .table-action .wish.active i {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--green);
 }
 
 .table-action .trash i {
   color: var(--red);
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .table-action .trash i:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--red);
 }
 
@@ -1484,7 +1482,7 @@ tbody tr td:last-child {
   border-radius: 50%;
   text-align: center;
   display: inline-block;
-  background: var(--lighter);
+  background: var(--white);
   -webkit-box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.2);
   transition: all linear .3s;
@@ -1495,7 +1493,7 @@ tbody tr td:last-child {
 }
 
 .modal-close:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -1503,7 +1501,7 @@ tbody tr td:last-child {
   width: 400px;
   padding: 30px;
   border-radius: 8px;
-  background: var(--lighter);
+  background: var(--white);
 }
 
 @media (max-width: 400px) {
@@ -1573,7 +1571,7 @@ tbody tr td:last-child {
   width: 100%;
   height: 5px;
   z-index: -1;
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .order-track-item:first-child::before {
@@ -1594,7 +1592,7 @@ tbody tr td:last-child {
   text-align: center;
   display: inline-block;
   color: var(--primary);
-  background: var(--lighter);
+  background: var(--white);
   border: 2px dotted var(--primary);
 }
 
@@ -1611,7 +1609,7 @@ tbody tr td:last-child {
 }
 
 .order-track-item.active i {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -1737,7 +1735,7 @@ tbody tr td:last-child {
 }
 
 .suggest-part {
-  padding-bottom: 30px;
+  box-shadow: 0px 8px 16px 0px rgb(85, 115, 95, 0.2);
 }
 
 .suggest-card::before {
@@ -1748,7 +1746,7 @@ tbody tr td:last-child {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  /* background: rgba(0, 0, 0, 0.4); */
+  background: rgba(0, 0, 0, 0.4);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
   -moz-transition: all linear .3s;
@@ -1779,7 +1777,7 @@ tbody tr td:last-child {
   text-align: center;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: var(--lighter);
+  color: var(--white);
   font-weight: 400;
   text-transform: capitalize;
   text-shadow: var(--primary-tshadow);
@@ -1808,8 +1806,8 @@ tbody tr td:last-child {
   margin-bottom: 25px;
   padding: 15px 18px;
   border-radius: 8px;
-  background: var(--lighter);
-  border: 1px solid var(--lighter);
+  background: var(--white);
+  border: 1px solid var(--white);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
   -moz-transition: all linear .3s;
@@ -1829,7 +1827,7 @@ tbody tr td:last-child {
 }
 
 .product-card:hover .product-add {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -1856,7 +1854,7 @@ tbody tr td:last-child {
   line-height: 13px;
   border-radius: 3px;
   margin-bottom: 5px;
-  color: var(--lighter);
+  color: var(--white);
   text-align: center;
   text-transform: capitalize;
 }
@@ -1931,7 +1929,7 @@ tbody tr td:last-child {
   line-height: 40px;
   text-align: center;
   border-radius: 8px;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
   text-shadow: var(-primary-tshadow);
   -webkit-box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.12);
@@ -2064,7 +2062,7 @@ tbody tr td:last-child {
   text-shadow: var(--primary-tshadow);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: var(--lighter);
+  color: var(--white);
   background: rgba(224, 152, 22, 0.9);
 }
 
@@ -2098,8 +2096,8 @@ tbody tr td:last-child {
   margin-bottom: 25px;
   padding: 18px 18px;
   border-radius: 8px;
-  background: var(--lighter);
-  border: 1px solid var(--lighter);
+  background: var(--white);
+  border: 1px solid var(--white);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2128,7 +2126,7 @@ tbody tr td:last-child {
 }
 
 .feature-card:hover .feature-add {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -2155,7 +2153,7 @@ tbody tr td:last-child {
   line-height: 13px;
   border-radius: 3px;
   margin-bottom: 5px;
-  color: var(--lighter);
+  color: var(--white);
   text-align: center;
   text-transform: capitalize;
 }
@@ -2230,7 +2228,7 @@ tbody tr td:last-child {
   line-height: 40px;
   text-align: center;
   border-radius: 8px;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
   text-shadow: var(-primary-tshadow);
   -webkit-box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.12);
@@ -2387,7 +2385,7 @@ tbody tr td:last-child {
   margin-bottom: 25px;
   padding: 15px 15px;
   border-radius: 8px;
-  background: var(--lighter);
+  background: var(--white);
   border: 1px solid var(--border);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2417,7 +2415,7 @@ tbody tr td:last-child {
 }
 
 .product-standard:hover .standard-add {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -2438,7 +2436,7 @@ tbody tr td:last-child {
   line-height: 13px;
   border-radius: 3px;
   text-transform: capitalize;
-  color: var(--lighter);
+  color: var(--white);
 }
 
 .standard-label.off {
@@ -2495,7 +2493,7 @@ tbody tr td:last-child {
   line-height: 40px;
   text-align: center;
   border-radius: 8px;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
   text-shadow: var(-primary-tshadow);
   -webkit-box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.12);
@@ -2612,7 +2610,7 @@ tbody tr td:last-child {
   padding: 10px 0px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -2658,7 +2656,7 @@ tbody tr td:last-child {
 }
 
 .standard-wish.active {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -2696,7 +2694,7 @@ tbody tr td:last-child {
 
 .standard-action button i:hover,
 .standard-action a i:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -2709,7 +2707,7 @@ tbody tr td:last-child {
   border-radius: 5px;
   letter-spacing: 0.3px;
   text-align: center;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
   text-shadow: var(--primary-tshadow);
 }
@@ -2841,7 +2839,7 @@ tbody tr td:last-child {
   line-height: 50px;
   border-radius: 50%;
   text-align: center;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
@@ -2852,7 +2850,7 @@ tbody tr td:last-child {
 
 .category-overlay a i:hover {
   color: var(--primary);
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .category-meta {
@@ -2915,7 +2913,7 @@ tbody tr td:last-child {
   width: 175px;
   height: 175px;
   border-radius: 50%;
-  background: var(--lighter);
+  background: var(--white);
   border: 2px dashed var(--border);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -2978,7 +2976,7 @@ tbody tr td:last-child {
   line-height: 50px;
   border-radius: 50%;
   text-align: center;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
@@ -2989,7 +2987,7 @@ tbody tr td:last-child {
 
 .brand-overlay a i:hover {
   color: var(--primary);
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .brand-meta h4 {
@@ -3029,7 +3027,7 @@ tbody tr td:last-child {
 }
 
 .choose-card:hover i {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -3043,7 +3041,7 @@ tbody tr td:last-child {
   text-align: center;
   display: inline-block;
   color: var(--primary);
-  background: var(--lighter);
+  background: var(--white);
   text-shadow: var(--primary-tshadow);
   -webkit-box-shadow: var(--primary-bshadow);
           box-shadow: var(--primary-bshadow);
@@ -3097,7 +3095,7 @@ tbody tr td:last-child {
   width: 55px;
   height: 55px;
   border-radius: 6px;
-  color: var(--lighter);
+  color: var(--white);
   background: rgba(0, 0, 0, 0.6);
 }
 
@@ -3220,7 +3218,7 @@ tbody tr td:last-child {
 .blog-btn {
   font-size: 15px;
   font-weight: 500;
-  color: var(--lighter);
+  color: var(--white);
   text-transform: uppercase;
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
@@ -3239,7 +3237,7 @@ tbody tr td:last-child {
 }
 
 .blog-btn:hover {
-  color: var(--lighter);
+  color: var(--white);
   text-decoration: underline;
 }
 
@@ -3291,7 +3289,7 @@ tbody tr td:last-child {
   padding: 10px 15px;
   margin: 0px 15px;
   border-radius: 0px 0px 8px 8px;
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .offer-div h5 {
@@ -3319,7 +3317,7 @@ tbody tr td:last-child {
   margin-bottom: 30px;
   border-radius: 8px;
   padding: 0px 30px 30px;
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .account-title {
@@ -3377,7 +3375,7 @@ tbody tr td:last-child {
 
 .account-title button:hover,
 .account-title a:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -3451,7 +3449,7 @@ tbody tr td:last-child {
   border-radius: 6px;
   text-align: center;
   display: inline-block;
-  background: var(--lighter);
+  background: var(--white);
   text-shadow: var(--primary-tshadow);
   -webkit-box-shadow: var(--primary-bshadow);
           box-shadow: var(--primary-bshadow);
@@ -3467,7 +3465,7 @@ tbody tr td:last-child {
 }
 
 .profile-card ul .edit:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--green);
 }
 
@@ -3476,7 +3474,7 @@ tbody tr td:last-child {
 }
 
 .profile-card ul .trash:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--red);
 }
 
@@ -3546,7 +3544,7 @@ tbody tr td:last-child {
   border-radius: 6px;
   text-align: center;
   display: inline-block;
-  background: var(--lighter);
+  background: var(--white);
   text-shadow: var(--primary-tshadow);
   -webkit-box-shadow: var(--primary-bshadow);
           box-shadow: var(--primary-bshadow);
@@ -3562,7 +3560,7 @@ tbody tr td:last-child {
 }
 
 .payment-card .trash:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--red);
 }
 
@@ -3582,7 +3580,7 @@ tbody tr td:last-child {
   border-radius: 8px;
   margin: 0px 2.5px 30px;
   padding: 60px 15px 55px;
-  background: var(--lighter);
+  background: var(--white);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
   -moz-transition: all linear .3s;
@@ -3596,11 +3594,11 @@ tbody tr td:last-child {
 
 .contact-card:hover i {
   color: var(--primary);
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .contact-card:hover h4, .contact-card:hover p, .contact-card:hover a {
-  color: var(--lighter);
+  color: var(--white);
 }
 
 .contact-card i {
@@ -3612,7 +3610,7 @@ tbody tr td:last-child {
   margin-bottom: 15px;
   text-align: center;
   display: inline-block;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
   text-shadow: var(--primary-tshadow);
   -webkit-box-shadow: var(--primary-bshadow);
@@ -3664,11 +3662,11 @@ tbody tr td:last-child {
 
 .contact-card.active i {
   color: var(--primary);
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .contact-card.active h4, .contact-card.active p, .contact-card.active a {
-  color: var(--lighter);
+  color: var(--white);
 }
 
 .branch-card {
@@ -3726,7 +3724,7 @@ tbody tr td:last-child {
 }
 
 .branch-overlay h3 {
-  color: var(--lighter);
+  color: var(--white);
   letter-spacing: 0.3px;
   margin-bottom: 8px;
   text-transform: capitalize;
@@ -3737,7 +3735,7 @@ tbody tr td:last-child {
   width: 200px;
   margin: 0 auto;
   letter-spacing: 0.3px;
-  color: var(--lighter);
+  color: var(--white);
   opacity: 0;
   text-transform: capitalize;
   text-shadow: var(--primary-tshadow);
@@ -3815,7 +3813,7 @@ tbody tr td:last-child {
   text-align: center;
   border-radius: 50%;
   color: var(--text);
-  background: var(--lighter);
+  background: var(--white);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
   -moz-transition: all linear .3s;
@@ -3904,12 +3902,12 @@ tbody tr td:last-child {
 }
 
 .header-select .nice-select::after {
-  border-right-color: var(--lighter);
-  border-bottom-color: var(--lighter);
+  border-right-color: var(--white);
+  border-bottom-color: var(--white);
 }
 
 .header-select .nice-select .current {
-  color: var(--lighter);
+  color: var(--white);
 }
 
 .header-top-list {
@@ -3968,7 +3966,7 @@ tbody tr td:last-child {
 }
 
 .header-part {
-  background: var(--lighter);
+  background: var(--white);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
   -moz-transition: all linear .3s;
@@ -3983,7 +3981,7 @@ tbody tr td:last-child {
   left: 0px;
   width: 100%;
   z-index: 3;
-  background: var(--lighter);
+  background: var(--white);
   -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
   transition: all linear .3s;
@@ -3995,7 +3993,7 @@ tbody tr td:last-child {
 
 .header-widget button {
   background-color: var(--primary); 
-  color: var(--lighter);
+  color: var(--chalk);
   padding: 0px 30px;
   height: 40px;
   width: 100%;
@@ -4016,7 +4014,7 @@ tbody tr td:last-child {
 }
 
 .header-widget button:hover{
-  color: var(--lighter);
+  color: var(--chalk);
   background: var(--hovercolor);
 }
 
@@ -4029,11 +4027,11 @@ tbody tr td:last-child {
 }
 
 .header-part.active .header-widget sup {
-  border-color: var(--lighter);
+  border-color: var(--white);
 }
 
 .header-part.active .header-form {
-  background: var(--lighter);
+  background: var(--white);
   border-color: var(--primary);
 }
 
@@ -4172,7 +4170,7 @@ tbody tr td:last-child {
   text-align: center;
   color: var(--primary);
   background: #CFE2CE;
-  border: 2px solid var(--lighter);
+  border: 2px solid var(--white);
   text-shadow: var(--primary-tshadow);
 }
 
@@ -4206,7 +4204,7 @@ tbody tr td:last-child {
 }
 
 .header-form:focus-within {
-  background: var(--lighter);
+  background: var(--white);
   border-color: var(--primary);
 }
 
@@ -4279,7 +4277,7 @@ tbody tr td:last-child {
 
 .header-user i:hover,
 .header-src i:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -4320,7 +4318,7 @@ tbody tr td:last-child {
 }
 
 .navbar-part {
-  background: var(--lighter);
+  background: var(--white);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
   box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.2);
@@ -4526,7 +4524,7 @@ tbody tr td:last-child {
   height: 100vh;
   padding: 0px;
   z-index: 5;
-  background: var(--lighter);
+  background: var(--white);
   -webkit-box-shadow: 15px 0px 25px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 15px 0px 25px 0px rgba(0, 0, 0, 0.15);
   transition: all linear .3s;
@@ -4569,7 +4567,7 @@ tbody tr td:last-child {
   text-align: center;
   display: inline-block;
   color: var(--text);
-  background: var(--lighter);
+  background: var(--white);
   text-shadow: var(--primary-tshadow);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
@@ -4579,7 +4577,7 @@ tbody tr td:last-child {
 }
 
 .nav-close i:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -4623,7 +4621,7 @@ tbody tr td:last-child {
   width: 85px;
   height: 85px;
   border-radius: 50%;
-  border: 2px solid var(--lighter);
+  border: 2px solid var(--white);
 }
 
 .nav-name {
@@ -4794,7 +4792,7 @@ tbody tr td:last-child {
   width: 400px;
   height: 100vh;
   z-index: 5;
-  background: var(--lighter);
+  background: var(--white);
   -webkit-box-shadow: -15px 0px 25px 0px rgba(0, 0, 0, 0.15);
           box-shadow: -15px 0px 25px 0px rgba(0, 0, 0, 0.15);
   transition: all linear .3s;
@@ -4856,7 +4854,7 @@ tbody tr td:last-child {
   text-align: center;
   display: inline-block;
   color: var(--text);
-  background: var(--lighter);
+  background: var(--white);
   text-shadow: var(--primary-tshadow);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
@@ -4866,7 +4864,7 @@ tbody tr td:last-child {
 }
 
 .cart-close i:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -4948,7 +4946,7 @@ tbody tr td:last-child {
 }
 
 .cart-media button i:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--red);
 }
 
@@ -5077,7 +5075,7 @@ tbody tr td:last-child {
   display: block;
   text-align: center;
   text-transform: uppercase;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -5113,13 +5111,13 @@ tbody tr td:last-child {
   letter-spacing: 0.3px;
   text-align: center;
   text-transform: capitalize;
-  color: var(--lighter);
+  color: var(--white);
 }
 
 .checkout-price {
   padding: 0px 25px;
   letter-spacing: 0.3px;
-  color: var(--lighter);
+  color: var(--white);
   border-left: 1px solid var(--border);
 }
 
@@ -5169,7 +5167,7 @@ tbody tr td:last-child {
   width: 280px;
   height: 100vh;
   z-index: 5;
-  background: var(--lighter);
+  background: var(--white);
   -webkit-box-shadow: 15px 0px 25px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 15px 0px 25px 0px rgba(0, 0, 0, 0.15);
   transition: all linear .3s;
@@ -5233,7 +5231,7 @@ tbody tr td:last-child {
   text-align: center;
   display: inline-block;
   color: var(--text);
-  background: var(--lighter);
+  background: var(--white);
   text-shadow: var(--primary-tshadow);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
@@ -5243,7 +5241,7 @@ tbody tr td:last-child {
 }
 
 .category-close i:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -5307,7 +5305,7 @@ tbody tr td:last-child {
   left: 0px;
   width: 100%;
   z-index: 3;
-  background: var(--lighter);
+  background: var(--white);
   border-radius: 10px 10px 0px 0px;
   -webkit-box-shadow: 0px -5px 15px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px -5px 15px 0px rgba(0, 0, 0, 0.1);
@@ -5391,7 +5389,7 @@ tbody tr td:last-child {
   text-align: center;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
   border: 2px solid var(--green-chalk);
   text-shadow: var(--primary-tshadow);
@@ -5413,7 +5411,7 @@ tbody tr td:last-child {
 .product-view {
   max-width: 1000px;
   border-radius: 8px;
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .view-gallery {
@@ -5443,7 +5441,7 @@ tbody tr td:last-child {
   border-radius: 3px;
   text-align: center;
   text-transform: capitalize;
-  color: var(--lighter);
+  color: var(--white);
 }
 
 .view-label:last-child {
@@ -5643,7 +5641,7 @@ tbody tr td:last-child {
 }
 
 .view-tag-list li a:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -5680,7 +5678,7 @@ tbody tr td:last-child {
 }
 
 .view-share-list li a:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -5694,7 +5692,7 @@ tbody tr td:last-child {
   line-height: 46px;
   letter-spacing: 0.3px;
   text-transform: uppercase;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -5741,7 +5739,7 @@ tbody tr td:last-child {
 }
 
 .view-wish.active {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -5846,7 +5844,7 @@ tbody tr td:last-child {
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 0.5px;
-  color: var(--lighter);
+  color: var(--white);
 }
 
 @media (max-width: 767px) {
@@ -5880,21 +5878,21 @@ tbody tr td:last-child {
 
 .news-text h2 {
   font-size: 35px;
-  color: var(--lighter);
+  color: var(--white);
   margin-bottom: 5px;
 }
 
 .news-text p {
   font-size: 18px;
   font-weight: 300;
-  color: var(--lighter);
+  color: var(--white);
 }
 
 .news-form {
   width: 100%;
   padding: 6px;
   border-radius: 8px;
-  background: var(--lighter);
+  background: var(--white);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5922,7 +5920,7 @@ tbody tr td:last-child {
   text-align: center;
   display: inline-block;
   text-transform: uppercase;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -5974,7 +5972,7 @@ tbody tr td:last-child {
 }
 
 /* .intro-wrap:hover .intro-icon i {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 } */
 
@@ -5991,7 +5989,7 @@ tbody tr td:last-child {
   text-align: center;
   display: inline-block;
   color: var(--primary);
-  background: var(--lighter);
+  background: var(--white);
   border: 3px double var(--primary);
   -webkit-box-shadow: var(--primary-bshadow);
           box-shadow: var(--primary-bshadow);
@@ -6086,7 +6084,7 @@ tbody tr td:last-child {
   line-height: 40px;
   border-radius: 50%;
   text-align: center;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
   text-shadow: var(--primary-tshadow);
   -webkit-box-shadow: var(--primary-bshadow);
@@ -6190,14 +6188,14 @@ tbody tr td:last-child {
 
 .footer-copytext {
   font-size: 15px;
-  color: var(--lighter);
+  color: var(--white);
   text-align: center;
   letter-spacing: 0.5px;
   
 }
 
 .footer-copytext a {
-  color: var(--lighter);
+  color: var(--white);
   align-items: center;
 }
 
@@ -6263,7 +6261,7 @@ tbody tr td:last-child {
   margin-left: 5px;
   border-radius: 8px;
   padding: 18px 25px 25px;
-  background: var(--lighter);
+  background: var(--white);
 }
 
 .blog-widget:last-child {
@@ -6318,7 +6316,7 @@ tbody tr td:last-child {
   height: 45px;
   line-height: 45px;
   text-align: center;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
   border-radius: 8px 0px 0px 8px;
 }
@@ -6415,7 +6413,7 @@ tbody tr td:last-child {
   line-height: 32px;
   text-align: center;
   border-radius: 50%;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--heading);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
@@ -6444,7 +6442,7 @@ tbody tr td:last-child {
 }
 
 .blog-widget-tag li a:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -6460,7 +6458,7 @@ tbody tr td:last-child {
   line-height: 45px;
   text-align: center;
   border-radius: 3px;
-  color: var(--lighter);
+  color: var(--white);
   background: var(--heading);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
@@ -6510,7 +6508,7 @@ tbody tr td:last-child {
   padding: 20px 30px;
   border-radius: 8px;
   margin-bottom: 25px;
-  background: var(--lighter);
+  background: var(--white);
   border: 1px solid var(--border);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6577,7 +6575,7 @@ tbody tr td:last-child {
 }
 
 .shop-filter ul li .active {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -6627,8 +6625,8 @@ tbody tr td:last-child {
   padding: 20px 20px;
   border-radius: 8px;
   margin-bottom: 25px;
-  background: var(--lighter);
-  border: 1px solid var(--lighter);
+  background: var(--white);
+  border: 1px solid var(--white);
 }
 
 .shop-widget:last-child {
@@ -6665,7 +6663,7 @@ tbody tr td:last-child {
 }
 
 .shop-widget-btn:hover {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
@@ -6826,7 +6824,7 @@ tbody tr td:last-child {
 .single-banner h2 {
   font-size: 38px;
   margin-bottom: 15px;
-  color: var(--lighter);
+  color: var(--white);
   text-transform: uppercase;
 }
 
@@ -6924,12 +6922,12 @@ tbody tr td:last-child {
 }
 
 .filter-action .active i {
-  color: var(--lighter);
+  color: var(--white);
   background: var(--primary);
 }
 
 .filter-action .active i:hover {
-  color: var(--lighter);
+  color: var(--white);
 }
 
 @media (max-width: 575px) {
@@ -6996,6 +6994,7 @@ tbody tr td:last-child {
 }
 
 .home-grid-promo a img {
+  border: 10px;
   width: 100%;
   border-radius: 8px;
   transition: all linear .3s;

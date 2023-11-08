@@ -1,10 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'header.php'; ?>
+    <head>
+        <!--=====================================
+                    META TAG PART START
+        =======================================-->
+        <!-- REQUIRE META -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- TEMPLATE META -->
+        <meta name="name" content="Oma-Angat">
+        <meta name="title" content="A Virtual Agri-Market for Local Farmers">
+        <meta name="keywords" content="organic, food, shop, agri-market, market, html, agriculture, vegetables, farmers, farm, natural">
+        <!--=====================================
+                    META-TAG PART END
+        =======================================-->
+        <!-- WEBPAGE TITLE -->
+        <title>Oma-Angat</title>
 
+        <!--=====================================
+                    CSS LINK PART START
+        =======================================-->
+        <!-- FAVICON -->
+        <link rel="icon" href="images/single-logo.png">
+
+        <!-- FONTS -->
+        <link rel="stylesheet" href="fonts/flaticon/flaticon.css">
+        <link rel="stylesheet" href="fonts/icofont/icofont.min.css">
+        <link rel="stylesheet" href="fonts/fontawesome/fontawesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <!-- Font-awesome -->
+        <script src="https://kit.fontawesome.com/34a0fb1f6d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+
+        <!-- VENDOR -->
+        <link rel="stylesheet" href="vendor/venobox/venobox.min.css">
+        <link rel="stylesheet" href="vendor/slickslider/slick.min.css">
+        <link rel="stylesheet" href="vendor/niceselect/nice-select.min.css">
+        <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    
+
+        <!-- CUSTOM -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/user-auth.css">
+        <link rel="stylesheet" href="css/home-grid.css">
+
+        <!-- Additional CSS Files -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"  href="css/animation/fullpage.min.css">
+        <link rel="stylesheet"  href="css/animation/owl.carousel.css">
+        <link rel="stylesheet"  href="css/animation/animate.css"> -->
+        <!--=====================================
+                    CSS LINK PART END
+        =======================================-->
+    </head>
     <body>
-    <?php include('header-nav.php'); ?>
- 
+             
+        <div class="backdrop"></div>
+        <a class="backtop fas fa-arrow-up" href="#"></a>
+        
+        <!--=====================================
+                    HEADER TOP PART START
+        =======================================-->
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-lg-8">
+                        <div class="header-top-welcome">
+                            <p>Welcome to Agri-Market for Local Farmers!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-lg-4">
+                        <ul class="header-top-list">
+                            <li><a href="offer.php">offers</a></li>
+                            <li><a href="faq.php">FAQs</a></li>
+                            <li><a href="contact.php">contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--=====================================
+                    HEADER TOP PART END 
+        =======================================-->
+
+
+
+        <!--=====================================
+                    HEADER PART START
+        =======================================-->
+        <header class="header-part">
+            <div class="container">
+                <div class="header-content">
+                    <div class="header-media-group">
+                        <button class="header-user"><img src="images/user.jpg" alt="user"></button>
+                        <a href="index.php"><img src="images/oma-angat-logo.svg" alt="logo"></a>
+                        <button class="header-src"><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <a href="index.php" class="header-logo">
+                        <img src="images/oma-angat-logo.svg" alt="logo">
+                    </a>
+
+                    <!-- LOGIN PAGE -->
+                    <a href="login.php" class="header-widget" title="Join">
+                        <button>Get Started</button>
+                    </a>
+
+                    <!-- <br />
+<b>Warning</b>:  session_start(): Session cannot be started after headers have already been sent in <b>C:\xampp\htdocs\oma-angat\viewers\header-nav.php</b> on line <b>54</b><br />
+<a href="login.php" class="header-widget" title="Join">
+                                      <button>Get Started</button>
+                                  </a> -->
+
+                    
+                    <form class="header-form">
+                        <input type="text" placeholder="Search">
+                        <button><i class="fas fa-search"></i></button>
+                    </form>
+
+                    <div class="header-widget-group">
+                        <a href="notification.php" class="header-widget" title="Notifications">
+                            <i class="fa-solid fa-bell"></i>
+                            <sup>0</sup>
+                        </a>
+                        <a href="wishlist.php" class="header-widget" title="Wishlist">
+                            <i class="fa-solid fa-heart"></i>
+                            <sup>0</sup>
+                        </a>
+                        <button class="header-widget header-cart" title="Cartlist">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <sup>9+</sup>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--=====================================
+                    HEADER PART END
+        =======================================-->
+
+
+        <!--=====================================
+                    NAVBAR PART START
+        =======================================-->
+        <nav class="navbar-part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="navbar-content">
+                            <ul class="navbar-list">
+                                <li class="navbar-item dropdown active">
+                                    <a href="#"><i class="fa-solid fa-house"></i></a>
+                                    <a class="navbar-link" href="index.php">Home</a>
+                                </li>
+                                <li class="navbar-item dropdown ">
+                                    <a href="#0"><i class="fa-solid fa-comments"></i></a>
+                                    <a class="navbar-link" href="blog-author.php" >Feed</a>
+                                </li>
+                                <li class="navbar-item dropdown ">
+                                    <a href="#0"><i class="fa-solid fa-store"></i></a>
+                                    <a class="navbar-link dropdown-arrow" href="#">Shop</a>
+                                    <ul class="dropdown-position-list">
+                                        <li><a href="faq.php">Farmer's Market</a></li>
+                                        <li><a href="offer.php">Category</a></li>
+                                        <li><a href="profile.php">Product</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                            <div class="navbar-info-group">
+                                <div class="navbar-info">
+                                    <a href="#0"><i class="fa-regular fa-calendar"></i></i></a>
+                                    <p>
+                                        <small><a href="#" title="Reserve Product">Harvesting Calendar</a></small>
+                                    </p>
+                                </div>
+                                <div class="navbar-info">
+                                    <a href="#0"><i class="fa-solid fa-hand-holding-heart"></i></a>
+                                    <p>
+                                        <small><a href="#" title="Help a Farmer">Donation</a></small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--=====================================
+                    NAVBAR PART END
+        =======================================--> 
         <!--=====================================
                 CATEGORY SIDEBAR PART START
         =======================================-->
@@ -548,7 +738,7 @@
                         <div class="col-md-6 col-lg-6">
                             <div class="banner-content-1">
                                 <h1><span class="highlight">Shop Local and</span> Support Farmers <span class="highlight"></span> </h1>
-                                <p>You're not just buying food, you're investing in sustainable agriculture and empowering local farmers. Shop with us to savor the taste of affordability and support the heart of our agricultural communities.</p>
+                                <p>With our Virtual Agri-Market, you're not just buying food, you're investing in sustainable agriculture and empowering local farmers. Shop with us today to savor the taste of affordability and support the heart of our agricultural communities.</p>
                                 <div class="banner-btn">
                                     <a class="btn btn-banner" href="login.php">
                                     <i class="fas fa-shopping-basket"></i>
@@ -595,10 +785,11 @@
         <!--=====================================
                     BANNER PART END
         =======================================-->
+
         <!--=====================================
                     INTRO PART START
         =======================================-->
-        <!-- <section class="section intro-part">
+        <section class="section intro-part">
             <div class="container">
                 <div class="row intro-content">
                     <div class="col-sm-6 col-lg-3">
@@ -647,71 +838,10 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!--=====================================
                     INTRO PART END
         =======================================-->
-
-        <?php
-        $Pitems = [
-           [
-              "name"=>"vegetables",
-              "img"=>"images/suggest/vegetables.svg",
-             
-              "url"=>"shop-1column.php",
-              
-           ],
-           [
-              "name"=>"fruits",
-              "img"=>"images/suggest/fruits.svg",
-              "total_items"=>89,
-              "url"=>"shop-1column.php",
-              
-           ],
-           [
-              "name"=>"Grains",
-              "img"=>"images/suggest/grains.svg",
-           
-              "url"=>"shop-1column.php",
-              
-           ],
-           [
-              "name"=>"eggs",
-              "img"=>"images/suggest/eggs.svg",
-            
-              "url"=>"shop-1column.php",
-              
-           ],
-           [
-              "name"=>"dry fish",
-              "img"=>"images/suggest/dried-fish.svg",
-              "total_items"=>23,
-              "url"=>"shop-1column.php",
-              
-           ]
-        ];
-        ?>
-
-        <section class="section suggest-part">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-heading">
-                            <h2>Shop by category</h2>
-                        </div>
-                    </div>
-                </div>
-                <ul class="suggest-slider slider-arrow">
-                    <?php foreach($Pitems as $Pitem) :?>
-                        <li>
-                            <a class="suggest-card" href="<?php echo $Pitem['url']?>">
-                                <img src="<?php echo $Pitem['img']?>">
-                            </a>
-                        </li>
-                    <?php endforeach;?>
-                </ul>
-            </div>
-        </section>
 
         
         <!--=====================================
@@ -751,8 +881,38 @@
         <!--=====================================
                     SUGGEST PART START
         =======================================-->
-    
         
+        <section class="section suggest-part">
+            <div class="container">
+                <ul class="suggest-slider slider-arrow">
+                                            <li>
+                            <a class="suggest-card" href="shop-1column.php">
+                                <img src="images/suggest/vegetables.svg">
+                            </a>
+                        </li>
+                                            <li>
+                            <a class="suggest-card" href="shop-1column.php">
+                                <img src="images/suggest/fruits.svg">
+                            </a>
+                        </li>
+                                            <li>
+                            <a class="suggest-card" href="shop-1column.php">
+                                <img src="images/suggest/grains.svg">
+                            </a>
+                        </li>
+                                            <li>
+                            <a class="suggest-card" href="shop-1column.php">
+                                <img src="images/suggest/eggs.svg">
+                            </a>
+                        </li>
+                                            <li>
+                            <a class="suggest-card" href="shop-1column.php">
+                                <img src="images/suggest/dried-fish.svg">
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+        </section>
         <!--=====================================
                     SUGGEST PART END
         =======================================-->
@@ -3578,9 +3738,135 @@
                    TESTIMONIAL PART END
         =======================================-->    
 
-        <?php include('footer.php'); ?>
-        <?php include('js-vendor.php'); ?>
-    </body>
+                <!--=====================================
+                     FOOTER PART START
+        =======================================-->
+        <footer class="footer-part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="footer-widget">
+                            <a class="footer-logo" href="#">
+                                <img src="images/oma-angat-logo-solo.svg" alt="logo">
+                            </a>
+                            <p class="footer-desc">A Virtual Agri-Market</p>
+                            <ul class="footer-social">
+                                <li><a class="icofont-facebook" href="#"></a></li>
+                                <li><a class="icofont-instagram" href="#"></a></li>
+                                <li><a class="fa-regular fa-envelope"></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="footer-widget contact">
+                            <h3 class="footer-title">contact us</h3>
+                            <ul class="footer-contact">
+                                <li>
+                                    <i class="fa-solid fa-envelope" href="#" ></i>
+                                    <p>
+                                        <span>oma-angat@gmail.com</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone" href="#"> </i>
+                                    <p>
+                                        <span>(+63) 912 022 5970</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-location-dot" href="#"></i>
+                                    <p>CSB2, Bicol University Main Campus, Legazpi, Philippines </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="footer-widget">
+                            <h3 class="footer-title">About Oma-Angat</h3>
+                            <div class="footer-links">
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Oma-Angat Team</a></li>
+                                    <li><a href="#">Terms and Conditions</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Donation for Farmers</a></li>
+                                    <li><a href="#">Harvesting Calendar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="footer-widget">
+                            <h3 class="footer-title">Customer Service</h3>
+                            <div class="footer-links">
+                                <ul>
+                                    <li><a href="#">Help Center</a></li>
+                                    <li><a href="#">Payment Methods</a></li>
+                                    <li><a href="#">Order Tracking</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Return & Refund</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-sm-6 col-xl-3">
+                        <div class="footer-widget">
+                            <h3 class="footer-title">Download App</h3>
+                            <p class="footer-desc">Lorem ipsum dolor sit amet tenetur dignissimos ipsum eligendi autem obcaecati minus ducimus totam reprehenderit exercitationem!</p>
+                            <div class="footer-app">
+                                <a href="#"><img src="images/google-store.png" alt="google"></a>
+                                <a href="#"><img src="images/app-store.png" alt="app"></a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="col-sm-12">
+                        <p class="footer-copytext">Copyright &copy; 2023 - <a target="_blank" href="index.php">Oma-Angat, Virtual Agri-Market</a></p>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+        <!--=====================================
+                      FOOTER PART END
+        =======================================-->               <!--=====================================
+                    JS LINK PART START
+        =======================================-->
+        <!-- VENDOR -->
+        <script src="vendor/bootstrap/jquery-1.12.4.min.js"></script>
+        <script src="vendor/bootstrap/popper.min.js"></script>
+        <script src="vendor/bootstrap/bootstrap.min.js"></script>
+        <script src="vendor/countdown/countdown.min.js"></script>
+        <script src="vendor/niceselect/nice-select.min.js"></script>
+        <script src="vendor/slickslider/slick.min.js"></script>
+        <script src="vendor/venobox/venobox.min.js"></script>
+
+        <!-- CUSTOM -->
+        <script src="js/nice-select.js"></script>
+        <script src="js/countdown.js"></script>
+        <script src="js/accordion.js"></script>
+        <script src="js/venobox.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="js/main.js"></script> 
+        <!-- additional js -->
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/fullpage.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.inview.min.js"></script>
+        <script src="js/scrolloverflow.js"></script>
+        <script src="js/form.js"></script>
+        <script src="js/custom.js"></script>
+        
+        <!--=====================================
+                    JS LINK PART END
+        =======================================-->    </body>
 </php>
 
 
