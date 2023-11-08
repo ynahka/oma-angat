@@ -108,7 +108,7 @@ body {
 
 body {
   color: var(--primary);
-  background: var(--secondary);
+  background: var(--lighter);
   font-size: var(--bodysize);
   font-family: var(--pfamily);
   line-height: var(--bodyheight);
@@ -215,7 +215,8 @@ button:focus {
         ALL COMPONENTS PART STYLE
 =========================================*/
 .section {
-  margin-bottom: 100px 0;
+  margin-top: 30px;
+  margin-bottom: 100px;
 }
 
 .inner-section {
@@ -223,15 +224,15 @@ button:focus {
 }
 
 .section-heading {
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
 }
 
 .section-heading h2{
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 650;
   line-height: 48px;
-  text-transform:none;
+  text-transform: uppercase;
   margin-bottom: none;
 }
 
@@ -1742,7 +1743,6 @@ tbody tr td:last-child {
 
 .suggest-card::before {
   position: absolute;
-  content: "";
   top: 0px;
   left: 0px;
   width: 100%;
@@ -1756,15 +1756,26 @@ tbody tr td:last-child {
   -o-transition: all linear .3s;
 }
 
-.suggest-card:hover::before {
-  /* background: rgb(76, 100, 75, 0.8); */
-  border: 3px solid var(--primary);
-}
-
 .suggest-card img:hover::before {
+  /* background: rgb(76, 100, 75, 0.8); */
+  /* border: 2px solid var(--primary); */
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
+  -moz-transition: all linear .3s;
+  -ms-transition: all linear .3s;
+  -o-transition: all linear .3s;
 }
+
+.suggesr-card img:hover {
+  transition: all linear .3s;
+  -webkit-transition: all linear .3s;
+  -moz-transition: all linear .3s;
+  -ms-transition: all linear .3s;
+  -o-transition: all linear .3s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .suggest-card img {
   width: 100%;
   border-radius: 8px;

@@ -192,6 +192,7 @@
   }
 }
 
+
 .brand-slider .dandik,
 .brand-slider .bamdik {
   top: 35%;
@@ -210,4 +211,10 @@
   .blog-slider .blog-card {
     margin: 0px 10px 25px;
   }
+}
+
+.brand{
+  background: var(--secondary);
+  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.08)
+
 }

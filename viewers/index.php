@@ -652,6 +652,109 @@
                     INTRO PART END
         =======================================-->
 
+                <!--=====================================
+                    BRAND PART START
+        =======================================-->
+        <section class="section brand-part">
+            <div class="container featured">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-heading">
+                            <h2>Shop with Farmer's Market</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="brand-slider slider-arrow">
+                    <div class="brand-wrap">
+                        <div class="brand-media">
+                            <img src="images/brand/1.png" alt="brand">
+                            <div class="brand-overlay">
+                                <a href="brand-single.php"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="brand-meta">
+                            <h4>natural greeny</h4>
+                            <p>(45 items)</p>
+                        </div>
+                    </div>
+                    <div class="brand-wrap">
+                        <div class="brand-media">
+                            <img src="images/brand/2.png" alt="brand">
+                            <div class="brand-overlay">
+                                <a href="brand-single.php"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="brand-meta">
+                            <h4>vegan lover</h4>
+                            <p>(45 items)</p>
+                        </div>
+                    </div>
+                    <div class="brand-wrap">
+                        <div class="brand-media">
+                            <img src="images/brand/3.png" alt="brand">
+                            <div class="brand-overlay">
+                                <a href="brand-single.php"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="brand-meta">
+                            <h4>organic foody</h4>
+                            <p>(45 items)</p>
+                        </div>
+                    </div>
+                    <div class="brand-wrap">
+                        <div class="brand-media">
+                            <img src="images/brand/5.png" alt="brand">
+                            <div class="brand-overlay">
+                                <a href="brand-single.php"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="brand-meta">
+                            <h4>dairymilk</h4>
+                            <p>(45 items)</p>
+                        </div>
+                    </div>
+                    <div class="brand-wrap">
+                        <div class="brand-media">
+                            <img src="images/brand/4.png" alt="brand">
+                            <div class="brand-overlay">
+                                <a href="brand-single.php"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="brand-meta">
+                            <h4>fresh fortune</h4>
+                            <p>(45 items)</p>
+                        </div>
+                    </div>
+                    <div class="brand-wrap">
+                        <div class="brand-media">
+                            <img src="images/brand/6.png" alt="brand">
+                            <div class="brand-overlay">
+                                <a href="brand-single.php"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="brand-meta">
+                            <h4>econature</h4>
+                            <p>(45 items)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-btn-50">
+                            <a href="brand-list.php" class="btn btn-outline">
+                                <i class="fas fa-eye"></i>
+                                <span>See More</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=====================================
+                    BRAND PART END
+        =======================================-->
+
+
         <?php
         $Pitems = [
            [
@@ -720,6 +823,13 @@
         <section class="banner-part-2">
             <div class="container">
                 <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-heading">
+                            <h2>Check our unique features</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-lg-4 order-1 order-lg-0 order-xl-0">
                         <div class="row">
                             <div class="col-sm-6 col-lg-12">
@@ -762,7 +872,7 @@
                     RECENT PART START
         =======================================-->
         <section class="section recent-part">
-            <div class="container">
+            <div class="container featured">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-heading">
@@ -1625,7 +1735,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="section-heading">
-                            <h2>collected new items</h2>
+                            <h2>Paubusan Sale</h2>
                         </div>
                     </div>
                 </div>
@@ -3397,110 +3507,6 @@
         <!--=====================================
                     NICHE PART END
         =======================================-->
-
-
-        <!--=====================================
-                    BRAND PART START
-        =======================================-->
-        <section class="section brand-part">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-heading">
-                            <h2>Farmer's Shop</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="brand-slider slider-arrow">
-                    <div class="brand-wrap">
-                        <div class="brand-media">
-                            <img src="images/brand/1.png" alt="brand">
-                            <div class="brand-overlay">
-                                <a href="brand-single.php"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="brand-meta">
-                            <h4>natural greeny</h4>
-                            <p>(45 items)</p>
-                        </div>
-                    </div>
-                    <div class="brand-wrap">
-                        <div class="brand-media">
-                            <img src="images/brand/2.png" alt="brand">
-                            <div class="brand-overlay">
-                                <a href="brand-single.php"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="brand-meta">
-                            <h4>vegan lover</h4>
-                            <p>(45 items)</p>
-                        </div>
-                    </div>
-                    <div class="brand-wrap">
-                        <div class="brand-media">
-                            <img src="images/brand/3.png" alt="brand">
-                            <div class="brand-overlay">
-                                <a href="brand-single.php"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="brand-meta">
-                            <h4>organic foody</h4>
-                            <p>(45 items)</p>
-                        </div>
-                    </div>
-                    <div class="brand-wrap">
-                        <div class="brand-media">
-                            <img src="images/brand/5.png" alt="brand">
-                            <div class="brand-overlay">
-                                <a href="brand-single.php"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="brand-meta">
-                            <h4>dairymilk</h4>
-                            <p>(45 items)</p>
-                        </div>
-                    </div>
-                    <div class="brand-wrap">
-                        <div class="brand-media">
-                            <img src="images/brand/4.png" alt="brand">
-                            <div class="brand-overlay">
-                                <a href="brand-single.php"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="brand-meta">
-                            <h4>fresh fortune</h4>
-                            <p>(45 items)</p>
-                        </div>
-                    </div>
-                    <div class="brand-wrap">
-                        <div class="brand-media">
-                            <img src="images/brand/6.png" alt="brand">
-                            <div class="brand-overlay">
-                                <a href="brand-single.php"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="brand-meta">
-                            <h4>econature</h4>
-                            <p>(45 items)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-btn-50">
-                            <a href="brand-list.php" class="btn btn-outline">
-                                <i class="fas fa-eye"></i>
-                                <span>all brands</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--=====================================
-                    BRAND PART END
-        =======================================-->
-
 
         <!--=====================================
                   TESTIMONIAL PART START
