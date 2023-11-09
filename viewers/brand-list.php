@@ -568,9 +568,9 @@
         <!--=====================================
                     BANNER PART START
         =======================================-->
-        <section class="inner-section single-banner" style="background: url(images/single-banner.jpg) no-repeat center;">
+        <section class="inner-section single-banner" style="background: url(images/bg.svg) no-repeat center;">
             <div class="container">
-                <h2>brand list</h2>
+                <h2 style="color: var(--primary)">Farmer's Market</h2>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">brand-list</li>
