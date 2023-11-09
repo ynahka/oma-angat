@@ -2308,6 +2308,14 @@ tbody tr td:last-child {
 
 
 }
+/* .border{
+    background: rgb(248, 255, 250, 0.1);
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0 8px 32px 0 rgb(85, 115, 95, 0.37);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+} */
 
 .featured {
   background: rgb(248, 255, 250, 0.1);

@@ -2271,7 +2271,7 @@
         <!--=====================================
                     RECENT PART START
         =======================================-->
-        <section class="section recent-part">
+        <!-- <section class="section recent-part">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -2754,7 +2754,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!--=====================================
                     RECENT PART END
         =======================================-->
@@ -2767,7 +2767,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="section-heading">
-                            <h2>Paubusan Sale</h2>
+                            <h2>Newly Harvested Product</h2>
                         </div>
                     </div>
                 </div>
@@ -2778,7 +2778,7 @@
                                 <div class="product-card">
                                     <div class="product-media">
                                         <div class="product-label">
-                                            <label class="label-text new">new</label>
+                                               <label class="label-text sale">sale</label>
                                         </div>
                                         <button class="product-wish wish">
                                             <i class="fas fa-heart"></i>
@@ -3104,7 +3104,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-heading">
-                            <h2>our featured items</h2>
+                            <h2>Paubusan Sale</h2>
                         </div>
                     </div>
                 </div>
@@ -3113,7 +3113,7 @@
                         <div class="feature-card">
                             <div class="feature-media">
                                 <div class="feature-label">
-                                    <label class="label-text feat">feature</label>
+                                    <label class="label-text sale">sale</label>
                                 </div>
                                 <button class="feature-wish wish">
                                     <i class="fas fa-heart"></i>
@@ -3160,7 +3160,7 @@
                         <div class="feature-card">
                             <div class="feature-media">
                                 <div class="feature-label">
-                                    <label class="label-text feat">feature</label>
+                                    <label class="label-text sale">sale</label>
                                 </div>
                                 <button class="feature-wish wish">
                                     <i class="fas fa-heart"></i>
@@ -3207,7 +3207,7 @@
                         <div class="feature-card">
                             <div class="feature-media">
                                 <div class="feature-label">
-                                    <label class="label-text feat">feature</label>
+                                        <label class="label-text sale">sale</label>
                                 </div>
                                 <button class="feature-wish wish">
                                     <i class="fas fa-heart"></i>
@@ -3254,7 +3254,7 @@
                         <div class="feature-card">
                             <div class="feature-media">
                                 <div class="feature-label">
-                                    <label class="label-text feat">feature</label>
+                                        <label class="label-text sale">sale</label>
                                 </div>
                                 <button class="feature-wish wish">
                                     <i class="fas fa-heart"></i>
@@ -3301,7 +3301,7 @@
                         <div class="feature-card">
                             <div class="feature-media">
                                 <div class="feature-label">
-                                    <label class="label-text feat">feature</label>
+                                        <label class="label-text sale">sale</label>
                                 </div>
                                 <button class="feature-wish wish">
                                     <i class="fas fa-heart"></i>
@@ -3348,7 +3348,7 @@
                         <div class="feature-card">
                             <div class="feature-media">
                                 <div class="feature-label">
-                                    <label class="label-text feat">feature</label>
+                                        <label class="label-text sale">sale</label>
                                 </div>
                                 <button class="feature-wish wish">
                                     <i class="fas fa-heart"></i>

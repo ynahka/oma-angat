@@ -15,9 +15,9 @@
                     </div>
                     <div class="col-md-7 col-lg-4">
                         <ul class="header-top-list">
-                            <li><a href="offer.php">offers</a></li>
+                            <li><a href="about.php">About</a></li>
                             <li><a href="faq.php">FAQs</a></li>
-                            <li><a href="contact.php">contact us</a></li>
+                            <li><a href="contact.php">Contact</a></li>
                         </ul>
                     </div>
                 </div>
