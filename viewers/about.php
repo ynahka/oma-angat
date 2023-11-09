@@ -2,9 +2,9 @@
 <html lang="en">
     <?php include 'header.php'; ?>
     <link rel="stylesheet" href="css/about.css">
-    
+
     <body>
-    <?php include('header-nav.php'); ?>
+<?php include('header-nav.php'); ?>
 
         <!--=====================================
                 CATEGORY SIDEBAR PART START
@@ -462,7 +462,7 @@
         =======================================-->
         <section class="inner-section single-banner" style="background: url(images/single-banner.jpg) no-repeat center;">
             <div class="container">
-                <h2>about our company</h2>
+                <h2>about Oma-Angat</h2>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">about</li>

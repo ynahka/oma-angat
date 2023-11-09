@@ -655,8 +655,8 @@
                 <!--=====================================
                     BRAND PART START
         =======================================-->
-        <section class="section brand-part">
-            <div class="container featured">
+        <section class="section  brand-part">
+            <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="section-heading">
@@ -673,7 +673,7 @@
                             </div>
                         </div>
                         <div class="brand-meta">
-                            <h4>natural greeny</h4>
+                            <h6>Natural Greeny</h6>
                             <p>(45 items)</p>
                         </div>
                     </div>
@@ -685,7 +685,7 @@
                             </div>
                         </div>
                         <div class="brand-meta">
-                            <h4>vegan lover</h4>
+                            <h6>Vegan Lover</h6>
                             <p>(45 items)</p>
                         </div>
                     </div>
@@ -697,7 +697,7 @@
                             </div>
                         </div>
                         <div class="brand-meta">
-                            <h4>organic foody</h4>
+                            <h6>Organic Crops</h6>
                             <p>(45 items)</p>
                         </div>
                     </div>
@@ -709,7 +709,7 @@
                             </div>
                         </div>
                         <div class="brand-meta">
-                            <h4>dairymilk</h4>
+                            <h6>Dairymilk</h6>
                             <p>(45 items)</p>
                         </div>
                     </div>
@@ -721,7 +721,7 @@
                             </div>
                         </div>
                         <div class="brand-meta">
-                            <h4>fresh fortune</h4>
+                            <h6>Fresh Fortune</h6>
                             <p>(45 items)</p>
                         </div>
                     </div>
@@ -733,7 +733,7 @@
                             </div>
                         </div>
                         <div class="brand-meta">
-                            <h4>econature</h4>
+                            <h6>Econature</h6>
                             <p>(45 items)</p>
                         </div>
                     </div>
@@ -760,8 +760,8 @@
            [
               "name"=>"vegetables",
               "img"=>"images/suggest/vegetables.svg",
-             
               "url"=>"shop-1column.php",
+              "title"=>"Vegetables",
               
            ],
            [
@@ -769,6 +769,7 @@
               "img"=>"images/suggest/fruits.svg",
               "total_items"=>89,
               "url"=>"shop-1column.php",
+              "title"=>"Fruits",
               
            ],
            [
@@ -776,6 +777,7 @@
               "img"=>"images/suggest/grains.svg",
            
               "url"=>"shop-1column.php",
+              "title"=>"Grains",
               
            ],
            [
@@ -783,6 +785,7 @@
               "img"=>"images/suggest/eggs.svg",
             
               "url"=>"shop-1column.php",
+              "title"=>"Eggs",
               
            ],
            [
@@ -790,28 +793,35 @@
               "img"=>"images/suggest/dried-fish.svg",
               "total_items"=>23,
               "url"=>"shop-1column.php",
+              "title"=>"Dried Fish",
               
            ]
         ];
         ?>
 
         <section class="section suggest-part">
-            <div class="container">
+                <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-12">
                         <div class="section-heading">
-                            <h2>Shop by category</h2>
+                            <h2>Shop by Category</h2>
                         </div>
                     </div>
                 </div>
+                </div>
+            <div class="container suggest">
                 <ul class="suggest-slider slider-arrow">
                     <?php foreach($Pitems as $Pitem) :?>
                         <li>
                             <a class="suggest-card" href="<?php echo $Pitem['url']?>">
                                 <img src="<?php echo $Pitem['img']?>">
                             </a>
+                            <div class="suggest-info" style="text-align: center;">
+                                <p><?php echo $Pitem['title']?></p>
+                            </div>
                         </li>
                     <?php endforeach;?>
+
                 </ul>
             </div>
         </section>
@@ -872,7 +882,7 @@
                     RECENT PART START
         =======================================-->
         <section class="section recent-part">
-            <div class="container featured">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-heading">
@@ -1361,7 +1371,7 @@
         <!--=====================================
                     PROMOTION PART START
         =======================================-->
-        <div class="section promo-part">
+        <!-- <div class="section promo-part">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -1371,7 +1381,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--=====================================
                     PROMOTION PART END
         =======================================-->
