@@ -412,17 +412,17 @@
             </button>
             <button class="cart-btn" title="Cartlist">
                 <i class="fas fa-shopping-basket"></i>
-                <span>cartlist</span>
+                <span>cart</span>
                 <sup>9+</sup>
             </button>
             <a href="wishlist.php" title="Wishlist">
                 <i class="fas fa-heart"></i>
-                <span>wishlist</span>
+                <span></span>
                 <sup>0</sup>
             </a>
             <a href="notification.php" title="Notification List">
-                <i class="fas fa-random"></i>
-                <span>Notification</span>
+                <i class="fas fa-user"></i>
+                <span>Account</span>
                 <sup>0</sup>
             </a>
         </div>

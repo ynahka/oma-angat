@@ -10,14 +10,14 @@
 
         <!-- AUTHOR META -->
         <meta name="author" content="mironcoder">
-        <meta name="email" content="mironcoder@gmail.com">
+          <meta name="email" content="mironcoder@gmail.com">
         <meta name="profile" content="https://themeforest.net/user/mironcoder">
 
         <!-- TEMPLATE META -->
         <meta name="name" content="Greeny">
         <meta name="title" content="Greeny - eCommerce HTML Template">
         <meta name="keywords" content="organic, food, shop, ecommerce, store, html, bootstrap, template, agriculture, vegetables, webshop, farm, grocery, natural, online store">
-        <!--=====================================
+        <!--=============================== ======
                     META-TAG PART END
         =======================================-->
 

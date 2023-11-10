@@ -597,15 +597,15 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-5 col-lg-6 col-xl-7">
-                        <div class="news-text">
-                            <h2>Get 20% Discount for Subscriber</h2>
-                            <p>Lorem ipsum dolor consectetur adipisicing accusantium</p>
+                        <div class="section-heading">
+                            <h2>Are you a Farmer?</h2>
+                            <p> Join and watch your fields grow to ensures fair compensation for your dedication. Your hard work nourishes not just the land but also the community</p>
                         </div>
                     </div>
                     <div class="col-md-7 col-lg-6 col-xl-5">
                         <form class="news-form">
                             <input type="text" placeholder="Enter Your Email Address">
-                            <button><span><i class="icofont-ui-email"></i>Subscribe</span></button>
+                            <button><span><i class="icofont-ui-email"></i>Start Selling</span></button>
                         </form>
                     </div>
                 </div>
