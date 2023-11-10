@@ -152,7 +152,7 @@
                 </li>
             </ul>
             <div class="category-footer">
-                <p>All Rights Reserved by <a href="#">Mironcoder</a></p>
+            <p>All rights reserved by <a href="index.php">Oma-Angat</a></p>
             </div>
         </aside>
         <!--=====================================
@@ -2763,7 +2763,7 @@
                     NEW ITEM PART START
         =======================================-->
         <section class="section newitem-part">
-            <div class="container featured">
+            <div class="container">
                 <div class="row">
                     <div class="col">
                         <div class="section-heading">
@@ -3416,8 +3416,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 mx-auto">
                         <div class="countdown-content">
-                            <h3>special discount offer for vegetable items</h3>
-                            <p>Reprehenderit sed quod autem molestiae aut modi minus veritatis iste dolorum suscipit quis voluptatum fugiat mollitia quia minima</p>
+                            <h3>It's Oma-Angat Market Day Sale Today🌽🎉</h3>
+                            <p>Embrace Local Harvest with Exclusive Discounts for a Limited Time Only - Your Passport to Fresh, Affordable, and Proudly Albayano Harvests!</p>
                             <div class="countdown countdown-clock" data-countdown="2021/12/31">
                                 <span class="countdown-time"><span>00</span><small>days</small></span>
                                 <span class="countdown-time"><span>00</span><small>hours</small></span>

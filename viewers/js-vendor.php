@@ -17,6 +17,7 @@
         <script src="js/venobox.js"></script>
         <script src="js/slick.js"></script>
         <script src="js/main.js"></script> 
+        
         <!-- additional js -->
         <script src="js/jquery-2.1.0.min.js"></script>
         <script src="js/jquery.js"></script>

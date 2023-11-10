@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php include 'header.php'; ?>
-    <link rel="stylesheet" href="css/brand-list.css">
-
     <body>
     <?php include('header-nav.php'); ?>
-
 
         <!--=====================================
                 CATEGORY SIDEBAR PART START
