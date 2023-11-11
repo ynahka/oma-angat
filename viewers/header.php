@@ -43,7 +43,7 @@
         <link rel="stylesheet" href="css/home-grid.css">
         <link rel="stylesheet" href="css/faq.css">
         <link rel="stylesheet" href="css/brand-list.css">
-        <link rel="stylesheet" href="css/contact.css">
+
         <!-- Additional CSS Files -->
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet"  href="css/animation/fullpage.min.css">

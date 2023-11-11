@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'header.php'; ?>
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/offer.css">
 
 <body>
     <?php include('header-nav.php'); ?>

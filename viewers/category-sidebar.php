@@ -213,7 +213,7 @@
         =======================================-->
         <aside class="nav-sidebar">
             <div class="nav-header">
-                <a href="#"><img src="images/logo.png" alt="logo"></a>
+                <a href="#"><img src="images/oma-angat-logo.svg" alt="logo"></a>
                 <button class="nav-close"><i class="icofont-close"></i></button>
             </div>
             <div class="nav-content">
@@ -257,7 +257,8 @@
                         <a class="nav-link dropdown-link" href="#"><i class="icofont-food-cart"></i>shop</a>
                         <ul class="dropdown-list">
                             <li><a href="shop-1column.php">Market</a></li>
-                            <li><a href="shop-2column.php">shop 2 column</a></li>
+                            <li><a href="shop-2column.php">Categories</a></li>
+                            <li><a href="shop-2column.php">Products</a></li>
                         </ul>
                     </li>
                     <li>
@@ -299,10 +300,10 @@
                     </div>
                 </ul>
                     <div class="nav-info-group-2">
-                        <a class="nav-link" href="#"></i>Settings</a>
+                        <!-- <a class="nav-link" href="#"></i>Settings</a> -->
                         <a class="nav-link" href="faq.php"></i>Help Center</a>
                         <a class="nav-link" href="privacy.php"></i>Terms & Conditions</a>
-                        <a class="nav-link" href="login.php"></i>logout</a>
+                        <a class="nav-link" href="login.php"></i>log out</a>
                     </div>
                 
                     <div class="nav-footer">

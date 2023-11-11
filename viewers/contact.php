@@ -2,9 +2,11 @@
 <html lang="en">
    
     <?php include 'header.php'; ?>
+    <link rel="stylesheet" href="css/contact.css">
 
 <body>
     <?php include('header-nav.php'); ?>
+    <?php include('category-sidebar.php'); ?>
 
 
         <!--=====================================

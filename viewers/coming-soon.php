@@ -5,6 +5,8 @@
 
     <body>
     <?php include('header-nav.php'); ?>
+    <?php include('category-sidebar.php'); ?>
+
 
         <!--=====================================
                    COMING SOON PART START
