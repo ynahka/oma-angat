@@ -454,6 +454,7 @@ button:focus {
   background: var(--primary);
   font-weight: 540;
   line-height: 1.5;
+  
 }
 
 .btn-banner:hover {
@@ -4016,8 +4017,8 @@ tbody tr td:last-child {
 .header-widget button {
   background-color: var(--primary); 
   color: var(--lighter);
-  padding: 0px 30px;
-  height: 40px;
+  padding: 14px 28px;
+  height: 50px;
   width: 100%;
   text-align: center;
   text-decoration: none;

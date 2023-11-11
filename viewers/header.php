@@ -1,24 +1,18 @@
 <head>
-        <!--=====================================
-                    META TAG PART START
-        =======================================-->
-        <!-- REQUIRE META -->
+        
+        <!-- META TAG -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       
         <!-- TEMPLATE META -->
         <meta name="name" content="Oma-Angat">
         <meta name="title" content="A Virtual Agri-Market for Local Farmers">
         <meta name="keywords" content="organic, food, shop, agri-market, market, html, agriculture, vegetables, farmers, farm, natural">
-        <!--=====================================
-                    META-TAG PART END
-        =======================================-->
-        <!-- WEBPAGE TITLE -->
-        <title>Virtual Agri-Market</title>
 
-        <!--=====================================
-                    CSS LINK PART START
-        =======================================-->
-        <!-- FAVICON -->
+        <!-- WEBPAGE TITLE -->
+        <title>Oma-Angat</title>
+
+        <!-- Logo -->
         <link rel="icon" href="images/single-logo.png">
 
         <!-- FONTS -->

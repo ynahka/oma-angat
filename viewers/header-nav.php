@@ -45,25 +45,10 @@
                         <img src="images/oma-angat-logo.svg" alt="logo">
                     </a>
 
-                    <!-- LOGIN PAGE -->
-                    <a href="login.php" class="header-widget" title="Join">
-                        <button>Get Started</button>
+                    <a href="login.html" class="header-widget" title="My Account">
+                        <img src="images/user.png" alt="user">
+                        <span>join</span>
                     </a>
-
-                    <!-- <?php
-                        session_start();
-                        if(isset($_SESSION['user_id'])) {
-                            echo '<div class="header-media-group">
-                                      <button class="header-user"><img src="images/user.jpg" alt="user"></button>
-                                      <a href="index.php"><img src="images/oma-angat-logo.svg" alt="logo"></a>
-                                      <button class="header-src"><i class="fas fa-search"></i></button>
-                                  </div>';
-                        } else {
-                            echo '<a href="login.php" class="header-widget" title="Join">
-                                      <button>Get Started</button>
-                                  </a>';
-                        }
-                    ?> -->
 
                     
                     <form class="header-form">
@@ -72,14 +57,10 @@
                     </form>
 
                     <div class="header-widget-group">
-                        <a href="notification.php" class="header-widget" title="Notifications">
-                            <i class="fa-solid fa-bell"></i>
-                            <sup>0</sup>
-                        </a>
-                        <a href="wishlist.php" class="header-widget" title="Wishlist">
-                            <i class="fa-solid fa-heart"></i>
-                            <sup>0</sup>
-                        </a>
+                     <!-- LOGIN PAGE -->
+                     <a href="login.php" class="header-widget" title="Join">
+                        <button>Get Started</button>
+                    </a>
                         <button class="header-widget header-cart" title="Cartlist">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <sup>9+</sup>

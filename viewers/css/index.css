@@ -69,8 +69,8 @@
   color: var(--lighter);
   font-weight: bolder;
   font-size: 60px;
-  /* margin-left: 0px;
-  letter-spacing: 2.5px; */
+  margin-left: 20px;
+  /* letter-spacing: 2.5px; */
 }
 
 .highlight {
@@ -83,6 +83,7 @@
   line-height: 25px;
   margin-bottom: 40px;
   color: var(--lighter);
+  margin-left: 20px;
   
 }
 
@@ -104,7 +105,7 @@
 
 .banner-btn .btn {
   margin-right: 10px;
-  /* margin-left: 100px; */
+  margin-left: 20px;
 }
 
 .banner-btn-1 .btn {
