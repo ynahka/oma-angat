@@ -4129,7 +4129,7 @@ tbody tr td:last-child {
 }
 
 .header-widget:hover span {
-  color: var(--primary);
+  color: var(--hovercolor);
 }
 
 .header-widget img {
@@ -4139,10 +4139,10 @@ tbody tr td:last-child {
 }
 
 .header-widget i {
-  width: 40px;
-  height: 40px;
-  font-size: 15px;
-  line-height: 40px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
   text-align: center;
   display: inline-block;
   border-radius: 50%;
@@ -4163,7 +4163,7 @@ tbody tr td:last-child {
   white-space: nowrap;
   text-align: left;
   text-transform: capitalize;
-  color: #618264 ;
+  color: var(--primary) ;
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
   -moz-transition: all linear .3s;
@@ -4269,8 +4269,9 @@ tbody tr td:last-child {
 
 .header-media-group a img {
   width: auto;
-  height: 20px;
+  height: 40px;
 }
+
 
 .header-user img,
 .header-src img {
@@ -4281,15 +4282,15 @@ tbody tr td:last-child {
 
 .header-user i,
 .header-src i {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   font-size: 10px;
-  line-height: 20px;
+  line-height: 30px;
   text-align: center;
   display: inline-block;
   border-radius: 50%;
   color: var(--text);
-  background: var(--hovercolor);
+  background: var(--secondary);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
   -moz-transition: all linear .3s;
@@ -4875,8 +4876,8 @@ tbody tr td:last-child {
   border-radius: 50%;
   text-align: center;
   display: inline-block;
-  color: var(--text);
-  background: var(--lighter);
+  color: var(--lighter);
+  background: var(--primary);
   text-shadow: var(--primary-tshadow);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
@@ -4886,8 +4887,8 @@ tbody tr td:last-child {
 }
 
 .cart-close i:hover {
-  color: var(--lighter);
-  background: var(--primary);
+  color: var(--primary);
+  background: var(--lighter);
 }
 
 .cart-list {
@@ -5122,7 +5123,7 @@ tbody tr td:last-child {
 }
 
 .cart-checkout-btn:hover {
-  background: var(--heading);
+  background: var(--hovercolor);
 }
 
 .checkout-label {
@@ -5252,8 +5253,8 @@ tbody tr td:last-child {
   border-radius: 50%;
   text-align: center;
   display: inline-block;
-  color: var(--text);
-  background: var(--lighter);
+  color: var(--lighter);
+  background: var(--primary);
   text-shadow: var(--primary-tshadow);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
@@ -5263,8 +5264,8 @@ tbody tr td:last-child {
 }
 
 .category-close i:hover {
-  color: var(--lighter);
-  background: var(--primary);
+  color: var(--primary);
+  background: var(--lighter);
 }
 
 .category-list {

@@ -212,6 +212,7 @@ $('.wish').on('click', function(){
 //========================================
 $('.product-add').on('click', function(){
     var productAdd = $(this).next('.product-action');
+    // var productAdd = $(this).next('.proceed');
 
     $(this).hide();
     productAdd.css('display', 'flex');

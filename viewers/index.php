@@ -477,6 +477,9 @@
                                         <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
                                         <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                     </div>
+                                    <!-- <div class="proceed">
+                                        <button class="add-cart" type="submit"><span>Proceed</span></button>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

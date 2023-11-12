@@ -36,7 +36,7 @@
             <div class="container">
                 <div class="header-content">
                     <div class="header-media-group">
-                        <button class="header-user"><img src="images/user.jpg" alt="user"></button>
+                        <button class="header-user"> <i class="icofont-ui-user"></i></button>
                         <a href="index.php"><img src="images/oma-angat-logo.svg" alt="logo"></a>
                         <button class="header-src"><i class="fas fa-search"></i></button>
                     </div>
@@ -46,13 +46,13 @@
                     </a>
 
                     <a href="login.html" class="header-widget" title="My Account">
-                        <img src="images/user.png" alt="user">
-                        <span>join</span>
+                    <i class="icofont-ui-user"></i>
+                        <span>Account</span>
                     </a>
 
                     
                     <form class="header-form">
-                        <input type="text" placeholder="Search">
+                        <input type="text" placeholder="Search for markets & products">
                         <button><i class="fas fa-search"></i></button>
                     </form>
 
@@ -104,7 +104,7 @@
                             
                             <div class="navbar-info-group">
                                 <div class="navbar-info">
-                                    <a href="#0"><i class="fa-regular fa-calendar"></i></i></a>
+                                    <a href="#0"><i class="icofont-ui-calendar"></i></i></a>
                                     <p>
                                         <small><a href="#" title="Reserve Product">Harvesting Calendar</a></small>
                                     </p>
