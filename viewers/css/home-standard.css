@@ -52,7 +52,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--chalk);
   background: var(--primary);
 }
 
@@ -63,6 +63,7 @@
 
 .banner-category-list {
   padding: 0px 20px 20px;
+  background: var(--chalk);
 }
 
 .banner-category-item {
@@ -82,7 +83,7 @@
 .banner-category-item a {
   width: 100%;
   font-size: 15px;
-  color: var(--text);
+  color: var(--primary);
   padding: 10px 10px;
   text-transform: capitalize;
   position: relative;
@@ -136,7 +137,7 @@
   z-index: 1;
   padding: 20px;
   border-radius: 5px;
-  background: var(--white);
+  background: var(--chalk);
   opacity: 0;
   visibility: hidden;
   transition: all linear .3s;

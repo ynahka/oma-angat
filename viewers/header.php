@@ -40,7 +40,6 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/user-auth.css">
-        <link rel="stylesheet" href="css/home-standard.css">
         <link rel="stylesheet" href="css/faq.css">
         <link rel="stylesheet" href="css/brand-list.css">
 

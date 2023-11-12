@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'header.php'; ?>
+        <link rel="stylesheet" href="css/home-standard.css">
 
 <body>
 <?php include('header-nav.php'); ?>
@@ -123,9 +124,10 @@
                         <div class="banner-category">
                             <div class="banner-category-head">
                                 <i class="fas fa-bars"></i>
-                                <span>top categories</span>
+                                <span>categories</span>
                             </div>
                             <ul class="banner-category-list">
+                                <!-- vegetables -->
                                 <li class="banner-category-item">
                                     <a href="#">
                                         <i class="flaticon-vegetable"></i>
@@ -165,10 +167,37 @@
                                         </div>
                                     </div>
                                 </li>
+                                <!-- fruits -->
+                                <li class="banner-category-item">
+                                    <a href="#">
+                                        <i class="flaticon-fruit"></i>
+                                        <span>fruits</span>
+                                    </a>
+                                    <div class="banner-category-dropdown">
+                                        <h5>fruits item</h5>
+                                        <div class="banner-sub-category">
+                                            <ul>
+                                                <li><a href="#">Apple</a></li>
+                                                <li><a href="#">Orange</a></li>
+                                                <li><a href="#">Watermelon</a></li>
+                                                <li><a href="#">Pear</a></li>
+                                                <li><a href="#">Cherry</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li><a href="#">Strawberry</a></li>
+                                                <li><a href="#">Nectarine</a></li>
+                                                <li><a href="#">Grape</a></li>
+                                                <li><a href="#">Mango</a></li>
+                                                <li><a href="#">Blueberry</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- recado -->
                                 <li class="banner-category-item">
                                     <a href="#">
                                         <i class="flaticon-groceries"></i>
-                                        <span>groceries</span>
+                                        <span>Recado</span>
                                     </a>
                                     <div class="banner-category-dropdown">
                                         <h5>groceries item</h5>
@@ -197,31 +226,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="banner-category-item">
-                                    <a href="#">
-                                        <i class="flaticon-fruit"></i>
-                                        <span>fruits</span>
-                                    </a>
-                                    <div class="banner-category-dropdown">
-                                        <h5>fruits item</h5>
-                                        <div class="banner-sub-category">
-                                            <ul>
-                                                <li><a href="#">Apple</a></li>
-                                                <li><a href="#">Orange</a></li>
-                                                <li><a href="#">Watermelon</a></li>
-                                                <li><a href="#">Pear</a></li>
-                                                <li><a href="#">Cherry</a></li>
-                                            </ul>
-                                            <ul>
-                                                <li><a href="#">Strawberry</a></li>
-                                                <li><a href="#">Nectarine</a></li>
-                                                <li><a href="#">Grape</a></li>
-                                                <li><a href="#">Mango</a></li>
-                                                <li><a href="#">Blueberry</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
+                                <!-- dairy -->
                                 <li class="banner-category-item">
                                     <a href="#">
                                         <i class="flaticon-dairy-products"></i>
@@ -240,128 +245,21 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="banner-category-item">
-                                    <a href="#">
-                                        <i class="flaticon-crab"></i>
-                                        <span>sea foods</span>
-                                    </a>
-                                    <div class="banner-category-dropdown">
-                                        <h5>sea food items</h5>
-                                        <div class="banner-sub-category">
-                                            <ul>
-                                                <li><a href="#">Lobster</a></li>
-                                                <li><a href="#">Octopus</a></li>
-                                                <li><a href="#">Shrimp</a></li>
-                                                <li><a href="#">Oyster</a></li>
-                                                <li><a href="#">Squid</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="banner-category-item">
-                                    <a href="#">
-                                        <i class="flaticon-salad"></i>
-                                        <span>diet foods</span>
-                                    </a>
-                                    <div class="banner-category-dropdown">
-                                        <h5>diet food items</h5>
-                                        <div class="banner-sub-category">
-                                            <ul>
-                                                <li><a href="#">Peanuts</a></li>
-                                                <li><a href="#">Yogurt</a></li>
-                                                <li><a href="#">vinegar</a></li>
-                                                <li><a href="#">seeds</a></li>
-                                                <li><a href="#">Coconuts</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
+                                <!-- dried fish -->
                                 <li class="banner-category-item">
                                     <a href="#">
                                         <i class="flaticon-dried-fruit"></i>
-                                        <span>dry foods</span>
+                                        <span>dried foods</span>
                                     </a>
                                     <div class="banner-category-dropdown">
                                         <h5>dry food items</h5>
                                         <div class="banner-sub-category">
                                             <ul>
-                                                <li><a href="#">Almond</a></li>
-                                                <li><a href="#">Peanut</a></li>
+                                                <li><a href="#">Tuyo</a></li>
+                                                <li><a href="#">Dilis</a></li>
                                                 <li><a href="#">Raisin</a></li>
-                                                <li><a href="#">Walnut</a></li>
-                                                <li><a href="#">Pistachio</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="banner-category-item">
-                                    <a href="#">
-                                        <i class="flaticon-fast-food"></i>
-                                        <span>fast foods</span>
-                                    </a>
-                                    <div class="banner-category-dropdown">
-                                        <h5>fast food items</h5>
-                                        <div class="banner-sub-category">
-                                            <ul>
-                                                <li><a href="#">burgar</a></li>
-                                                <li><a href="#">pizza</a></li>
-                                                <li><a href="#">Fries</a></li>
-                                                <li><a href="#">chiken</a></li>
-                                                <li><a href="#">dessert</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="banner-category-item">
-                                    <a href="#">
-                                        <i class="flaticon-cheers"></i>
-                                        <span>drinks</span>
-                                    </a>
-                                    <div class="banner-category-dropdown">
-                                        <h5>drinks item</h5>
-                                        <div class="banner-sub-category">
-                                            <ul>
-                                                <li><a href="#">Wine</a></li>
-                                                <li><a href="#">Coffee</a></li>
-                                                <li><a href="#">Lemonade</a></li>
-                                                <li><a href="#">chocolate</a></li>
-                                                <li><a href="#">Milkshake</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="banner-category-item">
-                                    <a href="#">
-                                        <i class="flaticon-barbecue"></i>
-                                        <span>meats</span>
-                                    </a>
-                                    <div class="banner-category-dropdown">
-                                        <h5>meats item</h5>
-                                        <div class="banner-sub-category">
-                                            <ul>
-                                                <li><a href="#">Pork</a></li>
-                                                <li><a href="#">Beef</a></li>
-                                                <li><a href="#">Mutton</a></li>
-                                                <li><a href="#">Chicken</a></li>
-                                                <li><a href="#">Turkey</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="banner-category-item">
-                                    <a href="#">
-                                        <i class="flaticon-fish"></i>
-                                        <span>fishes</span>
-                                    </a>
-                                    <div class="banner-category-dropdown">
-                                        <h5>fishes item</h5>
-                                        <div class="banner-sub-category">
-                                            <ul>
-                                                <li><a href="#">Blue Marlin</a></li>
-                                                <li><a href="#">Flounder</a></li>
-                                                <li><a href="#">Hogfish</a></li>
-                                                <li><a href="#">Mako Shark</a></li>
-                                                <li><a href="#">pompano</a></li>
+                                                <li><a href="#">Daninggit</a></li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -444,6 +342,7 @@
                 </div>
             </div>
         </section>
+        
         <!--=====================================
                     BANNER PART END
         =======================================-->
@@ -3443,127 +3342,11 @@
                     NEWSLETTER PART END
         =======================================-->
 
-
-        <!--=====================================
-                     FOOTER PART START
-        =======================================-->
-        <footer class="footer-part">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="footer-widget">
-                            <a class="footer-logo" href="#">
-                                <img src="images/logo.png" alt="logo">
-                            </a>
-                            <p class="footer-desc">Adipisci asperiores ipsum ipsa repellat consequatur repudiandae quisquam assumenda dolor perspiciatis sit ipsum dolor amet.</p>
-                            <ul class="footer-social">
-                                <li><a class="icofont-facebook" href="#"></a></li>
-                                <li><a class="icofont-twitter" href="#"></a></li>
-                                <li><a class="icofont-linkedin" href="#"></a></li>
-                                <li><a class="icofont-instagram" href="#"></a></li>
-                                <li><a class="icofont-pinterest" href="#"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="footer-widget contact">
-                            <h3 class="footer-title">contact us</h3>
-                            <ul class="footer-contact">
-                                <li>
-                                    <i class="icofont-ui-email"></i>
-                                    <p>
-                                        <span>support@greeny.com</span>
-                                        <span>carrer@greeny.com</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <i class="icofont-ui-touch-phone"></i>
-                                    <p>
-                                        <span>+120 279 532 13</span>
-                                        <span>+120 279 532 14</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <i class="icofont-location-pin"></i>
-                                    <p>1Hd- 50, 010 Avenue, NY 90001 United States</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="footer-widget">
-                            <h3 class="footer-title">quick Links</h3>
-                            <div class="footer-links">
-                                <ul>
-                                    <li><a href="#">My Account</a></li>
-                                    <li><a href="#">Order History</a></li>
-                                    <li><a href="#">Order Tracking</a></li>
-                                    <li><a href="#">Best Seller</a></li>
-                                    <li><a href="#">New Arrivals</a></li>
-                                </ul>
-                                <ul>
-                                    <li><a href="#">Location</a></li>
-                                    <li><a href="#">Affiliates</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                    <li><a href="#">Carrer</a></li>
-                                    <li><a href="#">Faq</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="footer-widget">
-                            <h3 class="footer-title">Download App</h3>
-                            <p class="footer-desc">Lorem ipsum dolor sit amet tenetur dignissimos ipsum eligendi autem obcaecati minus ducimus totam reprehenderit exercitationem!</p>
-                            <div class="footer-app">
-                                <a href="#"><img src="images/google-store.png" alt="google"></a>
-                                <a href="#"><img src="images/app-store.png" alt="app"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="footer-bottom">
-                            <p class="footer-copytext">&copy;  All Copyrights Reserved by <a target="_blank" href="https://themeforest.net/user/mironcoder">Mironcoder</a></p>
-                            <div class="footer-card">
-                                <a href="#"><img src="images/payment/jpg/01.jpg" alt="payment"></a>
-                                <a href="#"><img src="images/payment/jpg/02.jpg" alt="payment"></a>
-                                <a href="#"><img src="images/payment/jpg/03.jpg" alt="payment"></a>
-                                <a href="#"><img src="images/payment/jpg/04.jpg" alt="payment"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!--=====================================
-                      FOOTER PART END
-        =======================================-->
+        <?php include('footer.php'); ?>
+        <?php include('js-vendor.php'); ?>
         
 
-        <!--=====================================
-                    JS LINK PART START
-        =======================================-->
-        <!-- VENDOR -->
-        <script src="vendor/bootstrap/jquery-1.12.4.min.js"></script>
-        <script src="vendor/bootstrap/popper.min.js"></script>
-        <script src="vendor/bootstrap/bootstrap.min.js"></script>
-        <script src="vendor/countdown/countdown.min.js"></script>
-        <script src="vendor/niceselect/nice-select.min.js"></script>
-        <script src="vendor/slickslider/slick.min.js"></script>
-        <script src="vendor/venobox/venobox.min.js"></script>
-
-        <!-- CUSTOM -->
-        <script src="js/nice-select.js"></script>
-        <script src="js/countdown.js"></script>
-        <script src="js/accordion.js"></script>
-        <script src="js/venobox.js"></script>
-        <script src="js/slick.js"></script>
-        <script src="js/main.js"></script> 
-        <!--=====================================
-                    JS LINK PART END
-        =======================================-->
+     
     </body>
 </html>
 
