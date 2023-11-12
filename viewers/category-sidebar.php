@@ -16,9 +16,9 @@
                         <span>vegetables</span>
                     </a>
                     <ul class="dropdown-list">
-                        <li><a href="#">asparagus</a></li>
-                        <li><a href="#">broccoli</a></li>
-                        <li><a href="#">carrot</a></li>
+                        <li><a href="#">Sitaw</a></li>
+                        <li><a href="#">Cabbage</a></li>
+                        <li><a href="#">Potato</a></li>
                     </ul>
                 </li>
 
@@ -28,9 +28,10 @@
                         <span>fruits</span>
                     </a>
                     <ul class="dropdown-list">
-                        <li><a href="#">Apple</a></li>
-                        <li><a href="#">Orange</a></li>
-                        <li><a href="#">Strawberry</a></li>
+                        <li><a href="#">Berries</a></li>
+                        <li><a href="#">Banana</a></li>
+                        <li><a href="#">Mango</a></li>
+                        <li><a href="#">Coconut</a></li>
                     </ul>
                 </li>
                 <li class="category-item">
@@ -39,9 +40,9 @@
                         <span>Dairy farm</span>
                     </a>
                     <ul class="dropdown-list">
-                        <li><a href="#">Egg</a></li>
-                        <li><a href="#">milk</a></li>
-                        <li><a href="#">butter</a></li>
+                        <li><a href="#">Eggs</a></li>
+                        <li><a href="#">Itlog na Pula</a></li>
+                        <li><a href="#">Organic Eggs</a></li>
                     </ul>
                 </li>
 
@@ -53,20 +54,21 @@
                     </a>
                     <ul class="dropdown-list">
                         <li><a href="#">Tuyo</a></li>
-                        <li><a href="#">asdas</a></li>
-                        <li><a href="#">asdas</a></li>
+                        <li><a href="#">Dilis</a></li>
+                        <li><a href="#">Danggit</a></li>
                     </ul>
                 </li>
 
                 <li class="category-item">
                     <a class="category-link dropdown-link" href="#">
-                        <i class="flaticon-barbecue"></i>
-                        <span>meats</span>
+                    <i class="glyph-icon flaticon-groceries"></i> 
+                        <span>Recado</span>
                     </a>
                     <ul class="dropdown-list">
-                        <li><a href="#">Meatball</a></li>
-                        <li><a href="#">Sausage</a></li>
-                        <li><a href="#">Poultry</a></li>
+                        <li><a href="#">Garlic</a></li>
+                        <li><a href="#">Onion</a></li>
+                        <li><a href="#">Tomatoes</a></li>
+                        <li><a href="#">Sili</a></li>
                     </ul>
                 </li>
                 

@@ -37,12 +37,12 @@
                 <div class="header-content">
                     <div class="header-media-group">
                         <button class="header-user"> <i class="icofont-ui-user"></i></button>
-                        <a href="index.php"><img src="images/oma-angat-logo.svg" alt="logo"></a>
+                        <a href="index.php"><img src="images/Oma-Angat-Logo-text.svg" alt="logo"></a>
                         <button class="header-src"><i class="fas fa-search"></i></button>
                     </div>
 
                     <a href="index.php" class="header-logo">
-                        <img src="images/oma-angat-logo.svg" alt="logo">
+                        <img src="images/Oma-Angat-Logo-text.svg" alt="logo">
                     </a>
 
                     <a href="login.html" class="header-widget" title="My Account">
@@ -52,8 +52,9 @@
 
                     
                     <form class="header-form">
+                    <button><i class="fas fa-search"></i></button>
                         <input type="text" placeholder="Search for markets & products">
-                        <button><i class="fas fa-search"></i></button>
+                        
                     </form>
 
                     <div class="header-widget-group">
@@ -62,7 +63,7 @@
                         <button>Get Started</button>
                     </a>
                         <button class="header-widget header-cart" title="Cartlist">
-                            <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fas fa-shopping-basket"></i>
                             <sup>9+</sup>
                         </button>
                     </div>
@@ -84,7 +85,7 @@
                         <div class="navbar-content">
                             <ul class="navbar-list">
                                 <li class="navbar-item dropdown active">
-                                    <a href="#"><i class="fa-solid fa-house"></i></a>
+                                    <a href="#"><i class="icofont-ui-home"></i></a>
                                     <a class="navbar-link" href="index.php">Home</a>
                                 </li>
                                 <li class="navbar-item dropdown ">
