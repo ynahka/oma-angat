@@ -3946,7 +3946,7 @@ tbody tr td:last-child {
 }
 
 .header-top-list li {
-  margin-left: 15px;
+  margin-left: 30px;
 }
 
 .header-top-list li a {
@@ -6843,10 +6843,11 @@ tbody tr td:last-child {
 }
 
 .single-banner h2 {
-  font-size: 38px;
   margin-bottom: 15px;
-  color: var(--lighter);
+  color: var(--chalk);
   text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 60px;
 }
 
 @media (max-width: 767px) {

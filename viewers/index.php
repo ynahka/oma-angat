@@ -123,7 +123,7 @@
                         <div class="col-md-6 col-lg-6">
                             <div class="banner-content-1">
                                 <h1><span class="highlight">Shop Local and</span> Support Farmers <span class="highlight"></span> </h1>
-                                <p>You're not just buying food, you're investing in sustainable agriculture and empowering local farmers. Shop with us to savor the taste of affordability and support the heart of our agricultural communities.</p>
+                                <p>Shop with us to savor the taste of affordability and support the heart of our agricultural communities.</p>
                                 <div class="banner-btn">
                                     <a class="btn btn-banner" href="login.php">
                                     <i class="fas fa-shopping-basket"></i>
@@ -154,7 +154,7 @@
                         <div class="col-md-6 col-lg-6">
                             <div class="banner-content">
                                 <h1><span class="highlight">Are you a Farmer? </span> <br> Join and watch your fields grow </h1>
-                                <p>Our Virtual Agri-market ensures fair compensation for your dedication. Your hard work nourishes not just the land but also the community.</p>
+                                <p>We ensure your fair compensation for your dedication. <br> Your hard work nourishes not just the land but also the community.</p>
                                 <div class="banner-btn-1">
                                     <a class="btn btn-banner" href="login.php">
                                     <i class="fa-solid fa-store"></i>

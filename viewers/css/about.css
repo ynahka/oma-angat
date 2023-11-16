@@ -2,7 +2,7 @@
             ABOUT PAGE STYLE
 =========================================*/
 body {
-  background: var(--lighter);
+  background: var(--secondary);
 }
 
 .about-content h2 {
