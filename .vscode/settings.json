@@ -5,7 +5,6 @@
         "style.css",
         "${fileBasenameNoExtension}.css"
     ],
-    
     "liveSassCompile.settings.compileOnWatch": false,
     "liveSassCompile.settings.watchOnLaunch": true,
     "liveSassCompile.settings.useNewCompiler": true,
@@ -20,8 +19,30 @@
             "format": "compressed",
             "extensionName": ".min.css",
             "savePath": "/css/custom"
-        },
-        
-    ]
-    
+        }
+    ],
+
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+
+    "editor.inlineSuggest.enabled": true,
+    "editor.fontFamily": "'fira code'",
+    "editor.fontLigatures": true,
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "prettier.useEditorConfig": false,
+    "prettier.useTabs": false,
+    "prettier.requireConfig": true,
+    "prettier.prettierPath": ".prettierrc"
 }

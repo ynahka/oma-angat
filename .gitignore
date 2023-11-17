@@ -1,5 +1,5 @@
 *.scss
-*.json
 *.lock
 *.min.css
 *.html
+node_modules/
