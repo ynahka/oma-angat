@@ -26,8 +26,6 @@
                     HEADER TOP PART END 
         =======================================-->
 
-
-
          <!--=====================================
                     HEADER PART START
         =======================================-->
@@ -53,7 +51,6 @@
                      <form class="header-form">
                          <button><i class="fas fa-search"></i></button>
                          <input type="text" placeholder="Search for markets & products">
-
                      </form>
 
                      <div class="header-widget-group">
