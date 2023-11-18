@@ -80,8 +80,8 @@
                      <div class="col-lg-12">
                          <div class="navbar-content">
                              <ul class="navbar-list">
-                                 <li class="navbar-item dropdown active">
-                                     <a href="#"><i class="icofont-ui-home"></i></a>
+                                 <li class="navbar-item dropdown">
+                                     <a href="#0"><i class="fa fa-house"></i></a>
                                      <a class="navbar-link" href="index.php">Home</a>
                                  </li>
                                  <li class="navbar-item dropdown ">
@@ -89,8 +89,8 @@
                                      <a class="navbar-link" href="blog-author.php">Feed</a>
                                  </li>
                                  <li class="navbar-item dropdown ">
-                                     <a href="#0"><i class="fa-solid fa-store"></i></a>
-                                     <a class="navbar-link dropdown-arrow" href="#">Shop</a>
+                                     <a href=""><i class="fa-solid fa-store"></i></a>
+                                     <a class="navbar-link dropdown-arrow" href="faq.php">Shop</a>
                                      <ul class="dropdown-position-list">
                                          <li><a href="faq.php">Farmer's Market</a></li>
                                          <li><a href="offer.php">Category</a></li>
@@ -98,26 +98,23 @@
                                      </ul>
                                  </li>
                              </ul>
-
-                         </div>
-
-                         <div class="navbar-info-group">
-                             <div class="navbar-info">
-                                 <a href="#0"><i class="icofont-ui-calendar"></i></i></a>
-                                 <p>
-                                     <small><a href="#" title="Reserve Product">Harvesting Calendar</a></small>
-                                 </p>
-                             </div>
-                             <div class="navbar-info">
-                                 <a href="#0"><i class="fa-solid fa-hand-holding-heart"></i></a>
-                                 <p>
-                                     <small><a href="#" title="Help a Farmer">Donation</a></small>
-                                 </p>
+                             <div class="navbar-info-group">
+                                 <div class="navbar-info">
+                                     <a href="#0"><i class="icofont-ui-calendar"></i></i></a>
+                                     <p>
+                                         <small><a href="#" title="Reserve Product">Harvesting Calendar</a></small>
+                                     </p>
+                                 </div>
+                                 <div class="navbar-info">
+                                     <a href="#0"><i class="fa-solid fa-hand-holding-heart"></i></a>
+                                     <p>
+                                         <small><a href="#" title="Help a Farmer">Donation</a></small>
+                                     </p>
+                                 </div>
                              </div>
                          </div>
                      </div>
                  </div>
-             </div>
              </div>
          </nav>
          <!--=====================================

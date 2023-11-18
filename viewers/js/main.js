@@ -136,18 +136,28 @@ $('.header-user').on('click', function(){
 // });
 
 // window.onload = function() {
-//     var path = window.location.pathname;
-//     var navLinks = document.getElementsByClassName("navbar-item");
+window.onload = function() {
+    var path = window.location.pathname;
+    var navLinks = document.getElementsByClassName("navbar-item");
+    var dropdownItems = document.querySelectorAll(".dropdown-position-list a");
 
-//     for (var i = 0; i < navLinks.length; i++) {
-//         if (navLinks[i].getElementsByTagName("a")[0].pathname === path) {
-//             navLinks[i].classList.add("active");
-//         }
-//     }
-// }
+    for (var i = 0; i < navLinks.length; i++) {
+        if (navLinks[i].getElementsByTagName("a")[1].pathname === path) {
+            navLinks[i].classList.add("active");
+        }
+    }
 
-
-
+    for (var i = 0; i < dropdownItems.length; i++) {
+        dropdownItems[i].addEventListener("click", function() {
+            // Remove active class from all navbar items
+            for (var j = 0; j < navLinks.length; j++) {
+                navLinks[j].classList.remove("active");
+            }
+            // Add active class to parent navbar item of clicked dropdown item
+            this.closest(".navbar-item").classList.add("active");
+        });
+    }
+};
 
 
 
