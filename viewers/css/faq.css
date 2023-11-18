@@ -42,3 +42,9 @@
   padding: 20px 25px;
   border-top: 1px solid var(--border);
 }
+.faq-ans ol li {
+  font-size: 16px;
+  line-height: 26px;
+  padding: 20px 25px;
+  border-top: 1px solid var(--border);
+}

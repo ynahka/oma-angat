@@ -103,7 +103,7 @@
     <!--=====================================
                    TESTIMONIAL PART START
         =======================================-->
-    <section class="inner-section about-testimonial">
+    <!-- <section class="inner-section about-testimonial">
         <div class="container">
             <ul class="testi-slider slider-arrow">
                 <li>
@@ -134,7 +134,7 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
     <!--=====================================
                    TESTIMONIAL PART END
         =======================================-->

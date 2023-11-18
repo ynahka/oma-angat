@@ -226,7 +226,7 @@
                     </a>
                 </div>
                 <!-- This commentable code show when user login or register -->
-                <div class="nav-profile">
+                <!-- <div class="nav-profile">
                     <a class="nav-user" href="#"><img src="images/user.png" alt="user"></a>
                     <h4 class="nav-name"><a href="profile.php">Account Name</a></h4>
                 </div>
@@ -247,7 +247,7 @@
                             <option value="arabic">Buyer</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
                 <ul class="nav-list">
                     <li>
                         <a class="nav-link dropdown-link" href="#"><i class="icofont-home"></i>Home</a>

@@ -138,7 +138,6 @@
                             <img src="images/front-pic.svg" alt="index">
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -235,7 +234,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading">
-                        <h2>Shop by Farmer's Market</h2>
+                        <h2>Shop by farmer's market</h2>
                     </div>
                 </div>
             </div>
@@ -380,7 +379,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading">
-                        <h2>Shop by Category</h2>
+                        <h2>Shop by category</h2>
                     </div>
                 </div>
             </div>
@@ -410,7 +409,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h2>Shop by Top Niche</h2>
+                        <h2>Shop by top picks</h2>
                     </div>
                 </div>
             </div>
@@ -2346,7 +2345,7 @@
             <div class="row">
                 <div class="col">
                     <div class="section-heading">
-                        <h2>Newly Harvested Product</h2>
+                        <h2>Newly harvested product</h2>
                     </div>
                 </div>
             </div>
@@ -2683,7 +2682,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h2>Paubusan Sale</h2>
+                        <h2>Paubusan sale</h2>
                     </div>
                 </div>
             </div>
@@ -2996,7 +2995,7 @@
                 <div class="col-lg-6 mx-auto">
                     <div class="countdown-content">
                         <h3>It's Oma-Angat Market Day Sale Today🌽🎉</h3>
-                        <p>Embrace Local Harvest with Exclusive Discounts for a Limited Time Only - Your Passport to Fresh, Affordable, and Proudly Albayano Harvests!</p>
+                        <p>Embrace local harvest with exclusive discounts for a limited time only - Your passport to fresh, affordable, and proudly albayano harvests!</p>
                         <div class="countdown countdown-clock" data-countdown="2021/12/31">
                             <span class="countdown-time"><span>00</span><small>days</small></span>
                             <span class="countdown-time"><span>00</span><small>hours</small></span>
