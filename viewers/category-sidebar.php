@@ -61,7 +61,7 @@
 
                 <li class="category-item">
                     <a class="category-link dropdown-link" href="#">
-                    <i class="glyph-icon flaticon-groceries"></i> 
+                        <i class="glyph-icon flaticon-groceries"></i>
                         <span>Recado</span>
                     </a>
                     <ul class="dropdown-list">
@@ -71,10 +71,10 @@
                         <li><a href="#">Sili</a></li>
                     </ul>
                 </li>
-                
+
             </ul>
             <div class="category-footer">
-            <p>All rights reserved by <a href="index.php">Oma-Angat</a></p>
+                <p>All rights reserved by <a href="index.php">Oma-Angat</a></p>
             </div>
         </aside>
         <!--=====================================
@@ -112,7 +112,7 @@
                             <h6>P56.98</h6>
                         </div>
                     </div>
-                </li> 
+                </li>
                 <li class="cart-item">
                     <div class="cart-media">
                         <a href="#"><img src="images/product/1.png" alt="product"></a>
@@ -210,7 +210,7 @@
                     CART SIDEBAR PART END
         =======================================-->
 
-     <!--=====================================
+        <!--=====================================
                   NAV SIDEBAR PART START
         =======================================-->
         <aside class="nav-sidebar">
@@ -301,16 +301,16 @@
                         <li><a class="nav-link" href="error.php"><i class="icofont-ui-block"></i>404 error</a></li>
                     </div>
                 </ul>
-                    <div class="nav-info-group-2">
-                        <!-- <a class="nav-link" href="#"></i>Settings</a> -->
-                        <a class="nav-link" href="faq.php"></i>Help Center</a>
-                        <a class="nav-link" href="privacy.php"></i>Terms & Conditions</a>
-                        <a class="nav-link" href="login.php"></i>log out</a>
-                    </div>
-                
-                    <div class="nav-footer">
-                        <p>All rights reserved by <a href="index.php">Oma-Angat</a></p>
-                    </div>
+                <div class="nav-info-group-2">
+                    <!-- <a class="nav-link" href="#"></i>Settings</a> -->
+                    <a class="nav-link" href="faq.php"></i>Help Center</a>
+                    <a class="nav-link" href="privacy.php"></i>Terms & Conditions</a>
+                    <a class="nav-link" href="login.php"></i>log out</a>
+                </div>
+
+                <div class="nav-footer">
+                    <p>All rights reserved by <a href="index.php">Oma-Angat</a></p>
+                </div>
             </div>
         </aside>
         <!--=====================================

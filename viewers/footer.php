@@ -23,7 +23,7 @@
                             <h3 class="footer-title">contact us</h3>
                             <ul class="footer-contact">
                                 <li>
-                                    <i class="fa-solid fa-envelope" href="#" ></i>
+                                    <i class="fa-solid fa-envelope" href="#"></i>
                                     <p>
                                         <span>oma-angat@gmail.com</span>
                                     </p>
@@ -91,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </footer>
         <!--=====================================
                       FOOTER PART END

@@ -14,12 +14,43 @@
     <section class="inner-section single-banner" style="background: url(images/banner.svg) no-repeat center;">
         <div class="container">
             <h2>about Oma-Angat</h2>
-            <ol class="breadcrumb">
+            <!-- <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">about</li>
-            </ol>
+            </ol> -->
         </div>
     </section>
+    <!-- 
+    <div class="examp container">
+        <div class="row gy-4 mt-5 mx-2 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+            <div class="col-xl-4 col-md-4 col-sm-4">
+                <a href="photos.html">
+                    <div class="icon-box">
+                        <i class="bx bx-photo-album"></i>
+                        <h3>Photo Highlights</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xl-4 col-md-4 col-sm-4 justify-content-center">
+                <a href="videos.html">
+                    <div class="icon-box">
+                        <i class="bx bx-video"></i>
+                        <h3>Video Highlights</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-md-4 col-sm-4 justify-content-center">
+                <a href="inarihan-river.html">
+                    <div class="icon-box">
+                        <i class="bx bx-water"></i>
+                        <h3>Inahiran River</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div> -->
+
 
 
     <!--=====================================
@@ -36,9 +67,9 @@
                 <div class="col-lg-6">
                     <div class="about-content">
                         <h2>Our Motive is to Provide Best for Those Who Deserve</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis exercitationem commodi aliquam necessitatibus vero reiciendis quaerat illo est fuga ea temporibus natus doloremque ipsum voluptas quod deserunt expedita reprehenderit pariatur quidem quisquam, recusandae animi non! Voluptas totam repudiandae rerum molestiae possimus quis numquam sapiente sunt architecto quisquam Aliquam odio optio</p>
+                        <p>Welcome to OMA-ANGAT, your premier destination for fresh, locally sourced agricultural products from the heart of Albay. We are dedicated to revolutionizing the way farmers connect with consumers, fostering a direct and transparent exchange that benefits both parties.</p>
                     </div>
-                    <ul class="about-list">
+                    <!-- <ul class="about-list">
                         <li>
                             <h3>34785</h3>
                             <h6>registered users</h6>
@@ -51,7 +82,7 @@
                             <h3>189</h3>
                             <h6>total products</h6>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="col-lg-6">
                     <div class="about-img">

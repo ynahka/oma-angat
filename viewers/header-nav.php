@@ -33,7 +33,7 @@
              <div class="container">
                  <div class="header-content">
                      <div class="header-media-group">
-                         <button class="header-user"> <i class="icofont-ui-user"></i></button>
+                         <button class="header-user"> <i class="far fa-user"></i></button>
                          <a href="index.php"><img src="images/Oma-Angat-Logo-text.svg" alt="logo"></a>
                          <button class="header-src"><i class="fas fa-search"></i></button>
                      </div>
@@ -42,11 +42,10 @@
                          <img src="images/Oma-Angat-Logo-text.svg" alt="logo">
                      </a>
 
-                     <a href="login.html" class="header-widget" title="My Account">
+                     <button class="header-widget header-user-1" title="Account">
                          <i class="icofont-ui-user"></i>
                          <span>Account</span>
-                     </a>
-
+                     </button>
 
                      <form class="header-form">
                          <button><i class="fas fa-search"></i></button>
@@ -100,7 +99,7 @@
                              </ul>
                              <div class="navbar-info-group">
                                  <div class="navbar-info">
-                                     <a href="#0"><i class="icofont-ui-calendar"></i></i></a>
+                                     <a href="#0"><i class="fas fa-calendar-check"></i></a>
                                      <p>
                                          <small><a href="#" title="Reserve Product">Harvesting Calendar</a></small>
                                      </p>

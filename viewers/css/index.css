@@ -183,6 +183,27 @@
     margin-right: 10px;
   }
 }
+@media (max-width: 767px) {
+  .banner-content-1 h1 {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  .banner-btn-1 .btn {
+    margin: 8px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner-content-1 h1 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+    .banner-btn-1 .btn {
+    padding: 14px 22px;
+    margin-right: 10px;
+  }
+}
 
 .suggest-slider li {
   margin: 0px 10px;

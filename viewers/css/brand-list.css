@@ -1,16 +1,18 @@
 .brand-wrap {
-  padding: 15px 0px 50px;
+  padding: 15px 0px 30px;
+  width: 100%;
 }
 
 .brand-media {
   margin-bottom: 25px;
 }
 
-/* @media (max-width: 575px) {
+@media (max-width: 575px) {
   .brand-wrap {
     width: 100%;
     padding: 15px 0px 30px;
-  } */
+  }
+
 .brand-media::before {
   width: 135px;
   height: 135px;
@@ -21,4 +23,5 @@
 }
 .brand-meta h4 {
   font-size: 16px;
+}
 }
