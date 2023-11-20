@@ -11,15 +11,15 @@
             </div>
             <ul class="category-list">
                 <li class="category-item">
-                    <a class="category-link dropdown-link" href="#">
+                    <a class="category-link dropdown-link" href="faq.php">
                         <i class="flaticon-vegetable"></i>
                         <span>vegetables</span>
                     </a>
-                    <ul class="dropdown-list">
+                    <!-- <ul class="dropdown-list">
                         <li><a href="#">Sitaw</a></li>
                         <li><a href="#">Cabbage</a></li>
                         <li><a href="#">Potato</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
 
                 <li class="category-item">
@@ -27,23 +27,23 @@
                         <i class="flaticon-fruit"></i>
                         <span>fruits</span>
                     </a>
-                    <ul class="dropdown-list">
+                    <!-- <ul class="dropdown-list">
                         <li><a href="#">Berries</a></li>
                         <li><a href="#">Banana</a></li>
                         <li><a href="#">Mango</a></li>
                         <li><a href="#">Coconut</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li class="category-item">
                     <a class="category-link dropdown-link" href="#">
                         <i class="flaticon-dairy-products"></i>
                         <span>Dairy farm</span>
                     </a>
-                    <ul class="dropdown-list">
+                    <!-- <ul class="dropdown-list">
                         <li><a href="#">Eggs</a></li>
                         <li><a href="#">Itlog na Pula</a></li>
                         <li><a href="#">Organic Eggs</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
 
 
@@ -52,24 +52,11 @@
                         <i class="flaticon-dried-fruit"></i>
                         <span>dried fish</span>
                     </a>
-                    <ul class="dropdown-list">
+                    <!-- <ul class="dropdown-list">
                         <li><a href="#">Tuyo</a></li>
                         <li><a href="#">Dilis</a></li>
                         <li><a href="#">Danggit</a></li>
-                    </ul>
-                </li>
-
-                <li class="category-item">
-                    <a class="category-link dropdown-link" href="#">
-                        <i class="glyph-icon flaticon-groceries"></i>
-                        <span>Recado</span>
-                    </a>
-                    <ul class="dropdown-list">
-                        <li><a href="#">Garlic</a></li>
-                        <li><a href="#">Onion</a></li>
-                        <li><a href="#">Tomatoes</a></li>
-                        <li><a href="#">Sili</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
 
             </ul>
@@ -330,20 +317,20 @@
                 <i class="fas fa-list"></i>
                 <span>category</span>
             </button>
+
             <a href="wishlist.php" title="Wishlist">
                 <i class="fas fa-heart"></i>
                 <span>Feed</span>
-                <sup>0</sup>
             </a>
             <button class="cart-btn" title="Cartlist">
                 <i class="fas fa-shopping-basket"></i>
                 <span>cart</span>
-                <sup>9+</sup>
+
             </button>
             <a href="notification.php" title="Notification List">
                 <i class="fas fa-user"></i>
                 <span>Account</span>
-                <sup>0</sup>
+
             </a>
         </div>
         <!--=====================================

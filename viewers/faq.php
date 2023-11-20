@@ -120,7 +120,7 @@
     <!--=====================================
                     NEWSLETTER PART START
         =======================================-->
-    <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
+    <!-- <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-5 col-lg-6 col-xl-7">
@@ -131,13 +131,12 @@
                 </div>
                 <div class="col-md-7 col-lg-6 col-xl-5">
                     <form class="news-form">
-                        <input type="text" placeholder="Enter Your Email Address">
-                        <button><span><i class="icofont-ui-cart"></i>Start Selling</span></button>
+                        <button><span><i class="fa fa-store"></i>Start Selling</span></button>
                     </form>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--=====================================
                     NEWSLETTER PART END
         =======================================-->

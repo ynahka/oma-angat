@@ -122,7 +122,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 col-lg-6">
                         <div class="banner-content-1">
-                            <h1><span class="highlight">Shop Local and</span> Support Farmers <span class="highlight"></span> </h1>
+                            <h1><span class="highlight">Shop Local and</span><br> Support Farmers <span class="highlight"></span> </h1>
                             <p>Shop with us to savor the taste of affordability and support the heart of our agricultural communities.</p>
                             <div class="banner-btn">
                                 <a class="btn btn-banner" href="login.php">
