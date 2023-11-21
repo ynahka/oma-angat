@@ -66,7 +66,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-content">
-                        <h2>Our Motive is to Provide Best for Those Who Deserve</h2>
+                        <h2>Our Motive is to build more sustainable future for local farmers and consumers</h2>
                         <p>Welcome to OMA-ANGAT, your premier destination for fresh, locally sourced agricultural products from the heart of Albay. We are dedicated to revolutionizing the way farmers connect with consumers, fostering a direct and transparent exchange that benefits both parties.</p>
                     </div>
                     <!-- <ul class="about-list">
@@ -86,10 +86,10 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-img">
-                        <img src="images/about/01.jpg" alt="about">
-                        <img src="images/about/02.jpg" alt="about">
-                        <img src="images/about/03.jpg" alt="about">
-                        <img src="images/about/04.jpg" alt="about">
+                        <img src="images/about/01.png" alt="about">
+                        <img src="images/about/02.png" alt="about">
+                        <img src="images/about/03.png" alt="about">
+                        <img src="images/about/04.png" alt="about">
                     </div>
                 </div>
             </div>
@@ -98,6 +98,64 @@
     <!--=====================================
                     ABOUT PART END
         =======================================-->
+
+    <!--=====================================
+                        INTRO PART START
+            =======================================-->
+    <section class="intro-part">
+        <div class="container">
+            <div class="row intro-content">
+                <div class="col-sm-6 col-lg-3">
+                    <div class=" intro-wrap">
+                        <!-- <div class="intro-icon">
+                            <i class="fas fa-truck"></i>
+                        </div> -->
+                        <div class="intro-content">
+                            <h3>Empower Local Farmers</h3>
+                            <p> Provide a digital marketplace where farmers in the Albay Area and the Bicol Region can directly showcase and sell their produce to a diverse consumer base.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="intro-wrap">
+                        <!-- <div class="intro-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div> -->
+                        <div class="intro-content">
+                            <h3>Enhance Accessibility</h3>
+                            <p>Create a seamless and reliable online platform that enables consumers to easily browse and purchase fresh agricultural products based on geography and categories.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="intro-wrap">
+                        <!-- <div class="intro-icon">
+                            <i class="fas fa-headset"></i>
+                        </div> -->
+                        <div class="intro-content">
+                            <h3>Eliminate Middlemen</h3>
+                            <p>Facilitate direct transactions between farmers and consumers, cutting out unnecessary intermediaries and ensuring that farmers receive fair compensation for their hard work.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="intro-wrap">
+                        <!-- <div class="intro-icon">
+                            <i class="fas fa-lock"></i>
+                        </div> -->
+                        <div class="intro-content">
+                            <h3>Promote Sustainable Agriculture</h3>
+                            <p>Encourage and support practices that contribute to the long-term health of the environment and the local agricultural industry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=====================================
+                        INTRO PART END
+            =======================================-->
+
 
 
     <!--=====================================
@@ -146,36 +204,36 @@
     <section class="about-choose">
         <div class="container">
             <div class="row">
-                <div class="col-11 col-md-9 col-lg-7 col-xl-6 mx-auto">
-                    <div class="section-heading">
-                        <h2>Why People Choose Their Daily Organic Life With Us</h2>
+                <div class="m-card col-lg-6 ">
+                    <div class="about content" style="text-align: center;">
+                        <h2>Mission</h2>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
                     <div class="choose-card">
-                        <div class="choose-icon">
+                        <!-- <div class="choose-icon">
                             <i class="icofont-fruits"></i>
-                        </div>
+                        </div> -->
                         <div class="choose-text">
-                            <h4>100% fresh organic food</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing tempora pariatur provident animi error dignissimo cumque minus facere dolores cupiditate debitis</p>
+
+                            <p>At OMA-ANGAT, our mission is to develop a user-friendly Web-based Agri-Market tailored for the unique needs of local farmers in the Bicol Region. We aim to streamline the process of selling and buying agricultural products by eliminating unnecessary intermediaries. Through our platform, we seek to empower farmers, enhance consumer access to fresh produce, and contribute to the growth of a sustainable and resilient local food ecosystem.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="m-card col-lg-6 ">
+                    <div class="about-content" style="text-align: center;">
+                        <h2>Vision</h2>
+                    </div>
                     <div class="choose-card">
-                        <div class="choose-icon">
+                        <!-- <div class="choose-icon">
                             <i class="icofont-vehicle-delivery-van"></i>
-                        </div>
+                        </div> -->
                         <div class="choose-text">
-                            <h4>Delivery within one hour</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing tempora pariatur provident animi error dignissimo cumque minus facere dolores cupiditate debitis</p>
+
+                            <p>Our vision at OMA-ANGAT is to create a thriving online community that empowers local farmers in the Albay Area and the Bicol Region, providing them with a dynamic platform to showcase and sell their produce directly to consumers. We aspire to bridge the gap between farmers and buyers, promoting sustainable agriculture and fostering a deeper connection between the people who cultivate our food and those who enjoy it.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <div class="choose-card">
                         <div class="choose-icon">
                             <i class="icofont-loop"></i>
@@ -185,8 +243,8 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing tempora pariatur provident animi error dignissimo cumque minus facere dolores cupiditate debitis</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6">
+                </div> -->
+                <!-- <div class="col-lg-6">
                     <div class="choose-card">
                         <div class="choose-icon">
                             <i class="icofont-support"></i>
@@ -196,7 +254,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing tempora pariatur provident animi error dignissimo cumque minus facere dolores cupiditate debitis</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -212,7 +270,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-heading">
+                    <div class="about-content">
                         <h2>Meet our team members</h2>
                     </div>
                 </div>
@@ -289,7 +347,7 @@
     <!--=====================================
                     NEWSLETTER PART START
         =======================================-->
-    <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
+    <!-- <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-5 col-lg-6 col-xl-7">
@@ -306,67 +364,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--=====================================
                     NEWSLETTER PART END
-        =======================================-->
-
-
-    <!--=====================================
-                    INTRO PART START
-        =======================================-->
-    <section class="intro-part">
-        <div class="container">
-            <div class="row intro-content">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <div class="intro-content">
-                            <h5>free home delivery</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                        <div class="intro-content">
-                            <h5>instant return policy</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <div class="intro-content">
-                            <h5>quick support system</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <div class="intro-content">
-                            <h5>secure payment way</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=====================================
-                    INTRO PART END
         =======================================-->
 
 

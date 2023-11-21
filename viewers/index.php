@@ -9,7 +9,7 @@
     <!--=====================================
                     PRODUCT VIEW START
         =======================================-->
-    <!-- <div class="modal fade" id="product-view">
+    <div class="modal fade" id="product-view">
         <div class="modal-dialog">
             <div class="modal-content">
                 <button class="modal-close icofont-close" data-bs-dismiss="modal"></button>
@@ -82,7 +82,7 @@
                                 </div>
                                 <div class="view-add-group">
                                     <button class="product-add" title="Add to Cart">
-                                        <i class="fas fa-shopping-basket"></i>
+                                        <!-- <i class="fas fa-shopping-basket"></i> -->
                                         <span>add to cart</span>
                                     </button>
                                     <div class="product-action">
@@ -92,13 +92,8 @@
                                     </div>
                                 </div>
                                 <div class="view-action-group">
-                                    <a class="view-wish wish" href="#" title="Add Your Wishlist">
-                                        <i class="icofont-heart"></i>
-                                        <span>add to wish</span>
-                                    </a>
-                                    <a class="view-Notification" href="notification.php" title="Notification This Item">
-                                        <i class="fas fa-random"></i>
-                                        <span>Notification This</span>
+                                    <a class="view-Notification" href="checkout.php" title="Notification This Item">
+                                        <span>Proceed to Checkout</span>
                                     </a>
                                 </div>
                             </div>
@@ -107,7 +102,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!--=====================================
                     PRODUCT VIEW END
         =======================================-->
@@ -234,7 +229,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading">
-                        <h2>Shop by farmer's market</h2>
+                        <h2>Shop by Farmer's Market</h2>
                     </div>
                 </div>
             </div>
@@ -379,7 +374,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading">
-                        <h2>Shop by category</h2>
+                        <h2>Shop by Category</h2>
                     </div>
                 </div>
             </div>
@@ -409,7 +404,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h2>Shop by top picks</h2>
+                        <h2>Shop by Top Picks</h2>
                     </div>
                 </div>
             </div>
@@ -484,7 +479,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="product-card">
+                        <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
                             <div class="product-media">
                                 <div class="product-label">
                                     <label class="label-text order">314</label>
@@ -495,11 +490,11 @@
                                 <a class="product-image" href="product-video.php">
                                     <img src="images/product/1.png" alt="product">
                                 </a>
-                                <div class="product-widget">
+                                <!-- <div class="product-widget">
                                     <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
                                     <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
                                     <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="product-content">
                                 <div class="product-rating">
@@ -511,21 +506,21 @@
                                     <a href="product-video.php">(3)</a>
                                 </div>
                                 <h6 class="product-name">
-                                    <a href="product-video.php">fresh green chilis</a>
+                                    <a href="product-video.php">Avocado</a>
                                 </h6>
                                 <h6 class="product-price">
                                     <del>P34</del>
                                     <span>P28<small>/piece</small></span>
                                 </h6>
-                                <button class="product-add" title="Add to Cart">
+                                <!-- <button class="product-add" title="Add to Cart">
                                     <i class="fas fa-shopping-basket"></i>
                                     <span>add</span>
-                                </button>
-                                <div class="product-action">
+                                </button> -->
+                                <!-- <div class="product-action">
                                     <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
                                     <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
                                     <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -2345,7 +2340,7 @@
             <div class="row">
                 <div class="col">
                     <div class="section-heading">
-                        <h2>Newly harvested product</h2>
+                        <h2>Newly Harvested Product</h2>
                     </div>
                 </div>
             </div>

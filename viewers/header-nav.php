@@ -59,7 +59,6 @@
                          </a>
                          <button class="header-widget header-cart" title="Cartlist">
                              <i class="fas fa-shopping-basket"></i>
-                             <sup>9+</sup>
                          </button>
                      </div>
                  </div>

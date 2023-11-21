@@ -33,8 +33,8 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-card">
                         <i class="icofont-location-pin"></i>
-                        <h4>head office</h4>
-                        <p>1Hd- 50, 010 Avenue, NY 90001 United States</p>
+                        <h4>College of Science </h4>
+                        <p>CSB2, Bicol University Main Campus</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -42,8 +42,8 @@
                         <i class="icofont-phone"></i>
                         <h4>phone number</h4>
                         <p>
-                            <a href="#">009-215-5596 <span>(toll free)</span></a>
-                            <a href="#">009-215-5595</a>
+                            <a href="#">(+63) 912 022 5970</a>
+                            <a href="#">(+63) 912 022 5970</a>
                         </p>
                     </div>
                 </div>
@@ -52,16 +52,17 @@
                         <i class="icofont-email"></i>
                         <h4>Support mail</h4>
                         <p>
-                            <a href="#">contact@example.com</a>
+                            <a href="#">
+                                oma-angat@gmail.com</a>
                             <a href="#">info@example.com</a>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-6">
                     <div class="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.3406974350205!2d90.48469931445422!3d23.663771197998262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b0d5983f048d%3A0x754f30c82bcad3cd!2sJalkuri%20Bus%20Stop!5e0!3m2!1sen!2sbd!4v1605354966349!5m2!1sen!2sbd" aria-hidden="false" tabindex="0"></iframe>
+                        <iframe src="https://www.google.com/maps/place/Bicol+University+College+of+Science+(BUCS)/@13.142535,123.7193568,16z/data=!4m10!1m2!2m1!1s+CSB2,+Bicol+University+Main+Campus,+Legazpi,+Philippines!3m6!1s0x33a103e420c01fbb:0x98886975fb5a21ef!8m2!3d13.1425606!4d123.7240928!15sCjhDU0IyLCBCaWNvbCBVbml2ZXJzaXR5IE1haW4gQ2FtcHVzLCBMZWdhenBpLCBQaGlsaXBwaW5lc5IBB2NvbGxlZ2XgAQA!16s%2Fg%2F1pp2vf_ky?entry=ttu" aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -97,135 +98,12 @@
                         </button>
                     </form>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="branch-card">
-                        <img src="images/branch/01.jpg" alt="branch">
-                        <div class="branch-overlay">
-                            <h3>dhaka</h3>
-                            <p>kawran bazar, 1100 east tejgaon, dhaka.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="branch-card">
-                        <img src="images/branch/02.jpg" alt="branch">
-                        <div class="branch-overlay">
-                            <h3>Narayanganj</h3>
-                            <p>west jalkuri, 1420 shiddirganj, narayanganj.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="branch-card">
-                        <img src="images/branch/03.jpg" alt="branch">
-                        <div class="branch-overlay">
-                            <h3>chandpur</h3>
-                            <p>east lautuli, 2344 faridganj, chandpur.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
-                    <div class="branch-card">
-                        <img src="images/branch/04.jpg" alt="branch">
-                        <div class="branch-overlay">
-                            <h3>noakhli</h3>
-                            <p>begumganj, 3737 shonaimuri, noakhli.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!--=====================================
                     CONTACT PART END
         =======================================-->
-
-
-    <!--=====================================
-                    NEWSLETTER PART START
-        =======================================-->
-    <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-5 col-lg-6 col-xl-7">
-                    <div class="news-text">
-                        <h2>Get 20% Discount for Subscriber</h2>
-                        <p>Lorem ipsum dolor consectetur adipisicing accusantium</p>
-                    </div>
-                </div>
-                <div class="col-md-7 col-lg-6 col-xl-5">
-                    <form class="news-form">
-                        <input type="text" placeholder="Enter Your Email Address">
-                        <button><span><i class="icofont-ui-email"></i>Subscribe</span></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=====================================
-                    NEWSLETTER PART END
-        =======================================-->
-
-
-    <!--=====================================
-                    INTRO PART START
-        =======================================-->
-    <section class="intro-part">
-        <div class="container">
-            <div class="row intro-content">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <div class="intro-content">
-                            <h5>free home delivery</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                        <div class="intro-content">
-                            <h5>instant return policy</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <div class="intro-content">
-                            <h5>quick support system</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <div class="intro-content">
-                            <h5>secure payment way</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=====================================
-                    INTRO PART END
-        =======================================-->
-
 
     <!--=====================================
                      FOOTER PART START
