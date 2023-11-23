@@ -301,21 +301,22 @@
     <!--=====================================
                     NEWSLETTER PART START
         =======================================-->
-    <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
+    <section class="news-part">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-5 col-lg-6 col-xl-7">
                     <div class="section-heading">
                         <h2>Are you a Farmer?</h2>
-                        <p> Join and watch your fields grow to ensures fair compensation for your dedication. Your hard work nourishes not just the land but also the community</p>
+                        <p> Join and watch your fields grow to ensures fair compensation for your dedication. <br>Your hard work nourishes not just the land but also the community</p>
+                    </div>
+                    <div class="banner-btn-1" style="margin-top: 30px;">
+                        <a class="btn btn-banner" href="login.php">
+                            <i class="fa-solid fa-store"></i>
+                            <span>start selling</span>
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-7 col-lg-6 col-xl-5">
-                    <form class="news-form">
-                        <input type="text" placeholder="Enter Your Email Address">
-                        <button><span><i class="icofont-ui-email"></i>Start Selling</span></button>
-                    </form>
-                </div>
+
             </div>
         </div>
     </section>
@@ -327,7 +328,7 @@
     <!--=====================================
                     INTRO PART START
         =======================================-->
-    <section class="intro-part">
+    <!-- <section class="intro-part">
         <div class="container">
             <div class="row intro-content">
                 <div class="col-sm-6 col-lg-3">
@@ -376,7 +377,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--=====================================
                     INTRO PART END
         =======================================-->

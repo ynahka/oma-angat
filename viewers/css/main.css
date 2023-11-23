@@ -1981,6 +1981,7 @@ tbody tr td:last-child {
 .product-name {
   margin-bottom: 3px;
   text-transform: capitalize;
+  text-align: left;
 }
 
 .product-name a {
