@@ -29,7 +29,7 @@
         =======================================-->
     <section class="inner-section contact-part">
         <div class="container">
-            <div class="row">
+            <div class="row mx-auto">
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-card">
                         <i class="icofont-location-pin"></i>
@@ -59,13 +59,13 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-12 col-lg-6">
                     <div class="contact-map">
-                        <iframe src="https://www.google.com/maps/place/Bicol+University+College+of+Science+(BUCS)/@13.142535,123.7193568,16z/data=!4m10!1m2!2m1!1s+CSB2,+Bicol+University+Main+Campus,+Legazpi,+Philippines!3m6!1s0x33a103e420c01fbb:0x98886975fb5a21ef!8m2!3d13.1425606!4d123.7240928!15sCjhDU0IyLCBCaWNvbCBVbml2ZXJzaXR5IE1haW4gQ2FtcHVzLCBMZWdhenBpLCBQaGlsaXBwaW5lc5IBB2NvbGxlZ2XgAQA!16s%2Fg%2F1pp2vf_ky?entry=ttu" aria-hidden="false" tabindex="0"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31083.161119313027!2d123.70171859351804!3d13.137457306777062!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a103e420c01fbb%3A0x98886975fb5a21ef!2sBicol%20University%20College%20of%20Science%20(BUCS)!5e0!3m2!1sen!2sph!4v1700639706067!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <form class="contact-form">
                         <h4>Drop Your Thoughts</h4>
                         <div class="form-group">
@@ -97,8 +97,8 @@
                             <span>send message</span>
                         </button>
                     </form>
-                </div>
-            </div> -->
+                </div> -->
+            </div>
         </div>
     </section>
     <!--=====================================

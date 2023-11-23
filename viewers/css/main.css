@@ -3595,10 +3595,12 @@ tbody tr td:last-child {
 
 .contact-card {
   text-align: center;
-  border-radius: 8px;
+  border-radius: 16px;
   margin: 0px 2.5px 30px;
-  padding: 60px 15px 55px;
-  background: var(--lighter);
+  padding: 50px 15px 40px;
+  background: var(--chalk);
+  border-bottom: 8px solid var(--primary);
+  /* border-right: 8px solid var(--primary); */
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;
   -moz-transition: all linear 0.3s;
@@ -3606,11 +3608,11 @@ tbody tr td:last-child {
   -o-transition: all linear 0.3s;
 }
 
-.contact-card:hover {
+/* .contact-card:hover {
   background: var(--primary);
-}
+} */
 
-.contact-card:hover i {
+/* .contact-card:hover i {
   color: var(--primary);
   background: var(--lighter);
 }
@@ -3619,7 +3621,7 @@ tbody tr td:last-child {
 .contact-card:hover p,
 .contact-card:hover a {
   color: var(--lighter);
-}
+} */
 
 .contact-card i {
   width: 50px;
@@ -3630,8 +3632,8 @@ tbody tr td:last-child {
   margin-bottom: 15px;
   text-align: center;
   display: inline-block;
-  color: var(--lighter);
-  background: var(--primary);
+  color: var(--primary);
+  background: var(--secondary);
   text-shadow: var(--primary-tshadow);
   -webkit-box-shadow: var(--primary-bshadow);
   box-shadow: var(--primary-bshadow);
@@ -3677,18 +3679,18 @@ tbody tr td:last-child {
 }
 
 .contact-card.active {
-  background: var(--primary);
+  background: var(--lighter);
 }
 
 .contact-card.active i {
   color: var(--primary);
-  background: var(--lighter);
+  background: var(--secondary);
 }
 
 .contact-card.active h4,
 .contact-card.active p,
 .contact-card.active a {
-  color: var(--lighter);
+  color: var(--primary);
 }
 
 .branch-card {
@@ -5980,7 +5982,7 @@ tbody tr td:last-child {
 
 .intro-part {
   padding: 60px 0px;
-  background: var(--intro-bg);
+  background: var(--chalk);
   margin-top: 20px;
   box-shadow: 0px 8px 16px 0px rgb(85, 115, 95, 0.2);
 }
@@ -6855,6 +6857,7 @@ tbody tr td:last-child {
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 60px;
+  letter-spacing: 5px;
 }
 
 @media (max-width: 767px) {
@@ -6916,7 +6919,7 @@ tbody tr td:last-child {
 
 .filter-select {
   height: 40px;
-  background-color: transparent;
+  background-color: var(--lighter);
 }
 
 .filter-select:focus-within {
