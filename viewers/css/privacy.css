@@ -1,6 +1,21 @@
 /*========================================
             PRIVACY PAGE STYLE
 =========================================*/
+
+.sidebar{
+  padding: 10px;
+  /* border: 1px solid var(--heading) */
+
+}
+.privacy-part{
+  margin-top: 100px;
+}
+
+.scrollspy-content p{
+  margin-left: 50px;
+  text-align: justify;
+}
+
 .scrollspy {
   position: relative;
 }
@@ -33,6 +48,6 @@
   line-height: 35px;
   border-radius: 50%;
   text-align: center;
-  color: var(--white);
+  color: var(--chalk);
   background: var(--primary);
 }

@@ -12,7 +12,7 @@
         =======================================-->
     <section class="inner-section single-banner" style="background: url(images/banner.svg) no-repeat center;">
         <div class="container">
-            <h2>faq questions</h2>
+            <h2>Frequently Asked Questions</h2>
         </div>
     </section>
     <!--=====================================

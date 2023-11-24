@@ -12,7 +12,7 @@
         =======================================-->
     <section class="inner-section single-banner" style="background: url(images/banner.svg) no-repeat center;">
         <div class="container">
-            <h2>Privacy Policy</h2>
+            <h2>Terms and Conditions</h2>
         </div>
     </section>
     <!--=====================================

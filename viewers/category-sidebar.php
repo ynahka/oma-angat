@@ -282,16 +282,15 @@
                         </ul>
                     </li>
                     <div class="nav-info-group">
-                        <li><a class="nav-link" href="offer.php"><i class="icofont-sale-discount"></i>offers</a></li>
                         <li><a class="nav-link" href="about.php"><i class="icofont-info-circle"></i>about us</a></li>
-                        <li><a class="nav-link" href="coming-soon.php"><i class="icofont-options"></i>coming soon</a></li>
-                        <li><a class="nav-link" href="error.php"><i class="icofont-ui-block"></i>404 error</a></li>
+                        <li><a class="nav-link" href="faq.php"><i class="icofont-options"></i>FAQs</a></li>
+                        <li><a class="nav-link" href="contact.php"><i class="icofont-ui-block"></i>Contact</a></li>
                     </div>
                 </ul>
                 <div class="nav-info-group-2">
                     <!-- <a class="nav-link" href="#"></i>Settings</a> -->
-                    <a class="nav-link" href="faq.php"></i>Help Center</a>
-                    <a class="nav-link" href="privacy.php"></i>Terms & Conditions</a>
+                    <a class="nav-link" href="privacy.php"></i>Privacy Policy</a>
+                    <a class="nav-link" href="terms-and-conditions.php"></i>Terms & Conditions</a>
                     <a class="nav-link" href="login.php"></i>log out</a>
                 </div>
 

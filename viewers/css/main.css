@@ -432,7 +432,8 @@ button:focus {
 
 .btn-inline {
   color: var(--chalk);
-  border-color: white;
+  border-color: var(--primary);
+  background: var(--primary);
   font-weight: 540;
   line-height: 1.5;
   /* box-shadow: 2px 2px 2px 2px #80A689; applies a shadow to the element */
@@ -1646,6 +1647,7 @@ tbody tr td:last-child {
 .nav-pills .nav-link {
   font-weight: 400;
   list-style: decimal;
+      border-top: 1px solid var(--border);
 }
 
 .nav-pills .nav-link.active {
@@ -3599,7 +3601,7 @@ tbody tr td:last-child {
   border-radius: 16px;
   margin: 0px 2.5px 30px;
   padding: 50px 15px 40px;
-  background: var(--chalk);
+  background: var(--secondary);
   border-bottom: 8px solid var(--primary);
   /* border-right: 8px solid var(--primary); */
   transition: all linear 0.3s;
@@ -3607,6 +3609,7 @@ tbody tr td:last-child {
   -moz-transition: all linear 0.3s;
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
+  box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 }
 
 /* .contact-card:hover {
@@ -3680,7 +3683,7 @@ tbody tr td:last-child {
 }
 
 .contact-card.active {
-  background: var(--lighter);
+  background: var(--chalk);
 }
 
 .contact-card.active i {
@@ -4134,7 +4137,7 @@ tbody tr td:last-child {
   white-space: nowrap;
   text-align: left;
   text-transform: capitalize;
-  color: var(--primary);
+  color: var(--heading);
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;
   -moz-transition: all linear 0.3s;
@@ -4621,7 +4624,7 @@ tbody tr td:last-child {
   padding: 50px 0px;
   margin-bottom: 20px;
   text-align: center;
-  background: var(--primary);
+  background: var(--secondary);
 }
 
 .nav-btn .btn {
@@ -4724,13 +4727,14 @@ tbody tr td:last-child {
   font-weight: 500;
   padding: 7px 15px;
   border-radius: 8px;
-  color: var(--text);
+  color: var(--heading);
   text-transform: capitalize;
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;
   -moz-transition: all linear 0.3s;
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
+  
 }
 
 .nav-link:hover {
@@ -4749,7 +4753,7 @@ tbody tr td:last-child {
 
 .nav-link.active {
   color: var(--primary);
-  background: var(--green-chalk);
+  background: var(--secondary);
 }
 
 .nav-info-group {
@@ -6858,7 +6862,7 @@ tbody tr td:last-child {
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 60px;
-  letter-spacing: 5px;
+  /* letter-spacing: 5px; */
 }
 
 @media (max-width: 767px) {
