@@ -15,13 +15,17 @@
   margin-left: 50px;
   text-align: justify;
 }
+.scrollspy-content li{
+  margin-left: 50px;
+  text-align: justify;
+}
 
 .scrollspy {
   position: relative;
 }
 
 .scrollspy-content {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .scrollspy-content:last-child {
@@ -36,7 +40,7 @@
 
 .scrollspy-content h3::before {
   position: absolute;
-  content: "\efcc";
+  /* content: "\efcc"; */
   top: 50%;
   left: 0px;
   width: 35px;
@@ -50,4 +54,22 @@
   text-align: center;
   color: var(--chalk);
   background: var(--primary);
+}
+
+.scrollspy-content-terms h3::before {
+  position: absolute;
+  /* content: "\efcc"; */
+  top: 50%;
+  left: 0px;
+  width: 35px;
+  height: 35px;
+  font-size: 16px;
+  /* font-family: icofont; */
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  /* color: var(--chalk); */
+  /* background: var(--primary); */
 }

@@ -237,22 +237,22 @@
                 </div> -->
                 <ul class="nav-list">
                     <li>
-                        <a class="nav-link dropdown-link" href="#"><i class="icofont-home"></i>Home</a>
-                        <ul class="dropdown-list">
+                        <a class="nav-link dropdown-link" href="index.php"><i class="fa fa-house"></i>Home</a>
+                        <!-- <ul class="dropdown-list">
                             <li><a href="home-standard.php">Home standard</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <li>
-                        <a class="nav-link dropdown-link" href="#"><i class="icofont-food-cart"></i>shop</a>
+                        <a class="nav-link dropdown-link" href="#"><i class="fa-solid fa-store"></i>shop</a>
                         <ul class="dropdown-list">
-                            <li><a href="shop-1column.php">Market</a></li>
+                            <li><a href="shop-1column.php">Farmer's Market</a></li>
                             <li><a href="shop-2column.php">Categories</a></li>
                             <li><a href="shop-2column.php">Products</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a class="nav-link dropdown-link" href="#"><i class="icofont-bag-alt"></i>my account</a>
-                        <ul class="dropdown-list">
+                        <a class="nav-link dropdown-link" href="profile.php"><i class="icofont-ui-user"></i>my account</a>
+                        <!-- <ul class="dropdown-list">
                             <li><a href="profile.php">profile</a></li>
                             <li><a href="wallet.php">wallet</a></li>
                             <li><a href="wishlist.php">wishlist</a></li>
@@ -261,18 +261,18 @@
                             <li><a href="orderlist.php">order history</a></li>
                             <li><a href="invoice.php">order invoice</a></li>
                             <li><a href="email-template.php">email template</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <li>
                         <a class="nav-link dropdown-link" href="#"><i class="icofont-lock"></i>authentication</a>
                         <ul class="dropdown-list">
-                            <li><a href="login.php">login</a></li>
-                            <li><a href="register.php">register</a></li>
+                            <li><a href="login.php">Login</a></li>
+                            <li><a href="register.php">Signup</a></li>
                             <li><a href="reset-password.php">reset password</a></li>
                             <li><a href="change-password.php">change password</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="nav-link dropdown-link" href="#"><i class="icofont-book-alt"></i>blogs</a>
                         <ul class="dropdown-list">
                             <li><a href="blog-grid.php">blog grid</a></li>
@@ -280,11 +280,11 @@
                             <li><a href="blog-details.php">blog details</a></li>
                             <li><a href="blog-author.php">blog author</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <div class="nav-info-group">
                         <li><a class="nav-link" href="about.php"><i class="icofont-info-circle"></i>about us</a></li>
-                        <li><a class="nav-link" href="faq.php"><i class="icofont-options"></i>FAQs</a></li>
-                        <li><a class="nav-link" href="contact.php"><i class="icofont-ui-block"></i>Contact</a></li>
+                        <li><a class="nav-link" href="faq.php"><i class="icofont-support-faq"></i>FAQs</a></li>
+                        <li><a class="nav-link" href="contact.php"><i class="icofont-contacts"></i>Contact</a></li>
                     </div>
                 </ul>
                 <div class="nav-info-group-2">
