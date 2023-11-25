@@ -5231,7 +5231,7 @@ tbody tr td:last-child {
 
 .category-title {
   color: var(--primary);
-  text-transform: capitalize;
+  text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

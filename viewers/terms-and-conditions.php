@@ -95,47 +95,65 @@
                             </div>
                             <div class="faq-ans">
                                 <p>
-                                    <b>6.1 Payment Methods:</b><br>The payment methods on Oma-Angat are flexible and subject to the agreement between sellers and buyers:<br>
-                                    <br>- Payment Flexibility: <br>The payment options available depend on the payment methods supported by individual farmers or as agreed upon between the seller and buyer.
-                                    <br>- Buyer-Seller Agreement: <br>Buyers and sellers will mutually decide on the preferred payment method during the purchase process.
-                                    <br>- Avoid disclosing personal information, engaging in spam, impersonation, or cyber-bullying.
-                                    <br>- Platform Neutrality: <br>Oma-Angat does not enforce specific payment methods but provides a platform for negotiation and agreement between involved parties.
-                                    <br><br><b>6.2 Delivery:</b> <br>Delivery options are flexible and agreed upon by the seller and buyer:
-                                    <br>- Delivery Modes: <br>The mode of delivery, such as pick-up, meet-up, or utilizing available courier services, depends on the agreement between the seller and the buyer.
-                                    <br>- Platform Assistance: <br>Oma-Angat provides a list of available couriers within the area as links to assist users in selecting a suitable logistics service.
-                                    <br>- Seller-Buyer Arrangement: <br>The platform does not directly handle logistics for transactions but offers options and leaves the delivery arrangement to the agreement between the involved parties.
+                                    <b>6.1 Payment Methods:</b> The payment methods on Oma-Angat are flexible and subject to the agreement between sellers and buyers<br>
+                                </p>
+                                <ol>
+                                    <li>Payment Flexibility:
+                                        <br>The payment options available depend on the payment methods supported by individual farmers or as agreed upon between the seller and buyer.
+                                    </li>
+                                    <li>Buyer-Seller Agreement:
+                                        <br>Buyers and sellers will mutually decide on the preferred payment method during the purchase process.
+                                    </li>
+                                    <li>Platform Neutrality:
+                                        <br>Oma-Angat does not enforce specific payment methods but provides a platform for negotiation and agreement between involved parties.
+                                    </li>
+                                </ol>
+                                <p>
+                                    <b>6.2 Delivery:</b> Delivery options are flexible and agreed upon by the seller and buyer<br>
+                                <ol>
+                                    <li>Delivery Modes:
+                                        The mode of delivery, such as pick-up, meet-up, or utilizing available courier services, depends on the agreement between the seller and the buyer.
+                                    </li>
+                                    <li>Platform Assistance:
+                                        Oma-Angat provides a list of available couriers within the area as links to assist users in selecting a suitable logistics service.
+                                    </li>
+                                    <li>Seller-Buyer Arrangement:
+                                        The platform does not directly handle logistics for transactions but offers options and leaves the delivery arrangement to the agreement between the involved parties.
+                                    </li>
+                                </ol>
                                 </p>
                             </div>
                         </div>
                         <div class="faq-child">
                             <div class="faq-que">
-                                <button>How does Oma-Angat works?</button>
+                                <button>7. Vendor Liability</button>
                             </div>
                             <div class="faq-ans">
-                                <p>Oma-Angat operates as a user-friendly online marketplace designed for local farmers in Albay. <br> Here's an overview of how the platform functions:
-
-
-                                </p>
-                                <ol>
-                                    <li><strong>Registration and Product Listing</strong>
-                                        <p>Farmers sign up on the platform and create profiles, showcasing their farm and available products. They list their produce with detailed descriptions, photos, and prices.</p>
-                                    </li>
-                                    <li><strong>Consumer Interaction</strong>
-                                        <p>Buyers visit the Oma-Angat website or app, browse through the listed products, and place orders directly with the farmers.</p>
-                                    </li>
-                                    <li><strong>Order Processing and Delivery</strong>
-                                        <p>Once an order is placed, the farmer receives a notification. They prepare the products for delivery or pickup based on the arrangement with the buyer. Delivery logistics however are not handled by Oma-Angat</p>
-                                    </li>
-                                    <li><strong>Payment and Transactions</strong>
-                                        <p>Payment methods, agreed upon between the seller and buyer, are utilized for the transactions. These might include cash on delivery, online transfers, or other arrangements.</p>
-                                    </li>
-                                    <li><strong>Review and Feedback</strong>
-                                        <p>Buyers have the opportunity to rate and review the products and services received, contributing to maintaining quality standards and building trust within the community.</p>
-                                    </li>
-                                    <li><strong>Continuous Support</strong>
-                                        <p>Oma-Angat offers ongoing support to both farmers and buyers, facilitating communication and addressing any concerns that may arise during the process.</p>
-                                    </li>
-                                </ol>
+                                <p>The vendors hold accountability for the preparation, state, and excellence of the products. When vendors manage deliveries, they are responsible for ensuring the timely delivery of the goods or orders. Oma-angat is not liable for any losses or damages resulting from your contractual dealings with the vendors.</p>
+                            </div>
+                        </div>
+                        <div class="faq-child">
+                            <div class="faq-que">
+                                <button>8. Termination</button>
+                            </div>
+                            <div class="faq-ans">
+                                <p>We reserve the right to terminate or suspend your account and access to the site at our sole discretion, without notice, for any reason.</p>
+                            </div>
+                        </div>
+                        <div class="faq-child">
+                            <div class="faq-que">
+                                <button>9. Changes to Terms</button>
+                            </div>
+                            <div class="faq-ans">
+                                <p>We may update or modify these terms at any time without prior notice. Continued use of the website constitutes acceptance of the modified terms.</p>
+                            </div>
+                        </div>
+                        <div class="faq-child">
+                            <div class="faq-que">
+                                <button>10. Contact Us</button>
+                            </div>
+                            <div class="faq-ans">
+                                <p>If you wish to contact us regarding any questions or comments you may have, please send an email to our customer support email at omaangat@gmail.com</p>
                             </div>
                         </div>
                     </div>
