@@ -161,70 +161,11 @@
             </div>
         </div>
     </section>
-    <!--=====================================
-                    BANNER PART END
-        =======================================-->
-    <!--=====================================
-                    INTRO PART START
-        =======================================-->
-    <!-- <section class="section intro-part">
-            <div class="container">
-                <div class="row intro-content">
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="intro-wrap">
-                            <div class="intro-icon">
-                                <i class="fas fa-truck"></i>
-                            </div>
-                            <div class="intro-content">
-                                <h5>free home delivery</h5>
-                                <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="intro-wrap">
-                            <div class="intro-icon">
-                                <i class="fas fa-sync-alt"></i>
-                            </div>
-                            <div class="intro-content">
-                                <h5>instant return policy</h5>
-                                <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="intro-wrap">
-                            <div class="intro-icon">
-                                <i class="fas fa-headset"></i>
-                            </div>
-                            <div class="intro-content">
-                                <h5>quick support system</h5>
-                                <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="intro-wrap">
-                            <div class="intro-icon">
-                                <i class="fas fa-lock"></i>
-                            </div>
-                            <div class="intro-content">
-                                <h5>secure payment way</h5>
-                                <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-    <!--=====================================
-                    INTRO PART END
-        =======================================-->
 
     <!--=====================================
                     BRAND PART START
         =======================================-->
-    <section class="section brand-part">
+    <!-- <section class="section brand-part">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -318,6 +259,185 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section> -->
+    <!-- <section class="section newitem-part">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section-heading">
+                        <h2>Shop by Farmer's Market</h2>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul class="new-slider slider-arrow">
+                        <li>
+                            <div class="product-card">
+                                <div class="product-media">
+                                    <a class="product-image" href="product-video.php">
+                                        <img src="images/brand/1.png" alt="product">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-card">
+                                <div class="product-media">
+                                    <a class="product-image" href="product-video.php">
+                                        <img src="images/brand/2.png" alt="product">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-card">
+                                <div class="product-media">
+                                    <a class="product-image" href="product-video.php">
+                                        <img src="images/brand/3.png" alt="product">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-card">
+                                <div class="product-media">
+                                    <a class="product-image" href="product-video.php">
+                                        <img src="images/brand/4.png" alt="product">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-card">
+                                <div class="product-media">
+                                    <a class="product-image" href="product-video.php">
+                                        <img src="images/brand/5.png" alt="product">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-card">
+                                <div class="product-media">
+                                    <a class="product-image" href="product-video.php">
+                                        <img src="images/brand/6.png" alt="product">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-card">
+                                <div class="product-media">
+                                    <a class="product-image" href="product-video.php">
+                                        <img src="images/brand/7.png" alt="product">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="section-btn-25">
+                        <a href="shop-4column.php" class="btn btn-outline">
+                            <i class="fas fa-eye"></i>
+                            <span>show more</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <?php
+    $Pitems = [
+        [
+            "name" => "vegetables",
+            "img" => "images/brand/1.svg",
+            "url" => "shop-1column.php",
+            "title" => "Farmer-1",
+
+        ],
+        [
+            "name" => "vegetables",
+            "img" => "images/brand/2.svg",
+            "url" => "shop-1column.php",
+            "title" => "Farmer-2",
+
+        ],
+        [
+            "name" => "vegetables",
+            "img" => "images/brand/3.svg",
+            "url" => "shop-1column.php",
+            "title" => "Farmer-3",
+
+        ],
+        [
+            "name" => "fruits",
+            "img" => "images/brand/4.svg",
+            "total_items" => 89,
+            "url" => "shop-1column.php",
+            "title" => "Farmer-4",
+
+        ],
+        [
+            "name" => "Grains",
+            "img" => "images/brand/5.svg",
+
+            "url" => "shop-1column.php",
+            "title" => "Farmer-5",
+
+        ],
+        [
+            "name" => "eggs",
+            "img" => "images/brand/6.svg",
+
+            "url" => "shop-1column.php",
+            "title" => "Farmer-6",
+
+        ],
+        [
+            "name" => "dry fish",
+            "img" => "images/brand/7.svg",
+            "total_items" => 23,
+            "url" => "shop-1column.php",
+            "title" => "Farmer-7",
+
+        ]
+    ];
+    ?>
+
+    <section class="section suggest-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h2>Shop by Farmer's Market</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container suggest">
+            <ul class="suggest-slider slider-arrow">
+                <?php foreach ($Pitems as $Pitem) : ?>
+                    <li>
+                        <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
+                            <img src="<?php echo $Pitem['img'] ?>">
+                        </a>
+                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
+                            <p><?php echo $Pitem['title'] ?></p>
+                        </div>
+                    </li>
+                <?php endforeach; ?>
+
+            </ul>
         </div>
     </section>
     <!--=====================================
