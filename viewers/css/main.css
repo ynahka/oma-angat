@@ -31,10 +31,8 @@
   --red: #ff3838;
   --gray: #777777;
   --text: #4c644b;
-  --lighttext: #cfe2ce;
   --lighter: #f8fffa;
   /* --blue: #1494a9; */
-  --lighter: #ffffff;
   --chalk: #f5f5f5;
   --green: #2d452f;
   /* --purple: #b12fad; */
@@ -45,7 +43,6 @@
   --heading: #39404a;
   --primary: #4c644b;
   --secondary: #cfe2ce;
-  --third: #cfe2ce;
   --hovercolor: #55735f;
   --sub-heading: #565765;
   --green-chalk: #ddffd5;
@@ -229,9 +226,21 @@ button:focus {
 }
 
 .section-heading {
+  /* position: relative; */
   text-align: left;
   margin-bottom: 20px;
+  /* border-bottom: 2px solid var(--primary); */
 }
+
+/* .section-heading::before {
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    left: 0px;
+    width: 50px;
+    height: 5px;
+    background: var(--primary);
+} */
 
 .section-heading h2 {
   font-size: 30px;
@@ -1161,6 +1170,7 @@ button:focus {
 
 .bamdik {
   left: -10px;
+
   
 }
 
@@ -1997,12 +2007,19 @@ tbody tr td:last-child {
 }
 
 .product-name a {
-  color: var(--sub-heading);
+  color: var(--heading);
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;
   -moz-transition: all linear 0.3s;
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
+}
+
+.product-name span {
+  color: var(--sub-heading);
+  text-align: right;
+  margin-left: 80px;
+  /* white-space: nowrap; */
 }
 
 .product-name a:hover {
@@ -2019,10 +2036,11 @@ tbody tr td:last-child {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
   margin-bottom: 13px;
+  
 }
 
 .product-price del {
@@ -2032,7 +2050,7 @@ tbody tr td:last-child {
 
 .product-price span {
   color: var(--primary);
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .product-price span small {

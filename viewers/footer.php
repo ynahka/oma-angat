@@ -43,30 +43,23 @@
                     </div>
                     <div class="col-sm-6 col-xl-3">
                         <div class="footer-widget">
-                            <h3 class="footer-title">About Oma-Angat</h3>
+                            <h3 class="footer-title">Our Policies</h3>
                             <div class="footer-links">
                                 <ul>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Oma-Angat Team</a></li>
-                                    <li><a href="#">Terms and Conditions</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Donation for Farmers</a></li>
-                                    <li><a href="#">Harvesting Calendar</a></li>
+                                    <li><a href="privacy.php">Privacy Policy</a></li>
+                                    <li><a href="terms-and-conditions.php">Terms and Conditions</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xl-3">
                         <div class="footer-widget">
-                            <h3 class="footer-title">Customer Service</h3>
+                            <h3 class="footer-title">Useful Links</h3>
                             <div class="footer-links">
                                 <ul>
-                                    <li><a href="#">Help Center</a></li>
-                                    <li><a href="#">Payment Methods</a></li>
-                                    <li><a href="#">Order Tracking</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Return & Refund</a></li>
-                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="about.php">About Us</a></li>
+                                    <li><a href="faq.php">FAQs</a></li>
+                                    <li><a href="contact.php">Contact</a></li>
                                 </ul>
                             </div>
                         </div>

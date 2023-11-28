@@ -212,32 +212,10 @@
                         <span>Get Started</span>
                     </a>
                 </div>
-                <!-- This commentable code show when user login or register -->
-                <!-- <div class="nav-profile">
-                    <a class="nav-user" href="#"><img src="images/user.png" alt="user"></a>
-                    <h4 class="nav-name"><a href="profile.php">Account Name</a></h4>
-                </div>
-                <div class="nav-select-group">
-                    <div class="nav-select">
-                        <i class="icofont-world"></i>
-                        <select class="select">
-                            <option value="english" selected>Followers</option>
-                            <option value="bangali">Farmer</option>
-                            <option value="arabic">Buyer</option>
-                        </select>
-                    </div>
-                    <div class="nav-select">
-                        <i class="icofont-money"></i>
-                        <select class="select">
-                            <option value="english" selected id="following-option">Following</option>
-                            <option value="bangali">Farmer</option>
-                            <option value="arabic">Buyer</option>
-                        </select>
-                    </div>
-                </div> -->
+
                 <ul class="nav-list">
                     <li>
-                        <a class="nav-link dropdown-link" href="index.php"><i class="fa fa-house"></i>Home</a>
+                        <a class="nav-link" href="index.php"><i class="fa fa-house"></i>Home</a>
                         <!-- <ul class="dropdown-list">
                             <li><a href="home-standard.php">Home standard</a></li>
                         </ul> -->
@@ -251,19 +229,6 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="nav-link dropdown-link" href="profile.php"><i class="icofont-ui-user"></i>my account</a>
-                        <!-- <ul class="dropdown-list">
-                            <li><a href="profile.php">profile</a></li>
-                            <li><a href="wallet.php">wallet</a></li>
-                            <li><a href="wishlist.php">wishlist</a></li>
-                            <li><a href="notification.php">Notification</a></li>
-                            <li><a href="checkout.php">checkout</a></li>
-                            <li><a href="orderlist.php">order history</a></li>
-                            <li><a href="invoice.php">order invoice</a></li>
-                            <li><a href="email-template.php">email template</a></li>
-                        </ul> -->
-                    </li>
-                    <li>
                         <a class="nav-link dropdown-link" href="#"><i class="icofont-lock"></i>authentication</a>
                         <ul class="dropdown-list">
                             <li><a href="login.php">Login</a></li>
@@ -272,15 +237,9 @@
                             <li><a href="change-password.php">change password</a></li>
                         </ul>
                     </li>
-                    <!-- <li>
-                        <a class="nav-link dropdown-link" href="#"><i class="icofont-book-alt"></i>blogs</a>
-                        <ul class="dropdown-list">
-                            <li><a href="blog-grid.php">blog grid</a></li>
-                            <li><a href="blog-standard.php">blog standard</a></li>
-                            <li><a href="blog-details.php">blog details</a></li>
-                            <li><a href="blog-author.php">blog author</a></li>
-                        </ul>
-                    </li> -->
+                    <li>
+                        <a class="nav-link" href="login.php"><i class="icofont-ui-user"></i>my account</a>
+                    </li>
                     <div class="nav-info-group">
                         <li><a class="nav-link" href="about.php"><i class="icofont-info-circle"></i>about us</a></li>
                         <li><a class="nav-link" href="faq.php"><i class="icofont-support-faq"></i>FAQs</a></li>
