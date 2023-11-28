@@ -92,8 +92,10 @@
                         </div>
                         <div class="cart-action-group">
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                             <h6>P56.98</h6>
@@ -112,8 +114,10 @@
                         </div>
                         <div class="cart-action-group">
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                             <h6>P56.98</h6>
@@ -132,8 +136,10 @@
                         </div>
                         <div class="cart-action-group">
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                             <h6>P56.98</h6>
@@ -152,8 +158,10 @@
                         </div>
                         <div class="cart-action-group">
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                             <h6>P56.98</h6>
@@ -172,8 +180,10 @@
                         </div>
                         <div class="cart-action-group">
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                             <h6>P56.98</h6>
@@ -207,7 +217,7 @@
             </div>
             <div class="nav-content">
                 <div class="nav-btn">
-                    <a href="login.php" class="btn btn-inline">
+                    <a href="../buyeraccount/login.php" class="btn btn-inline">
                         <i class="fa fa-unlock-alt"></i>
                         <span>Get Started</span>
                     </a>

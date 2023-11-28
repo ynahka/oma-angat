@@ -54,7 +54,7 @@
 
                      <div class="header-widget-group">
                          <!-- LOGIN PAGE -->
-                         <a href="login.php" class="header-widget" title="Join">
+                         <a href="../buyeraccount/signup.php" class="header-widget" title="Join">
                              <button>Get Started</button>
                          </a>
                          <button class="header-widget header-cart" title="Cartlist">
