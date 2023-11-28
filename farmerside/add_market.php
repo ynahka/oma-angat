@@ -4,11 +4,13 @@
 session_start();
 include("../connection/connection.php");
 
+$notification = ''; // Initialize notification variable
+
 if (isset($_SESSION['Email_Session'])) {
     $email = $_SESSION['Email_Session'];
-    $result = mysqli_query($conx, "SELECT farmer_id FROM farmeruseraccount WHERE email='{$email}'");
+    $result = mysqli_query($conx, "SELECT farmer_id FROM farmer WHERE user_id IN (SELECT user_id FROM useraccount WHERE email='{$email}')");
     $row = mysqli_fetch_assoc($result);
-    $farmer_id = $row['farmer_id'];
+    $farmer_id = $row['farmer_id']; // Get the farmer_id from the farmer table
 
     if (isset($_POST['submit'])) {
         $storeName = isset($_POST['storeName']) ? mysqli_real_escape_string($conx, $_POST['storeName']) : '';
@@ -21,7 +23,7 @@ if (isset($_SESSION['Email_Session'])) {
         if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) { 
             $image_tmp = $_FILES['image']['tmp_name'];
             $image_name = $_FILES['image']['name'];
-            $image_path = "Res_img/" . $image_name;
+            $image_path = "Res_img/" . $image_name; 
 
             if (move_uploaded_file($image_tmp, $image_path)) {
                 $image = mysqli_real_escape_string($conx, $image_path);
@@ -44,7 +46,10 @@ if (isset($_SESSION['Email_Session'])) {
 } else {
     $notification = "Session not set. Please make sure you are logged in.";
 }
+
+echo $notification; // Output the notification
 ?>
+
 
 <head>
     <meta charset="utf-8">
@@ -55,8 +60,8 @@ if (isset($_SESSION['Email_Session'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin Dashboard</title>
-    <link rel="icon" href="../images/web-logo.png" type="icon type">
+    <title>Oma-Angat|Add Market</title>
+    <link rel="icon" href="images/web-logo.png" type="icon type">
     <!-- Bootstrap Core CSS -->
     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -189,7 +194,7 @@ if (isset($_SESSION['Email_Session'])) {
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
                                 <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
-                                <li><a href="profile.php"><i class="fa fa-person"></i> Profile</a></li>
+                                <li><a href="profile.php"><i class="fa fa-user"></i> Profile</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -208,9 +213,11 @@ if (isset($_SESSION['Email_Session'])) {
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
                         <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Profile</span></a></li>
                         <li class="nav-label">Log</li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Market</span></a>
                             <ul aria-expanded="false" class="collapse">
+                                <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
 								<li><a href="add_category.php">Add Category</a></li>
                                 <li><a href="add_market.php">Add Market</a></li>  
                             </ul>

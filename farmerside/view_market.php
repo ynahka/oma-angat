@@ -21,7 +21,7 @@ else
     <!-- Favicon icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Oma-Angat Dashboard</title>
+    <title>Oma-Angat|View Market</title>
     <link rel="icon" href="images/web-logo.png" type="icon type">
     <!-- Bootstrap Core CSS -->
     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -72,6 +72,7 @@ else
                                     <li>
                                         <div class="drop-title">Notifications</div>
                                     </li>
+                                    
                                     <li>
                                         <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all notifications</strong> <i class="fa fa-angle-right"></i> </a>
                                     </li>
@@ -79,6 +80,7 @@ else
                             </div>
                         </li>
                         <!-- End Comment -->
+                      
                         <!-- Profile -->
                         <li class="nav-item dropdown">
                         <?php
@@ -126,7 +128,7 @@ else
                         <li class="nav-label">Log</li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Market</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
+                                <li><a href="add_harvestdate.php">Add Harvesting Calendar</a></li>
 								<li><a href="add_category.php">Add Category</a></li>
                                 <li><a href="add_market.php">Add Market</a></li> 
                             </ul>
@@ -154,105 +156,56 @@ else
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text" style="color: #173a5f;">Dashboard</h3> 
+                    <h3 class="text" style="color: #173a5f;">My Market</h3> 
                 </div>
             </div>
             <!-- End Bread crumb -->
             <!-- Container fluid  -->
             <div class="container-fluid">
-                <!-- Start Page Content -->
-                <div class="row">
-                    <div class="col-md-3" style="cursor: pointer;" onclick="window.location.href='view_market.php';">
-                        <div class="card p-30" style="background: rgb(0, 188, 126);">
-                            <div class="media">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-archive f-s-40" style="color: white;"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 style="color: white; font-weight: 700" ><?php $sql="select * from Store";
-										$result=mysqli_query($conx,$sql); 
-										$rws=mysqli_num_rows($result);
-										echo $rws;?>
-                                    </h2>
-                                    <p class="m-b-0" style="color: white;">My market</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="col-md-3" style="cursor: pointer;" onclick="window.location.href='all_product.php';">
-                        <div class="card p-30" style="background: rgb(0, 188, 126);">
-                            <div class="media">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-cutlery f-s-40" aria-hidden="true" style="color: white;"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 style="color: white; font-weight: 700">
-                                        <?php
-                                            $sql = "select * from products";
-                                            $result = mysqli_query($conx, $sql);
-                                            $rws = mysqli_num_rows($result);
-                                            echo $rws;
-                                        ?>
-                                    </h2>
-                                    <p class="m-b-0" style="color: white;">Products</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3" style="cursor: pointer;" onclick="window.location.href='customers.php';">
-                        <div class="card p-30" style="background: rgb(0, 188, 126);">
-                            <div class="media">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-user f-s-40 " style="color: white;"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 style="color: white; font-weight: 700"><?php $sql="select * from users";
-												$result=mysqli_query($db,$sql); 
-												$rws=mysqli_num_rows($result);
-												echo $rws;?></h2>
-                                    <p class="m-b-0" style="color: white;">Customer</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="text-center">
+    <?php
+    session_start(); // Start the session
+    $email = $_SESSION['Email_Session']; // Get the email from the session
 
-					<div class="col-md-3" style="cursor: pointer;" onclick="window.location.href='all_orders.php';">
-                        <div class="card p-30" style="background: rgb(0, 188, 126);">
-                            <div class="media">
-                                <div class="media-left meida media-middle"> 
-                                    <span><i class="fa fa-shopping-cart f-s-40" aria-hidden="true" style="color: white;"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 style="color: white; font-weight: 700"><?php $sql="select * from orders";
-										$result=mysqli_query($db,$sql); 
-										$rws=mysqli_num_rows($result);
-										echo $rws;?>
-                                    </h2>
-                                    <p class="m-b-0" style="color: white;">Orders</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-<!--Section for calendar-->				
-                    <div class="col-md-12">
-                        <div class="card p-30">
-                            <div class="media">
-                            <!-- Calendar will be inserted here -->
-                            <div id="calendar"></div>
-                            </div>
-                        </div>
-                    </div>
-	
-					
-					
-					
-					
-					
-					
-					
-					
-                </div>
-                <!-- End PAge Content -->
+    // Assuming $conx is your database connection object
+    $result = mysqli_query($conx, "SELECT farmer_id FROM farmer WHERE user_id IN (SELECT user_id FROM useraccount WHERE email='{$email}')");
+    if ($result && $row = mysqli_fetch_assoc($result)) {
+        $farmer_id = $row['farmer_id'];
+
+        // Fetch the market's image path based on the obtained farmer_id
+        $resultMarket = mysqli_query($conx, "SELECT image, storeName, storeDesc, Address, OpensAt, closesAt FROM store WHERE farmer_id = {$farmer_id}");
+        if ($resultMarket && $rowMarket = mysqli_fetch_assoc($resultMarket)) {
+            $marketImagePath = $rowMarket['image'];
+            $storeName = $rowMarket['storeName'];
+            $storeDesc = $rowMarket['storeDesc'];
+            $Address = $rowMarket['Address'];
+            $OpensAt = $rowMarket['OpensAt'];
+            $ClosesAt = $rowMarket['ClosesAt'];
+
+        }
+    } else {
+        // Handle the case where no farmer_id is found for the user
+        echo '<p>No farmer found for the user</p>';
+    }
+    ?>
+
+    <div id="marketImageContainer">
+        <?php
+        // Display the market's image
+        if (!empty($marketImagePath)) {
+            echo '<img src="' . $marketImagePath . '" alt="Market Image" class="img-fluid" />';
+            echo '<p>' . $storeName . '</p>';
+            echo '<p>' . $OpensAt . '</p>';
+            echo '<p>' . $storeDesc . '</p>';
+            echo '<p>' . $Address . '</p>';
+            
+            
+        } else {
+            echo '<p>No image available</p>';
+        }
+        ?>
+    </div>
+</div>
             </div>
             <!-- End Container fluid  -->
             <!-- footer -->

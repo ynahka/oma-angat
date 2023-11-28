@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include("../connection/connect.php");
+include("../connection/connection.php");
 error_reporting(0);
 session_start();
 
@@ -15,8 +15,8 @@ session_start();
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Admin Dashboard</title>
-    <link rel="icon" href="../images/web-logo.png" type="icon type">
+    <title>Oma-Angat|All Orders</title>
+    <link rel="icon" href="images/web-logo.png" type="icon type">
     <!-- Bootstrap Core CSS -->
     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -89,6 +89,7 @@ session_start();
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
                                 <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                                <li><a href="profile.php"><i class="fa fa-user"></i> Profile</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -107,11 +108,13 @@ session_start();
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
                         <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Profile</span></a></li>
                         <li class="nav-label">Log</li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Market</span></a>
                             <ul aria-expanded="false" class="collapse">
+                                <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
 								<li><a href="add_category.php">Add Category</a></li>
-                                <li><a href="add_market.php">Add Restaurant</a></li>
+                                <li><a href="add_market.php">Add Market</a></li>
                                 
                             </ul>
                         </li>

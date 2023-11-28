@@ -25,13 +25,13 @@ if (isset($_POST['submit'])) {
     // Define the regular expression pattern for a strong password
     $passwordPattern = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/';
 
-    if (mysqli_num_rows(mysqli_query($conx, "SELECT * FROM farmeruseraccount where email='{$email}'")) > 0) {
+    if (mysqli_num_rows(mysqli_query($conx, "SELECT * FROM useraccount where email='{$email}'")) > 0) {
         $msg = "<div class='alert alert-danger'>This Email:'{$email}' already exists.</div>";
     } else {
         if ($Password === $Confirm_Password) {
             // Validate the password against the pattern
             if (preg_match($passwordPattern, $_POST['Password'])) {
-                $query = "INSERT INTO farmeruseraccount(`Username`, `email`, `Password`, `CodeV`) values('$name','$email','$Password','$Code')";
+                $query = "INSERT INTO useraccount(`Username`, `email`, `Password`, `CodeV`) values('$name','$email','$Password','$Code')";
                 $result = mysqli_query($conx, $query);
                 if ($result) {
                     //Create an instance; passing `true` enables exceptions
@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
                         $mail->Subject = 'Oma-Angat Agri-Market: Account Verification';
                         $mail->Body    = '<h3>Dear '.$name.',</h3>
                         <p>Thank you for signing up for Oma-Angat Agri-Market! Were excited to have you on board as a seller of our community.To complete your registration and verify your email address, please click on the following link:</p>
-                        <a href="http://localhost/oma-angat/farmerside/?Verification=' .$Code . '">"http://localhost/oma-angat/farmerside/?Verification=' .$Code . '"</a>
+                        <a href="http://localhost/oma-angat_oldver/farmerside/?Verification=' .$Code . '">"http://localhost/oma-angat_oldver/farmerside/?Verification=' .$Code . '"</a>
                         <p>By verifying your email, you will gain access to all the features and benefits of Oma-Angat Virtual Agri-Market,
                         including the ability to connect with local market and to prote and sell your fresh produce.</p>
                         <p>If you did not sign up for Oma-Angat Agri-Market, please disregard this email. Its possible that someone entered your email address by mistake.

@@ -1,9 +1,9 @@
 <?php
 
-include("../connection/connect.php");
+include("../connection/connection.php");
 error_reporting(0);
 session_start();
-if(strlen($_SESSION['user_id'])==0)
+if(strlen($_SESSION['Email_Session '])==0)
   { 
 header('location:login.php');
 }

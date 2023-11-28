@@ -10,12 +10,12 @@ $msg = "";
 $Error_Pass = "";
 
 if (isset($_GET['Verification'])) {
-  $raquet = mysqli_query($conx, "SELECT * FROM farmeruseraccount WHERE CodeV='{$_GET['Verification']}'");
+  $raquet = mysqli_query($conx, "SELECT * FROM useraccount WHERE CodeV='{$_GET['Verification']}'");
   if (mysqli_num_rows($raquet) > 0) {
-    $query = mysqli_query($conx, "UPDATE farmeruseraccount SET verification='1' WHERE CodeV='{$_GET['Verification']}'");
+    $query = mysqli_query($conx, "UPDATE useraccount SET verification='1' WHERE CodeV='{$_GET['Verification']}'");
     if ($query) {
       $rowv = mysqli_fetch_assoc($raquet);
-      header("Location: index.php?id='{$rowv['farmer_id']}'");
+      header("Location: index.php?id='{$rowv['user_id']}'");
     } else {
       header("Location: index.php");
     }
@@ -27,7 +27,7 @@ if (isset($_GET['Verification'])) {
 if (isset($_POST['submit'])) {
   $email = mysqli_real_escape_string($conx, $_POST['email']);
   $Pass = mysqli_real_escape_string($conx, hash('sha256', $_POST['Password']));
-  $sql = "SELECT * FROM farmeruseraccount WHERE email='{$email}' and password='{$Pass}'";
+  $sql = "SELECT * FROM useraccount WHERE email='{$email}' and password='{$Pass}'";
   $resulte = mysqli_query($conx, $sql);
   if (mysqli_num_rows($resulte) === 1) {
     $row = mysqli_fetch_assoc($resulte);

@@ -10,17 +10,16 @@ $success = '';
 
 if (isset($_SESSION['Email_Session'])) {
     $email = $_SESSION['Email_Session'];
-    $result = mysqli_query($conx, "SELECT farmer_id FROM farmeruseraccount WHERE email='{$email}'");
-    $row = mysqli_fetch_assoc($result);
-    $farmer_id = $row['farmer_id'];
-
-    $result = mysqli_query($conx, "SELECT store_id FROM store WHERE farmer_id='{$farmer_id}'");
+    $result = mysqli_query($conx, "SELECT s.store_id FROM store s
+                                    INNER JOIN farmer f ON s.farmer_id = f.farmer_id
+                                    INNER JOIN useraccount u ON f.user_id = u.user_id
+                                    WHERE u.email = '{$email}'");
     $row = mysqli_fetch_assoc($result);
     $store_id = $row['store_id'];
 
-
     if (isset($_POST['update_product'])) {
         $product_id = isset($_POST['product_id']) ? mysqli_real_escape_string($conx, $_POST['product_id']) : '';
+        $harvest_id = isset($_POST['harvest_id']) ? mysqli_real_escape_string($conx, $_POST['harvest_id']) : '';
         $ProductName = isset($_POST['ProductName']) ? mysqli_real_escape_string($conx, $_POST['ProductName']) : '';
         $description = isset($_POST['description']) ? mysqli_real_escape_string($conx, $_POST['description']) : '';
         $Price = isset($_POST['Price']) ? mysqli_real_escape_string($conx, $_POST['Price']) : '';
@@ -46,7 +45,7 @@ if (isset($_SESSION['Email_Session'])) {
         $existing_product = mysqli_query($conx, "SELECT product_image FROM products WHERE product_id='$_GET[menu_upd]'");
         if (mysqli_num_rows($existing_product) > 0) {
             // Update the product information
-            $update_query = "UPDATE products SET ProductName='$ProductName', description='$description', Price='$Price', QuantityAvlbl='$QuantityAvlbl', QuantiSold='$QuantiSold'";
+            $update_query = "UPDATE products SET harvest_id= '$harvest_id', ProductName='$ProductName', description='$description', Price='$Price', QuantityAvlbl='$QuantityAvlbl', QuantiSold='$QuantiSold'";
     
             if (isset($product_image)) {
                 $update_query .= ", product_image='$product_image'";
@@ -85,7 +84,7 @@ if (isset($_SESSION['Email_Session'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin Dashboard</title>
+    <title>Oma-Angat|Update Product</title>
     <link rel="icon" href="../images/web-logo.png" type="icon type">
     <!-- Favicon icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -202,6 +201,7 @@ if (isset($_SESSION['Email_Session'])) {
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
                                     <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    <li><a href="profile.php"><i class="fa fa-person"></i> Profile</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -224,9 +224,9 @@ if (isset($_SESSION['Email_Session'])) {
                         <li class="nav-label">Log</li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Store</span></a>
                             <ul aria-expanded="false" class="collapse">
+                                <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
 								<li><a href="add_category.php">Add Category</a></li>
-                                <li><a href="add_market.php">Add Market</a></li>
-                                
+                                <li><a href="add_market.php">Add Market</a></li> 
                             </ul>
                         </li>
                       <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Product</span></a>
@@ -334,6 +334,23 @@ if (isset($_SESSION['Email_Session'])) {
                                                     </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Select Harvest Date</label>
+											<select name="harvest_id" class="form-control custom-select" data-placeholder="Choose a harvest date" tabindex="1">
+                                            <option>--Select Harvest Date--</option>
+                                            <?php
+													$result = mysqli_query($conx, "SELECT harvest_id, HarvestDate, harvestEnd FROM harvestingcalendar");
+                
+                                                    while ($row = mysqli_fetch_assoc($result)) {
+                                                        echo "<option value='" . $row['harvest_id'] . "'>" . $row['HarvestDate'] . ' to '. $row['harvestEnd'] . "</option>";
+                                                    }
+													?> 
+											</select>
+                                        </div>
+                                    </div>
+								</div>
                                         <!--/row-->
 										
                                             <!--/span-->

@@ -15,8 +15,8 @@ session_start();
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Admin Dashboard</title>
-    <link rel="icon" href="../images/web-logo.png" type="icon type">
+    <title>Oma-Angat|All Products</title>
+    <link rel="icon" href="images/web-logo.png" type="icon type">
     <!-- Bootstrap Core CSS -->
     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -69,6 +69,7 @@ session_start();
             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                 <ul class="dropdown-user">
                     <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                    <li><a href="profile.php"><i class="fa fa-user"></i> Profile</a></li>
                 </ul>
             </div>
         </li>
@@ -87,9 +88,11 @@ session_start();
                 <li class="nav-devider"></li>
                 <li class="nav-label">Home</li>
                 <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">HOME</span></a></li>
+                <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Profile</span></a></li>
                 <li class="nav-label">Log</li>
                 <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Market</span></a>
                     <ul aria-expanded="false" class="collapse">
+                        <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
 						<li><a href="add_category.php">Add Category</a></li>
                         <li><a href="add_market.php">Add Market</a></li>
                     </ul>
@@ -140,7 +143,8 @@ session_start();
                                                 <th>Price</th>
                                                 <th>Available</th>
                                                 <th>Sold</th>
-                                                <th>Image</th>	  
+                                                <th>Image</th>	
+                                                <th>Action</th>	  
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -165,7 +169,7 @@ session_start();
 																	<td>'.$rows['QuantityAvlbl'].'</td>
 																	<td>'.$rows['QuantiSold'].'</td>
 																	<td><div class="col-md-3 col-lg-8 m-b-10">
-																	<center><img src="Product_img/'.$rows['product_image'].'" class="img-responsive radius"  style="min-width:150px;min-height:100px;"/></center>
+																	<center><img src="'.$rows['product_image'].'" class="img-responsive radius"  style="min-width:150px;min-height:100px;"/></center>
                                                                     </div></td>
 																	<td><a href="delete_product.php?menu_del='.$rows['product_id'].'" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash-o" style="font-size:16px"></i></a> 
 																	<a href="update_product.php?menu_upd='.$rows['product_id'].'" class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5" style="background: rgb(0, 188, 126);"><i class="ti-settings" ></i></a>

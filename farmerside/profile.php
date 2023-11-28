@@ -2,87 +2,103 @@
 <html lang="en">
 <?php
 session_start();
+include("../connection/connection.php");
 
-if(!isset($_SESSION['Email_Session'])) {
-  header("Location: index.php");
-  die();
+$error = '';
+$success = '';
+
+if (isset($_SESSION['Email_Session'])) {
+    $email = $_SESSION['Email_Session'];
+    $result = mysqli_query($conx, "SELECT user_id FROM useraccount WHERE email='{$email}'");
+    $row = mysqli_fetch_assoc($result);
+    $user_id = $row['user_id'];
+
+    if (isset($_POST['submit'])) {
+        $farmer_name = isset($_POST['farmer_name']) ? mysqli_real_escape_string($conx, $_POST['farmer_name']) : '';
+        $Address = isset($_POST['Address']) ? mysqli_real_escape_string($conx, $_POST['Address']) : '';
+        $Phone_Num = isset($_POST['Phone_Num']) ? mysqli_real_escape_string($conx, $_POST['Phone_Num']) : '';
+
+        // Handle image upload
+        $image = '';
+        if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
+            $image_tmp = $_FILES['image']['tmp_name'];
+            $image_name = $_FILES['image']['name'];
+            $image_path = "Res_img/" . $image_name;
+
+            if (move_uploaded_file($image_tmp, $image_path)) {
+                $image = mysqli_real_escape_string($conx, $image_path);
+            } else {
+                $error = "Error uploading the image.";
+            }
+        }
+
+        // Check if any of the fields have data
+        if (!empty($farmer_name) || !empty($Address) || !empty($Phone_Num) || !empty($image)) {
+            // Start building the UPDATE query
+            $updateQuery = "UPDATE farmer SET ";
+
+            // Check if each field is not empty, and add it to the query
+            if (!empty($farmer_name)) {
+                $updateQuery .= "farmer_name = '{$farmer_name}', ";
+            }
+
+            if (!empty($Address)) {
+                $updateQuery .= "Address = '{$Address}', ";
+            }
+
+            if (!empty($Phone_Num)) {
+                $updateQuery .= "Phone_Num = '{$Phone_Num}', ";
+            }
+
+            if (!empty($image)) {
+                $updateQuery .= "image = '{$image}', ";
+            }
+
+            // Remove the trailing comma and space
+            $updateQuery = rtrim($updateQuery, ', ');
+
+            // Add the WHERE clause
+            $updateQuery .= " WHERE user_id = '{$user_id}'";
+
+            // Execute the UPDATE query
+            if (mysqli_query($conx, $updateQuery)) {
+                $success = '<div class="alert alert-success alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                Profile Updated Successfully.
+                </div>';
+            } else {
+                $error = "Error: " . $updateQuery . "<br>" . mysqli_error($conx);
+            }
+        } else {
+            // Insert data when all fields are empty
+            $sql = "INSERT INTO farmer (user_id, farmer_name, Address, Phone_Num, image) 
+                    VALUES ('{$user_id}', '', '', '', '')";
+
+            if (mysqli_query($conx, $sql)) {
+                $success = '<div class="alert alert-success alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                Profile Updated Successfully.
+                </div>';
+            } else {
+                $error = "Error: " . $sql . "<br>" . mysqli_error($conx);
+            }
+        }
+    }
+} else {
+    $error = "Session not set. Please make sure you are logged in.";
 }
-
-include('../connection/connection.php');
-
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-  // Handle form submission
-  $fullname = isset($_POST['Fullname']) ? mysqli_real_escape_string($conx, $_POST['Fullname']) : '';
-  $address = isset($_POST['Address']) ? mysqli_real_escape_string($conx, $_POST['Address']) : '';
-  $phone_num = isset($_POST['Phone_Num']) ? mysqli_real_escape_string($conx, $_POST['Phone_Num']) : '';
- 
-
-  // Check if image already exists in the database
-  $query = "SELECT * FROM farmeruseraccount WHERE email='{$_SESSION['Email_Session']}'";
-  $result = mysqli_query($conx, $query);
-  $user = mysqli_fetch_assoc($result);
-
-  // Start the query for updating the database
-  $query = "UPDATE farmeruseraccount SET ";
-
-  // Check each field and add it to the query if it's not empty
-  if (!empty($fullname)) {
-      $query .= "Fullname='$fullname', ";
-  }
-  if (!empty($address)) {
-      $query .= "Address='$address', ";
-  }
-  if (!empty($phone_num)) {
-      $query .= "Phone_Num='$phone_num', ";
-  }
-
-  // If image is uploaded, add it to the query
-  if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
-      $image = $_FILES['image']['name'];
-      $target_dir = "Res_img/";
-      $target_file = $target_dir . basename($_FILES["image"]["name"]);
-
-      // Select file type
-      $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
-      // Valid file extensions
-      $extensions_arr = array("jpg","jpeg","png","gif");
-
-      // Check extension
-      if(in_array($imageFileType,$extensions_arr)) {
-          // Upload file
-          if(move_uploaded_file($_FILES['image']['tmp_name'],$target_dir.$image)){
-              $query .= "image='$image', ";
-          } else {
-              $_SESSION['message'] = "Error uploading file!";
-              $_SESSION['msg_type'] = "danger";
-          }
-      } else {
-          $_SESSION['message'] = "Invalid file type! Image extensions must be jpg, jpeg, png, gif. ";
-          $_SESSION['msg_type'] = "danger";
-      }
-  }
-
-  // Remove the trailing comma and space, then add the WHERE clause
-  $query = rtrim($query, ', ') . " WHERE email='{$_SESSION['Email_Session']}'";
-
-  // Execute the query
-  if(mysqli_query($conx, $query)) {
-      $_SESSION['message'] = "Updated successfully!";
-      $_SESSION['msg_type'] = "success";
-  } else {
-      $_SESSION['message'] = "Error updating!";
-      $_SESSION['msg_type'] = "danger";
-  }
-}
-
 // Display form
 $email = $_SESSION['Email_Session'];
-$query = "SELECT * FROM farmeruseraccount WHERE email='{$email}'";
+$query = "SELECT * FROM useraccount WHERE email='{$email}'";
 $result = mysqli_query($conx, $query);
 $user = mysqli_fetch_assoc($result);
-?>
 
+// Display farmer information
+$queryFarmer = "SELECT * FROM farmer WHERE user_id='{$user_id}'";
+$resultFarmer = mysqli_query($conx, $queryFarmer);
+$farmer = mysqli_fetch_assoc($resultFarmer);
+
+?>
 </html>
 
 
@@ -107,13 +123,11 @@ $user = mysqli_fetch_assoc($result);
         =======================================-->
 
         <!-- WEBPAGE TITLE -->
-        <title>Oma-Angat - Profile</title>
-
+        <title>Oma-Angat|Profile</title>
+        <link rel="icon" href="images/web-logo.png" type="icon type">
         <!--=====================================
                     CSS LINK PART START
         =======================================-->
-        <!-- FAVICON -->
-        <link rel="icon" href="images/favicon.png">
 
         <!-- FONTS -->
         <link rel="stylesheet" href="fonts/flaticon/flaticon.css">
@@ -154,18 +168,6 @@ $user = mysqli_fetch_assoc($result);
 </style>
 
     <body>
-        <!-- Display success message -->
-        <?php
-    if(isset($_SESSION['message'])): ?>
-        <div class="alert alert-<?=$_SESSION['msg_type']?>">
-            <?php
-            echo $_SESSION['message'];
-            unset($_SESSION['message']);
-            ?>
-        </div>
-    <?php endif ?>
-
-
         <!--=====================================
                     MOBILE-MENU PART START
         =======================================-->
@@ -231,7 +233,7 @@ $user = mysqli_fetch_assoc($result);
                                 <div class="row">
                                     <div class="col-lg-2">
                                         <div class="profile-image">
-                                            <a href="#"><img src="<?php echo empty($user['image']) ? 'images/person.png' : 'Res_img/' . $user['image']; ?>" alt="user"></a>
+                                            <a href="#"><img src="<?php echo empty($farmer['image']) ? 'images/person.png' : $farmer['image']; ?>" alt="user"></a>
                                         </div>
                                     </div>
 
@@ -244,7 +246,11 @@ $user = mysqli_fetch_assoc($result);
                                     <div class="col-md-6 col-lg-4">
                                         <div class="profile-card">
                                             <h6>Full Name</h6>
-                                            <p><?php echo $user['Fullname']; ?></p>
+                                            <p><?php if ($farmer !== null): ?>
+                                            <p><?php echo $farmer['farmer_name']; ?></p>
+                                            <?php else: ?>
+                                            <p>No farmer information available.</p>
+                                            <?php endif; ?></p>
                                             <ul>
                                                 <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#profile-edit"></button></li>
                                                 <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li>
@@ -266,7 +272,11 @@ $user = mysqli_fetch_assoc($result);
                                     <div class="col-md-6 col-lg-4">
                                         <div class="profile-card contact active">
                                             <h6>Phone No.</h6>
-                                            <p><?php echo $user['Phone_Num']; ?></p>
+                                            <p><?php if ($farmer !== null): ?>
+                                            <p><?php echo $farmer['Phone_Num']; ?></p>
+                                            <?php else: ?>
+                                            <p>Add Phone No.</p>
+                                            <?php endif; ?></p>
                                             <ul>
                                                 <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#contact-edit"></button></li>
                                                 <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li>
@@ -289,7 +299,11 @@ $user = mysqli_fetch_assoc($result);
                                     <div class="col-md-6 col-lg-4">
                                         <div class="profile-card address">
                                             <h6>Address</h6>
-                                            <p><?php echo $user['Address']; ?></p>
+                                            <p><?php if ($farmer !== null): ?>
+                                            <p><?php echo $farmer['Address']; ?></p>
+                                            <?php else: ?>
+                                            <p>Add Address</p>
+                                            <?php endif; ?></p>
                                             <ul class="user-action">
                                                 <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#address-edit"></button></li>
                                                 <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li>
@@ -331,7 +345,7 @@ $user = mysqli_fetch_assoc($result);
                             <label class="form-label">Phone Number</label>
                             <input class="form-control" type="text" name="Phone_Num">     
                         </div>
-                        <button class="form-btn" type="submit" name="upload">Save Contact Info</button>
+                        <button class="form-btn" type="submit" name="submit">Save Contact Info</button>
                     </form>
                 </div> 
             </div> 
@@ -350,26 +364,7 @@ $user = mysqli_fetch_assoc($result);
                             <label class="form-label">Address</label>
                             <textarea class="form-control" name="Address" placeholder="Barangay, City/Municipality, Province"></textarea>
                         </div>
-                        <button class="form-btn" type="submit" name="upload">save address</button>
-                    </form>
-                </div> 
-            </div> 
-        </div>
-
-        <!-- payment add form -->
-        <div class="modal fade" id="payment-add">
-            <div class="modal-dialog modal-dialog-centered"> 
-                <div class="modal-content">
-                    <button class="modal-close" data-bs-dismiss="modal"><i class="icofont-close"></i></button>
-                    <form class="modal-form">
-                        <div class="form-title">
-                            <h3>add new payment</h3>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">card number</label>
-                            <input class="form-control" type="text" placeholder="Enter your card number">
-                        </div>
-                        <button class="form-btn" type="submit">save card info</button>
+                        <button class="form-btn" type="submit" name="submit">save address</button>
                     </form>
                 </div> 
             </div> 
@@ -394,13 +389,13 @@ $user = mysqli_fetch_assoc($result);
                         </div>
                         <div class="form-group">
                             <label class="form-label">Full Name</label>
-                            <input class="form-control" type="text" name="Fullname">
+                            <input class="form-control" type="text" name="farmer_name">
                         </div>
                         <div class="form-group">
                             <label class="control-label">Profile Image</label>
                             <input type="file" name="image"  id="lastName" class="form-control form-control-danger" placeholder="12n">
                         </div>
-                        <button class="form-btn" type="submit" name="upload">Save Profile Info</button>
+                        <button class="form-btn" type="submit" name="submit">Save Profile Info</button>
                     </form>
                 </div> 
             </div> 
@@ -417,9 +412,13 @@ $user = mysqli_fetch_assoc($result);
                         </div>
                         <div class="form-group">
                             <label class="form-label">Phone Number</label>
-                            <input class="form-control" type="text" name="Phone_Num" value="<?php echo $user['Phone_Num']; ?>">
+                            <input class="form-control" type="text" name="Phone_Num" value="<?php if ($farmer !== null): ?>
+                                            <?php echo $farmer['Phone_Num']; ?>
+                                            <?php else: ?>
+                                            No Phone number added
+                                            <?php endif; ?>">
                         </div>
-                        <button class="form-btn" type="submit" name="upload">Save Phone No.</button>
+                        <button class="form-btn" type="submit" name="submit">Save Phone No.</button>
                     </form>
                 </div> 
             </div> 
@@ -438,7 +437,7 @@ $user = mysqli_fetch_assoc($result);
                             <label class="form-label">Address</label>
                             <textarea class="form-control" name="Address" placeholder="Barangay, City/Municipality, Province"></textarea>
                         </div>
-                        <button class="form-btn" type="submit" name="upload">Save Address Info</button>
+                        <button class="form-btn" type="submit" name="submit">Save Address Info</button>
                     </form>
                 </div> 
             </div> 

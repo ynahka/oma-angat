@@ -44,8 +44,8 @@ if(isset($_POST['submit'] ))
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin Dashboard</title>
-    <link rel="icon" href="../images/web-logo.png" type="icon type">
+    <title>Oma-Angat|Update Category</title>
+    <link rel="icon" href="images/web-logo.png" type="icon type">
     <!-- Favicon icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap Core CSS -->
@@ -180,6 +180,7 @@ if(isset($_POST['submit'] ))
                         <li class="nav-label">Log</li>
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Store</span></a>
                             <ul aria-expanded="false" class="collapse">
+                                <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
 								<li><a href="add_category.php">Add Category</a></li>
                                 <li><a href="add_market.php">Add Market</a></li>
                                 
