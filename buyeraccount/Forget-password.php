@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
                 $mail->Subject = 'Oma-Angat Password Reset';
                 $mail->Body    = '<p>We received a request to reset your password on Oma-Angat Agri-Market. If you did not initiate this request, please ignore this email.</p>
                                 <p>To reset your password, please click the following link:</p>
-                                <p><a href="http://localhost/GUEST-VIEW/buyeraccount/change-Password.php?Reset=' . $CodeReset . '">"http://localhost/GUEST-VIEW/buyeraccount/change-Password.php?Reset=' . $CodeReset . '"</a></p>
+                                <p><a href="http://localhost/oma-angat/buyeraccount/change-Password.php?Reset=' . $CodeReset . '">"http://localhost/oma-angat/buyeraccount/change-Password.php?Reset=' . $CodeReset . '"</a></p>
                                 <p>Please note that this link is valid for a limited time only.</p>
                                 <p>If you have any questions or need further assistance, please contact our support team.</p>
                                 <p>Thank you,<br>
@@ -78,30 +78,30 @@ if (isset($_POST['submit'])) {
     <title>OMA-ANGAT FORGOT PASSWORD</title>
     <link rel="icon" href="img/web-logo.png" type="icon type">
     <style>
-    .alert {
-      padding: 1rem;
-      border-radius: 5px;
-      color: white;
-      margin: 1rem 0;
-      font-weight: 500;
-      width: 65%;
-    }
+        .alert {
+            padding: 1rem;
+            border-radius: 5px;
+            color: white;
+            margin: 1rem 0;
+            font-weight: 500;
+            width: 65%;
+        }
 
-    .alert-success {
-      background-color: #a5c48f;
-    }
+        .alert-success {
+            background-color: #a5c48f;
+        }
 
-    .alert-danger {
-      background-color: #fc5555;
-    }
+        .alert-danger {
+            background-color: #fc5555;
+        }
 
-    .alert-info {
-      background-color: #a5c48f
-    }
+        .alert-info {
+            background-color: #a5c48f
+        }
 
-    .alert-warning {
-      background-color: #ff9966;
-    }
+        .alert-warning {
+            background-color: #ff9966;
+        }
     </style>
 </head>
 
@@ -121,7 +121,7 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
 
-        
+
     </div>
 
     <script src="app.js"></script>

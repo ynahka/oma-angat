@@ -108,7 +108,8 @@ if (isset($_GET['Reset'])) {
                     passwordError.textContent = '';
                 }
             } else {
-                passwordError.textContent = 'Password must contain at least 8 characters (uppercase & lowercase letter, number, and special character)';
+                passwordError.textContent =
+                    'Password must contain at least 8 characters (uppercase & lowercase letter, number, and special character)';
             }
         }
 

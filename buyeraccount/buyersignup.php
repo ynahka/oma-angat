@@ -12,15 +12,14 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 $msg = "";
 $Error_Pass = "";
-
 if (isset($_POST['submit'])) {
-    $name = mysqli_real_escape_string($conx, $_POST['username']);
-    $email = mysqli_real_escape_string($conx, $_POST['email']);
-    $Password = mysqli_real_escape_string($conx, hash('sha256', $_POST['password']));
-    $Confirm_Password = mysqli_real_escape_string($conx, hash('sha256', $_POST['conf-Password']));
+    $name = mysqli_real_escape_string($conx, $_POST['Username']);
+    $email = mysqli_real_escape_string($conx, $_POST['Email']);
+    $Password = mysqli_real_escape_string($conx, hash('sha256', $_POST['Password']));
+    $Confirm_Password = mysqli_real_escape_string($conx, hash('sha256', $_POST['Conf-Password']));
     $Code = mysqli_real_escape_string($conx, hash('sha256', rand()));
 
     // Define the regular expression pattern for a strong password
@@ -32,7 +31,7 @@ if (isset($_POST['submit'])) {
         if ($Password === $Confirm_Password) {
             // Validate the password against the pattern
             if (preg_match($passwordPattern, $_POST['Password'])) {
-                $query = "INSERT INTO useraccount(`username`, `email`, `password`, `codeV`) values('$name','$email','$Password','$Code')";
+                $query = "INSERT INTO useraccount(`Username`, `email`, `Password`, `CodeV`) values('$name','$email','$Password','$Code')";
                 $result = mysqli_query($conx, $query);
                 if ($result) {
                     //Create an instance; passing `true` enables exceptions
@@ -56,12 +55,12 @@ if (isset($_POST['submit'])) {
                         $mail->isHTML(true);                                  //Set email format to HTML
                         $mail->Subject = 'Oma-Angat Agri-Market: Account Verification';
                         $mail->Body    = '<h3>Dear ' . $name . ',</h3>
-                        <p>Thank you for signing up for Oma-Angat Virtual Agri-Market! Were excited to have you on board as a member of our community.To complete your registration and verify your email address, please click on the following link:</p>
+                        <p>Thank you for signing up for Oma-Angat Agri-Market! Were excited to have you on board as a seller of our community.To complete your registration and verify your email address, please click on the following link:</p>
                         <a href="http://localhost/oma-angat/buyeraccount/?Verification=' . $Code . '">"http://localhost/oma-angat/buyeraccount/?Verification=' . $Code . '"</a>
                         <p>By verifying your email, you will gain access to all the features and benefits of Oma-Angat Virtual Agri-Market,
-                        including the ability to connect with local farmers and to explore and buy fresh produce.</p>
-                        <p>If you did not sign up for Oma-Angat Virtual Agri-Market, please disregard this email. Its possible that someone entered your email address by mistake.
-                        <br>Thank you and welcome to Oma-Angat Virtual Agri-Market!</p>
+                        including the ability to connect with local market and to prote and sell your fresh produce.</p>
+                        <p>If you did not sign up for Oma-Angat Agri-Market, please disregard this email. Its possible that someone entered your email address by mistake.
+                        <br>Thank you and welcome to Oma-Angat Agri-Market, Happy Selling!</p>
                         <p></p>
                         <p></p>
                         <p>Best regards,</p>
@@ -95,7 +94,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css" />
-    <title>OMA-ANGAT SIGN UP</title>
+    <title>OMA-ANGAT SIGN IN</title>
     <link rel="icon" href="img/web-logo.png" type="icon type">
     <style>
         .alert {
@@ -146,6 +145,7 @@ if (isset($_POST['submit'])) {
                 <form action="" method="POST" class="sign-up-form">
                     <h2 class="title2">Create New Account</h2>
                     <?php echo $msg ?>
+                    <div class="error-message" id="password-error" style="color: red;"></div>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" name="Username" placeholder="Username" value="<?php if (isset($_POST['Username'])) {
@@ -166,9 +166,12 @@ if (isset($_POST['submit'])) {
                         <i class="fas fa-lock"></i>
                         <input type="password" name="Conf-Password" id="confirm-password" placeholder="Confirm Password" required />
                     </div>
-                    <div class="error-message" id="password-error" style="color: red;"></div>
+                    <div class="terms">
+                        <input type="checkbox" name="agree_terms" id="agree-terms" required />
+                        <label for="agree-terms">I agree to the <a href="terms_and_conditions.html" target="_blank">Terms and Conditions</a></label>
+                    </div>
                     <input type="submit" name="submit" class="btn" value="Sign up" />
-                    <div class="cta">Already have an account? <a href="login.php" class="ac1">Login</a></div>
+                    <div class="cta">Already have an account? <a href="index.php" class="ac1">Login</a></div>
                 </form>
             </div>
         </div>
@@ -176,7 +179,7 @@ if (isset($_POST['submit'])) {
             <div class="panel left-panel">
             </div>
             <div class="panel right-panel">
-                <img src="../viewers/images/signup/log5.png" class="image" alt="" />
+                <img src="images/log5.png" class="image" alt="" />
             </div>
         </div>
     </div>

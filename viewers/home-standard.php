@@ -63,7 +63,9 @@
                                     <del>$38.00</del>
                                     <span>$24.00<small>/per kilo</small></span>
                                 </h3>
-                                <p class="view-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit non tempora magni repudiandae sint suscipit tempore quis maxime explicabo veniam eos reprehenderit fuga</p>
+                                <p class="view-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit non tempora
+                                    magni repudiandae sint suscipit tempore quis maxime explicabo veniam eos
+                                    reprehenderit fuga</p>
                                 <div class="view-list-group">
                                     <label class="view-list-title">tags:</label>
                                     <ul class="view-tag-list">
@@ -87,9 +89,12 @@
                                         <span>add to cart</span>
                                     </button>
                                     <div class="product-action">
-                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                        <button class="action-minus" title="Quantity Minus"><i
+                                                class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                            value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i
+                                                class="icofont-plus"></i></button>
                                     </div>
                                 </div>
                                 <div class="view-action-group">
@@ -443,8 +448,10 @@
                             </a>
                             <div class="product-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="product-content">
@@ -468,8 +475,10 @@
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -490,8 +499,10 @@
                             </a>
                             <div class="product-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="product-content">
@@ -515,8 +526,10 @@
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -536,8 +549,10 @@
                             </a>
                             <div class="product-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="product-content">
@@ -561,8 +576,10 @@
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -582,8 +599,10 @@
                             </a>
                             <div class="product-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="product-content">
@@ -607,8 +626,10 @@
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -628,8 +649,10 @@
                             </a>
                             <div class="product-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="product-content">
@@ -653,8 +676,10 @@
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -674,8 +699,10 @@
                             </a>
                             <div class="product-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="product-content">
@@ -699,8 +726,10 @@
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -720,8 +749,10 @@
                             </a>
                             <div class="product-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="product-content">
@@ -745,8 +776,10 @@
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -766,8 +799,10 @@
                             </a>
                             <div class="product-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="product-content">
@@ -791,8 +826,10 @@
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -843,8 +880,10 @@
                             </a>
                             <div class="feature-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="feature-content">
@@ -862,14 +901,17 @@
                             <h6 class="feature-price">
                                 <span>$28<small>/piece</small></span>
                             </h6>
-                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
+                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet
+                                olor ut eveniet commodi...</p>
                             <button class="product-add" title="Add to Cart">
                                 <i class="fas fa-shopping-basket"></i>
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -889,8 +931,10 @@
                             </a>
                             <div class="feature-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="feature-content">
@@ -908,14 +952,17 @@
                             <h6 class="feature-price">
                                 <span>$28<small>/piece</small></span>
                             </h6>
-                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
+                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet
+                                olor ut eveniet commodi...</p>
                             <button class="product-add" title="Add to Cart">
                                 <i class="fas fa-shopping-basket"></i>
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -935,8 +982,10 @@
                             </a>
                             <div class="feature-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="feature-content">
@@ -954,14 +1003,17 @@
                             <h6 class="feature-price">
                                 <span>$28<small>/piece</small></span>
                             </h6>
-                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
+                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet
+                                olor ut eveniet commodi...</p>
                             <button class="product-add" title="Add to Cart">
                                 <i class="fas fa-shopping-basket"></i>
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -981,8 +1033,10 @@
                             </a>
                             <div class="feature-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="feature-content">
@@ -1000,14 +1054,17 @@
                             <h6 class="feature-price">
                                 <span>$28<small>/piece</small></span>
                             </h6>
-                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
+                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet
+                                olor ut eveniet commodi...</p>
                             <button class="product-add" title="Add to Cart">
                                 <i class="fas fa-shopping-basket"></i>
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -1027,8 +1084,10 @@
                             </a>
                             <div class="feature-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="feature-content">
@@ -1046,14 +1105,17 @@
                             <h6 class="feature-price">
                                 <span>$28<small>/piece</small></span>
                             </h6>
-                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
+                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet
+                                olor ut eveniet commodi...</p>
                             <button class="product-add" title="Add to Cart">
                                 <i class="fas fa-shopping-basket"></i>
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -1073,8 +1135,10 @@
                             </a>
                             <div class="feature-widget">
                                 <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play"
+                                    data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                    data-bs-target="#product-view"></a>
                             </div>
                         </div>
                         <div class="feature-content">
@@ -1092,14 +1156,17 @@
                             <h6 class="feature-price">
                                 <span>$28<small>/piece</small></span>
                             </h6>
-                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet olor ut eveniet commodi...</p>
+                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet
+                                olor ut eveniet commodi...</p>
                             <button class="product-add" title="Add to Cart">
                                 <i class="fas fa-shopping-basket"></i>
                                 <span>add</span>
                             </button>
                             <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-minus" title="Quantity Minus"><i
+                                        class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                    value="1">
                                 <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
                         </div>
@@ -1176,8 +1243,10 @@
                                     </a>
                                     <div class="product-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                            data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="product-content">
@@ -1200,9 +1269,12 @@
                                         <span>add</span>
                                     </button>
                                     <div class="product-action">
-                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                        <button class="action-minus" title="Quantity Minus"><i
+                                                class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                            value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i
+                                                class="icofont-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -1221,8 +1293,10 @@
                                     </a>
                                     <div class="product-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                            data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="product-content">
@@ -1245,9 +1319,12 @@
                                         <span>add</span>
                                     </button>
                                     <div class="product-action">
-                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                        <button class="action-minus" title="Quantity Minus"><i
+                                                class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                            value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i
+                                                class="icofont-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -1266,8 +1343,10 @@
                                     </a>
                                     <div class="product-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                            data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="product-content">
@@ -1290,9 +1369,12 @@
                                         <span>add</span>
                                     </button>
                                     <div class="product-action">
-                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                        <button class="action-minus" title="Quantity Minus"><i
+                                                class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                            value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i
+                                                class="icofont-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -1311,8 +1393,10 @@
                                     </a>
                                     <div class="product-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                            data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="product-content">
@@ -1335,9 +1419,12 @@
                                         <span>add</span>
                                     </button>
                                     <div class="product-action">
-                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                        <button class="action-minus" title="Quantity Minus"><i
+                                                class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                            value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i
+                                                class="icofont-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -1356,8 +1443,10 @@
                                     </a>
                                     <div class="product-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                            data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="product-content">
@@ -1380,9 +1469,12 @@
                                         <span>add</span>
                                     </button>
                                     <div class="product-action">
-                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                        <button class="action-minus" title="Quantity Minus"><i
+                                                class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                            value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i
+                                                class="icofont-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -1401,8 +1493,10 @@
                                     </a>
                                     <div class="product-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                            data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="product-content">
@@ -1425,9 +1519,12 @@
                                         <span>add</span>
                                     </button>
                                     <div class="product-action">
-                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                        <button class="action-minus" title="Quantity Minus"><i
+                                                class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                            value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i
+                                                class="icofont-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -1504,8 +1601,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -1528,9 +1627,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -1549,8 +1651,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -1573,9 +1677,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -1594,8 +1701,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -1618,9 +1727,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -1639,8 +1751,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -1663,9 +1777,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -1684,8 +1801,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -1708,9 +1827,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -1729,8 +1851,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -1753,9 +1877,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -1774,8 +1901,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -1798,9 +1927,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -1819,8 +1951,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -1843,9 +1977,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -1864,8 +2001,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -1888,9 +2027,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -1909,8 +2051,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -1933,9 +2077,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -1959,8 +2106,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -1983,9 +2132,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2004,8 +2156,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2028,9 +2182,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2049,8 +2206,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2073,9 +2232,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2094,8 +2256,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2118,9 +2282,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2139,8 +2306,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2163,9 +2332,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2184,8 +2356,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2208,9 +2382,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2229,8 +2406,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2253,9 +2432,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2274,8 +2456,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2298,9 +2482,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2319,8 +2506,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2343,9 +2532,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2364,8 +2556,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2388,9 +2582,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2414,8 +2611,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2439,9 +2638,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2460,8 +2662,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2485,9 +2689,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2506,8 +2713,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2531,9 +2740,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2552,8 +2764,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2577,9 +2791,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2598,8 +2815,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2623,9 +2842,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2644,8 +2866,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2669,9 +2893,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2690,8 +2917,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2715,9 +2944,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2736,8 +2968,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2761,9 +2995,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2782,8 +3019,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2807,9 +3046,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -2828,8 +3070,10 @@
                                 </a>
                                 <div class="product-widget">
                                     <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
+                                        class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                    <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
+                                        data-bs-target="#product-view"></a>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -2853,9 +3097,12 @@
                                     <span>add</span>
                                 </button>
                                 <div class="product-action">
-                                    <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                                    <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                                    <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    <button class="action-minus" title="Quantity Minus"><i
+                                            class="icofont-minus"></i></button>
+                                    <input class="action-input" title="Quantity Number" type="text" name="quantity"
+                                        value="1">
+                                    <button class="action-plus" title="Quantity Plus"><i
+                                            class="icofont-plus"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -3106,7 +3353,8 @@
                     <div class="testimonial-slider slider-arrow">
                         <div class="testimonial-card">
                             <i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
+                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati
+                                magnam doloribus magni provident ipsam</p>
                             <h5>mahmud hasan</h5>
                             <ul>
                                 <li class="fas fa-star"></li>
@@ -3119,7 +3367,8 @@
                         </div>
                         <div class="testimonial-card">
                             <i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
+                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati
+                                magnam doloribus magni provident ipsam</p>
                             <h5>mahmud hasan</h5>
                             <ul>
                                 <li class="fas fa-star"></li>
@@ -3132,7 +3381,8 @@
                         </div>
                         <div class="testimonial-card">
                             <i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
+                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati
+                                magnam doloribus magni provident ipsam</p>
                             <h5>mahmud hasan</h5>
                             <ul>
                                 <li class="fas fa-star"></li>
@@ -3145,7 +3395,8 @@
                         </div>
                         <div class="testimonial-card">
                             <i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
+                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati
+                                magnam doloribus magni provident ipsam</p>
                             <h5>mahmud hasan</h5>
                             <ul>
                                 <li class="fas fa-star"></li>
@@ -3199,10 +3450,12 @@
                                     </li>
                                 </ul>
                                 <h4 class="blog-title">
-                                    <a href="blog-details.html">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
+                                    <a href="blog-details.html">Voluptate blanditiis provident Lorem ipsum dolor sit
+                                        amet</a>
                                 </h4>
                                 <p class="blog-desc">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae deleniti nam dignissimos sequi ...
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae
+                                    deleniti nam dignissimos sequi ...
                                 </p>
                                 <a class="blog-btn" href="#">
                                     <span>read more</span>
@@ -3228,10 +3481,12 @@
                                     </li>
                                 </ul>
                                 <h4 class="blog-title">
-                                    <a href="blog-details.html">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
+                                    <a href="blog-details.html">Voluptate blanditiis provident Lorem ipsum dolor sit
+                                        amet</a>
                                 </h4>
                                 <p class="blog-desc">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae deleniti nam dignissimos sequi ...
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae
+                                    deleniti nam dignissimos sequi ...
                                 </p>
                                 <a class="blog-btn" href="#">
                                     <span>read more</span>
@@ -3257,10 +3512,12 @@
                                     </li>
                                 </ul>
                                 <h4 class="blog-title">
-                                    <a href="blog-details.html">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
+                                    <a href="blog-details.html">Voluptate blanditiis provident Lorem ipsum dolor sit
+                                        amet</a>
                                 </h4>
                                 <p class="blog-desc">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae deleniti nam dignissimos sequi ...
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae
+                                    deleniti nam dignissimos sequi ...
                                 </p>
                                 <a class="blog-btn" href="#">
                                     <span>read more</span>
@@ -3286,10 +3543,12 @@
                                     </li>
                                 </ul>
                                 <h4 class="blog-title">
-                                    <a href="blog-details.html">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
+                                    <a href="blog-details.html">Voluptate blanditiis provident Lorem ipsum dolor sit
+                                        amet</a>
                                 </h4>
                                 <p class="blog-desc">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae deleniti nam dignissimos sequi ...
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae
+                                    deleniti nam dignissimos sequi ...
                                 </p>
                                 <a class="blog-btn" href="#">
                                     <span>read more</span>

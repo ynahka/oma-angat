@@ -10,17 +10,17 @@ $msg = "";
 $Error_Pass = "";
 
 if (isset($_GET['Verification'])) {
-  $raquet = mysqli_query($conx, "SELECT * FROM useraccount WHERE codeV='{$_GET['Verification']}'");
+  $raquet = mysqli_query($conx, "SELECT * FROM useraccount WHERE CodeV='{$_GET['Verification']}'");
   if (mysqli_num_rows($raquet) > 0) {
-    $query = mysqli_query($conx, "UPDATE useraccount SET verification='1' WHERE codeV='{$_GET['Verification']}'");
+    $query = mysqli_query($conx, "UPDATE useraccount SET verification='1' WHERE CodeV='{$_GET['Verification']}'");
     if ($query) {
       $rowv = mysqli_fetch_assoc($raquet);
-      header("Location: login.php?id='{$rowv['id']}'");
+      header("Location: index.php?id='{$rowv['user_id']}'");
     } else {
-      header("Location: login.php");
+      header("Location: index.php");
     }
   } else {
-    header("Location: login.php");
+    header("Location: index.php");
   }
 }
 
@@ -114,12 +114,12 @@ if (isset($_POST['submit'])) {
             <input type="password" name="Password" placeholder="Password" />
           </div>
           <div class="Forget-Pass">
-            <a href="Forget.php" class="Forget">Forgot Password ?</a>
+            <a href="Forget-password.php" class="Forget">Forgot Password ?</a>
           </div>
           <input type="submit" name="submit" value="Login" class="btn solid" />
           <div class="social-media">
-            <div class="cta">Not yet registered? <a href="signup.php" class="ac1">Create an account</a>
-            </div>
+            <div class="cta">Not yet registered? <a href="buyersignup.php" class="ac1">Create an
+                account</a></div>
           </div>
         </form>
       </div>
@@ -127,7 +127,7 @@ if (isset($_POST['submit'])) {
 
     <div class="panels-container">
       <div class="panel left-panel">
-        <img src="../viewers/images/signup/log5.png" class="image" alt="" />
+        <img src="images/log5.png" class="image" alt="" />
       </div>
     </div>
   </div>
