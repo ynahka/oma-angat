@@ -362,137 +362,43 @@
     </section> -->
 
     <?php
-    $Pitems = [
-        [
-            "name" => "vegetables",
-            "img" => "images/brand/1.svg",
-            "url" => "shop-1column.php",
-            "title" => "Farmer-1",
+    include("../connection/connection.php");
+    error_reporting(0);
+    session_start();
 
-        ],
-        [
-            "name" => "vegetables",
-            "img" => "images/brand/2.svg",
-            "url" => "shop-1column.php",
-            "title" => "Farmer-2",
+    // Your SQL query to retrieve store information
+    $sql = "SELECT * FROM Store";
+    $result = mysqli_query($conx, $sql);
 
-        ],
-        [
-            "name" => "vegetables",
-            "img" => "images/brand/3.svg",
-            "url" => "shop-1column.php",
-            "title" => "Farmer-3",
+    $Pitems = [];
 
-        ],
-        [
-            "name" => "fruits",
-            "img" => "images/brand/4.svg",
-            "total_items" => 89,
-            "url" => "shop-1column.php",
-            "title" => "Farmer-4",
+    // Check if the query was successful
+    if ($result) {
+        // Fetch the result row by row
+        while ($row = mysqli_fetch_assoc($result)) {
+            $Pitem = [
+                "name" => $row['storeName'],
+                "img" => "images/brand/{$row['store_id']}.svg", // Assuming each store has a unique ID
+                "url" => "shop-1column.php", // You may want to customize this based on your requirements
+                "title" => "Farmer-" . $row['farmer_id'],
+                // Add more fields as needed
+            ];
 
-        ],
-        [
-            "name" => "Grains",
-            "img" => "images/brand/5.svg",
+            // Add the store item to the array
+            $Pitems[] = $Pitem;
+        }
 
-            "url" => "shop-1column.php",
-            "title" => "Farmer-5",
+        // Free the result set
+        mysqli_free_result($result);
+    } else {
+        // Handle the case where the query was not successful
+        echo 'Error executing query: ' . mysqli_error($conx);
+    }
 
-        ],
-        [
-            "name" => "eggs",
-            "img" => "images/brand/6.svg",
-
-            "url" => "shop-1column.php",
-            "title" => "Farmer-6",
-
-        ],
-        [
-            "name" => "dry fish",
-            "img" => "images/brand/7.svg",
-            "total_items" => 23,
-            "url" => "shop-1column.php",
-            "title" => "Farmer-7",
-
-        ]
-    ];
+    // Close the database connection
+    mysqli_close($conx);
     ?>
 
-    <section class="section suggest-part">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading">
-                        <h2>Shop by Farmer's Market</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container suggest">
-            <ul class="suggest-slider slider-arrow">
-                <?php foreach ($Pitems as $Pitem) : ?>
-                    <li>
-                        <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
-                            <img src="<?php echo $Pitem['img'] ?>">
-                        </a>
-                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                            <p><?php echo $Pitem['title'] ?></p>
-                        </div>
-                    </li>
-                <?php endforeach; ?>
-
-            </ul>
-        </div>
-    </section>
-    <!--=====================================
-                    BRAND PART END
-        =======================================-->
-
-
-    <?php
-    $Pitems = [
-        [
-            "name" => "vegetables",
-            "img" => "images/suggest/vegetables.svg",
-            "url" => "shop-1column.php",
-            "title" => "Vegetables",
-
-        ],
-        [
-            "name" => "fruits",
-            "img" => "images/suggest/fruits.svg",
-            "total_items" => 89,
-            "url" => "shop-1column.php",
-            "title" => "Fruits",
-
-        ],
-        [
-            "name" => "Grains",
-            "img" => "images/suggest/grains.svg",
-
-            "url" => "shop-1column.php",
-            "title" => "Grains",
-
-        ],
-        [
-            "name" => "eggs",
-            "img" => "images/suggest/eggs.svg",
-
-            "url" => "shop-1column.php",
-            "title" => "Eggs",
-
-        ],
-        [
-            "name" => "dry fish",
-            "img" => "images/suggest/dried-fish.svg",
-            "total_items" => 23,
-            "url" => "shop-1column.php",
-            "title" => "Dried Fish",
-
-        ]
-    ];
-    ?>
 
     <section class="section suggest-part">
         <div class="container">

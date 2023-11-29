@@ -50,19 +50,19 @@
                      </a>
 
                      <!-- <?php
-                        session_start();
-                        if(isset($_SESSION['user_id'])) {
-                            echo '<div class="header-media-group">
+                            session_start();
+                            if (isset($_SESSION['user_id'])) {
+                                echo '<div class="header-media-group">
                                       <button class="header-user"><img src="images/user.jpg" alt="user"></button>
                                       <a href="index.php"><img src="images/oma-angat-logo.svg" alt="logo"></a>
                                       <button class="header-src"><i class="fas fa-search"></i></button>
                                   </div>';
-                        } else {
-                            echo '<a href="login.php" class="header-widget" title="Join">
+                            } else {
+                                echo '<a href="login.php" class="header-widget" title="Join">
                                       <button>Get Started</button>
                                   </a>';
-                        }
-                    ?> -->
+                            }
+                            ?> -->
 
 
                      <form class="header-form">
