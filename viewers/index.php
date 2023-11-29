@@ -162,199 +162,14 @@
         </div>
     </section>
 
-    <!--=====================================
-                    BRAND PART START
-        =======================================-->
-    <!-- <section class="section brand-part">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading">
-                        <h2>Shop by Farmer's Market</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="suggest-slider slider-arrow">
-                <div class="brand-wrap">
-                    <div class="brand-media">
-                        <img src="images/brand/1.png" alt="brand">
-                        <div class="brand-overlay">
-                            <a href="brand-single.php"><i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="brand-meta">
-                        <h6>Natural Greeny</h6>
-
-                    </div>
-                </div>
-
-                <div class="brand-wrap">
-                    <div class="brand-media">
-                        <img src="images/brand/2.png" alt="brand">
-                        <div class="brand-overlay">
-                            <a href="brand-single.php"><i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="brand-meta">
-                        <h6>Vegan Lover</h6>
-
-                    </div>
-                </div>
-                <div class="brand-wrap">
-                    <div class="brand-media">
-                        <img src="images/brand/3.png" alt="brand">
-                        <div class="brand-overlay">
-                            <a href="brand-single.php"><i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="brand-meta">
-                        <h6>Organic Crops</h6>
-
-                    </div>
-                </div>
-                <div class="brand-wrap">
-                    <div class="brand-media">
-                        <img src="images/brand/5.png" alt="brand">
-                        <div class="brand-overlay">
-                            <a href="brand-single.php"><i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="brand-meta">
-                        <h6>Dairymilk</h6>
-
-                    </div>
-                </div>
-                <div class="brand-wrap">
-                    <div class="brand-media">
-                        <img src="images/brand/4.png" alt="brand">
-                        <div class="brand-overlay">
-                            <a href="brand-single.php"><i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="brand-meta">
-                        <h6>Fresh Fortune</h6>
-
-                    </div>
-                </div>
-                <div class="brand-wrap">
-                    <div class="brand-media">
-                        <img src="images/brand/6.png" alt="brand">
-                        <div class="brand-overlay">
-                            <a href="brand-single.php"><i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="brand-meta">
-                        <h6>Econature</h6>
-
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-btn-50">
-                        <a href="brand-list.php" class="btn btn-outline">
-                            <i class="fas fa-eye"></i>
-                            <span>Show More</span>
-                        </a>
-                    </div>
-                </div>
+    <div class="promo-part">
+        <div class="col-lg-12">
+            <div class="promo-img">
+                <a href=""><img src="images/sample.svg" alt="promo"></a>
             </div>
         </div>
-    </section> -->
-    <!-- <section class="section newitem-part">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="section-heading">
-                        <h2>Shop by Farmer's Market</h2>
-                    </div>
-                </div>
+    </div>
 
-            </div>
-            <div class="row">
-                <div class="col">
-                    <ul class="new-slider slider-arrow">
-                        <li>
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image" href="product-video.php">
-                                        <img src="images/brand/1.png" alt="product">
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image" href="product-video.php">
-                                        <img src="images/brand/2.png" alt="product">
-                                    </a>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image" href="product-video.php">
-                                        <img src="images/brand/3.png" alt="product">
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image" href="product-video.php">
-                                        <img src="images/brand/4.png" alt="product">
-                                    </a>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image" href="product-video.php">
-                                        <img src="images/brand/5.png" alt="product">
-                                    </a>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image" href="product-video.php">
-                                        <img src="images/brand/6.png" alt="product">
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image" href="product-video.php">
-                                        <img src="images/brand/7.png" alt="product">
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="section-btn-25">
-                        <a href="shop-4column.php" class="btn btn-outline">
-                            <i class="fas fa-eye"></i>
-                            <span>show more</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <?php
     $Pitems = [
@@ -395,7 +210,7 @@
 
         ],
         [
-            "category" => "eggs",
+            "category" => "Dairy Products",
             "img" => "images/brand/6.svg",
 
             "url" => "shop-1column.php",
@@ -403,7 +218,7 @@
 
         ],
         [
-            "category" => "dry fish",
+            "category" => "dried fish",
             "img" => "images/brand/7.svg",
             "total_items" => 23,
             "url" => "shop-1column.php",
@@ -444,6 +259,15 @@
         =======================================-->
 
 
+    <div class="promo-part">
+        <div class="col-lg-12">
+            <div class="promo-img">
+                <a href=""><img src="images/category.svg" alt="promo"></a>
+            </div>
+        </div>
+    </div>
+
+
     <?php
     $Pitems = [
         [
@@ -474,7 +298,7 @@
             "img" => "images/suggest/eggs.svg",
 
             "url" => "shop-1column.php",
-            "title" => "Eggs",
+            "title" => "Dairies & eggs",
 
         ],
         [
@@ -518,6 +342,16 @@
     <!--=====================================
                     NICHE PART START
         =======================================-->
+
+
+    <div class="promo-part">
+        <div class="col-lg-12">
+            <div class="promo-img">
+                <a href=""><img src="images/flow.svg" alt="promo"></a>
+            </div>
+        </div>
+    </div>
+
     <section class="section niche-part">
         <div class="container">
             <div class="row">

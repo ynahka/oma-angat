@@ -14,7 +14,6 @@
                                 <li><a class="icofont-facebook" href="#"></a></li>
                                 <li><a class="icofont-instagram" href="#"></a></li>
                                 <li><a class="fa-regular fa-envelope"></a></li>
-
                             </ul>
                         </div>
                     </div>

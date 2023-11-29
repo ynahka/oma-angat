@@ -7101,7 +7101,8 @@ tbody tr td:last-child {
   width: 100%;
 }
 
-.promo-img a img {
+
+/* .promo-img a img {
   width: 100%;
   border-radius: 8px;
   transition: all linear 0.3s;
@@ -7114,11 +7115,11 @@ tbody tr td:last-child {
 .promo-img a img:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
-}
+} */
 
 @media (max-width: 767px) {
   .promo-img {
-    margin: 12px 0px;
+    margin: 5px 0px;
   }
 }
 
