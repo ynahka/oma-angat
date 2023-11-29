@@ -207,7 +207,7 @@
             </div>
             <div class="nav-content">
                 <div class="nav-btn">
-                    <a href="login.php" class="btn btn-inline">
+                    <a href="../buyeraccount/index.php" class="btn btn-inline">
                         <i class="fa fa-unlock-alt"></i>
                         <span>Get Started</span>
                     </a>
@@ -250,7 +250,7 @@
                     <!-- <a class="nav-link" href="#"></i>Settings</a> -->
                     <a class="nav-link" href="privacy.php"></i>Privacy Policy</a>
                     <a class="nav-link" href="terms-and-conditions.php"></i>Terms & Conditions</a>
-                    <a class="nav-link" href="login.php"></i>log out</a>
+                    <a class="nav-link" href="../buyeraccount/logout.php"></i>log out</a>
                 </div>
 
                 <div class="nav-footer">
