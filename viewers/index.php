@@ -170,7 +170,7 @@
     <div class="promo-part">
         <div class="col-lg-12">
             <div class="promo-img">
-                <a href=""><img src="images/sample.svg" alt="promo"></a>
+                <a href=""><img src="images/shop-farmer.svg" alt="promo"></a>
             </div>
         </div>
     </div>
