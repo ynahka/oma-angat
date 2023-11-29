@@ -237,11 +237,11 @@
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
 }
-
+/* 
 .promo-img a img:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
-}
+} */
 
 @media (max-width: 767px) {
   .promo-img {

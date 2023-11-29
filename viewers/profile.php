@@ -12,13 +12,9 @@
     <!--=====================================
                     BANNER PART START
         =======================================-->
-    <section class="inner-section single-banner" style="background: url(images/single-banner.jpg) no-repeat center;">
+    <section class="inner-section single-banner" style="background: url(images/banner.svg) no-repeat center;">
         <div class="container">
             <h2>my profile</h2>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">profile</li>
-            </ol>
         </div>
     </section>
     <!--=====================================

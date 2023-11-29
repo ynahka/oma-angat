@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'header.php'; ?>
+<link rel="stylesheet" href="css/brand-single.css">
 
 <body>
     <?php include('header-nav.php'); ?>
@@ -22,22 +23,22 @@
                                     <label class="view-label off">-10%</label>
                                 </div>
                                 <ul class="preview-slider slider-arrow">
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
                                 </ul>
                                 <ul class="thumb-slider">
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
-                                    <li><img src="images/product/01.jpg" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
+                                    <li><img src="images/product/1.png" alt="product"></li>
                                 </ul>
                             </div>
                         </div>
@@ -116,18 +117,32 @@
     <!--=====================================
                     BANNER PART START
         =======================================-->
-    <section class="inner-section single-banner" style="background: url(images/single-banner.jpg) no-repeat center;">
+    <section class="inner-section single-banner" style="background: url(images/banner.svg) no-repeat center;">
         <div class="container">
-            <h2>Shop 1 Column</h2>
-            <ol class="breadcrumb">
+            <!-- <h2>Shop 1 Column</h2> -->
+            <!-- <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">shop-1column</li>
-            </ol>
+            </ol> -->
+        </div>
         </div>
     </section>
-    <!--=====================================
-                    BANNER PART END
-        =======================================-->
+
+    <div class="brand-single">
+        <a href="#"><img src="images/brand/1.svg" alt="brand"></a>
+        <a href="#">
+            <h3>vegan lovers</h3>
+        </a>
+        <ul>
+            <li class="fas fa-star active"></li>
+            <li class="fas fa-star active"></li>
+            <li class="fas fa-star active"></li>
+            <li class="fas fa-star active"></li>
+            <li class="fas fa-star"></li>
+            <li class="total">(163 ratings)</li>
+        </ul>
+        <p>(45 items)</p>
+    </div> <!--=====================================BANNER PART END=======================================-->
 
 
     <!--=====================================
@@ -477,7 +492,7 @@
                                 </div>
                                 <div class="standard-media">
                                     <a class="standard-image" href="product-video.html">
-                                        <img src="images/product/01.jpg" alt="product">
+                                        <img src="images/product/1.png" alt="product">
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
@@ -527,7 +542,7 @@
                                 </div>
                                 <div class="standard-media">
                                     <a class="standard-image" href="product-video.html">
-                                        <img src="images/product/02.jpg" alt="product">
+                                        <img src="images/product/1.png" alt="product">
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
@@ -577,7 +592,7 @@
                                 </div>
                                 <div class="standard-media">
                                     <a class="standard-image" href="product-video.html">
-                                        <img src="images/product/03.jpg" alt="product">
+                                        <img src="images/product/1.png" alt="product">
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
@@ -627,7 +642,7 @@
                                 </div>
                                 <div class="standard-media">
                                     <a class="standard-image" href="product-video.html">
-                                        <img src="images/product/04.jpg" alt="product">
+                                        <img src="images/product/1.png" alt="product">
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
@@ -677,7 +692,7 @@
                                 </div>
                                 <div class="standard-media">
                                     <a class="standard-image" href="product-video.html">
-                                        <img src="images/product/05.jpg" alt="product">
+                                        <img src="images/product/1.png" alt="product">
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
@@ -727,7 +742,7 @@
                                 </div>
                                 <div class="standard-media">
                                     <a class="standard-image" href="product-video.html">
-                                        <img src="images/product/06.jpg" alt="product">
+                                        <img src="images/product/1.png" alt="product">
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
@@ -777,7 +792,7 @@
                                 </div>
                                 <div class="standard-media">
                                     <a class="standard-image" href="product-video.html">
-                                        <img src="images/product/07.jpg" alt="product">
+                                        <img src="images/product/1.png" alt="product">
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
