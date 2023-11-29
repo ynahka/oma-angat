@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <?php
 session_start();
 include("../connection/connection.php");
@@ -13,7 +14,7 @@ if (isset($_SESSION['Email_Session'])) {
     $row = mysqli_fetch_assoc($result);
     $user_id = $row['user_id'];
 
-    if (isset($_POST['submit'])) {
+    if (isset($_POST['submit-profile'])) {
         $farmer_name = isset($_POST['farmer_name']) ? mysqli_real_escape_string($conx, $_POST['farmer_name']) : '';
         $Address = isset($_POST['Address']) ? mysqli_real_escape_string($conx, $_POST['Address']) : '';
         $Phone_Num = isset($_POST['Phone_Num']) ? mysqli_real_escape_string($conx, $_POST['Phone_Num']) : '';
@@ -32,9 +33,13 @@ if (isset($_SESSION['Email_Session'])) {
             }
         }
 
-        // Check if any of the fields have data
-        if (!empty($farmer_name) || !empty($Address) || !empty($Phone_Num) || !empty($image)) {
-            // Start building the UPDATE query
+        // Check if a record exists for the user
+        $checkQuery = "SELECT * FROM farmer WHERE user_id = '{$user_id}'";
+        $checkResult = mysqli_query($conx, $checkQuery);
+        $checkRow = mysqli_fetch_assoc($checkResult);
+
+        if ($checkRow) {
+            // If a record exists, update it
             $updateQuery = "UPDATE farmer SET ";
 
             // Check if each field is not empty, and add it to the query
@@ -63,22 +68,22 @@ if (isset($_SESSION['Email_Session'])) {
             // Execute the UPDATE query
             if (mysqli_query($conx, $updateQuery)) {
                 $success = '<div class="alert alert-success alert-dismissible fade show">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                Profile Updated Successfully.
-                </div>';
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+               Profile Updated Successfully.
+               </div>';
             } else {
                 $error = "Error: " . $updateQuery . "<br>" . mysqli_error($conx);
             }
         } else {
-            // Insert data when all fields are empty
+            // If a record does not exist, insert a new one
             $sql = "INSERT INTO farmer (user_id, farmer_name, Address, Phone_Num, image) 
-                    VALUES ('{$user_id}', '', '', '', '')";
+                  VALUES ('{$user_id}', '{$farmer_name}', '{$Address}', '{$Phone_Num}', '{$image}')";
 
             if (mysqli_query($conx, $sql)) {
                 $success = '<div class="alert alert-success alert-dismissible fade show">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                Profile Updated Successfully.
-                </div>';
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+               Profile Created Successfully.
+               </div>';
             } else {
                 $error = "Error: " . $sql . "<br>" . mysqli_error($conx);
             }
@@ -100,7 +105,6 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
 
 ?>
 
-</html>
 
 
 <head>
@@ -346,7 +350,7 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
                         <label class="form-label">Phone Number</label>
                         <input class="form-control" type="text" name="Phone_Num">
                     </div>
-                    <button class="form-btn" type="submit" name="submit">Save Contact Info</button>
+                    <button class="form-btn" type="submit" name="submit-profile">Save Contact Info</button>
                 </form>
             </div>
         </div>
@@ -365,7 +369,7 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
                         <label class="form-label">Address</label>
                         <textarea class="form-control" name="Address" placeholder="Barangay, City/Municipality, Province"></textarea>
                     </div>
-                    <button class="form-btn" type="submit" name="submit">save address</button>
+                    <button class="form-btn" type="submit" name="submit-profile">save address</button>
                 </form>
             </div>
         </div>
@@ -396,7 +400,7 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
                         <label class="control-label">Profile Image</label>
                         <input type="file" name="image" id="lastName" class="form-control form-control-danger" placeholder="12n">
                     </div>
-                    <button class="form-btn" type="submit" name="submit">Save Profile Info</button>
+                    <button class="form-btn" type="submit" name="submit-profile">Save Profile Info</button>
                 </form>
             </div>
         </div>
@@ -419,7 +423,7 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
                                             No Phone number added
                                             <?php endif; ?>">
                     </div>
-                    <button class="form-btn" type="submit" name="submit">Save Phone No.</button>
+                    <button class="form-btn" type="submit" name="submit-profile">Save Phone No.</button>
                 </form>
             </div>
         </div>
@@ -438,7 +442,7 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
                         <label class="form-label">Address</label>
                         <textarea class="form-control" name="Address" placeholder="Barangay, City/Municipality, Province"></textarea>
                     </div>
-                    <button class="form-btn" type="submit" name="submit">Save Address Info</button>
+                    <button class="form-btn" type="submit" name="submit-profile">Save Address Info</button>
                 </form>
             </div>
         </div>
