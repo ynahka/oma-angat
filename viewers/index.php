@@ -69,10 +69,11 @@
     <div class="promo-part">
         <div class="col-lg-12">
             <div class="promo-img">
-                <a href=""><img src="images/shop-farmer.svg" alt="promo"></a>
+                <a href=""><img src="images/banner/info-banner.svg" alt="promo"></a>
             </div>
         </div>
     </div>
+
 
 
     <?php
@@ -113,6 +114,9 @@
     mysqli_close($conx);
     ?>
 
+
+
+
     <!-- By Farmer's Market -->
     <section class="section suggest-part">
         <div class="container">
@@ -140,6 +144,7 @@
             </ul>
         </div>
     </section>
+
     <?php
     $Pitems = [
         [
@@ -177,7 +182,7 @@
             "name" => "oils",
             "img" => "images/suggest/oils.svg",
             "url" => "shop-1column.php",
-            "title" => "Fats & oils",
+            "title" => "Fats & Oils",
 
         ],
         [
@@ -224,7 +229,6 @@
             </ul>
         </div>
     </section>
-
 
 
     <!--=====================================

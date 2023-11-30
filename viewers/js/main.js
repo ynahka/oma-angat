@@ -108,7 +108,7 @@ window.onload = function() {
 let touchStartX = 0;
 let touchEndX = 0;
 
-const slider = document.querySelector('.suggest-card');
+const slider = document.querySelector('.suggest');
 
 slider.addEventListener('touchstart', function(event) {
     touchStartX = event.changedTouches[0].screenX;

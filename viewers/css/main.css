@@ -1753,6 +1753,16 @@ tbody tr td:last-child {
 /*========================================
           ALL ELEMENTS PART STYLE
 =========================================*/
+.suggest{
+   display: flex;
+    overflow: hidden;
+}
+
+.suggest-slider{
+   display: block;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
 .suggest-card {
   position: relative;
 }
