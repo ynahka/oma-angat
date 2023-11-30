@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
       padding: 1rem;
       border-radius: 5px;
       color: white;
-      margin: 1rem 0; 
+      margin: 1rem 0;
       font-weight: 500;
       width: 65%;
     }
@@ -77,18 +77,21 @@ if (isset($_POST['submit'])) {
     .alert-warning {
       background-color: #ff9966;
     }
-    .Forget-Pass{
+
+    .Forget-Pass {
       text-align: center;
       width: 65%;
     }
-    .Forget{
-      color:rgb(0, 188, 126);
+
+    .Forget {
+      color: rgb(0, 188, 126);
       font-weight: 500;
       text-decoration: none;
       margin-left: auto;
       text-align: center;
     }
-    .Forget:hover{
+
+    .Forget:hover {
       color: #634035;
     }
   </style>
@@ -111,10 +114,11 @@ if (isset($_POST['submit'])) {
             <input type="password" name="Password" placeholder="Password" />
           </div>
           <div class="Forget-Pass">
-          <a href="Forget.php" class="Forget">Forgot Password ?</a></div>
+            <a href="Forget.php" class="Forget">Forgot Password ?</a>
+          </div>
           <input type="submit" name="submit" value="Login" class="btn solid" />
-          <div class="social-media"> 
-          <div class="cta">Not yet registered? <a href="sellerSignup.php" class="ac1">Create an account</a></div>
+          <div class="social-media">
+            <div class="cta">Not yet registered? <a href="sellerSignup.php" class="ac1">Create an account</a></div>
           </div>
         </form>
       </div>
