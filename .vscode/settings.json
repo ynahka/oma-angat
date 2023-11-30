@@ -23,7 +23,7 @@
     ],
 
     "[php]": {
-        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+        "editor.defaultFormatter": "DEVSENSE.phptools-vscode",
         "editor.formatOnSave": true
     },
     "[javascript]": {
@@ -44,5 +44,7 @@
     "prettier.useEditorConfig": false,
     "prettier.useTabs": false,
     "prettier.requireConfig": true,
-    "prettier.prettierPath": ".prettierrc"
+    "prettier.prettierPath": ".prettierrc",
+    "html.format.templating": true,
+    "editor.defaultFoldingRangeProvider": "esbenp.prettier-vscode"
 }
