@@ -222,6 +222,7 @@ button:focus {
 }
 
 .inner-section {
+  
   margin-bottom: 100px;
 }
 
@@ -1755,6 +1756,7 @@ tbody tr td:last-child {
 .suggest-card {
   position: relative;
 }
+
 .suggest-info p {
   color: var(--heading);
 }

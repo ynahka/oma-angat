@@ -48,7 +48,7 @@
                                     <i class="active icofont-star"></i>
                                     <i class="active icofont-star"></i>
                                     <i class="icofont-star"></i>
-                                    <a href="product-video.php">(3 reviews)</a>
+                                    <a href="product-simple.php">(3 reviews)</a>
                                 </div>
                                 <h3 class="view-price">
                                     <del>P38.00</del>

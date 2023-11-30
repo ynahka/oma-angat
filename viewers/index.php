@@ -133,7 +133,6 @@
                         </a>
                         <div class="suggest-info" style="text-align: center; font-weight:500; ">
                             <p><?php echo $Pitem['title'] ?></p>
-                            <!-- <p><?php echo $Pitem['category'] ?></p> -->
                         </div>
                     </li>
                 <?php endforeach; ?>
@@ -145,14 +144,14 @@
     $Pitems = [
         [
             "name" => "vegetables",
-            "img" => "images/suggest/vegetables.svg",
+            "img" => "images/suggest/Vegetables.svg",
             "url" => "shop-1column.php",
             "title" => "Vegetables",
 
         ],
         [
             "name" => "fruits",
-            "img" => "images/suggest/fruits.svg",
+            "img" => "images/suggest/Fruits.svg",
             "total_items" => 89,
             "url" => "shop-1column.php",
             "title" => "Fruits",
@@ -160,7 +159,7 @@
         ],
         [
             "name" => "Grains",
-            "img" => "images/suggest/grains.svg",
+            "img" => "images/suggest/Grains.svg",
 
             "url" => "shop-1column.php",
             "title" => "Grains",
@@ -168,15 +167,29 @@
         ],
         [
             "name" => "eggs",
-            "img" => "images/suggest/eggs.svg",
+            "img" => "images/suggest/dairies.svg",
 
             "url" => "shop-1column.php",
-            "title" => "Eggs",
+            "title" => "Dairies & Eggs",
+
+        ],
+        [
+            "name" => "oils",
+            "img" => "images/suggest/oils.svg",
+            "url" => "shop-1column.php",
+            "title" => "Fats & oils",
+
+        ],
+        [
+            "name" => "oils",
+            "img" => "images/suggest/processed.svg",
+            "url" => "shop-1column.php",
+            "title" => "Processed Goods",
 
         ],
         [
             "name" => "dry fish",
-            "img" => "images/suggest/dried-fish.svg",
+            "img" => "images/suggest/dried.svg",
             "total_items" => 23,
             "url" => "shop-1column.php",
             "title" => "Dried Fish",
@@ -218,14 +231,14 @@
                     NICHE PART START
         =======================================-->
 
-
+    <!-- 
     <div class="promo-part">
         <div class="col-lg-12">
             <div class="promo-img">
                 <a href=""><img src="images/flow.svg" alt="promo"></a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <section class="section niche-part">
         <div class="container">

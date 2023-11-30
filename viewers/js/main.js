@@ -105,7 +105,31 @@ window.onload = function() {
     }
 };
 
+let touchStartX = 0;
+let touchEndX = 0;
 
+const slider = document.querySelector('.suggest-card');
+
+slider.addEventListener('touchstart', function(event) {
+    touchStartX = event.changedTouches[0].screenX;
+}, false);
+
+slider.addEventListener('touchend', function(event) {
+    touchEndX = event.changedTouches[0].screenX;
+    handleSwipe();
+}, false);
+
+function handleSwipe() {
+    if (touchEndX < touchStartX) {
+        // Swipe left
+        console.log('Swiped left');
+    }
+
+    if (touchEndX > touchStartX) {
+        // Swipe right
+        console.log('Swiped right');
+    }
+}
 
 //========================================
 //         CART SIDEBAR FUNCTION

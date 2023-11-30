@@ -7,19 +7,17 @@
     <?php include('header-nav.php'); ?>
     <?php include('category-sidebar.php'); ?>
 
-
-
     <!--=====================================
                     BANNER PART START
         =======================================-->
-    <section class="single-banner" style="background: url(images/single-banner.jpg) no-repeat center;">
+    <section class="inner-section single-banner" style="background: url(images/banner.svg) no-repeat center;">
         <div class="container">
-            <h2>Brand Single</h2>
-            <ol class="breadcrumb">
+            <!-- <h2>Shop 1 Column</h2> -->
+            <!-- <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="brand-list.html">brand-list</a></li>
-                <li class="breadcrumb-item active" aria-current="page">brand-single</li>
-            </ol>
+                <li class="breadcrumb-item active" aria-current="page">shop-1column</li>
+            </ol> -->
+        </div>
         </div>
     </section>
     <!--=====================================
@@ -1030,31 +1028,6 @@
                     SHOP PART END
         =======================================-->
 
-
-    <!--=====================================
-                    NEWSLETTER PART START
-        =======================================-->
-    <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-5 col-lg-6 col-xl-7">
-                    <div class="news-text">
-                        <h2>Get 20% Discount for Subscriber</h2>
-                        <p>Lorem ipsum dolor consectetur adipisicing accusantium</p>
-                    </div>
-                </div>
-                <div class="col-md-7 col-lg-6 col-xl-5">
-                    <form class="news-form">
-                        <input type="text" placeholder="Enter Your Email Address">
-                        <button><span><i class="icofont-ui-email"></i>Subscribe</span></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=====================================
-                    NEWSLETTER PART END
-        =======================================-->
 
 
     <!--=====================================
