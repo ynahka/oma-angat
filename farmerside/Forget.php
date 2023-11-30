@@ -18,8 +18,8 @@ $msg = "";
 if (isset($_POST['submit'])) {
     $email = mysqli_real_escape_string($conx, $_POST['email']);
     $CodeReset = mysqli_real_escape_string($conx, hash('sha256', rand()));
-    if (mysqli_num_rows(mysqli_query($conx, "SELECT * FROM farmeruseraccount WHERE email='{$email}'")) > 0) {
-        $query = mysqli_query($conx, "UPDATE farmeruseraccount SET codeV='{$CodeReset}' WHERE email='{$email}'");
+    if (mysqli_num_rows(mysqli_query($conx, "SELECT * FROM useraccount WHERE email='{$email}'")) > 0) {
+        $query = mysqli_query($conx, "UPDATE useraccount SET codeV='{$CodeReset}' WHERE email='{$email}'");
         if ($query) {
             $mail = new PHPMailer(true);
 
@@ -78,30 +78,30 @@ if (isset($_POST['submit'])) {
     <title>OMA-ANGAT FORGOT PASSWORD</title>
     <link rel="icon" href="img/web-logo.png" type="icon type">
     <style>
-    .alert {
-      padding: 1rem;
-      border-radius: 5px;
-      color: white;
-      margin: 1rem 0;
-      font-weight: 500;
-      width: 65%;
-    }
+        .alert {
+            padding: 1rem;
+            border-radius: 5px;
+            color: white;
+            margin: 1rem 0;
+            font-weight: 500;
+            width: 65%;
+        }
 
-    .alert-success {
-      background-color: #a5c48f;
-    }
+        .alert-success {
+            background-color: #a5c48f;
+        }
 
-    .alert-danger {
-      background-color: #fc5555;
-    }
+        .alert-danger {
+            background-color: #fc5555;
+        }
 
-    .alert-info {
-      background-color: #a5c48f
-    }
+        .alert-info {
+            background-color: #a5c48f
+        }
 
-    .alert-warning {
-      background-color: #ff9966;
-    }
+        .alert-warning {
+            background-color: #ff9966;
+        }
     </style>
 </head>
 
@@ -121,7 +121,7 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
 
-        
+
     </div>
 
     <script src="app.js"></script>
