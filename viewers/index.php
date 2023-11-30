@@ -214,6 +214,77 @@
     mysqli_close($conx);
     ?>
 
+    <!-- By Farmer's Market -->
+    <section class="section suggest-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h2>Shop by Farmer's Market</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container suggest">
+            <ul class="suggest-slider slider-arrow">
+                <?php foreach ($Pitems as $Pitem) : ?>
+                    <li>
+                        <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
+                            <img src="<?php echo $Pitem['img'] ?>">
+                        </a>
+                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
+                            <p><?php echo $Pitem['title'] ?></p>
+                            <!-- <p><?php echo $Pitem['category'] ?></p> -->
+                        </div>
+                    </li>
+                <?php endforeach; ?>
+
+            </ul>
+        </div>
+    </section>
+    <?php
+    $Pitems = [
+        [
+            "name" => "vegetables",
+            "img" => "images/suggest/vegetables.svg",
+            "url" => "shop-1column.php",
+            "title" => "Vegetables",
+
+        ],
+        [
+            "name" => "fruits",
+            "img" => "images/suggest/fruits.svg",
+            "total_items" => 89,
+            "url" => "shop-1column.php",
+            "title" => "Fruits",
+
+        ],
+        [
+            "name" => "Grains",
+            "img" => "images/suggest/grains.svg",
+
+            "url" => "shop-1column.php",
+            "title" => "Grains",
+
+        ],
+        [
+            "name" => "eggs",
+            "img" => "images/suggest/eggs.svg",
+
+            "url" => "shop-1column.php",
+            "title" => "Eggs",
+
+        ],
+        [
+            "name" => "dry fish",
+            "img" => "images/suggest/dried-fish.svg",
+            "total_items" => 23,
+            "url" => "shop-1column.php",
+            "title" => "Dried Fish",
+
+        ]
+    ];
+    ?>
 
     <section class="section suggest-part">
         <div class="container">
@@ -241,6 +312,8 @@
             </ul>
         </div>
     </section>
+
+
 
     <!--=====================================
                     NICHE PART START

@@ -101,7 +101,7 @@
                                      </ul>
                                  </li>
                              </ul>
-                             <div class="navbar-info-group">
+                             <!-- <div class="navbar-info-group">
                                  <div class="navbar-info">
                                      <a href="#0"><i class="fas fa-calendar-check"></i></a>
                                      <p>
@@ -114,7 +114,7 @@
                                          <small><a href="#" title="Help a Farmer">Donation</a></small>
                                      </p>
                                  </div>
-                             </div>
+                             </div> -->
                          </div>
                      </div>
                  </div>
