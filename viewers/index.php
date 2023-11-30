@@ -293,7 +293,6 @@
                                         <a href="product-video.php">Avocado</a>
                                     </h6>
                                     <h6 class="product-price">
-                                        <del>P34</del>
                                         <span>P28<small>/piece</small></span>
                                     </h6>
                                 </div>
