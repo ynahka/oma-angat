@@ -8,13 +8,13 @@ include('../connection/connection.php');
 $msg = "";
 $error = "";
 if (isset($_GET['Reset'])) {
-    if (mysqli_num_rows(mysqli_query($conx, "SELECT * FROM farmeruseraccount WHERE CodeV='{$_GET['Reset']}'")) > 0) {
+    if (mysqli_num_rows(mysqli_query($conx, "SELECT * FROM useraccount WHERE CodeV='{$_GET['Reset']}'")) > 0) {
         if (isset($_POST['submit'])) {
             $Pass = mysqli_real_escape_string($conx, $_POST['Password']);
             $Confirme_Pass = mysqli_real_escape_string($conx, $_POST['Conf-Password']);
             if ($Pass === $Confirme_Pass) {
                 $hashedPassword = hash('sha256', $Pass);
-                $sql = "UPDATE farmeruseraccount SET Password ='" . $hashedPassword . "' WHERE CodeV='{$_GET['Reset']}'";
+                $sql = "UPDATE useraccount SET Password ='" . $hashedPassword . "' WHERE CodeV='{$_GET['Reset']}'";
                 $result = mysqli_query($conx, $sql);
                 if ($result) {
                     header("Location: index.php");
@@ -108,7 +108,8 @@ if (isset($_GET['Reset'])) {
                     passwordError.textContent = '';
                 }
             } else {
-                passwordError.textContent = 'Password must contain at least 8 characters (uppercase & lowercase letter, number, and special character)';
+                passwordError.textContent =
+                    'Password must contain at least 8 characters (uppercase & lowercase letter, number, and special character)';
             }
         }
 

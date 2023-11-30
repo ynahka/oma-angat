@@ -4,13 +4,11 @@
 include("../connection/connection.php");
 error_reporting(0);
 session_start();
-if(empty($_SESSION["Email_Session"]))
-{
-	header('location:index.php');
-}
-else
-{
+if (empty($_SESSION["Email_Session"])) {
+    header('location:index.php');
+} else {
 ?>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +34,8 @@ else
     <!-- Preloader - style you can find in spinners.css -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
-			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
     </div>
     <!-- Main wrapper  -->
     <div id="main-wrapper">
@@ -46,7 +45,8 @@ else
                 <!-- Logo -->
                 <div class="navbar-header">
                     <!-- <a class="navbar-brand" href="index.html"> -->
-                    <a href="dashboard.php" class="navbar-brand"><img src="images/web-logo.png" style="display:inline; width: 30%;"alt="logo"></a>
+                    <a href="dashboard.php" class="navbar-brand"><img src="images/web-logo.png"
+                            style="display:inline; width: 30%;" alt="logo"></a>
                     </a>
                 </div>
                 <!-- End Logo -->
@@ -54,26 +54,32 @@ else
                     <!-- toggle and nav items -->
                     <ul class="navbar-nav mr-auto mt-md-0">
                         <!-- This is  -->
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  " href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
-                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-menu"></i></a> </li>    
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  "
+                                href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  "
+                                href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
                     </ul>
                     <!-- User profile and search -->
                     <ul class="navbar-nav my-lg-0">
                         <!-- Search -->
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-search"></i></a>
+                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  "
+                                href="javascript:void(0)"><i class="ti-search"></i></a>
                             <form class="app-search">
-                            <input type="text"  class="form-control" placeholder="Search here"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i
+                                        class="ti-close"></i></a>
+                            </form>
                         </li>
                         <!-- Comment -->
                         <li class="nav-item dropdown">
-                           
+
                             <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn">
                                 <ul>
                                     <li>
                                         <div class="drop-title">Notifications</div>
                                     </li>
                                     <li>
-                                        <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all notifications</strong> <i class="fa fa-angle-right"></i> </a>
+                                        <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all
+                                                notifications</strong> <i class="fa fa-angle-right"></i> </a>
                                     </li>
                                 </ul>
                             </div>
@@ -81,24 +87,25 @@ else
                         <!-- End Comment -->
                         <!-- Profile -->
                         <li class="nav-item dropdown">
-                        <?php
-                        // Fetch the farmer's image path
-                        $imagePath = ''; // Replace this with the actual column name
-                        $resultFarmer = mysqli_query($conx, "SELECT image FROM farmer WHERE user_id = (SELECT user_id FROM useraccount WHERE email = '{$email}')");
-                        if ($resultFarmer && $rowFarmer = mysqli_fetch_assoc($resultFarmer)) {
-                        $imagePath = $rowFarmer['image'];
-                        }
-                        ?>
-                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <?php
-                            // Display the farmer's image
-                            if (!empty($imagePath)) {
-                            echo '<img src="' . $imagePath . '" alt="user" class="profile-pic" />';
-                            } else {
-                                echo '<img src="images/person.png" alt="user" class="profile-pic" />';
-                            }
-                            ?>
-                        
+                                // Fetch the farmer's image path
+                                $imagePath = ''; // Replace this with the actual column name
+                                $resultFarmer = mysqli_query($conx, "SELECT image FROM farmer WHERE user_id = (SELECT user_id FROM useraccount WHERE email = '{$email}')");
+                                if ($resultFarmer && $rowFarmer = mysqli_fetch_assoc($resultFarmer)) {
+                                    $imagePath = $rowFarmer['image'];
+                                }
+                                ?>
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <?php
+                                    // Display the farmer's image
+                                    if (!empty($imagePath)) {
+                                        echo '<img src="' . $imagePath . '" alt="user" class="profile-pic" />';
+                                    } else {
+                                        echo '<img src="images/person.png" alt="user" class="profile-pic" />';
+                                    }
+                                    ?>
+
                             </a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
@@ -121,25 +128,31 @@ else
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a></li>
-                        <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Profile</span></a></li>
+                        <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span
+                                    class="hide-menu">Dashboard</span></a></li>
+                        <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span
+                                    class="hide-menu">Profile</span></a></li>
                         <li class="nav-label">Log</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Market</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i
+                                    class="fa fa-archive f-s-20 color-warning"></i><span
+                                    class="hide-menu">Market</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
-								<li><a href="add_category.php">Add Category</a></li>
-                                <li><a href="add_market.php">Add Market</a></li> 
+                                <li><a href="add_category.php">Add Category</a></li>
+                                <li><a href="add_market.php">Add Market</a></li>
                             </ul>
                         </li>
-                       <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Product</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery"
+                                    aria-hidden="true"></i><span class="hide-menu">Product</span></a>
                             <ul aria-expanded="false" class="collapse">
-								<li><a href="all_product.php">All Products</a></li>
-								<li><a href="add_product.php">Add Products</a></li>
+                                <li><a href="all_product.php">All Products</a></li>
+                                <li><a href="add_product.php">Add Products</a></li>
                             </ul>
                         </li>
-						 <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart"
+                                    aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
                             <ul aria-expanded="false" class="collapse">
-								<li><a href="all_orders.php">All Orders</a></li>  
+                                <li><a href="all_orders.php">All Orders</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -154,7 +167,7 @@ else
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text" style="color: #173a5f;">Dashboard</h3> 
+                    <h3 class="text" style="color: #173a5f;">Dashboard</h3>
                 </div>
             </div>
             <!-- End Bread crumb -->
@@ -169,21 +182,22 @@ else
                                     <span><i class="fa fa-archive f-s-40" style="color: white;"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 style="color: white; font-weight: 700" ><?php $sql="select * from Store";
-										$result=mysqli_query($conx,$sql); 
-										$rws=mysqli_num_rows($result);
-										echo $rws;?>
+                                    <h2 style="color: white; font-weight: 700"><?php $sql = "select * from Store";
+                                                                                    $result = mysqli_query($conx, $sql);
+                                                                                    $rws = mysqli_num_rows($result);
+                                                                                    echo $rws; ?>
                                     </h2>
                                     <p class="m-b-0" style="color: white;">My market</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-					<div class="col-md-3" style="cursor: pointer;" onclick="window.location.href='all_product.php';">
+                    <div class="col-md-3" style="cursor: pointer;" onclick="window.location.href='all_product.php';">
                         <div class="card p-30" style="background: rgb(0, 188, 126);">
                             <div class="media">
                                 <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-cutlery f-s-40" aria-hidden="true" style="color: white;"></i></span>
+                                    <span><i class="fa fa-cutlery f-s-40" aria-hidden="true"
+                                            style="color: white;"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 style="color: white; font-weight: 700">
@@ -192,7 +206,7 @@ else
                                             $result = mysqli_query($conx, $sql);
                                             $rws = mysqli_num_rows($result);
                                             echo $rws;
-                                        ?>
+                                            ?>
                                     </h2>
                                     <p class="m-b-0" style="color: white;">Products</p>
                                 </div>
@@ -206,57 +220,58 @@ else
                                     <span><i class="fa fa-user f-s-40 " style="color: white;"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 style="color: white; font-weight: 700"><?php $sql="select * from users";
-												$result=mysqli_query($db,$sql); 
-												$rws=mysqli_num_rows($result);
-												echo $rws;?></h2>
+                                    <h2 style="color: white; font-weight: 700"><?php $sql = "select * from users";
+                                                                                    $result = mysqli_query($db, $sql);
+                                                                                    $rws = mysqli_num_rows($result);
+                                                                                    echo $rws; ?></h2>
                                     <p class="m-b-0" style="color: white;">Customer</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-					<div class="col-md-3" style="cursor: pointer;" onclick="window.location.href='all_orders.php';">
+                    <div class="col-md-3" style="cursor: pointer;" onclick="window.location.href='all_orders.php';">
                         <div class="card p-30" style="background: rgb(0, 188, 126);">
                             <div class="media">
-                                <div class="media-left meida media-middle"> 
-                                    <span><i class="fa fa-shopping-cart f-s-40" aria-hidden="true" style="color: white;"></i></span>
+                                <div class="media-left meida media-middle">
+                                    <span><i class="fa fa-shopping-cart f-s-40" aria-hidden="true"
+                                            style="color: white;"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 style="color: white; font-weight: 700"><?php $sql="select * from orders";
-										$result=mysqli_query($db,$sql); 
-										$rws=mysqli_num_rows($result);
-										echo $rws;?>
+                                    <h2 style="color: white; font-weight: 700"><?php $sql = "select * from orders";
+                                                                                    $result = mysqli_query($db, $sql);
+                                                                                    $rws = mysqli_num_rows($result);
+                                                                                    echo $rws; ?>
                                     </h2>
                                     <p class="m-b-0" style="color: white;">Orders</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-<!--Section for calendar-->				
+                    <!--Section for calendar-->
                     <div class="col-md-12">
                         <div class="card p-30">
                             <div class="media">
-                            <!-- Calendar will be inserted here -->
-                            <div id="calendar"></div>
+                                <!-- Calendar will be inserted here -->
+                                <div id="calendar"></div>
                             </div>
                         </div>
                     </div>
-	
-					
-					
-					
-					
-					
-					
-					
-					
+
+
+
+
+
+
+
+
+
                 </div>
                 <!-- End PAge Content -->
             </div>
             <!-- End Container fluid  -->
             <!-- footer -->
-            <footer class="footer">     &copy; Copyright 2023 - Oma-Angat Virtual Market </footer>
+            <footer class="footer"> &copy; Copyright 2023 - Oma-Angat Virtual Market </footer>
             <!-- End footer -->
         </div>
         <!-- End Page wrapper  -->
@@ -280,28 +295,57 @@ else
     <!-- FullCalendar JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
-    
+
+
+    <!-- ... (previous HTML code) ... -->
+
     <script>
-    $(document).ready(function () {
-        // Initialize FullCalendar
+    $(document).ready(function() {
         $('#calendar').fullCalendar({
-            // Add your calendar options here
             header: {
                 left: 'prev,next today',
                 center: 'title',
                 right: 'month,agendaWeek,agendaDay'
             },
-            // Add your events or event sources here
-            events: [
-                {
-                    title: 'Harvest Starts ',
-                    start: '2023-11-24'
-                },
-                // Add more events as needed
-            ]
+            selectable: true,
+            select: function(start, end, jsEvent, view) {
+                var title = prompt('Enter event title:');
+                if (title) {
+                    // Use the selected start date from the calendar
+                    var startDate = start.format('YYYY-MM-DD HH:mm');
+
+                    // Prompt user to choose the end date from the calendar
+                    $('#calendar').fullCalendar('unselect');
+                    $('#calendar').fullCalendar('select', function(end) {
+                        var endDate = end.format('YYYY-MM-DD HH:mm');
+
+                        var eventData = {
+                            title: title,
+                            start: startDate,
+                            end: endDate
+                        };
+
+                        // Send event data to the server for storage
+                        $.ajax({
+                            url: 'save_event.php',
+                            type: 'POST',
+                            data: eventData,
+                            success: function(response) {
+                                // Render the event on the calendar
+                                $('#calendar').fullCalendar('renderEvent',
+                                    eventData, true);
+                            }
+                        });
+                    });
+                }
+            },
+            events: 'load_events.php' // Fetch events from the server
         });
     });
-</script>
+    </script>
+
+    <!-- ... (remaining HTML code) ... -->
+
 </body>
 
 </html>
