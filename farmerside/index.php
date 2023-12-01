@@ -1,3 +1,6 @@
+<?php include '../viewers/header.php'; ?>
+
+
 <?php
 session_start();
 if (isset($_SESSION['Email_Session'])) {
@@ -79,16 +82,15 @@ if (isset($_POST['submit'])) {
     }
 
     .Forget-Pass {
-      text-align: center;
+      text-align: left;
       width: 65%;
     }
 
     .Forget {
-      color: rgb(0, 188, 126);
+      color: var(--primary);
       font-weight: 500;
       text-decoration: none;
       margin-left: auto;
-      text-align: center;
     }
 
     .Forget:hover {
@@ -113,8 +115,12 @@ if (isset($_POST['submit'])) {
             <i class="fas fa-lock"></i>
             <input type="password" name="Password" placeholder="Password" />
           </div>
+          <div class="form-check mb-3" style="align-items: start;">
+            <input class="form-check-input" type="checkbox" value="" id="check">
+            <label class="form-check-label" for="check">Remember me for 7 days</label>
+          </div>
           <div class="Forget-Pass">
-            <a href="Forget.php" class="Forget">Forgot Password ?</a>
+            <a href="Forget.php" class="Forget">Forgot Password?</a>
           </div>
           <input type="submit" name="submit" value="Login" class="btn solid" />
           <div class="social-media">

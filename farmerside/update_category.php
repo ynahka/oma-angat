@@ -6,36 +6,30 @@ error_reporting(0);
 session_start();
 
 
-if(isset($_POST['submit'] ))
-{
-    if(empty($_POST['c_name']))
-		{
-			$error = '<div class="alert alert-danger alert-dismissible fade show">
+if (isset($_POST['submit'])) {
+    if (empty($_POST['c_name'])) {
+        $error = '<div class="alert alert-danger alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																<strong>field Required!</strong>
 															</div>';
-		}
-	else
-	{
-		
-	
-	
-	
-       
-	
-	$mql = "update res_category set c_name ='$_POST[c_name]' where c_id='$_GET[cat_upd]'";
-	mysqli_query($db, $mql);
-			$success = 	'<div class="alert alert-success alert-dismissible fade show">
+    } else {
+
+
+
+
+
+
+        $mql = "update res_category set c_name ='$_POST[c_name]' where c_id='$_GET[cat_upd]'";
+        mysqli_query($db, $mql);
+        $success =     '<div class="alert alert-success alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 																<strong>Updated!</strong> Successfully.</br></div>';
-	
-    
-	}
-
+    }
 }
 
 
 ?>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,7 +59,8 @@ if(isset($_POST['submit'] ))
     <!-- Preloader - style you can find in spinners.css -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
-			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
     </div>
     <!-- Main wrapper  -->
     <div id="main-wrapper">
@@ -96,9 +91,11 @@ if(isset($_POST['submit'] ))
                                         <!-- Contact -->
                                         <form>
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="exampleInputname1" placeholder="Enter Name"> </div>
+                                                <input type="text" class="form-control" id="exampleInputname1" placeholder="Enter Name">
+                                            </div>
                                             <div class="form-group">
-                                                <input type="email" class="form-control" placeholder="Enter email"> </div>
+                                                <input type="email" class="form-control" placeholder="Enter email">
+                                            </div>
                                             <div class="form-group">
                                                 <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Message"></textarea>
                                             </div>
@@ -149,13 +146,14 @@ if(isset($_POST['submit'] ))
                         <!-- Search -->
                         <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-search"></i></a>
                             <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
                         </li>
-                      
-                      
+
+
                         <!-- Profile -->
                         <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/person.png" alt="user" class="profile-pic" /></a>
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/person.png" alt="user" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
                                     <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
@@ -173,7 +171,7 @@ if(isset($_POST['submit'] ))
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                   <ul id="sidebarnav">
+                    <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
                         <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a></li>
@@ -181,26 +179,26 @@ if(isset($_POST['submit'] ))
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Store</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
-								<li><a href="add_category.php">Add Category</a></li>
+                                <li><a href="add_category.php">Add Category</a></li>
                                 <li><a href="add_market.php">Add Market</a></li>
-                                
+
                             </ul>
                         </li>
-                       <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Product</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Product</span></a>
                             <ul aria-expanded="false" class="collapse">
-								<li><a href="all_product.php">All Products</a></li>
-								<li><a href="add_product.php">Add Product</a></li>
-                              
-                                
+                                <li><a href="all_product.php">All Products</a></li>
+                                <li><a href="add_product.php">Add Product</a></li>
+
+
                             </ul>
                         </li>
-						 <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
                             <ul aria-expanded="false" class="collapse">
-								<li><a href="all_orders.php">All Orders</a></li>
-								  
+                                <li><a href="all_orders.php">All Orders</a></li>
+
                             </ul>
                         </li>
-                         
+
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -213,7 +211,8 @@ if(isset($_POST['submit'] ))
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">Dashboard</h3> </div>
+                    <h3 class="text-primary">Dashboard</h3>
+                </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
@@ -225,71 +224,71 @@ if(isset($_POST['submit'] ))
             <!-- Container fluid  -->
             <div class="container-fluid">
                 <!-- Start Page Content -->
-                     
-					
-					
-					  <div class="row">
-                   
-                   
-					
-					 <div class="container-fluid">
-                <!-- Start Page Content -->
-                  
-									
-									<?php  
-									        echo $error;
-									        echo $success; ?>
-									
-									
-								
-								
-					    <div class="col-lg-12">
-                        <div class="card card-outline-primary">
-                            <div class="card-header" style="background: rgb(0, 188, 126);">
-                                <h4 class="m-b-0 text-white">Update Market Category</h4>
-                            </div>
-                            <div class="card-body">
-                                <form action='' method='post' >
-                                    <div class="form-body">
-                                        <?php $ssql ="select * from res_category where c_id='$_GET[cat_upd]'";
-													$res=mysqli_query($db, $ssql); 
-													$row=mysqli_fetch_array($res);?>
-                                        <hr>
-                                        <div class="row p-t-20">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="control-label">Category</label>
-                                                    <input type="text" name="c_name" value="<?php echo $row['c_name'];  ?>" class="form-control" placeholder="Category Name">
-                                                   </div>
+
+
+
+                <div class="row">
+
+
+
+                    <div class="container-fluid">
+                        <!-- Start Page Content -->
+
+
+                        <?php
+                        echo $error;
+                        echo $success; ?>
+
+
+
+
+                        <div class="col-lg-12">
+                            <div class="card card-outline-primary">
+                                <div class="card-header" style="background: rgb(0, 188, 126);">
+                                    <h4 class="m-b-0 text-white">Update Market Category</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form action='' method='post'>
+                                        <div class="form-body">
+                                            <?php $ssql = "select * from res_category where c_id='$_GET[cat_upd]'";
+                                            $res = mysqli_query($db, $ssql);
+                                            $row = mysqli_fetch_array($res); ?>
+                                            <hr>
+                                            <div class="row p-t-20">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Category</label>
+                                                        <input type="text" name="c_name" value="<?php echo $row['c_name'];  ?>" class="form-control" placeholder="Category Name">
+                                                    </div>
+                                                </div>
+                                                <!--/span-->
+
                                             </div>
-                                            <!--/span-->
-                                            
-                                    </div>
-                                    <div class="form-actions">
-                                        <input type="submit" name="submit" class="btn btn-success" value="Save" style="background: rgb(0, 188, 126);"> 
-                                        <a href="dashboard.php" class="btn btn-inverse">Back</a>
-                                    </div>
-                                </form>
+                                            <div class="form-actions">
+                                                <input type="submit" name="submit" class="btn btn-success" value="Save" style="background: rgb(0, 188, 126);">
+                                                <a href="dashboard.php" class="btn btn-inverse">Back</a>
+                                            </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-					
-                </div>
-					
-					
-					
-					
-					
-					
-					
-					
-					
+
+
+
+
+
+
+
+
+
                 </div>
                 <!-- End PAge Content -->
             </div>
             <!-- End Container fluid  -->
             <!-- footer -->
-            <footer class="footer">    &copy; Copyright 2022 </footer>
+            <footer class="footer"> &copy; Copyright 2022 </footer>
             <!-- End footer -->
         </div>
         <!-- End Page wrapper  -->

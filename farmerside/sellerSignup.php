@@ -54,9 +54,9 @@ if (isset($_POST['submit'])) {
                         //Content
                         $mail->isHTML(true);                                  //Set email format to HTML
                         $mail->Subject = 'Oma-Angat Agri-Market: Account Verification';
-                        $mail->Body    = '<h3>Dear '.$name.',</h3>
+                        $mail->Body    = '<h3>Dear ' . $name . ',</h3>
                         <p>Thank you for signing up for Oma-Angat Agri-Market! Were excited to have you on board as a seller of our community.To complete your registration and verify your email address, please click on the following link:</p>
-                        <a href="http://localhost/oma-angat_oldver/farmerside/?Verification=' .$Code . '">"http://localhost/oma-angat_oldver/farmerside/?Verification=' .$Code . '"</a>
+                        <a href="http://localhost/oma-angat_oldver/farmerside/?Verification=' . $Code . '">"http://localhost/oma-angat_oldver/farmerside/?Verification=' . $Code . '"</a>
                         <p>By verifying your email, you will gain access to all the features and benefits of Oma-Angat Virtual Agri-Market,
                         including the ability to connect with local market and to prote and sell your fresh produce.</p>
                         <p>If you did not sign up for Oma-Angat Agri-Market, please disregard this email. Its possible that someone entered your email address by mistake.
@@ -148,11 +148,15 @@ if (isset($_POST['submit'])) {
                     <div class="error-message" id="password-error" style="color: red;"></div>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="Username" placeholder="Username" value="<?php if (isset($_POST['Username'])) { echo $name; } ?>" required />
+                        <input type="text" name="Username" placeholder="Username" value="<?php if (isset($_POST['Username'])) {
+                                                                                                echo $name;
+                                                                                            } ?>" required />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" name="Email" placeholder="Email" value="<?php if (isset($_POST['Email'])) { echo $email; } ?>" required />
+                        <input type="email" name="Email" placeholder="Email" value="<?php if (isset($_POST['Email'])) {
+                                                                                        echo $email;
+                                                                                    } ?>" required />
                     </div>
                     <div class="input-field <?php echo $Error_Pass ?>">
                         <i class="fas fa-lock"></i>
@@ -208,4 +212,3 @@ if (isset($_POST['submit'])) {
 </body>
 
 </html>
-

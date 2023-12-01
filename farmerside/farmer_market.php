@@ -124,12 +124,9 @@ if (isset($_SESSION['Email_Session'])) {
                                         <span>add to cart</span>
                                     </button>
                                     <div class="product-action">
-                                        <button class="action-minus" title="Quantity Minus"><i
-                                                class="icofont-minus"></i></button>
-                                        <input class="action-input" title="Quantity Number" type="text" name="quantity"
-                                            value="1">
-                                        <button class="action-plus" title="Quantity Plus"><i
-                                                class="icofont-plus"></i></button>
+                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                     </div>
                                 </div>
                                 <div class="view-action-group">
@@ -171,8 +168,7 @@ if (isset($_SESSION['Email_Session'])) {
     <div class="brand-single">
         <a href="#"><img src="<?php echo $imagePath; ?>"></a>
         <a href="#">
-            <h3><?php echo isset($storeName) ? $storeName : ''; ?><span
-                    style="color: #00cc00; font-size:20px;">&nbsp;&bull;</span></h3>
+            <h3><?php echo isset($storeName) ? $storeName : ''; ?><span style="color: #00cc00; font-size:20px;">&nbsp;&bull;</span></h3>
             <h7 style="color:#000000"><i class="fas fa-location-dot"></i> <?php echo isset($Address) ? $Address : ''; ?>
             </h7>
         </a>
@@ -520,8 +516,7 @@ if (isset($_SESSION['Email_Session'])) {
                                 <div class="filter-action">
                                     <a href="shop-3column.html" title="Three Column"><i class="fas fa-th"></i></a>
                                     <a href="shop-2column.html" title="Two Column"><i class="fas fa-th-large"></i></a>
-                                    <a href="shop-1column.html" class="active" title="One Column"><i
-                                            class="fas fa-th-list"></i></a>
+                                    <a href="shop-1column.html" class="active" title="One Column"><i class="fas fa-th-list"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -538,10 +533,8 @@ if (isset($_SESSION['Email_Session'])) {
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
-                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
-                                            data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="standard-content">
@@ -569,12 +562,9 @@ if (isset($_SESSION['Email_Session'])) {
                                             <span>add to cart</span>
                                         </button>
                                         <div class="product-action">
-                                            <button class="action-minus" title="Quantity Minus"><i
-                                                    class="icofont-minus"></i></button>
-                                            <input class="action-input" title="Quantity Number" type="text"
-                                                name="quantity" value="1">
-                                            <button class="action-plus" title="Quantity Plus"><i
-                                                    class="icofont-plus"></i></button>
+                                            <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                            <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                            <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                         </div>
                                         <button class="standard-wish wish" title="Add to Wishlist">
                                             <i class="fas fa-heart"></i>
@@ -595,10 +585,8 @@ if (isset($_SESSION['Email_Session'])) {
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
-                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
-                                            data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="standard-content">
@@ -626,12 +614,9 @@ if (isset($_SESSION['Email_Session'])) {
                                             <span>add to cart</span>
                                         </button>
                                         <div class="product-action">
-                                            <button class="action-minus" title="Quantity Minus"><i
-                                                    class="icofont-minus"></i></button>
-                                            <input class="action-input" title="Quantity Number" type="text"
-                                                name="quantity" value="1">
-                                            <button class="action-plus" title="Quantity Plus"><i
-                                                    class="icofont-plus"></i></button>
+                                            <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                            <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                            <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                         </div>
                                         <button class="standard-wish wish" title="Add to Wishlist">
                                             <i class="fas fa-heart"></i>
@@ -652,10 +637,8 @@ if (isset($_SESSION['Email_Session'])) {
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
-                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
-                                            data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="standard-content">
@@ -683,12 +666,9 @@ if (isset($_SESSION['Email_Session'])) {
                                             <span>add to cart</span>
                                         </button>
                                         <div class="product-action">
-                                            <button class="action-minus" title="Quantity Minus"><i
-                                                    class="icofont-minus"></i></button>
-                                            <input class="action-input" title="Quantity Number" type="text"
-                                                name="quantity" value="1">
-                                            <button class="action-plus" title="Quantity Plus"><i
-                                                    class="icofont-plus"></i></button>
+                                            <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                            <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                            <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                         </div>
                                         <button class="standard-wish wish" title="Add to Wishlist">
                                             <i class="fas fa-heart"></i>
@@ -709,10 +689,8 @@ if (isset($_SESSION['Email_Session'])) {
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
-                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
-                                            data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="standard-content">
@@ -740,12 +718,9 @@ if (isset($_SESSION['Email_Session'])) {
                                             <span>add to cart</span>
                                         </button>
                                         <div class="product-action">
-                                            <button class="action-minus" title="Quantity Minus"><i
-                                                    class="icofont-minus"></i></button>
-                                            <input class="action-input" title="Quantity Number" type="text"
-                                                name="quantity" value="1">
-                                            <button class="action-plus" title="Quantity Plus"><i
-                                                    class="icofont-plus"></i></button>
+                                            <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                            <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                            <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                         </div>
                                         <button class="standard-wish wish" title="Add to Wishlist">
                                             <i class="fas fa-heart"></i>
@@ -766,10 +741,8 @@ if (isset($_SESSION['Email_Session'])) {
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
-                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
-                                            data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="standard-content">
@@ -797,12 +770,9 @@ if (isset($_SESSION['Email_Session'])) {
                                             <span>add to cart</span>
                                         </button>
                                         <div class="product-action">
-                                            <button class="action-minus" title="Quantity Minus"><i
-                                                    class="icofont-minus"></i></button>
-                                            <input class="action-input" title="Quantity Number" type="text"
-                                                name="quantity" value="1">
-                                            <button class="action-plus" title="Quantity Plus"><i
-                                                    class="icofont-plus"></i></button>
+                                            <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                            <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                            <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                         </div>
                                         <button class="standard-wish wish" title="Add to Wishlist">
                                             <i class="fas fa-heart"></i>
@@ -823,10 +793,8 @@ if (isset($_SESSION['Email_Session'])) {
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
-                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
-                                            data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="standard-content">
@@ -854,12 +822,9 @@ if (isset($_SESSION['Email_Session'])) {
                                             <span>add to cart</span>
                                         </button>
                                         <div class="product-action">
-                                            <button class="action-minus" title="Quantity Minus"><i
-                                                    class="icofont-minus"></i></button>
-                                            <input class="action-input" title="Quantity Number" type="text"
-                                                name="quantity" value="1">
-                                            <button class="action-plus" title="Quantity Plus"><i
-                                                    class="icofont-plus"></i></button>
+                                            <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                            <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                            <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                         </div>
                                         <button class="standard-wish wish" title="Add to Wishlist">
                                             <i class="fas fa-heart"></i>
@@ -880,10 +845,8 @@ if (isset($_SESSION['Email_Session'])) {
                                     </a>
                                     <div class="standard-widget">
                                         <a title="Product Compare" href="compare.html" class="fas fa-random"></a>
-                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8"
-                                            class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
-                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal"
-                                            data-bs-target="#product-view"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
                                     </div>
                                 </div>
                                 <div class="standard-content">
@@ -911,12 +874,9 @@ if (isset($_SESSION['Email_Session'])) {
                                             <span>add to cart</span>
                                         </button>
                                         <div class="product-action">
-                                            <button class="action-minus" title="Quantity Minus"><i
-                                                    class="icofont-minus"></i></button>
-                                            <input class="action-input" title="Quantity Number" type="text"
-                                                name="quantity" value="1">
-                                            <button class="action-plus" title="Quantity Plus"><i
-                                                    class="icofont-plus"></i></button>
+                                            <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                            <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                            <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                         </div>
                                         <button class="standard-wish wish" title="Add to Wishlist">
                                             <i class="fas fa-heart"></i>
@@ -1127,8 +1087,7 @@ if (isset($_SESSION['Email_Session'])) {
             <div class="row">
                 <div class="col-12">
                     <div class="footer-bottom">
-                        <p class="footer-copytext">&copy; All Copyrights Reserved by <a target="_blank"
-                                href="https://themeforest.net/user/mironcoder">Mironcoder</a></p>
+                        <p class="footer-copytext">&copy; All Copyrights Reserved by <a target="_blank" href="https://themeforest.net/user/mironcoder">Mironcoder</a></p>
                         <div class="footer-card">
                             <a href="#"><img src="images/payment/jpg/01.jpg" alt="payment"></a>
                             <a href="#"><img src="images/payment/jpg/02.jpg" alt="payment"></a>

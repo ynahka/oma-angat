@@ -123,7 +123,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading">
-                        <h2>Shop by Farmer's Market</h2>
+                        <h2>Shop By Farmer's Market</h2>
                     </div>
                 </div>
             </div>
@@ -249,7 +249,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h2>Shop by Top Picks</h2>
+                        <h2>Shop By Top Picks</h2>
                     </div>
                 </div>
             </div>
@@ -1614,7 +1614,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h2>Paubusan sale</h2>
+                        <h2>Paubusan Sale</h2>
                     </div>
                 </div>
             </div>
@@ -1997,7 +1997,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h2>Check our unique features</h2>
+                        <h2>Check Our Unique Features</h2>
                     </div>
                 </div>
             </div>

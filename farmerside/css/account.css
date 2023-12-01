@@ -23,8 +23,8 @@ input {
   -webkit-text-size-adjust: 100%; /* adjust the text size on smaller screens */
 }
 .web-logo{
-  width: 10vh;
-  height: 10vh;
+  width:100%;
+  height:100%;
 }
 .container {
   position:relative;
@@ -32,6 +32,7 @@ input {
   background-image: url(img/bg.png);
   min-height: 100vh;
   overflow: hidden;
+  max-width: none;
 }
 
 .forms-container {
@@ -59,7 +60,7 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0rem 5rem;
+  padding: 0rem 2rem;
   transition: all 0.2s 0.7s;
   overflow: hidden;
   grid-column: 1 / 2;
@@ -78,16 +79,16 @@ form.sign-in-form {
 }
 
 .title {
-  font-size: 2.2rem;
-  color: #634035;
+  font-size: 20px;
+  color: var(--primary);
 }
 .tagline{
-  color:  #634035;
+  color:  var(--primary);
   margin-bottom: 20px;
 }
 .title2 {
   font-size: 2.2rem;
-  color: #634035;
+  color: var(--primary);
   margin-bottom: 25px;
 }
 
@@ -104,6 +105,9 @@ form.sign-in-form {
   padding: 0 0.4rem;
   position: relative;
 }
+.forget-pass{
+  align-items: first baseline;
+}
 
 .input-field i {
   text-align: center;
@@ -116,7 +120,7 @@ form.sign-in-form {
 .input-field input {
   outline: none;
   border: none;
-  line-height: 55px;
+  line-height: 40px;
   font-weight: 300;
   font-size: 1.1rem;
   color: #333;
@@ -178,15 +182,15 @@ form.sign-in-form {
   color:#4C644B;
 }
 .ac1:hover{
-  color: #634035;
+  color: var(--primary);
 }
 .cta{
-  color:  #634035;
+  color:  var(--primary);
   font-weight: 500;
 }
 
 .btn:hover {
-  background-color:  #634035;
+  background-color:  var(--primary);
 }
 .panels-container {
   position: absolute;
@@ -205,6 +209,7 @@ form.sign-in-form {
   width: 2000px;
   top: -10%;
   right: 48%;
+  padding: 0px;
   transform: translateY(-50%);
   background-image: linear-gradient(-45deg, #4C644B 0%, #cfe2ce 100%);
   transition: 1.8s ease-in-out;
