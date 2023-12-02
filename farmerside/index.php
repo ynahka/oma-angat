@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
       $msg = "<div class='alert alert-info'>Verify your account first.</div>";
     }
   } else {
-    $msg = "<div class='alert alert-danger'>Email or Password does not match</div>";
+    $msg = "<div class='alert'>Wrong email or password</div>";
   }
 }
 ?>
@@ -57,21 +57,25 @@ if (isset($_POST['submit'])) {
   <link rel="icon" href="images/web-logo.png" type="icon type">
   <style>
     .alert {
-      padding: 1rem;
-      border-radius: 5px;
-      color: white;
-      margin: 1rem 0;
-      font-weight: 500;
+      /* padding: 1rem; */
+      /* border-radius: 5px; */
+      color: #fc5555;
+      margin-left: 4rem;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      font-weight: 400;
+      font-size: 15px;
       width: 65%;
+      background-color: none;
     }
 
     .alert-success {
       background-color: #a5c48f;
     }
 
-    .alert-danger {
+    /* .alert-danger {
       background-color: #fc5555;
-    }
+    } */
 
     .alert-info {
       background-color: #a5c48f
@@ -81,16 +85,9 @@ if (isset($_POST['submit'])) {
       background-color: #ff9966;
     }
 
-    .Forget-Pass {
-      text-align: left;
-      width: 65%;
-    }
-
     .Forget {
       color: var(--primary);
-      font-weight: 500;
       text-decoration: none;
-      margin-left: auto;
     }
 
     .Forget:hover {
@@ -104,39 +101,41 @@ if (isset($_POST['submit'])) {
     <div class="forms-container">
       <div class="signin-signup">
         <form action="" method="POST" class="sign-in-form">
-          <h2 class="title">Login to Oma-Angat</h2>
+          <h1 class="title" style="font-weight: 500px; font-size: 30px; text-transform:uppercase">Welcome to Oma-Angat</h1>
           <p class="tagline">Sell your fresh produce to a wide market!</p>
-          <?php echo $msg ?>
-          <div class="input-field">
+          <div class="input-field" class="form-control">
             <i class="fas fa-user"></i>
             <input type="text" name="email" placeholder="Email" />
           </div>
-          <div class="input-field">
+          <div class="input-field" class="form-control">
             <i class="fas fa-lock"></i>
             <input type="password" name="Password" placeholder="Password" />
           </div>
-          <div class="form-check mb-3" style="align-items: start;">
-            <input class="form-check-input" type="checkbox" value="" id="check">
-            <label class="form-check-label" for="check">Remember me for 7 days</label>
-          </div>
-          <div class="Forget-Pass">
+          <?php echo $msg ?>
+          <div class="check mb-3">
             <a href="Forget.php" class="Forget">Forgot Password?</a>
           </div>
           <input type="submit" name="submit" value="Login" class="btn solid" />
           <div class="social-media">
-            <div class="cta">Not yet registered? <a href="sellerSignup.php" class="ac1">Create an
-                account</a></div>
+            <div class="cta">Don't have an account? <a href="sellerSignup.php" class="ac1">Sign up</a>
+            </div>
+          </div>
+          <div class="user-form-footer">
+            <p>Oma-Angat &COPY; 2023 </p>
           </div>
         </form>
       </div>
+
     </div>
 
     <div class="panels-container">
       <div class="panel left-panel">
-        <img src="images/log5.png" class="image" alt="" />
+        <img src="images/login-image.svg" class="image" alt="" />
       </div>
     </div>
   </div>
+
+
 
   <script src="app.js"></script>
 </body>

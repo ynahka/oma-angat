@@ -52,7 +52,7 @@ body{
 }
 
 .form input::placeholder {
-color: rgb(94, 116, 108);
+color:#CFE2CE;
 }
 .form input[type="submit"]
 {
@@ -69,7 +69,7 @@ color: rgb(94, 116, 108);
 }
 .form input[type="submit"]:hover
 {
-  background: rgb(75, 124, 108);
+  background: #CFE2CE;
 
 }
 
