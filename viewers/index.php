@@ -69,7 +69,7 @@
     <div class="promo-part">
         <div class="col-lg-12">
             <div class="promo-img">
-                <a href=""><img src="images/banner/info-banner.svg" alt="promo"></a>
+                <a href=""><img src="images/10.svg" alt="promo"></a>
             </div>
         </div>
     </div>
@@ -234,14 +234,14 @@
                     NICHE PART START
         =======================================-->
 
-    <!-- 
+
     <div class="promo-part">
         <div class="col-lg-12">
             <div class="promo-img">
-                <a href=""><img src="images/flow.svg" alt="promo"></a>
+                <a href=""><img src="images/4.svg" alt="promo"></a>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <section class="section niche-part">
         <div class="container">
@@ -1268,6 +1268,14 @@
                     RECENT PART END
         =======================================-->
 
+    <div class="promo-part">
+        <div class="col-lg-12">
+            <div class="promo-img">
+                <a href=""><img src="images/5.svg" alt="promo"></a>
+            </div>
+        </div>
+    </div>
+
     <!--=====================================
                     NEW ITEM PART START
         =======================================-->
@@ -1605,6 +1613,15 @@
     <!--=====================================
                     PROMOTION PART END
         =======================================-->
+
+    <div class="promo-part">
+        <div class="col-lg-12">
+            <div class="promo-img">
+                <a href=""><img src="images/market-day.svg" alt="promo"></a>
+            </div>
+        </div>
+    </div>
+
     <!--=====================================
                     FEATURED PART START
         =======================================-->
@@ -1613,7 +1630,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h2>Paubusan Sale</h2>
+                        <h2>PAUBUSAN SALE</h2>
                     </div>
                 </div>
             </div>

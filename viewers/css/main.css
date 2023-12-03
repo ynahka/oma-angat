@@ -228,7 +228,7 @@ button:focus {
 
 .section-heading {
   /* position: relative; */
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
   /* border-bottom: 2px solid var(--primary); */
 }
@@ -244,11 +244,12 @@ button:focus {
 } */
 
 .section-heading h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 650;
   line-height: 48px;
-  text-transform: none;
+  text-transform: uppercase;
   margin-bottom: none;
+  text-align: center;
 }
 
 .section-btn-50 {
@@ -5215,6 +5216,23 @@ tbody tr td:last-child {
 }
 
 @media (max-width: 450px) {
+  .checkout-label {
+  width: 100%;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--lighter);
+}
+
+.checkout-price {
+  padding: 0px 25px;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  color: var(--lighter);
+  border-left: 1px solid var(--border);
+}
   .cart-sidebar {
     right: 0px;
     width: 100%;
@@ -5415,6 +5433,11 @@ tbody tr td:last-child {
   -ms-flex-pack: justify;
   justify-content: space-between;
   display: none;
+}
+
+.mobile-navbar-item::before{
+ background: var(--secondary);
+ color: var(--primary);
 }
 
 .mobile-navbar-item a,
