@@ -5435,7 +5435,7 @@ tbody tr td:last-child {
   display: none;
 }
 
-.mobile-navbar-item::before{
+.mobile-navbar-item a.active{
  background: var(--secondary);
  color: var(--primary);
 }

@@ -105,33 +105,25 @@ window.onload = function() {
     }
 };
 
+// window.onload = function() {
+//     var path = window.location.pathname;
+//     var links = document.querySelectorAll(".mobile-navbar-item a");
+
+//     for (var i = 0; i < links.length; i++) {
+//         if (links[i].pathname === path) {
+//             links[i].classList.add("active");
+//         }
+//     }
+// };
+
 window.onload = function() {
     var path = window.location.pathname;
-    // var navLinks = document.getElementsByClassName("");
-    var mobileNavLinks = document.getElementsByClassName("mobile-navbar-item");
-    // var dropdownItems = document.querySelectorAll(".dropdown-position-list a");
+    var links = document.querySelectorAll(".mobile-navbar-item a");
 
-    for (var i = 0; i < navLinks.length; i++) {
-        if (navLinks[i].getElementsByTagName("a")[1].pathname === path) {
-            navLinks[i].classList.add("active");
+    for (var i = 0; i < links.length; i++) {
+        if (links[i].pathname === path || path === '/' && links[i].pathname === '/index.php') {
+            links[i].classList.add("active");
         }
-    }
-
-    for (var i = 0; i < mobileNavLinks.length; i++) {
-        if (mobileNavLinks[i].getElementsByTagName("a")[0].pathname === path) {
-            mobileNavLinks[i].classList.add("active");
-        }
-    }
-
-    for (var i = 0; i < dropdownItems.length; i++) {
-        dropdownItems[i].addEventListener("click", function() {
-            // Remove active class from all navbar items
-            for (var j = 0; j < navLinks.length; j++) {
-                navLinks[j].classList.remove("active");
-            }
-            // Add active class to parent navbar item of clicked dropdown item
-            this.closest(".mobile-navbar-item").classList.add("active");
-        });
     }
 };
 

@@ -268,11 +268,11 @@
                 <i class="fas fa-home"></i>
                 <span>Home</span>
             </a>
-            <a href="#" title="Wishlist">
+            <a href="community.php" title="community">
                 <i class="fa-solid fa-comments"></i>
                 <span>Community</span>
             </a>
-            <a href="#" title="Notification List">
+            <a href="chat.php" title="chat">
                 <i class="fas fa-paper-plane"></i>
                 <span>Chat</span>
             </a>
@@ -280,7 +280,7 @@
                 <i class="fas fa-shopping-basket"></i>
                 <span>Cart</span>
             </button>
-            <a href="#" title="Notification List">
+            <a href="account.php" title="Notification List">
                 <i class="fas fa-user"></i>
                 <span>Account</span>
             </a>
