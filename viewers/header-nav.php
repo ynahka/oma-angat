@@ -65,6 +65,12 @@
                          <button class="header-widget header-cart" title="Cartlist">
                              <i class="fas fa-shopping-basket"></i>
                          </button>
+
+                         <a href="#" class="header-widget" title="chat">
+                             <i class="fas fa-paper-plane"></i>
+                         </a>
+
+
                      </div>
                  </div>
              </div>

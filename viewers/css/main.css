@@ -4172,7 +4172,7 @@ tbody tr td:last-child {
 
 .header-widget span {
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 500;
   margin-left: 8px;
   letter-spacing: 0.3px;
   white-space: nowrap;
@@ -4252,6 +4252,10 @@ tbody tr td:last-child {
   padding-left: 10px;
 }
 
+.header-form input::placeholder{
+  text-transform: none;
+}
+
 .header-form button i {
   width: 30px;
   height: 30px;
@@ -4301,7 +4305,7 @@ tbody tr td:last-child {
   width: 35px;
   height: 35px;
   font-size: 15px;
-  line-height: 35px;
+  margin-right: 20px;
   line-height: 35px;
   text-align: center;
   display: inline-block;
@@ -4349,6 +4353,9 @@ tbody tr td:last-child {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .header-user i{
+    display: none;
   }
 }
 
@@ -5425,9 +5432,9 @@ tbody tr td:last-child {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 80px;
+  width: 100px;
   padding: 8px 0px;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   position: relative;
 }
 
@@ -5459,7 +5466,7 @@ tbody tr td:last-child {
   font-size: 10px;
   line-height: 12px;
   color: var(--text);
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .mobile-navbar-item a sup,

@@ -225,7 +225,6 @@
                         </div>
                     </li>
                 <?php endforeach; ?>
-
             </ul>
         </div>
     </section>
