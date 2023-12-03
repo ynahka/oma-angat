@@ -105,6 +105,7 @@ window.onload = function() {
     }
 };
 
+
 let touchStartX = 0;
 let touchEndX = 0;
 

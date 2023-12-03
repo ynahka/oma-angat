@@ -221,20 +221,17 @@
                         </ul> -->
                     </li>
                     <li>
+                        <a class="nav-link" href="index.php"><i class="fa-solid fa-comments"></i>Community</a>
+                        <!-- <ul class="dropdown-list">
+                            <li><a href="home-standard.php">Home standard</a></li>
+                        </ul> -->
+                    </li>
+                    <li>
                         <a class="nav-link dropdown-link" href="#"><i class="fa-solid fa-store"></i>shop</a>
                         <ul class="dropdown-list">
                             <li><a href="shop-1column.php">Farmer's Market</a></li>
                             <li><a href="shop-2column.php">Categories</a></li>
                             <li><a href="shop-2column.php">Products</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="nav-link dropdown-link" href="#"><i class="icofont-lock"></i>authentication</a>
-                        <ul class="dropdown-list">
-                            <li><a href="login.php">Login</a></li>
-                            <li><a href="register.php">Signup</a></li>
-                            <li><a href="reset-password.php">reset password</a></li>
-                            <li><a href="change-password.php">change password</a></li>
                         </ul>
                     </li>
                     <li>
@@ -271,24 +268,21 @@
                 <i class="fas fa-home"></i>
                 <span>Home</span>
             </a>
-            <button class="cate-btn" title="Category List">
-                <i class="fas fa-list"></i>
-                <span>category</span>
-            </button>
-
-            <a href="wishlist.php" title="Wishlist">
-                <i class="fas fa-heart"></i>
-                <span>Feed</span>
+            <a href="#" title="Wishlist">
+                <i class="fa-solid fa-comments"></i>
+                <span>Community</span>
+            </a>
+            <a href="#" title="Notification List">
+                <i class="fas fa-paper-plane"></i>
+                <span>Chat</span>
             </a>
             <button class="cart-btn" title="Cartlist">
                 <i class="fas fa-shopping-basket"></i>
-                <span>cart</span>
-
+                <span>Cart</span>
             </button>
-            <a href="notification.php" title="Notification List">
+            <a href="#" title="Notification List">
                 <i class="fas fa-user"></i>
                 <span>Account</span>
-
             </a>
         </div>
         <!--=====================================

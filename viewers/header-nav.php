@@ -89,7 +89,7 @@
                                  </li>
                                  <li class="navbar-item dropdown ">
                                      <a href="#0"><i class="fa-solid fa-comments"></i></a>
-                                     <a class="navbar-link" href="blog-author.php">Feed</a>
+                                     <a class="navbar-link" href="blog-author.php">Community</a>
                                  </li>
                                  <li class="navbar-item dropdown ">
                                      <a href=""><i class="fa-solid fa-store"></i></a>
