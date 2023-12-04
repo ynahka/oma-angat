@@ -105,53 +105,43 @@ window.onload = function() {
     }
 };
 
+
 // window.onload = function() {
 //     var path = window.location.pathname;
 //     var links = document.querySelectorAll(".mobile-navbar-item a");
 
 //     for (var i = 0; i < links.length; i++) {
-//         if (links[i].pathname === path) {
+//         if (links[i].pathname === path || path === '/' && links[i].pathname === '/index.php') {
 //             links[i].classList.add("active");
 //         }
 //     }
 // };
 
-window.onload = function() {
-    var path = window.location.pathname;
-    var links = document.querySelectorAll(".mobile-navbar-item a");
+// let touchStartX = 0;
+// let touchEndX = 0;
 
-    for (var i = 0; i < links.length; i++) {
-        if (links[i].pathname === path || path === '/' && links[i].pathname === '/index.php') {
-            links[i].classList.add("active");
-        }
-    }
-};
+// const slider = document.querySelector('.suggest');
 
-let touchStartX = 0;
-let touchEndX = 0;
+// slider.addEventListener('touchstart', function(event) {
+//     touchStartX = event.changedTouches[0].screenX;
+// }, false);
 
-const slider = document.querySelector('.suggest');
+// slider.addEventListener('touchend', function(event) {
+//     touchEndX = event.changedTouches[0].screenX;
+//     handleSwipe();
+// }, false);
 
-slider.addEventListener('touchstart', function(event) {
-    touchStartX = event.changedTouches[0].screenX;
-}, false);
+// function handleSwipe() {
+//     if (touchEndX < touchStartX) {
+//         // Swipe left
+//         console.log('Swiped left');
+//     }
 
-slider.addEventListener('touchend', function(event) {
-    touchEndX = event.changedTouches[0].screenX;
-    handleSwipe();
-}, false);
-
-function handleSwipe() {
-    if (touchEndX < touchStartX) {
-        // Swipe left
-        console.log('Swiped left');
-    }
-
-    if (touchEndX > touchStartX) {
-        // Swipe right
-        console.log('Swiped right');
-    }
-}
+//     if (touchEndX > touchStartX) {
+//         // Swipe right
+//         console.log('Swiped right');
+//     }
+// }
 
 //========================================
 //         CART SIDEBAR FUNCTION

@@ -89,7 +89,7 @@
                      <div class="col-lg-12">
                          <div class="navbar-content">
                              <ul class="navbar-list">
-                                 <li class="navbar-item dropdown active">
+                                 <li class="navbar-item dropdown">
                                      <a href="#0"><i class="fa fa-house"></i></a>
                                      <a class="navbar-link" href="index.php">Home</a>
                                  </li>
@@ -97,7 +97,7 @@
                                      <a href="#0"><i class="fa-solid fa-comments"></i></a>
                                      <a class="navbar-link" href="blog-author.php">Community</a>
                                  </li>
-                                 <li class="navbar-item dropdown ">
+                                 <li class="navbar-item dropdown">
                                      <a href=""><i class="fa-solid fa-store"></i></a>
                                      <a class="navbar-link dropdown-arrow" href="faq.php">Shop</a>
                                      <ul class="dropdown-position-list">

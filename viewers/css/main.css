@@ -244,12 +244,13 @@ button:focus {
 } */
 
 .section-heading h2 {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 650;
   line-height: 48px;
   text-transform: uppercase;
   margin-bottom: none;
   text-align: center;
+  margin-top: 50px;
 }
 
 .section-btn-50 {
@@ -273,7 +274,7 @@ button:focus {
     margin-bottom: 30px;
   }
   .section-heading h2 {
-    font-size: 28px;
+    font-size: 16px;
     line-height: 36px;
   }
 }

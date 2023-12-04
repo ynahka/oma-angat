@@ -5,7 +5,8 @@
 .brand-single {
   position: relative;
   text-align: center;
-  margin-top: -120px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   z-index: 1;
 }
 
@@ -14,10 +15,10 @@
 }
 
 .brand-single a img {
-  width: 200px;
+  width: 250px;
   height: 200px;
   border-radius: 50%;
-  border: 10px solid var(--body);
+  border: 10px solid var(--primary);
   margin-bottom: 10px;
 }
 

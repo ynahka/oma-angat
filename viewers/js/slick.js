@@ -245,40 +245,40 @@ $('.suggest-slider').slick({
 //========================================
 $('.new-slider').slick({
     dots: false,
-    infinite: true,
-    autoplay: true,
+    infinite: false,
+    autoplay: false,
     arrows: true,
     speed: 800,
     nextArrow: '<i class="icofont-arrow-right dandik"></i>',
     prevArrow: '<i class="icofont-arrow-left bamdik"></i>',
-    slidesToShow: 5,
+    slidesToShow: 7,
     slidesToScroll: 1,
     responsive: [
         {
             breakpoint: 1200,
             settings: {
-                slidesToShow: 4,
+                slidesToShow: 5,
                 slidesToScroll: 2,
             }
         },
         {
             breakpoint: 992,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 5,
                 slidesToScroll: 3,
             }
         },
         {
             breakpoint: 768,
             settings: {
-                slidesToShow: 2,
+                slidesToShow: 4,
                 slidesToScroll: 2,
             }
         },
         {
             breakpoint: 576,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 variableWidth: true,
                 arrows: false,
