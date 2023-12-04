@@ -27,40 +27,93 @@ if (isset($_SESSION['Email_Session'])) {
         $QuantityAvlbl = isset($_POST['QuantityAvlbl']) ? mysqli_real_escape_string($conx, $_POST['QuantityAvlbl']) : '';
         $QuantiSold = isset($_POST['QuantiSold']) ? mysqli_real_escape_string($conx, $_POST['QuantiSold']) : '';
 
-        // Array to store uploaded image paths
-        $product_images = [];
+        if (isset($_FILES['product_image']) && $_FILES['product_image']['error'] === 0) {
+            $image_tmp = $_FILES['product_image']['tmp_name'];
+            $image_name = $_FILES['product_image']['name'];
+            $image_path = "Product_img/" . $image_name;
 
-        for ($i = 1; $i <= 5; $i++) {
-            $image_key = "product_image{$i}";
-            if (isset($_FILES[$image_key]) && $_FILES[$image_key]['error'] === 0) {
-                $image_tmp = $_FILES[$image_key]['tmp_name'];
-                $image_name = $_FILES[$image_key]['name'];
-                $image_path = "Product_img/" . $image_name;
+            if (move_uploaded_file($image_tmp, $image_path)) {
+                $product_image = mysqli_real_escape_string($conx, $image_path);
 
-                if (move_uploaded_file($image_tmp, $image_path)) {
-                    $product_images[$i] = mysqli_real_escape_string($conx, $image_path);
-                } else {
-                    $error .= "<div class='alert alert-danger alert-dismissible fade show' style='background-color: #dc3545; color: #fff;'>
-                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                        <strong>Error Uploading the product image {$i}</strong></div>";
+                $product_image2 = '';
+                $product_image3 = '';
+                $product_image4 = '';
+                $product_image5 = '';
+
+                if (isset($_FILES['product_image2']) && $_FILES['product_image2']['error'] === 0) {
+                    $image_tmp = $_FILES['product_image2']['tmp_name'];
+                    $image_name = $_FILES['product_image2']['name'];
+                    $image_path = "Product_img/" . $image_name;
+
+                    if (move_uploaded_file($image_tmp, $image_path)) {
+                        $product_image2 = mysqli_real_escape_string($conx, $image_path);
+                    } else {
+                        $error = '<div class="alert alert-danger alert-dismissible fade show" style="background-color: #dc3545; color: #fff;">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Error Uploading the product image 2</strong></div>';
+                    }
                 }
+                if (isset($_FILES['product_image3']) && $_FILES['product_image3']['error'] === 0) {
+                    $image_tmp = $_FILES['product_image3']['tmp_name'];
+                    $image_name = $_FILES['product_image3']['name'];
+                    $image_path = "Product_img/" . $image_name;
+
+                    if (move_uploaded_file($image_tmp, $image_path)) {
+                        $product_image3 = mysqli_real_escape_string($conx, $image_path);
+                    } else {
+                        $error = '<div class="alert alert-danger alert-dismissible fade show" style="background-color: #dc3545; color: #fff;">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Error Uploading the product image 3</strong></div>';
+                    }
+                }
+                if (isset($_FILES['product_image4']) && $_FILES['product_image4']['error'] === 0) {
+                    $image_tmp = $_FILES['product_image4']['tmp_name'];
+                    $image_name = $_FILES['product_image4']['name'];
+                    $image_path = "Product_img/" . $image_name;
+
+                    if (move_uploaded_file($image_tmp, $image_path)) {
+                        $product_image4 = mysqli_real_escape_string($conx, $image_path);
+                    } else {
+                        $error = '<div class="alert alert-danger alert-dismissible fade show" style="background-color: #dc3545; color: #fff;">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Error Uploading the product image 4</strong></div>';
+                    }
+                }
+                if (isset($_FILES['product_image5']) && $_FILES['product_image5']['error'] === 0) {
+                    $image_tmp = $_FILES['product_image5']['tmp_name'];
+                    $image_name = $_FILES['product_image5']['name'];
+                    $image_path = "Product_img/" . $image_name;
+
+                    if (move_uploaded_file($image_tmp, $image_path)) {
+                        $product_image5 = mysqli_real_escape_string($conx, $image_path);
+                    } else {
+                        $error = '<div class="alert alert-danger alert-dismissible fade show" style="background-color: #dc3545; color: #fff;">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Error Uploading the product image 5</strong></div>';
+                    }
+                }
+
+                $sql = "INSERT INTO products (store_id, category_id, harvest_id, ProductName, description, Price, Unit,  QuantityAvlbl, QuantiSold, product_image, product_image2, product_image3, product_image4, product_image5) 
+                VALUES ('{$store_id}', '{$category_id}', '{$harvest_id}', '{$ProductName}', '{$description}', '{$Price}', '{$Unit}',  '{$QuantityAvlbl}', '{$QuantiSold}', '{$product_image}', '{$product_image2}', '{$product_image3}', '{$product_image4}', '{$product_image5}')";
+
+                if (mysqli_query($conx, $sql)) {
+                    $success = '<div class="alert alert-success alert-dismissible fade show" style="background-color: #28a745; color: #fff;>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<strong>Congrats! New Product Added Successfully.</strong></div>';
+                } else {
+                    $error = '<div class="alert alert-danger alert-dismissible fade show" style="background-color: #dc3545; color: #fff;">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<strong>Adding Error</strong></div>';
+                }
+            } else {
+                $error = '<div class="alert alert-danger alert-dismissible fade show" style="background-color: #dc3545; color: #fff;">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Error Uploading the product image</strong></div>';
             }
-        }
-
-        // Create a comma-separated list of image paths
-        $image_values = implode("', '", $product_images);
-
-        $sql = "INSERT INTO products (store_id, category_id, harvest_id, ProductName, description, Price, Unit,  QuantityAvlbl, QuantiSold, product_image, product_image2, product_image3, product_image4, product_image5) 
-        VALUES ('{$store_id}', '{$category_id}', '{$harvest_id}', '{$ProductName}', '{$description}', '{$Price}', '{$Unit}',  '{$QuantityAvlbl}', '{$QuantiSold}', '{$image_values}')";
-
-        if (mysqli_query($conx, $sql)) {
-            $success = "<div class='alert alert-success alert-dismissible fade show' style='background-color: #28a745; color: #fff;>
-                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                        <strong>Congrats! New Product Added Successfully.</strong></div>";
         } else {
-            $error .= "<div class='alert alert-danger alert-dismissible fade show' style='background-color: #dc3545; color: #fff;'>
-                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                        <strong>Adding Error</strong></div>";
+            $error = '<div class="alert alert-danger alert-dismissible fade show" style="background-color: #dc3545; color: #fff;">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<strong>Please select image</strong></div>';
         }
     }
 } else {
