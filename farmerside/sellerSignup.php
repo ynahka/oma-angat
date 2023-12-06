@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
                         $mail->Subject = 'Oma-Angat Agri-Market: Account Verification';
                         $mail->Body    = '<h3>Dear ' . $name . ',</h3>
                         <p>Thank you for signing up for Oma-Angat Agri-Market! Were excited to have you on board as a seller of our community.To complete your registration and verify your email address, please click on the following link:</p>
-                        <a href="http://localhost/oma-angat_oldver/farmerside/?Verification=' . $Code . '">"http://localhost/oma-angat_oldver/farmerside/?Verification=' . $Code . '"</a>
+                        <a href="http://localhost/oma-angat/farmerside/?Verification=' . $Code . '">"http://localhost/oma-angat/farmerside/?Verification=' . $Code . '"</a>
                         <p>By verifying your email, you will gain access to all the features and benefits of Oma-Angat Virtual Agri-Market,
                         including the ability to connect with local market and to prote and sell your fresh produce.</p>
                         <p>If you did not sign up for Oma-Angat Agri-Market, please disregard this email. Its possible that someone entered your email address by mistake.
@@ -97,44 +97,44 @@ if (isset($_POST['submit'])) {
     <title>OMA-ANGAT SIGN UP</title>
     <link rel="icon" href="images/web-logo.png" type="icon type">
     <style>
-        .alert {
-            padding: 1rem;
-            border-radius: 5px;
-            color: white;
-            margin: 1rem 0;
-            font-weight: 500;
-            width: 65%;
-        }
+    .alert {
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+        margin: 1rem 0;
+        font-weight: 500;
+        width: 65%;
+    }
 
-        .alert-success {
-            background-color: #a5c48f;
-        }
+    .alert-success {
+        background-color: #a5c48f;
+    }
 
-        .alert-danger {
-            background-color: #fc5555;
-        }
+    .alert-danger {
+        background-color: #fc5555;
+    }
 
-        .alert-info {
-            background-color: #a5c48f;
-        }
+    .alert-info {
+        background-color: #a5c48f;
+    }
 
-        .alert-warning {
-            background-color: #ff9966;
-        }
+    .alert-warning {
+        background-color: #ff9966;
+    }
 
-        .input-field {
-            position: relative;
-        }
+    .input-field {
+        position: relative;
+    }
 
-        .input-field.error {
-            margin-bottom: 25px;
-        }
+    .input-field.error {
+        margin-bottom: 25px;
+    }
 
-        .error-message {
-            font-size: 12px;
-            color: red;
-            margin-top: 5px;
-        }
+    .error-message {
+        font-size: 12px;
+        color: red;
+        margin-top: 5px;
+    }
     </style>
 </head>
 
@@ -164,11 +164,13 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div class="input-field <?php echo $Error_Pass ?>">
                         <i class="fas fa-lock"></i>
-                        <input type="password" name="Conf-Password" id="confirm-password" placeholder="Confirm Password" required />
+                        <input type="password" name="Conf-Password" id="confirm-password" placeholder="Confirm Password"
+                            required />
                     </div>
                     <div class="terms">
                         <input type="checkbox" name="agree_terms" id="agree-terms" required />
-                        <label for="agree-terms">I agree to the <a href="terms_and_conditions.html" target="_blank">Terms and Conditions</a></label>
+                        <label for="agree-terms">I agree to the <a href="terms_and_conditions.html"
+                                target="_blank">Terms and Conditions</a></label>
                     </div>
                     <input type="submit" name="submit" class="btn" value="Sign up" />
                     <div class="cta">Already have an account? <a href="index.php" class="ac1">Login</a></div>
@@ -185,29 +187,30 @@ if (isset($_POST['submit'])) {
     </div>
 
     <script>
-        const passwordInput = document.getElementById('password');
-        const confirmPasswordInput = document.getElementById('confirm-password');
-        const passwordError = document.getElementById('password-error');
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+    const passwordError = document.getElementById('password-error');
 
-        function validatePassword() {
-            const password = passwordInput.value;
-            const confirmPassword = confirmPasswordInput.value;
+    function validatePassword() {
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
 
-            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/;
+        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/;
 
-            if (passwordPattern.test(password)) {
-                if (confirmPassword !== '' && password !== confirmPassword) {
-                    passwordError.textContent = 'Passwords does not match.';
-                } else {
-                    passwordError.textContent = '';
-                }
+        if (passwordPattern.test(password)) {
+            if (confirmPassword !== '' && password !== confirmPassword) {
+                passwordError.textContent = 'Passwords does not match.';
             } else {
-                passwordError.textContent = 'Password must contain at least 8 characters (uppercase letter, lowercase letter, number, and special character)';
+                passwordError.textContent = '';
             }
+        } else {
+            passwordError.textContent =
+                'Password must contain at least 8 characters (uppercase letter, lowercase letter, number, and special character)';
         }
+    }
 
-        passwordInput.addEventListener('input', validatePassword);
-        confirmPasswordInput.addEventListener('input', validatePassword);
+    passwordInput.addEventListener('input', validatePassword);
+    confirmPasswordInput.addEventListener('input', validatePassword);
     </script>
 </body>
 

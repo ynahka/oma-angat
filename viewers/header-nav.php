@@ -56,8 +56,8 @@
                          <!-- LOGIN PAGE -->
                          <!-- LOGIN PAGE -->
                          <?php if (!isset($_SESSION['Email_Session'])) : ?>
-                             <a href="get-started.php" class="header-widget" title="Join">
-                                 <button>Get Started</button>
+                             <a href="../buyeraccount/index.php" class="header-widget" title="Join">
+                                 <button>Shop Now</button>
                              </a>
                          <?php endif; ?>
 
@@ -66,7 +66,7 @@
                              <i class="fas fa-shopping-basket"></i>
                          </button>
 
-                         <a href="#" class="header-widget" title="chat">
+                         <a href="../chat/chat.php" class="header-widget" title="chat">
                              <i class="fas fa-paper-plane"></i>
                          </a>
 

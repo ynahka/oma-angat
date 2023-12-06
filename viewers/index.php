@@ -75,7 +75,6 @@
     </div>
 
 
-
     <?php
     include("../connection/connection.php");
     error_reporting(0);
@@ -85,22 +84,22 @@
     $sql = "SELECT * FROM Store";
     $result = mysqli_query($conx, $sql);
 
-    $Pitems = [];
+    $storeItems = [];
 
     // Check if the query was successful
     if ($result) {
         // Fetch the result row by row
         while ($row = mysqli_fetch_assoc($result)) {
-            $Pitem = [
+            $storeItem = [
                 "name" => $row['storeName'],
                 "img" => "images/brand/{$row['store_id']}.svg", // Assuming each store has a unique ID
                 "url" => "shop-1column.php", // You may want to customize this based on your requirements
-                "title" => "Farmer-" . $row['farmer_id'],
+                "title" => $row['storeName'],
                 // Add more fields as needed
             ];
 
             // Add the store item to the array
-            $Pitems[] = $Pitem;
+            $storeItems[] = $storeItem;
         }
 
         // Free the result set
@@ -113,9 +112,6 @@
     // Close the database connection
     mysqli_close($conx);
     ?>
-
-
-
 
     <!-- By Farmer's Market -->
     <section class="section suggest-part">
@@ -130,20 +126,22 @@
         </div>
         <div class="container suggest">
             <ul class="suggest-slider slider-arrow">
-                <?php foreach ($Pitems as $Pitem) : ?>
+                <?php foreach ($storeItems as $storeItem) : ?>
                     <li>
-                        <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
-                            <img src="<?php echo $Pitem['img'] ?>">
+                        <a class="suggest-card" href="<?php echo $storeItem['url'] ?>">
+                            <img src="<?php echo $storeItem['img'] ?>">
                         </a>
-                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                            <p><?php echo $Pitem['title'] ?></p>
+                        <div class="suggest-info" style="text-align: center; font-weight:500;">
+                            <p><?php echo $storeItem['title'] ?></p>
+                            <!-- <p><?php echo $storeItem['storeDesc'] ?></p>
+                            <p><?php echo $storeItem['Address'] ?></p> -->
                         </div>
                     </li>
                 <?php endforeach; ?>
-
             </ul>
         </div>
     </section>
+
 
     <?php
     $Pitems = [
@@ -638,24 +636,82 @@
                                     <a class="product-image" href="product-video.php">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
+                                    <div class="product-widget">
+                                        <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    </div>
                                 </div>
                                 <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                        <a href="product-video.php">(3)</a>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a href="product-video.php">fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
+                                    </h6>
+                                    <button class="product-add" title="Add to Cart">
+                                        <i class="fas fa-shopping-basket"></i>
+                                        <span>add</span>
+                                    </button>
+                                    <div class="product-action">
+                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-card">
+                                <div class="product-media">
+                                    <div class="product-label">
+                                        <label class="label-text new">new</label>
+                                    </div>
+                                    <button class="product-wish wish">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <a class="product-image" href="product-video.php">
+                                        <img src="images/product/1.png" alt="product">
+                                    </a>
+                                    <div class="product-widget">
+                                        <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                        <a href="product-video.php">(3)</a>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a href="product-video.php">fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
+                                    </h6>
+                                    <button class="product-add" title="Add to Cart">
+                                        <i class="fas fa-shopping-basket"></i>
+                                        <span>add</span>
+                                    </button>
+                                    <div class="product-action">
+                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -669,24 +725,82 @@
                                     <a class="product-image" href="product-video.php">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
+                                    <div class="product-widget">
+                                        <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    </div>
                                 </div>
                                 <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                        <a href="product-video.php">(3)</a>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a href="product-video.php">fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
+                                    </h6>
+                                    <button class="product-add" title="Add to Cart">
+                                        <i class="fas fa-shopping-basket"></i>
+                                        <span>add</span>
+                                    </button>
+                                    <div class="product-action">
+                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-card">
+                                <div class="product-media">
+                                    <div class="product-label">
+                                        <label class="label-text new">new</label>
+                                    </div>
+                                    <button class="product-wish wish">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <a class="product-image" href="product-video.php">
+                                        <img src="images/product/1.png" alt="product">
+                                    </a>
+                                    <div class="product-widget">
+                                        <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    </div>
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                        <a href="product-video.php">(3)</a>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a href="product-video.php">fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
+                                    </h6>
+                                    <button class="product-add" title="Add to Cart">
+                                        <i class="fas fa-shopping-basket"></i>
+                                        <span>add</span>
+                                    </button>
+                                    <div class="product-action">
+                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -700,24 +814,36 @@
                                     <a class="product-image" href="product-video.php">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
+                                    <div class="product-widget">
+                                        <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    </div>
                                 </div>
                                 <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                        <a href="product-video.php">(3)</a>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a href="product-video.php">fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
+                                    </h6>
+                                    <button class="product-add" title="Add to Cart">
+                                        <i class="fas fa-shopping-basket"></i>
+                                        <span>add</span>
+                                    </button>
+                                    <div class="product-action">
+                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -731,24 +857,36 @@
                                     <a class="product-image" href="product-video.php">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
+                                    <div class="product-widget">
+                                        <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
+                                        <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                        <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                                    </div>
                                 </div>
                                 <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                        <a href="product-video.php">(3)</a>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a href="product-video.php">fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <del>P34</del>
+                                        <span>P28<small>/piece</small></span>
+                                    </h6>
+                                    <button class="product-add" title="Add to Cart">
+                                        <i class="fas fa-shopping-basket"></i>
+                                        <span>add</span>
+                                    </button>
+                                    <div class="product-action">
+                                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -812,178 +950,295 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <ul class="new-slider slider-arrow">
-                        <li>
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image" href="product-video.php">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
+                    <div class="feature-card">
+                        <div class="feature-media">
+                            <div class="feature-label">
+                                <label class="label-text sale">sale</label>
                             </div>
-                        </li>
-                        <li>
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image" href="product-video.php">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
+                            <button class="feature-wish wish">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <a class="feature-image" href="product-video.php">
+                                <img src="images/product/1.png" alt="product">
+                            </a>
+                            <div class="feature-widget">
+                                <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
                             </div>
-                        </li>
-                        <li>
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image" href="product-video.php">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="feature-content">
+                            <h6 class="feature-name">
+                                <a href="product-video.php">fresh organic green chilis</a>
+                            </h6>
+                            <div class="feature-rating">
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <a href="product-video.php">(3 Reviews)</a>
                             </div>
-                        </li>
-                        <li>
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image" href="product-video.php">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
+                            <h6 class="feature-price">
+                                <del>P34</del>
+                                <span>P28<small>/piece</small></span>
+                            </h6>
+                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet
+                                olor ut eveniet commodi...</p>
+                            <button class="product-add" title="Add to Cart">
+                                <i class="fas fa-shopping-basket"></i>
+                                <span>add</span>
+                            </button>
+                            <div class="product-action">
+                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
                             </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- <section class="section testimonial-part">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading">
-                        <h2>client's feedback</h2>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="testimonial-slider slider-arrow">
-                        <div class="testimonial-card">
-                            <i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
-                            <h5>mahmud hasan</h5>
-                            <ul>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                            </ul>
-                            <img src="images/avatar/01.png" alt="testimonial">
+                <div class="col">
+                    <div class="feature-card">
+                        <div class="feature-media">
+                            <div class="feature-label">
+                                <label class="label-text sale">sale</label>
+                            </div>
+                            <button class="feature-wish wish">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <a class="feature-image" href="product-video.php">
+                                <img src="images/product/1.png" alt="product">
+                            </a>
+                            <div class="feature-widget">
+                                <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h6 class="feature-name">
+                                <a href="product-video.php">fresh organic green chilis</a>
+                            </h6>
+                            <div class="feature-rating">
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <a href="product-video.php">(3 Reviews)</a>
+                            </div>
+                            <h6 class="feature-price">
+                                <del>P34</del>
+                                <span>P28<small>/piece</small></span>
+                            </h6>
+                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet
+                                olor ut eveniet commodi...</p>
+                            <button class="product-add" title="Add to Cart">
+                                <i class="fas fa-shopping-basket"></i>
+                                <span>add</span>
+                            </button>
+                            <div class="product-action">
+                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="feature-card">
+                        <div class="feature-media">
+                            <div class="feature-label">
+                                <label class="label-text sale">sale</label>
+                            </div>
+                            <button class="feature-wish wish">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <a class="feature-image" href="product-video.php">
+                                <img src="images/product/1.png" alt="product">
+                            </a>
+                            <div class="feature-widget">
+                                <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h6 class="feature-name">
+                                <a href="product-video.php">fresh organic green chilis</a>
+                            </h6>
+                            <div class="feature-rating">
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <a href="product-video.php">(3 Reviews)</a>
+                            </div>
+                            <h6 class="feature-price">
+                                <del>P34</del>
+                                <span>P28<small>/piece</small></span>
+                            </h6>
+                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet
+                                olor ut eveniet commodi...</p>
+                            <button class="product-add" title="Add to Cart">
+                                <i class="fas fa-shopping-basket"></i>
+                                <span>add</span>
+                            </button>
+                            <div class="product-action">
+                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="feature-card">
+                        <div class="feature-media">
+                            <div class="feature-label">
+                                <label class="label-text sale">sale</label>
+                            </div>
+                            <button class="feature-wish wish">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <a class="feature-image" href="product-video.php">
+                                <img src="images/product/1.png" alt="product">
+                            </a>
+                            <div class="feature-widget">
+                                <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h6 class="feature-name">
+                                <a href="product-video.php">fresh organic green chilis</a>
+                            </h6>
+                            <div class="feature-rating">
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <a href="product-video.php">(3 Reviews)</a>
+                            </div>
+                            <h6 class="feature-price">
+                                <del>P34</del>
+                                <span>P28<small>/piece</small></span>
+                            </h6>
+                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet
+                                olor ut eveniet commodi...</p>
+                            <button class="product-add" title="Add to Cart">
+                                <i class="fas fa-shopping-basket"></i>
+                                <span>add</span>
+                            </button>
+                            <div class="product-action">
+                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="feature-card">
+                        <div class="feature-media">
+                            <div class="feature-label">
+                                <label class="label-text sale">sale</label>
+                            </div>
+                            <button class="feature-wish wish">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <a class="feature-image" href="product-video.php">
+                                <img src="images/product/1.png" alt="product">
+                            </a>
+                            <div class="feature-widget">
+                                <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h6 class="feature-name">
+                                <a href="product-video.php">fresh organic green chilis</a>
+                            </h6>
+                            <div class="feature-rating">
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <a href="product-video.php">(3 Reviews)</a>
+                            </div>
+                            <h6 class="feature-price">
+                                <del>P34</del>
+                                <span>P28<small>/piece</small></span>
+                            </h6>
+                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet
+                                olor ut eveniet commodi...</p>
+                            <button class="product-add" title="Add to Cart">
+                                <i class="fas fa-shopping-basket"></i>
+                                <span>add</span>
+                            </button>
+                            <div class="product-action">
+                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="feature-card">
+                        <div class="feature-media">
+                            <div class="feature-label">
+                                <label class="label-text sale">sale</label>
+                            </div>
+                            <button class="feature-wish wish">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <a class="feature-image" href="product-video.php">
+                                <img src="images/product/1.png" alt="product">
+                            </a>
+                            <div class="feature-widget">
+                                <a title="Product Notification" href="notification.php" class="fas fa-random"></a>
+                                <a title="Product Video" href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true" data-vbtype="video"></a>
+                                <a title="Product View" href="#" class="fas fa-eye" data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h6 class="feature-name">
+                                <a href="product-video.php">fresh organic green chilis</a>
+                            </h6>
+                            <div class="feature-rating">
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="active icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <a href="product-video.php">(3 Reviews)</a>
+                            </div>
+                            <h6 class="feature-price">
+                                <del>P34</del>
+                                <span>P28<small>/piece</small></span>
+                            </h6>
+                            <p class="feature-desc">Lorem ipsum dolor sit consectetur adipisicing xpedita dicta amet
+                                olor ut eveniet commodi...</p>
+                            <button class="product-add" title="Add to Cart">
+                                <i class="fas fa-shopping-basket"></i>
+                                <span>add</span>
+                            </button>
+                            <div class="product-action">
+                                <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
+                                <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                                <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
+                            </div>
                         </div>
                         <div class="testimonial-card">
                             <i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
-                            <h5>mahmud hasan</h5>
-                            <ul>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                            </ul>
-                            <img src="images/avatar/02.png" alt="testimonial">
-                        </div>
-                        <div class="testimonial-card">
-                            <i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
+                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati
+                                magnam doloribus magni provident ipsam</p>
                             <h5>mahmud hasan</h5>
                             <ul>
                                 <li class="fas fa-star"></li>
@@ -996,7 +1251,8 @@
                         </div>
                         <div class="testimonial-card">
                             <i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
+                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati
+                                magnam doloribus magni provident ipsam</p>
                             <h5>mahmud hasan</h5>
                             <ul>
                                 <li class="fas fa-star"></li>

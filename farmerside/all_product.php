@@ -39,24 +39,19 @@ session_start();
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <!-- Logo -->
                 <div class="navbar-header">
-                    <a href="all_product.php" class="navbar-brand"><img src="images/web-logo.png"
-                            style="display:inline; width: 30%;" alt="logo"></a>
+                    <a href="all_product.php" class="navbar-brand"><img src="images/web-logo.png" style="display:inline; width: 30%;" alt="logo"></a>
                 </div>
                 <!-- End Logo -->
                 <div class="navbar-collapse">
                     <ul class="navbar-nav mr-auto mt-md-0">
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  "
-                                href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
-                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  "
-                                href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  " href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
                     </ul>
                     <!-- User profile and search -->
                     <ul class="navbar-nav my-lg-0">
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  "
-                                href="javascript:void(0)"><i class="ti-search"></i></a>
+                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-search"></i></a>
                             <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i
-                                        class="ti-close"></i></a>
+                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i class="ti-close"></i></a>
                             </form>
                         </li>
                         <li class="nav-item dropdown">
@@ -74,9 +69,7 @@ session_start();
                         </li>
                         <!-- Profile -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false"><img src="images/person.png" alt="user"
-                                    class="profile-pic" /></a>
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/person.png" alt="user" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
                                     <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
@@ -98,29 +91,23 @@ session_start();
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span
-                                    class="hide-menu">HOME</span></a></li>
-                        <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span
-                                    class="hide-menu">Profile</span></a></li>
+                        <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">HOME</span></a></li>
+                        <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Profile</span></a></li>
                         <li class="nav-label">Log</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i
-                                    class="fa fa-archive f-s-20 color-warning"></i><span
-                                    class="hide-menu">Market</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Market</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
                                 <li><a href="add_category.php">Add Category</a></li>
                                 <li><a href="add_market.php">Add Market</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery"
-                                    aria-hidden="true"></i><span class="hide-menu">Product</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Product</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="all_product.php">All Products</a></li>
                                 <li><a href="add_product.php">Add Product</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart"
-                                    aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="all_orders.php">All Orders</a></li>
                             </ul>
@@ -153,9 +140,7 @@ session_start();
                                 <h4 class="card-title">All Product data</h4>
                                 <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
                                 <div class="table-responsive m-t-40">
-                                    <table id="example23"
-                                        class="display nowrap table table-hover table-striped table-bordered"
-                                        cellspacing="0" width="100%">
+                                    <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
                                                 <th>Product-Name</th>
@@ -187,7 +172,8 @@ session_start();
                                                 <td>' . $rows['QuantiSold'] . '</td>
                                                 <td>
                                                 <div class="col-md-3 col-lg-8 m-b-10">
-                                                    <center><img src="' . $rows['product_image'] . '" class="img-responsive radius" style="min-width:150px;min-height:100px;"/></center>
+                                                    <center><img src="' . $rows['product_image'] . '" class="img-responsive radius" style="width:100px;min-height:50px;"/></center>
+                                                    <center><img src="' . $rows['product_image2'] . '" class="img-responsive radius" style="width:30px;min-height:10px;"/><img src="' . $rows['product_image3'] . '" class="img-responsive radius" style="width:30px;min-height:10px;"/><img src="' . $rows['product_image4'] . '" class="img-responsive radius" style="width:30px;min-height:10px;"/><img src="' . $rows['product_image5'] . '" class="img-responsive radius" style="width:30px;min-height:10px;"/></center>
                                                 </div>
                                                 </td>
                                                 <td>
