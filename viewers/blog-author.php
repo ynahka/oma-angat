@@ -94,7 +94,7 @@
                             <li><a href="#">Processed Goods<span>89</span></a></li>
                         </ul>
                     </div>
-                    <div class="blog-widget">
+                    <!-- <div class="blog-widget">
                         <h3 class="blog-widget-title">popular tags</h3>
                         <ul class="blog-widget-tag">
                             <li><a href="#">farming</a></li>
@@ -108,20 +108,11 @@
                             <li><a href="#">life</a></li>
                             <li><a href="#">enjoy</a></li>
                         </ul>
-                    </div>
-                    <div class="blog-widget">
-                        <h3 class="blog-widget-title">follow us</h3>
-                        <ul class="blog-widget-social">
-                            <li><a href="#" class="icofont-facebook"></a></li>
-                            <li><a href="#" class="icofont-twitter"></a></li>
-                            <li><a href="#" class="icofont-linkedin"></a></li>
-                            <li><a href="#" class="icofont-pinterest"></a></li>
-                            <li><a href="#" class="icofont-instagram"></a></li>
-                        </ul>
-                    </div>
-                    <div class="blog-widget">
+                    </div> -->
+
+                    <!-- <div class="blog-widget">
                         <a href="#"><img class="img-fluid" src="images/promo/blog/01.jpg" alt="promo"></a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-8">
                     <div class="row">
