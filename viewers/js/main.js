@@ -106,6 +106,8 @@ window.onload = function() {
 };
 
 
+
+
 // window.onload = function() {
 //     var path = window.location.pathname;
 //     var links = document.querySelectorAll(".mobile-navbar-item a");
