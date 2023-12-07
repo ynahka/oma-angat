@@ -133,7 +133,8 @@ function validateDate($date)
                                     class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
-                                    <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    <li><a href="../farmeraccount/logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                                    </li>
                                     <li><a href="profile.php"><i class="fa fa-user"></i> Profile</a></li>
                                 </ul>
                             </div>
@@ -152,7 +153,7 @@ function validateDate($date)
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span
+                        <li> <a href="index.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
                         <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span
                                     class="hide-menu">Profile</span></a></li>
@@ -240,7 +241,7 @@ function validateDate($date)
                                             <div class="form-actions">
                                                 <input type="submit" name="submit_harvest" class="btn btn-success"
                                                     value="Save" style="background: rgb(0, 188, 126);">
-                                                <a href="dashboard.php" class="btn btn-inverse">Cancel</a>
+                                                <a href="index.php" class="btn btn-inverse">Cancel</a>
                                             </div>
                                     </form>
                                 </div>

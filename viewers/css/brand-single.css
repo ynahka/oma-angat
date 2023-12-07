@@ -5,7 +5,7 @@
 .brand-single {
   position: relative;
   text-align: center;
-  margin-top: -350px;
+  margin-top: 50px;
   margin-bottom: 50px;
   z-index: 1;
 }
@@ -25,7 +25,6 @@
 .brand-single a h3 {
   text-transform: capitalize;
   margin-bottom: 3px;
-  color: var(--chalk);
 }
 
 .brand-single ul {

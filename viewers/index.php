@@ -18,8 +18,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 col-lg-6">
                         <div class="banner-content-1">
-                            <h1><span class="highlight">Shop Local and</span><br> Support Farmers <span
-                                    class="highlight"></span> </h1>
+                            <h1><span class="highlight">Shop Local and</span><br> Support Farmers <span class="highlight"></span> </h1>
                             <p>Shop directly from farmers! Get healthy and locally grown produce right at your doorstep.
                             </p>
                             <div class="banner-btn">
@@ -132,14 +131,14 @@
         <div class="container suggest">
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
-                <li>
-                    <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
-                        <img src="<?php echo $Pitem['img'] ?>">
-                    </a>
-                    <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                        <p><?php echo $Pitem['title'] ?></p>
-                    </div>
-                </li>
+                    <li>
+                        <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
+                            <img src="<?php echo $Pitem['img'] ?>">
+                        </a>
+                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
+                            <p><?php echo $Pitem['title'] ?></p>
+                        </div>
+                    </li>
                 <?php endforeach; ?>
 
             </ul>
@@ -217,14 +216,14 @@
         <div class="container suggest">
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
-                <li>
-                    <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
-                        <img src="<?php echo $Pitem['img'] ?>">
-                    </a>
-                    <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                        <p><?php echo $Pitem['title'] ?></p>
-                    </div>
-                </li>
+                    <li>
+                        <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
+                            <img src="<?php echo $Pitem['img'] ?>">
+                        </a>
+                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
+                            <p><?php echo $Pitem['title'] ?></p>
+                        </div>
+                    </li>
                 <?php endforeach; ?>
             </ul>
         </div>

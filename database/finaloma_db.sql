@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2023 at 02:59 PM
+-- Generation Time: Dec 07, 2023 at 02:26 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,22 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admininfo`
---
-
-CREATE TABLE `admininfo` (
-  `admin_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `FirstName` varchar(50) NOT NULL,
-  `MidName` varchar(50) DEFAULT NULL,
-  `LastName` varchar(50) NOT NULL,
-  `image` blob DEFAULT NULL,
-  `date_updated` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `buyer`
 --
 
@@ -54,6 +38,37 @@ CREATE TABLE `buyer` (
   `image` blob DEFAULT NULL,
   `date_updated` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `calendar`
+--
+
+CREATE TABLE `calendar` (
+  `calendar_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `start` datetime NOT NULL,
+  `end` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chats`
+--
+
+CREATE TABLE `chats` (
+  `id` bigint(20) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `message` text NOT NULL,
+  `sendto` varchar(100) NOT NULL,
+  `status` bigint(20) NOT NULL DEFAULT 1,
+  `type` varchar(100) NOT NULL,
+  `DATETIME_LOG` datetime DEFAULT current_timestamp(),
+  `productID` text NOT NULL,
+  `notif` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -111,7 +126,9 @@ CREATE TABLE `farmer` (
 --
 
 INSERT INTO `farmer` (`farmer_id`, `user_id`, `farmer_name`, `Address`, `Phone_Num`, `image`, `date_updated`) VALUES
-(24, 13, 'Ann Joyce Loterte', 'Salvacion, Pilar, Sorsogon', '09509276643', 0x5265735f696d672f426561757479506c75735f32303230303131333131313133323031305f736176652e6a7067, '2023-11-23 15:52:46');
+(24, 13, 'Joyce Loterte', 'Salvacion, Pilar, Sorsogon', '09509276643', 0x5265735f696d672f312e737667, '2023-11-23 15:52:46'),
+(25, 20, 'Commission Lab', 'Legazpi City\r\n', '09123223456', 0x5265735f696d672f312e737667, '2023-11-29 16:48:38'),
+(26, 24, 'Beverly Grace Borbe', 'Legazpi Public Market, Legazpi City, Albay', '0912378690876', 0x5265735f696d672f332e737667, '2023-12-04 16:24:13');
 
 -- --------------------------------------------------------
 
@@ -132,8 +149,9 @@ CREATE TABLE `harvestingcalendar` (
 --
 
 INSERT INTO `harvestingcalendar` (`harvest_id`, `store_id`, `HarvestDate`, `harvestEnd`, `addedat`) VALUES
-(1, 1, '2023-11-25', '2023-11-30', '2023-11-23 19:30:13'),
-(2, 1, '2023-12-02', '2023-12-09', '2023-11-23 19:31:26');
+(1, 1, '2024-01-03', '2024-01-17', '2023-11-30 17:41:04'),
+(3, 1, '2023-12-10', '2023-12-29', '2023-11-30 18:04:17'),
+(4, 1, '2023-12-11', '2023-12-23', '2023-11-30 18:07:39');
 
 -- --------------------------------------------------------
 
@@ -214,6 +232,26 @@ CREATE TABLE `orderstatus` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `payments`
+--
+
+CREATE TABLE `payments` (
+  `id` bigint(20) NOT NULL,
+  `paymentID` varchar(150) NOT NULL,
+  `paymenttype` varchar(100) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `amount` decimal(14,4) NOT NULL DEFAULT 0.0000,
+  `refnumber` varchar(200) NOT NULL,
+  `image` varchar(500) NOT NULL,
+  `imagename` varchar(300) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `date_added` date NOT NULL,
+  `DATETIME_LOG` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `productcategory`
 --
 
@@ -228,10 +266,13 @@ CREATE TABLE `productcategory` (
 --
 
 INSERT INTO `productcategory` (`category_id`, `ctgry_name`, `date_created`) VALUES
-(1, 'Dried Foods', '2023-11-23 18:40:25'),
+(1, 'Fruits', '2023-11-23 18:40:25'),
 (2, 'Vegetables', '2023-11-23 18:40:32'),
 (3, 'Dried Fish', '2023-11-23 18:41:48'),
-(4, 'Fruits', '2023-11-23 18:41:58');
+(4, 'Grains', '2023-11-23 18:41:58'),
+(5, 'Fats & Oils', '2023-11-30 18:35:02'),
+(6, 'Dairies & Eggs', '2023-11-30 18:35:29'),
+(7, 'Processed Goods', '2023-11-30 18:43:51');
 
 -- --------------------------------------------------------
 
@@ -247,18 +288,23 @@ CREATE TABLE `products` (
   `ProductName` varchar(100) NOT NULL,
   `description` varchar(225) NOT NULL,
   `Price` decimal(10,2) NOT NULL,
+  `Unit` varchar(225) NOT NULL,
   `QuantityAvlbl` int(11) NOT NULL,
   `QuantiSold` int(11) NOT NULL,
   `product_image` blob NOT NULL,
-  `AddedAt` timestamp NOT NULL DEFAULT current_timestamp()
+  `product_image2` blob DEFAULT NULL,
+  `product_image3` blob DEFAULT NULL,
+  `product_image4` blob DEFAULT NULL,
+  `product_image5` blob DEFAULT NULL,
+  `AddedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`product_id`, `store_id`, `category_id`, `harvest_id`, `ProductName`, `description`, `Price`, `QuantityAvlbl`, `QuantiSold`, `product_image`, `AddedAt`) VALUES
-(2, 1, 1, 2, 'Jasmine Rice', 'A popular accompaniment for stir-fries, stews and curries, jasmine rice is a long-grain fragrant rice.', '90.00', 60, 40, 0x50726f647563745f696d672f726963652e706e67, '2023-11-23 19:46:00');
+INSERT INTO `products` (`product_id`, `store_id`, `category_id`, `harvest_id`, `ProductName`, `description`, `Price`, `Unit`, `QuantityAvlbl`, `QuantiSold`, `product_image`, `product_image2`, `product_image3`, `product_image4`, `product_image5`, `AddedAt`) VALUES
+(4, 1, 1, 1, 'Banana/Saging (Latundan)', 'Tagalog: Saging na Latundan | Tundan  Also called as Silk Bananas.  Minimum order: 1 kg', '35.00', 'Kg', 50, 0, 0x50726f647563745f696d672f4c6174756e64616e2e706e67, 0x50726f647563745f696d672f36392e706e67, 0x50726f647563745f696d672f37302e706e67, 0x50726f647563745f696d672f37312e706e67, 0x50726f647563745f696d672f37322e706e67, '2023-12-01 16:20:24');
 
 -- --------------------------------------------------------
 
@@ -421,7 +467,9 @@ CREATE TABLE `store` (
 --
 
 INSERT INTO `store` (`store_id`, `farmer_id`, `storeName`, `Address`, `storeDesc`, `OpensAt`, `ClosesAt`, `fbPage`, `image`, `date_created`) VALUES
-(1, 24, 'Oma-Angat Market', 'Salvacion, Pilar, Sorsogon', 'Its Oma-Angat\'s Official Market', '09:00:00', '11:00:00', 'http://oma-angat@facebook.com', 0x5265735f696d672f726963652e706e67, '2023-11-23 18:23:22');
+(1, 24, 'Oma-Angat Market', 'Salvacion, Pilar, Sorsogon', 'Its Oma-Angat\'s Official Market', '09:00:00', '11:00:00', 'http://oma-angat@facebook.com', 0x5265735f696d672f726963652e706e67, '2023-11-23 18:23:22'),
+(2, 25, 'Albay Dairies', 'Polangui, Albay', 'Your own dairy market', '12:00:00', '21:00:00', 'http://AlbayDairies', 0x5265735f696d672f322e737667, '2023-12-04 15:28:02'),
+(3, 26, 'LegaFruit Stand', 'Legazpi Public Market, Legazpi City, Albay', 'Fruits are  freshly picked from the Oma', '11:00:00', '23:00:00', 'http://legazpiFruitStand', 0x5265735f696d672f332e737667, '2023-12-04 16:27:45');
 
 -- --------------------------------------------------------
 
@@ -444,24 +492,34 @@ CREATE TABLE `useraccount` (
 --
 
 INSERT INTO `useraccount` (`user_id`, `Username`, `email`, `Password`, `CodeV`, `verification`, `date_created`) VALUES
-(13, 'administrator', 'annjoycellamera.loterte@bicol-u.edu.ph', '71d8053edf9ea298a8a7722741e94bffce781bdbca683ab6a920996ee3223d30', 'f957ff65bdb4dbab7f2a5ed2c59223f81a2d5370be7fa179b71489d8f30dd9f1', 1, '2023-11-18 07:17:33');
+(13, 'administrator', 'annjoycellamera.loterte@bicol-u.edu.ph', '71d8053edf9ea298a8a7722741e94bffce781bdbca683ab6a920996ee3223d30', 'f957ff65bdb4dbab7f2a5ed2c59223f81a2d5370be7fa179b71489d8f30dd9f1', 1, '2023-11-18 07:17:33'),
+(19, 'GreysAla', 'omaangatagrimarket@gmail.com', '71d8053edf9ea298a8a7722741e94bffce781bdbca683ab6a920996ee3223d30', '239f08b242a91025bcadd6ce9d2232d6e23789a7551a4843af663e013f9281c4', 1, '2023-11-28 19:40:43'),
+(20, 'commissionlab', 'thecommissionlab@gmail.com', '71d8053edf9ea298a8a7722741e94bffce781bdbca683ab6a920996ee3223d30', 'e534b9a1250a01c1e13c69307e60f661c0d65b17aad511266d4019b573caf3cc', 1, '2023-11-29 06:06:06'),
+(22, 'ynah', 'gerryminah04aguilar@gmail.com', '9bb5f14eea02a6c8bb06cf5085dce8394981d70f459f629d99e4ebcc918130c3', 'e68f12070a04f0d11c1ae467bc095f19046145eceebe2340aa97520f7ab844c6', 0, '2023-11-30 13:15:34'),
+(24, 'LegaFruit', 'annjoycelotertepersonal@gmail.com', '71d8053edf9ea298a8a7722741e94bffce781bdbca683ab6a920996ee3223d30', '2cc2d3ae1daf8c217771e78aa03374168b4cff5c56ea03c046ca6e04d2cb1edf', 1, '2023-12-04 16:02:54');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `admininfo`
---
-ALTER TABLE `admininfo`
-  ADD PRIMARY KEY (`admin_id`),
-  ADD KEY `user_id` (`user_id`);
-
---
 -- Indexes for table `buyer`
 --
 ALTER TABLE `buyer`
   ADD PRIMARY KEY (`buyer_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `calendar`
+--
+ALTER TABLE `calendar`
+  ADD PRIMARY KEY (`calendar_id`);
+
+--
+-- Indexes for table `chats`
+--
+ALTER TABLE `chats`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
@@ -515,6 +573,14 @@ ALTER TABLE `orderstatus`
   ADD PRIMARY KEY (`status_id`),
   ADD KEY `order_id` (`order_id`),
   ADD KEY `status_type` (`status_type`);
+
+--
+-- Indexes for table `payments`
+--
+ALTER TABLE `payments`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `paymentID` (`paymentID`),
+  ADD KEY `order_id` (`order_id`);
 
 --
 -- Indexes for table `productcategory`
@@ -597,16 +663,16 @@ ALTER TABLE `useraccount`
 --
 
 --
--- AUTO_INCREMENT for table `admininfo`
---
-ALTER TABLE `admininfo`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `buyer`
 --
 ALTER TABLE `buyer`
   MODIFY `buyer_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `calendar`
+--
+ALTER TABLE `calendar`
+  MODIFY `calendar_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `deliverycontactinfo`
@@ -624,13 +690,13 @@ ALTER TABLE `donation`
 -- AUTO_INCREMENT for table `farmer`
 --
 ALTER TABLE `farmer`
-  MODIFY `farmer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `farmer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `harvestingcalendar`
 --
 ALTER TABLE `harvestingcalendar`
-  MODIFY `harvest_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `harvest_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `methodofpayment`
@@ -648,13 +714,13 @@ ALTER TABLE `orderproduct`
 -- AUTO_INCREMENT for table `productcategory`
 --
 ALTER TABLE `productcategory`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `referral`
@@ -690,29 +756,29 @@ ALTER TABLE `shoppingcart`
 -- AUTO_INCREMENT for table `store`
 --
 ALTER TABLE `store`
-  MODIFY `store_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `store_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `useraccount`
 --
 ALTER TABLE `useraccount`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `admininfo`
---
-ALTER TABLE `admininfo`
-  ADD CONSTRAINT `admininfo_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `useraccount` (`user_id`);
-
---
 -- Constraints for table `buyer`
 --
 ALTER TABLE `buyer`
   ADD CONSTRAINT `buyer_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `useraccount` (`user_id`);
+
+--
+-- Constraints for table `chats`
+--
+ALTER TABLE `chats`
+  ADD CONSTRAINT `chats_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `useraccount` (`user_id`);
 
 --
 -- Constraints for table `deliverycontactinfo`
@@ -753,6 +819,12 @@ ALTER TABLE `orderproduct`
 ALTER TABLE `orderstatus`
   ADD CONSTRAINT `orderstatus_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orderproduct` (`order_id`),
   ADD CONSTRAINT `orderstatus_ibfk_2` FOREIGN KEY (`status_type`) REFERENCES `statustype` (`sttype_id`);
+
+--
+-- Constraints for table `payments`
+--
+ALTER TABLE `payments`
+  ADD CONSTRAINT `payments_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orderproduct` (`order_id`);
 
 --
 -- Constraints for table `products`

@@ -10,10 +10,15 @@
     <!--=====================================
                     BANNER PART START
         =======================================-->
-    <section class="inner-section single-banner" style="background: url(images/banner.svg) no-repeat center;">
+    <section class="inner-section single-banner" style="background: url(images/single-banner.jpg) no-repeat center;">
         <div class="container">
-            <h2>Farmer's Market Community</h2>
-
+            <h2>blog author</h2>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="blog-grid.html">Blog grid</a></li>
+                <li class="breadcrumb-item"><a href="blog-details.html">Blog details</a></li>
+                <li class="breadcrumb-item active" aria-current="page">blog author</li>
+            </ol>
         </div>
     </section>
     <!--=====================================
@@ -36,8 +41,8 @@
                                         <img src="images/avatar/01.jpg" alt="avatar">
                                     </a>
                                     <div class="author-info">
-                                        <h3 class="author-name">miron mahmud</h3>
-                                        <h6 class="author-mail">mironcoder@gmail.com</h6>
+                                        <h3 class="author-name">Oma-angat</h3>
+                                        <h6 class="author-mail">omangat@gmail.com</h6>
                                         <ul class="author-social">
                                             <li><a href="#" class="icofont-facebook"></a></li>
                                             <li><a href="#" class="icofont-twitter"></a></li>

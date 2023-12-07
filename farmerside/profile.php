@@ -122,7 +122,8 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
     <!-- TEMPLATE META -->
     <meta name="name" content="Greeny">
     <meta name="title" content="Greeny - eCommerce HTML Template">
-    <meta name="keywords" content="organic, food, shop, ecommerce, store, html, bootstrap, template, agriculture, vegetables, webshop, farm, grocery, natural, online store">
+    <meta name="keywords"
+        content="organic, food, shop, ecommerce, store, html, bootstrap, template, agriculture, vegetables, webshop, farm, grocery, natural, online store">
     <!--=====================================
                     META-TAG PART END
         =======================================-->
@@ -153,23 +154,23 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
         =======================================-->
 </head>
 <style>
-    .alert {
-        padding: 10px;
-        border: 1px solid;
-        margin: 10px 0;
-    }
+.alert {
+    padding: 10px;
+    border: 1px solid;
+    margin: 10px 0;
+}
 
-    .alert-success {
-        background-color: #D4EDDA;
-        border-color: #C3E6CB;
-        color: #155724;
-    }
+.alert-success {
+    background-color: #D4EDDA;
+    border-color: #C3E6CB;
+    color: #155724;
+}
 
-    .alert-danger {
-        background-color: #F8D7DA;
-        border-color: #F5C6CB;
-        color: #721C24;
-    }
+.alert-danger {
+    background-color: #F8D7DA;
+    border-color: #F5C6CB;
+    color: #721C24;
+}
 </style>
 
 <body>
@@ -238,7 +239,9 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
                             <div class="row">
                                 <div class="col-lg-2">
                                     <div class="profile-image">
-                                        <a href="#"><img src="<?php echo empty($farmer['image']) ? 'images/person.png' : $farmer['image']; ?>" alt="user"></a>
+                                        <a href="#"><img
+                                                src="<?php echo empty($farmer['image']) ? 'images/person.png' : $farmer['image']; ?>"
+                                                alt="user"></a>
                                     </div>
                                 </div>
 
@@ -253,13 +256,15 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
                                         <h6>Full Name</h6>
                                         <p><?php if ($farmer !== null) : ?>
                                         <p><?php echo $farmer['farmer_name']; ?></p>
-                                    <?php else : ?>
+                                        <?php else : ?>
                                         <p>No farmer information available.</p>
-                                    <?php endif; ?></p>
-                                    <ul>
-                                        <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#profile-edit"></button></li>
-                                        <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li>
-                                    </ul>
+                                        <?php endif; ?></p>
+                                        <ul>
+                                            <li><button class="edit icofont-edit" title="Edit This"
+                                                    data-bs-toggle="modal" data-bs-target="#profile-edit"></button></li>
+                                            <li><button class="trash icofont-ui-delete" title="Remove This"
+                                                    data-bs-dismiss="alert"></button></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -279,13 +284,15 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
                                         <h6>Phone No.</h6>
                                         <p><?php if ($farmer !== null) : ?>
                                         <p><?php echo $farmer['Phone_Num']; ?></p>
-                                    <?php else : ?>
+                                        <?php else : ?>
                                         <p>Add Phone No.</p>
-                                    <?php endif; ?></p>
-                                    <ul>
-                                        <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#contact-edit"></button></li>
-                                        <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li>
-                                    </ul>
+                                        <?php endif; ?></p>
+                                        <ul>
+                                            <li><button class="edit icofont-edit" title="Edit This"
+                                                    data-bs-toggle="modal" data-bs-target="#contact-edit"></button></li>
+                                            <li><button class="trash icofont-ui-delete" title="Remove This"
+                                                    data-bs-dismiss="alert"></button></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -306,13 +313,15 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
                                         <h6>Address</h6>
                                         <p><?php if ($farmer !== null) : ?>
                                         <p><?php echo $farmer['Address']; ?></p>
-                                    <?php else : ?>
+                                        <?php else : ?>
                                         <p>Add Address</p>
-                                    <?php endif; ?></p>
-                                    <ul class="user-action">
-                                        <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#address-edit"></button></li>
-                                        <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li>
-                                    </ul>
+                                        <?php endif; ?></p>
+                                        <ul class="user-action">
+                                            <li><button class="edit icofont-edit" title="Edit This"
+                                                    data-bs-toggle="modal" data-bs-target="#address-edit"></button></li>
+                                            <li><button class="trash icofont-ui-delete" title="Remove This"
+                                                    data-bs-dismiss="alert"></button></li>
+                                        </ul>
                                     </div>
                                     <!-- #region -->
                                 </div>
@@ -324,7 +333,7 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
 
             <div class="col-lg-2">
                 <div class="profile-btn">
-                    <a href="Forget.php">Change Password</a>
+                    <a href="change-password.php">Change Password</a>
                 </div>
             </div>
         </div>
@@ -367,7 +376,8 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
                     </div>
                     <div class="form-group">
                         <label class="form-label">Address</label>
-                        <textarea class="form-control" name="Address" placeholder="Barangay, City/Municipality, Province"></textarea>
+                        <textarea class="form-control" name="Address"
+                            placeholder="Barangay, City/Municipality, Province"></textarea>
                     </div>
                     <button class="form-btn" type="submit" name="submit-profile">save address</button>
                 </form>
@@ -398,7 +408,8 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
                     </div>
                     <div class="form-group">
                         <label class="control-label">Profile Image</label>
-                        <input type="file" name="image" id="lastName" class="form-control form-control-danger" placeholder="12n">
+                        <input type="file" name="image" id="lastName" class="form-control form-control-danger"
+                            placeholder="12n">
                     </div>
                     <button class="form-btn" type="submit" name="submit-profile">Save Profile Info</button>
                 </form>
@@ -440,7 +451,8 @@ $farmer = mysqli_fetch_assoc($resultFarmer);
                     </div>
                     <div class="form-group">
                         <label class="form-label">Address</label>
-                        <textarea class="form-control" name="Address" placeholder="Barangay, City/Municipality, Province"></textarea>
+                        <textarea class="form-control" name="Address"
+                            placeholder="Barangay, City/Municipality, Province"></textarea>
                     </div>
                     <button class="form-btn" type="submit" name="submit-profile">Save Address Info</button>
                 </form>

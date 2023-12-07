@@ -4,7 +4,8 @@
 session_start();
 include("../connection/connection.php");
 
-$notification = ''; // Initialize notification variable
+$success = '';
+$error = ''; // Initialize notification variable
 
 if (isset($_SESSION['Email_Session'])) {
     $email = $_SESSION['Email_Session'];
@@ -20,10 +21,10 @@ if (isset($_SESSION['Email_Session'])) {
         $ClosesAt = isset($_POST['ClosesAt']) ? mysqli_real_escape_string($conx, $_POST['ClosesAt']) : '';
         $fbPage = isset($_POST['fbPage']) ? mysqli_real_escape_string($conx, $_POST['fbPage']) : '';
 
-        if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) { 
+        if (isset($_FILES['image']) && $_FILES['image']['error'] === 0) {
             $image_tmp = $_FILES['image']['tmp_name'];
             $image_name = $_FILES['image']['name'];
-            $image_path = "Res_img/" . $image_name; 
+            $image_path = "Res_img/" . $image_name;
 
             if (move_uploaded_file($image_tmp, $image_path)) {
                 $image = mysqli_real_escape_string($conx, $image_path);
@@ -32,22 +33,28 @@ if (isset($_SESSION['Email_Session'])) {
                         VALUES ('{$farmer_id}', '{$storeName}', '{$Address}', '{$storeDesc}', '{$OpensAt}', '{$ClosesAt}', '{$fbPage}', '{$image}')";
 
                 if (mysqli_query($conx, $sql)) {
-                    $notification = "Store added successfully";
+                    $success = "<div class='alert alert-success alert-dismissible fade show' style='background-color: #28a745; color: #fff;>
+                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                        <strong>Your Store is now ready! </strong></div>";
                 } else {
-                    $notification = "Error: " . mysqli_error($conx);
+                    $error = "<div class='alert alert-danger alert-dismissible fade show' style='background-color: #dc3545; color: #fff;'>
+                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                        <strong>Adding Store Error</strong></div>" . mysqli_error($conx);
                 }
             } else {
-                $notification = "Error uploading the image.";
+                $error = "<div class='alert alert-danger alert-dismissible fade show' style='background-color: #dc3545; color: #fff;'>
+                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                        <strong>Error Uploading Image</strong></div>";
             }
         } else {
-            $notification = "Please select an image to upload.";
+            $error = "<div class='alert alert-danger alert-dismissible fade show' style='background-color: #dc3545; color: #fff;'>
+                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                        <strong>Please select an image to upload</strong></div>";
         }
     }
 } else {
-    $notification = "Session not set. Please make sure you are logged in.";
+    $error = "Session not set. Please make sure you are logged in.";
 }
-
-echo $notification; // Output the notification
 ?>
 
 
@@ -203,7 +210,8 @@ echo $notification; // Output the notification
                                     class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
-                                    <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    <li><a href="../farmeraccount/logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                                    </li>
                                     <li><a href="profile.php"><i class="fa fa-user"></i> Profile</a></li>
                                 </ul>
                             </div>
@@ -222,7 +230,7 @@ echo $notification; // Output the notification
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span
+                        <li> <a href="index.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
                         <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span
                                     class="hide-menu">Profile</span></a></li>
@@ -270,6 +278,8 @@ echo $notification; // Output the notification
             <!-- End Bread crumb -->
             <!-- Container fluid  -->
             <div class="container-fluid">
+                <?php echo $error;
+                echo $success; ?>
                 <!-- Start Page Content -->
                 <div class="col-lg-12">
                     <div class="card card-outline-primary">
@@ -405,7 +415,7 @@ echo $notification; // Output the notification
                         <div class="form-actions">
                             <input type="submit" name="submit" class="btn btn-success" value="Save"
                                 style="background: rgb(0, 188, 126);">
-                            <a href="dashboard.php" class="btn btn-inverse">Cancel</a>
+                            <a href="index.php" class="btn btn-inverse">Cancel</a>
                         </div>
                         </form>
                     </div>

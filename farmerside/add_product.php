@@ -40,7 +40,7 @@ if (isset($_SESSION['Email_Session'])) {
                 if (move_uploaded_file($image_tmp, $image_path)) {
                     $product_images[$i] = mysqli_real_escape_string($conx, $image_path);
                 } else {
-                    $error .= "<div class='alert alert-danger alert-dismissible fade show' style='background-color: #dc3545; color: #fff;'>
+                    $error = "<div class='alert alert-danger alert-dismissible fade show' style='background-color: #dc3545; color: #fff;'>
                         <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
                         <strong>Error Uploading the product image {$i}</strong></div>";
                 }
@@ -58,7 +58,7 @@ if (isset($_SESSION['Email_Session'])) {
                         <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
                         <strong>Congrats! New Product Added Successfully.</strong></div>";
         } else {
-            $error .= "<div class='alert alert-danger alert-dismissible fade show' style='background-color: #dc3545; color: #fff;'>
+            $error = "<div class='alert alert-danger alert-dismissible fade show' style='background-color: #dc3545; color: #fff;'>
                         <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
                         <strong>Adding Error</strong></div>";
         }
@@ -144,7 +144,8 @@ if (isset($_SESSION['Email_Session'])) {
                                     class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
-                                    <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    <li><a href="../farmeraccount/logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                                    </li>
                                     <li><a href="profile.php"><i class="fa fa-user"></i> Profile</a></li>
                                 </ul>
                             </div>
@@ -163,7 +164,7 @@ if (isset($_SESSION['Email_Session'])) {
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span
+                        <li> <a href="index.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
                         <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span
                                     class="hide-menu">Profile</span></a></li>
@@ -366,7 +367,7 @@ if (isset($_SESSION['Email_Session'])) {
                         <div class="form-actions">
                             <input type="submit" class="btn btn-success" name="submit_product" value="Add Product"
                                 style="background: rgb(0, 188, 126);">
-                            <a href="dashboard.php" class="btn btn-inverse">Cancel</a>
+                            <a href="index.php" class="btn btn-inverse">Cancel</a>
                         </div>
                         </form>
                     </div>

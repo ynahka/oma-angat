@@ -4,7 +4,6 @@
 include("../connection/connection.php");
 error_reporting(0);
 session_start();
-
 ?>
 
 <head>
@@ -31,14 +30,16 @@ session_start();
     <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
     <script language="javascript" type="text/javascript">
-        var popUpWin = 0;
+    var popUpWin = 0;
 
-        function popUpWindow(URLStr, left, top, width, height) {
-            if (popUpWin) {
-                if (!popUpWin.closed) popUpWin.close();
-            }
-            popUpWin = open(URLStr, 'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width=' + 600 + ',height=' + 600 + ',left=' + left + ', top=' + top + ',screenX=' + left + ',screenY=' + top + '');
+    function popUpWindow(URLStr, left, top, width, height) {
+        if (popUpWin) {
+            if (!popUpWin.closed) popUpWin.close();
         }
+        popUpWin = open(URLStr, 'popUpWin',
+            'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width=' +
+            600 + ',height=' + 600 + ',left=' + left + ', top=' + top + ',screenX=' + left + ',screenY=' + top + '');
+    }
     </script>
 </head>
 
@@ -59,7 +60,8 @@ session_start();
                     <!--   <a class="navbar-brand" href="index.html">
                     <a class="navbar-brand" href="index.php">Oma-Angat</a>
                     </a> -->
-                    <a href="view_order.php" class="navbar-brand"><img src="images/web-logo.png" style="display:inline; width: 30%;" alt="logo"></a>
+                    <a href="view_order.php" class="navbar-brand"><img src="images/web-logo.png"
+                            style="display:inline; width: 30%;" alt="logo"></a>
 
                 </div>
                 <!-- End Logo -->
@@ -67,8 +69,10 @@ session_start();
                     <!-- toggle and nav items -->
                     <ul class="navbar-nav mr-auto mt-md-0">
                         <!-- This is  -->
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  " href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
-                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  "
+                                href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  "
+                                href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
 
 
                     </ul>
@@ -76,9 +80,11 @@ session_start();
                     <ul class="navbar-nav my-lg-0">
 
                         <!-- Search -->
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-search"></i></a>
+                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  "
+                                href="javascript:void(0)"><i class="ti-search"></i></a>
                             <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i class="ti-close"></i></a>
+                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i
+                                        class="ti-close"></i></a>
                             </form>
                         </li>
                         <!-- Comment -->
@@ -91,7 +97,8 @@ session_start();
                                     </li>
 
                                     <li>
-                                        <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all notifications</strong> <i class="fa fa-angle-right"></i> </a>
+                                        <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all
+                                                notifications</strong> <i class="fa fa-angle-right"></i> </a>
                                     </li>
                                 </ul>
                             </div>
@@ -100,10 +107,13 @@ session_start();
 
                         <!-- Profile -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/person.png" alt="user" class="profile-pic" /></a>
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><img src="images/person.png" alt="user"
+                                    class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
-                                    <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    <li><a href="../farmeraccount/logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -121,22 +131,27 @@ session_start();
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li> <a href="index.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span
+                                    class="hide-menu">Dashboard</span></a></li>
                         <li class="nav-label">Log</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"> <span><i class="fa fa-user f-s-20 "></i></span><span class="hide-menu">Users</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"> <span><i
+                                        class="fa fa-user f-s-20 "></i></span><span class="hide-menu">Users</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="allusers.php">All Users</a></li>
                                 <li><a href="add_users.php">Add Users</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Store</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i
+                                    class="fa fa-archive f-s-20 color-warning"></i><span
+                                    class="hide-menu">Store</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
                                 <li><a href="add_category.php">Add Category</a></li>
                                 <li><a href="add_market.php">Add Market</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Product</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery"
+                                    aria-hidden="true"></i><span class="hide-menu">Product</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="all_product.php">All Products</a></li>
                                 <li><a href="add_product.php">Add Product</a></li>
@@ -144,7 +159,8 @@ session_start();
 
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart"
+                                    aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="all_orders.php">All Orders</a></li>
 
@@ -199,8 +215,11 @@ session_start();
                                                 </td>
                                                 <td>
                                                     <center>
-                                                        <a href="javascript:void(0);" onClick="popUpWindow('order_update.php?form_id=<?php echo htmlentities($rows['o_id']); ?>');" title="Update order">
-                                                            <button type="button" class="btn btn-primary">Take Action</button></a>
+                                                        <a href="javascript:void(0);"
+                                                            onClick="popUpWindow('order_update.php?form_id=<?php echo htmlentities($rows['o_id']); ?>');"
+                                                            title="Update order">
+                                                            <button type="button" class="btn btn-primary">Take
+                                                                Action</button></a>
                                                     </center>
                                                 </td>
 
@@ -213,8 +232,11 @@ session_start();
                                                 </td>
                                                 <td>
                                                     <center>
-                                                        <a href="javascript:void(0);" onClick="popUpWindow('userprofile.php?newform_id=<?php echo htmlentities($rows['o_id']); ?>');" title="Update order">
-                                                            <button type="button" class="btn btn-primary">View User Detials</button></a>
+                                                        <a href="javascript:void(0);"
+                                                            onClick="popUpWindow('userprofile.php?newform_id=<?php echo htmlentities($rows['o_id']); ?>');"
+                                                            title="Update order">
+                                                            <button type="button" class="btn btn-primary">View User
+                                                                Detials</button></a>
 
                                                     </center>
                                                 </td>
@@ -258,31 +280,38 @@ session_start();
                                                 $status = $rows['status'];
                                                 if ($status == "" or $status == "NULL") {
                                                 ?>
-                                                    <td>
-                                                        <center><button type="button" class="btn btn-info" style="font-weight:bold;"><span class="fa fa-bars" aria-hidden="true">Dispatch</button></center>
-                                                    </td>
+                                                <td>
+                                                    <center><button type="button" class="btn btn-info"
+                                                            style="font-weight:bold;"><span class="fa fa-bars"
+                                                                aria-hidden="true">Dispatch</button></center>
+                                                </td>
                                                 <?php
                                                 }
                                                 if ($status == "in process") { ?>
-                                                    <td>
-                                                        <center><button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin" aria-hidden="true"></span>On a Way!</button></center>
-                                                    </td>
+                                                <td>
+                                                    <center><button type="button" class="btn btn-warning"><span
+                                                                class="fa fa-cog fa-spin" aria-hidden="true"></span>On a
+                                                            Way!</button></center>
+                                                </td>
                                                 <?php
                                                 }
                                                 if ($status == "closed") {
                                                 ?>
-                                                    <td>
-                                                        <center><button type="button" class="btn btn-success"><span class="fa fa-check-circle" aria-hidden="true">Delivered</button></center>
-                                                    </td>
+                                                <td>
+                                                    <center><button type="button" class="btn btn-success"><span
+                                                                class="fa fa-check-circle"
+                                                                aria-hidden="true">Delivered</button></center>
+                                                </td>
                                                 <?php
                                                 }
                                                 ?>
                                                 <?php
                                                 if ($status == "rejected") {
                                                 ?>
-                                                    <td>
-                                                        <center><button type="button" class="btn btn-danger"> <i class="fa fa-close"></i>cancelled</button> </center>
-                                                    </td>
+                                                <td>
+                                                    <center><button type="button" class="btn btn-danger"> <i
+                                                                class="fa fa-close"></i>cancelled</button> </center>
+                                                </td>
                                                 <?php
                                                 }
                                                 ?>
