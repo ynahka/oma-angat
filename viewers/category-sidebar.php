@@ -221,7 +221,7 @@
                         </ul> -->
                     </li>
                     <li>
-                        <a class="nav-link" href="index.php"><i class="fa-solid fa-comments"></i>Community</a>
+                        <a class="nav-link" href="blog-author.php"><i class="fa-solid fa-comments"></i>Community</a>
                         <!-- <ul class="dropdown-list">
                             <li><a href="home-standard.php">Home standard</a></li>
                         </ul> -->
@@ -268,7 +268,7 @@
                 <i class="fas fa-home"></i>
                 <span>Home</span>
             </a>
-            <a href="community.php" title="community">
+            <a href="blog-author.php" title="community">
                 <i class="fa-solid fa-comments"></i>
                 <span>Community</span>
             </a>

@@ -148,10 +148,25 @@
             <div class="row content-reverse">
                 <div class="col-lg-3">
                     <div class="shop-widget-promo">
-                        <a href="#"><img src="images/promo/shop/01.jpg" alt="promo"></a>
+                        <a><img src="images/promo/features/referral.svg" alt="promo"></a>
+                        <div class="offer-div">
+                            <!-- <h5 class="offer-select">Click to copylink</h5> -->
+                            <button class="offer-select">Click to copylink</button>
+                        </div>
                     </div>
+
+
+                    <div class="shop-widget-promo">
+                        <a><img src="images/promo/features/donation.svg" alt="promo"></a>
+                        <div class="offer-div">
+                            <!-- <h5 class="offer-select">Click to copylink</h5> -->
+                            <button class="offer-select">Click to copylink</button>
+                        </div>
+                    </div>
+
+
                     <div class="shop-widget">
-                        <h6 class="shop-widget-title">Filter by Price</h6>
+                        <h6 class="shop-widget-title">Price Range</h6>
                         <form>
                             <div class="shop-widget-group">
                                 <input type="text" placeholder="Min - 00">
@@ -454,29 +469,30 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="top-filter">
-                                <div class="filter-show">
-                                    <label class="filter-label">Show :</label>
+                                <div class="filter-short">
+                                    <label class="filter-label">Sort by Category :</label>
                                     <select class="form-select filter-select">
-                                        <option value="1">12</option>
-                                        <option value="2">24</option>
-                                        <option value="3">36</option>
+                                        <option selected>All</option>
+                                        <option value="1">Vegetables</option>
+                                        <option value="2">Fruits</option>
+                                        <option value="3">Grains</option>
+                                        <option value="4">Dairies & Eggs</option>
+                                        <option value="5">Fats & Oils</option>
+                                        <option value="6">Processed Goods</option>
+                                        <option value="7">Dried Fish</option>
                                     </select>
                                 </div>
                                 <div class="filter-short">
-                                    <label class="filter-label">Short by :</label>
+                                    <label class="filter-label">Price Range :</label>
                                     <select class="form-select filter-select">
-                                        <option selected>default</option>
-                                        <option value="3">trending</option>
-                                        <option value="1">featured</option>
-                                        <option value="2">recommend</option>
+                                        <option selected>price range</option>
+                                        <option value="3">Lowest to Highest</option>
+                                        <option value="1">Highest to Lowest</option>
+
                                     </select>
                                 </div>
-                                <div class="filter-action">
-                                    <a href="shop-3column.html" title="Three Column"><i class="fas fa-th"></i></a>
-                                    <a href="shop-2column.html" title="Two Column"><i class="fas fa-th-large"></i></a>
-                                    <a href="shop-1column.html" class="active" title="One Column"><i class="fas fa-th-list"></i></a>
-                                </div>
                             </div>
+
                         </div>
                     </div>
                     <div class="row">
@@ -831,30 +847,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="bottom-paginate">
-                                <p class="page-info">Showing 12 of 60 Results</p>
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">
-                                            <i class="fas fa-long-arrow-alt-left"></i>
-                                        </a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">...</li>
-                                    <li class="page-item"><a class="page-link" href="#">60</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">
-                                            <i class="fas fa-long-arrow-alt-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -862,93 +854,6 @@
     <!--=====================================
                     SHOP PART END
         =======================================-->
-
-
-    <!--=====================================
-                    NEWSLETTER PART START
-        =======================================-->
-    <section class="news-part" style="background: url(images/newsletter.jpg) no-repeat center;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-5 col-lg-6 col-xl-7">
-                    <div class="news-text">
-                        <h2>Get 20% Discount for Subscriber</h2>
-                        <p>Lorem ipsum dolor consectetur adipisicing accusantium</p>
-                    </div>
-                </div>
-                <div class="col-md-7 col-lg-6 col-xl-5">
-                    <form class="news-form">
-                        <input type="text" placeholder="Enter Your Email Address">
-                        <button><span><i class="icofont-ui-email"></i>Subscribe</span></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=====================================
-                    NEWSLETTER PART END
-        =======================================-->
-
-
-    <!--=====================================
-                    INTRO PART START
-        =======================================-->
-    <section class="intro-part">
-        <div class="container">
-            <div class="row intro-content">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <div class="intro-content">
-                            <h5>free home delivery</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                        <div class="intro-content">
-                            <h5>instant return policy</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <div class="intro-content">
-                            <h5>quick support system</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="intro-wrap">
-                        <div class="intro-icon">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <div class="intro-content">
-                            <h5>secure payment way</h5>
-                            <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=====================================
-                    INTRO PART END
-        =======================================-->
-
-
-
     <?php include('footer.php'); ?>
     <?php include('js-vendor.php'); ?>
 </body>

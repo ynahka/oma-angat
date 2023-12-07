@@ -118,12 +118,12 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="top-filter">
-                                <div class="filter-show">
+                                <button class="filter-show">
                                     <a href="#">
                                         <i class="icofont-plus"></i>
                                         <span>ADD POST</span>
                                     </a>
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </div>

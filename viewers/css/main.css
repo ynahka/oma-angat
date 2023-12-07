@@ -885,6 +885,10 @@ button:focus {
   background: var(--primary);
 }
 
+.form-btn:hover{
+  color: var(--lighter);
+  background: var(--hovercolor);
+}
 .form-input-group {
   position: relative;
 }
@@ -3351,25 +3355,27 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   justify-content: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px 15px;
   margin: 0px 15px;
+  margin-bottom: 40px;
   border-radius: 0px 0px 8px 8px;
-  background: var(--lighter);
+  background: var(--secondary);
 }
 
 .offer-div h5 {
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
 .offer-div button,
 .offer-div span {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 400;
   color: var(--primary);
-  text-transform: capitalize;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 @media (min-width: 351px) and (max-width: 575px) {
@@ -6727,6 +6733,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   border-radius: 8px;
   text-align: center;
   overflow: hidden;
+  background-color: var(--lighter);
 }
 
 .shop-widget-promo img {
@@ -7003,6 +7010,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 .filter-label {
   font-size: 14px;
   font-weight: 500;
+  width: 100%;
   margin-right: 8px;
   white-space: nowrap;
   text-transform: uppercase;
@@ -7060,12 +7068,25 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
     display: none;
   }
   .filter-show {
-    width: 80px;
+    width: 100%;
   }
   .filter-short {
     width: 130px;
   }
 }
+@media (max-width: 970px) {
+  .filter-label,
+  .filter-action {
+    display: none;
+  }
+  .filter-show {
+    width: 100%;
+  }
+  .filter-short {
+    width: 130px;
+  }
+}
+
 
 .bottom-paginate {
   padding-top: 25px;
