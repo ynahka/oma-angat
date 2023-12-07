@@ -56,7 +56,7 @@
                          <!-- LOGIN PAGE -->
                          <!-- LOGIN PAGE -->
 
-                         <a href="../buyeraccount/index.php" class="header-widget" title="Join">
+                         <a href="get-started.php" class="header-widget" title="Join">
                              <button>Get Started</button></a>
 
 
