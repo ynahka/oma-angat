@@ -2456,7 +2456,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   padding: 15px 15px;
   border-radius: 8px;
   background: var(--lighter);
-  border: 1px solid var(--border);
+box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6739,16 +6739,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 .shop-widget-promo img {
   width: 100%;
   border-radius: 8px;
-  transition: all linear 0.3s;
-  -webkit-transition: all linear 0.3s;
-  -moz-transition: all linear 0.3s;
-  -ms-transition: all linear 0.3s;
-  -o-transition: all linear 0.3s;
-}
 
-.shop-widget-promo img:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
 }
 
 .shop-widget {
@@ -6785,11 +6776,6 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  transition: all linear 0.3s;
-  -webkit-transition: all linear 0.3s;
-  -moz-transition: all linear 0.3s;
-  -ms-transition: all linear 0.3s;
-  -o-transition: all linear 0.3s;
 }
 
 .shop-widget-btn:hover {
@@ -7010,7 +6996,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 .filter-label {
   font-size: 14px;
   font-weight: 500;
-  width: 100%;
+  /* width: 100%; */
   margin-right: 8px;
   white-space: nowrap;
   text-transform: uppercase;
@@ -7140,16 +7126,9 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 .home-grid-promo a img {
   width: 100%;
   border-radius: 8px;
-  transition: all linear 0.3s;
-  -webkit-transition: all linear 0.3s;
-  -moz-transition: all linear 0.3s;
-  -ms-transition: all linear 0.3s;
-  -o-transition: all linear 0.3s;
+  
 }
-.home-grid-promo a img:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
+
 .home-grid-slider {
   margin-bottom: 25px;
 }
