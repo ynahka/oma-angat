@@ -18,7 +18,6 @@ if (empty($_SESSION["Email_Session"])) {
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <title>Oma-Angat Seller Center</title>
     <link rel="icon" href="images/web-logo.png" type="icon type">
     <!-- Bootstrap Core CSS -->
