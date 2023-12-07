@@ -85,27 +85,27 @@ if (isset($_SESSION['Email_Session'])) {
 
     <!-- Add the CSS for the pop-up notification -->
     <style>
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #f44336;
-            color: white;
-            padding: 16px;
-            z-index: 1;
-            text-align: center;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f44336;
+        color: white;
+        padding: 16px;
+        z-index: 1;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
 
-        #close-notification {
-            background-color: transparent;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+    #close-notification {
+        background-color: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
     </style>
 </head>
 
@@ -119,30 +119,30 @@ if (isset($_SESSION['Email_Session'])) {
 
     <!-- Add the JavaScript for the pop-up notification -->
     <script>
-        function showNotification(message) {
-            var popup = document.getElementById('notification-popup');
-            var notificationMessage = document.getElementById('notification-message');
+    function showNotification(message) {
+        var popup = document.getElementById('notification-popup');
+        var notificationMessage = document.getElementById('notification-message');
 
-            notificationMessage.innerHTML = message;
-            popup.style.display = 'block';
+        notificationMessage.innerHTML = message;
+        popup.style.display = 'block';
 
-            setTimeout(function() {
-                hideNotification();
-            }, 3000);
-        }
-
-        function hideNotification() {
-            var popup = document.getElementById('notification-popup');
-            popup.style.display = 'none';
-        }
-
-        document.getElementById('close-notification').addEventListener('click', function() {
+        setTimeout(function() {
             hideNotification();
-        });
+        }, 3000);
+    }
 
-        <?php if (!empty($notification)) { ?>
-            showNotification('<?php echo $notification; ?>');
-        <?php } ?>
+    function hideNotification() {
+        var popup = document.getElementById('notification-popup');
+        popup.style.display = 'none';
+    }
+
+    document.getElementById('close-notification').addEventListener('click', function() {
+        hideNotification();
+    });
+
+    <?php if (!empty($notification)) { ?>
+    showNotification('<?php echo $notification; ?>');
+    <?php } ?>
     </script>
     <!-- Preloader - style you can find in spinners.css -->
     <div class="preloader">
@@ -158,7 +158,8 @@ if (isset($_SESSION['Email_Session'])) {
                 <!-- Logo -->
                 <div class="navbar-header">
                     <!-- <a class="navbar-brand" href="index.html"> -->
-                    <a href="../index.php" class="navbar-brand"><img src="images/web-logo.png" style="display:inline; width: 30%;" alt="logo"></a>
+                    <a href="../index.php" class="navbar-brand"><img src="images/web-logo.png"
+                            style="display:inline; width: 30%;" alt="logo"></a>
                     </a>
                 </div>
                 <!-- End Logo -->
@@ -166,8 +167,10 @@ if (isset($_SESSION['Email_Session'])) {
                     <!-- toggle and nav items -->
                     <ul class="navbar-nav mr-auto mt-md-0">
                         <!-- This is  -->
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  " href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
-                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  "
+                                href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  "
+                                href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
 
 
                     </ul>
@@ -175,9 +178,11 @@ if (isset($_SESSION['Email_Session'])) {
                     <ul class="navbar-nav my-lg-0">
 
                         <!-- Search -->
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-search"></i></a>
+                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  "
+                                href="javascript:void(0)"><i class="ti-search"></i></a>
                             <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i class="ti-close"></i></a>
+                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i
+                                        class="ti-close"></i></a>
                             </form>
                         </li>
                         <!-- Comment -->
@@ -200,10 +205,13 @@ if (isset($_SESSION['Email_Session'])) {
 
                         <!-- Profile -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/person.png" alt="user" class="profile-pic" /></a>
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><img src="images/person.png" alt="user"
+                                    class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
-                                    <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    <li><a href="../farmeraccount/logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                                    </li>
                                     <li><a href="profile.php"><i class="fa fa-user"></i> Profile</a></li>
                                 </ul>
                             </div>
@@ -222,23 +230,29 @@ if (isset($_SESSION['Email_Session'])) {
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a></li>
-                        <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Profile</span></a></li>
+                        <li> <a href="index.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span
+                                    class="hide-menu">Dashboard</span></a></li>
+                        <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span
+                                    class="hide-menu">Profile</span></a></li>
                         <li class="nav-label">Log</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Market</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i
+                                    class="fa fa-archive f-s-20 color-warning"></i><span
+                                    class="hide-menu">Market</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
                                 <li><a href="add_category.php">Add Category</a></li>
                                 <li><a href="add_market.php">Add Market</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Products</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery"
+                                    aria-hidden="true"></i><span class="hide-menu">Products</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="all_product.php">All Products</a></li>
                                 <li><a href="add_product.php">Add Products</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart"
+                                    aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="all_orders.php">All Orders</a></li>
 
@@ -280,13 +294,16 @@ if (isset($_SESSION['Email_Session'])) {
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">Store Name</label>
-                                                <input type="text" name="storeName" class="form-control" placeholder="Store Name">
+                                                <input type="text" name="storeName" class="form-control"
+                                                    placeholder="Store Name">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group has-danger">
                                                 <label class="control-label">Facebook Page</label>
-                                                <input type="text" name="fbPage" class="form-control form-control-danger" placeholder="http://example.com">
+                                                <input type="text" name="fbPage"
+                                                    class="form-control form-control-danger"
+                                                    placeholder="http://example.com">
                                             </div>
                                         </div>
                                     </div>
@@ -295,7 +312,8 @@ if (isset($_SESSION['Email_Session'])) {
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">Open Hours</label>
-                                                <select name="OpensAt" class="form-control custom-select" data-placeholder="Choose a Category">
+                                                <select name="OpensAt" class="form-control custom-select"
+                                                    data-placeholder="Choose a Category">
                                                     <option>--Select your Hours--</option>
                                                     <option value="1:00:00">1:00:00</option>
                                                     <option value="2:00:00">2:00:00</option>
@@ -327,7 +345,8 @@ if (isset($_SESSION['Email_Session'])) {
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">Close Hours</label>
-                                                <select name="ClosesAt" class="form-control custom-select" data-placeholder="Choose a Category">
+                                                <select name="ClosesAt" class="form-control custom-select"
+                                                    data-placeholder="Choose a Category">
                                                     <option>--Select your Hours--</option>
                                                     <option value="1:00:00">1:00:00</option>
                                                     <option value="2:00:00">2:00:00</option>
@@ -360,7 +379,8 @@ if (isset($_SESSION['Email_Session'])) {
                                         <div class="col-md-6">
                                             <div class="form-group has-danger">
                                                 <label class="control-label">Image</label>
-                                                <input type="file" name="image" id="lastName" class="form-control form-control-danger" placeholder="12n">
+                                                <input type="file" name="image" id="lastName"
+                                                    class="form-control form-control-danger" placeholder="12n">
                                             </div>
                                         </div>
                                         <!--/span-->
@@ -372,7 +392,8 @@ if (isset($_SESSION['Email_Session'])) {
                                         <div class="col-md-12 ">
                                             <div class="form-group">
 
-                                                <textarea name="Address" type="text" style="height:100px;" class="form-control"></textarea>
+                                                <textarea name="Address" type="text" style="height:100px;"
+                                                    class="form-control"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -383,7 +404,8 @@ if (isset($_SESSION['Email_Session'])) {
                                     <div class="row">
                                         <div class="col-md-12 ">
                                             <div class="form-group">
-                                                <textarea name="storeDesc" type="text" style="height:100px;" class="form-control"></textarea>
+                                                <textarea name="storeDesc" type="text" style="height:100px;"
+                                                    class="form-control"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -391,8 +413,9 @@ if (isset($_SESSION['Email_Session'])) {
                                 </div>
                         </div>
                         <div class="form-actions">
-                            <input type="submit" name="submit" class="btn btn-success" value="Save" style="background: rgb(0, 188, 126);">
-                            <a href="dashboard.php" class="btn btn-inverse">Cancel</a>
+                            <input type="submit" name="submit" class="btn btn-success" value="Save"
+                                style="background: rgb(0, 188, 126);">
+                            <a href="index.php" class="btn btn-inverse">Cancel</a>
                         </div>
                         </form>
                     </div>

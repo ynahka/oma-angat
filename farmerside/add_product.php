@@ -108,7 +108,8 @@ if (isset($_SESSION['Email_Session'])) {
                 <!-- Logo -->
                 <div class="navbar-header">
                     <!-- <a class="navbar-brand" href="index.html"> -->
-                    <a href="add_product.php" class="navbar-brand"><img src="images/web-logo.png" style="display:inline; width: 30%;" alt="logo"></a>
+                    <a href="add_product.php" class="navbar-brand"><img src="images/web-logo.png"
+                            style="display:inline; width: 30%;" alt="logo"></a>
                     </a>
                 </div>
                 <!-- End Logo -->
@@ -116,8 +117,10 @@ if (isset($_SESSION['Email_Session'])) {
                     <!-- toggle and nav items -->
                     <ul class="navbar-nav mr-auto mt-md-0">
                         <!-- This is  -->
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  " href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
-                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  "
+                                href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  "
+                                href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
 
 
                     </ul>
@@ -125,19 +128,24 @@ if (isset($_SESSION['Email_Session'])) {
                     <ul class="navbar-nav my-lg-0">
 
                         <!-- Search -->
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-search"></i></a>
+                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  "
+                                href="javascript:void(0)"><i class="ti-search"></i></a>
                             <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i class="ti-close"></i></a>
+                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i
+                                        class="ti-close"></i></a>
                             </form>
                         </li>
 
 
                         <!-- Profile -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/person.png" alt="user" class="profile-pic" /></a>
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><img src="images/person.png" alt="user"
+                                    class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
-                                    <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    <li><a href="../farmeraccount/logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                                    </li>
                                     <li><a href="profile.php"><i class="fa fa-user"></i> Profile</a></li>
                                 </ul>
                             </div>
@@ -156,10 +164,14 @@ if (isset($_SESSION['Email_Session'])) {
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a></li>
-                        <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Profile</span></a></li>
+                        <li> <a href="index.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span
+                                    class="hide-menu">Dashboard</span></a></li>
+                        <li> <a href="profile.php" aria-expanded="false"><i class="fa fa-user"></i><span
+                                    class="hide-menu">Profile</span></a></li>
                         <li class="nav-label">Log</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Market</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i
+                                    class="fa fa-archive f-s-20 color-warning"></i><span
+                                    class="hide-menu">Market</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
                                 <li><a href="add_category.php">Add Category</a></li>
@@ -167,7 +179,8 @@ if (isset($_SESSION['Email_Session'])) {
 
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Product</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery"
+                                    aria-hidden="true"></i><span class="hide-menu">Product</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="all_product.php">All Products</a></li>
                                 <li><a href="add_product.php">Add Product</a></li>
@@ -175,7 +188,8 @@ if (isset($_SESSION['Email_Session'])) {
 
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart"
+                                    aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="all_orders.php">All Orders</a></li>
 
@@ -217,26 +231,32 @@ if (isset($_SESSION['Email_Session'])) {
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">Product Name</label>
-                                                <input type="text" name="ProductName" class="form-control" placeholder="Product Name">
+                                                <input type="text" name="ProductName" class="form-control"
+                                                    placeholder="Product Name">
                                             </div>
                                         </div>
 
                                         <div class="col-md-6">
                                             <div class="form-group has-danger">
                                                 <label class="control-label">Product Description</label>
-                                                <input type="text" name="description" class="form-control form-control-danger" placeholder="Description">
+                                                <input type="text" name="description"
+                                                    class="form-control form-control-danger" placeholder="Description">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group has-danger">
                                                 <label class="control-label">Available Quantity</label>
-                                                <input type="text" name="QuantityAvlbl" class="form-control form-control-danger" placeholder="Available Quantity">
+                                                <input type="text" name="QuantityAvlbl"
+                                                    class="form-control form-control-danger"
+                                                    placeholder="Available Quantity">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group has-danger">
                                                 <label class="control-label">Quantity Sold</label>
-                                                <input type="text" name="QuantiSold" class="form-control form-control-danger" placeholder="Quantity Sold">
+                                                <input type="text" name="QuantiSold"
+                                                    class="form-control form-control-danger"
+                                                    placeholder="Quantity Sold">
                                             </div>
                                         </div>
                                         <!--/span-->
@@ -267,31 +287,40 @@ if (isset($_SESSION['Email_Session'])) {
                                         <div class="col-md-6">
                                             <div class="form-group has-danger">
                                                 <label class="control-label"> Product Image</label>
-                                                <input type="file" name="product_image" id="lastName" class="form-control form-control-danger" placeholder="12n">
+                                                <input type="file" name="product_image" id="lastName"
+                                                    class="form-control form-control-danger" placeholder="12n">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group has-danger">
                                                 <label class="control-label">Additional Product Image 2</label>
-                                                <input type="file" name="product_image2" class="form-control form-control-danger" placeholder="Additional Image 2">
+                                                <input type="file" name="product_image2"
+                                                    class="form-control form-control-danger"
+                                                    placeholder="Additional Image 2">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group has-danger">
                                                 <label class="control-label">Additional Product Image 3</label>
-                                                <input type="file" name="product_image3" class="form-control form-control-danger" placeholder="Additional Image 3">
+                                                <input type="file" name="product_image3"
+                                                    class="form-control form-control-danger"
+                                                    placeholder="Additional Image 3">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group has-danger">
                                                 <label class="control-label">Additional Product Image 4</label>
-                                                <input type="file" name="product_image4" class="form-control form-control-danger" placeholder="Additional Image 4">
+                                                <input type="file" name="product_image4"
+                                                    class="form-control form-control-danger"
+                                                    placeholder="Additional Image 4">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group has-danger">
                                                 <label class="control-label">Additional Product Image 5</label>
-                                                <input type="file" name="product_image5" class="form-control form-control-danger" placeholder="Additional Image 5">
+                                                <input type="file" name="product_image5"
+                                                    class="form-control form-control-danger"
+                                                    placeholder="Additional Image 5">
                                             </div>
                                         </div>
 
@@ -300,7 +329,8 @@ if (isset($_SESSION['Email_Session'])) {
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="control-label">Select Category</label>
-                                                <select name="category_id" class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
+                                                <select name="category_id" class="form-control custom-select"
+                                                    data-placeholder="Choose a Category" tabindex="1">
                                                     <option>--Select Category--</option>
                                                     <?php
                                                     $result = mysqli_query($conx, "SELECT category_id, ctgry_name FROM productcategory");
@@ -318,7 +348,8 @@ if (isset($_SESSION['Email_Session'])) {
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="control-label">Select Harvest Date</label>
-                                                <select name="harvest_id" class="form-control custom-select" data-placeholder="Choose a harvest date" tabindex="1">
+                                                <select name="harvest_id" class="form-control custom-select"
+                                                    data-placeholder="Choose a harvest date" tabindex="1">
                                                     <option>--Select Harvest Date--</option>
                                                     <?php
                                                     $result = mysqli_query($conx, "SELECT harvest_id, HarvestDate, harvestEnd FROM harvestingcalendar");
@@ -334,8 +365,9 @@ if (isset($_SESSION['Email_Session'])) {
                                 </div>
                         </div>
                         <div class="form-actions">
-                            <input type="submit" class="btn btn-success" name="submit_product" value="Add Product" style="background: rgb(0, 188, 126);">
-                            <a href="dashboard.php" class="btn btn-inverse">Cancel</a>
+                            <input type="submit" class="btn btn-success" name="submit_product" value="Add Product"
+                                style="background: rgb(0, 188, 126);">
+                            <a href="index.php" class="btn btn-inverse">Cancel</a>
                         </div>
                         </form>
                     </div>

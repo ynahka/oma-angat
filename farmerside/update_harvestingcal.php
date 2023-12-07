@@ -92,7 +92,8 @@ function validateDate($date)
                     <!--   <a class="navbar-brand" href="index.html">
                     <a class="navbar-brand" href="index.php">Oma-Angat</a>
                     </a> -->
-                    <a href="update_market.php" class="navbar-brand"><img src="images/web-logo.png" style="display:inline; width: 30%;" alt="logo"></a>
+                    <a href="update_market.php" class="navbar-brand"><img src="images/web-logo.png"
+                            style="display:inline; width: 30%;" alt="logo"></a>
 
                 </div>
                 <!-- End Logo -->
@@ -100,10 +101,14 @@ function validateDate($date)
                     <!-- toggle and nav items -->
                     <ul class="navbar-nav mr-auto mt-md-0">
                         <!-- This is  -->
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  " href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
-                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  "
+                                href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  "
+                                href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
                         <!-- Messages -->
-                        <li class="nav-item dropdown mega-dropdown"> <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-th-large"></i></a>
+                        <li class="nav-item dropdown mega-dropdown"> <a class="nav-link dropdown-toggle text-muted  "
+                                href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                    class="fa fa-th-large"></i></a>
                             <div class="dropdown-menu animated zoomIn">
                                 <ul class="mega-dropdown-menu row">
 
@@ -113,13 +118,15 @@ function validateDate($date)
                                         <!-- Contact -->
                                         <form>
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="exampleInputname1" placeholder="Enter Name">
+                                                <input type="text" class="form-control" id="exampleInputname1"
+                                                    placeholder="Enter Name">
                                             </div>
                                             <div class="form-group">
                                                 <input type="email" class="form-control" placeholder="Enter email">
                                             </div>
                                             <div class="form-group">
-                                                <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Message"></textarea>
+                                                <textarea class="form-control" id="exampleTextarea" rows="3"
+                                                    placeholder="Message"></textarea>
                                             </div>
                                             <button type="submit" class="btn btn-info">Submit</button>
                                         </form>
@@ -181,19 +188,24 @@ function validateDate($date)
                     <ul class="navbar-nav my-lg-0">
 
                         <!-- Search -->
-                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-search"></i></a>
+                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  "
+                                href="javascript:void(0)"><i class="ti-search"></i></a>
                             <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i class="ti-close"></i></a>
+                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i
+                                        class="ti-close"></i></a>
                             </form>
                         </li>
 
 
                         <!-- Profile -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/person.png" alt="user" class="profile-pic" /></a>
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><img src="images/person.png" alt="user"
+                                    class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
-                                    <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    <li><a href="../farmeraccount/logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                                    </li>
                                     <li><a href="profile.php"><i class="fa fa-person"></i> Profile</a></li>
                                 </ul>
                             </div>
@@ -212,17 +224,21 @@ function validateDate($date)
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li class="nav-label">Home</li>
-                        <li> <a href="dashboard.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li> <a href="index.php" aria-expanded="false"><i class="fa fa-tachometer"></i><span
+                                    class="hide-menu">Dashboard</span></a></li>
 
                         <li class="nav-label">Log</li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Store</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i
+                                    class="fa fa-archive f-s-20 color-warning"></i><span
+                                    class="hide-menu">Store</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="add_harvestdate.php">Harvesting Calendar</a></li>
                                 <li><a href="add_category.php">Add Category</a></li>
                                 <li><a href="add_market.php">Add Market</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Product</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery"
+                                    aria-hidden="true"></i><span class="hide-menu">Product</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="all_product.php">All Products</a></li>
                                 <li><a href="add_product.php">Add Product</a></li>
@@ -230,7 +246,8 @@ function validateDate($date)
 
                             </ul>
                         </li>
-                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-shopping-cart"
+                                    aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="all_orders.php">All Orders</a></li>
 
@@ -253,7 +270,7 @@ function validateDate($date)
                 </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                         <li class="breadcrumb-item active">Update Product</li>
                         <li class="breadcrumb-item active"><a href="all_product.php">View All Products</a></li>
                     </ol>
@@ -283,14 +300,17 @@ function validateDate($date)
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label"> Harvest Start</label>
-                                                <input type="text" name="HarvestDate" value="<?php echo $roww['HarvestDate']; ?>" class="form-control">
+                                                <input type="text" name="HarvestDate"
+                                                    value="<?php echo $roww['HarvestDate']; ?>" class="form-control">
                                             </div>
                                         </div>
                                         <!--/span-->
                                         <div class="col-md-6">
                                             <div class="form-group has-danger">
                                                 <label class="control-label">Harvest End</label>
-                                                <input type="date" name="harvestEnd" value="<?php echo $roww['harvestEnd']; ?>" class="form-control form-control-danger" placeholder="Description">
+                                                <input type="date" name="harvestEnd"
+                                                    value="<?php echo $roww['harvestEnd']; ?>"
+                                                    class="form-control form-control-danger" placeholder="Description">
                                             </div>
                                         </div>
                                         <!--/span-->
@@ -299,8 +319,9 @@ function validateDate($date)
                                 </div>
                         </div>
                         <div class="form-actions">
-                            <input type="submit" name="update_calendar" class="btn btn-success" value="Save" style="background: rgb(0, 188, 126);">
-                            <a href="dashboard.php" class="btn btn-inverse">Cancel</a>
+                            <input type="submit" name="update_calendar" class="btn btn-success" value="Save"
+                                style="background: rgb(0, 188, 126);">
+                            <a href="index.php" class="btn btn-inverse">Cancel</a>
                         </div>
                         </form>
                     </div>
