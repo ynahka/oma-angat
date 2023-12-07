@@ -2,11 +2,8 @@
 <html lang="en">
 <?php
 include("../connection/connection.php");
-error_reporting(0);
 session_start();
-if (empty($_SESSION["Email_Session"])) {
-    header('location:../farmeraccount/index.php');
-} else {
+error_reporting(0);
 ?>
 
 <head>
@@ -16,13 +13,14 @@ if (empty($_SESSION["Email_Session"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- Favicon icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Flag icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.0.3/css/flag-icons.min.css">
     <title>Oma-Angat Seller Center</title>
     <link rel="icon" href="images/web-logo.png" type="icon type">
     <!-- Bootstrap Core CSS -->
     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
     <link href="css/helper.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <!-- FullCalendar CSS -->
@@ -54,7 +52,7 @@ if (empty($_SESSION["Email_Session"])) {
                     <!-- toggle and nav items -->
                     <ul class="navbar-nav mr-auto mt-md-0">
                         <!-- This is  -->
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  "
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted "
                                 href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
                         <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  "
                                 href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
@@ -65,8 +63,8 @@ if (empty($_SESSION["Email_Session"])) {
                         <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  "
                                 href="javascript:void(0)"><i class="ti-search"></i></a>
                             <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i
-                                        class="ti-close"></i></a>
+                                <input type="text" class="form-control" placeholder="Search here" id="search"> <a
+                                    class="srh-btn"><i class="ti-close"></i></a>
                             </form>
                         </li>
                         <!-- Comment -->
@@ -88,13 +86,13 @@ if (empty($_SESSION["Email_Session"])) {
                         <!-- Profile -->
                         <li class="nav-item dropdown">
                             <?php
-                                // Fetch the farmer's image path
-                                $imagePath = ''; // Replace this with the actual column name
-                                $resultFarmer = mysqli_query($conx, "SELECT image FROM farmer WHERE user_id = (SELECT user_id FROM useraccount WHERE email = '{$email}')");
-                                if ($resultFarmer && $rowFarmer = mysqli_fetch_assoc($resultFarmer)) {
-                                    $imagePath = $rowFarmer['image'];
-                                }
-                                ?>
+                            // Fetch the farmer's image path
+                            $imagePath = ''; // Replace this with the actual column name
+                            $resultFarmer = mysqli_query($conx, "SELECT image FROM farmer WHERE user_id = (SELECT user_id FROM useraccount WHERE email = '{$email}')");
+                            if ($resultFarmer && $rowFarmer = mysqli_fetch_assoc($resultFarmer)) {
+                                $imagePath = $rowFarmer['image'];
+                            }
+                            ?>
                             <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                             </a>
@@ -176,30 +174,30 @@ if (empty($_SESSION["Email_Session"])) {
                                 <div class="media-body media-text-right">
                                     <h2 style="color: white; font-weight: 700">
                                         <?php
-                                            if (isset($_SESSION['Email_Session'])) {
-                                                $email = $_SESSION['Email_Session'];
-                                                $result_user_id = mysqli_query($conx, "SELECT user_id FROM useraccount WHERE email='{$email}'");
+                                        if (isset($_SESSION['Email_Session'])) {
+                                            $email = $_SESSION['Email_Session'];
+                                            $result_user_id = mysqli_query($conx, "SELECT user_id FROM useraccount WHERE email='{$email}'");
 
-                                                if ($result_user_id) {
-                                                    $row_user_id = mysqli_fetch_assoc($result_user_id);
-                                                    $user_id = $row_user_id['user_id'];
+                                            if ($result_user_id) {
+                                                $row_user_id = mysqli_fetch_assoc($result_user_id);
+                                                $user_id = $row_user_id['user_id'];
 
-                                                    $result_store = mysqli_query($conx, "SELECT * FROM Store WHERE user_id = {$user_id}");
+                                                $result_store = mysqli_query($conx, "SELECT * FROM Store WHERE user_id = {$user_id}");
 
-                                                    if ($result_store) {
-                                                        $rws = mysqli_num_rows($result_store);
-                                                        echo $rws;
-                                                    } else {
-                                                        echo "0"; // Display 0 if there is an issue with the Store query
-                                                    }
+                                                if ($result_store) {
+                                                    $rws = mysqli_num_rows($result_store);
+                                                    echo $rws;
                                                 } else {
-                                                    echo "0"; // Display 0 if there is an issue with the user_id query
+                                                    echo "0"; // Display 0 if there is an issue with the Store query
                                                 }
                                             } else {
-                                                echo "0"; // Display 0 if the session variable is not set
+                                                echo "0"; // Display 0 if there is an issue with the user_id query
                                             }
+                                        } else {
+                                            echo "0"; // Display 0 if the session variable is not set
+                                        }
 
-                                            ?>
+                                        ?>
                                     </h2>
 
                                     <p class="m-b-0" style="color: white;">My market</p>
@@ -217,18 +215,18 @@ if (empty($_SESSION["Email_Session"])) {
                                 <div class="media-body media-text-right">
                                     <h2 style="color: white; font-weight: 700">
                                         <?php
-                                            $user_id = $_SESSION['user_id']; // Assuming you have a session variable for user ID
-                                            $sql = "SELECT COUNT(*) AS product_count FROM products WHERE user_id = $user_id";
-                                            $result = mysqli_query($conx, $sql);
+                                        $user_id = $_SESSION['user_id']; // Assuming you have a session variable for user ID
+                                        $sql = "SELECT COUNT(*) AS product_count FROM products WHERE user_id = $user_id";
+                                        $result = mysqli_query($conx, $sql);
 
-                                            if ($result) {
-                                                $row = mysqli_fetch_assoc($result);
-                                                $poduct_count = $row['product_count'];
-                                                echo $product_count;
-                                            } else {
-                                                echo "0"; // Display 0 if there is an issue with the query
-                                            }
-                                            ?>
+                                        if ($result) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $poduct_count = $row['product_count'];
+                                            echo $product_count;
+                                        } else {
+                                            echo "0"; // Display 0 if there is an issue with the query
+                                        }
+                                        ?>
                                     </h2>
                                     <p class="m-b-0" style="color: white;">Products</p>
                                 </div>
@@ -244,18 +242,18 @@ if (empty($_SESSION["Email_Session"])) {
                                 <div class="media-body media-text-right">
                                     <h2 style="color: white; font-weight: 700">
                                         <?php
-                                            $user_id = $_SESSION['user_id']; // Assuming you have a session variable for user ID
-                                            $sql = "SELECT COUNT(*) AS customer_count FROM customer WHERE user_id = $user_id";
-                                            $result = mysqli_query($conx, $sql);
+                                        $user_id = $_SESSION['user_id']; // Assuming you have a session variable for user ID
+                                        $sql = "SELECT COUNT(*) AS customer_count FROM customer WHERE user_id = $user_id";
+                                        $result = mysqli_query($conx, $sql);
 
-                                            if ($result) {
-                                                $row = mysqli_fetch_assoc($result);
-                                                $customer_count = $row['customer_count'];
-                                                echo $customer_count;
-                                            } else {
-                                                echo "0"; // Display 0 if there is an issue with the query
-                                            }
-                                            ?>
+                                        if ($result) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $customer_count = $row['customer_count'];
+                                            echo $customer_count;
+                                        } else {
+                                            echo "0"; // Display 0 if there is an issue with the query
+                                        }
+                                        ?>
                                     </h2>
                                     <p class="m-b-0" style="color: white;">Customer</p>
                                 </div>
@@ -272,9 +270,9 @@ if (empty($_SESSION["Email_Session"])) {
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 style="color: white; font-weight: 700"><?php $sql = "select * from orders";
-                                                                                    $result = mysqli_query($db, $sql);
-                                                                                    $rws = mysqli_num_rows($result);
-                                                                                    echo $rws; ?>
+                                                                                $result = mysqli_query($db, $sql);
+                                                                                $rws = mysqli_num_rows($result);
+                                                                                echo $rws; ?>
                                     </h2>
                                     <p class="m-b-0" style="color: white;">Orders</p>
                                 </div>
@@ -303,7 +301,6 @@ if (empty($_SESSION["Email_Session"])) {
     <!-- End Wrapper -->
     <!-- All Jquery -->
     <!-- jQuery -->
-    <script src="js/lib/jquery/jquery.min.js"></script>
     <script src="js/lib/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="js/lib/bootstrap/js/popper.min.js"></script>
@@ -370,6 +367,3 @@ if (empty($_SESSION["Email_Session"])) {
 </body>
 
 </html>
-<?php
-}
-?>
