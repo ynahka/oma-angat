@@ -95,7 +95,7 @@
                 "name" => $row['storeName'],
                 "img" => "images/brand/{$row['store_id']}.svg", // Assuming each store has a unique ID
                 "url" => "shop-1column.php", // You may want to customize this based on your requirements
-                "title" => "Farmer-" . $row['farmer_id'],
+                "title" => $row['storeName'],
                 // Add more fields as needed
             ];
 
