@@ -28,9 +28,9 @@
             <div class="row justify-content-center">
                 <div class="row1 col-md-7 col-lg-4">
                     <div class="blog-widget">
-                        <h3 class="blog-widget-title">Search Product</h3>
+                        <h3 class="blog-widget-title">Search Post</h3>
                         <form class="blog-widget-form">
-                            <input type="text" placeholder="Search Product">
+                            <input type="text" placeholder="search ">
                             <button class="icofont-search-1"></button>
                         </form>
                     </div>
@@ -118,19 +118,6 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="top-filter">
-                                <div class="filter-short">
-                                    <label class="filter-label">Sort by Category :</label>
-                                    <select class="form-select filter-select">
-                                        <option selected>All</option>
-                                        <option value="3">Vegetables</option>
-                                        <option value="1">Fruits</option>
-                                        <option value="2">Grains</option>
-                                        <option value="3">Dairies & Eggs</option>
-                                        <option value="4">Fats & Oils</option>
-                                        <option value="5">Processed Goods</option>
-                                        <option value="6">Dried Fish</option>
-                                    </select>
-                                </div>
                                 <div class="filter-show">
                                     <a href="#">
                                         <i class="icofont-plus"></i>
