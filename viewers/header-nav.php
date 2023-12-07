@@ -57,7 +57,7 @@
                          <!-- LOGIN PAGE -->
                          <?php if (!isset($_SESSION['Email_Session'])) : ?>
                              <a href="../buyeraccount/index.php" class="header-widget" title="Join">
-                                 <button>Shop Now</button>
+                                 <button>Get Started</button>
                              </a>
                          <?php endif; ?>
 

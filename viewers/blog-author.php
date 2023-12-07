@@ -36,8 +36,8 @@
                                         <img src="images/avatar/01.jpg" alt="avatar">
                                     </a>
                                     <div class="author-info">
-                                        <h3 class="author-name">miron mahmud</h3>
-                                        <h6 class="author-mail">mironcoder@gmail.com</h6>
+                                        <h3 class="author-name">Oma-angat</h3>
+                                        <h6 class="author-mail">omangat@gmail.com</h6>
                                         <ul class="author-social">
                                             <li><a href="#" class="icofont-facebook"></a></li>
                                             <li><a href="#" class="icofont-twitter"></a></li>
