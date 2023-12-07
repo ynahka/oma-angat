@@ -849,6 +849,7 @@ button:focus {
   letter-spacing: 0.3px;
   background-size: 12px 10px;
   text-transform: capitalize;
+  /* background-color: var(--secondary); */
   color: var(--text);
   cursor: pointer;
 }
@@ -1975,7 +1976,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   padding-top: 12px;
   padding-left: 12px;
   text-align: center;
-  border-top: 1px solid var(--border);
+  /* border-top: 1px solid var(--border); */
 }
 
 .product-rating {
@@ -3283,7 +3284,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 .blog-btn {
   font-size: 15px;
   font-weight: 500;
-  color: var(--lighter);
+  color: var(--primary);
   text-transform: uppercase;
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;
@@ -3302,7 +3303,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 }
 
 .blog-btn:hover {
-  color: var(--lighter);
+  color: var(--hovercolor);
   text-decoration: underline;
 }
 
@@ -6974,7 +6975,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 }
 
 .filter-short {
-  width: 225px;
+  width: 325px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6987,16 +6988,16 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 }
 
 .filter-show {
-  width: 125px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-align:end;
+  -ms-flex-align: end;
+  align-items: end;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
 }
 
 .filter-label {
@@ -7009,11 +7010,12 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 
 .filter-select {
   height: 40px;
+  width: 400px;
   background-color: var(--lighter);
 }
 
 .filter-select:focus-within {
-  border-color: #ced4da;
+  border-color: var(--secondary);
 }
 
 .filter-action {

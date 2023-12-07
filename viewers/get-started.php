@@ -26,27 +26,34 @@
                     CONTACT PART START
         =======================================-->
     <section class="inner-section contact-part">
-        <div class="container">
-            <div class="row mx-auto" style="align-items: center;">
-                <div class="col-lg-4 col-lg-4">
-                    <div class="contact-card">
+        <div class="container" style="display:flex; justify-content:center; align-content:center; flex-wrap:wrap">
+            <div class="row mx-auto" style="margin: auto;">
+                <div class="col-lg-4 col-md-4">
+                    <div class=" contact-card">
+                        <h4>Seller</h4>
+                        <p>haskdhalHFslasdaSDNAsmda</p>
                         <div class="section promo-part">
                             <div class="container">
-                                <div class="col-lg-8 col-md-6 col-lg-6 px-xl-3">
+                                <div class="col-lg-8">
+                                    <div class="promo-img">
+                                        <a href=""><img src="images/banner11.svg" alt="promo"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="contact-card active">
+                        <div class="section promo-part">
+                            <div class="container">
+                                <div class="col-lg-8">
                                     <div class="promo-img">
                                         <a href=""><img src="images/promo/home/01.jpg" alt="promo"></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <h4>Seller</h4>
-                        <p>haskdhalHFslasdaSDNAsmda</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-lg-4">
-                    <div class="contact-card active">
-
-                        <i class="icofont-phone"></i>
                         <h4>Buyer</h4>
                     </div>
                 </div>
