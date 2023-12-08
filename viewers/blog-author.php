@@ -147,7 +147,7 @@
                                         </li>
                                     </ul>
                                     <h4 class="blog-title">
-                                        <a href="blog-details.html">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
+                                        <a href="blog-details.php">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
                                     </h4>
                                     <p class="blog-desc">
                                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae deleniti nam dignissimos sequi ...
@@ -178,7 +178,7 @@
                                         </li>
                                     </ul>
                                     <h4 class="blog-title">
-                                        <a href="blog-details.html">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
+                                        <a href="blog-details.php">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
                                     </h4>
                                     <p class="blog-desc">
                                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae deleniti nam dignissimos sequi ...
@@ -209,7 +209,7 @@
                                         </li>
                                     </ul>
                                     <h4 class="blog-title">
-                                        <a href="blog-details.html">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
+                                        <a href="blog-details.php">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
                                     </h4>
                                     <p class="blog-desc">
                                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae deleniti nam dignissimos sequi ...
@@ -240,7 +240,7 @@
                                         </li>
                                     </ul>
                                     <h4 class="blog-title">
-                                        <a href="blog-details.html">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
+                                        <a href="blog-details.php">Voluptate blanditiis provident Lorem ipsum dolor sit amet</a>
                                     </h4>
                                     <p class="blog-desc">
                                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias autem recusandae deleniti nam dignissimos sequi ...
