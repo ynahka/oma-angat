@@ -9,10 +9,6 @@
                     <div class="row">
                         <div class="col-md-6 col-lg-6">
                             <div class="view-gallery">
-                                <div class="view-label-group">
-                                    <label class="view-label new">new</label>
-                                    <label class="view-label off">-10%</label>
-                                </div>
                                 <ul class="preview-slider slider-arrow">
                                     <li><img src="images/product/1.png" alt="product"></li>
                                     <li><img src="images/product/1.png" alt="product"></li>
@@ -36,11 +32,12 @@
                         <div class="col-md-6 col-lg-6">
                             <div class="view-details">
                                 <h3 class="view-name">
-                                    <a href="product-video.php">existing product name</a>
+                                    <a href="product-video.php">product name</a>
                                 </h3>
                                 <div class="view-meta">
+                                    <p>View Shop:<a href="#">radhuni</a></p>
                                     <p>SKU:<span>1234567</span></p>
-                                    <p>BRAND:<a href="#">radhuni</a></p>
+
                                 </div>
                                 <div class="view-rating">
                                     <i class="active icofont-star"></i>
@@ -51,27 +48,21 @@
                                     <a href="product-simple.php">(3 reviews)</a>
                                 </div>
                                 <h3 class="view-price">
-                                    <del>P38.00</del>
                                     <span>P24.00<small>/per kilo</small></span>
                                 </h3>
                                 <p class="view-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit non tempora
                                     magni repudiandae sint suscipit tempore quis maxime explicabo veniam eos
                                     reprehenderit fuga</p>
                                 <div class="view-list-group">
-                                    <label class="view-list-title">tags:</label>
+                                    <label class="view-list-title">Chat Farmer:</label>
                                     <ul class="view-tag-list">
                                         <li><a href="#">organic</a></li>
-                                        <li><a href="#">vegetable</a></li>
-                                        <li><a href="#">chilis</a></li>
                                     </ul>
                                 </div>
                                 <div class="view-list-group">
-                                    <label class="view-list-title">Share:</label>
-                                    <ul class="view-share-list">
-                                        <li><a href="#" class="icofont-facebook" title="Facebook"></a></li>
-                                        <li><a href="#" class="icofont-twitter" title="Twitter"></a></li>
-                                        <li><a href="#" class="icofont-linkedin" title="Linkedin"></a></li>
-                                        <li><a href="#" class="icofont-instagram" title="Instagram"></a></li>
+                                    <label class="view-list-title">View Shop:</label>
+                                    <ul class="view-tag-list">
+                                        <li><a href="#">organic</a></li>
                                     </ul>
                                 </div>
                                 <div class="view-add-group">

@@ -279,7 +279,7 @@
                                 <div class="product-label">
                                     <label class="label-text order">314</label>
                                 </div>
-                                <a class="product-image" href="product-video.php">
+                                <a class="product-image">
                                     <img src="images/product/1.png" alt="product">
                                 </a>
                             </div>
@@ -310,7 +310,7 @@
                                 <div class="product-label">
                                     <label class="label-text order">314</label>
                                 </div>
-                                <a class="product-image" href="product-video.php">
+                                <a class="product-image">
                                     <img src="images/product/1.png" alt="product">
                                 </a>
                             </div>
@@ -341,7 +341,7 @@
                                 <div class="product-label">
                                     <label class="label-text order">314</label>
                                 </div>
-                                <a class="product-image" href="product-video.php">
+                                <a class="product-image">
                                     <img src="images/product/1.png" alt="product">
                                 </a>
                             </div>
@@ -372,7 +372,7 @@
                                 <div class="product-label">
                                     <label class="label-text order">314</label>
                                 </div>
-                                <a class="product-image" href="product-video.php">
+                                <a class="product-image">
                                     <img src="images/product/1.png" alt="product">
                                 </a>
                             </div>
@@ -403,7 +403,7 @@
                                 <div class="product-label">
                                     <label class="label-text order">314</label>
                                 </div>
-                                <a class="product-image" href="product-video.php">
+                                <a class="product-image">
                                     <img src="images/product/1.png" alt="product">
                                 </a>
                             </div>
@@ -439,7 +439,7 @@
                                 <div class="product-label">
                                     <label class="label-text order">314</label>
                                 </div>
-                                <a class="product-image" href="product-video.php">
+                                <a class="product-image">
                                     <img src="images/product/1.png" alt="product">
                                 </a>
                             </div>
@@ -470,7 +470,7 @@
                                 <div class="product-label">
                                     <label class="label-text order">314</label>
                                 </div>
-                                <a class="product-image" href="product-video.php">
+                                <a class="product-image">
                                     <img src="images/product/1.png" alt="product">
                                 </a>
                             </div>
@@ -501,7 +501,7 @@
                                 <div class="product-label">
                                     <label class="label-text order">314</label>
                                 </div>
-                                <a class="product-image" href="product-video.php">
+                                <a class="product-image">
                                     <img src="images/product/1.png" alt="product">
                                 </a>
                             </div>
@@ -532,7 +532,7 @@
                                 <div class="product-label">
                                     <label class="label-text order">314</label>
                                 </div>
-                                <a class="product-image" href="product-video.php">
+                                <a class="product-image">
                                     <img src="images/product/1.png" alt="product">
                                 </a>
                             </div>
@@ -563,7 +563,7 @@
                                 <div class="product-label">
                                     <label class="label-text order">314</label>
                                 </div>
-                                <a class="product-image" href="product-video.php">
+                                <a class="product-image">
                                     <img src="images/product/1.png" alt="product">
                                 </a>
                             </div>
@@ -635,7 +635,7 @@
                                     <div class="product-label">
                                         <label class="label-text order">314</label>
                                     </div>
-                                    <a class="product-image" href="product-video.php">
+                                    <a class="product-image">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
                                 </div>
@@ -666,7 +666,7 @@
                                     <div class="product-label">
                                         <label class="label-text order">314</label>
                                     </div>
-                                    <a class="product-image" href="product-video.php">
+                                    <a class="product-image">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
                                 </div>
@@ -697,7 +697,7 @@
                                     <div class="product-label">
                                         <label class="label-text order">314</label>
                                     </div>
-                                    <a class="product-image" href="product-video.php">
+                                    <a class="product-image">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
                                 </div>
@@ -728,7 +728,7 @@
                                     <div class="product-label">
                                         <label class="label-text order">314</label>
                                     </div>
-                                    <a class="product-image" href="product-video.php">
+                                    <a class="product-image">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
                                 </div>
@@ -819,7 +819,7 @@
                                     <div class="product-label">
                                         <label class="label-text order">314</label>
                                     </div>
-                                    <a class="product-image" href="product-video.php">
+                                    <a class="product-image">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
                                 </div>
@@ -850,7 +850,7 @@
                                     <div class="product-label">
                                         <label class="label-text order">314</label>
                                     </div>
-                                    <a class="product-image" href="product-video.php">
+                                    <a class="product-image">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
                                 </div>
@@ -881,7 +881,7 @@
                                     <div class="product-label">
                                         <label class="label-text order">314</label>
                                     </div>
-                                    <a class="product-image" href="product-video.php">
+                                    <a class="product-image">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
                                 </div>
@@ -912,7 +912,7 @@
                                     <div class="product-label">
                                         <label class="label-text order">314</label>
                                     </div>
-                                    <a class="product-image" href="product-video.php">
+                                    <a class="product-image">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
                                 </div>

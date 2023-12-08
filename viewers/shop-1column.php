@@ -6,6 +6,7 @@
 <body>
     <?php include('header-nav.php'); ?>
     <?php include('category-sidebar.php'); ?>
+    <?php include('product-view.php'); ?>
 
     <!--=====================================
                     BANNER PART START
@@ -94,10 +95,10 @@
                         </div>
                     </div>
                     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-                        <div class="col">
+                        <div class="col" data-bs-toggle="modal" data-bs-target="#product-view">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <a class="product-image" href="product-video.html">
+                                    <a class="product-image">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
                                 </div>
@@ -110,7 +111,183 @@
                                         <i class="icofont-star"></i>
                                     </div>
                                     <h6 class="product-name">
-                                        <a href="product-video.html">fresh green chilis</a>
+                                        <a>fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <span><small>Starts at ₱ 29</small></span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
+                                <div class="product-media">
+                                    <a class="product-image">
+                                        <img src="images/product/1.png" alt="product">
+                                    </a>
+
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a>fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <span><small>Starts at ₱ 29</small></span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
+                                <div class="product-media">
+                                    <a class="product-image">
+                                        <img src="images/product/1.png" alt="product">
+                                    </a>
+
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a>fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <span><small>Starts at ₱ 29</small></span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
+                                <div class="product-media">
+                                    <a class="product-image">
+                                        <img src="images/product/1.png" alt="product">
+                                    </a>
+
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a>fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <span><small>Starts at ₱ 29</small></span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
+                                <div class="product-media">
+                                    <a class="product-image">
+                                        <img src="images/product/1.png" alt="product">
+                                    </a>
+
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a>fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <span><small>Starts at ₱ 29</small></span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
+                                <div class="product-media">
+                                    <a class="product-image">
+                                        <img src="images/product/1.png" alt="product">
+                                    </a>
+
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a>fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <span><small>Starts at ₱ 29</small></span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
+                                <div class="product-media">
+                                    <a class="product-image">
+                                        <img src="images/product/1.png" alt="product">
+                                    </a>
+
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a>fresh green chilis</a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <span><small>Starts at ₱ 29</small></span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
+                                <div class="product-media">
+
+                                    <a class="product-image">
+                                        <img src="images/product/1.png" alt="product">
+                                    </a>
+
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-rating">
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="active icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                    </div>
+                                    <h6 class="product-name">
+                                        <a>fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
@@ -121,7 +298,8 @@
                         <div class="col">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <a class="product-image" href="product-video.html">
+
+                                    <a class="product-image">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
 
@@ -135,7 +313,7 @@
                                         <i class="icofont-star"></i>
                                     </div>
                                     <h6 class="product-name">
-                                        <a href="product-video.html">fresh green chilis</a>
+                                        <a>fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
@@ -146,7 +324,7 @@
                         <div class="col">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <a class="product-image" href="product-video.html">
+                                    <a class="product-image">
                                         <img src="images/product/1.png" alt="product">
                                     </a>
 
@@ -160,184 +338,7 @@
                                         <i class="icofont-star"></i>
                                     </div>
                                     <h6 class="product-name">
-                                        <a href="product-video.html">fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image" href="product-video.html">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-rating">
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                    </div>
-                                    <h6 class="product-name">
-                                        <a href="product-video.html">fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image" href="product-video.html">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-rating">
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                    </div>
-                                    <h6 class="product-name">
-                                        <a href="product-video.html">fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image" href="product-video.html">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-rating">
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                    </div>
-                                    <h6 class="product-name">
-                                        <a href="product-video.html">fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image" href="product-video.html">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-rating">
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                    </div>
-                                    <h6 class="product-name">
-                                        <a href="product-video.html">fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card">
-                                <div class="product-media">
-
-                                    <a class="product-image" href="product-video.html">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-rating">
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                    </div>
-                                    <h6 class="product-name">
-                                        <a href="product-video.html">fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card">
-                                <div class="product-media">
-
-                                    <a class="product-image" href="product-video.html">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-rating">
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                    </div>
-                                    <h6 class="product-name">
-                                        <a href="product-video.html">fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image" href="product-video.html">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-rating">
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="active icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                    </div>
-                                    <h6 class="product-name">
-                                        <a href="product-video.html">fresh green chilis</a>
+                                        <a>fresh green chilis</a>
                                     </h6>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
