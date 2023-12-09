@@ -2,6 +2,7 @@
 <html lang="en">
 <?php include 'header.php'; ?>
 <link rel="stylesheet" href="css/brand-single.css">
+<link rel="stylesheet" href="css/blog-author.css">
 
 <body>
     <?php include('header-nav.php'); ?>
@@ -17,7 +18,31 @@
         =======================================-->
     <section class="inner-section shop-part">
         <div class="container">
-            <div class="row content-reverse">
+            <div class="row justify-content-center">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="author-single">
+                            <div class="author-content">
+                                <a href="#" class="author-image">
+                                    <img src="images/brand/1.svg" alt="avatar">
+                                </a>
+                                <div class="author-info">
+                                    <h3 class="author-name">Oma-angat</h3>
+                                    <h6 class="author-mail">mironcoder@gmail.com</h6>
+                                    <ul class="author-meta">
+                                        <li><a href="chat.php"><a href="chat.php" class="fas fa-comments"></a>Message Farmer</a></li>
+                                    </ul>
+                                    <!-- <a href="chat.php" class="author-meta">
+                                        <i class="fas fa-comments"></i> Message Farmer
+                                    </a> -->
+                                </div>
+                            </div>
+                            <p class="author-bio">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea deserunt nisi, tempore eveniet pariatur natus delectus commodi, totam est culpa ducimus rem reprehenderit suscipit veritatis assumenda. Delectus, saepe. Explicabo, quos magnam fuga porro
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-3">
                     <div class="shop-widget-promo">
                         <a><img src="images/promo/features/referral.svg" alt="promo"></a>
@@ -50,8 +75,8 @@
                             </button>
                         </form>
                     </div> -->
-
                 </div>
+
                 <div class="col-lg-9">
                     <div class="row">
                         <div class="col-lg-12">

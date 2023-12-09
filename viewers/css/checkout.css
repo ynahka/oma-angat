@@ -5,6 +5,7 @@
   width: 600px;
   margin: 45px auto 5px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .checkout-charge {
@@ -83,10 +84,11 @@
 
 .checkout-check label a {
   color: var(--primary);
+    text-decoration: underline;
 }
 
 .checkout-check label a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .checkout-proced .btn {

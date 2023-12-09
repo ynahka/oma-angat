@@ -79,7 +79,7 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="col-sm-12">
-                        <p class="footer-copytext">Copyright &copy; 2023 - <a target="_blank" href="index.php">Oma-Angat, Virtual Agri-Market</a></p>
+                        <p class="footer-copytext"> &copy; 2023 <a target="_blank" href="index.php">Oma-Angat. All Rights Reserved.</a></p>
                     </div>
                 </div>
             </div>
