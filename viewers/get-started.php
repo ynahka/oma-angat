@@ -25,7 +25,7 @@
     <!--=====================================
                     CONTACT PART START
         =======================================-->
-    <section class="inner-section contact-part">
+    <!-- <section class="inner-section contact-part">
         <div class="container" style="display:flex; justify-content:center; align-content:center; flex-wrap:wrap">
             <div class="row mx-auto" style="margin: auto;">
                 <div class="col-lg-4 col-md-4">
@@ -59,7 +59,23 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+    <div class="section promo-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 px-xl-3">
+                    <div class="promo-img">
+                        <a href=""><img src="images/promo/home/01.jpg" alt="promo"></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 px-xl-3">
+                    <div class="promo-img">
+                        <a href=""><img src="images/promo/home/02.jpg" alt="promo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--=====================================
                      FOOTER PART START

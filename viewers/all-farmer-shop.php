@@ -160,6 +160,27 @@
         =======================================-->
 
 
+    <section class="section countdown-part">
+        <div class="container featured">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mx-auto">
+                    <div class="countdown-img">
+                        <img src="images/front-pic.svg" alt="countdown">
+                    </div>
+                </div>
+                <div class="col-lg-6 mx-auto">
+                    <div class="countdown-content">
+                        <h2>Are you a Farmer?</h2>
+                        <p>Join and watch your fields grow to ensures fair compensation for your dedication. Your hard work nourishes not just the land but also the community.</p>
+                        <a href="login.php" class="btn btn-outline">
+                            <i class="fa-solid fa-store"></i>
+                            <span>Start Selling</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <?php include('footer.php'); ?>
     <?php include('js-vendor.php'); ?>

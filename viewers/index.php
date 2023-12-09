@@ -890,67 +890,12 @@
                     FEATURE PART END
         =======================================-->
 
-    <!--=====================================
-                    COUNTDOWN PART START
-        =======================================-->
-    <!-- <section class="section countdown-part">
-        <div class="container featured">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mx-auto">
-                    <div class="countdown-content">
-                        <h3>It's Oma-Angat Market Day Sale Today🌽🎉</h3>
-                        <p>Embrace local harvest with exclusive discounts for a limited time only - Your passport to
-                            fresh, affordable, and proudly albayano harvests!</p>
-                        <div class="countdown countdown-clock" data-countdown="2021/12/31">
-                            <span class="countdown-time"><span>00</span><small>days</small></span>
-                            <span class="countdown-time"><span>00</span><small>hours</small></span>
-                            <span class="countdown-time"><span>00</span><small>minutes</small></span>
-                            <span class="countdown-time"><span>00</span><small>seconds</small></span>
-                        </div>
-                        <a href="shop-4column.php" class="btn btn-outline">
-                            <i class="fas fa-shopping-basket"></i>
-                            <span>shop now</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-1"></div>
-                <div class="col-lg-5">
-                    <div class="countdown-img">
-                        <img src="images/Farmer’s Market.svg" alt="countdown">
-                        <div class="countdown-off">
-                            <span>20%</span>
-                            <span>off</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!--=====================================
-                    COUNTDOWN PART END
-        =======================================-->
-
 
 
     <!--=====================================
                     PROMOTION PART START
         =======================================-->
-    <!-- <div class="section promo-part">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-6 px-xl-3">
-                    <div class="promo-img">
-                        <a href=""><img src="images/promo/home/01.jpg" alt="promo"></a>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 px-xl-3">
-                    <div class="promo-img">
-                        <a href=""><img src="images/promo/home/02.jpg" alt="promo"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
+
     <!--=====================================
                     PROMOTION PART END
         =======================================-->
@@ -972,19 +917,19 @@
                     <div class="row">
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="#"><img src="images/promo/features/referral.svg" alt="referral"></a>
+                                <a href="all-farmer-shop.php"><img src="images/promo/features/referral.svg" alt="referral"></a>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="#"><img src="images/promo/features/donation.svg" alt="donate"></a>
+                                <a href="all-farmer-shop.php"><img src="images/promo/features/donation.svg" alt="donate"></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-8 order-0 order-lg-1 order-xl-1">
                     <div class="home-grid-slider slider-arrow slider-dots">
-                        <a href="#"><img src="images/promo/features/messaging-system.svg" alt=""></a>
+                        <a href="chat.php"><img src="images/promo/features/messaging-system.svg" alt=""></a>
                         <a href="#"><img src="images/promo/features/harvesting-calendar.svg" alt=""></a>
                     </div>
                 </div>

@@ -182,11 +182,11 @@
                 </li>
             </ul>
             <div class="cart-footer">
-                <button class="coupon-btn">Do you have a coupon code?</button>
-                <form class="coupon-form">
+                <!-- <button class="coupon-btn">Do you have a coupon code?</button> -->
+                <!-- <form class="coupon-form">
                     <input type="text" placeholder="Enter your coupon code">
                     <button type="submit"><span>apply</span></button>
-                </form>
+                </form> -->
                 <a class="cart-checkout-btn" href="checkout.php">
                     <span class="checkout-label">Proceed to Checkout</span>
                     <span class="checkout-price">P369.78</span>
