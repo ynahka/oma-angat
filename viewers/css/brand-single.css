@@ -5,9 +5,9 @@
 .brand-single {
   position: relative;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  z-index: 1;
+  /* margin-top: 50px; */
+  /* margin-bottom: 50px; */
+  /* z-index: 1; */
 }
 
 .brand-single a {

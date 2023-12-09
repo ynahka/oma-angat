@@ -289,13 +289,6 @@
                                         <h6 class="product-name">
                                             <a>Avocado</a>
                                         </h6>
-                                        <div class="product-rating">
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </div>
                                     </div>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
@@ -320,13 +313,6 @@
                                         <h6 class="product-name">
                                             <a>Avocado</a>
                                         </h6>
-                                        <div class="product-rating">
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </div>
                                     </div>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
@@ -351,13 +337,6 @@
                                         <h6 class="product-name">
                                             <a>Avocado</a>
                                         </h6>
-                                        <div class="product-rating">
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </div>
                                     </div>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
@@ -382,13 +361,6 @@
                                         <h6 class="product-name">
                                             <a>Avocado</a>
                                         </h6>
-                                        <div class="product-rating">
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </div>
                                     </div>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
@@ -413,13 +385,6 @@
                                         <h6 class="product-name">
                                             <a>Avocado</a>
                                         </h6>
-                                        <div class="product-rating">
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </div>
                                     </div>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
@@ -449,13 +414,6 @@
                                         <h6 class="product-name">
                                             <a>Avocado</a>
                                         </h6>
-                                        <div class="product-rating">
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </div>
                                     </div>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
@@ -480,13 +438,6 @@
                                         <h6 class="product-name">
                                             <a>Avocado</a>
                                         </h6>
-                                        <div class="product-rating">
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </div>
                                     </div>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
@@ -511,13 +462,6 @@
                                         <h6 class="product-name">
                                             <a>Avocado</a>
                                         </h6>
-                                        <div class="product-rating">
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </div>
                                     </div>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
@@ -542,13 +486,6 @@
                                         <h6 class="product-name">
                                             <a>Avocado</a>
                                         </h6>
-                                        <div class="product-rating">
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </div>
                                     </div>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
@@ -573,13 +510,6 @@
                                         <h6 class="product-name">
                                             <a>Avocado</a>
                                         </h6>
-                                        <div class="product-rating">
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="active icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </div>
                                     </div>
                                     <h6 class="product-price">
                                         <span><small>Starts at ₱ 29</small></span>
@@ -645,13 +575,6 @@
                                             <h6 class="product-name">
                                                 <a>Avocado</a>
                                             </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
                                         </div>
                                         <h6 class="product-price">
                                             <span><small>Starts at ₱ 29</small></span>
@@ -676,13 +599,6 @@
                                             <h6 class="product-name">
                                                 <a>Avocado</a>
                                             </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
                                         </div>
                                         <h6 class="product-price">
                                             <span><small>Starts at ₱ 29</small></span>
@@ -707,13 +623,6 @@
                                             <h6 class="product-name">
                                                 <a>Avocado</a>
                                             </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
                                         </div>
                                         <h6 class="product-price">
                                             <span><small>Starts at ₱ 29</small></span>
@@ -738,13 +647,6 @@
                                             <h6 class="product-name">
                                                 <a>Avocado</a>
                                             </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
                                         </div>
                                         <h6 class="product-price">
                                             <span><small>Starts at ₱ 29</small></span>
@@ -829,13 +731,6 @@
                                             <h6 class="product-name">
                                                 <a>Avocado</a>
                                             </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
                                         </div>
                                         <h6 class="product-price">
                                             <span><small>Starts at ₱ 29</small></span>
@@ -860,13 +755,6 @@
                                             <h6 class="product-name">
                                                 <a>Avocado</a>
                                             </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
                                         </div>
                                         <h6 class="product-price">
                                             <span><small>Starts at ₱ 29</small></span>
@@ -891,13 +779,6 @@
                                             <h6 class="product-name">
                                                 <a>Avocado</a>
                                             </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
                                         </div>
                                         <h6 class="product-price">
                                             <span><small>Starts at ₱ 29</small></span>
@@ -922,13 +803,6 @@
                                             <h6 class="product-name">
                                                 <a>Avocado</a>
                                             </h6>
-                                            <div class="product-rating">
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="active icofont-star"></i>
-                                                <i class="icofont-star"></i>
-                                            </div>
                                         </div>
                                         <h6 class="product-price">
                                             <span><small>Starts at ₱ 29</small></span>

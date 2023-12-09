@@ -97,11 +97,11 @@
                                  </li>
                                  <li class="navbar-item dropdown">
                                      <a href=""><i class="fa-solid fa-store"></i></a>
-                                     <a class="navbar-link dropdown-arrow" href="faq.php">Shop</a>
+                                     <a class="navbar-link dropdown-arrow" href="brand-list.php">Shop</a>
                                      <ul class="dropdown-position-list">
-                                         <li><a href="faq.php">Farmer's Market</a></li>
+                                         <li><a href="brand-list.php">Farmer's Market</a></li>
                                          <li><a href="offer.php">Category</a></li>
-                                         <li><a href="profile.php">Product</a></li>
+                                         <li><a href="#">Product</a></li>
                                      </ul>
                                  </li>
                              </ul>

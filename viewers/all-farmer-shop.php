@@ -12,7 +12,7 @@
         =======================================-->
     <section class="inner-section single-banner" style="background: url(images/banner.svg) no-repeat center;">
         <div class="container">
-            <h2>Shop by Category</h2>
+            <h2>Shop by Farmer's Market</h2>
         </div>
     </section>
     <!--=====================================
@@ -82,9 +82,84 @@
                         </div>
                     </div>
                 </div>
+                <div class="col">
+                    <div class="category-wrap">
+                        <div class="category-media">
+                            <img src="images/category/meat.jpg" alt="category">
+                            <div class="category-overlay">
+                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="category-meta">
+                            <h4>meat items</h4>
+                            <p>(25 items)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="category-wrap">
+                        <div class="category-media">
+                            <img src="images/category/fruits.jpg" alt="category">
+                            <div class="category-overlay">
+                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="category-meta">
+                            <h4>fresh fruits</h4>
+                            <p>(25 items)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="category-wrap">
+                        <div class="category-media">
+                            <img src="images/category/seafoods.jpg" alt="category">
+                            <div class="category-overlay">
+                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="category-meta">
+                            <h4>seafoods</h4>
+                            <p>(25 items)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="category-wrap">
+                        <div class="category-media">
+                            <img src="images/category/fastfoods.jpg" alt="category">
+                            <div class="category-overlay">
+                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="category-meta">
+                            <h4>fastfoods</h4>
+                            <p>(25 items)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="category-wrap">
+                        <div class="category-media">
+                            <img src="images/category/fastfoods.jpg" alt="category">
+                            <div class="category-overlay">
+                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="category-meta">
+                            <h4>fastfoods</h4>
+                            <p>(25 items)</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <!--=====================================
+                    CATEGORY PART END
+        =======================================-->
+
+
 
     <?php include('footer.php'); ?>
     <?php include('js-vendor.php'); ?>
