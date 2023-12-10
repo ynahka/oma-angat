@@ -5,6 +5,7 @@
 <body>
     <?php include('header-nav.php'); ?>
     <?php include('category-sidebar.php'); ?>
+    <?php include('product-view.php'); ?>
 
     <!--=====================================
                     PRODUCT VIEW START

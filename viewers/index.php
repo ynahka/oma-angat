@@ -32,7 +32,7 @@
 
                     <div class="col-md-6 col-lg-6">
                         <div class="banner-img">
-                            <img src="images/front-pic.svg" alt="index">
+                            <img src="images/front-buyer.svg" alt="index">
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 col-lg-6">
                         <div class="banner-img">
-                            <img src="images/front-pic.svg" alt="index">
+                            <img src="images/front-seller.svg" alt="index">
 
                         </div>
                     </div>
@@ -520,7 +520,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-12">
                     <div class="section-btn-25">
                         <a href="shop-4column.php" class="btn btn-outline">
@@ -529,7 +529,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!--=====================================

@@ -42,10 +42,10 @@
                          <img src="images/Oma-Angat-Logo-text.svg" alt="logo">
                      </a>
 
-                     <button class="header-widget header-user-1" title="Account">
+                     <!-- <button class="header-widget header-user-1" title="Account">
                          <i class="icofont-ui-user"></i>
                          <span>Account</span>
-                     </button>
+                     </button> -->
 
                      <form class="header-form">
                          <button><i class="fas fa-search"></i></button>
@@ -56,10 +56,9 @@
                          <!-- LOGIN PAGE -->
                          <!-- LOGIN PAGE -->
 
-                         <a href="get-started.php" class="header-widget" title="Join">
-                             <button>Get Started</button></a>
-
-
+                         <button class="header-widget header-user-1" title="Account">
+                             <i class="icofont-ui-user"></i>
+                         </button>
                          <button class="header-widget header-cart" title="Cartlist">
                              <i class="fas fa-shopping-basket"></i>
                          </button>
@@ -67,8 +66,9 @@
                          <a href="../chat/chat.php" class="header-widget" title="chat">
                              <i class="fas fa-paper-plane"></i>
                          </a>
-
-
+                         <a href="get-started.php" class="header-widget" title="Join">
+                             <button>Get Started</button>
+                         </a>
                      </div>
                  </div>
              </div>
@@ -101,7 +101,7 @@
                                      <ul class="dropdown-position-list">
                                          <li><a href="all-farmer-shop.php">Farmer's Market</a></li>
                                          <li><a href="all-category.php">Category</a></li>
-                                         <li><a href="#">Product</a></li>
+                                         <li><a href="all-products.php">Product</a></li>
                                      </ul>
                                  </li>
                              </ul>

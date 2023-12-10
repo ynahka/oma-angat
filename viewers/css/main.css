@@ -3370,7 +3370,8 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 }
 
 .offer-div button,
-.offer-div span {
+.offer-div span,
+.offer-div a {
   font-size: 13px;
   font-weight: 400;
   color: var(--primary);
@@ -7146,7 +7147,13 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 .promo-img {
   width: 100%;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 10px;
+  /* margin: 0px 2.5px 30px; */
+  /* padding: 10px; */
+  background: var(--secondary);
+  border-bottom: 8px solid var(--primary);
+  /* box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4); */
+
 }
 
 .promo-img a {

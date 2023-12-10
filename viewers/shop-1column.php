@@ -56,9 +56,13 @@
                     <div class="shop-widget-promo">
                         <a><img src="images/promo/features/donation.svg" alt="promo"></a>
                         <div class="offer-div">
-                            <!-- <h5 class="offer-select">Click to copylink</h5> -->
-                            <button class="offer-select">Click to copylink</button>
+                            <!-- <button class="offer-select"><a href="chat.php">Click to Chat Farmer</a></button> -->
+                            <a class="blog-btn" href="chat.php">
+                                <span>Click to Chat Farmer</span>
+                                <i class="icofont-arrow-right"></i>
+                            </a>
                         </div>
+
                     </div>
 
 

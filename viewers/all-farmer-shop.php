@@ -165,7 +165,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mx-auto">
                     <div class="countdown-img">
-                        <img src="images/front-pic.svg" alt="countdown">
+                        <img src="images/front-seller.svg" alt="countdown">
                     </div>
                 </div>
                 <div class="col-lg-6 mx-auto">
