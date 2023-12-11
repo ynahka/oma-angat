@@ -53,10 +53,6 @@
                      </form>
 
                      <div class="header-widget-group">
-                         <!-- LOGIN PAGE -->
-                         <!-- LOGIN PAGE -->
-
-
                          <button class="header-widget header-cart" title="Cartlist">
                              <i class="fas fa-shopping-basket"></i>
                          </button>
@@ -64,14 +60,10 @@
                          <a href="../chat/chat.php" class="header-widget" title="chat">
                              <i class="fas fa-paper-plane"></i>
                          </a>
-                         <!-- <button class="header-widget header-user-1" title="Account">
+                         <button class="header-widget header-user-1" title="Account">
                              <i class="icofont-ui-user"></i>
-                             <span>Account</span>
-                         </button> -->
-                         <a href="get-started.php" class="header-widget" title="Join">
-                             <button>Get Started</button>
-
-                         </a>
+                             <span>Account Name</span>
+                         </button>
                      </div>
                  </div>
              </div>

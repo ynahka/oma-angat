@@ -27,7 +27,7 @@
   border-radius: 8px;
   text-align: center;
   text-transform: capitalize;
-  color: var(--white);
+  color: var(--lighter);
   background: var(--primary);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
@@ -37,7 +37,7 @@
 }
 
 .profile-btn a:hover {
-  background: var(--green);
+  background: var(--hovercolor);
 }
 
 @media (max-width: 991px) {

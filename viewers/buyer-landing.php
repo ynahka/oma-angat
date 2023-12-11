@@ -3,7 +3,7 @@
 <?php include 'header.php'; ?>
 
 <body>
-    <?php include('header-nav.php'); ?>
+    <?php include('header-nav-buyer.php'); ?>
     <?php include('category-sidebar.php'); ?>
     <?php include('product-view.php'); ?>
 
@@ -150,7 +150,7 @@
         [
             "name" => "vegetables",
             "img" => "images/suggest/Vegetables.svg",
-            "url" => "per-category.php",
+            "url" => "shop-1column.php",
             "title" => "Vegetables",
 
         ],
@@ -158,7 +158,7 @@
             "name" => "fruits",
             "img" => "images/suggest/Fruits.svg",
             "total_items" => 89,
-            "url" => "per-category.php",
+            "url" => "shop-1column.php",
             "title" => "Fruits",
 
         ],
@@ -166,7 +166,7 @@
             "name" => "Grains",
             "img" => "images/suggest/Grains.svg",
 
-            "url" => "per-category.php",
+            "url" => "shop-1column.php",
             "title" => "Grains",
 
         ],
@@ -174,21 +174,21 @@
             "name" => "eggs",
             "img" => "images/suggest/dairies.svg",
 
-            "url" => "per-category.php",
+            "url" => "shop-1column.php",
             "title" => "Dairies & Eggs",
 
         ],
         [
             "name" => "oils",
             "img" => "images/suggest/oils.svg",
-            "url" => "per-category.php",
+            "url" => "shop-1column.php",
             "title" => "Fats & Oils",
 
         ],
         [
             "name" => "oils",
             "img" => "images/suggest/processed.svg",
-            "url" => "per-category.php",
+            "url" => "shop-1column.php",
             "title" => "Processed Goods",
 
         ],
@@ -196,7 +196,7 @@
             "name" => "dry fish",
             "img" => "images/suggest/dried.svg",
             "total_items" => 23,
-            "url" => "per-category.php",
+            "url" => "shop-1column.php",
             "title" => "Dried Fish",
 
         ]
