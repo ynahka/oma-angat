@@ -1,0 +1,51 @@
+{
+	"short_name": "Omaangat",
+	"name": "Omaangat",
+	"icons": [
+		{
+			"src": "/image/icon-192x192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/image/icon-512x512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "/image/icon-60x60.png",
+			"type": "image/png",
+			"sizes": "60x60"
+		},
+		{
+			"src": "/image/icon-72x72.png",
+			"type": "image/png",
+			"sizes": "72x72"
+		},
+		{
+			"src": "/image/icon-96x96.png",
+			"type": "image/png",
+			"sizes": "96x96"
+		},
+		{
+			"src": "/image/icon-144x144.png",
+			"type": "image/png",
+			"sizes": "144x144"
+		},
+		{
+			"src": "/image/icon-150x150.png",
+			"type": "image/png",
+			"sizes": "150x150"
+		},
+		{
+			"src": "/image/icon-310x310.png",
+			"type": "image/png",
+			"sizes": "310x310"
+		}
+	],
+	"start_url": "/index.php",
+	"background_color": "#39EV5F",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#c9e067"
+}
