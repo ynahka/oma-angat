@@ -1,0 +1,175 @@
+.loadload{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    position: fixed;
+    z-index: 99999;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.2s;
+}
+
+.spinner-border{
+    height: 50px;
+    transform-origin: center center;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.btn:link,
+.btn:visited {
+text-transform: uppercase;
+text-decoration: none;
+padding: 15px 40px;
+display: inline-block;
+border-radius: 100px;
+transition: all 0.2s;
+position: absolute;
+}
+
+.btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(0, 255, 0, 0.2);
+}
+
+.btn:active {
+transform: translateY(-1px);
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+background-color: #fff;
+color: #777;
+}
+
+.btn::after {
+content: "";
+display: inline-block;
+height: 100%;
+width: 100%;
+border-radius: 100px;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+transition: all 0.4s;
+}
+
+.btn-white::after {
+background-color: #fff;
+}
+
+.btn:hover::after {
+transform: scaleX(1.4) scaleY(1.6);
+opacity: 0;
+}
+
+.btn-animated {
+-webkit-animation: moveInBottom 5s ease-out;
+  animation: moveInBottom 5s ease-out;
+-webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes moveInBottom {
+0% {
+opacity: 0;
+transform: translateY(30px);
+}
+100% {
+opacity: 1;
+transform: translateY(0px);
+}
+}
+
+@keyframes moveInBottom {
+0% {
+opacity: 0;
+transform: translateY(30px);
+}
+100% {
+opacity: 1;
+transform: translateY(0px);
+}
+}
+.swal2-icon {
+position: relative;
+box-sizing: content-box;
+justify-content: center;
+width: 5em;
+height: 5em;
+margin: .5em auto .5em;
+border: 0.25em solid transparent;
+border-radius: 50%;
+border-color: #000;
+font-family: inherit;
+line-height: 5em;
+cursor: default;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.swal2-title {
+position: relative;
+max-width: 100%;
+margin: 0 0 0em;
+padding: 0;
+color: #595959;
+font-size: 1.875em;
+font-weight: 600;
+text-align: center;
+text-transform: none;
+word-wrap: break-word;
+}
+
+.swal2-actions {
+display: flex;
+z-index: 1;
+box-sizing: border-box;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+width: 100%;
+margin: 20px auto 0;
+padding: 0;
+}
+
+.swal2-styled.swal2-confirm {
+border: 0;
+border-radius: 0.25em;
+background: initial;
+background-color: #2778c4;
+color: #fff;
+font-size: 1em;
+padding: 8px 30px;
+}
+
+.auth-header {
+text-align: center;
+margin-top: 20px;
+margin-bottom: 30px;
+justify-content: center;
+}
+
+.passwordclass {
+border: 1px solid #e1e1e1;
+height: 45px !important;
+background: #ffffff;
+width: 100%;
+padding: 0 20px;
+color: #757575;
+border-radius: 0rem;
+font-size: inherit;
+}
+
+.passwordclass:focus {
+box-shadow: inset 0 0px 0 #e1e1e1 !important;
+border: 1px solid #e1e1e1;
+font-size: inherit;
+}
