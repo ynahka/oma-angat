@@ -48,10 +48,7 @@
                             </li>
 
                             <li class="banner-category-item"><a href="#"><i class="flaticon-groceries"></i><span>Processed Foods</span></a>
-
                             </li>
-
-
                             <li class="banner-category-item"><a href="#"><i class="flaticon-fish"></i><span>Dried Fish</span></a>
                             </li>
                         </ul>

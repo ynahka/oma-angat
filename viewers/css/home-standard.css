@@ -111,7 +111,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 .banner-category-item a:hover {
   border-radius: 5px;
   color: var(--primary);
-  background: var(--chalk);
+  background: var(--secondary);
 }
 
 .banner-category-item a::before {
