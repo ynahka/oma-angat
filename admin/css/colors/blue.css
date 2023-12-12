@@ -93,7 +93,7 @@ File: scss
 /*Top bar
 *******************/
 .topbar {
-  background: var(--primary);
+  background: var(--secondary);
 }
 
 .topbar .navbar-header {
@@ -127,11 +127,11 @@ File: scss
 /*General Elements
 *******************/
 a.link:hover, a.link:focus {
-  color: #009efb !important;
+  color: var(--primary);
 }
 
 .bg-theme {
-  background-color: #009efb !important;
+  background-color: var(--primary);
 }
 
 .pagination > .active > a,
@@ -140,16 +140,16 @@ a.link:hover, a.link:focus {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: #009efb;
-  border-color: #009efb;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .right-sidebar .rpanel-title {
-  background: #009efb;
+  background: var(--primary);
 }
 
 .stylish-table tbody tr:hover, .stylish-table tbody tr.active {
-  border-left: 4px solid #009efb;
+  border-left: 4px solid var(--primary);
 }
 
 .text-themecolor {
@@ -158,13 +158,13 @@ a.link:hover, a.link:focus {
 
 .profile-tab li a.nav-link.active,
 .customtab li a.nav-link.active {
-  border-bottom: 2px solid #009efb;
-  color: #009efb;
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
 }
 
 .profile-tab li a.nav-link:hover,
 .customtab li a.nav-link:hover {
-  color: #009efb;
+  color: var(--primary);
 }
 
 /*******************
@@ -172,16 +172,16 @@ a.link:hover, a.link:focus {
 *******************/
 .btn-themecolor,
 .btn-themecolor.disabled {
-  background: #009efb;
+  background: var(--primary);
   color: #ffffff;
-  border: 1px solid #009efb;
+  border: 1px solid var(--primary);
 }
 
 .btn-themecolor:hover,
 .btn-themecolor.disabled:hover {
-  background: #009efb;
+  background: var(--primary);
   opacity: 0.7;
-  border: 1px solid #009efb;
+  border: 1px solid var(--primary);
 }
 
 .btn-themecolor.active, .btn-themecolor:focus,
@@ -202,7 +202,7 @@ a.link:hover, a.link:focus {
 }
 
 .sidebar-nav ul li a.active, .sidebar-nav ul li a:hover {
-  color: #009efb;
+  color: var(--primary);
 }
 
 .sidebar-nav ul li a.active {
@@ -214,12 +214,12 @@ a.link:hover, a.link:focus {
 }
 
 .sidebar-nav > ul > li.active > a {
-  border-left: 3px solid #009efb;
-  color: #009efb;
+  border-left: 3px solid var(--primary);
+  color: var(--primary);
 }
 
 .sidebar-nav > ul > li.active > a i {
-  color: #009efb;
+  color: var(--primary);
 }
 
 .sidebar-nav > ul > li > a {
@@ -227,11 +227,11 @@ a.link:hover, a.link:focus {
 }
 
 .sidebar-nav > ul > li > a.active, .sidebar-nav > ul > li > a:hover {
-  border-left: 3px solid #009efb;
+  border-left: 3px solid var(--primary);
 }
 
 .sidebar-nav > ul > li > a.active i, .sidebar-nav > ul > li > a:hover i {
-  color: #009efb;
+  color: var(--primary);
 }
 
 .sidebar-nav > ul > li > a i {
@@ -241,7 +241,7 @@ a.link:hover, a.link:focus {
 .sidebar-nav > ul > li > a.active {
   font-weight: 400;
   background: #ffffff;
-  color: #009efb;
+  color: var(--primary);
 }
 
 /*My CSS for tables*/

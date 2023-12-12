@@ -1,7 +1,7 @@
 <style type="text/css">
-    .Iclass{
-        font-size:1.3rem;
-        cursor:pointer;
+    .Iclass {
+        font-size: 1.3rem;
+        cursor: pointer;
         font-weight: 500;
     }
 
@@ -20,27 +20,28 @@
         border: 1px solid #CCC;
     }
 
-    .pagination li:first-child{
+    .pagination li:first-child {
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
     }
 
-    .pagination li:last-child{
+    .pagination li:last-child {
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
     }
 
-    ul.pagination li:hover{
+    ul.pagination li:hover {
         background-color: #3a4651;
         color: white !important;
     }
 
-    .pagination .active{
+    .pagination .active {
         background-color: #3a4651;
         color: white !important;
     }
 
-    .table thead th, .table th {
+    .table thead th,
+    .table th {
         background-color: #9e9e9e !important;
     }
 
@@ -102,9 +103,9 @@
                             </div>
                         </div>
                         <div class="chat-rbox">
-                            <ul class="chat-list p-4" >
+                            <ul class="chat-list p-4">
                                 <div id="dsplychats">
-                                    <h6 style='margin-top: 20px; font-weight: 300; color:#afafaf; text-align:center;'><i> Select Conversation . . .  </i></h6>
+                                    <h6 style='margin-top: 20px; font-weight: 300; color:#afafaf; text-align:center;'><i> Select Conversation . . . </i></h6>
                                 </div>
                             </ul>
                         </div>
@@ -116,7 +117,7 @@
                                     <input type="hidden" name="txtadmin" id="txtadmin">
                                     <textarea placeholder="Type your message here . . . " class="form-control b-0" id="txtmessage"></textarea>
                                 </div>
-                                <div class="col-4 text-right">
+                                <div class="col-4">
                                     <button type="button" class="btn btn-info btn-circle btn-lg" onclick="sendbutton();"><i class="fa fa-paper-plane"></i> </button>
                                 </div>
                             </div>
@@ -130,9 +131,9 @@
     </div>
 </div>
 
-<?php 
-    include("chat/script.php"); 
-    include("chat/modal.php"); 
+<?php
+include("chat/script.php");
+include("chat/modal.php");
 ?>
 
 <!-- slimscrollbar scrollbar JavaScript -->
@@ -140,5 +141,3 @@
 <script src="../admin/js/chat.js"></script>
 <script src="../admin/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 <script src="../admin/assets/plugins/Chart.js/Chart.min.js"></script>
-
-

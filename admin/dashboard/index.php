@@ -18,7 +18,7 @@
             <div class="card-body paddingbreadcard" style="padding-top: 25px; padding-bottom: 25px;">
                 <div class="row page-titles" style="padding-bottom: 0px;">
                     <div class="col-md-6 align-self-center">
-                        <h3 class="mb-0 mt-0 textdashboardbread3"><span>Welcome, </span> <span class="text-themecolor textdashboardbread3" style="font-weight: 500; font-size: 22px;" id="txtuserFname"></span></h3>
+                        <h3 class="mb-0 mt-0 textdashboardbread3"><span>Welcome back, </span> <span class="text-themecolor textdashboardbread3" style="font-weight: 500; font-size: 22px;" id="txtuserFname"></span></h3>
                     </div>
                     <div class="col-md-6 align-self-center">
                         <h4 class="mb-0 mt-0 float-right textdashboardbread textdashboardbread2" style="font-weight: 400; color: #5f5f5f;"><span class="textdashboardbread" id="txtdatex"></span></h4>

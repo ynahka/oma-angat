@@ -142,7 +142,7 @@ h4,
 h5,
 h6 {
 	color: #2c2b2e;
-	font-family: "Rubik", sans-serif;
+	 font-family: var(--pfamily);
 	font-weight: 400
 }
 
@@ -748,7 +748,7 @@ html body .bg-white {
 .pagination-split li {
 	margin-left: 5px;
 	display: inline-block;
-	float: left
+	float:left;
 }
 
 .pagination-split li:first-child {
@@ -1073,7 +1073,7 @@ html body .waves-notransition {
 .btn-circle.btn-lg {
 	width: 50px;
 	height: 50px;
-	padding: 14px 15px;
+	padding: 10px 10px;
 	font-size: 18px
 }
 
@@ -1670,7 +1670,7 @@ html body .waves-notransition {
 	}
 }
 
-@-webkit-keyframes heartbit {
+@keyframes heartbit {
 	0% {
 		-webkit-transform: scale(0);
 		opacity: 0.0
@@ -2302,12 +2302,12 @@ ul.common li {
 .topbar .top-navbar .navbar-nav>.nav-item>.nav-link {
 	padding-left: .75rem;
 	padding-right: .75rem;
-	font-size: 17px;
-	line-height: 33px;
+	font-size: 20px;
+	line-height: 51px;
 }
 
 .topbar .top-navbar .navbar-nav>.nav-item.show {
-	background: rgba(0, 0, 0, 0.05)
+	background: rgba(0, 0, 0, 0.05);
 }
 
 .topbar .top-navbar .app-search {

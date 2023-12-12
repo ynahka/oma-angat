@@ -18,8 +18,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 col-lg-6">
                         <div class="banner-content-1">
-                            <h1><span class="highlight">Shop Local and</span><br> Support Farmers <span
-                                    class="highlight"></span> </h1>
+                            <h1><span class="highlight">Shop Local and</span><br> Support Farmers <span class="highlight"></span> </h1>
                             <p>Shop directly from farmers! Get healthy and locally grown produce right at your doorstep.
                             </p>
                             <div class="banner-btn">
@@ -92,14 +91,12 @@
                     <div class="row">
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="all-farmer-shop.php"><img src="images/promo/features/referral.svg"
-                                        alt="referral"></a>
+                                <a href="all-farmer-shop.php"><img src="images/promo/features/referral.svg" alt="referral"></a>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="all-farmer-shop.php"><img src="images/promo/features/donation.svg"
-                                        alt="donate"></a>
+                                <a href="all-farmer-shop.php"><img src="images/promo/features/donation.svg" alt="donate"></a>
                             </div>
                         </div>
                     </div>
@@ -108,15 +105,8 @@
                     <div class="home-grid-slider slider-arrow slider-dots">
                         <!-- <a href="chat.php"><img src="images/promo/features/messaging-system.svg" alt=""></a>
                         <a href="#"><img src="images/promo/features/harvesting-calendar.svg" alt=""></a> -->
-                        <iframe width="1263" height="480" src="https://www.youtube.com/embed/owXzG8gFfXI"
-                            title="Support Family Farming - Help Local Farmers, Achieve Zero Hunger [Advocacy Video]"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jzx3M7G9bns"
-                            title="Support Filipino Farmers" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                        <iframe width="1263" height="480" src="https://www.youtube.com/embed/owXzG8gFfXI" title="Support Family Farming - Help Local Farmers, Achieve Zero Hunger [Advocacy Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jzx3M7G9bns" title="Support Filipino Farmers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -182,14 +172,14 @@
         <div class="container suggest">
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
-                <li>
-                    <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
-                        <img src="<?php echo $Pitem['img'] ?>">
-                    </a>
-                    <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                        <p><?php echo $Pitem['title'] ?></p>
-                    </div>
-                </li>
+                    <li>
+                        <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
+                            <img src="<?php echo $Pitem['img'] ?>">
+                        </a>
+                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
+                            <p><?php echo $Pitem['title'] ?></p>
+                        </div>
+                    </li>
                 <?php endforeach; ?>
 
             </ul>
@@ -267,14 +257,14 @@
         <div class="container suggest">
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
-                <li>
-                    <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
-                        <img src="<?php echo $Pitem['img'] ?>">
-                    </a>
-                    <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                        <p><?php echo $Pitem['title'] ?></p>
-                    </div>
-                </li>
+                    <li>
+                        <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
+                            <img src="<?php echo $Pitem['img'] ?>">
+                        </a>
+                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
+                            <p><?php echo $Pitem['title'] ?></p>
+                        </div>
+                    </li>
                 <?php endforeach; ?>
             </ul>
         </div>
@@ -716,33 +706,6 @@
         =======================================-->
 
 
-    <!--=====================================
-                    SUGGEST PART START
-        =======================================-->
-
-
-    <!--=====================================
-                    SUGGEST PART END
-        =======================================-->
-
-    <!--=====================================
-                    PROMOTION PART START
-        =======================================-->
-    <!-- <div class="section promo-part">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="promo-img">
-                            <a href=""><img src="images/promo/home/01.jpg" alt="promo"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    <!--=====================================
-                    PROMOTION PART END
-        =======================================-->
-
     <div class="promo-part">
         <div class="col-lg-12">
             <div class="promo-img">
@@ -868,75 +831,7 @@
 
         </div>
     </section>
-    <!-- <section class="section testimonial-part">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading">
-                        <h2>client's feedback</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="testimonial-slider slider-arrow">
-                        <div class="testimonial-card">
-                            <i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
-                            <h5>mahmud hasan</h5>
-                            <ul>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                            </ul>
-                            <img src="images/avatar/01.png" alt="testimonial">
-                        </div>
-                        <div class="testimonial-card">
-                            <i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
-                            <h5>mahmud hasan</h5>
-                            <ul>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                            </ul>
-                            <img src="images/avatar/02.png" alt="testimonial">
-                        </div>
-                        <div class="testimonial-card">
-                            <i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
-                            <h5>mahmud hasan</h5>
-                            <ul>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                            </ul>
-                            <img src="images/avatar/03.png" alt="testimonial">
-                        </div>
-                        <div class="testimonial-card">
-                            <i class="fas fa-quote-left"></i>
-                            <p>Lorem ipsum dolor consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ipsam</p>
-                            <h5>mahmud hasan</h5>
-                            <ul>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                                <li class="fas fa-star"></li>
-                            </ul>
-                            <img src="images/avatar/04.png" alt="testimonial">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+
     <!--=====================================
                     FEATURE PART END
         =======================================-->

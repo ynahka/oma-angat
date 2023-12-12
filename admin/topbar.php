@@ -27,7 +27,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item kailangan" style="">
+                <li class="nav-item kailangan">
                     <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)">
                         <i class="icon-arrow-left-circle"></i>
                     </a>
@@ -73,7 +73,7 @@
 
             <ul class="navbar-nav my-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link text-muted waves-effect waves-dark" href="#" style="font-weight: 400; font-size: 16px; padding-right: 1px;"><span id=""><b><?php echo $_SESSION['firstname'] ?></b></span></a>
+                    <a class="nav-link text-muted waves-effect waves-dark" href="#" style="font-weight: 400; font-size: 16px; padding-right: 2px;"><span id=""><b><?php echo $_SESSION['firstname'] ?></b></span></a>
                     <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="line-height: 0px !important; padding-left: 2px; padding-right: 5px;"><i class="fas fa-user-circle text-white" style="font-size: 2rem"></i></a>
                     <div class="dropdown-menu dropdown-menu-right animated flipInY" style="width: 270px;">
                         <ul class="dropdown-user">
