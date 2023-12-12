@@ -18,7 +18,8 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 col-lg-6">
                         <div class="banner-content-1">
-                            <h1><span class="highlight">Shop Local and</span><br> Support Farmers <span class="highlight"></span> </h1>
+                            <h1><span class="highlight">Shop Local and</span><br> Support Farmers <span
+                                    class="highlight"></span> </h1>
                             <p>Shop directly from farmers! Get healthy and locally grown produce right at your doorstep.
                             </p>
                             <div class="banner-btn">
@@ -91,12 +92,14 @@
                     <div class="row">
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="all-farmer-shop.php"><img src="images/promo/features/referral.svg" alt="referral"></a>
+                                <a href="all-farmer-shop.php"><img src="images/promo/features/referral.svg"
+                                        alt="referral"></a>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="all-farmer-shop.php"><img src="images/promo/features/donation.svg" alt="donate"></a>
+                                <a href="all-farmer-shop.php"><img src="images/promo/features/donation.svg"
+                                        alt="donate"></a>
                             </div>
                         </div>
                     </div>
@@ -105,8 +108,15 @@
                     <div class="home-grid-slider slider-arrow slider-dots">
                         <!-- <a href="chat.php"><img src="images/promo/features/messaging-system.svg" alt=""></a>
                         <a href="#"><img src="images/promo/features/harvesting-calendar.svg" alt=""></a> -->
-                        <iframe width="1263" height="480" src="https://www.youtube.com/embed/owXzG8gFfXI" title="Support Family Farming - Help Local Farmers, Achieve Zero Hunger [Advocacy Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jzx3M7G9bns" title="Support Filipino Farmers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="1263" height="480" src="https://www.youtube.com/embed/owXzG8gFfXI"
+                            title="Support Family Farming - Help Local Farmers, Achieve Zero Hunger [Advocacy Video]"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jzx3M7G9bns"
+                            title="Support Filipino Farmers" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -118,7 +128,7 @@
 
 
     <?php
-    include("../connection/connection.php");
+    include("../connection/connect.php");
     error_reporting(0);
     session_start();
 
@@ -172,14 +182,14 @@
         <div class="container suggest">
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
-                    <li>
-                        <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
-                            <img src="<?php echo $Pitem['img'] ?>">
-                        </a>
-                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                            <p><?php echo $Pitem['title'] ?></p>
-                        </div>
-                    </li>
+                <li>
+                    <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
+                        <img src="<?php echo $Pitem['img'] ?>">
+                    </a>
+                    <div class="suggest-info" style="text-align: center; font-weight:500; ">
+                        <p><?php echo $Pitem['title'] ?></p>
+                    </div>
+                </li>
                 <?php endforeach; ?>
 
             </ul>
@@ -257,14 +267,14 @@
         <div class="container suggest">
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
-                    <li>
-                        <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
-                            <img src="<?php echo $Pitem['img'] ?>">
-                        </a>
-                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                            <p><?php echo $Pitem['title'] ?></p>
-                        </div>
-                    </li>
+                <li>
+                    <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
+                        <img src="<?php echo $Pitem['img'] ?>">
+                    </a>
+                    <div class="suggest-info" style="text-align: center; font-weight:500; ">
+                        <p><?php echo $Pitem['title'] ?></p>
+                    </div>
+                </li>
                 <?php endforeach; ?>
             </ul>
         </div>
