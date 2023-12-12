@@ -9,13 +9,70 @@
 @import url(../scss/icons/material-design-iconic-font/css/materialdesignicons.min.css);
 @import url(../css/spinners.css);
 @import url(../css/animate.css);
+
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --h1size: 50px;
+  --h2size: 40px;
+  --h3size: 24px;
+  --h4size: 20px;
+  --h5size: 18px;
+  --h6size: 16px;
+  --bodysize: 16px;
+  --h1height: 58px;
+  --h2height: 48px;
+  --h3height: 32px;
+  --h4height: 28px;
+  --h5height: 26px;
+  --h6height: 26px;
+  --bodyheight: 26px;
+  --pfamily: "Inter", sans-serif;
+  --red: #ff3838;
+  --gray: #777777;
+  --text: #4c644b;
+  --lighter: #f8fffa;
+  /* --blue: #1494a9; */
+  --chalk: #f5f5f5;
+  --green: #2d452f;
+  /* --purple: #b12fad; */
+  /* --orange: #e86121; */
+  /* --yellow: #ffab10; */
+  --body: #cfe2ce;
+  --border: #e8e8e8;
+  --heading: #39404a;
+  --primary: #4c644b;
+  --secondary: #cfe2ce;
+  --hovercolor: #55735f;
+  --sub-heading: #565765;
+  --green-chalk: #ddffd5;
+  --green-dark: #072f17;
+  --gray-chalk: #cccccc;
+  --intro-bg: #f8fffa;
+  --facebook: #3b5998;
+  --linkedin: #0e76a8;
+  --twitter: #00acee;
+  --google: #e60023;
+  --instagram: #f77737;
+  --primary-bshadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+  --primary-tshadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+}
 .preloader {
 	width: 100%;
 	height: 100%;
 	top: 0px;
 	position: fixed;
 	z-index: 99999;
-	background: #fff
+	background: var(--secondary);
 }
 
 .preloader .cssload-speeding-wheel {
@@ -29,18 +86,23 @@
 }
 
 body {
-	background: #fff;
-	font-family: "Rubik", sans-serif;
+
+	font-family: var(--pfamily);
 	margin: 0;
 	overflow-x: hidden;
-	color: #54667a;
-	font-weight: 300
+	font-weight: 300;
+	  color: var(--primary);
+  background: var(--secondary);
+  font-size: var(--bodysize);
+  font-family: var(--pfamily);
+  line-height: var(--bodyheight);
+  overflow-x: hidden;
 }
 
 html {
 	position: relative;
 	min-height: 100%;
-	background: #ffffff
+	background: var(--secondary);
 }
 
 a:focus,
@@ -2209,7 +2271,7 @@ ul.common li {
 }
 
 .topbar .top-navbar {
-	min-height: 70px;
+	min-height: 80px;
 	padding: 0px 15px 0 0
 }
 

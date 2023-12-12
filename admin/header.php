@@ -6,7 +6,7 @@
 <meta name="author" content="">
 <!-- Favicon icon -->
 <link rel="icon" type="image/png" sizes="16x16" href="assets/images/single-logo.png">
-<title>Oma-Angat Agri-Market for Albayano Farmers</title>
+<title>Oma-Angat</title>
 <!-- Bootstrap Core CSS -->
 <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="assets/plugins/bootstrap-table/dist/bootstrap-table.min.css" rel="stylesheet" type="text/css" />

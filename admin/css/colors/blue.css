@@ -17,6 +17,63 @@ File: scss
 /*Normal Color*/
 /*Extra Variable*/
 /*Preloader*/
+
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --h1size: 50px;
+  --h2size: 40px;
+  --h3size: 24px;
+  --h4size: 20px;
+  --h5size: 18px;
+  --h6size: 16px;
+  --bodysize: 16px;
+  --h1height: 58px;
+  --h2height: 48px;
+  --h3height: 32px;
+  --h4height: 28px;
+  --h5height: 26px;
+  --h6height: 26px;
+  --bodyheight: 26px;
+  --pfamily: "Inter", sans-serif;
+  --red: #ff3838;
+  --gray: #777777;
+  --text: #4c644b;
+  --lighter: #f8fffa;
+  /* --blue: #1494a9; */
+  --chalk: #f5f5f5;
+  --green: #2d452f;
+  /* --purple: #b12fad; */
+  /* --orange: #e86121; */
+  /* --yellow: #ffab10; */
+  --body: #cfe2ce;
+  --border: #e8e8e8;
+  --heading: #39404a;
+  --primary: #4c644b;
+  --secondary: #cfe2ce;
+  --hovercolor: #55735f;
+  --sub-heading: #565765;
+  --green-chalk: #ddffd5;
+  --green-dark: #072f17;
+  --gray-chalk: #cccccc;
+  --intro-bg: #f8fffa;
+  --facebook: #3b5998;
+  --linkedin: #0e76a8;
+  --twitter: #00acee;
+  --google: #e60023;
+  --instagram: #f77737;
+  --primary-bshadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+  --primary-tshadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+}
 .preloader {
   width: 100%;
   height: 100%;
@@ -36,27 +93,20 @@ File: scss
 /*Top bar
 *******************/
 .topbar {
-  background: #009efb;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #1f87c0 0%, #1f87c0 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #1f87c0 0%, #1f87c0 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #79a206 0%, #79a206 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: var(--primary);
 }
 
 .topbar .navbar-header {
-  background: #ffffff;
+  background: var(--secondary);
   box-shadow: 4px -4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .topbar .navbar-light .navbar-nav .nav-item > a.nav-link {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: var(--lighter)
 }
 
 .topbar .navbar-light .navbar-nav .nav-item > a.nav-link:hover, .topbar .navbar-light .navbar-nav .nav-item > a.nav-link:focus {
-  color: #ffffff !important;
+  color: var(--lighter)
 }
 
 .logo-center .topbar .navbar-header {
