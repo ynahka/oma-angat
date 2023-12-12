@@ -74,6 +74,47 @@
         </div>
     </div>
 
+    <!--=====================================
+                    BANNER PART START
+        =======================================-->
+    <section class="banner-part-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Why and How to Support Farmers?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 order-1 order-lg-0 order-xl-0">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-12">
+                            <div class="home-grid-promo">
+                                <a href="all-farmer-shop.php"><img src="images/promo/features/referral.svg" alt="referral"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-12">
+                            <div class="home-grid-promo">
+                                <a href="all-farmer-shop.php"><img src="images/promo/features/donation.svg" alt="donate"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 order-0 order-lg-1 order-xl-1">
+                    <div class="home-grid-slider slider-arrow slider-dots">
+                        <!-- <a href="chat.php"><img src="images/promo/features/messaging-system.svg" alt=""></a>
+                        <a href="#"><img src="images/promo/features/harvesting-calendar.svg" alt=""></a> -->
+                        <iframe width="1263" height="480" src="https://www.youtube.com/embed/owXzG8gFfXI" title="Support Family Farming - Help Local Farmers, Achieve Zero Hunger [Advocacy Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jzx3M7G9bns" title="Support Filipino Farmers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=====================================
+                    BANNER PART END
+        =======================================-->
 
 
     <?php
@@ -898,46 +939,6 @@
 
     <!--=====================================
                     PROMOTION PART END
-        =======================================-->
-
-    <!--=====================================
-                    BANNER PART START
-        =======================================-->
-    <section class="banner-part-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-heading">
-                        <h2>Check Our Unique Features</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 order-1 order-lg-0 order-xl-0">
-                    <div class="row">
-                        <div class="col-sm-6 col-lg-12">
-                            <div class="home-grid-promo">
-                                <a href="all-farmer-shop.php"><img src="images/promo/features/referral.svg" alt="referral"></a>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-12">
-                            <div class="home-grid-promo">
-                                <a href="all-farmer-shop.php"><img src="images/promo/features/donation.svg" alt="donate"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 order-0 order-lg-1 order-xl-1">
-                    <div class="home-grid-slider slider-arrow slider-dots">
-                        <a href="chat.php"><img src="images/promo/features/messaging-system.svg" alt=""></a>
-                        <a href="#"><img src="images/promo/features/harvesting-calendar.svg" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=====================================
-                    BANNER PART END
         =======================================-->
 
     <?php include('footer.php'); ?>

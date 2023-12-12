@@ -42,7 +42,7 @@ $('.home-index-slider').slick({
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: false,
+                arrows: true,
             }
         }
     ]
@@ -56,7 +56,7 @@ $('.home-grid-slider').slick({
     dots: true,
     fade: false,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     arrows: true,
     speed: 600,
     nextArrow: '<i class="icofont-arrow-right dandik"></i>',
@@ -90,7 +90,7 @@ $('.home-grid-slider').slick({
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: false,
+                arrows: true,
             }
         }
     ]
