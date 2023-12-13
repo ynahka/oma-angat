@@ -16,6 +16,10 @@
     <div class="auth">
         <div class="auth-container">
             <div class="card">
+                <header class="auth-header">
+                    <a href="#" class="text-center db" style="padding-top: 5px;padding-bottom: 5px;"><img src="../admin/assets/images/single-logo.png" alt="Home" width="30%" height="auto" title="Homepage" />
+                    </a>
+                </header>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12 text-center">
@@ -136,7 +140,7 @@
                                 </div>
                             </div>
 
-                            <label style="margin-bottom: 0px; font-weight: 500;">Profile Image</label>
+                            <h4 class="text-info" style="margin-top: 30px; margin-bottom: 15px;">Profile Image</h4>
                             <div class="row">
                                 <div class="col-md-12">
                                     <form method="post" action="#" enctype="multipart/form-data" id="frmUploadvalidPic2">
@@ -158,7 +162,7 @@
 
                     <div class="form-group text-center mt-4">
                         <div class="col-xs-12">
-                            <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="registeruseraccount();" style="padding: 10px 10px; font-weight: 500; background-color: #79c78d; border: #79a206 1px solid">Register</button>
+                            <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="registeruseraccount();" style="padding: 10px 10px; font-weight: 500; background-color: #4C644B; border: #79a206 1px solid">Register</button>
                             <a href="login.php">Already have an account?</a>
                         </div>
                     </div>
@@ -240,7 +244,7 @@
                 <div class="modal-footer mt-2" style="padding: 10px 15px;">
                     <div class="row">
                         <div class="col-md-12">
-                            <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct" onclick="btnsearchaddress();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;">Search</button>
+                            <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct" onclick="btnsearchaddress();" style="background-color: #4C644B !important; border: 1px solid #4C644B !important;">Search</button>
                         </div>
                     </div>
                 </div>

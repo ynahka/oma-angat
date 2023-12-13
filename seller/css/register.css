@@ -9,16 +9,37 @@ body, html {
 
 /* Container for the two columns */
 .auth-container {
+    background: #4C644B;
     display: flex;
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
-    height: 100vh; /* Make the container full height of the viewport */
+    height: 100%; /* Make the container full height of the viewport */
 }
 
+@media (max-width: 320px) {
+  	.auth-container {
+      min-height: 330px;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-50%) translateX(-50%);
+  	}
+}
+
+.auth-header{
+    margin: 20px 0px 0px 0px;
+}
 /* Style for each column */
 .card {
+    margin: 80px 0px 50px;
+    margin-bottom: 10px;
+    border-radius: 0.5em;
+    background: #CFE2CE;
     width: 100%; /* Make the columns full width */
-    margin: auto; /* Center the card within the container */
+     /* Center the card within the container */
 }
 
 /* Change the font color of h4 to green */
@@ -26,12 +47,13 @@ body, html {
     color: rgb(147, 228, 147);
 }
 .card-body{
-    padding: 2.5rem 1.5rem 1rem 1.5rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
 }
 .regtitle{
     margin-bottom: 5px; 
     font-weight: 500; 
-    font-size: 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 /* Add media query for responsiveness */
 @media (min-width: 768px) {
