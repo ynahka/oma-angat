@@ -13,6 +13,7 @@
 :root {
   font-family: "Inter", sans-serif;
 }
+
 @supports (font-variation-settings: normal) {
   :root {
     font-family: "Inter var", sans-serif;
@@ -514,7 +515,7 @@ html body .b-all {
 }
 
 html body .text-muted {
-	color: #90a4ae
+	color: var(--primary)
 }
 
 html body .bg-primary {
@@ -985,7 +986,7 @@ html body .waves-notransition {
 }
 
 .text-white {
-	color: #ffffff
+	color: var(--primary)!important;
 }
 
 .text-danger {
@@ -993,7 +994,7 @@ html body .waves-notransition {
 }
 
 .text-muted {
-	color: #90a4ae!important
+	color: var(--primary)!important
 }
 
 .text-warning {
@@ -2272,7 +2273,9 @@ ul.common li {
 
 .topbar .top-navbar {
 	min-height: 80px;
-	padding: 0px 15px 0 0
+	padding: 0px 15px 0 0;
+	box-shadow: 0px 8px 10px 0px rgb(85, 115, 95, 0.3);
+
 }
 
 .topbar .top-navbar .dropdown-toggle:after {
@@ -2300,10 +2303,10 @@ ul.common li {
 }
 
 .topbar .top-navbar .navbar-nav>.nav-item>.nav-link {
-	padding-left: .75rem;
-	padding-right: .75rem;
-	font-size: 20px;
-	line-height: 51px;
+	/* padding-left: 1rem;
+	padding-right: 1rem; */
+	font-size: 22px;
+	line-height: 25px;
 }
 
 .topbar .top-navbar .navbar-nav>.nav-item.show {
@@ -6874,15 +6877,18 @@ a.mytooltip {
 }
 
 .topbar .top-navbar .mailbox {
-	width: 300px
+	width: 270px;
+	right: 0;
+	left: auto;
+
 }
 
 .topbar .top-navbar .mailbox ul {
-	padding: 0px
+	padding: 0px;
 }
 
 .topbar .top-navbar .mailbox ul li {
-	list-style: none
+	list-style: none;
 }
 
 .mailbox ul li .drop-title {
@@ -8200,7 +8206,7 @@ a.mytooltip {
 	}
 	.topbar .top-navbar .navbar-nav>.nav-item>.nav-link {
 		padding-left: .50rem;
-		padding-right: .50rem
+		padding-right: .50rem;
 	}
 	.topbar .top-navbar .navbar-nav .dropdown-menu {
 		position: absolute
@@ -8528,7 +8534,7 @@ a.mytooltip {
   }
 
   .topbar .top-navbar .navbar-nav>.nav-item>.nav-link {
-    line-height: 25px !important;
+    line-height: 55px !important;
 	}
 
 	.imagetopbar {

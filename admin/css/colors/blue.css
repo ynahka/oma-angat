@@ -93,7 +93,7 @@ File: scss
 /*Top bar
 *******************/
 .topbar {
-  background: var(--secondary);
+  background: var(--lighter);
 }
 
 .topbar .navbar-header {
@@ -101,6 +101,11 @@ File: scss
   box-shadow: 4px -4px 10px rgba(0, 0, 0, 0.05);
 }
 
+@media (max-width: 575px) {
+  .col {
+    padding: 0px 4px;
+  }
+}
 .topbar .navbar-light .navbar-nav .nav-item > a.nav-link {
   color: var(--lighter)
 }
@@ -121,6 +126,7 @@ File: scss
 .logo-center .topbar .top-navbar .navbar-header .navbar-brand .light-logo {
   display: inline-block;
   color: rgba(255, 255, 255, 0.8);
+
 }
 
 /*******************

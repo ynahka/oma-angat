@@ -3,8 +3,8 @@
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
                 <li class="nav-small-cap text-center" style="font-size: 14px;color: #2c2b2e;">SELLER</li>
-
                 <li class="nav-devider" style="margin: 5px 0;"></li>
+
 
                 <li id="maindashboard">
                     <a href="index.php?url=dashboard"><i class="fas fa-chart-line"></i>
