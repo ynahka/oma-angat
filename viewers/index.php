@@ -18,8 +18,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 col-lg-6">
                         <div class="banner-content-1">
-                            <h1><span class="highlight">Shop Local and</span><br> Support Farmers <span
-                                    class="highlight"></span> </h1>
+                            <h1><span class="highlight">Shop Local and</span><br> Support Farmers <span class="highlight"></span> </h1>
                             <p>Shop directly from farmers! Get healthy and locally grown produce right at your doorstep.
                             </p>
                             <div class="banner-btn">
@@ -92,14 +91,12 @@
                     <div class="row">
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="all-farmer-shop.php"><img src="images/promo/features/referral.svg"
-                                        alt="referral"></a>
+                                <a href="all-farmer-shop.php"><img src="images/promo/features/referral.svg" alt="referral"></a>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="all-farmer-shop.php"><img src="images/promo/features/donation.svg"
-                                        alt="donate"></a>
+                                <a href="all-farmer-shop.php"><img src="images/promo/features/donation.svg" alt="donate"></a>
                             </div>
                         </div>
                     </div>
@@ -108,15 +105,8 @@
                     <div class="home-grid-slider slider-arrow slider-dots">
                         <!-- <a href="chat.php"><img src="images/promo/features/messaging-system.svg" alt=""></a>
                         <a href="#"><img src="images/promo/features/harvesting-calendar.svg" alt=""></a> -->
-                        <iframe width="1263" height="480" src="https://www.youtube.com/embed/owXzG8gFfXI"
-                            title="Support Family Farming - Help Local Farmers, Achieve Zero Hunger [Advocacy Video]"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jzx3M7G9bns"
-                            title="Support Filipino Farmers" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                        <iframe width="1263" height="480" src="https://www.youtube.com/embed/owXzG8gFfXI" title="Support Family Farming - Help Local Farmers, Achieve Zero Hunger [Advocacy Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jzx3M7G9bns" title="Support Filipino Farmers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -166,9 +156,6 @@
         echo 'Error executing query: ' . mysqli_error($connection);
     }
 
-    // Close the database connection
-    mysqli_close($connection);
-
     ?>
 
 
@@ -188,77 +175,55 @@
         <div class="container suggest">
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
-                <li>
-                    <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
-                        <img src="<?php echo $Pitem['img'] ?>">
-                    </a>
-                    <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                        <p><?php echo $Pitem['title'] ?></p>
-                    </div>
-                </li>
+                    <li>
+                        <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
+                            <img src="<?php echo $Pitem['img'] ?>">
+                        </a>
+                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
+                            <p><?php echo $Pitem['title'] ?></p>
+                        </div>
+                    </li>
                 <?php endforeach; ?>
 
             </ul>
         </div>
     </section>
 
+
     <?php
-    $Pitems = [
-        [
-            "name" => "vegetables",
-            "img" => "images/suggest/Vegetables.svg",
-            "url" => "per-category.php",
-            "title" => "",
+    // Your SQL query to retrieve store information
+    $sql = "SELECT c.categoryname, c.image, COUNT(p.product_id) AS total_items 
+        FROM categories c
+        LEFT JOIN products_category p ON c.category_id = p.category_id
+        GROUP BY c.category_id"; // Assuming 'category_id' is the foreign key in products_category table and 'categoryname', 'image' are columns in categories table
 
-        ],
-        [
-            "name" => "fruits",
-            "img" => "images/suggest/Fruits.svg",
-            "total_items" => 89,
-            "url" => "per-category.php",
-            "title" => "Fruits",
+    $result = $connection->query($sql);
 
-        ],
-        [
-            "name" => "Grains",
-            "img" => "images/suggest/Grains.svg",
+    $Pitems = array();
 
-            "url" => "per-category.php",
-            "title" => "Grains",
+    if ($result->num_rows > 0) {
+        // Loop through each row of the result set
+        while ($row = $result->fetch_assoc()) {
+            // Create an array for each row of data and append it to $Pitems
+            $item = array(
+                "name" => $row['categoryname'],
+                "img" => $row['image'],
+                "total_items" => $row['total_items'],
+                "url" => "per-category.php", // Replace with the appropriate URL for the category
+                "title" => $row['categoryname'],
+            );
+            $Pitems[] = $item;
+        }
+    } else {
+        echo "0 results";
+    }
 
-        ],
-        [
-            "name" => "eggs",
-            "img" => "images/suggest/dairies.svg",
+    // Close the database connection
+    $connection->close();
 
-            "url" => "per-category.php",
-            "title" => "Dairies & Eggs",
-
-        ],
-        [
-            "name" => "oils",
-            "img" => "images/suggest/oils.svg",
-            "url" => "per-category.php",
-            "title" => "Fats & Oils",
-
-        ],
-        [
-            "name" => "oils",
-            "img" => "images/suggest/processed.svg",
-            "url" => "per-category.php",
-            "title" => "Processed Goods",
-
-        ],
-        [
-            "name" => "dry fish",
-            "img" => "images/suggest/dried.svg",
-            "total_items" => 23,
-            "url" => "per-category.php",
-            "title" => "Dried Fish",
-
-        ]
-    ];
+    // Now $Pitems contains the data retrieved from the database, including the count of products for each category
     ?>
+
 
     <section class="section suggest-part">
         <div class="container">
@@ -273,14 +238,14 @@
         <div class="container suggest">
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
-                <li>
-                    <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
-                        <img src="<?php echo $Pitem['img'] ?>">
-                    </a>
-                    <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                        <p><?php echo $Pitem['title'] ?></p>
-                    </div>
-                </li>
+                    <li>
+                        <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
+                            <img src="<?php echo $Pitem['img'] ?>">
+                        </a>
+                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
+                            <p><?php echo $Pitem['title'] ?></p>
+                        </div>
+                    </li>
                 <?php endforeach; ?>
             </ul>
         </div>
