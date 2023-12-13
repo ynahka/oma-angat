@@ -5,10 +5,11 @@ session_start();
 switch ($_POST['form']) {
 
 	case 'loginuser':
-		$sqllogin = "SELECT id, user_id, username, firstname, lastname, usertype, status FROM users_table WHERE username = '" . $_POST['txtusername'] . "' AND password = '" . $_POST['txtpassword'] . "' AND usertype = 'SELLER' ";
+		$sqllogin = "SELECT id, user_id, username, firstname, lastname, usertype, status FROM users_table WHERE username = '" . $_POST['txtusername'] . "' AND password = '" . hash('sha256', $_POST['txtpassword']) . "' AND usertype = 'SELLER' ";
 		$reslogin = mysqli_query($connection, $sqllogin);
 		$rowlogin = mysqli_fetch_array($reslogin);
 		$numlogin = mysqli_num_rows($reslogin);
+
 
 		if ($numlogin > 0) {
 			if ($rowlogin['status'] == "APPROVED") {
@@ -52,10 +53,12 @@ switch ($_POST['form']) {
 		break;
 
 	case 'registeruseraccount':
+
 		$generateID = generateID($connection, 'user_id', 'users_table', 'user');
 
-		$registeruser = mysqli_query($connection, "INSERT INTO users_table SET user_id = '" . $generateID . "', firstname = '" . $_POST['textregFname'] . "', middlename = '" . $_POST['textregMname'] . "', lastname = '" . $_POST['textregLname'] . "', username = '" . $_POST['textregusername'] . "', password = '" . $_POST['textadduserconfirmpass'] . "', status = 'PENDING', usertype = 'SELLER', date_added = '" . date("Y-m-d") . "';");
-
+		// Hash the password
+		$hashedPassword = hash('sha256', $_POST['textadduserconfirmpass']);
+		$registeruser = mysqli_query($connection, "INSERT INTO users_table SET user_id = '" . $generateID . "', firstname = '" . $_POST['textregFname'] . "', middlename = '" . $_POST['textregMname'] . "', lastname = '" . $_POST['textregLname'] . "', username = '" . $_POST['textregusername'] . "', password = '" . $hashedPassword . "', status = 'PENDING', usertype = 'SELLER', date_added = '" . date("Y-m-d") . "';");
 		$registeruser2 = mysqli_query($connection, "INSERT INTO user_details SET user_id = '" . $generateID . "', contactnum = '" . $_POST['textregcontactphone'] . "', email = '" . $_POST['textregemail'] . "', address = '" . $_POST['textregfulladdress'] . "', housenum = '" . $_POST['textreghousenum'] . "', street = '" . $_POST['textregstreet'] . "', subdivision = '" . $_POST['textregsubdi'] . "', barangay = '" . $_POST['textregbarangay'] . "', city = '" . $_POST['textregcity'] . "', zipnum = '" . $_POST['textregpostalcode'] . "', province = '" . $_POST['textregprovince'] . "', latitude = '" . $_POST['textreglat'] . "', longitude = '" . $_POST['textreglong'] . "', date_added = '" . date("Y-m-d") . "';");
 
 		echo $generateID;
