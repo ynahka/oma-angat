@@ -198,7 +198,7 @@
             "name" => "vegetables",
             "img" => "images/suggest/Vegetables.svg",
             "url" => "per-category.php",
-            "title" => "Vegetables",
+            "title" => "",
 
         ],
         [

@@ -55,7 +55,6 @@ switch ($_POST['form']) {
 	case 'registeruseraccount':
 
 		$generateID = generateID($connection, 'user_id', 'users_table', 'user');
-
 		// Hash the password
 		$hashedPassword = hash('sha256', $_POST['textadduserconfirmpass']);
 		$registeruser = mysqli_query($connection, "INSERT INTO users_table SET user_id = '" . $generateID . "', firstname = '" . $_POST['textregFname'] . "', middlename = '" . $_POST['textregMname'] . "', lastname = '" . $_POST['textregLname'] . "', username = '" . $_POST['textregusername'] . "', password = '" . $hashedPassword . "', status = 'PENDING', usertype = 'SELLER', date_added = '" . date("Y-m-d") . "';");

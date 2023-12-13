@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2023 at 05:59 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Generation Time: Dec 13, 2023 at 11:51 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,7 +38,7 @@ CREATE TABLE `cart` (
   `status` varchar(100) NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -52,7 +52,7 @@ CREATE TABLE `categories` (
   `categoryname` varchar(300) NOT NULL,
   `date_added` date NOT NULL,
   `datetime` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `categories`
@@ -83,15 +83,7 @@ CREATE TABLE `chats` (
   `DATETIME_LOG` datetime DEFAULT current_timestamp(),
   `productID` text NOT NULL,
   `notif` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `chats`
---
-
-INSERT INTO `chats` (`id`, `user_id`, `message`, `sendto`, `status`, `type`, `DATETIME_LOG`, `productID`, `notif`) VALUES
-(26, 'user-0000002', 'Hi\n', 'user-0000001', 1, 'ADMIN', '2023-12-12 09:12:16', '', 1),
-(27, 'user-0000001', 'Hello\n', 'user-0000002', 1, 'ADMIN', '2023-12-12 09:12:33', '', 1);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -123,7 +115,7 @@ CREATE TABLE `orders` (
   `courier` text NOT NULL,
   `trackingnumber` text NOT NULL,
   `notif` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -143,7 +135,7 @@ CREATE TABLE `payments` (
   `status` varchar(100) NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -161,7 +153,7 @@ CREATE TABLE `post` (
   `imagename` varchar(500) NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -176,7 +168,7 @@ CREATE TABLE `post_details` (
   `comment` text NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -194,7 +186,7 @@ CREATE TABLE `products` (
   `quantity` int(11) NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -207,7 +199,7 @@ CREATE TABLE `products_category` (
   `product_id` varchar(100) NOT NULL,
   `category_id` varchar(100) NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -222,7 +214,7 @@ CREATE TABLE `products_image` (
   `imagename` varchar(300) NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -238,7 +230,7 @@ CREATE TABLE `rate` (
   `comment` text NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -250,7 +242,7 @@ CREATE TABLE `tracking` (
   `tracking_id` int(11) NOT NULL,
   `order_id` varchar(100) NOT NULL,
   `datetime` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -271,14 +263,22 @@ CREATE TABLE `users_table` (
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp(),
   `code` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users_table`
 --
 
 INSERT INTO `users_table` (`id`, `user_id`, `username`, `password`, `usertype`, `firstname`, `middlename`, `lastname`, `status`, `date_added`, `DATETIME_LOG`, `code`) VALUES
-(57, 'user-0000001', 'admin', '12345', 'ADMIN', 'Ann Joyce', 'Llamera', 'Loterte', 'APPROVED', '2023-12-12', '2023-12-12 12:20:08', '36577df78291f1');
+(64, 'user-0000001', 'OmaangatAdmin', '$2y$10$qnQZ1QxwNZ3nxAqG0eYth.MBfW3YI89NpY0TN..PWkKZzQxYDUI8e', 'CUSTOMER', 'Oma-Angat', 'Agri', 'Market', 'APPROVED', '2023-12-13', '2023-12-13 10:56:32', '365791d6086a3f'),
+(67, 'user-0000002', 'AlaDairies', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Greys', 'Rolan', 'Ala', 'PENDING', '2023-12-13', '2023-12-13 14:18:07', ''),
+(68, 'user-0000003', 'LotertePalay', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Joyce', 'Llamera', 'Loterte', 'PENDING', '2023-12-13', '2023-12-13 14:21:18', ''),
+(69, 'user-0000004', 'AguilarGoods', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Ynah', 'Segubiense', 'Aguilar', 'PENDING', '2023-12-13', '2023-12-13 14:25:55', ''),
+(70, 'user-0000005', 'BorbeOils', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Beverlygrace', 'Garcera', 'Borbe', 'PENDING', '2023-12-13', '2023-12-13 14:28:18', ''),
+(71, 'user-0000006', 'IbarraVeges', '38083c7ee9121e17401883566a148aa5c2e2d55dc53bc4a94a026517dbff3c6b', 'SELLER', 'Ibarra', 'Cons', 'Crisostomo', 'PENDING', '2023-12-13', '2023-12-13 14:31:20', ''),
+(72, 'user-0000007', 'ClaraFruitasan', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Maria', 'Clara', 'Berdin', 'PENDING', '2023-12-13', '2023-12-13 14:35:12', ''),
+(73, 'user-0000008', 'CruzTuyuan', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Juan', 'Dela', 'Cruz', 'PENDING', '2023-12-13', '2023-12-13 14:37:06', ''),
+(74, 'user-0000009', 'AkapaVeges', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Crispin', 'Basilio', 'Sisa', 'PENDING', '2023-12-13', '2023-12-13 14:38:33', '');
 
 -- --------------------------------------------------------
 
@@ -307,14 +307,22 @@ CREATE TABLE `user_details` (
   `profileimagename` varchar(500) NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user_details`
 --
 
 INSERT INTO `user_details` (`id`, `user_id`, `contactnum`, `email`, `address`, `housenum`, `street`, `subdivision`, `barangay`, `city`, `zipnum`, `province`, `longitude`, `latitude`, `image`, `imagename`, `profileimage`, `profileimagename`, `date_added`, `DATETIME_LOG`) VALUES
-(54, 'user-0000001', '+63 879-878-9789', 'omaangatmarket2023@gmail.com', '133, P1, Salvacion, Pilar, 4714, Sorsogon', '133', 'P1', '', 'Salvacion', 'Pilar', 4714, 'Sorsogon', '123.6846987', '12.9348973', '', '', '', '', '2023-12-12', '2023-12-12 12:20:08');
+(61, 'user-0000001', '+63 920-999-9019', 'omaangatagrimarket@gmail.com', ', Bgy. 24 - Rizal Street, Legazpi City, 4500, Albay', '', '', '', 'Bgy. 24 - Rizal Street', 'Legazpi City', 4500, 'Albay', '123.7437995', '13.1390621', '', '', '', '', '2023-12-13', '2023-12-13 10:56:32'),
+(64, 'user-0000002', '+63 989-908-8909', 'marygracerolan.ala@bicol-u.edu.ph', '12, None, None, San Roque, Legazpi City, 4500, Albay', '12', 'None', 'None', 'San Roque', 'Legazpi City', 4500, 'Albay', '123.7552644', '13.1570551', 'user-00000021702448293_403411465_880108440523950_4264575778187205943_n.png', 'user-00000021702448293_403411465_880108440523950_4264575778187205943_n.png', 'user-00000021702448293_Dairies.svg', 'user-00000021702448293_Dairies.svg', '2023-12-13', '2023-12-13 14:18:07'),
+(65, 'user-0000003', '+63 977-787-7787', 'annjoycelotertepersonal@gmail.com', '1, 1, 0, Sipi, Daraga, 4501, Albay', '1', '1', '0', 'Sipi', 'Daraga', 4501, 'Albay', '123.7085729', '13.1474483', 'user-00000031702448480_403411465_880108440523950_4264575778187205943_n.png', 'user-00000031702448480_403411465_880108440523950_4264575778187205943_n.png', 'user-00000031702448480_grains.svg', 'user-00000031702448480_grains.svg', '2023-12-13', '2023-12-13 14:21:18'),
+(66, 'user-0000004', '+63 900-988-8899', 'gerryminahsegubiense.aguilar@bicol-u.edu.ph', '34, 1, 0, San Jose, Libon, 4507, Albay', '34', '1', '0', 'San Jose', 'Libon', 4507, 'Albay', '123.3710571', '13.2606549', 'user-00000041702448758_403411465_880108440523950_4264575778187205943_n.png', 'user-00000041702448758_403411465_880108440523950_4264575778187205943_n.png', 'user-00000041702448758_Proccessed.svg', 'user-00000041702448758_Proccessed.svg', '2023-12-13', '2023-12-13 14:25:55'),
+(67, 'user-0000005', '+63 988-898-8899', 'beverlygracegarcera.borbe@bicol-u.edu.ph', '23, 2, 0, Cuyaoyao, Pioduran, 4516, Albay', '23', '2', '0', 'Cuyaoyao', 'Pioduran', 4516, 'Albay', '123.4635768', '13.0993943', 'user-00000051702448900_403411465_880108440523950_4264575778187205943_n.png', 'user-00000051702448900_403411465_880108440523950_4264575778187205943_n.png', 'user-00000051702448900_Fats.svg', 'user-00000051702448900_Fats.svg', '2023-12-13', '2023-12-13 14:28:18'),
+(68, 'user-0000006', '+63 900-999-999_', 'annjoycellamera.loterte@bicol-u.edu.ph', '1, P7, 0, Binitayan, Daraga, 4501, Albay', '1', 'P7', '0', 'Binitayan', 'Daraga', 4501, 'Albay', '123.6965543', '13.097314', 'user-00000061702449082_403411465_880108440523950_4264575778187205943_n.png', 'user-00000061702449082_403411465_880108440523950_4264575778187205943_n.png', 'user-00000061702449082_Veges.svg', 'user-00000061702449082_Veges.svg', '2023-12-13', '2023-12-13 14:31:20'),
+(69, 'user-0000007', '+63 990-099-9999', 'omaangatagrimarket2023@gmail.com', '43, P1, 0, Kimantong, Daraga, 4501, Albay', '43', 'P1', '0', 'Kimantong', 'Daraga', 4501, 'Albay', '123.7056643', '13.1425535', 'user-00000071702449314_403411465_880108440523950_4264575778187205943_n.png', 'user-00000071702449314_403411465_880108440523950_4264575778187205943_n.png', 'user-00000071702449314_Fruits.svg', 'user-00000071702449314_Fruits.svg', '2023-12-13', '2023-12-13 14:35:12'),
+(70, 'user-0000008', '+63 988-876-6676', 'juanjd@gmail.com', '4, P7, 0, Sagpon, Daraga, 4501, Albay', '4', 'P7', '0', 'Sagpon', 'Daraga', 4501, 'Albay', '123.7196388', '13.1454808', 'user-00000081702449428_403411465_880108440523950_4264575778187205943_n.png', 'user-00000081702449428_403411465_880108440523950_4264575778187205943_n.png', 'user-00000081702449428_dried.svg', 'user-00000081702449428_dried.svg', '2023-12-13', '2023-12-13 14:37:06'),
+(71, 'user-0000009', '+63 900-099-9999', 'sisajuna@gmail.com', '9, 8, 0, Kimantong, Daraga, 4501, Albay', '9', '8', '0', 'Kimantong', 'Daraga', 4501, 'Albay', '123.7056643', '13.1425535', 'user-00000091702449515_403411465_880108440523950_4264575778187205943_n.png', 'user-00000091702449515_403411465_880108440523950_4264575778187205943_n.png', 'user-00000091702449515_Veges.svg', 'user-00000091702449515_Veges.svg', '2023-12-13', '2023-12-13 14:38:33');
 
 --
 -- Indexes for dumped tables
@@ -509,13 +517,13 @@ ALTER TABLE `tracking`
 -- AUTO_INCREMENT for table `users_table`
 --
 ALTER TABLE `users_table`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT for table `user_details`
 --
 ALTER TABLE `user_details`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- Constraints for dumped tables

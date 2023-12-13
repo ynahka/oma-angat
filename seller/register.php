@@ -162,7 +162,7 @@
 
                     <div class="form-group text-center mt-4">
                         <div class="col-xs-12">
-                            <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="registeruseraccount();" style="padding: 10px 10px; font-weight: 500; background-color: #4C644B; border: #79a206 1px solid">Register</button>
+                            <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="registeruseraccount();" style="padding: 10px 10px; font-weight: 500; background-color: #4C644B; border: #4C644B 1px solid">Register</button>
                             <a href="login.php">Already have an account?</a>
                         </div>
                     </div>
@@ -244,7 +244,7 @@
                 <div class="modal-footer mt-2" style="padding: 10px 15px;">
                     <div class="row">
                         <div class="col-md-12">
-                            <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct" onclick="btnsearchaddress();" style="background-color: #4C644B !important; border: 1px solid #4C644B !important;">Search</button>
+                            <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct" onclick="btnsearchaddress();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;">Search</button>
                         </div>
                     </div>
                 </div>
@@ -461,7 +461,7 @@
                             $(".preloader").hide().css('background', '');
                             Swal.fire({
                                 title: "Success!",
-                                text: "Successfully Registered. Please check your email to verify your account. ",
+                                text: "Successfully Registered. Please wait for admins approval upon checking your registration details. ",
                                 type: "success",
                                 icon: "success",
                                 showCancelButton: false,
