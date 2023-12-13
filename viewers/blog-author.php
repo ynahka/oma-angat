@@ -25,6 +25,16 @@
         =======================================-->
     <section class="inner-section blog-grid">
         <div class="container">
+            <div class="col-lg-12">
+                <div class="top-filter">
+                    <button class="filter-show">
+                        <a href="#">
+                            <i class="icofont-plus"></i>
+                            <span>ADD POST</span>
+                        </a>
+                    </button>
+                </div>
+            </div>
             <div class="row justify-content-center">
                 <div class="row1 col-md-7 col-lg-4">
                     <div class="blog-widget">
@@ -114,8 +124,9 @@
                         <a href="#"><img class="img-fluid" src="images/promo/blog/01.jpg" alt="promo"></a>
                     </div> -->
                 </div>
+
                 <div class="col-lg-8">
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-lg-12">
                             <div class="top-filter">
                                 <button class="filter-show">
@@ -126,7 +137,7 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row">
                         <div class="col-md-6 col-lg-6">
                             <div class="blog-card">
