@@ -40,12 +40,12 @@ switch ($_POST['form']) {
 		$mail->isHTML(true);                                  //Set email format to HTML
 		$mail->Subject = 'Oma-Angat Agri-Market: Account Verification';
 		$mail->Body    = '<h3>Dear ' . $_POST['textregusername'] . ',</h3>
-			<p>Thank you for signing up for Oma-Angat Agri-Market! Were excited to have you on board as a seller of our community.To complete your registration and verify your email address, please click on the following link:</p>
-			<a href="http://localhost/oma-angat/viewers/home-standard.php?code=' . $code . '">"http://localhost/oma-angat/viewers/home-standard.php?code=' . $code . '"</a>
+			<p>Thank you for signing up for Oma-Angat Agri-Market! Were excited to have you on board as a member of our community.To complete your registration and verify your email address, please click on the following link:</p>
+			<a href="http://localhost/oma-angat/viewers/buyer-landing.php?code=' . $code . '">"http://localhost/oma-angat/viewers/buyer-landing.php?code=' . $code . '"</a>
 			<p>By verifying your email, you will gain access to all the features and benefits of Oma-Angat Virtual Agri-Market,
-			including the ability to connect with local market and to prote and sell your fresh produce.</p>
+			including the ability to connect with Albayano Farmers.</p>
 			<p>If you did not sign up for Oma-Angat Agri-Market, please disregard this email. Its possible that someone entered your email address by mistake.
-			<br>Thank you and welcome to Oma-Angat Agri-Market, Happy Selling!</p>
+			<br>Thank you and welcome to Oma-Angat Agri-Market, Add to cart and buy now!</p>
 			<p></p>
 			<p></p>
 			<p>Best regards,</p>
