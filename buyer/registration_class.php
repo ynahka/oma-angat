@@ -41,7 +41,7 @@ switch ($_POST['form']) {
 		$mail->Subject = 'Oma-Angat Agri-Market: Account Verification';
 		$mail->Body    = '<h3>Dear ' . $_POST['textregusername'] . ',</h3>
 			<p>Thank you for signing up for Oma-Angat Agri-Market! Were excited to have you on board as a member of our community.To complete your registration and verify your email address, please click on the following link:</p>
-			<a href="http://localhost/oma-angat/viewers/buyer-landing.php?code=' . $code . '">"http://localhost/oma-angat/viewers/buyer-landing.php?code=' . $code . '"</a>
+			<a href="http://localhost/oma-angat/buyer/login.php?code=' . $code . '">"http://localhost/oma-angat/buyer/login.php?code=' . $code . '"</a>
 			<p>By verifying your email, you will gain access to all the features and benefits of Oma-Angat Virtual Agri-Market,
 			including the ability to connect with Albayano Farmers.</p>
 			<p>If you did not sign up for Oma-Angat Agri-Market, please disregard this email. Its possible that someone entered your email address by mistake.

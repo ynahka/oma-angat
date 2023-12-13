@@ -1,12 +1,13 @@
 <?php
+include("connection/connect.php");
+session_start();
+?>
+
+<?php
 if (isset($_GET['code'])) {
     $code = $_GET['code'];
     mysqli_query($connection, "UPDATE users_table SET status = 'APPROVED' WHERE code = '" . $code . "' ;");
 }
-?>
-<?php
-include("connection/connect.php");
-session_start();
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -119,7 +120,7 @@ session_start();
 
                     if (data == 1) {
                         setTimeout(function() {
-                            window.location = "index.php?url=home";
+                            window.location = "../viewers/buyer-landing.php";
                         }, 1500);
 
                     } else if (data == 3) {
