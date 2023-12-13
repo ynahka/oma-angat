@@ -457,7 +457,7 @@
                             $(".preloader").hide().css('background', '');
                             Swal.fire({
                                 title: "Success!",
-                                text: "Successfully Registered. Please check your email to verify your account. ",
+                                text: "Successfully Registered. Please wait for admins approval upon checking your registration details. ",
                                 type: "success",
                                 icon: "success",
                                 showCancelButton: false,
