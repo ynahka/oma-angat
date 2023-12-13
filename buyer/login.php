@@ -1,4 +1,10 @@
 <?php
+if (isset($_GET['code'])) {
+    $code = $_GET['code'];
+    mysqli_query($connection, "UPDATE users_table SET status = 'APPROVED' WHERE code = '" . $code . "' ;");
+}
+?>
+<?php
 include("connection/connect.php");
 session_start();
 ?>

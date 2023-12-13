@@ -123,8 +123,10 @@
     session_start();
 
     // Your SQL query to retrieve store information
-    $sql = "SELECT * FROM Store";
-    $result = mysqli_query($conx, $sql);
+    $sql = "SELECT users_table.*, user_details.profileimage FROM users_table 
+       INNER JOIN user_details ON users_table.user_id = user_details.user_id 
+       WHERE users_table.usertype= 'SELLER'";
+    $result = mysqli_query($connection, $sql);
 
     $Pitems = [];
 
@@ -132,11 +134,14 @@
     if ($result) {
         // Fetch the result row by row
         while ($row = mysqli_fetch_assoc($result)) {
+            // Retrieve the image filename from the database
+            $imageFilename = $row['profileimage'];
+
             $Pitem = [
-                "name" => $row['storeName'],
-                "img" => "images/brand/{$row['store_id']}.svg", // Assuming each store has a unique ID
+                "name" => $row['username'],
+                "img" => "../OmaangatImages/ProfileImage/{$imageFilename}", // Use the image filename from the database
                 "url" => "shop-1column.php", // You may want to customize this based on your requirements
-                "title" => $row['storeName'],
+                "title" => $row['username'],
                 // Add more fields as needed
             ];
 
@@ -148,11 +153,12 @@
         mysqli_free_result($result);
     } else {
         // Handle the case where the query was not successful
-        echo 'Error executing query: ' . mysqli_error($conx);
+        echo 'Error executing query: ' . mysqli_error($connection);
     }
 
     // Close the database connection
-    mysqli_close($conx);
+    mysqli_close($connection);
+
     ?>
 
 
