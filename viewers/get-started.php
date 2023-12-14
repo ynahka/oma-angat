@@ -14,7 +14,8 @@
         =======================================-->
     <section class="inner-section single-banner" style="padding:20px;">
         <div class="container">
-            <h2 style="color:var(--primary); margin-top: 100px; margin-bottom: -60px; font-weight: 800;">Get Started as a</h2>
+            <h2 style="color:var(--primary); margin-top: 100px; margin-bottom: -60px; font-weight: 800;">Get Started as
+                a</h2>
         </div>
     </section>
     <!--=====================================
@@ -65,12 +66,12 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-6 px-xl-4">
                     <div class="promo-image">
-                        <a href=""><img src="images/start-seller.svg" alt="promo"></a>
+                        <a href="../seller/login.php"><img src="images/start-seller.svg" alt="promo"></a>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 px-xl-4">
                     <div class="promo-image">
-                        <a href=""><img src="images/start-buyer.svg" alt="promo"></a>
+                        <a href="../buyer/login.php"><img src="images/start-buyer.svg" alt="promo"></a>
                     </div>
                 </div>
             </div>
