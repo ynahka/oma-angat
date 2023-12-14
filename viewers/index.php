@@ -135,7 +135,7 @@
     // Your SQL query to retrieve store information
     $sql = "SELECT users_table.*, user_details.profileimage FROM users_table 
        INNER JOIN user_details ON users_table.user_id = user_details.user_id 
-       WHERE users_table.usertype= 'SELLER'";
+       WHERE users_table.usertype= 'SELLER' AND users_table.status= 'APPROVED'";
     $result = mysqli_query($connection, $sql);
 
     $Pitems = [];
@@ -591,6 +591,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col">
                     <ul class="new-slider slider-arrow">
@@ -619,7 +620,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
+                            <!-- <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
                                 <div class="product-media">
                                     <div class="product-label">
                                         <label class="label-text order">314</label>
@@ -689,7 +690,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>

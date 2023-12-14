@@ -5,7 +5,7 @@ session_start();
 switch ($_POST['form']) {
 
 	case 'loginuser':
-		$sqllogin = "SELECT id, user_id, username, firstname, lastname, usertype FROM users_table WHERE username = '" . $_POST['txtusername'] . "' AND password = '" . $_POST['txtpassword'] . "' AND usertype = 'ADMIN'";
+		$sqllogin = "SELECT id, user_id, username, firstname, lastname, usertype, password, status FROM users_table WHERE username = '" . $_POST['txtusername'] . "' AND usertype = 'ADMIN' ";
 		$reslogin = mysqli_query($connection, $sqllogin);
 		$rowlogin = mysqli_fetch_array($reslogin);
 		$numlogin = mysqli_num_rows($reslogin);
