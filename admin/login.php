@@ -9,7 +9,7 @@
             width: 100%;
             height: 100%;
             left: 0;
-            background-color: #bebebe;
+            background-color: #4C644B;
             overflow-x: hidden;
             overflow-y: auto;
         }
@@ -25,11 +25,11 @@
         }
 
         .card {
-            background-color: #fff;
+            background-color: #cfe2ce;
             -webkit-box-shadow: 1px 1px 5px rgb(126 142 159);
             box-shadow: 1px 1px 5px rgb(126 142 159);
             margin-bottom: 10px;
-            border-radius: 0;
+            border-radius: 25px;
             border: none;
         }
 
@@ -42,23 +42,23 @@
 
 <body>
     <div class="preloader">
-      <svg class="circular" viewBox="25 25 50 50">
-          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> 
-      </svg>
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
     </div>
 
     <div class="auth">
         <div class="auth-container">
             <div class="card">
                 <header class="auth-header">
-                    <a href="/index.php" class="text-center db" style="padding-top: 5px;padding-bottom: 5px;"><img src="assets/images/single-logo.png" alt="Home"width ="60%" height="auto" style="border: 1px solid #e2e2e2;" />
-                    </a>  
+                    <a href="/index.php" class="text-center db" style="padding-top: 5px;padding-bottom: 5px;"><img src="assets/images/single-logo.png" alt="Home" width="60%" height="auto" style="border: 1px solid #e2e2e2;" />
+                    </a>
                 </header>
                 <div class="card-body cardbodylogin" style="padding: 1.25rem 1.8rem;">
                     <div class="form-horizontal form-material">
                         <div class="form-group row" style="margin-bottom: 5px;">
                             <div class="col-md-12">
-                                <p class="text-center" style="margin-bottom: 5px; font-weight: 400; font-size: 1rem">SIGN IN TO YOUR ACCOUNT</p>
+                                <p class="text-center" style="margin-bottom: 5px; font-weight: 400; font-size: 1.2rem">SIGN IN TO YOUR ACCOUNT</p>
                             </div>
                         </div>
 
@@ -83,7 +83,7 @@
                         </div>
                         <div class="form-group mt-4">
                             <div class="col-xs-12">
-                                <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="loginuser();" style="padding: 10px 10px; font-weight: 500; background-color: #79a206; border: #79a206 1px solid">LogIn</button>
+                                <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="loginuser();" style="padding: 10px 10px; font-weight: 500; background-color: #4C644B ; border: #4C644B  1px solid">LogIn</button>
                             </div>
                         </div>
                     </div>
@@ -97,59 +97,57 @@
 <?php include('jscripts.php'); ?>
 
 <script type="text/javascript">
-    $(document).keyup(function(e){
+    $(document).keyup(function(e) {
         var e = e || window.event; // for IE to cover IEs window event-object
-        if(e.which == 13 ){
+        if (e.which == 13) {
             loginuser();
         }
     });
-    
-    function loginuser(){
+
+    function loginuser() {
         var txtusername = $("#txtusername").val();
         var txtpassword = $("#txtpassword").val();
-        $(".preloader").show().css('background','rgba(255,255,255,0.5)');
+        $(".preloader").show().css('background', 'rgba(255,255,255,0.5)');
         $.ajax({
             type: 'POST',
             url: 'adminclass.php',
-            data: 'txtusername='+txtusername+
-            '&txtpassword='+txtpassword+
-            '&form=loginuser',
-            success: function(data){
-                setTimeout(function(){
-                    $(".preloader").hide().css('background','');
-                    if(data == 1){
+            data: 'txtusername=' + txtusername +
+                '&txtpassword=' + txtpassword +
+                '&form=loginuser',
+            success: function(data) {
+                setTimeout(function() {
+                    $(".preloader").hide().css('background', '');
+                    if (data == 1) {
                         window.location = 'index.php';
-                    } else if(data == 3){
+                    } else if (data == 3) {
                         Swal.fire(
-                          'USER INACTIVE',
-                          'Your account is currently inactive, Please contact your admin.',
-                          'warning'
+                            'USER INACTIVE',
+                            'Your account is currently inactive, Please contact your admin.',
+                            'warning'
                         )
-                    } else{
+                    } else {
                         Swal.fire(
-                          'USER NOT FOUND',
-                          'You have entered invalid username or password.',
-                          'warning'
+                            'USER NOT FOUND',
+                            'You have entered invalid username or password.',
+                            'warning'
                         )
                     }
-                },1000);
+                }, 1000);
             }
         })
     }
 
-    function fncloginpassattribHash(){
+    function fncloginpassattribHash() {
         $("#txtpassword").attr("type", "password");
         $("#logineye").attr("onclick", "fncloginpassattribunHash()");
         $("#logineye").removeClass("fa-eye");
         $("#logineye").addClass("fa-eye-slash");
     }
 
-    function fncloginpassattribunHash(){
+    function fncloginpassattribunHash() {
         $("#txtpassword").attr("type", "text");
         $("#logineye").attr("onclick", "fncloginpassattribHash()");
         $("#logineye").addClass("fa-eye");
         $("#logineye").removeClass("fa-eye-slash");
     }
-
-
 </script>
