@@ -2177,7 +2177,6 @@ form label {
 }
 
 .card-no-border .page-wrapper {
-	background: #e0e0e0;
 }
 
 .card-no-border .left-sidebar {
@@ -2264,7 +2263,7 @@ ul.common li {
 }
 
 .page-wrapper {
-	background: #fff;
+	background: var(--lighter);
 	padding-bottom: 60px
 }
 
@@ -2311,8 +2310,9 @@ ul.common li {
 .topbar .top-navbar .navbar-nav>.nav-item>.nav-link {
 	/* padding-left: 1rem;
 	padding-right: 1rem; */
-	font-size: 22px;
+	font-size: 20px;
 	line-height: 25px;
+	padding-right: 10px;
 }
 
 .topbar .top-navbar .navbar-nav>.nav-item.show {
@@ -2743,7 +2743,7 @@ ul#themecolors li a.working:before {
 }
 
 .card {
-	margin-bottom: 30px
+	margin-bottom: 30px;
 }
 
 .card .card-subtitle {
@@ -8197,13 +8197,13 @@ a.mytooltip {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-		width: 100%
+		width: 100%;
 	}
 	.topbar .top-navbar .navbar-nav {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		-ms-flex-direction: row;
-		flex-direction: row
+		flex-direction: row;
 	}
 	.topbar .top-navbar .navbar-nav>.nav-item.show {
 		position: static
@@ -8542,8 +8542,8 @@ a.mytooltip {
   }
 
   .topbar .top-navbar .navbar-nav>.nav-item>.nav-link {
-    line-height: 55px !important;
-	}
+    /* line-height: 55px !important; */
+ }
 
 	.imagetopbar {
     	width: 150px !important;
