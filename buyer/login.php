@@ -1,171 +1,158 @@
-<?php
-include("connection/connect.php");
-session_start();
-?>
-
-<?php
-if (isset($_GET['code'])) {
-    $code = $_GET['code'];
-    mysqli_query($connection, "UPDATE users_table SET status = 'APPROVED' WHERE code = '" . $code . "' ;");
-}
-?>
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <link rel="manifest" href="/manifest.json" />
-    <link href="/style.css" rel="stylesheet" />
+    <?php include('header.php'); ?>
+    <style type="text/css">
+        .auth {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            background-color: #4C644B;
+            overflow-x: hidden;
+            overflow-y: auto;
+            /* box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4); */
+        }
 
-    <?php
-    include('header.php');
-    ?>
-    <link rel="stylesheet" href="css/login.css">
-    <title>OMA-ANGAT FORGOT AGRI-MARKET FOR ALABAYANO FARMERS</title>
-    <link rel="icon" href="assets/img/web-logo.png" type="icon type">
+        .auth-container {
+            width: 450px;
+            min-height: 330px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
+        }
 
+        .card {
+            background-color: #CFE2CE;
+            -webkit-box-shadow: 1px 1px 5px rgb(126 142 159);
+            box-shadow: 1px 1px 5px rgb(126 142 159);
+            margin-bottom: 10px;
+            border-radius: 25px !important;
+            border: none;
+        }
+
+        .auth-container .auth-header {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="loadload">
-        <div class="spinner-border text-secondary" role="status"></div>
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
     </div>
 
-    <script type="text/javascript">
-        $(function() {
-            setTimeout(function() {
-                $(".loadload").hide();
-            }, 300);
-        })
-    </script>
-    <script>
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("service-worker.js");
-        }
-    </script>
-    <!--<div>
-	  <button id="enable" class="btn btn-white btn-animate">Enable PWA</button>
-    </div>
-    <button id="install" class="btn btn-white btn-animate">Install app</button> -->
-    <script src="/script.js"></script>
-    <!--offcanvas menu area end-->
-    <header>
-    </header>
-    <!--header area end-->
-
-    <!-- customer login start -->
-    <div class="customer_login" style="margin-top: 50px;padding-bottom: 70px;">
-        <div class="container">
-            <div class="row" style="justify-content: center;">
-                <!--login area start-->
-                <div class="col-lg-5 col-md-5">
-                    <div class="account_form">
-                        <div style="border: 1px solid #e1e1e1; padding: 23px 20px 29px; border-radius: 5px;">
-                            <div class="auth-header">
-                                <a href="javascript:void(0)" class="text-center db" style="padding-top: 5px;padding-bottom: 5px;">
-                                    <img src="assets/img/web-logo.png" alt="Home" width="40%" height="auto" />
-                                </a>
+    <div class="auth">
+        <div class="auth-container">
+            <div class="card">
+                <header class="auth-header">
+                    <a href="#" class="text-center db" style="padding-top: 5px;padding-bottom: 5px;"><img src="../admin/assets/images/single-logo.png" alt="Home" width="30%" height="auto" title="Homepage" />
+                    </a>
+                </header>
+                <div class="card-body cardbodylogin" style="padding: 1.25rem 1.8rem;">
+                    <div class="form-horizontal form-material">
+                        <div class="form-group row" style="margin-bottom: 5px;">
+                            <div class="col-md-12">
+                                <p class="text-center" style="margin-bottom: 5px; font-weight: 500; font-size: 1rem;">
+                                    SIGN IN TO YOUR ACCOUNT</p>
                             </div>
-                            <p>
-                                <label>Username <span>*</span></label>
-                                <input type="text" id="txtusername">
-                            </p>
-                            <label>Passwords <span>*</span></label>
-                            <div class="input-group" style="margin-top: 0px;margin-bottom: 20px">
-                                <input type="Password" class="form-control passwordclass" id="txtpassword">
-                                <div class="input-group-prepend" style="cursor: pointer;" onclick="fncaddpassattribunHash2();" id="inputaddusereye2">
-                                    <span class="input-group-text" style="height: 45px;border-radius: 0rem;"><i class="fa fa-eye-slash" id="addusereye2"></i></span>
+                        </div>
+
+                        <label class="mt-3" for="username" style="margin-bottom: 0px; font-weight: 500">Username</label>
+                        <div class="form-group row">
+                            <span class="text-danger"></span>
+                            <div class="col-md-11" style="flex: 0 0 98.2%; max-width: 98.2%;">
+                                <input type="email" class="form-control underlined" style="border-bottom: 0.5px solid #4C644B !important;" name="txtusername" id="txtusername" placeholder="" required style="height: 40px; background: #CFE2CE;">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" style="margin-bottom: 0px; font-weight: 500">Password</label>
+                            <span class="text-danger"></span>
+                            <div class="row">
+                                <div class="col-md-11" style="padding-right: 0px; flex: 0 0 95%; max-width: 95%;">
+                                    <input type="password" class="form-control underlined" style="border-bottom: 0.5px solid #4C644B !important;" name="txtpassword" id="txtpassword" placeholder="" required style=" height: 40px; background: #CFE2CE;">
+                                </div>
+                                <div class="col-md-1" style="padding-left: 0px;padding-right: 0px; flex: 1%; max-width: 1%;">
+                                    <i class="fa fa-eye-slash" style="margin-left: -23px; cursor: pointer; font-size: 1.1rem; margin-top: .7rem" id="logineye" onclick="fncloginpassattribunHash()"></i>
                                 </div>
                             </div>
-                            <div class="forget">
-                                <a href="forgot-password.php">Forgot Password?</a>
-                            </div>
-                            <div class="login_submit text-center" style="margin-bottom:20px;">
-                                <button style="padding: 5px 50px;height: 38px;" onclick="loginuser()">login</button>
-                            </div>
-                            <div class="account text-center" style="margin-bottom:20px;">
-                                <span style="font-size: 14px;">Don't have an account yet?<a href="registration.php" style="color:#95bf84"> Register Here</a></span>
+                        </div>
+                        <div class="form-group mt-4">
+                            <div class="col-xs-12">
+                                <a href="../seller/forgot_password.php" style="font-size: 16px; margin-bottom: 14px; display:block;">Forgot Password?</a>
+                                <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="loginuser();" style="padding: 10px 10px; font-weight: 500; background-color: #4C644B; border: #4C644B 1px solid">LogIn</button>
+                                <span style="font-size: 16px; margin-top:14px; display:block;">Don't have an account
+                                    yet?<a href="../buyer/registration.php" style="margin-left: 20px;"> Create an account.</a></span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--login area start-->
             </div>
         </div>
     </div>
-    <!-- customer login end -->
+</body>
 
-    <script type="text/javascript">
-        $(document).keyup(function(e) {
-            var e = e || window.event; // for IE to cover IEs window event-object
-            if (e.which == 13) {
-                loginuser();
+</html>
+<?php include('jscripts.php'); ?>
+
+<script type="text/javascript">
+    $(document).keyup(function(e) {
+        var e = e || window.event; // for IE to cover IEs window event-object
+        if (e.which == 13) {
+            loginuser();
+        }
+    });
+
+    function loginuser() {
+        var txtusername = $("#txtusername").val();
+        var txtpassword = $("#txtpassword").val();
+        $(".preloader").show().css('background', 'rgba(255,255,255,0.5)');
+        $.ajax({
+            type: 'POST',
+            url: 'adminclass.php',
+            data: 'txtusername=' + txtusername +
+                '&txtpassword=' + txtpassword +
+                '&form=loginuser',
+            success: function(data) {
+                setTimeout(function() {
+                    $(".preloader").hide().css('background', '');
+                    if (data == 1) {
+                        window.location = 'index.php';
+                    } else if (data == 3) {
+                        Swal.fire(
+                            'USER PENDING',
+                            'Your account is currently not yet approve, Please wait for the admin to check and approve your account.',
+                            'warning'
+                        )
+                    } else {
+                        Swal.fire(
+                            'USER NOT FOUND',
+                            'You have entered invalid username or password.',
+                            'warning'
+                        )
+                    }
+                }, 1000);
             }
-        });
+        })
+    }
 
-        function loginuser() {
-            var txtusername = $("#txtusername").val();
-            var txtpassword = $("#txtpassword").val();
+    function fncloginpassattribHash() {
+        $("#txtpassword").attr("type", "password");
+        $("#logineye").attr("onclick", "fncloginpassattribunHash()");
+        $("#logineye").removeClass("fa-eye");
+        $("#logineye").addClass("fa-eye-slash");
+    }
 
-            $(".loadload").show();
-            $.ajax({
-                type: 'POST',
-                url: 'login_class.php',
-                data: 'txtusername=' + txtusername + '&txtpassword=' + txtpassword + '&form=loginuser',
-                success: function(data) {
-                    setTimeout(function() {
-                        $(".loadload").hide();
-
-                        if (data == 1) {
-                            setTimeout(function() {
-                                window.location = "../viewers/buyer-landing.php";
-                            }, 1500);
-
-                        } else if (data == 3) {
-                            Swal.fire(
-                                'USER INACTIVE',
-                                'Your account is currently inactive, Please contact your admin.',
-                                'warning'
-                            )
-
-                        } else {
-                            Swal.fire(
-                                'USER NOT FOUND',
-                                'You have entered invalid username or password.',
-                                'warning'
-                            )
-                        }
-                    }, 1000);
-                }
-            })
-        }
-
-        function reqField1(classN) {
-            var isValid = 1;
-            $('.' + classN).each(function() {
-                if ($(this).val() == '') {
-                    $(this).css('border', '1px #a94442 solid');
-                    $(this).addClass('lala');
-                    isValid = 0;
-                } else {
-                    $(this).css('border', '');
-                    $(this).removeClass('lala');
-                }
-            });
-
-            return isValid;
-        }
-
-        function fncaddpassattribHash2() {
-            $("#txtpassword").attr("type", "password");
-            $("#inputaddusereye2").attr("onclick", "fncaddpassattribunHash2()");
-            $("#addusereye2").removeClass("fa-eye");
-            $("#addusereye2").addClass("fa-eye-slash");
-        }
-
-        function fncaddpassattribunHash2() {
-            $("#txtpassword").attr("type", "text");
-            $("#inputaddusereye2").attr("onclick", "fncaddpassattribHash2()");
-            $("#addusereye2").addClass("fa-eye");
-            $("#addusereye2").removeClass("fa-eye-slash");
-        }
-    </script>
+    function fncloginpassattribunHash() {
+        $("#txtpassword").attr("type", "text");
+        $("#logineye").attr("onclick", "fncloginpassattribHash()");
+        $("#logineye").addClass("fa-eye");
+        $("#logineye").removeClass("fa-eye-slash");
+    }
+</script>

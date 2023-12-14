@@ -142,6 +142,7 @@
                                 </div>
 
                                 <h4 class="text-info" style="margin-top: 30px; margin-bottom: 15px;">Profile Image</h4>
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <form method="post" action="#" enctype="multipart/form-data" id="frmUploadvalidPic2">
@@ -157,7 +158,6 @@
                                         </form>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
 
@@ -167,6 +167,7 @@
                                 <a href="login.php">Already have an account?</a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -176,7 +177,6 @@
     <div id="mdlsearchaddress" class="modal" data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog modal-dialog-centered modal-md" style="max-width: 400px;">
             <div class="modal-content">
-
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12 mb-3">
