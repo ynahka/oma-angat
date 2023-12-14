@@ -219,7 +219,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading">
-                        <h2>Shop By Top Picks</h2>
+                        <h2>Shop By Products</h2>
                     </div>
                 </div>
             </div>
@@ -464,16 +464,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-btn-25">
-                        <a href="all-products.php" class="btn btn-outline">
-                            <i class="fas fa-eye"></i>
-                            <span>show more</span>
-                        </a>
                     </div>
                 </div>
             </div>
