@@ -8605,6 +8605,7 @@ a.mytooltip {
   	}
 
   	.auth-container {
+		background-color: #4C644B;
       width: 390px !important;
       min-height: 330px;
       position: absolute;

@@ -6,7 +6,9 @@ body, html {
     margin: 0;
     padding: 0;
 }
-
+.auth{
+    background-color: #4C644B;
+}
 /* Container for the two columns */
 .auth-container {
     background: #4C644B;
@@ -14,18 +16,28 @@ body, html {
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
     height: 100%; /* Make the container full height of the viewport */
+    padding-top: 30px;
 }
 
 @media (max-width: 320px) {
   	.auth-container {
-      min-height: 330px;
+       height: 100%;
       display: flex;
       justify-content: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translateY(-50%) translateX(-50%);
-      transform: translateY(-50%) translateX(-50%);
+          background: #4C644B;
+      /* position: absolute; */
+  	}
+}
+
+@media (max-width: 768px) {
+  	.auth-container {   
+       height: 100%;
+      display: flex;
+      justify-content: center;
+
+      /* position: absolute; */
+        background: #4C644B;
+   
   	}
 }
 
@@ -34,11 +46,17 @@ body, html {
 }
 /* Style for each column */
 .card {
-    margin: 80px 0px 50px;
+     /* margin: 80px 0px 50px; */
+     position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    margin: auto;
     margin-bottom: 10px;
     border-radius: 0.5em;
     background: #CFE2CE;
-    width: 100%; /* Make the columns full width */
+    width: auto; /* Make the columns full width */
      /* Center the card within the container */
 }
 
@@ -52,16 +70,25 @@ body, html {
 .regtitle{
     margin-bottom: 5px; 
     font-weight: 500; 
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
-/* Add media query for responsiveness */
+
 @media (min-width: 768px) {
     .auth-container {
         justify-content: space-around; /* Distribute the columns with space around on larger screens */
+        margin: auto;
+            background: #CFE2CE;
     }
 
     .card {
         width: 45%; /* Adjust the width of the columns for larger screens */
     }
+    .regtitle{
+    margin-bottom: 5px; 
+    font-weight: 400; 
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
+}
+

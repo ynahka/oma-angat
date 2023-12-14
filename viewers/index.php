@@ -256,20 +256,6 @@
 
 
     <!--=====================================
-                    NICHE PART START
-        =======================================-->
-
-
-    <div class="promo-part">
-        <div class="col-lg-12">
-            <div class="promo-img">
-                <a><img src="images/4.svg" alt="promo"></a>
-            </div>
-        </div>
-    </div>
-
-
-    <!--=====================================
                     NEW ITEM PART START
         =======================================-->
     <section class="section newitem-part">
