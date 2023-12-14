@@ -52,7 +52,7 @@ if (empty($_SESSION['user_id'])) {
           if ($_GET['url'] == "payments") {
             include "payments/index.php";
           }
-          if ($_GET['url'] == "payments") {
+          if ($_GET['url'] == "harvestingcal") {
             include "harvestingcal/index.php";
           }
 

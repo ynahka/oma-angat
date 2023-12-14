@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li id="mainharvest">
-                    <a href="index.php?url=harvestingcal"><i class="fas fa-hand-holding-usd"></i>
+                    <a href="index.php?url=harvestingcal"><i class="fas fa-solid fa-seedling"></i>
                         <span class="hide-menu">&nbsp;&nbsp;Harvesting Calendar</span>
                     </a>
                 </li>

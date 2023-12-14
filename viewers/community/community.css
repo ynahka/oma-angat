@@ -1,0 +1,81 @@
+  .webkitlala2{
+        overflow: hidden;
+/*        height: 38px;*/
+        /*line-height: 17px;*/
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+
+    .needfortextarea {
+        width: 100%;
+        height: 200px;
+        background: #ffffff;
+        border: 1px solid #e1e1e1;
+        margin-bottom: 0px !important;
+        resize: none;
+        padding: 10px;
+    }
+
+    @media only screen and (min-width: 1200px) and (max-width: 1600px){
+        .modal-paymentneed {
+            min-width: 500px !important;
+        }
+    }
+
+    .swal2-icon {
+        position: relative;
+        box-sizing: content-box;
+        justify-content: center;
+        width: 5em;
+        height: 5em;
+        margin: .5em auto .5em;
+        border: 0.25em solid transparent;
+        border-radius: 50%;
+        border-color: #000;
+        font-family: inherit;
+        line-height: 5em;
+        cursor: default;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .swal2-title {
+        position: relative;
+        max-width: 100%;
+        margin: 0 0 0em;
+        padding: 0;
+        color: #595959;
+        font-size: 1.875em;
+        font-weight: 600;
+        text-align: center;
+        text-transform: none;
+        word-wrap: break-word;
+    }
+
+    .swal2-actions {
+        display: flex;
+        z-index: 1;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 20px auto 0;
+        padding: 0;
+    }
+
+    .swal2-styled.swal2-confirm {
+        border: 0;
+        border-radius: 0.25em;
+        background: initial;
+        background-color: #2778c4;
+        color: #fff;
+        font-size: 1em;
+        padding: 8px 30px;
+    }
+  
