@@ -529,66 +529,6 @@
                     NICHE PART END
         =======================================-->
 
-    <div class="promo-part">
-        <div class="col-lg-12">
-            <div class="promo-img">
-                <a><img src="images/5.svg" alt="promo"></a>
-            </div>
-        </div>
-    </div>
-
-    <!--=====================================
-                    NEW ITEM PART START
-        =======================================-->
-    <!--productlist
-    <div id="homelistofproducts"></div>-->
-    <section class="section newitem-part">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="section-heading">
-                        <h2>Newly Harvested Product</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <ul class="new-slider slider-arrow">
-                        <li>
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=====================================
-                    NEW ITEM PART END
-        =======================================-->
-
-
 
     <?php include('footer.php'); ?>
     <?php include('js-vendor.php'); ?>

@@ -6,6 +6,13 @@ body, html {
     margin: 0;
     padding: 0;
     background-color: #4C644B;
+    margin: 0;
+    overflow-x: hidden;
+    font-weight: 300;
+    color: #4C644B!important;
+    font-family: "Inter", sans-serif !important;
+    line-height: 26px;
+    overflow-x: hidden;
 }
 
 .contact_area{
@@ -43,11 +50,15 @@ body, html {
 .card-body{
     padding: 1.5rem 1.5rem 1rem 1.5rem !important;
 }
+
 .regtitle{
     margin-bottom: 5px; 
     font-weight: 500; 
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    
 }
+
 /* Add media query for responsiveness */
 @media (min-width: 768px) {
     .auth-container {

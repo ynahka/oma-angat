@@ -44,7 +44,7 @@ session_start();
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <p class="regtitle">Create an Account</p>
-                            <p class="" style="margin-bottom: 10px;">Shop now and support Albayano Farmers!</p>
+                            <p class="" style="margin-bottom: 10px; font-size:16px;">Shop now and support Albayano Farmers!</p>
                         </div>
 
                         <!-- GUEST DETAILS -->
