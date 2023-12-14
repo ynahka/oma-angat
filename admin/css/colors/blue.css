@@ -93,7 +93,7 @@ File: scss
 /*Top bar
 *******************/
 .topbar {
-  background: var(--lighter);
+  background: var(--secondary);
 }
 
 .topbar .navbar-header {

@@ -71,7 +71,6 @@
                                         <div class="btn btn-success btn-circle"><i class="fas fa-file-alt"></i></div>
                                         <div class="mail-contnet">
                                             <h5>Orders today</h5> <span class="mail-desc">"You have new order"</span>
-
                                         </div>
                                     </a>
                                 </div>
