@@ -49,8 +49,8 @@ session_start();
 
                         <!-- GUEST DETAILS -->
                         <div class="col-md-12">
-                            <div class="col-md-12">
-                                <div class="contact_message form">
+                            <div class="col-md-12 mb-2 mt-4">
+                                <div class="text-info">
                                     <h4>Customer Details</h4>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@ session_start();
                                 <div class="contact_message form">
                                     <p>
                                         <label>Middle Name</label>
-                                        <input class="" type="text" id="txtregMname">
+                                        <input class="" type="text" id="txtregMname" style="background:none;  border-bottom: 0.5px solid #4C644B !important;">
                                     </p>
                                 </div>
                             </div>
@@ -152,10 +152,10 @@ session_start();
                                     <div class="col-md-12">
                                         <div class="contact_message form">
                                             <label>Password</label>
-                                            <div class="input-group" style="margin-top: 0px;margin-bottom: 20px">
+                                            <div class="input-group" style="margin-top: 0px;margin-bottom: 20px; background:none; border: none;">
                                                 <input type="Password" class="form-control reqresinfo passwordclass" id="txtadduserconfirmpass">
-                                                <div class="input-group-prepend" style="cursor: pointer;" onclick="fncaddpassattribunHash2();" id="inputaddusereye2">
-                                                    <span class="input-group-text" style="height: 45px;border-radius: 0rem;"><i class="fa fa-eye-slash" id="addusereye2"></i></span>
+                                                <div class="input-group-prepend" style="cursor: pointer; background:none; border: none;" onclick="fncaddpassattribunHash2();" id="inputaddusereye2">
+                                                    <span class="input-group-text" style="height: 45px;border-radius: 0rem; background:none; border: none;"><i class="fa fa-eye-slash" id="addusereye2"></i></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -186,16 +186,18 @@ session_start();
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <div class="contact_message form">
-                                    <button type="button" onclick="registeruseraccount();"> Submit</button>
-                                </div>
-                                <div class="contact_message form text-center" style="margin-top: 10px; ">
-                                    <a href="login.php">Already have an account?</a>
-                                </div>
+
+                        <!-- 
+                        <div class="row mt-4"> -->
+                        <div class="col-xs-12 text-center">
+                            <div class="contact_message form">
+                                <button type="button" onclick="registeruseraccount();" style="font-weight: 500; background-color: #4C644B; border: #4C644B 1px solid"> Submit</button>
+                            </div>
+                            <div class="contact_message form text-center" style="margin-top: 10px; margin-bottom: 25px;">
+                                <a href="login.php">Already have an account?</a>
                             </div>
                         </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>

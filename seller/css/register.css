@@ -64,7 +64,7 @@ body, html {
 
 /* Change the font color of h4 to green */
 .card h4 {
-    color: rgb(147, 228, 147);
+    color:  #4C644B;
 }
 .card-body{
     padding: 1.5rem 1.5rem 1rem 1.5rem;

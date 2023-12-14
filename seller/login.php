@@ -30,7 +30,7 @@
             -webkit-box-shadow: 1px 1px 5px rgb(126 142 159);
             box-shadow: 1px 1px 5px rgb(126 142 159);
             margin-bottom: 10px;
-            border-radius: 0.50em;
+            border-radius: 25px !important;
             border: none;
         }
 
@@ -68,7 +68,7 @@
                         <div class="form-group row">
                             <span class="text-danger"></span>
                             <div class="col-md-11" style="flex: 0 0 98.2%; max-width: 98.2%;">
-                                <input type="email" class="form-control underlined" name="txtusername" id="txtusername" placeholder="Enter your username" required style="height: 40px; background: #CFE2CE;">
+                                <input type="email" class="form-control underlined" style="border-bottom: 0.5px solid #4C644B !important;" name="txtusername" id="txtusername" placeholder="" required style="height: 40px; background: #CFE2CE;">
                             </div>
                         </div>
                         <div class="form-group">
@@ -76,7 +76,7 @@
                             <span class="text-danger"></span>
                             <div class="row">
                                 <div class="col-md-11" style="padding-right: 0px; flex: 0 0 95%; max-width: 95%;">
-                                    <input type="password" class="form-control underlined" name="txtpassword" id="txtpassword" placeholder="Enter your password" required style=" height: 40px; background: #CFE2CE;">
+                                    <input type="password" class="form-control underlined" style="border-bottom: 0.5px solid #4C644B !important;" name="txtpassword" id="txtpassword" placeholder="" required style=" height: 40px; background: #CFE2CE;">
                                 </div>
                                 <div class="col-md-1" style="padding-left: 0px;padding-right: 0px; flex: 1%; max-width: 1%;">
                                     <i class="fa fa-eye-slash" style="margin-left: -23px; cursor: pointer; font-size: 1.1rem; margin-top: .7rem" id="logineye" onclick="fncloginpassattribunHash()"></i>
