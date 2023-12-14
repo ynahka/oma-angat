@@ -5,28 +5,43 @@ body, html {
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: #4C644B;
 }
 
+.contact_area{
+    background-color: #4C644B;
+    /* padding-top: 30px; */
+}
 /* Container for the two columns */
 .auth-container {
+     background: #4C644B;
     display: flex;
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
-    height: 100vh; /* Make the container full height of the viewport */
+    height: 100%; /* Make the container full height of the viewport */
 }
 
 /* Style for each column */
 .card {
+    background-color: #CFE2CE !important;
     width: 100%; /* Make the columns full width */
     margin: auto; /* Center the card within the container */
+    border-radius: 25px !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
 }
 
 /* Change the font color of h4 */
 .card h4 {
-    color: rgb(41, 109, 41);
+     color: rgb(147, 228, 147);
 }
 .card-body{
-    padding: 2.5rem 1.5rem 1rem 1.5rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem !important;
 }
 .regtitle{
     margin-bottom: 5px; 

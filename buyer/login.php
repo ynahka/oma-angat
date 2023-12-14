@@ -30,16 +30,16 @@ if (isset($_GET['code'])) {
     </div>
 
     <script type="text/javascript">
-    $(function() {
-        setTimeout(function() {
-            $(".loadload").hide();
-        }, 300);
-    })
+        $(function() {
+            setTimeout(function() {
+                $(".loadload").hide();
+            }, 300);
+        })
     </script>
     <script>
-    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("service-worker.js");
-    }
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
     </script>
     <!--<div>
 	  <button id="enable" class="btn btn-white btn-animate">Enable PWA</button>
@@ -60,8 +60,7 @@ if (isset($_GET['code'])) {
                     <div class="account_form">
                         <div style="border: 1px solid #e1e1e1; padding: 23px 20px 29px; border-radius: 5px;">
                             <div class="auth-header">
-                                <a href="javascript:void(0)" class="text-center db"
-                                    style="padding-top: 5px;padding-bottom: 5px;">
+                                <a href="javascript:void(0)" class="text-center db" style="padding-top: 5px;padding-bottom: 5px;">
                                     <img src="assets/img/web-logo.png" alt="Home" width="40%" height="auto" />
                                 </a>
                             </div>
@@ -72,10 +71,8 @@ if (isset($_GET['code'])) {
                             <label>Passwords <span>*</span></label>
                             <div class="input-group" style="margin-top: 0px;margin-bottom: 20px">
                                 <input type="Password" class="form-control passwordclass" id="txtpassword">
-                                <div class="input-group-prepend" style="cursor: pointer;"
-                                    onclick="fncaddpassattribunHash2();" id="inputaddusereye2">
-                                    <span class="input-group-text" style="height: 45px;border-radius: 0rem;"><i
-                                            class="fa fa-eye-slash" id="addusereye2"></i></span>
+                                <div class="input-group-prepend" style="cursor: pointer;" onclick="fncaddpassattribunHash2();" id="inputaddusereye2">
+                                    <span class="input-group-text" style="height: 45px;border-radius: 0rem;"><i class="fa fa-eye-slash" id="addusereye2"></i></span>
                                 </div>
                             </div>
                             <div class="forget">
@@ -85,8 +82,7 @@ if (isset($_GET['code'])) {
                                 <button style="padding: 5px 50px;height: 38px;" onclick="loginuser()">login</button>
                             </div>
                             <div class="account text-center" style="margin-bottom:20px;">
-                                <span style="font-size: 14px;">Don't have an account yet?<a href="registration.php"
-                                        style="color:#95bf84"> Register Here</a></span>
+                                <span style="font-size: 14px;">Don't have an account yet?<a href="registration.php" style="color:#95bf84"> Register Here</a></span>
                             </div>
                         </div>
                     </div>
@@ -98,77 +94,77 @@ if (isset($_GET['code'])) {
     <!-- customer login end -->
 
     <script type="text/javascript">
-    $(document).keyup(function(e) {
-        var e = e || window.event; // for IE to cover IEs window event-object
-        if (e.which == 13) {
-            loginuser();
-        }
-    });
-
-    function loginuser() {
-        var txtusername = $("#txtusername").val();
-        var txtpassword = $("#txtpassword").val();
-
-        $(".loadload").show();
-        $.ajax({
-            type: 'POST',
-            url: 'login_class.php',
-            data: 'txtusername=' + txtusername + '&txtpassword=' + txtpassword + '&form=loginuser',
-            success: function(data) {
-                setTimeout(function() {
-                    $(".loadload").hide();
-
-                    if (data == 1) {
-                        setTimeout(function() {
-                            window.location = "../viewers/buyer-landing.php";
-                        }, 1500);
-
-                    } else if (data == 3) {
-                        Swal.fire(
-                            'USER INACTIVE',
-                            'Your account is currently inactive, Please contact your admin.',
-                            'warning'
-                        )
-
-                    } else {
-                        Swal.fire(
-                            'USER NOT FOUND',
-                            'You have entered invalid username or password.',
-                            'warning'
-                        )
-                    }
-                }, 1000);
-            }
-        })
-    }
-
-    function reqField1(classN) {
-        var isValid = 1;
-        $('.' + classN).each(function() {
-            if ($(this).val() == '') {
-                $(this).css('border', '1px #a94442 solid');
-                $(this).addClass('lala');
-                isValid = 0;
-            } else {
-                $(this).css('border', '');
-                $(this).removeClass('lala');
+        $(document).keyup(function(e) {
+            var e = e || window.event; // for IE to cover IEs window event-object
+            if (e.which == 13) {
+                loginuser();
             }
         });
 
-        return isValid;
-    }
+        function loginuser() {
+            var txtusername = $("#txtusername").val();
+            var txtpassword = $("#txtpassword").val();
 
-    function fncaddpassattribHash2() {
-        $("#txtpassword").attr("type", "password");
-        $("#inputaddusereye2").attr("onclick", "fncaddpassattribunHash2()");
-        $("#addusereye2").removeClass("fa-eye");
-        $("#addusereye2").addClass("fa-eye-slash");
-    }
+            $(".loadload").show();
+            $.ajax({
+                type: 'POST',
+                url: 'login_class.php',
+                data: 'txtusername=' + txtusername + '&txtpassword=' + txtpassword + '&form=loginuser',
+                success: function(data) {
+                    setTimeout(function() {
+                        $(".loadload").hide();
 
-    function fncaddpassattribunHash2() {
-        $("#txtpassword").attr("type", "text");
-        $("#inputaddusereye2").attr("onclick", "fncaddpassattribHash2()");
-        $("#addusereye2").addClass("fa-eye");
-        $("#addusereye2").removeClass("fa-eye-slash");
-    }
+                        if (data == 1) {
+                            setTimeout(function() {
+                                window.location = "../viewers/buyer-landing.php";
+                            }, 1500);
+
+                        } else if (data == 3) {
+                            Swal.fire(
+                                'USER INACTIVE',
+                                'Your account is currently inactive, Please contact your admin.',
+                                'warning'
+                            )
+
+                        } else {
+                            Swal.fire(
+                                'USER NOT FOUND',
+                                'You have entered invalid username or password.',
+                                'warning'
+                            )
+                        }
+                    }, 1000);
+                }
+            })
+        }
+
+        function reqField1(classN) {
+            var isValid = 1;
+            $('.' + classN).each(function() {
+                if ($(this).val() == '') {
+                    $(this).css('border', '1px #a94442 solid');
+                    $(this).addClass('lala');
+                    isValid = 0;
+                } else {
+                    $(this).css('border', '');
+                    $(this).removeClass('lala');
+                }
+            });
+
+            return isValid;
+        }
+
+        function fncaddpassattribHash2() {
+            $("#txtpassword").attr("type", "password");
+            $("#inputaddusereye2").attr("onclick", "fncaddpassattribunHash2()");
+            $("#addusereye2").removeClass("fa-eye");
+            $("#addusereye2").addClass("fa-eye-slash");
+        }
+
+        function fncaddpassattribunHash2() {
+            $("#txtpassword").attr("type", "text");
+            $("#inputaddusereye2").attr("onclick", "fncaddpassattribHash2()");
+            $("#addusereye2").addClass("fa-eye");
+            $("#addusereye2").removeClass("fa-eye-slash");
+        }
     </script>

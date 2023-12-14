@@ -209,7 +209,6 @@
                                     <input type="text" class="form-control" name="txtregsubdi2" id="txtregsubdi2" style="height: 40px;">
                                 </div>
                             </div>
-
                             <label class="mt-2" for="txtregbarangay2" style="margin-bottom: 0px; font-weight: 500;">Barangay</label>
                             <div class="row">
                                 <div class="col-md-12">
@@ -244,7 +243,7 @@
                 <div class="modal-footer mt-2" style="padding: 10px 15px;">
                     <div class="row">
                         <div class="col-md-12">
-                            <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct" onclick="btnsearchaddress();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;">Search</button>
+                            <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct" onclick="btnsearchaddress();" style="background-color: #4C644B !important; border: 1px solid #4C644B !important;">Search</button>
                         </div>
                     </div>
                 </div>
