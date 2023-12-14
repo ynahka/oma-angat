@@ -162,11 +162,7 @@
 
                     <div class="form-group text-center mt-4">
                         <div class="col-xs-12">
-<<<<<<< Updated upstream
                             <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="registeruseraccount();" style="padding: 10px 10px; font-weight: 500; background-color: #4C644B; border: #4C644B 1px solid">Register</button>
-=======
-                            <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="registeruseraccount();" style="padding: 10px 10px; font-weight: 500; background-color: #4C644B; border: #79a206 1px solid">Register</button>
->>>>>>> Stashed changes
                             <a href="login.php">Already have an account?</a>
                         </div>
                     </div>
@@ -213,7 +209,6 @@
                                     <input type="text" class="form-control" name="txtregsubdi2" id="txtregsubdi2" style="height: 40px;">
                                 </div>
                             </div>
-
                             <label class="mt-2" for="txtregbarangay2" style="margin-bottom: 0px; font-weight: 500;">Barangay</label>
                             <div class="row">
                                 <div class="col-md-12">
