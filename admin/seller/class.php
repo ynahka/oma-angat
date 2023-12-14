@@ -24,7 +24,7 @@ switch ($_POST['form']) {
 				if ($row[5] == "") {
 					$img = "assets/images/noimage5.png";
 				} else {
-					$img = "../OmaangatValidIDs/" . $row[5];
+					$img = "../OmaangatImages/ValidIDs/" . $row[5];
 				}
 
 				if ($row[4] == "PENDING") {

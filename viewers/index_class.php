@@ -5,51 +5,12 @@ session_start();
 switch ($_POST['form']) {
 
     case 'fncdisplaylistofproducts':
-        echo "<script src='assets/js/main.js'></script>";
-        echo "<div class='section newitem-part'>
-			        <div class='container'>
-			            <div class='row'>
-			                <div class='col'>
-			                    <div class='section-heading'>
-			                            <h2>Newly Harvested Products</h2>
-			                    </div>
-			                </div>
-			            </div>
-			            <div class='row'>
-                        <div class='col'>
-			            <div class='new-slider slider-arrow>
-                        <li>";
-
         $res = mysqli_query($connection, "SELECT product_id, productname, price, quantity FROM products ORDER BY id ASC");
         $numrows = mysqli_num_rows($res);
         if ($numrows == TRUE) {
             while ($row = mysqli_fetch_array($res)) {
 
                 $productimage = mysqli_fetch_array(mysqli_query($connection, "SELECT image, imagename FROM products_image WHERE product_id = '" . $row[0] . "' ORDER BY id ASC;"));
-
-                echo "<div class='product-card' data-bs-toggle='modal' data-bs-target='#product-view'>
-							 <div class='product-media'>
-		                                    <a href='javascript:void(0)' class='product_image' href='javascript:void(0)' title='quick view' onclick='openproductdetails(\"" . $row[0] . "\")'>
-		                                    	<img src='" . $productimage[0] . "' style='height: 275px; width: 100% !important;'>";
-                if ($row['quantity'] <= 0) {
-                    echo "<div class='soldoutshow'>Sold out</div>";
-                }
-
-                echo "</a>
-		                                    <div class='action_links'>
-		                                        <ul>
-		                                            <li class='quick_button'>
-		                                            	<a href='javascript:void(0)' title='quick view' onclick='openproductdetails(\"" . $row[0] . "\")'> 
-		                                            		<i class='icon-eye'></i>
-		                                            	</a>
-		                                            </li>
-		                                        </ul>
-                                                </div>
-		                                    </div>
-		                                </div>
-		                                <figcaption class='product_content'>
-		                                    <div class='product_rating'>
-		                                        <ul>";
                 $getaverate = mysqli_fetch_array(mysqli_query($connection, "SELECT AVG(rate) FROM rate WHERE product_id = '" . $row[0] . "';"));
                 $test = explode(".", $getaverate[0]);
                 for ($i = 1; $i <= $test[0]; $i++) {
@@ -63,27 +24,11 @@ switch ($_POST['form']) {
                 for ($i = 1; $i <= $test2[0]; $i++) {
                     echo "<li><a href='javascript:void(0)' style='color:#feb9545c;'><i class='fa fa-star'></i></a></li>";
                 }
-                echo "</ul>
-		                                    </div>
-		                                    <h4 class='product_name'><a href='javascript:void(0)' title='$row[1]' onclick='openproductdetails(\"" . $row[0] . "\")'>" . $row[1] . "</a></h4>
-		                                    <div class='price_box'>
-		                                        <span class='current_price'>₱ " . number_format($row[2], "2", ".", ",") . "</span>
-		                                    </div>
-		                                </figcaption>
-			                        </figure>
-			                    </article>
-			                </div>
-		                </div>
-		            ";
             }
         } else {
             echo "<tr><td  colspan='12' style='text-align:center'>No Product Found . . .</td></tr>";
         }
 
-        echo "</div>
-				        </div>
-				    </div>
-				</div>";
         break;
 
     case 'fncdisplayproddet':
