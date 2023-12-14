@@ -7796,8 +7796,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .customer_login {
-    padding-bottom: 67px;
-    margin-top: 80px;
+    /* padding-bottom: 67px; */
+    /* margin-top: 80px; */
   }
 }
 @media only screen and (max-width: 767px) {

@@ -21,6 +21,7 @@ session_start();
     <div class="loadload">
         <div class="spinner-border text-secondary" role="status"></div>
     </div>
+
     <!--offcanvas menu area end-->
     <datalist id="mylist">
         <option value="Albay">
@@ -48,66 +49,52 @@ session_start();
                         </div>
 
                         <!-- GUEST DETAILS -->
+
+                        <div class="col-md-12 mb-2 mt-4">
+                            <h4 class="text-info">Customer Details</h4>
+                        </div>
+
                         <div class="col-md-12">
-                            <div class="col-md-12 mb-2 mt-4">
-                                <div class="text-info">
-                                    <h4>Customer Details</h4>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="contact_message form">
-                                    <p>
-                                        <label>First Name</label>
-                                        <input class="reqresinfo" type="text" id="txtregFname">
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="contact_message form">
-                                    <p>
-                                        <label>Middle Name</label>
-                                        <input class="" type="text" id="txtregMname" style="background:none;  border-bottom: 0.5px solid #4C644B !important;">
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="contact_message form">
-                                    <p>
-                                        <label>Last Name</label>
-                                        <input class="reqresinfo" type="text" id="txtregLname">
-                                    </p>
-                                </div>
-                            </div>
+                            <label class="mt-2" for="txtregFname" style="margin-bottom: 0px; font-weight: 500;">Firstname</label>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="contact_message form">
-                                        <p>
-                                            <label>Contact Number</label>
-                                            <input class="reqresinfo numonly contactnum" type="text" id="txtregcontactphone">
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <div class="contact_message form">
-                                        <p>
-                                            <label>Email</label>
-                                            <input class="reqresinfo" type="text" id="txtregemail">
-                                        </p>
-                                    </div>
+                                <div class="col-md-12 contact_message form">
+                                    <input class="reqresinfo" type="text" id="txtregFname">
                                 </div>
                             </div>
 
+                            <label class="mt-2" for="txtregMname" style="margin-bottom: 0px; font-weight: 500;">Middle Name</label>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="contact_message form">
-                                        <div class="contact_textarea">
-                                            <label>Address</label>
-                                            <textarea class="reqresinfo form-control2" id="txtregfulladdress" readonly style="cursor:pointer;height: 60px;margin-bottom: 10px;" onclick="openmdlsearchaddress();"></textarea>
-                                        </div>
+                                <div class="col-md-12 contact_message form">
+                                    <input class="reqresinfo" type="text" id="txtregMname">
+                                </div>
+                            </div>
+
+                            <label class="mt-2" for="txtregLname" style="margin-bottom: 0px; font-weight: 500;">Last Name</label>
+                            <div class="row">
+                                <div class="col-md-12 contact_message form">
+                                    <input class="reqresinfo" type="text" id="txtregLname">
+                                </div>
+                            </div>
+
+                            <label class="mt-2" for="txtregcontactphone" style="margin-bottom: 0px; font-weight: 500;">Contact Number</label>
+                            <div class="row">
+                                <div class="col-md-12 contact_message form">
+                                    <input class="reqresinfo numonly contactnum" type="text" id="txtregcontactphone">
+                                </div>
+                            </div>
+
+                            <label class="mt-2" for="txtregemail" style="margin-bottom: 0px; font-weight: 500;">Email</label>
+                            <div class="row">
+                                <div class="col-md-12 contact_message form">
+                                    <input class="reqresinfo " type="text" id="txtregemail">
+                                </div>
+                            </div>
+
+                            <label class="mt-2" for="txtregfulladdress" style="margin-bottom: 0px; font-weight: 500;">Address</label>
+                            <div class="row">
+                                <div class="col-md-12 contact_message form">
+                                    <div class="contact_textarea">
+                                        <textarea class="form-control2 reqresinfo" name="txtregfulladdress" id="txtregfulladdress" rows="2" readonly style="cursor:pointer;" onclick="openmdlsearchaddress();"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -133,276 +120,168 @@ session_start();
                             <input type="hidden" id="txtreglat">
                             <input type="hidden" id="txtreglong">
 
-                            <div class="col-md-12">
+                            <div class="row mb-2">
                                 <div class="col-md-12">
+                                    <hr>
+                                    <h4 class="text-info">Account Credentials</h4>
+                                </div>
+                            </div>
+
+                            <label class="" for="txtregusername" style="margin-bottom: 0px; font-weight: 500;">Username</label>
+                            <div class="row">
+                                <div class="col-md-12 contact_message form">
+                                    <input type="text" class="form-control reqresinfo" name="txtregusername" id="txtregusername">
+                                </div>
+                            </div>
+
+                            <label class="mt-2" for="txtadduserconfirmpass" style="margin-bottom: 0px; font-weight: 500;">Password</label>
+                            <div class="row">
+                                <div class="col-md-12 contact_message form">
+                                    <div class="input-group" style="margin-top: 0px;">
+                                        <input type="Password" class="form-control reqresinfo" id="txtadduserconfirmpass">
+                                        <div class="input-group-prepend" style="cursor: pointer;" onclick="fncaddpassattribunHash2();" id="inputaddusereye2">
+                                            <span class="input-group-text"><i class="fas fa-eye-slash" id="addusereye2"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="text-info" style="margin-top: 30px; margin-bottom: 15px;">Profile Information</h4>
+
+                            <div class="row">
+                                <div class="col-md-12 contact_message form">
+                                    <form method="post" action="#" enctype="multipart/form-data" id="frmUploadvalidPic">
+                                        <div class="row">
+                                            <div class="col-md-12" style="display: none;">
+                                                <img src="assets/images/noimage5.png" width="200" height="250" style="border: 2px solid #bdc3c7; margin-bottom: 10px;" id="updatevalidImage"><br>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <input type="file" class="dropify clearinfo reqresinfo" id="txtvalidImagefile" name="txtvalidImagefile" onchange="fncShowvalidPic();" accept="image/*" data-height="300">
+                                                <input type="hidden" class="clearinfo" name="txtvalidimageID" id="txtvalidimageID">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center mt-4">
+                        <div class="col-xs-12 contact_message form">
+                            <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="registeruseraccount();" style="padding: 10px 10px; font-weight: 500; background-color: #4C644B; border: #4C644B 1px solid"> Submit</button>
+                        </div>
+                        <div class="contact_message form text-center" style="margin-top: 10px; margin-bottom: 25px;">
+                            <a href="login.php">Already have an account?</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--contact area end-->
+
+    <!-- modal area start-->
+    <div class="modal fade" id="mdlsearchaddress" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" style="min-width:400px;">
+            <div class="modal-content" style="border-radius: 10px;">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="clearsearchaddress();" style="left: 92%;">
+                    <span aria-hidden="true"><i class="icon-x"></i></span>
+                </button>
+                <div class="modal_body">
+                    <div class="container">
+                        <div class="row">
+                            <form class="dropdown-group">
+                                <div class="col-lg-12 col-md-12 mb-3">
                                     <div class="contact_message form">
-                                        <h4>Account Credentials</h4>
+                                        <p>
+                                            <label>Province</label><br>
+                                        <form class="dropdown-group">
+                                            <select class="reqresinfo2" type="text" id="txtregprovince2" size="1">
+                                                <option value="" selected="selected">-- Select Province --
+                                                </option>
+                                            </select>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="contact_message form">
-                                            <p>
-                                                <label>Username</label>
-                                                <input type="text" id="txtregusername" class="reqresinfo">
-                                            </p>
-                                        </div>
-                                    </div>
+                                </p>
 
-                                    <div class="col-md-12">
-                                        <div class="contact_message form">
-                                            <label>Password</label>
-                                            <div class="input-group" style="margin-top: 0px;margin-bottom: 20px; background:none; border: none;">
-                                                <input type="Password" class="form-control reqresinfo passwordclass" id="txtadduserconfirmpass">
-                                                <div class="input-group-prepend" style="cursor: pointer; background:none; border: none;" onclick="fncaddpassattribunHash2();" id="inputaddusereye2">
-                                                    <span class="input-group-text" style="height: 45px;border-radius: 0rem; background:none; border: none;"><i class="fa fa-eye-slash" id="addusereye2"></i></span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="contact_message form">
+                                        <p>
+                                            <label>Municipality</label><br>
+                                            <select class="reqresinfo2" type="text" id="txtregcity2" required size="1">
+                                                <option value="" selected="selected">-- Select City --</option>
+                                            </select>
                                     </div>
                                 </div>
+                                </p>
 
-                                <div class="row">
-                                    <div class="col-md-12" style="margin-bottom: 30px;">
-                                        <div class="contact_message form">
-                                            <div class="contact_textarea">
-                                                <label>Profile Image</label>
-                                                <form method="post" action="#" enctype="multipart/form-data" id="frmUploadvalidPic">
-                                                    <div class="row">
-                                                        <div class="col-md-12" style="display: none;">
-                                                            <img src="assets/images/noimage5.png" width="200" height="250" style="border: 2px solid #bdc3c7; margin-bottom: 10px;" id="updatevalidImage"><br>
-                                                        </div>
-                                                        <div class="col-md-12">
-                                                            <input type="file" class="dropify clearinfo reqresinfo" id="txtvalidImagefile" name="txtvalidImagefile" onchange="fncShowvalidPic();" accept="image/*" data-height="300">
-                                                            <input type="hidden" class="clearinfo" name="txtvalidimageID" id="txtvalidimageID">
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="contact_message form">
+                                        <p>
+                                            <label>Barangay</label><br>
+                                            <select class="reqresinfo2" type="text" id="txtregbarangay2" size="1">
+                                                <option value="" selected="selected">-- Select Barangay --
+                                                </option>
+                                            </select>
                                     </div>
                                 </div>
+                                </p>
 
-                            </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="contact_message form">
+                                        <p>
+                                            <label>Postal Code/Zip Code</label><br>
+                                            <select class="reqresinfo2" type="text" id="txtregpostalcode2" required size="1">
+                                                <option value="" selected="selected">-- Select ZIP Code --
+                                                </option>
+                                            </select>
+                                    </div>
+                                </div>
+                                </p>
+                            </form>
                         </div>
 
 
-                        <!-- 
-                        <div class="row mt-4"> -->
-                        <div class="col-xs-12 text-center">
-                            <div class="contact_message form">
-                                <button type="button" onclick="registeruseraccount();" style="font-weight: 500; background-color: #4C644B; border: #4C644B 1px solid"> Submit</button>
-                            </div>
-                            <div class="contact_message form text-center" style="margin-top: 10px; margin-bottom: 25px;">
-                                <a href="login.php">Already have an account?</a>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="" for="txtreghousenum2" style="margin-bottom: 0px; font-weight: 500;">House
+                                    Number</label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" name="txtreghousenum2" id="txtreghousenum2" style="height: 40px;">
+                                    </div>
+                                </div>
+
+                                <label class="mt-2" for="txtregstreet2" style="margin-bottom: 0px; font-weight: 500;">Street
+                                    Name</label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control reqresinfo2" name="txtregstreet2" id="txtregstreet2" style="height: 40px;">
+                                    </div>
+                                </div>
+
+                                <label class="mt-2" for="txtregsubdi2" style="margin-bottom: 0px; font-weight: 500;">Subdivision/Village</label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" name="txtregsubdi2" id="txtregsubdi2" style="height: 40px;">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- </div> -->
+
                     </div>
-                </div>
-            </div>
-        </div>
-        <!--contact area end-->
-
-        <!-- modal area start-->
-        <div class="modal fade" id="mdlsearchaddress" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
-            <div class="modal-dialog modal-dialog-centered" style="min-width:400px;">
-                <div class="modal-content" style="border-radius: 10px;">
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="clearsearchaddress();" style="left: 92%;">
-                        <span aria-hidden="true"><i class="icon-x"></i></span>
-                    </button>
-                    <div class="modal_body">
-                        <div class="container">
-
-                            <div class="product_details mb-4">
-                                <div class="row">
-                                    <!--
-                            <div class="col-lg-12 col-md-12">
-                                <div class="contact_message form">
-                                    <p>
-                                        <label>House Number</label>
-                                        <input class="" type="text" id="txtreghousenum2">
-                                    </p>
-                                </div>
+                    <div class="modal-footer mt-2" style="padding: 10px 15px;">
+                        <div class="row">
+                            <div class="col-md-12 mb-5">
+                                <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct" onclick="btnsearchaddress();" style="background-color: #4C644B !important; border: 1px solid #4C644B !important;">Search</button>
                             </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="contact_message form">
-                                    <p>
-                                        <label>Street Name</label>
-                                        <input class="" type="text" id="txtregstreet2">
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="contact_message form">
-                                    <p>
-                                        <label>Subdivision/Village</label>
-                                        <input class="" type="text" id="txtregsubdi2">
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="contact_message form">
-                                    <p>
-                                        <label>Barangay</label>
-                                        <input class="reqresinfo2" type="text" id="txtregbarangay2" required>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="contact_message form">
-                                    <p>
-                                        <label>City/Municipality</label>
-                                        <input class="reqresinfo2" type="text" id="txtregcity2" required>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="contact_message form">
-                                    <p>
-                                        <label>Postal Code/Zip Code</label>
-                                        <input class="reqresinfo2" type="text" id="txtregpostalcode2" required>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="contact_message form">
-                                    <p>
-                                        <label>Province</label> -->
-                                    <!--<select  id="txtregprovince2" class ="reqresinfo2" type="text" name = "Provinces">
-                                        <option value = "Albay" selected>Albay</option>
-                                        <option value = "Camarines Norte">Camarines Norte</option>
-                                        <option value = "Camarines Sur" selected>Camarines Sur</option>
-                                        <option value = "Catanduanes">Catanduanes</option>
-                                        <option value = "Masbate" selected>Masbate</option>
-                                        <option value = "Sorsogon">Sorsogon</option>
-                                        </select> -->
-                                    <form class="dropdown-group">
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="contact_message form">
-                                                <p>
-                                                    <label>Province</label><br>
-                                                <form class="dropdown-group">
-                                                    <select class="reqresinfo2" type="text" id="txtregprovince2" size="1">
-                                                        <option value="" selected="selected">-- Select Province --
-                                                        </option>
-                                                    </select>
-                                            </div>
-                                        </div>
-                                        </p>
-
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="contact_message form">
-                                                <p>
-                                                    <label>Municipality</label><br>
-                                                    <select class="reqresinfo2" type="text" id="txtregcity2" required size="1">
-                                                        <option value="" selected="selected">-- Select City --</option>
-                                                    </select>
-                                            </div>
-                                        </div>
-                                        </p>
-
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="contact_message form">
-                                                <p>
-                                                    <label>Barangay</label><br>
-                                                    <select class="reqresinfo2" type="text" id="txtregbarangay2" size="1">
-                                                        <option value="" selected="selected">-- Select Barangay --
-                                                        </option>
-                                                    </select>
-                                            </div>
-                                        </div>
-                                        </p>
-
-                                        <div class="col-lg-12 col-md-12">
-                                            <div class="contact_message form">
-                                                <p>
-                                                    <label>Postal Code/Zip Code</label><br>
-                                                    <select class="reqresinfo2" type="text" id="txtregpostalcode2" required size="1">
-                                                        <option value="" selected="selected">-- Select ZIP Code --
-                                                        </option>
-                                                    </select>
-                                            </div>
-                                        </div>
-                                        </p>
-                                    </form>
-
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="contact_message form">
-                                            <p>
-                                                <label>House Number</label>
-                                                <input class="" type="text" id="txtreghousenum2">
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="contact_message form">
-                                            <p>
-                                                <label>Street Name</label>
-                                                <input class="" type="text" id="txtregstreet2">
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="contact_message form">
-                                            <p>
-                                                <label>Subdivision/Village</label>
-                                                <input class="" type="text" id="txtregsubdi2">
-                                            </p>
-                                        </div>
-                                    </div>
-
-
-                                    <!--
-                                    <h1>Select Country State City Zip</h1>
-                                    <form class="dropdown-group">
-                                    <select id="Country" size="1">
-                                    <option value="" selected="selected">-- Select Country --</option>
-                                    </select>
-
-                                    <select id="State" size="1">
-                                    <option value="" selected="selected">-- Select State --</option>
-                                    </select>
-
-                                    <select id="City" size="1">
-                                    <option value="" selected="selected">-- Select City --</option>
-                                    </select>
-
-                                    <select id="Zip" size="1">
-                                    <option value="" selected="selected">-- Select Zip --</option>
-                                    </select>
-                                    </form>
-                                    -->
-                                    <script src="registration.js"></script>
-
-                                    <!--        <input class="reqresinfo2" type="text" id="txtregprovince2" list="mylist" onmousedown="value = '';" autocomplete="off" required>
-                                    </p> -->
-                                    <!--<p id="display"></p> for testing only -->
-                                    <!--            </div>
-                                    </div>
-                                    -->
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="contact_message form">
-                                            <button onclick="btnsearchaddress();">Search</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
+                <script src="registration.js"></script>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
