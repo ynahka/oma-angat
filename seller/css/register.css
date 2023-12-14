@@ -5,9 +5,11 @@ body, html {
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: #4C644B;
 }
 .auth{
     background-color: #4C644B;
+     padding-top: 30px;
 }
 /* Container for the two columns */
 .auth-container {
@@ -16,7 +18,7 @@ body, html {
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
     height: 100%; /* Make the container full height of the viewport */
-    padding-top: 30px;
+   
 }
 
 @media (max-width: 320px) {
@@ -54,7 +56,7 @@ body, html {
     word-wrap: break-word;
     margin: auto;
     margin-bottom: 10px;
-    border-radius: 0.5em;
+     border-radius: 25px !important;
     background: #CFE2CE;
     width: auto; /* Make the columns full width */
      /* Center the card within the container */
@@ -78,7 +80,7 @@ body, html {
     .auth-container {
         justify-content: space-around; /* Distribute the columns with space around on larger screens */
         margin: auto;
-            background: #CFE2CE;
+            background: #4C644B;
     }
 
     .card {
