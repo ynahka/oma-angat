@@ -113,7 +113,7 @@ switch ($_POST['form']) {
 
 																															foreach (explode('#', $_POST['textaddcategory']) as $key => $value) {
 																																if ($value != '') {
-																																	$listofcategories = mysqli_query($connection, "INSERT INTO products_category SET product_id = '" . $generateID . "', categoryID = '" . $value . "';");
+																																	$listofcategories = mysqli_query($connection, "INSERT INTO products_category SET product_id = '" . $generateID . "', category_id = '" . $value . "';");
 																																}
 																															}
 
@@ -220,13 +220,13 @@ switch ($_POST['form']) {
 																															echo "|" . $productdet[0] . "|" . $productdet[1] . "|" . $productdet[2] . "|" . $productdet[3] . "|" . $productdet[4] . "|" . number_format($productdet[5], "2", ".", ",") . "|";
 
 																															$count2 = 0;
-																															$res2 = mysqli_query($connection, "SELECT a.categoryID, b.categoryname FROM products_category AS a LEFT JOIN categories AS b ON a.categoryID = b.categoryID WHERE a.product_id = '" . $_POST['product_id'] . "';");
+																															$res2 = mysqli_query($connection, "SELECT a.category_id, b.categoryname FROM products_category AS a LEFT JOIN categories AS b ON a.category_id = b.category_id WHERE a.product_id = '" . $_POST['product_id'] . "';");
 																															$numrows2 = mysqli_num_rows($res2);
 																															echo $numrows2 . "|";
 																															while ($row2 = mysqli_fetch_array($res2)) {
 																																if ($count2 == 0) {
 																																	echo "<select class='form-control clearinfo mb-2 reqresinfo' name='txtaddcategory' id='txtaddcategory' style='font-size: .9rem;'>";
-																																	$res3 = mysqli_query($connection, "SELECT categoryID, categoryname FROM categories WHERE categoryID != '" . $row2[0] . "';");
+																																	$res3 = mysqli_query($connection, "SELECT category_id, categoryname FROM categories WHERE category_id != '" . $row2[0] . "';");
 																																?> <option value="<?php echo $row2[0]; ?>"><?php echo $row2[1]; ?></option> <?php
 																																																			while ($row3 = mysqli_fetch_array($res3)) {
 																																																			?> <option value="<?php echo $row3[0]; ?>">
@@ -236,7 +236,7 @@ switch ($_POST['form']) {
 																																																			$count2++;
 																																																		} else {
 																																																			echo "<select class='form-control clearinfo mb-2 reqresinfo' name='txtaddcategory' id='txtaddcategory" . $count2 . "' style='font-size: .9rem;'>";
-																																																			$res3 = mysqli_query($connection, "SELECT categoryID, categoryname FROM categories WHERE categoryID != '" . $row2[0] . "';");
+																																																			$res3 = mysqli_query($connection, "SELECT category_id, categoryname FROM categories WHERE category_id != '" . $row2[0] . "';");
 															?> <option value="<?php echo $row2[0]; ?>">
 					<?php echo $row2[1]; ?>
 				</option> <?php
@@ -259,12 +259,12 @@ switch ($_POST['form']) {
 																																																	if ($deleteprod == TRUE) {
 																																																		foreach (explode('#', $_POST['textaddcategory']) as $key => $value) {
 																																																			if ($value != '') {
-																																																				$sqlcat = "SELECT id FROM products_category WHERE categoryID = '" . $value . "' AND product_id = '" . $_POST['product_id'] . "' ";
+																																																				$sqlcat = "SELECT id FROM products_category WHERE category_id = '" . $value . "' AND product_id = '" . $_POST['product_id'] . "' ";
 																																																				$rescat = mysqli_query($connection, $sqlcat);
 																																																				$numcat = mysqli_num_rows($rescat);
 
 																																																				if ($numcat == 0) {
-																																																					$listofcategories = mysqli_query($connection, "INSERT INTO products_category SET product_id = '" . $_POST['product_id'] . "', categoryID = '" . $value . "';");
+																																																					$listofcategories = mysqli_query($connection, "INSERT INTO products_category SET product_id = '" . $_POST['product_id'] . "', category_id = '" . $value . "';");
 																																																				} else {
 																																																				}
 																																																			}
@@ -283,12 +283,12 @@ switch ($_POST['form']) {
 																																																	if ($deleteprod == TRUE) {
 																																																		foreach (explode('#', $_POST['textaddcategory']) as $key => $value) {
 																																																			if ($value != '') {
-																																																				$sqlcat = "SELECT id FROM products_category WHERE categoryID = '" . $value . "' AND product_id = '" . $_POST['product_id'] . "' ";
+																																																				$sqlcat = "SELECT id FROM products_category WHERE category_id = '" . $value . "' AND product_id = '" . $_POST['product_id'] . "' ";
 																																																				$rescat = mysqli_query($connection, $sqlcat);
 																																																				$numcat = mysqli_num_rows($rescat);
 
 																																																				if ($numcat == 0) {
-																																																					$listofcategories = mysqli_query($connection, "INSERT INTO products_category SET product_id = '" . $_POST['product_id'] . "', categoryID = '" . $value . "';");
+																																																					$listofcategories = mysqli_query($connection, "INSERT INTO products_category SET product_id = '" . $_POST['product_id'] . "', category_id = '" . $value . "';");
 																																																				} else {
 																																																				}
 																																																			}
