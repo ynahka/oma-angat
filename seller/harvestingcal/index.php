@@ -34,9 +34,11 @@
         </div>
     </div>
 
-    <div class="container-fluid" style="padding: 15px 15px; background-color: white; min-height: 540px; margin-top: 15px;">
+    <div class="container-fluid"
+        style="padding: 15px 15px; background-color: white; min-height: 540px; margin-top: 15px;">
         <h4 class="mb-0 headerfontfont2" style="color: #2c2b2e;font-weight: 500;">Harvesting Schedule</h4>
-        <h6 class="mb-4 headerfontfont" style="font-weight: 300;font-size: 13px;">You have total of <span id="#">0</span> Schedule
+        <h6 class="mb-4 headerfontfont" style="font-weight: 300;font-size: 13px;">You have total of <span
+                id="#">0</span> Schedule
         </h6>
 
         <div class="row" style="margin-bottom: .5rem;">
@@ -45,12 +47,16 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text searchinputorder"><i class="fas fa-search"></i></span>
                     </div>
-                    <input type="text" class="form-control searchinputorder" id="txtsearchproduct" placeholder="Search . . .">
+                    <input type="text" class="form-control searchinputorder" id="txtsearchproduct"
+                        placeholder="Search . . .">
                 </div>
             </div>
 
             <div class="col-md-8 coldashboardbox4">
-                <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct" onclick="openmdladdproduct();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;"><i class="fas fa-plus"></i>Add Harvest Schedule</button>
+                <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct"
+                    onclick="openmdladdproduct();"
+                    style="background-color: #79a206 !important; border: 1px solid #79a206 !important;"><i
+                        class="fas fa-plus"></i>Add Harvest Schedule</button>
             </div>
         </div>
 
@@ -59,7 +65,8 @@
                 <div class="mb-3">
                     <div id='calendar'></div>
                     <!-- Bootstrap Modal -->
-                    <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="eventModal" tabindex="-1" role="dialog"
+                        aria-labelledby="eventModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -71,12 +78,18 @@
                                 <div class="modal-body">
                                     <form id="eventForm">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="eventTitle" placeholder="Enter event title" style="margin-bottom: 8px;">
-                                            <input type="text" class="form-control" id="prodHarvest" placeholder="Product to Harvest" style="margin-bottom: 8px;">
-                                            <input type="text" class="form-control" id="prodQuanti" placeholder="Quantity" style="margin-bottom: 8px;">
-                                            <input type="text" class="form-control" id="prodPrice" placeholder="Price" style="margin-bottom: 8px;">
-                                            <input type="date" class="form-control" id="startDate" placeholder="Start Date" style="margin-bottom: 8px;">
-                                            <input type="date" class="form-control" id="endDate" placeholder="End Date" style="margin-bottom: 8px;">
+                                            <input type="text" class="form-control" id="eventTitle"
+                                                placeholder="Enter event title" style="margin-bottom: 8px;">
+                                            <input type="text" class="form-control" id="prodHarvest"
+                                                placeholder="Product to Harvest" style="margin-bottom: 8px;">
+                                            <input type="text" class="form-control" id="prodQuanti"
+                                                placeholder="Quantity" style="margin-bottom: 8px;">
+                                            <input type="text" class="form-control" id="prodPrice" placeholder="Price"
+                                                style="margin-bottom: 8px;">
+                                            <input type="date" class="form-control" id="startDate"
+                                                placeholder="Start Date" style="margin-bottom: 8px;">
+                                            <input type="date" class="form-control" id="endDate" placeholder="End Date"
+                                                style="margin-bottom: 8px;">
 
                                         </div>
                                     </form>
@@ -107,71 +120,71 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
     <!-- ... (previous HTML code) ... -->
     <script>
-        function saveEvent() {
-            var title = $('#eventTitle').val();
-            var prodHarvest = $('#prodHarvest').val();
-            var prodQuantity = $('#prodQuanti').val();
-            var prodPrice = $("#prodPrice").val().replace(/,/g, "");
-            var eventStartDate = $('#startDate').val();
-            var eventEndDate = $('#endDate').val();
+    function saveEvent() {
+        var title = $('#eventTitle').val();
+        var prodHarvest = $('#prodHarvest').val();
+        var prodQuantity = $('#prodQuanti').val();
+        var prodPrice = $("#prodPrice").val().replace(/,/g, "");
+        var eventStartDate = $('#startDate').val();
+        var eventEndDate = $('#endDate').val();
 
-            // Perform input validation
-            if (title && prodHarvest && prodQuantity && prodPrice && eventStartDate &&
-                eventEndDate) {
-                var eventData = {
-                    title: title,
-                    prodHarvest: prodHarvest,
-                    prodQuantity: prodQuantity,
-                    prodPrice: prodPrice,
-                    start: eventStartDate,
-                    end: eventEndDate
-                };
+        // Perform input validation
+        if (title && prodHarvest && prodQuantity && prodPrice && eventStartDate &&
+            eventEndDate) {
+            var eventData = {
+                title: title,
+                prodHarvest: prodHarvest,
+                prodQuantity: prodQuantity,
+                prodPrice: prodPrice,
+                start: eventStartDate,
+                end: eventEndDate
+            };
 
-                $.ajax({
-                    type: 'POST',
-                    url: 'save_event.php',
-                    data: eventData,
-                    success: function(response) {
-                        $('#calendar').fullCalendar('renderEvent', eventData,
-                            true);
-                        $('#eventModal').modal('hide');
-                    },
-                    error: function(xhr, status, error) {
-                        // Handle errors
-                    }
-                });
-            } else {
-                // Handle case where required fields are empty
-                Swal.fire(
-                    'ALERT',
-                    'Please review your entries. Ensure all required fields are filled out',
-                    'warning'
-                )
-            }
-        }
-        $(document).ready(function() {
-
-            $('#calendar').fullCalendar({
-                header: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'month,agendaWeek,agendaDay'
+            $.ajax({
+                type: 'POST',
+                url: 'save_event.php',
+                data: eventData,
+                success: function(response) {
+                    $('#calendar').fullCalendar('renderEvent', eventData,
+                        true);
+                    $('#eventModal').modal('hide');
                 },
-                selectable: true,
-
-                select: function(start, end, jsEvent, view) {
-                    var selectedStartDate = start.format('YYYY-MM-DD HH:mm');
-                    var selectedEndDate = end.format('YYYY-MM-DD HH:mm');
-
-                    $('#eventModal').modal('show');
-
-                    // Bind saveEvent function to the "Save changes" button's click event
-                    $('#saveEvent').on('click', saveEvent);
-                },
-                // Other FullCalendar options
-                // ...
+                error: function(xhr, status, error) {
+                    // Handle errors
+                }
             });
+        } else {
+            // Handle case where required fields are empty
+            Swal.fire(
+                'ALERT',
+                'Please review your entries. Ensure all required fields are filled out',
+                'warning'
+            )
+        }
+    }
+    $(document).ready(function() {
+
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            selectable: true,
+
+            select: function(start, end, jsEvent, view) {
+                var selectedStartDate = start.format('YYYY-MM-DD HH:mm');
+                var selectedEndDate = end.format('YYYY-MM-DD HH:mm');
+
+                $('#eventModal').modal('show');
+
+                // Bind saveEvent function to the "Save changes" button's click event
+                $('#saveEvent').on('click', saveEvent);
+            },
+            // Other FullCalendar options
+            // ...
         });
+    });
     </script>
 </body>
 
