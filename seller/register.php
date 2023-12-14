@@ -21,149 +21,151 @@
                     </a>
                 </header>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <p class="regtitle">Create an Account</p>
-                            <p class="">Sell your fresh produce to a wide market!</p>
-                        </div>
-
-                        <div class="col-md-12 mb-2 mt-4">
-                            <h4 class="text-info">Farmers Information</h4>
-                        </div>
-
-                        <div class="col-md-12">
-                            <label for="txtregFname" style="margin-bottom: 0px; font-weight: 500;">Firstname</label>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control reqresinfo" name="txtregFname" id="txtregFname" style="height: 40px;">
-                                </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <p class="regtitle">Create an Account</p>
+                                <p class="">Sell your fresh produce to a wide market!</p>
                             </div>
 
-                            <label class="mt-2" for="txtregMname" style="margin-bottom: 0px; font-weight: 500;">Middlename</label>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="txtregMname" id="txtregMname" style="height: 40px;">
-                                </div>
+                            <div class="col-md-12 mb-2 mt-4">
+                                <h4 class="text-info">Farmers Information</h4>
                             </div>
 
-                            <label class="mt-2" for="txtregLname" style="margin-bottom: 0px; font-weight: 500;">Lastname</label>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control reqresinfo" name="txtregLname" id="txtregLname" style="height: 40px;">
-                                </div>
-                            </div>
-
-                            <label class="mt-2" for="txtregcontactphone" style="margin-bottom: 0px; font-weight: 500;">Contact No.</label>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control reqresinfo contactnum" name="txtregcontactphone" id="txtregcontactphone" style="height: 40px;">
-                                </div>
-                            </div>
-
-                            <label class="mt-2" for="txtregemail" style="margin-bottom: 0px; font-weight: 500;">Email</label>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control reqresinfo" name="txtregemail" id="txtregemail" style="height: 40px;">
-                                </div>
-                            </div>
-
-                            <label class="mt-2" for="txtregfulladdress" style="margin-bottom: 0px; font-weight: 500;">Address</label>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <textarea class="form-control reqresinfo" name="txtregfulladdress" id="txtregfulladdress" rows="2" readonly style="cursor:pointer;" onclick="openmdlsearchaddress();"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div id="map_canvas" style="height: 250px; width:100% !important; border-radius: 0px !important;">
+                            <div class="col-md-12">
+                                <label for="txtregFname" style="margin-bottom: 0px; font-weight: 500;">Firstname</label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control reqresinfo" name="txtregFname" id="txtregFname" style="height: 40px;">
                                     </div>
                                 </div>
-                            </div>
 
-                            <input type="hidden" id="txtreghousenum">
-                            <input type="hidden" id="txtregstreet">
-                            <input type="hidden" id="txtregsubdi">
-                            <input type="hidden" id="txtregbarangay">
-                            <input type="hidden" id="txtregcity">
-                            <input type="hidden" id="txtregpostalcode">
-                            <input type="hidden" id="txtregprovince">
-                            <input type="hidden" id="txtreglat">
-                            <input type="hidden" id="txtreglong">
-
-                            <div class="row mb-2">
-                                <div class="col-md-12">
-                                    <hr>
-                                    <h4 class="text-info">Account Credentials</h4>
+                                <label class="mt-2" for="txtregMname" style="margin-bottom: 0px; font-weight: 500;">Middlename</label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" name="txtregMname" id="txtregMname" style="height: 40px;">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <label class="" for="txtregusername" style="margin-bottom: 0px; font-weight: 500;">Username</label>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control reqresinfo" name="txtregusername" id="txtregusername" style="height: 40px;">
+                                <label class="mt-2" for="txtregLname" style="margin-bottom: 0px; font-weight: 500;">Lastname</label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control reqresinfo" name="txtregLname" id="txtregLname" style="height: 40px;">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <label class="mt-2" for="txtadduserconfirmpass" style="margin-bottom: 0px; font-weight: 500;">Password</label>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="input-group" style="margin-top: 0px;">
-                                        <input type="Password" class="form-control reqresinfo" id="txtadduserconfirmpass" style="height: 40px;">
-                                        <div class="input-group-prepend" style="cursor: pointer;" onclick="fncaddpassattribunHash2();" id="inputaddusereye2">
-                                            <span class="input-group-text"><i class="fas fa-eye-slash" id="addusereye2"></i></span>
+                                <label class="mt-2" for="txtregcontactphone" style="margin-bottom: 0px; font-weight: 500;">Contact No.</label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control reqresinfo contactnum" name="txtregcontactphone" id="txtregcontactphone" style="height: 40px;">
+                                    </div>
+                                </div>
+
+                                <label class="mt-2" for="txtregemail" style="margin-bottom: 0px; font-weight: 500;">Email</label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control reqresinfo" name="txtregemail" id="txtregemail" style="height: 40px;">
+                                    </div>
+                                </div>
+
+                                <label class="mt-2" for="txtregfulladdress" style="margin-bottom: 0px; font-weight: 500;">Address</label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <textarea class="form-control reqresinfo" name="txtregfulladdress" id="txtregfulladdress" rows="2" readonly style="cursor:pointer;" onclick="openmdlsearchaddress();"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="map_canvas" style="height: 250px; width:100% !important; border-radius: 0px !important;">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="row mb-2">
-                                <div class="col-md-12">
-                                    <hr>
-                                    <h4 class="text-info">Valid ID</h4>
+                                <input type="hidden" id="txtreghousenum">
+                                <input type="hidden" id="txtregstreet">
+                                <input type="hidden" id="txtregsubdi">
+                                <input type="hidden" id="txtregbarangay">
+                                <input type="hidden" id="txtregcity">
+                                <input type="hidden" id="txtregpostalcode">
+                                <input type="hidden" id="txtregprovince">
+                                <input type="hidden" id="txtreglat">
+                                <input type="hidden" id="txtreglong">
+
+                                <div class="row mb-2">
+                                    <div class="col-md-12">
+                                        <hr>
+                                        <h4 class="text-info">Account Credentials</h4>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <form method="post" action="#" enctype="multipart/form-data" id="frmUploadvalidPic">
-                                        <div class="row">
-                                            <div class="col-md-12" style="display: none;">
-                                                <img src="assets/images/noimage5.png" class="img-thumbnail" width="200" height="250" style="border: 2px solid #bdc3c7; margin-bottom: 10px;" id="updatevalidImage"><br>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <input type="file" class="dropify clearinfo reqresinfo" id="txtvalidImagefile" name="txtvalidImagefile" onchange="fncShowvalidPic();" accept="image/*" data-height="300">
-                                                <input type="hidden" class="clearinfo" name="txtvalidimageID" id="txtvalidimageID">
+                                <label class="" for="txtregusername" style="margin-bottom: 0px; font-weight: 500;">Username</label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control reqresinfo" name="txtregusername" id="txtregusername" style="height: 40px;">
+                                    </div>
+                                </div>
+
+                                <label class="mt-2" for="txtadduserconfirmpass" style="margin-bottom: 0px; font-weight: 500;">Password</label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input-group" style="margin-top: 0px;">
+                                            <input type="Password" class="form-control reqresinfo" id="txtadduserconfirmpass" style="height: 40px;">
+                                            <div class="input-group-prepend" style="cursor: pointer;" onclick="fncaddpassattribunHash2();" id="inputaddusereye2">
+                                                <span class="input-group-text"><i class="fas fa-eye-slash" id="addusereye2"></i></span>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <h4 class="text-info" style="margin-top: 30px; margin-bottom: 15px;">Profile Image</h4>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <form method="post" action="#" enctype="multipart/form-data" id="frmUploadvalidPic2">
-                                        <div class="row">
-                                            <div class="col-md-12" style="display: none;">
-                                                <img src="assets/images/noimage5.png" class="img-thumbnail" width="200" height="250" style="border: 2px solid #bdc3c7; margin-bottom: 10px;" id="updatevalidImage2"><br>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <input type="file" class="dropify clearinfo reqresinfo" id="txtvalidImagefile2" name="txtvalidImagefile2" onchange="fncShowvalidPic2();" accept="image/*" data-height="300">
-                                                <input type="hidden" class="clearinfo" name="txtvalidimageID2" id="txtvalidimageID2">
-                                            </div>
-                                        </div>
-                                    </form>
+                                <div class="row mb-2">
+                                    <div class="col-md-12">
+                                        <hr>
+                                        <h4 class="text-info">Valid ID</h4>
+                                    </div>
                                 </div>
-                            </div>
 
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form method="post" action="#" enctype="multipart/form-data" id="frmUploadvalidPic">
+                                            <div class="row">
+                                                <div class="col-md-12" style="display: none;">
+                                                    <img src="assets/images/noimage5.png" class="img-thumbnail" width="200" height="250" style="border: 2px solid #bdc3c7; margin-bottom: 10px;" id="updatevalidImage"><br>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <input type="file" class="dropify clearinfo reqresinfo" id="txtvalidImagefile" name="txtvalidImagefile" onchange="fncShowvalidPic();" accept="image/*" data-height="300">
+                                                    <input type="hidden" class="clearinfo" name="txtvalidimageID" id="txtvalidimageID">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <h4 class="text-info" style="margin-top: 30px; margin-bottom: 15px;">Profile Image</h4>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form method="post" action="#" enctype="multipart/form-data" id="frmUploadvalidPic2">
+                                            <div class="row">
+                                                <div class="col-md-12" style="display: none;">
+                                                    <img src="assets/images/noimage5.png" class="img-thumbnail" width="200" height="250" style="border: 2px solid #bdc3c7; margin-bottom: 10px;" id="updatevalidImage2"><br>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <input type="file" class="dropify clearinfo reqresinfo" id="txtvalidImagefile2" name="txtvalidImagefile2" onchange="fncShowvalidPic2();" accept="image/*" data-height="300">
+                                                    <input type="hidden" class="clearinfo" name="txtvalidimageID2" id="txtvalidimageID2">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group text-center mt-4">
-                        <div class="col-xs-12">
-                            <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="registeruseraccount();" style="padding: 10px 10px; font-weight: 500; background-color: #4C644B; border: #4C644B 1px solid">Register</button>
-                            <a href="login.php">Already have an account?</a>
+                        <div class="form-group text-center mt-4">
+                            <div class="col-xs-12">
+                                <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="registeruseraccount();" style="padding: 10px 10px; font-weight: 500; background-color: #4C644B; border: #4C644B 1px solid">Register</button>
+                                <a href="login.php">Already have an account?</a>
+                            </div>
                         </div>
                     </div>
                 </div>

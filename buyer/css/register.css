@@ -5,7 +5,7 @@ body, html {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #4C644B;
+    background: #4C644B !important;
     margin: 0;
     overflow-x: hidden;
     font-weight: 300;
@@ -15,10 +15,32 @@ body, html {
     overflow-x: hidden;
 }
 
+.text-info {
+    color: #4C644B !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
 .contact_area{
     background-color: #4C644B;
     /* padding-top: 30px; */
 }
+
+.contact_message{
+    line-height: 26px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+.contact_message input{
+    padding: 0 10px !important;
+    color:#4C644B !important;
+}
+
+
 /* Container for the two columns */
 .auth-container {
      background: #4C644B;
@@ -45,7 +67,21 @@ body, html {
 
 /* Change the font color of h4 */
 .card h4 {
-     color: rgb(147, 228, 147);
+
+    color: #4C644B !important;
+    text-transform: uppercase;
+    font-weight:500;
+    font-size: 1rem;
+
+}
+
+.reqresinfo{
+    color: #54667a !important;
+    display: initial;
+    background: #CFE2CE !important;
+    border-bottom: 0.5px solid #4C644B !important;
+    padding: 0 10px;
+    
 }
 .card-body{
     padding: 1.5rem 1.5rem 1rem 1.5rem !important;

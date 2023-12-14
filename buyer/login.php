@@ -22,6 +22,7 @@ if (isset($_GET['code'])) {
     <link rel="stylesheet" href="css/login.css">
     <title>OMA-ANGAT FORGOT AGRI-MARKET FOR ALABAYANO FARMERS</title>
     <link rel="icon" href="assets/img/web-logo.png" type="icon type">
+
 </head>
 
 <body>
