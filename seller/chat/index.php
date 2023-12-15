@@ -63,7 +63,6 @@
                     <div class="col-md-6 col-6 align-self-center" style="padding-left:10px;">
                         <h3 class="mb-0 mt-0 headerfontfont text-themecolor" style="font-weight: 600;">CHATS</h3>
                     </div>
-                
                 </div>
             </div>
         </div>
