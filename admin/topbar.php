@@ -83,9 +83,9 @@
                     <!-- <a class="nav-link text-muted waves-effect waves-dark" href="#" style="font-weight: 300; font-size: 16px; display:none;"><span id=""><b><?php echo $_SESSION['firstname'] ?></b></span></a> -->
                     <div class="dropdown-menu dropdown-menu-right animated flipInY" style="width: 270px;">
                         <ul class="dropdown-user">
-                            <li><a href="javascript:void(0)" onclick="opensettingmod();" class="settinghover"><i class="ti-settings"></i> Account Settings</a></li>
+                            <li><a href="javascript:void(0)" onclick="opensettingmod();" class="settinghover"><i class="ti-settings" style="margin-right: 5px;"></i> Account Settings</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="javascript:void(0)" onclick="logoutuser();" class="settinghover"><i class="fas fa-lock"></i>Logout</a></li>
+                            <li><a href="javascript:void(0)" onclick="logoutuser();" class="settinghover"><i class="fas fa-lock" style="margin-left: 10px; margin-right: 10px;"></i>Logout</a></li>
                             <!--<li><a href="" onclick="opensettingmod();" class="settinghover"><i class="fas fa-lock"></i> Logout</a></li>-->
                         </ul>
                     </div>

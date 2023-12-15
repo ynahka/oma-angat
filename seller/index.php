@@ -31,13 +31,13 @@ if (empty($_SESSION['user_id'])) {
     ?>
 
     <div class="page-wrapper">
-
       <div class="container-fluid containerfluidneed" style="padding: 20px 20px;">
         <?php
         if (!isset($_GET['url'])) {
           echo "<script>window.location='index.php?url=dashboard';</script>";
         } else {
           if ($_GET['url'] == "dashboard") {
+
             include "dashboard/index.php";
           }
 

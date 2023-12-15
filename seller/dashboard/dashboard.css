@@ -19,6 +19,13 @@
 .btn-danger2:hover {
     color: #da183b;
     text-decoration: none;
+
+}
+
+.report{
+    margin-top: 20px;
+    background-color: #E2EEE2;
+    border-radius: 16px;
 }
 
 /* Button 2*/

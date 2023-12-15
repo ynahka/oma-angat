@@ -92,9 +92,7 @@ File: scss
 /*******************
 /*Top bar
 *******************/
-.topbar {
-  background: var(--secondary);
-}
+.topbar {background: #CFE2CE;}
 
 .topbar .navbar-header {
   background: var(--secondary);

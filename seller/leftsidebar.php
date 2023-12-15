@@ -19,7 +19,7 @@
                 </li>
 
                 <li id="maincategories">
-                    <a href="index.php?url=orders"><i class="fas fa-file-alt"></i>
+                    <a href="index.php?url=orders"><i class="fas fa-shopping-cart"></i>
                         <span class="hide-menu">&nbsp;&nbsp;Orders</span>
                     </a>
                 </li>
@@ -35,13 +35,13 @@
                     </a>
                 </li>
                 <li id="mainharvest">
-                    <a href="index.php?url=harvestingcal"><i class="fas fa-solid fa-seedling"></i>
+                    <a href="index.php?url=harvestingcal"><i class="far fa-calendar-alt"></i>
                         <span class="hide-menu">&nbsp;&nbsp;Harvesting Calendar</span>
                     </a>
                 </li>
 
                 <li id="mainsold">
-                    <a href="index.php?url=chats"><i class="fas fa-comments"></i>
+                    <a href="index.php?url=chats"><i class="fas fa-paper-plane"></i>
                         <span class="hide-menu">&nbsp;&nbsp;Chats</span>
                     </a>
                 </li>
