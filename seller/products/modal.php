@@ -87,9 +87,9 @@
             <div class="modal-footer" style="padding: 10px 15px;">
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct btnprodsave" onclick="addproduct();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;">Save Product</button>
+                        <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct btnprodsave" onclick="addproduct();" style="background-color: #4C644B !important; border: 1px solid #4C644B !important;">Save Product</button>
 
-                        <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct btnprodupdate" onclick="editproduct();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;display: none;">Update Product</button>
+                        <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct btnprodupdate" onclick="editproduct();" style="background-color: #4C644B !important; border: 1px solid #4C644B !important;display: none;">Update Product</button>
                     </div> 
                 </div>
             </div>

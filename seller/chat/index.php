@@ -63,12 +63,7 @@
                     <div class="col-md-6 col-6 align-self-center" style="padding-left:10px;">
                         <h3 class="mb-0 mt-0 headerfontfont text-themecolor" style="font-weight: 600;">CHATS</h3>
                     </div>
-                    <div class="col-md-6 col-6 align-self-center" style="padding-right:10px;">
-                        <ol class="breadcrumb float-right headerfontfont">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Chats</li>
-                        </ol>
-                    </div>
+                
                 </div>
             </div>
         </div>

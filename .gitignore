@@ -1,4 +1,8 @@
 *.scss
 *.lock
 *.html
+*.sql
+*.png
+*.jpg
+*.jpeg
 node_modules/

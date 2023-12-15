@@ -130,7 +130,7 @@
             <div class="modal-footer" style="padding: 10px 15px;">
                 <div class="row">
                     <div class="col-md-12">
-                        <button class="btn waves-effect waves-light btn-secondary" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;" onclick="updateuser2();">Update</button>
+                        <button class="btn waves-effect waves-light btn-secondary" style="background-color: #4C644B!important; border: 1px solid #4C644B!important;" onclick="updateuser2();">Update</button>
                     </div>
                 </div>
             </div>
