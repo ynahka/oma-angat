@@ -2,6 +2,7 @@
 
 <div class="row">
     <div class="col-12">
+
         <div class="card" style="margin-bottom: 15px;">
             <div class="card-body paddingbreadcard" style="padding-top: 25px; padding-bottom: 25px;">
                 <div class="row page-titles" style="padding-bottom: 0px;">
@@ -21,7 +22,7 @@
     <div class="col-md-12">
         <div class="row" style="justify-content: center;">
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
-                <div class="card text-white bg-dark" style="margin-bottom: 15px;">
+                <div class="card text-white" style="margin-bottom: 15px;">
                     <div class="box bg-info">
                         <div class="box bg-info">
                             <h1 class=" text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670;">0</h1>
@@ -34,7 +35,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox2">
-                <div class="card text-white bg-dark" style="margin-bottom: 15px;">
+                <div class="card text-white" style="margin-bottom: 15px;">
                     <div class="box bg-info">
                         <div class="box bg-info">
                             <h1 class="text-white textdashboardboxes" id="txtTotproduct" style="color: #4a8670;">0</h1>
@@ -47,7 +48,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
-                <div class="card text-white bg-dark" style="margin-bottom: 15px;">
+                <div class="card text-white" style="margin-bottom: 15px;">
                     <div class="box bg-info">
                         <div class="box bg-info">
                             <h1 class="text-white textdashboardboxes" id="txtTotorders" style="color: #4a8670;">0</h1>
@@ -69,7 +70,7 @@
     </style>
     <div class="col-md-12">
         <div class="card" style="min-height: 450px;margin-bottom: 0px;">
-            <select id="selectchart" class="btn border" style="width: 200px;margin-left: auto;text-align: left;margin-top: 10px;margin-right: 10px;">
+            <select id="selectchart" class="btn border" style="width: 200px;margin-left: auto;text-align: left;margin-top: 50px;margin-right: 50px;">
                 <option>Select</option>
                 <option value="weekly">Weekly</option>
                 <option value="monthly">Monthly</option>
