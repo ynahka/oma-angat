@@ -63,12 +63,6 @@
                     <div class="col-md-6 col-6 align-self-center" style="padding-left:10px;">
                         <h3 class="mb-0 mt-0 headerfontfont text-themecolor" style="font-weight: 600;">PRODUCTS</h3>
                     </div>
-                    <div class="col-md-6 col-6 align-self-center" style="padding-right:10px;">
-                        <ol class="breadcrumb float-right headerfontfont">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Products</li>
-                        </ol>
-                    </div>
                 </div>
             </div>
         </div>
@@ -90,7 +84,7 @@
         </div>
 
         <div class="col-md-8 coldashboardbox4">
-            <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct" onclick="openmdladdproduct();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;"><i class="fas fa-plus"></i> New Product</button>
+            <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct" onclick="openmdladdproduct();" style="background-color: #4C644B !important; border: 1px solid #4C644B !important;"><i class="fas fa-plus"></i> New Product</button>
         </div>
     </div>
 
