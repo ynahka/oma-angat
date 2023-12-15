@@ -54,9 +54,9 @@
 
             <div class="col-md-8 coldashboardbox4">
                 <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct"
-                    onclick="openmdladdproduct();"
+                    id="EventModal"
                     style="background-color: #79a206 !important; border: 1px solid #79a206 !important;"><i
-                        class="fas fa-plus"></i>Add Harvest Schedule</button>
+                        class="fas fa-plus" onclick="showEventModal();"></i>Add Harvest Schedule</button>
             </div>
         </div>
 
@@ -96,7 +96,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-secodary" id="" onclick="saveEvent()">Save
+                                    <button type="button" class="btn btn-primary" id="" onclick="saveEvent()">Save
                                         changes</button>
                                 </div>
                             </div>
@@ -120,6 +120,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
     <!-- ... (previous HTML code) ... -->
     <script>
+    // JavaScript code to handle the button click event and show the modal
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('EventModal').addEventListener('click', function() {
+            $('#eventModal').modal('show'); // Show the eventModal when the button is clicked
+        });
+    });
+
     function saveEvent() {
         var title = $('#eventTitle').val();
         var prodHarvest = $('#prodHarvest').val();
@@ -178,12 +185,23 @@
 
                 $('#eventModal').modal('show');
 
+                // Unbind any previously bound click event
+                $('#saveEvent').off('click');
+
                 // Bind saveEvent function to the "Save changes" button's click event
                 $('#saveEvent').on('click', saveEvent);
             },
             // Other FullCalendar options
             // ...
         });
+    });
+
+    $('#eventModal').on('hidden.bs.modal', function() {
+        // Clear the modal form fields when the modal is closed
+        $('#eventForm')[0].reset(); // Reset the form
+
+        // Unbind the click event from the "Save changes" button
+        $('#saveEvent').off('click');
     });
     </script>
 </body>
