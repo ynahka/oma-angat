@@ -212,6 +212,7 @@ $('.suggest-slider').slick({
             settings: {
                 slidesToShow: 5,
                 slidesToScroll: 1,
+                arrows: true,
             }
         },
         {
@@ -219,6 +220,7 @@ $('.suggest-slider').slick({
             settings: {
                 slidesToShow: 5,
                 slidesToScroll: 1,
+                arrows: true,
             }
         },
         {
@@ -226,14 +228,15 @@ $('.suggest-slider').slick({
             settings: {
                 slidesToShow: 4,
                 slidesToScroll: 1,
+                arrows: true,
             }
         },
         {
             breakpoint: 576,
             settings: {
-                slidesToShow: 4,
+                slidesToShow: 3,
                 slidesToScroll: 1,
-                arrows: false,
+                arrows: true,
             }
         }
     ]
