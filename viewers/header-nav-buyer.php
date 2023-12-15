@@ -34,7 +34,7 @@
                  <div class="header-content">
                      <div class="header-media-group">
                          <button class="header-user"> <i class="far fa-user"></i></button>
-                         <a href="index.php"><img src="images/Oma-Angat-Logo-text.svg" alt="logo"></a>
+                         <a href="buyer-landing.php"><img src="images/Oma-Angat-Logo-text.svg" alt="logo"></a>
                          <button class="header-src"><i class="fas fa-search"></i></button>
                      </div>
 
@@ -88,7 +88,7 @@
                                  </li>
                                  <li class="navbar-item dropdown ">
                                      <a href="#0"><i class="fa-solid fa-comments"></i></a>
-                                     <a class="navbar-link" href="blog-author.php">Community</a>
+                                     <a class="navbar-link" href="community.php">Community</a>
                                  </li>
                                  <li class="navbar-item dropdown">
                                      <a href=""><i class="fa-solid fa-store"></i></a>

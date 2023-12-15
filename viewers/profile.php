@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include("connect.php");
+session_start();
+if (empty($_SESSION['user_id'])) {
+    echo "<script> window.location = '../buyer/login.php';</script>";
+} else {
+?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" href="css/profile.css">
 
 <body>
-    <?php include('header-nav.php'); ?>
+    <?php include('header-nav-buyer.php'); ?>
     <?php include('category-sidebar.php'); ?>
 
 
@@ -75,8 +82,10 @@
                                         <h6>primary</h6>
                                         <p>+8801838288389</p>
                                         <ul>
-                                            <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#contact-edit"></button></li>
-                                            <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li>
+                                            <li><button class="edit icofont-edit" title="Edit This"
+                                                    data-bs-toggle="modal" data-bs-target="#contact-edit"></button></li>
+                                            <li><button class="trash icofont-ui-delete" title="Remove This"
+                                                    data-bs-dismiss="alert"></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -85,8 +94,10 @@
                                         <h6>secondary</h6>
                                         <p>+8801941101915</p>
                                         <ul>
-                                            <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#contact-edit"></button></li>
-                                            <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li>
+                                            <li><button class="edit icofont-edit" title="Edit This"
+                                                    data-bs-toggle="modal" data-bs-target="#contact-edit"></button></li>
+                                            <li><button class="trash icofont-ui-delete" title="Remove This"
+                                                    data-bs-dismiss="alert"></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -95,8 +106,10 @@
                                         <h6>secondary</h6>
                                         <p>+8801747875727</p>
                                         <ul>
-                                            <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#contact-edit"></button></li>
-                                            <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li>
+                                            <li><button class="edit icofont-edit" title="Edit This"
+                                                    data-bs-toggle="modal" data-bs-target="#contact-edit"></button></li>
+                                            <li><button class="trash icofont-ui-delete" title="Remove This"
+                                                    data-bs-dismiss="alert"></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -117,8 +130,10 @@
                                         <h6>Home</h6>
                                         <p>jalkuri, fatullah, narayanganj-1420. word no-09, road no-17/A</p>
                                         <ul class="user-action">
-                                            <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#address-edit"></button></li>
-                                            <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li>
+                                            <li><button class="edit icofont-edit" title="Edit This"
+                                                    data-bs-toggle="modal" data-bs-target="#address-edit"></button></li>
+                                            <li><button class="trash icofont-ui-delete" title="Remove This"
+                                                    data-bs-dismiss="alert"></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -127,8 +142,10 @@
                                         <h6>Office</h6>
                                         <p>east tejturi bazar, dhaka-1200. word no-04, road no-13/c, house no-4/b</p>
                                         <ul class="user-action">
-                                            <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#address-edit"></button></li>
-                                            <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li>
+                                            <li><button class="edit icofont-edit" title="Edit This"
+                                                    data-bs-toggle="modal" data-bs-target="#address-edit"></button></li>
+                                            <li><button class="trash icofont-ui-delete" title="Remove This"
+                                                    data-bs-dismiss="alert"></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -137,8 +154,10 @@
                                         <h6>Bussiness</h6>
                                         <p>kawran bazar, dhaka-1100. word no-02, road no-13/d, house no-7/m</p>
                                         <ul class="user-action">
-                                            <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#address-edit"></button></li>
-                                            <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li>
+                                            <li><button class="edit icofont-edit" title="Edit This"
+                                                    data-bs-toggle="modal" data-bs-target="#address-edit"></button></li>
+                                            <li><button class="trash icofont-ui-delete" title="Remove This"
+                                                    data-bs-dismiss="alert"></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -165,7 +184,8 @@
                                             <sup>1876</sup>
                                         </p>
                                         <h5>miron mahmud</h5>
-                                        <button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button>
+                                        <button class="trash icofont-ui-delete" title="Remove This"
+                                            data-bs-dismiss="alert"></button>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-4 alert fade show">
@@ -179,7 +199,8 @@
                                             <sup>1876</sup>
                                         </p>
                                         <h5>miron mahmud</h5>
-                                        <button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button>
+                                        <button class="trash icofont-ui-delete" title="Remove This"
+                                            data-bs-dismiss="alert"></button>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-4 alert fade show">
@@ -193,7 +214,8 @@
                                             <sup>1876</sup>
                                         </p>
                                         <h5>miron mahmud</h5>
-                                        <button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button>
+                                        <button class="trash icofont-ui-delete" title="Remove This"
+                                            data-bs-dismiss="alert"></button>
                                     </div>
                                 </div>
                             </div>
@@ -368,7 +390,8 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">address</label>
-                        <textarea class="form-control" placeholder="jalkuri, fatullah, narayanganj-1420. word no-09, road no-17/A"></textarea>
+                        <textarea class="form-control"
+                            placeholder="jalkuri, fatullah, narayanganj-1420. word no-09, road no-17/A"></textarea>
                     </div>
                     <button class="form-btn" type="submit">save address info</button>
                 </form>
@@ -388,3 +411,6 @@
 </body>
 
 </html>
+<?php
+}
+?>

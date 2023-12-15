@@ -7,6 +7,7 @@ session_start();
 
 <head>
     <?php include 'header.php'; ?>
+    <?php include 'header-nav-buyer.php'; ?>
     <?php include 'community/header.php'; ?>
     <link rel="stylesheet" href="css/blog-author.css">
     <link rel="stylesheet" href="community/community.css">
@@ -36,7 +37,6 @@ session_start();
 </style>
 
 <body>
-    <?php include('header-nav.php'); ?>
     <?php include('category-sidebar.php'); ?>
     <div class="loadload">
         <div class="spinner-border text-secondary" role="status"></div>

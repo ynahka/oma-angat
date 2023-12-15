@@ -35,8 +35,6 @@
                                     <a href="product-video.php">product name</a>
                                 </h3>
                                 <div class="view-meta">
-                                    <p>View Shop:<a href="#">radhuni</a></p>
-                                    <p>SKU:<span>1234567</span></p>
 
                                 </div>
                                 <div class="view-rating">
@@ -56,13 +54,13 @@
                                 <div class="view-list-group">
                                     <label class="view-list-title">Chat Farmer:</label>
                                     <ul class="view-tag-list">
-                                        <li><a href="#">organic</a></li>
+                                        <li><a href="#">Chat now</a></li>
                                     </ul>
                                 </div>
                                 <div class="view-list-group">
                                     <label class="view-list-title">View Shop:</label>
                                     <ul class="view-tag-list">
-                                        <li><a href="#">organic</a></li>
+                                        <li><a href="shop-1column.php">View</a></li>
                                     </ul>
                                 </div>
                                 <div class="view-add-group">

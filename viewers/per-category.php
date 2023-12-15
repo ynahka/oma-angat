@@ -9,7 +9,7 @@
 <body>
     <?php include('header-nav.php'); ?>
     <?php include('product-view.php'); ?>
-    <?php include('product-view.php'); ?>
+
 
 
     <!--=====================================BANNER PART END=======================================-->
@@ -27,7 +27,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-3">
                     <div class="banner-category">
-                        <div class="banner-category-head"><i class="fas fa-bars"></i><span>Sort by categories</span></div>
+                        <div class="banner-category-head"><i class="fas fa-bars"></i><span>Sort by categories</span>
+                        </div>
                         <ul class="banner-category-list">
                             <li class="banner-category-item"><a href="#"><i class="flaticon-vegetable"></i><span>vegetables</span></a>
 
@@ -49,7 +50,8 @@
 
                             <li class="banner-category-item"><a href="#"><i class="flaticon-groceries"></i><span>Processed Foods</span></a>
                             </li>
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-fish"></i><span>Dried Fish</span></a>
+                            <li class="banner-category-item"><a href="#"><i class="flaticon-fish"></i><span>Dried
+                                        Fish</span></a>
                             </li>
                         </ul>
                     </div>

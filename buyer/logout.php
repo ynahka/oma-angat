@@ -1,7 +1,6 @@
 <?php
-	include("connect.php");
-	session_start();
+include("connect.php");
+session_start();
 
-	session_destroy();
-	echo "<script>window.location='index.php?url=home';</script>";
-?>
+session_destroy();
+echo "<script>window.location='../viewers/index.php';</script>";

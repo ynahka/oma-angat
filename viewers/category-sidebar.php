@@ -221,7 +221,7 @@
                         </ul> -->
                     </li>
                     <li>
-                        <a class="nav-link" href="blog-author.php"><i class="fa-solid fa-comments"></i>Community</a>
+                        <a class="nav-link" href="community.php"><i class="fa-solid fa-comments"></i>Community</a>
                         <!-- <ul class="dropdown-list">
                             <li><a href="home-standard.php">Home standard</a></li>
                         </ul> -->
@@ -235,7 +235,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="nav-link" href="login.php"><i class="icofont-ui-user"></i>my account</a>
+                        <a class="nav-link" href="profile.php"><i class="icofont-ui-user"></i>my account</a>
                     </li>
                     <div class="nav-info-group">
                         <li><a class="nav-link" href="about.php"><i class="icofont-info-circle"></i>about us</a></li>
@@ -247,7 +247,7 @@
                     <!-- <a class="nav-link" href="#"></i>Settings</a> -->
                     <a class="nav-link" href="privacy.php"></i>Privacy Policy</a>
                     <a class="nav-link" href="terms-and-conditions.php"></i>Terms & Conditions</a>
-                    <a class="nav-link" href="../buyeraccount/logout.php"></i>log out</a>
+                    <a class="nav-link" href="../buyer/logout.php"></i>log out</a>
                 </div>
 
                 <div class="nav-footer">
@@ -268,7 +268,7 @@
                 <i class="fas fa-home"></i>
                 <span>Home</span>
             </a>
-            <a href="blog-author.php" title="community">
+            <a href="community.php" title="community">
                 <i class="fa-solid fa-comments"></i>
                 <span>Community</span>
             </a>

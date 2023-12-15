@@ -7,7 +7,6 @@
 <body>
     <?php include('header-nav.php'); ?>
     <?php include('category-sidebar.php'); ?>
-    <?php include('product-view.php'); ?>
 
 
     <!--=====================================BANNER PART END=======================================-->
@@ -30,7 +29,8 @@
                                     <h3 class="author-name">Oma-angat</h3>
                                     <h6 class="author-mail">mironcoder@gmail.com</h6>
                                     <ul class="author-meta">
-                                        <li><a href="chat.php"><a href="chat.php" class="fas fa-comments"></a>Message Farmer</a></li>
+                                        <li><a href="chat.php"><a href="chat.php" class="fas fa-comments"></a>Message
+                                                Farmer</a></li>
                                     </ul>
                                     <!-- <a href="chat.php" class="author-meta">
                                         <i class="fas fa-comments"></i> Message Farmer
@@ -38,7 +38,9 @@
                                 </div>
                             </div>
                             <p class="author-bio">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea deserunt nisi, tempore eveniet pariatur natus delectus commodi, totam est culpa ducimus rem reprehenderit suscipit veritatis assumenda. Delectus, saepe. Explicabo, quos magnam fuga porro
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea deserunt nisi, tempore
+                                eveniet pariatur natus delectus commodi, totam est culpa ducimus rem reprehenderit
+                                suscipit veritatis assumenda. Delectus, saepe. Explicabo, quos magnam fuga porro
                             </p>
                         </div>
                     </div>
