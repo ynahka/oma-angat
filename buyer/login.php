@@ -96,7 +96,7 @@ if (isset($_GET['code'])) {
         <div class="auth-container">
             <div class="card">
                 <header class="auth-header">
-                    <a href="#" class="text-center db" style="padding-top: 5px;padding-bottom: 5px;"><img src="../admin/assets/images/single-logo.png" alt="Home" width="30%" height="auto" title="Homepage" />
+                    <a href="#" class="text-center db" style="padding-top: 5px;padding-bottom: 5px;"><img src="../admin/assets/images/single-logo.png" alt="Home" width="40%" height="auto" title="Homepage" />
                     </a>
                 </header>
                 <div class="card-body cardbodylogin" style="padding: 1.25rem 1.8rem;">

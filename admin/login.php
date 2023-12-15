@@ -51,7 +51,7 @@
         <div class="auth-container">
             <div class="card">
                 <header class="auth-header">
-                    <a href="/index.php" class="text-center db" style="padding-top: 5px;padding-bottom: 5px;"><img src="assets/images/single-logo.png" alt="Home" width="60%" height="auto" style="border: 1px solid #e2e2e2;" />
+                    <a href="/index.php" class="text-center db" style="padding-top: 5px;padding-bottom: 5px;"><img src="assets/images/single-logo.png" alt="Home" width="40%" height="auto" />
                     </a>
                 </header>
                 <div class="card-body cardbodylogin" style="padding: 1.25rem 1.8rem;">
