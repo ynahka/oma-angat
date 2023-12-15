@@ -1,28 +1,17 @@
 <link rel="stylesheet" type="text/css" href="dashboard/dashboard.css" />
 
-<div class="row page-titles rowpageheaderpadd">
-    <div class="col-md-6 col-6 align-self-center">
-        <h3 class="mb-0 mt-0 headerfontfont" style="color: #2c2b2e;font-weight: 500;">DASHBOARD</h3>
-    </div>
-    <div class="col-md-6 col-6 align-self-center">
-        <ol class="breadcrumb float-right headerfontfont">
-            <li class="breadcrumb-item"><a>Home</a></li>
-            <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
-    </div>
-</div>
-
 <div class="row">
     <div class="col-12">
+
         <div class="card" style="margin-bottom: 15px;">
             <div class="card-body paddingbreadcard" style="padding-top: 25px; padding-bottom: 25px;">
                 <div class="row page-titles" style="padding-bottom: 0px;">
                     <div class="col-md-6 align-self-center">
-                        <h3 class="mb-0 mt-0 textdashboardbread3"><span>Welcome, </span> <span class="text-themecolor textdashboardbread3" style="font-weight: 500; font-size: 22px;" id="txtuserFname"></span></h3>
+                        <h3 class="mb-0 mt-0 textdashboardbread3"><span style="text-transform: uppercase;">Welcome, </span> <span class="text-themecolor textdashboardbread3" style="font-weight: 500; font-size: 22px;" id="txtuserFname"></span></h3>
                     </div>
-                    <!-- <div class="col-md-6 align-self-center">
+                    <div class="col-md-6 align-self-center">
                         <h4 class="mb-0 mt-0 float-right textdashboardbread textdashboardbread2" style="font-weight: 400; color: #5f5f5f;"><span class="textdashboardbread" id="txtdatex"></span></h4>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -33,10 +22,10 @@
     <div class="col-md-12">
         <div class="row" style="justify-content: center;">
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
-                <div class="card text-white bg-dark" style="margin-bottom: 15px;">
-                    <div class="box bg-info" style="background-color: #0e62c7!important;">
-                        <div class="box bg-info" style="background-color: #0e62c7!important;">
-                            <h1 class="text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670;">0</h1>
+                <div class="card text-white" style="margin-bottom: 15px;">
+                    <div class="box bg-info">
+                        <div class="box bg-info">
+                            <h1 class=" text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670;">0</h1>
                             <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Customers</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-users"></i>
@@ -46,9 +35,9 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox2">
-                <div class="card text-white bg-dark" style="margin-bottom: 15px;">
-                    <div class="box bg-info" style="background-color: #f7aa47!important;">
-                        <div class="box bg-info" style="background-color: #f7aa47!important;">
+                <div class="card text-white" style="margin-bottom: 15px;">
+                    <div class="box bg-info">
+                        <div class="box bg-info">
                             <h1 class="text-white textdashboardboxes" id="txtTotproduct" style="color: #4a8670;">0</h1>
                             <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Products</h6>
                             <div class="dboxicon">
@@ -59,9 +48,9 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
-                <div class="card text-white bg-dark" style="margin-bottom: 15px;">
-                    <div class="box bg-info" style="background-color: #ff6264!important;">
-                        <div class="box bg-info" style="background-color: #ff6264!important;">
+                <div class="card text-white" style="margin-bottom: 15px;">
+                    <div class="box bg-info">
+                        <div class="box bg-info">
                             <h1 class="text-white textdashboardboxes" id="txtTotorders" style="color: #4a8670;">0</h1>
                             <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Orders</h6>
                             <div class="dboxicon">
@@ -81,7 +70,7 @@
     </style>
     <div class="col-md-12">
         <div class="card" style="min-height: 450px;margin-bottom: 0px;">
-            <select id="selectchart" class="btn border" style="width: 200px;margin-left: auto;text-align: left;margin-top: 10px;margin-right: 10px;">
+            <select id="selectchart" class="btn border" style="width: 200px;margin-left: auto;text-align: left;margin-top: 50px;margin-right: 50px;">
                 <option>Select</option>
                 <option value="weekly">Weekly</option>
                 <option value="monthly">Monthly</option>
