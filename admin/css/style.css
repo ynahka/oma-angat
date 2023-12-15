@@ -1210,8 +1210,8 @@ html body .waves-notransition {
 
 .btn-success,
 .btn-success.disabled {
-	background: #55ce63;
-	border: 1px solid #55ce63
+	background: #4C644B;
+	border: #4C644B;
 }
 
 .btn-success.disabled:hover,
@@ -6756,8 +6756,8 @@ a.mytooltip {
 }
 
 .sidebar-nav>ul>li>a.active {
-	font-weight: 400;
-	background: #fff;
+	font-weight: 500;
+	background: #F8FFFA;
 	color: #4C644B;
 }
 
@@ -6887,7 +6887,7 @@ a.mytooltip {
 	width: 270px;
 	right: 0;
 	left: auto;
-
+	background: #F8FFFA;
 }
 
 .topbar .top-navbar .mailbox ul {
@@ -6919,7 +6919,7 @@ a.mytooltip {
 	border-bottom: 1px solid rgba(120, 130, 140, 0.13);
 	display: block;
 	text-decoration: none;
-	padding: 9px 15px
+	padding: 15px 15px;
 }
 
 .mailbox .message-center a:hover {
@@ -6927,7 +6927,7 @@ a.mytooltip {
 }
 
 .mailbox .message-center a div {
-	white-space: normal
+	white-space: normal;
 }
 
 .mailbox .message-center a .user-img {
@@ -6971,7 +6971,8 @@ a.mytooltip {
 .mailbox .message-center a .mail-contnet {
 	display: inline-block;
 	width: 75%;
-	vertical-align: middle
+	vertical-align: middle;
+	margin-left: 10px;
 }
 
 .mailbox .message-center a .mail-contnet h5 {

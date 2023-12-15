@@ -115,6 +115,6 @@
 </div>
 
 <?php
-include("products/modal.php");
-include("products/script.php");
+include("paymentmethod/modal.php");
+include("paymentmethod/script.php");
 ?>

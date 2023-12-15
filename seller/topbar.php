@@ -1,7 +1,7 @@
 <!-----header for admin ----->
 <style>
     .mailbox .slimScrollDiv {
-        height: 120px !important;
+        height: 200px !important;
     }
 </style>
 <header class="topbar">
@@ -63,14 +63,14 @@
                                     <a href="index.php?url=chats">
                                         <div class="btn btn-success btn-circle"><i class="mdi mdi-message"></i></div>
                                         <div class="mail-contnet">
-                                            <h5>Messages Today</h5> <span class="mail-desc">"You have a new chat"</span>
+                                            <h5>New Messages</h5> <span class="mail-desc">"You have a new chat"</span>
                                         </div>
                                     </a>
                                     <!-- Message -->
                                     <a href="index.php?url=orders">
                                         <div class="btn btn-success btn-circle"><i class="fas fa-file-alt"></i></div>
                                         <div class="mail-contnet">
-                                            <h5>Orders today</h5> <span class="mail-desc">"You have new order"</span>
+                                            <h5>New Orders</h5> <span class="mail-desc">"You have a new order"</span>
                                         </div>
                                     </a>
                                 </div>
