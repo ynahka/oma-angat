@@ -215,11 +215,11 @@ p, p{display: inline;}
     -o-transition: all .3s linear;
     transition: all .3s linear;
     position: absolute;
-    top: -5px;
-    right: 10px;
+    top: 18px;
+    right: 20px;
     z-index: 0;
-    font-size: 90px;
-    color: rgb(255 255 255 / 22%);
+    font-size: 80px;
+    color: rgb(76 100 75 / 77%);
 }
 
 .dashmsg .slimScrollDiv,.dashmsg .slimScrollDiv .message-scroll {

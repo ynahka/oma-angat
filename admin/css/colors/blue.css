@@ -159,7 +159,7 @@ a.link:hover, a.link:focus {
 }
 
 .text-themecolor {
-  color: #79a206 !important;
+  color: #4C644B !important;
 }
 
 .profile-tab li a.nav-link.active,
@@ -229,7 +229,7 @@ a.link:hover, a.link:focus {
 }
 
 .sidebar-nav > ul > li > a {
-  border-left: 3px solid #fff;
+  border-left: 3px solid var(--secondary);
 }
 
 .sidebar-nav > ul > li > a.active, .sidebar-nav > ul > li > a:hover {

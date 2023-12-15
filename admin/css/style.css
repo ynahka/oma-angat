@@ -192,7 +192,7 @@ h6 {
 }
 
 .box {
-	border-radius: 4px;
+	border-radius: 6px;
 	padding: 10px
 }
 
@@ -527,7 +527,7 @@ html body .bg-success {
 }
 
 html body .bg-info {
-	background-color: #009efb!important
+	background-color: #CFE2CE!important;
 }
 
 html body .bg-warning {
@@ -1037,7 +1037,7 @@ html body .waves-notransition {
 }
 
 .text-themecolor {
-	color: #79a206;
+	color: #4C644B;
 }
 
 .btn {
@@ -2268,7 +2268,8 @@ ul.common li {
 }
 
 .container-fluid {
-	padding: 25px 30px
+	padding: 25px 30px;
+	background: var(--lighter);
 }
 
 .topbar {
@@ -2279,8 +2280,7 @@ ul.common li {
 .topbar .top-navbar {
 	min-height: 80px;
 	padding: 0px 15px 0 0;
-	box-shadow: 0px 4px 5px 0px rgb(85, 115, 95, 0.2);
-
+	/* box-shadow: 0px 4px 5px 0px rgb(85, 115, 95, 0.2); */
 }
 
 .topbar .top-navbar .dropdown-toggle:after {
@@ -6521,7 +6521,7 @@ a.mytooltip {
 	top: 0px;
 	z-index: 20;
 	padding-top: 70px;
-	background: #fff
+	background: var(--secondary);
 }
 
 .fix-sidebar .left-sidebar {
@@ -6648,7 +6648,7 @@ a.mytooltip {
 }
 
 .sidebar-nav {
-	background: #fff
+	background: var(--secondary);
 }
 
 .sidebar-nav>ul {
@@ -6665,9 +6665,10 @@ a.mytooltip {
 
 .sidebar-nav ul li a {
 	color: #54667a;
-	padding: 14px 35px 14px 15px;
+	padding: 14px 20px 14px 23px;
 	display: block;
-	font-size: 15px
+	font-size: 14px;
+	line-height: 1;
 }
 
 .sidebar-nav ul li a.active,
@@ -6717,20 +6718,20 @@ a.mytooltip {
 }
 
 .sidebar-nav>ul>li.active>a i {
-	color: #79a206;
+	color: #4C644B;
 }
 
 .sidebar-nav>ul>li>a {
-	border-left: 3px solid #fff
+	/* border-left: 3px solid #fff; */
 }
 
 .sidebar-nav>ul>li>a.active,
 .sidebar-nav>ul>li>a:hover {
-	border-left: 3px solid #79a206;
+	border-left: 3px solid #4C644B;
 }
 
 .sidebar-nav>ul>li>a.active i {
-	color: #79a206;
+	color: #4C644B;
 }
 
 .sidebar-nav>ul>li>a.active i:hover {
@@ -6743,10 +6744,10 @@ a.mytooltip {
 
 .sidebar-nav>ul>li>a i {
 	width: 27px;
-	font-size: 21px;
+	font-size: 22px;
 	display: inline-block;
 	vertical-align: middle;
-	color: #a6b7bf;
+	color: #4C644B;
 }
 
 .sidebar-nav>ul>li>a .label {
@@ -6757,7 +6758,7 @@ a.mytooltip {
 .sidebar-nav>ul>li>a.active {
 	font-weight: 400;
 	background: #fff;
-	color: #79a206;
+	color: #4C644B;
 }
 
 .sidebar-nav .has-arrow {
@@ -6822,7 +6823,7 @@ a.mytooltip {
 		display: none
 	}
 	.mini-sidebar .left-sidebar {
-		width: 60px
+		width: 60px;
 	}
 	.mini-sidebar .user-profile {
 		padding-bottom: 30px;
@@ -6864,7 +6865,7 @@ a.mytooltip {
 		border-color: transparent
 	}
 	.mini-sidebar .sidebar-nav #sidebarnav>li.active>a.active {
-		border-color: #79a206;
+		border-color: #4C644B;
 	}
 }
 
@@ -8442,7 +8443,8 @@ a.mytooltip {
 	}
 
 	.dboxicon {
-	    font-size: 52px !important;
+	    font-size: 50px !important;
+	    top: 9px !important;
 	}
 
 	.textdashboardboxes {
