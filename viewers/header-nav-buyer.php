@@ -57,7 +57,7 @@
                              <i class="fas fa-shopping-basket"></i>
                          </button>
 
-                         <a href="../chat/chat.php" class="header-widget" title="chat">
+                         <a href="chat.php" class="header-widget" title="chat">
                              <i class="fas fa-paper-plane"></i>
                          </a>
                          <button class="header-widget header-user-1" title="Account">
