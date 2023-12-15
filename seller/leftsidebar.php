@@ -29,6 +29,11 @@
                         <span class="hide-menu">&nbsp;&nbsp;Payments</span>
                     </a>
                 </li>
+                <li id="mainreceived">
+                    <a href="index.php?url=paymentmethod"><i class="fas fa-solid fa-qrcode"></i>
+                        <span class="hide-menu">&nbsp;&nbsp;Payment Method</span>
+                    </a>
+                </li>
                 <li id="mainharvest">
                     <a href="index.php?url=harvestingcal"><i class="fas fa-solid fa-seedling"></i>
                         <span class="hide-menu">&nbsp;&nbsp;Harvesting Calendar</span>

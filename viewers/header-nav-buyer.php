@@ -84,7 +84,7 @@
                              <ul class="navbar-list">
                                  <li class="navbar-item dropdown">
                                      <a href="#0"><i class="fa fa-house"></i></a>
-                                     <a class="navbar-link" href="index.php">Home</a>
+                                     <a class="navbar-link" href="buyer-landing.php">Home</a>
                                  </li>
                                  <li class="navbar-item dropdown ">
                                      <a href="#0"><i class="fa-solid fa-comments"></i></a>

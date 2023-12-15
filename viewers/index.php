@@ -22,7 +22,7 @@
                             <p>Shop directly from farmers! Get healthy and locally grown produce right at your doorstep.
                             </p>
                             <div class="banner-btn">
-                                <a class="btn btn-banner" href="#">
+                                <a class="btn btn-banner" href="../buyer/login.php">
                                     <i class="fas fa-shopping-basket"></i>
                                     <span>shop now</span>
                                 </a>
@@ -54,7 +54,7 @@
                             <p>We ensure your fair compensation for your dedication. <br> Your hard work nourishes not
                                 just the land but also the community.</p>
                             <div class="banner-btn-1">
-                                <a class="btn btn-banner" href="../farmerside/index.php">
+                                <a class="btn btn-banner" href="../seller/login.php">
                                     <i class="fa-solid fa-store"></i>
                                     <span>start selling</span>
                                 </a>

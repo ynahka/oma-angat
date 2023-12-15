@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+<?php
+include("connect.php");
+session_start();
+?>
 
 <head>
     <?php include 'header.php'; ?>
@@ -69,14 +73,17 @@
     <section class="inner-section blog-grid">
         <div class="container">
             <div class="col-lg-12">
-                <div class="top-filter">
-                    <button class="filter-show" onclick="openmodaladdpost();">
-                        <a href="#">
-                            <i class="icofont-plus"></i>
-                            <span>ADD POST</span>
-                        </a>
-                    </button>
-                </div>
+                <?php if (empty($_SESSION['user_id'])) { ?>
+                <?php } else { ?>
+                    <div class="top-filter">
+                        <button class="filter-show" onclick="openmodaladdpost();">
+                            <a href="#">
+                                <i class="icofont-plus"></i>
+                                <span>ADD POST</span>
+                            </a>
+                        </button>
+                    </div>
+                <?php } ?>
             </div>
             <div class="row justify-content-center">
                 <div class="row1 col-md-7 col-lg-4">
@@ -336,7 +343,7 @@
                                 <div class="contact_message form">
                                     <p>
                                         <label>Title *</label>
-                                        <input class="reqresinfo" type="text" id="textaddposttitle">
+                                        <input class="reqresinfo" type="text" id="txtaddposttitle">
                                     </p>
                                 </div>
                             </div>
@@ -347,7 +354,7 @@
                                 <div class="contact_message form">
                                     <p style="margin-bottom: 15px;">
                                         <label>Description *</label>
-                                        <textarea class="needfortextarea" id="textaddpostdescription"></textarea>
+                                        <textarea class="needfortextarea" id="txtaddpostdescription"></textarea>
                                     </p>
                                 </div>
                             </div>

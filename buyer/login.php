@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include("connection/connect.php");
+session_start();
+if (isset($_GET['code'])) {
+    $code = $_GET['code'];
+    mysqli_query($connection, "UPDATE users_table SET status = 'APPROVED' WHERE code = '" . $code . "' ;");
+}
+?>
 
 <head>
+    <link rel="manifest" href="/manifest.json" />
+    <link href="/style.css" rel="stylesheet" />
     <?php include('header.php'); ?>
     <style type="text/css">
         .auth {
@@ -38,15 +48,49 @@
             text-align: center;
             margin-top: 30px;
         }
+
+        .loadload {
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            position: fixed;
+            z-index: 99999;
+            background: rgba(255, 255, 255, 0.5);
+            transition: all 0.2s;
+        }
+
+        .spinner-border {
+            height: 50px;
+            transform-origin: center center;
+            width: 50px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
     </style>
 </head>
 
 <body>
-    <div class="preloader">
-        <svg class="circular" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
-        </svg>
+    <div class="loadload">
+        <div class="spinner-border text-secondary" role="status"></div>
     </div>
+
+    <script type="text/javascript">
+        $(function() {
+            setTimeout(function() {
+                $(".loadload").hide();
+            }, 300);
+        })
+    </script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+    </script>
+    <script src="/script.js"></script>
 
     <div class="auth">
         <div class="auth-container">
@@ -88,7 +132,8 @@
                                 <a href="../seller/forgot_password.php" style="font-size: 16px; margin-bottom: 14px; display:block;">Forgot Password?</a>
                                 <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light" onclick="loginuser();" style="padding: 10px 10px; font-weight: 500; background-color: #4C644B; border: #4C644B 1px solid">LogIn</button>
                                 <span style="font-size: 16px; margin-top:14px; display:block;">Don't have an account
-                                    yet?<a href="../buyer/registration.php" style="margin-left: 20px;"> Create an account.</a></span>
+                                    yet?<a href="../buyer/registration.php" style="margin-left: 20px;"> Create an
+                                        account.</a></span>
                             </div>
                         </div>
                     </div>
@@ -99,7 +144,6 @@
 </body>
 
 </html>
-<?php include('jscripts.php'); ?>
 
 <script type="text/javascript">
     $(document).keyup(function(e) {
@@ -112,24 +156,28 @@
     function loginuser() {
         var txtusername = $("#txtusername").val();
         var txtpassword = $("#txtpassword").val();
-        $(".preloader").show().css('background', 'rgba(255,255,255,0.5)');
+
+        $(".loadload").show();
         $.ajax({
             type: 'POST',
-            url: 'adminclass.php',
-            data: 'txtusername=' + txtusername +
-                '&txtpassword=' + txtpassword +
-                '&form=loginuser',
+            url: 'login_class.php',
+            data: 'txtusername=' + txtusername + '&txtpassword=' + txtpassword + '&form=loginuser',
             success: function(data) {
                 setTimeout(function() {
-                    $(".preloader").hide().css('background', '');
+                    $(".loadload").hide();
+
                     if (data == 1) {
-                        window.location = 'index.php';
+                        setTimeout(function() {
+                            window.location = "../viewers/buyer-landing.php";
+                        }, 1500);
+
                     } else if (data == 3) {
                         Swal.fire(
-                            'USER PENDING',
-                            'Your account is currently not yet approve, Please wait for the admin to check and approve your account.',
+                            'USER INACTIVE',
+                            'Your account is currently inactive, Please contact your admin.',
                             'warning'
                         )
+
                     } else {
                         Swal.fire(
                             'USER NOT FOUND',
@@ -142,17 +190,33 @@
         })
     }
 
-    function fncloginpassattribHash() {
-        $("#txtpassword").attr("type", "password");
-        $("#logineye").attr("onclick", "fncloginpassattribunHash()");
-        $("#logineye").removeClass("fa-eye");
-        $("#logineye").addClass("fa-eye-slash");
+    function reqField1(classN) {
+        var isValid = 1;
+        $('.' + classN).each(function() {
+            if ($(this).val() == '') {
+                $(this).css('border', '1px #a94442 solid');
+                $(this).addClass('lala');
+                isValid = 0;
+            } else {
+                $(this).css('border', '');
+                $(this).removeClass('lala');
+            }
+        });
+
+        return isValid;
     }
 
-    function fncloginpassattribunHash() {
+    function fncaddpassattribHash2() {
+        $("#txtpassword").attr("type", "password");
+        $("#inputaddusereye2").attr("onclick", "fncaddpassattribunHash2()");
+        $("#addusereye2").removeClass("fa-eye");
+        $("#addusereye2").addClass("fa-eye-slash");
+    }
+
+    function fncaddpassattribunHash2() {
         $("#txtpassword").attr("type", "text");
-        $("#logineye").attr("onclick", "fncloginpassattribHash()");
-        $("#logineye").addClass("fa-eye");
-        $("#logineye").removeClass("fa-eye-slash");
+        $("#inputaddusereye2").attr("onclick", "fncaddpassattribHash2()");
+        $("#addusereye2").addClass("fa-eye");
+        $("#addusereye2").removeClass("fa-eye-slash");
     }
 </script>

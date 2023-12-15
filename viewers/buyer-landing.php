@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include("connect.php");
+session_start();
+if (empty($_SESSION['user_id'])) {
+    echo "<script> window.location = '../buyer/login.php';</script>";
+}
+?>
 <?php include 'header.php'; ?>
 
 <body>
     <?php include('header-nav-buyer.php'); ?>
     <?php include('category-sidebar.php'); ?>
     <?php include('product-view.php'); ?>
-
-
-
 
     <section class="banner-part-2">
         <div class="container">
