@@ -36,12 +36,6 @@
                     </a>
                 </li>
 
-                <li id="mainstocks">
-                    <a href="index.php?url=delivery"><i class="fas fa-truck"></i>
-                        <span class="hide-menu">&nbsp;&nbsp;Delivery Status</span>
-                    </a>
-                </li>
-
                 <li id="mainreceived">
                     <a href="index.php?url=payments"><i class="fas fa-hand-holding-usd"></i>
                         <span class="hide-menu">&nbsp;&nbsp;Payments</span>

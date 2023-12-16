@@ -43,7 +43,7 @@ switch ($_POST['form']) {
 		break;
 
 	case 'displaychats':
-		$res = mysqli_query($connection, "SELECT message, user_id, DATETIME_LOG, productID FROM chats WHERE (user_id = '" . $_POST['user_id'] . "' AND sendto = '" . $_POST['sendtoID'] . "') OR (user_id = '" . $_POST['sendtoID'] . "' AND sendto = '" . $_POST['user_id'] . "') ");
+		$res = mysqli_query($connection, "SELECT message, user_id, DATETIME_LOG FROM chats WHERE (user_id = '" . $_POST['user_id'] . "' AND sendto = '" . $_POST['sendtoID'] . "') OR (user_id = '" . $_POST['sendtoID'] . "' AND sendto = '" . $_POST['user_id'] . "') ");
 		$numrows = mysqli_num_rows($res);
 		if ($numrows == TRUE) {
 			while ($row = mysqli_fetch_array($res)) {
@@ -75,7 +75,7 @@ switch ($_POST['form']) {
 	                                <div class='box bg-light-inverse'>" . $row[0] . "</div>";
 
 
-					$res2 = mysqli_query($connection, "SELECT image FROM products_image WHERE productID = '" . $row[3] . "' ");
+					$res2 = mysqli_query($connection, "SELECT image FROM products_image WHERE product_id = '" . $row[3] . "' ");
 					$row2 = mysqli_fetch_array($res2);
 
 					echo "<div><img src='" . $row2[0] . "' width='200px'></div>";
