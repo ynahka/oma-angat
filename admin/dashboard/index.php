@@ -2,7 +2,7 @@
 
 <div class="row" style="margin-top: -20px; margin-bottom: 50px;">
 
-    <img src="image/2.svg" alt="banner" style="width:100%; height:100%; background-size: cover; background-position: center;">
+    <img src="../seller/image/2.svg" alt="banner" style="width:100%; height:100%; background-size: cover; background-position: center;">
 
 </div>
 
@@ -10,11 +10,11 @@
     <div class="col-md-12">
         <div class="row" style="justify-content: center;">
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
-                <div class="card text-white bg-dark" style="margin-bottom: 15px;">
-                    <div class="box bg-info" style="background-color: #4C644B !important;">
-                        <div class="box bg-info" style="background-color: #4C644B !important;">
+                <div class="card text-white" style="margin-bottom: 15px;">
+                    <div class="box bg-info">
+                        <div class="box bg-info">
                             <h1 class="text-white textdashboardboxes" id="txtTotsellers" style="color: #4a8670;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4C644B ;">Sellers</h6>
+                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670 ;">Sellers</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-users"></i>
                             </div>
@@ -23,24 +23,24 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox2">
-                <div class="card text-white bg-dark" style="margin-bottom: 15px;">
-                    <div class="box bg-info" style="background-color:#4C644B !important;">
-                        <div class="box bg-info" style="background-color:#4C644B !important;">
-                            <h1 class="text-white textdashboardboxes" id="txtTotcustomer" style="color: #4C644B ;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4C644B ;">Customers</h6>
+                <div class="card text-white" style="margin-bottom: 15px;">
+                    <div class="box bg-info">
+                        <div class="box bg-info">
+                            <h1 class="text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670 ;">0</h1>
+                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670 ;">Customers</h6>
                             <div class="dboxicon">
-                                <i class="fas fa-users"></i>
+                                <i class="fas fa-user-friends"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
-                <div class="card text-white bg-dark" style="margin-bottom: 15px;">
-                    <div class="box bg-info" style="background-color: #4C644B !important;">
-                        <div class="box bg-info" style="background-color: #4C644B !important;">
-                            <h1 class="text-white textdashboardboxes" id="txtTotproduct" style="color:#4C644B ;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color:#4C644B ;">Products</h6>
+                <div class="card text-white" style="margin-bottom: 15px;">
+                    <div class="box bg-info">
+                        <div class="box bg-info">
+                            <h1 class="text-white textdashboardboxes" id="txtTotproduct" style="color:#4a8670 ;">0</h1>
+                            <h6 class="font-light text-white textdashboardboxes2" style="color:#4a8670 ;">Products</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-boxes"></i>
                             </div>
@@ -49,13 +49,13 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox2">
-                <div class="card text-white bg-dark" style="margin-bottom: 15px;">
-                    <div class="box bg-info" style="background-color: #ff6264!important;">
-                        <div class="box bg-info" style="background-color: #ff6264!important;">
-                            <h1 class="text-white textdashboardboxes" id="txtTotorders" style="color:#4C644B ;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color:#4C644B ;">Orders</h6>
+                <div class="card text-white" style="margin-bottom: 15px;">
+                    <div class="box bg-info">
+                        <div class="box bg-info">
+                            <h1 class="text-white textdashboardboxes" id="txtTotorders" style="color:#4a8670 ;">0</h1>
+                            <h6 class="font-light text-white textdashboardboxes2" style="color:#4a8670 ;">Orders</h6>
                             <div class="dboxicon">
-                                <i class="fas fa-file-alt"></i>
+                                <i class="fas fa-shopping-cart"></i>
                             </div>
                         </div>
                     </div>
@@ -71,23 +71,23 @@
     </style>
     <div class="col-md-12">
         <div class="card" style="min-height: 450px;margin-bottom: 0px;">
-            <select id="selectchart" class="btn border" style="width: 200px;margin-left: auto;text-align: left;margin-top: 10px;margin-right: 10px;">
-                <option>Select</option>
-                <option value="weekly">Weekly</option>
-                <option value="monthly">Monthly</option>
-                <option value="yearly">Yearly</option>
-            </select>
-            <div class="card-body">
+            <div class="card-body" style="margin-top: 20px;background-color: #E2EEE2;border-radius: 16px;">
+                <select id="selectchart" class="card btn border" style="border: 1px solid #ededed !important; width: 185px; margin-left: auto; text-align: left; margin-bottom: -35px;margin-right: 30px;">
+                    <option>Select</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
                 <div class="monthly">
-                    <h3 style="color: #24759e;">MONTHLY ORDERS</h3>
+                    <h3 style="color: #4C644B; margin-left: 10px;">MONTHLY ORDERS</h3>
                     <canvas id="chart1" height="100"></canvas>
                 </div>
                 <div class="yearly">
-                    <h3 style="color: #24759e;">YEARLY ORDERS</h3>
+                    <h3 style="color: #4C644B; margin-left: 10px;">YEARLY ORDERS</h3>
                     <canvas id="chart2" height="100"></canvas>
                 </div>
                 <div class="weekly">
-                    <h3 style="color: #24759e;">WEEKLY ORDERS</h3>
+                    <h3 style="color: #4C644B; margin-left: 10px;">WEEKLY ORDERS</h3>
                     <canvas id="chart3" height="100"></canvas>
                 </div>
             </div>

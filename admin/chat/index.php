@@ -1,7 +1,7 @@
 <style type="text/css">
-    .Iclass{
-        font-size:1.3rem;
-        cursor:pointer;
+    .Iclass {
+        font-size: 1.3rem;
+        cursor: pointer;
         font-weight: 500;
     }
 
@@ -20,27 +20,28 @@
         border: 1px solid #CCC;
     }
 
-    .pagination li:first-child{
+    .pagination li:first-child {
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
     }
 
-    .pagination li:last-child{
+    .pagination li:last-child {
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
     }
 
-    ul.pagination li:hover{
+    ul.pagination li:hover {
         background-color: #3a4651;
         color: white !important;
     }
 
-    .pagination .active{
+    .pagination .active {
         background-color: #3a4651;
         color: white !important;
     }
 
-    .table thead th, .table th {
+    .table thead th,
+    .table th {
         background-color: #9e9e9e !important;
     }
 
@@ -62,12 +63,6 @@
                     <div class="col-md-6 col-6 align-self-center" style="padding-left:10px;">
                         <h3 class="mb-0 mt-0 headerfontfont text-themecolor" style="font-weight: 600;">CHATS</h3>
                     </div>
-                    <div class="col-md-6 col-6 align-self-center" style="padding-right:10px;">
-                        <ol class="breadcrumb float-right headerfontfont">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Chats</li>
-                        </ol>
-                    </div>
                 </div>
             </div>
         </div>
@@ -84,8 +79,8 @@
                     <div class="chat-left-aside">
                         <div class="open-panel"><i class="ti-angle-right"></i></div>
                         <div class="chat-left-inner">
-                            <div class="form-material">
-                                <input class="form-control p-3" type="text" placeholder="Search Contact" id="txtsearchcontacts">
+                            <div class="form-material" style="margin-top:10px;">
+                                <input class="form-control p-3" type="text" placeholder="Search Conversation" id="txtsearchcontacts">
                             </div>
                             <ul class="chatonline style-none ">
                                 <div id="dsplychatusers"></div>
@@ -98,25 +93,25 @@
                     <div class="chat-right-aside">
                         <div class="chat-main-header">
                             <div class="p-3 border-bottom">
-                                <h3 class="box-title">Chat Message</h3>
+                                <h3 class="box-title" style="color: #4C644B ;">Chat Message</h3>
                             </div>
                         </div>
                         <div class="chat-rbox">
-                            <ul class="chat-list p-4" >
+                            <ul class="chat-list p-4">
                                 <div id="dsplychats">
-                                    <h6 style='margin-top: 20px; font-weight: 300; color:#afafaf; text-align:center;'><i> Select Conversation . . .  </i></h6>
+                                    <h6 style='margin-top: 20px; font-weight: 300; color:#afafaf; text-align:center;'><i> Select Conversation . . . </i></h6>
                                 </div>
                             </ul>
                         </div>
-                        <div class="card-body border-top">
+                        <div class="card-body" style="border-top: 0.5px solid #fff ">
                             <div class="row">
                                 <div class="col-8">
                                     <input type="hidden" name="txtuser_id" id="txtuser_id">
                                     <input type="hidden" name="txtsendtoID" id="txtsendtoID">
-                                    <textarea placeholder="Type your message here . . . " class="form-control b-0" id="txtmessage"></textarea>
+                                    <textarea placeholder="Type your message here . . . " class="form-control b-0" style="height: 50px;" id="txtmessage"></textarea>
                                 </div>
-                                <div class="col-4 text-right">
-                                    <button type="button" class="btn btn-info btn-circle btn-lg" onclick="sendbutton();"><i class="fa fa-paper-plane"></i> </button>
+                                <div class="col-4 text-left">
+                                    <button type="button" style="color: #CFE2CE; background: #4C644B!important; border:none; font-size:20px;" class="btn btn-info btn-circle btn-lg" onclick="sendbutton();"><i class="fa fa-paper-plane"></i> </button>
                                 </div>
                             </div>
                         </div>
@@ -129,9 +124,9 @@
     </div>
 </div>
 
-<?php 
-    include("chat/script.php"); 
-    include("chat/modal.php"); 
+<?php
+include("chat/script.php");
+include("chat/modal.php");
 ?>
 
 <!-- slimscrollbar scrollbar JavaScript -->
@@ -139,5 +134,3 @@
 <script src="js/chat.js"></script>
 <script src="assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 <script src="assets/plugins/Chart.js/Chart.min.js"></script>
-
-

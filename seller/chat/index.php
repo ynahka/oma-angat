@@ -109,10 +109,10 @@
                                     <input type="hidden" name="txtuser_id" id="txtuser_id">
                                     <input type="hidden" name="txtsendtoID" id="txtsendtoID">
                                     <input type="hidden" name="txtadmin" id="txtadmin">
-                                    <textarea placeholder="Type your message here . . . " class="form-control b-0" id="txtmessage"></textarea>
+                                    <textarea placeholder="Type your message here . . . " class="form-control b-0" style="height: 50px;" id="txtmessage"></textarea>
                                 </div>
                                 <div class="col-4">
-                                    <button type="button" class="btn btn-info btn-circle btn-lg" onclick="sendbutton();"><i class="fa fa-paper-plane"></i> </button>
+                                    <button type="button" style="color: #CFE2CE; background: #4C644B!important; border: none;font-size: 20px;" class="btn btn-info btn-circle btn-lg" onclick="sendbutton();"><i class="fa fa-paper-plane"></i> </button>
                                 </div>
                             </div>
                         </div>

@@ -6238,7 +6238,10 @@ a.mytooltip {
 
 .chat-main-box .chat-left-aside {
 	position: relative;
-	width: 250px;
+	background: #CFE2CE;
+	border-radius: 12px;
+	width: 240px;
+	margin-left: 20px;
 	float: left;
 	z-index: 9;
 	top: 0px;
@@ -6292,8 +6295,12 @@ a.mytooltip {
 }
 
 .chat-main-box .chat-right-aside {
-	width: calc(100% - 250px);
-	float: left
+	width: calc(95% - 260px);
+	background: #CFE2CE;
+	float: inline-end;
+	border-radius: 12px;
+	padding-left: 40px;
+	margin-right: 20px;
 }
 
 .chat-main-box .chat-right-aside .chat-list {

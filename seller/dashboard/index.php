@@ -60,7 +60,7 @@
                             <h1 class="text-white textdashboardboxes" id="txtTotorders" style="color: #4a8670;">0</h1>
                             <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Orders</h6>
                             <div class="dboxicon">
-                                <i class="fas fa-file-alt"></i>
+                                <i class="fas fa-shopping-cart"></i>
                             </div>
                         </div>
                     </div>
@@ -77,13 +77,7 @@
     <div class="col-md-12">
         <div class="card" style="min-height: 450px;margin-bottom: 0px;">
             <div class="card-body report">
-                <select id="selectchart" class="card btn border" style="border: 1px solid #ededed !important;
-    width: 185px;
-    margin-left: auto;
-    text-align: left;
-    margin-bottom: -35px;
-    margin-right: 30px;">
-
+                <select id="selectchart" class="card btn border" style="border: 1px solid #ededed !important;width: 185px;margin-left: auto;text-align: left;margin-bottom: -35px;margin-right: 30px;">
                     <option>Select</option>
                     <option value="weekly">Weekly</option>
                     <option value="monthly">Monthly</option>

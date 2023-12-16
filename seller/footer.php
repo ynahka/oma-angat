@@ -1,12 +1,12 @@
 <style type="text/css">
-	.foot{
+	.foot {
 		color: #54667a;
 		font-weight: 300;
-		font-size: 15px; 
+		font-size: 15px;
 		margin-bottom: 0px;
 		text-align: center;
 	}
 </style>
 <footer class="footer">
-	<h6 class="foot">© Oma-Angat Agri-Market 2023</h6>
+	<h6 class="foot">© 2023 Oma-Angat. All Rights Reserved.</h6>
 </footer>

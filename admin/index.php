@@ -31,11 +31,6 @@ if (empty($_SESSION['user_id'])) {
     ?>
 
     <div class="page-wrapper">
-      <div class="row">
-        <div class="col-12">
-          <img src="image/2.svg" alt="banner" style="width:100%; height:100%; background-size: cover; background-position: center;">
-        </div>
-      </div>
 
       <div class="container-fluid containerfluidneed" style="padding: 20px 20px;">
         <?php
