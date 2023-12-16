@@ -4,26 +4,12 @@
     <div class="col-md-6 col-6 align-self-center">
         <h3 class="mb-0 mt-0 headerfontfont" style="color: #2c2b2e;font-weight: 500;">DASHBOARD</h3>
     </div>
-    <div class="col-md-6 col-6 align-self-center">
-        <ol class="breadcrumb float-right headerfontfont">
-            <li class="breadcrumb-item"><a>Home</a></li>
-            <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
-    </div>
 </div>
 
 <div class="row">
     <div class="col-12">
         <div class="card" style="margin-bottom: 15px;">
             <div class="card-body paddingbreadcard" style="padding-top: 25px; padding-bottom: 25px;">
-                <div class="row page-titles" style="padding-bottom: 0px;">
-                    <div class="col-md-6 align-self-center">
-                        <h3 class="mb-0 mt-0 textdashboardbread3"><span>Welcome back, </span> <span class="text-themecolor textdashboardbread3" style="font-weight: 500; font-size: 22px;" id="txtuserFname"></span></h3>
-                    </div>
-                    <div class="col-md-6 align-self-center">
-                        <h4 class="mb-0 mt-0 float-right textdashboardbread textdashboardbread2" style="font-weight: 400; color: #5f5f5f;"><span class="textdashboardbread" id="txtdatex"></span></h4>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

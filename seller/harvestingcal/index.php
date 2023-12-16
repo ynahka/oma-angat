@@ -66,8 +66,7 @@
             <div class="card-body" style="padding-top: .5rem; padding-bottom: .5rem;">
                 <div class="row page-titles rowpageheaderpadd" style="padding-bottom: 0px;">
                     <div class="col-md-6 col-6 align-self-center" style="padding-left:10px;">
-                        <h3 class="mb-0 mt-0 headerfontfont text-themecolor" style="font-weight: 600;">Harvesting
-                            Calendar</h3>
+                        <h3 class="mb-0 mt-0 headerfontfont text-themecolor" style="font-weight: 600;">Harvesting Calendar</h3>
                     </div>
                 </div>
             </div>
@@ -87,7 +86,7 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
+        <div class="col-xl-9 col-md-6">
             <div class="mb-3">
                 <div id='calendar'></div>
                 <!-- Bootstrap Modal -->
@@ -109,7 +108,6 @@
                                         <input type="text" class="form-control" id="prodPrice" placeholder="Price" style="margin-bottom: 8px;">
                                         <input type="date" class="form-control" id="startDate" placeholder="Start Date" style="margin-bottom: 8px;">
                                         <input type="date" class="form-control" id="endDate" placeholder="End Date" style="margin-bottom: 8px;">
-
                                     </div>
                                 </form>
                             </div>
