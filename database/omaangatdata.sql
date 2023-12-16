@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Dec 15, 2023 at 03:00 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.28
+-- Host: 127.0.0.1
+-- Generation Time: Dec 15, 2023 at 04:49 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,12 +33,36 @@ CREATE TABLE `cart` (
   `customer_id` varchar(100) NOT NULL,
   `product_id` varchar(100) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `price` decimal(14,4) NOT NULL DEFAULT 0.0000,
+  `price` decimal(14,4) DEFAULT 0.0000,
   `totalamt` decimal(14,4) NOT NULL DEFAULT 0.0000,
-  `status` varchar(100) NOT NULL,
-  `date_added` date NOT NULL,
+  `status` varchar(100) DEFAULT NULL,
+  `date_added` date DEFAULT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `carts`
+--
+
+CREATE TABLE `carts` (
+  `id` int(11) NOT NULL,
+  `customer_id` varchar(255) DEFAULT NULL,
+  `product_id` varchar(255) DEFAULT NULL,
+  `quantity` varchar(255) DEFAULT NULL,
+  `price` varchar(255) DEFAULT NULL,
+  `totalamt` varchar(255) DEFAULT NULL,
+  `date_added` date DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `carts`
+--
+
+INSERT INTO `carts` (`id`, `customer_id`, `product_id`, `quantity`, `price`, `totalamt`, `date_added`) VALUES
+(111, '76', 'product-0000001', '1', '8.0000', '8', '2023-12-15'),
+(112, '76', 'product-0000003', '1', '3.0000', '3', '2023-12-15');
 
 -- --------------------------------------------------------
 
@@ -53,7 +77,7 @@ CREATE TABLE `categories` (
   `image` longblob NOT NULL,
   `date_added` date NOT NULL,
   `datetime` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `categories`
@@ -92,7 +116,7 @@ CREATE TABLE `chats` (
   `DATETIME_LOG` datetime DEFAULT current_timestamp(),
   `productID` text NOT NULL,
   `notif` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -112,7 +136,7 @@ CREATE TABLE `harvestsched` (
   `end_date` date NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -144,7 +168,7 @@ CREATE TABLE `orders` (
   `courier` text NOT NULL,
   `trackingnumber` text NOT NULL,
   `notif` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -161,7 +185,7 @@ CREATE TABLE `paymentmethod` (
   `banknumer` varchar(50) NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -181,7 +205,7 @@ CREATE TABLE `payments` (
   `status` varchar(100) NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -199,7 +223,7 @@ CREATE TABLE `post` (
   `imagename` varchar(500) NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `post`
@@ -223,7 +247,7 @@ CREATE TABLE `post_details` (
   `comment` text NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -241,33 +265,33 @@ CREATE TABLE `products` (
   `quantity` int(11) NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `product_id`, `seller_id`, `productname`, `productdesc`, `price`, `quantity`, `date_added`, `DATETIME_LOG`) VALUES
-(30, 'product-0000001', 'user-0000002', 'Medium Eggs', 'Sold per piece\nMinimum of 12pcs per order\n', '8.0000', 1000, '2023-12-14', '2023-12-14 01:52:39'),
-(31, 'product-0000002', 'user-0000002', 'Pulang Itlog', 'Sold per piece\nBuy 12 free 1', '12.0000', 1000, '2023-12-14', '2023-12-14 01:56:25'),
-(32, 'product-0000003', 'user-0000002', 'Itlog Pugo', 'Minimum of 12 pcs per order', '3.0000', 670, '2023-12-14', '2023-12-14 01:58:14'),
-(33, 'product-0000004', 'user-0000003', 'Malagkit Rice', 'Minimum of 3 kilos per order', '60.0000', 190, '2023-12-14', '2023-12-14 02:00:57'),
-(34, 'product-0000005', 'user-0000003', 'Dinorado Rice', 'Minimum of 5 Kilos', '70.0000', 1000, '2023-12-14', '2023-12-14 02:02:22'),
-(35, 'product-0000006', 'user-0000003', 'Jasmin Rice', 'Minimum of 5 Kilos per order\n(Sold per kilos)', '56.0000', 500, '2023-12-14', '2023-12-14 02:03:33'),
-(36, 'product-0000007', 'user-0000004', 'Banana Chips', 'Crispier than ever. Sold per packs. Minimum of 2 packs per order', '25.0000', 670, '2023-12-14', '2023-12-14 02:06:09'),
-(37, 'product-0000008', 'user-0000004', 'Dried Mangoes', 'Sold per packs\nMinimum of 2 packs', '89.0000', 1000, '2023-12-14', '2023-12-14 02:07:19'),
-(38, 'product-0000009', 'user-0000004', 'Cocoa Powder', 'Sold per kilo', '50.0000', 1000, '2023-12-14', '2023-12-14 02:08:52'),
-(39, 'product-0000010', 'user-0000004', 'Cocoa Chocolate Bars', 'Sold per packs\nMinimum of 2 packs', '45.0000', 89, '2023-12-14', '2023-12-14 02:10:01'),
-(40, 'product-0000011', 'user-0000005', 'Vegetable Oils', 'Sold per liter\n', '180.0000', 650, '2023-12-14', '2023-12-14 02:12:30'),
-(41, 'product-0000012', 'user-0000005', 'Coconut Oil', 'Sold per Liter', '185.0000', 180, '2023-12-14', '2023-12-14 02:15:08'),
-(42, 'product-0000013', 'user-0000005', 'Olive Oil', 'Sold per Liter', '210.0000', 1000, '2023-12-14', '2023-12-14 02:16:25'),
-(43, 'product-0000014', 'user-0000006', 'Monggo', 'Sold Per Kilo\nMinimum of 1 kilo per order', '90.0000', 190, '2023-12-14', '2023-12-14 02:21:26'),
-(44, 'product-0000015', 'user-0000006', 'Langka (Hilaw)', 'Sold per Kilo ', '25.0000', 35, '2023-12-14', '2023-12-14 02:23:50'),
-(45, 'product-0000016', 'user-0000006', 'Okra', 'Minimum of 2 Kilos', '60.0000', 70, '2023-12-14', '2023-12-14 02:36:56'),
-(46, 'product-0000017', 'user-0000006', 'Kalabasa', 'Sold per Kilo\nMinimum of 2 Kilos', '20.0000', 90, '2023-12-14', '2023-12-14 02:38:41'),
-(47, 'product-0000018', 'user-0000007', 'Latundan', 'Sold Per Kilo', '30.0000', 150, '2023-12-14', '2023-12-14 03:04:03'),
-(48, 'product-0000019', 'user-0000007', 'Cacao', 'Sold per Kilo', '30.0000', 20, '2023-12-14', '2023-12-14 03:07:21'),
-(49, 'product-0000020', 'user-0000007', 'Corn/Mais', 'Sold per Kilo\nMinimum of 2-3 Kilos', '30.0000', 133, '2023-12-14', '2023-12-14 03:09:20');
+(30, 'product-0000001', 'user-0000002', 'Medium Eggs', 'Sold per piece\nMinimum of 12pcs per order\n', 8.0000, 1000, '2023-12-14', '2023-12-14 01:52:39'),
+(31, 'product-0000002', 'user-0000002', 'Pulang Itlog', 'Sold per piece\nBuy 12 free 1', 12.0000, 1000, '2023-12-14', '2023-12-14 01:56:25'),
+(32, 'product-0000003', 'user-0000002', 'Itlog Pugo', 'Minimum of 12 pcs per order', 3.0000, 670, '2023-12-14', '2023-12-14 01:58:14'),
+(33, 'product-0000004', 'user-0000003', 'Malagkit Rice', 'Minimum of 3 kilos per order', 60.0000, 190, '2023-12-14', '2023-12-14 02:00:57'),
+(34, 'product-0000005', 'user-0000003', 'Dinorado Rice', 'Minimum of 5 Kilos', 70.0000, 1000, '2023-12-14', '2023-12-14 02:02:22'),
+(35, 'product-0000006', 'user-0000003', 'Jasmin Rice', 'Minimum of 5 Kilos per order\n(Sold per kilos)', 56.0000, 500, '2023-12-14', '2023-12-14 02:03:33'),
+(36, 'product-0000007', 'user-0000004', 'Banana Chips', 'Crispier than ever. Sold per packs. Minimum of 2 packs per order', 25.0000, 670, '2023-12-14', '2023-12-14 02:06:09'),
+(37, 'product-0000008', 'user-0000004', 'Dried Mangoes', 'Sold per packs\nMinimum of 2 packs', 89.0000, 1000, '2023-12-14', '2023-12-14 02:07:19'),
+(38, 'product-0000009', 'user-0000004', 'Cocoa Powder', 'Sold per kilo', 50.0000, 1000, '2023-12-14', '2023-12-14 02:08:52'),
+(39, 'product-0000010', 'user-0000004', 'Cocoa Chocolate Bars', 'Sold per packs\nMinimum of 2 packs', 45.0000, 89, '2023-12-14', '2023-12-14 02:10:01'),
+(40, 'product-0000011', 'user-0000005', 'Vegetable Oils', 'Sold per liter\n', 180.0000, 650, '2023-12-14', '2023-12-14 02:12:30'),
+(41, 'product-0000012', 'user-0000005', 'Coconut Oil', 'Sold per Liter', 185.0000, 180, '2023-12-14', '2023-12-14 02:15:08'),
+(42, 'product-0000013', 'user-0000005', 'Olive Oil', 'Sold per Liter', 210.0000, 1000, '2023-12-14', '2023-12-14 02:16:25'),
+(43, 'product-0000014', 'user-0000006', 'Monggo', 'Sold Per Kilo\nMinimum of 1 kilo per order', 90.0000, 190, '2023-12-14', '2023-12-14 02:21:26'),
+(44, 'product-0000015', 'user-0000006', 'Langka (Hilaw)', 'Sold per Kilo ', 25.0000, 35, '2023-12-14', '2023-12-14 02:23:50'),
+(45, 'product-0000016', 'user-0000006', 'Okra', 'Minimum of 2 Kilos', 60.0000, 70, '2023-12-14', '2023-12-14 02:36:56'),
+(46, 'product-0000017', 'user-0000006', 'Kalabasa', 'Sold per Kilo\nMinimum of 2 Kilos', 20.0000, 90, '2023-12-14', '2023-12-14 02:38:41'),
+(47, 'product-0000018', 'user-0000007', 'Latundan', 'Sold Per Kilo', 30.0000, 150, '2023-12-14', '2023-12-14 03:04:03'),
+(48, 'product-0000019', 'user-0000007', 'Cacao', 'Sold per Kilo', 30.0000, 20, '2023-12-14', '2023-12-14 03:07:21'),
+(49, 'product-0000020', 'user-0000007', 'Corn/Mais', 'Sold per Kilo\nMinimum of 2-3 Kilos', 30.0000, 133, '2023-12-14', '2023-12-14 03:09:20');
 
 -- --------------------------------------------------------
 
@@ -280,7 +304,7 @@ CREATE TABLE `products_category` (
   `product_id` varchar(100) NOT NULL,
   `category_id` varchar(100) NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products_category`
@@ -304,21 +328,15 @@ CREATE TABLE `products_image` (
   `imagename` varchar(300) NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products_image`
 --
 
 INSERT INTO `products_image` (`id`, `product_id`, `image`, `imagename`, `date_added`, `DATETIME_LOG`) VALUES
-(77, 'product-0000001', 'OmaangatImages/Products/product-00000011702489961_egg 1 (3).png', 'product-00000011702489961_egg 1 (3).png', '2023-12-14', '2023-12-14 01:52:41'),
-(78, 'product-0000001', 'OmaangatImages/Products/product-00000011702489961_egg 1 (2).png', 'product-00000011702489961_egg 1 (2).png', '2023-12-14', '2023-12-14 01:52:41'),
 (79, 'product-0000001', 'OmaangatImages/Products/product-00000011702489961_egg 1.png', 'product-00000011702489961_egg 1.png', '2023-12-14', '2023-12-14 01:52:41'),
-(80, 'product-0000002', 'OmaangatImages/Products/product-00000021702490188_egg 4 (3).png', 'product-00000021702490188_egg 4 (3).png', '2023-12-14', '2023-12-14 01:56:28'),
-(81, 'product-0000002', 'OmaangatImages/Products/product-00000021702490188_egg 4.png', 'product-00000021702490188_egg 4.png', '2023-12-14', '2023-12-14 01:56:28'),
 (82, 'product-0000002', 'OmaangatImages/Products/product-00000021702490188_egg 4 (2).png', 'product-00000021702490188_egg 4 (2).png', '2023-12-14', '2023-12-14 01:56:28'),
-(83, 'product-0000003', 'OmaangatImages/Products/product-00000031702490296_egg 2 (2).png', 'product-00000031702490296_egg 2 (2).png', '2023-12-14', '2023-12-14 01:58:16'),
-(84, 'product-0000003', 'OmaangatImages/Products/product-00000031702490296_egg 2 (3).png', 'product-00000031702490296_egg 2 (3).png', '2023-12-14', '2023-12-14 01:58:16'),
 (85, 'product-0000003', 'OmaangatImages/Products/product-00000031702490296_egg 2 (4).png', 'product-00000031702490296_egg 2 (4).png', '2023-12-14', '2023-12-14 01:58:16'),
 (86, 'product-0000004', 'OmaangatImages/Products/product-00000041702490459_rice 3 (2).png', 'product-00000041702490459_rice 3 (2).png', '2023-12-14', '2023-12-14 02:00:59'),
 (87, 'product-0000004', 'OmaangatImages/Products/product-00000041702490459_rice 3 (3).png', 'product-00000041702490459_rice 3 (3).png', '2023-12-14', '2023-12-14 02:00:59'),
@@ -361,12 +379,8 @@ INSERT INTO `products_image` (`id`, `product_id`, `image`, `imagename`, `date_ad
 (124, 'product-0000017', 'OmaangatImages/Products/product-00000171702492723_veggie 2 (3).png', 'product-00000171702492723_veggie 2 (3).png', '2023-12-14', '2023-12-14 02:38:43'),
 (125, 'product-0000017', 'OmaangatImages/Products/product-00000171702492723_veggie 2.png', 'product-00000171702492723_veggie 2.png', '2023-12-14', '2023-12-14 02:38:43'),
 (126, 'product-0000018', 'OmaangatImages/Products/product-00000181702494245_fruit 5 (2).png', 'product-00000181702494245_fruit 5 (2).png', '2023-12-14', '2023-12-14 03:04:05'),
-(127, 'product-0000018', 'OmaangatImages/Products/product-00000181702494245_fruit 5 (4).png', 'product-00000181702494245_fruit 5 (4).png', '2023-12-14', '2023-12-14 03:04:05'),
-(128, 'product-0000018', 'OmaangatImages/Products/product-00000181702494245_fruit 5.png', 'product-00000181702494245_fruit 5.png', '2023-12-14', '2023-12-14 03:04:05'),
 (129, 'product-0000019', 'OmaangatImages/Products/product-00000191702494443_fruit 1 (2).png', 'product-00000191702494443_fruit 1 (2).png', '2023-12-14', '2023-12-14 03:07:23'),
-(130, 'product-0000019', 'OmaangatImages/Products/product-00000191702494443_fruit 1 (3).png', 'product-00000191702494443_fruit 1 (3).png', '2023-12-14', '2023-12-14 03:07:23'),
-(131, 'product-0000020', 'OmaangatImages/Products/product-00000201702494562_fruit 2 (2).png', 'product-00000201702494562_fruit 2 (2).png', '2023-12-14', '2023-12-14 03:09:22'),
-(132, 'product-0000020', 'OmaangatImages/Products/product-00000201702494562_fruit 2.png', 'product-00000201702494562_fruit 2.png', '2023-12-14', '2023-12-14 03:09:22');
+(131, 'product-0000020', 'OmaangatImages/Products/product-00000201702494562_fruit 2 (2).png', 'product-00000201702494562_fruit 2 (2).png', '2023-12-14', '2023-12-14 03:09:22');
 
 -- --------------------------------------------------------
 
@@ -382,7 +396,7 @@ CREATE TABLE `rate` (
   `comment` text NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -394,7 +408,7 @@ CREATE TABLE `tracking` (
   `tracking_id` int(11) NOT NULL,
   `order_id` varchar(100) NOT NULL,
   `datetime` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -415,7 +429,7 @@ CREATE TABLE `users_table` (
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp(),
   `code` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users_table`
@@ -461,7 +475,7 @@ CREATE TABLE `user_details` (
   `profileimagename` varchar(500) NOT NULL,
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user_details`
@@ -492,6 +506,12 @@ ALTER TABLE `cart`
   ADD UNIQUE KEY `cart_id_UNIQUE` (`cart_id`),
   ADD KEY `FKCartUserid_idx` (`customer_id`),
   ADD KEY `FKCartProductid_idx` (`product_id`);
+
+--
+-- Indexes for table `carts`
+--
+ALTER TABLE `carts`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `categories`
@@ -616,7 +636,13 @@ ALTER TABLE `user_details`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
+--
+-- AUTO_INCREMENT for table `carts`
+--
+ALTER TABLE `carts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 
 --
 -- AUTO_INCREMENT for table `categories`
