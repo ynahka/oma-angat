@@ -7333,7 +7333,7 @@ a.mytooltip {
 }
 
 .fc-widget-content {
-	border-color: rgba(120, 130, 140, 0.13)!important
+	border-color: rgba(120, 130, 140, 0.13)!important;
 }
 
 .fc th.fc-widget-header {

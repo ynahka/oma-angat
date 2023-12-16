@@ -85,7 +85,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="justify-content: center; align-items:center;">
         <div class="col-xl-9 col-md-6">
             <div class="mb-3">
                 <div id='calendar'></div>

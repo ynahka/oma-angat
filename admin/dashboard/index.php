@@ -1,18 +1,9 @@
 <link rel="stylesheet" type="text/css" href="dashboard/dashboard.css" />
 
-<div class="row page-titles rowpageheaderpadd">
-    <div class="col-md-6 col-6 align-self-center">
-        <h3 class="mb-0 mt-0 headerfontfont" style="color: #2c2b2e;font-weight: 500;">DASHBOARD</h3>
-    </div>
-</div>
+<div class="row" style="margin-top: -20px; margin-bottom: 50px;">
 
-<div class="row">
-    <div class="col-12">
-        <div class="card" style="margin-bottom: 15px;">
-            <div class="card-body paddingbreadcard" style="padding-top: 25px; padding-bottom: 25px;">
-            </div>
-        </div>
-    </div>
+    <img src="image/2.svg" alt="banner" style="width:100%; height:100%; background-size: cover; background-position: center;">
+
 </div>
 
 <div class="row">
@@ -20,10 +11,10 @@
         <div class="row" style="justify-content: center;">
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
                 <div class="card text-white bg-dark" style="margin-bottom: 15px;">
-                    <div class="box bg-info" style="background-color: #7c38bc!important;">
-                        <div class="box bg-info" style="background-color: #7c38bc!important;">
+                    <div class="box bg-info" style="background-color: #4C644B !important;">
+                        <div class="box bg-info" style="background-color: #4C644B !important;">
                             <h1 class="text-white textdashboardboxes" id="txtTotsellers" style="color: #4a8670;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Sellers</h6>
+                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4C644B ;">Sellers</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-users"></i>
                             </div>
@@ -33,10 +24,10 @@
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox2">
                 <div class="card text-white bg-dark" style="margin-bottom: 15px;">
-                    <div class="box bg-info" style="background-color: #0e62c7!important;">
-                        <div class="box bg-info" style="background-color: #0e62c7!important;">
-                            <h1 class="text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Customers</h6>
+                    <div class="box bg-info" style="background-color:#4C644B !important;">
+                        <div class="box bg-info" style="background-color:#4C644B !important;">
+                            <h1 class="text-white textdashboardboxes" id="txtTotcustomer" style="color: #4C644B ;">0</h1>
+                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4C644B ;">Customers</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-users"></i>
                             </div>
@@ -46,10 +37,10 @@
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
                 <div class="card text-white bg-dark" style="margin-bottom: 15px;">
-                    <div class="box bg-info" style="background-color: #f7aa47!important;">
-                        <div class="box bg-info" style="background-color: #f7aa47!important;">
-                            <h1 class="text-white textdashboardboxes" id="txtTotproduct" style="color: #4a8670;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Products</h6>
+                    <div class="box bg-info" style="background-color: #4C644B !important;">
+                        <div class="box bg-info" style="background-color: #4C644B !important;">
+                            <h1 class="text-white textdashboardboxes" id="txtTotproduct" style="color:#4C644B ;">0</h1>
+                            <h6 class="font-light text-white textdashboardboxes2" style="color:#4C644B ;">Products</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-boxes"></i>
                             </div>
@@ -61,8 +52,8 @@
                 <div class="card text-white bg-dark" style="margin-bottom: 15px;">
                     <div class="box bg-info" style="background-color: #ff6264!important;">
                         <div class="box bg-info" style="background-color: #ff6264!important;">
-                            <h1 class="text-white textdashboardboxes" id="txtTotorders" style="color: #4a8670;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Orders</h6>
+                            <h1 class="text-white textdashboardboxes" id="txtTotorders" style="color:#4C644B ;">0</h1>
+                            <h6 class="font-light text-white textdashboardboxes2" style="color:#4C644B ;">Orders</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-file-alt"></i>
                             </div>
