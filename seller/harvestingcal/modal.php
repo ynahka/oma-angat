@@ -1,7 +1,6 @@
 <div id="mdladdproduct" class="modal" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-md"style="max-width: 750px;">
+    <div class="modal-dialog modal-md" style="max-width: 750px;">
         <div class="modal-content">
-
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12 mb-3">
@@ -74,7 +73,7 @@
                             </div>
                             <input type="hidden" class="clearinfo" id="hiddenwala2" name="hiddenwala2">
                             <div class="col-md-9 mb-2" id="appendcategory">
-                                
+
                             </div>
                             <div class="col-md-3 mb-2 modalpaddingnew">
                                 <button class="btn waves-effect waves-light btn-secondary" style="width:100%;padding: 0.375rem 0.75rem;" onclick="fncappendcategory();"><i class="fas fa-plus"></i></button>
@@ -90,7 +89,7 @@
                         <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct btnprodsave" onclick="addproduct();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;">Save Product</button>
 
                         <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct btnprodupdate" onclick="editproduct();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;display: none;">Update Product</button>
-                    </div> 
+                    </div>
                 </div>
             </div>
 
@@ -99,7 +98,7 @@
 </div>
 
 <div id="mdllistofseller" class="modal" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-dialog-centered modal-md"style="max-width: 800px;">
+    <div class="modal-dialog modal-dialog-centered modal-md" style="max-width: 800px;">
         <div class="modal-content">
 
             <div class="modal-body">
@@ -140,7 +139,7 @@
 </div>
 
 <div id="mdlopencustprof" class="modal" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-dialog-centered modal-md"style="max-width: 450px;">
+    <div class="modal-dialog modal-dialog-centered modal-md" style="max-width: 450px;">
         <div class="modal-content">
 
             <div class="modal-body">
