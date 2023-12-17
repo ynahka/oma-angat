@@ -273,7 +273,7 @@ include 'header.php';
 
 
     <!--=====================================
-                    NEW ITEM PART START
+                    SHOP BY PRODUCTS
         =======================================-->
     <section class="section niche-part">
         <div class="container">
@@ -288,7 +288,11 @@ include 'header.php';
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
 
                     <?php
-                    $ret = mysqli_query($connection, "SELECT p.id AS id, p.productdesc AS descrip, p.productname AS names, p.price AS presyo, pi.imagename AS imahe FROM products AS p INNER JOIN products_image AS pi ON p.product_id = pi.product_id;");
+                    $ret = mysqli_query($connection, "SELECT p.id AS id, p.productdesc AS descrip, p.productname AS names, p.price AS presyo, MAX(pi.imagename) AS imahe 
+                                    FROM products AS p 
+                                    INNER JOIN products_image AS pi ON p.product_id = pi.product_id 
+                                    GROUP BY p.id;");
+
                     $num = mysqli_num_rows($ret);
                     if ($num > 0) {
                         while ($row = mysqli_fetch_array($ret)) {

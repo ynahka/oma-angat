@@ -60,9 +60,11 @@ $pid = $_GET['id'];
                         <a><img src="images/promo/features/referral.svg" alt="promo"></a>
                         <div class="offer-div">
                             <!-- <h5 class="offer-select">Click to copylink</h5> -->
-                            <button class="offer-select">Click to copylink</button>
+                            <button class="offer-select" id="copyLinkBtn" onclick="copyToClipboard()">Click to copy
+                                link</button>
                         </div>
                     </div>
+
 
 
                     <div class="shop-widget-promo">
@@ -94,46 +96,19 @@ $pid = $_GET['id'];
                 </div>
 
                 <div class="col-lg-9">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="top-filter">
-                                <div class="filter-short">
-                                    <label class="filter-label">Sort by Category :</label>
-                                    <select class="form-select filter-select">
-                                        <option selected>All</option>
-                                        <option value="1">Vegetables</option>
-                                        <option value="2">Fruits</option>
-                                        <option value="3">Grains</option>
-                                        <option value="4">Dairies & Eggs</option>
-                                        <option value="5">Fats & Oils</option>
-                                        <option value="6">Processed Goods</option>
-                                        <option value="7">Dried Fish</option>
-                                    </select>
-                                </div>
-                                <div class="filter-short">
-                                    <label class="filter-label">Price Range :</label>
-                                    <select class="form-select filter-select">
-                                        <option selected>price range</option>
-                                        <option value="3">Lowest to Highest</option>
-                                        <option value="1">Highest to Lowest</option>
-
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                         <?php
-                        $ret = mysqli_query($connection, "SELECT p.productname AS names, pi.imagename AS imahe, p.price AS presyo FROM products AS p
+                        include('product-view.php');
+                        $ret = mysqli_query($connection, "SELECT p.id as id, p.productname AS names, pi.imagename AS imahe, p.price AS presyo FROM products AS p
     INNER JOIN user_details AS ud ON p.seller_id = ud.user_id
     INNER JOIN products_image AS pi ON p.product_id = pi.product_id
-    WHERE ud.user_id='$pid';");
+    WHERE ud.user_id='$pid'  GROUP BY p.product_id");
                         $num = mysqli_num_rows($ret);
                         if ($num > 0) {
                             while ($row = mysqli_fetch_array($ret)) {
                         ?>
-                        <div class="col" data-bs-toggle="modal" data-bs-target="#product-view">
+                        <div class="col" data-bs-toggle="modal" data-bs-target="#product-view<?php echo $row['id'] ?>">
                             <div class="product-card">
                                 <div class="product-media">
                                     <a class="product-image">
@@ -166,6 +141,34 @@ $pid = $_GET['id'];
         =======================================-->
     <?php include('footer.php'); ?>
     <?php include('js-vendor.php'); ?>
+    <script>
+    function copyToClipboard() {
+        // Get the text content you want to copy
+        var linkToCopy =
+            "http://localhost/oma-angat/viewers/shop-1column.php?id=<?= $pid ?>";
+
+        // Create a temporary input element
+        var tempInput = document.createElement("input");
+        tempInput.value = linkToCopy;
+
+        // Append the input element to the document
+        document.body.appendChild(tempInput);
+
+        // Select the text inside the input element
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); /* For mobile devices */
+
+        // Copy the selected text
+        document.execCommand("copy");
+
+        // Remove the temporary input element
+        document.body.removeChild(tempInput);
+
+        // Optionally, provide user feedback (e.g., alert or change button text)
+        alert("Link copied to clipboard!");
+    }
+    </script>
+
 </body>
 
 </html>
