@@ -62,8 +62,17 @@
                          </a>
                          <button class="header-widget header-user-1" title="Account">
                              <i class="icofont-ui-user"></i>
-                             <span>Account Name</span>
+                             <?php
+                                $query = mysqli_query($connection, "select * from users_table where user_id='" . $_SESSION['user_id'] . "'");
+                                while ($row = mysqli_fetch_array($query)) {
+                                ?>
+                             <span><?php echo $row['username']; ?></span>
+
+                             <?php
+                                }
+                                ?>
                          </button>
+
                      </div>
                  </div>
              </div>

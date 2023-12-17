@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include("connect.php");
+session_start();
+?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" href="css/brand-single.css">
 <link rel="stylesheet" href="css/blog-author.css">
@@ -58,187 +62,36 @@
                 </div>
 
                 <div class="col-lg-9">
+                    <?php
+                    session_start();
+                    $query = "SELECT pc.*, p.*, MAX(pi.image) as image FROM products_category pc INNER JOIN  products p ON pc.product_id = p.product_id INNER JOIN products_image pi ON p.product_id = pi.product_id GROUP BY pc.product_id, pc.category_id";
+
+
+                    $result = mysqli_query($connection, $query);
+                    $productsCategories = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    ?>
                     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-                        <div class="col" data-bs-toggle="modal" data-bs-target="#product-view">
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-name">
-                                        <a>fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
+                        <?php
+                        foreach ($productsCategories as $productCategory) : ?>
+
+                            <div class="col" data-bs-toggle="modal" data-bs-target="#product-view">
+                                <div class="product-card">
+                                    <div class="product-media">
+                                        <a class="product-image">
+                                            <img src="../<?= $productCategory['image'] ?>" alt="product">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h6 class="product-name">
+                                            <a><?= $productCategory['productname'] ?></a>
+                                        </h6>
+                                        <h6 class="product-price">
+                                            <span><small>Starts at ₱ <?= $productCategory['price'] ?></small></span>
+                                        </h6>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-name">
-                                        <a>fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-name">
-                                        <a>fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-name">
-                                        <a>fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-name">
-                                        <a>fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-name">
-                                        <a>fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-name">
-                                        <a>fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-name">
-                                        <a>fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card">
-                                <div class="product-media">
-
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-name">
-                                        <a>fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-
-                                </div>
-                                <div class="product-content">
-                                    <h6 class="product-name">
-                                        <a>fresh green chilis</a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱ 29</small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach ?>
                     </div>
                 </div>
             </div>

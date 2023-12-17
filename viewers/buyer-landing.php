@@ -151,12 +151,9 @@ if (empty($_SESSION['user_id'])) {
         }
 
         // Close the database connection
-        $connection->close();
 
         // Now $Pitems contains the data retrieved from the database, including the count of products for each category
         ?>
-
-
 
         <section class="section suggest-part">
             <div class="container">
@@ -191,7 +188,6 @@ if (empty($_SESSION['user_id'])) {
                     NICHE PART START
         =======================================-->
 
-
         <section class="section niche-part">
             <div class="container">
                 <div class="row">
@@ -201,248 +197,39 @@ if (empty($_SESSION['user_id'])) {
                         </div>
                     </div>
                 </div>
+                <?php
+                $query = "SELECT p.*, pi.image 
+              FROM products p
+              INNER JOIN products_image pi ON p.product_id = pi.product_id";
+                $result = mysqli_query($connection, $query);
+                $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                ?>
+
                 <div class="tab-pane fade show active" id="top-order">
                     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
+                        <?php foreach ($products as $product) : ?>
+                            <div class="col">
+                                <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
+                                    <div class="product-media">
+                                        <a class="product-image">
+                                            <img src="../<?= $product['image'] ?>" alt="product">
+                                        </a>
                                     </div>
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
+                                    <div class="product-content">
+                                        <div class="row">
+                                            <div class="col" style="display: flex; align-items:center">
+                                                <h6 class="product-name">
+                                                    <a><?= $product['productname'] ?></a>
+                                                </h6>
+                                            </div>
+                                            <h6 class="product-price">
+                                                <span><small>Starts at ₱ <?= $product['price'] ?></small></span>
                                             </h6>
                                         </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-media">
-                                    <div class="product-label">
-                                        <label class="label-text order">314</label>
-                                    </div>
-                                    <a class="product-image">
-                                        <img src="images/product/1.png" alt="product">
-                                    </a>
-                                </div>
-                                <div class="product-content">
-                                    <div class="row">
-                                        <div class="col" style="display: flex; align-items:center">
-                                            <h6 class="product-name">
-                                                <a>Avocado</a>
-                                            </h6>
-                                        </div>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ 29</small></span>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach ?>
                     </div>
                 </div>
             </div>
