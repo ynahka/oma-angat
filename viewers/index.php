@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'header.php'; ?>
+
+<?php
+include("connect.php");
+include 'header.php';
+?>
 
 <body>
     <?php include('header-nav.php'); ?>
@@ -128,7 +132,6 @@
 
 
     <?php
-    include("connect.php");
     error_reporting(0);
     session_start();
 
@@ -201,6 +204,11 @@
     </section>
 
 
+
+
+    <!--=====================================
+                   SHOP BY CATEGORIES
+        =======================================-->
     <?php
     // Your SQL query to retrieve store information
     $sql = "SELECT * FROM categories";
@@ -220,6 +228,7 @@
 
             // Create an array for each row of data and append it to $Pitems
             $item = array(
+                "id" => $row['category_id'],
                 "name" => $row['categoryname'],
                 "img" => 'data:image/png;base64,' . $imgBase64, // Modify the MIME type according to your image type
                 "url" => "per-category.php", // Replace with the appropriate URL for the category
@@ -236,8 +245,6 @@
     // Now $Pitems contains the data retrieved from the database, including the count of products for each category
     ?>
 
-
-
     <section class="section suggest-part">
         <div class="container">
             <div class="row">
@@ -252,7 +259,7 @@
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
                 <li>
-                    <a class="suggest-card" href="<?php echo $Pitem['url'] ?>">
+                    <a class="suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
                         <img src="<?php echo $Pitem['img'] ?>">
                     </a>
                     <div class="suggest-info" style="text-align: center; font-weight:500; ">
@@ -277,42 +284,51 @@
                     </div>
                 </div>
             </div>
-            <?php
-            $query = "SELECT p.*, pi.image 
-              FROM products p
-              INNER JOIN products_image pi ON p.product_id = pi.product_id";
-            $result = mysqli_query($connection, $query);
-            $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
-            ?>
-
             <div class="tab-pane fade show active" id="top-order">
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-                    <?php foreach ($products as $product) : ?>
+
+                    <?php
+                    $ret = mysqli_query($connection, "SELECT p.id AS id, p.productdesc AS descrip, p.productname AS names, p.price AS presyo, pi.imagename AS imahe FROM products AS p INNER JOIN products_image AS pi ON p.product_id = pi.product_id;");
+                    $num = mysqli_num_rows($ret);
+                    if ($num > 0) {
+                        while ($row = mysqli_fetch_array($ret)) {
+                    ?>
+
                     <div class="col">
-                        <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view">
+                        <div class="product-card" data-bs-toggle="modal"
+                            data-bs-target="#product-view<?php echo $row['id'] ?>">
+
                             <div class="product-media">
+                                <div class="product-label">
+                                    <label class="label-text order"></label>
+                                </div>
                                 <a class="product-image">
-                                    <img src="../<?= $product['image'] ?>" alt="product">
+                                    <img src="../OmaangatImages/Products/<?php echo htmlentities($row['imahe']); ?>"
+                                        alt="product">
                                 </a>
                             </div>
+
                             <div class="product-content">
                                 <div class="row">
                                     <div class="col" style="display: flex; align-items:center">
                                         <h6 class="product-name">
-                                            <a><?= $product['productname'] ?></a>
+                                            <a><?php echo htmlentities($row['names']); ?></a>
                                         </h6>
                                     </div>
                                     <h6 class="product-price">
-                                        <span><small>Starts at ₱ <?= $product['price'] ?></small></span>
+                                        <span><small>Starts at ₱
+                                                <?php echo htmlentities($row['presyo']); ?></small></span>
                                     </h6>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-                    <?php endforeach ?>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
-            </div>
-        </div>
     </section>
     <!--=====================================
                     NICHE PART END

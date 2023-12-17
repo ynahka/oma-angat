@@ -3,6 +3,7 @@
 <?php
 include("connect.php");
 session_start();
+$pid = $_GET['id'];
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" href="css/brand-single.css">
@@ -34,25 +35,31 @@ session_start();
                         <div class="banner-category-head"><i class="fas fa-bars"></i><span>Sort by categories</span>
                         </div>
                         <ul class="banner-category-list">
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-vegetable"></i><span>vegetables</span></a>
+                            <li class="banner-category-item"><a href="#"><i
+                                        class="flaticon-vegetable"></i><span>vegetables</span></a>
 
                             </li>
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-fruit"></i><span>fruits</span></a>
+                            <li class="banner-category-item"><a href="#"><i
+                                        class="flaticon-fruit"></i><span>fruits</span></a>
 
                             </li>
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-dried-fruit"></i><span>Grains</span></a>
-
-                            </li>
-
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-dairy-products"></i><span>dairy & eggs</span></a>
-
-                            </li>
-
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-dairy-products"></i><span>fats & Oils</span></a>
+                            <li class="banner-category-item"><a href="#"><i
+                                        class="flaticon-dried-fruit"></i><span>Grains</span></a>
 
                             </li>
 
-                            <li class="banner-category-item"><a href="#"><i class="flaticon-groceries"></i><span>Processed Foods</span></a>
+                            <li class="banner-category-item"><a href="#"><i
+                                        class="flaticon-dairy-products"></i><span>dairy & eggs</span></a>
+
+                            </li>
+
+                            <li class="banner-category-item"><a href="#"><i
+                                        class="flaticon-dairy-products"></i><span>fats & Oils</span></a>
+
+                            </li>
+
+                            <li class="banner-category-item"><a href="#"><i
+                                        class="flaticon-groceries"></i><span>Processed Foods</span></a>
                             </li>
                             <li class="banner-category-item"><a href="#"><i class="flaticon-fish"></i><span>Dried
                                         Fish</span></a>
@@ -64,8 +71,7 @@ session_start();
                 <div class="col-lg-9">
                     <?php
                     session_start();
-                    $query = "SELECT pc.*, p.*, MAX(pi.image) as image FROM products_category pc INNER JOIN  products p ON pc.product_id = p.product_id INNER JOIN products_image pi ON p.product_id = pi.product_id GROUP BY pc.product_id, pc.category_id";
-
+                    $query = "SELECT p.id as id, pc.*, p.*, MAX(pi.image) as image FROM products_category pc INNER JOIN  products p ON pc.product_id = p.product_id INNER JOIN products_image pi ON p.product_id = pi.product_id  WHERE pc.category_id= '$pid' GROUP BY pc.product_id, pc.category_id";
 
                     $result = mysqli_query($connection, $query);
                     $productsCategories = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -73,24 +79,24 @@ session_start();
                     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                         <?php
                         foreach ($productsCategories as $productCategory) : ?>
-
-                            <div class="col" data-bs-toggle="modal" data-bs-target="#product-view">
-                                <div class="product-card">
-                                    <div class="product-media">
-                                        <a class="product-image">
-                                            <img src="../<?= $productCategory['image'] ?>" alt="product">
-                                        </a>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6 class="product-name">
-                                            <a><?= $productCategory['productname'] ?></a>
-                                        </h6>
-                                        <h6 class="product-price">
-                                            <span><small>Starts at ₱ <?= $productCategory['price'] ?></small></span>
-                                        </h6>
-                                    </div>
+                        <div class="col" data-bs-toggle="modal"
+                            data-bs-target="#product-view<?= $productCategory['id'] ?>">
+                            <div class="product-card">
+                                <div class="product-media">
+                                    <a class="product-image">
+                                        <img src="../<?= $productCategory['image'] ?>" alt="product">
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <h6 class="product-name">
+                                        <a><?= $productCategory['productname'] ?></a>
+                                    </h6>
+                                    <h6 class="product-price">
+                                        <span><small>Starts at ₱ <?= $productCategory['price'] ?></small></span>
+                                    </h6>
                                 </div>
                             </div>
+                        </div>
                         <?php endforeach ?>
                     </div>
                 </div>
