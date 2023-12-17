@@ -23,6 +23,22 @@
                         <span class="hide-menu">&nbsp;&nbsp;Orders</span>
                     </a>
                 </li>
+                <li id="maincommunity">
+                    <a href="index.php?url=community"><i class="fas fa-blog"></i>
+                        <span class="hide-menu">&nbsp;&nbsp;Community</span>
+                    </a>
+                </li>
+
+                <li id="mainsold">
+                    <a href="index.php?url=chats"><i class="fas fa-paper-plane"></i>
+                        <span class="hide-menu">&nbsp;&nbsp;Chats</span>
+                    </a>
+                </li>
+                <li id="mainharvest">
+                    <a href="index.php?url=harvestingcal"><i class="far fa-calendar-alt"></i>
+                        <span class="hide-menu">&nbsp;&nbsp;Harvesting Calendar</span>
+                    </a>
+                </li>
 
                 <li id="mainreceived">
                     <a href="index.php?url=payments"><i class="fas fa-hand-holding-usd"></i>
@@ -34,17 +50,7 @@
                         <span class="hide-menu">&nbsp;&nbsp;Payment Method</span>
                     </a>
                 </li>
-                <li id="mainharvest">
-                    <a href="index.php?url=harvestingcal"><i class="far fa-calendar-alt"></i>
-                        <span class="hide-menu">&nbsp;&nbsp;Harvesting Calendar</span>
-                    </a>
-                </li>
 
-                <li id="mainsold">
-                    <a href="index.php?url=chats"><i class="fas fa-paper-plane"></i>
-                        <span class="hide-menu">&nbsp;&nbsp;Chats</span>
-                    </a>
-                </li>
             </ul>
         </nav>
     </div>

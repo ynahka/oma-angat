@@ -32,7 +32,7 @@
                     <div class="box bg-info">
                         <div class="box bg-info">
                             <h1 class=" text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Customers</h6>
+                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Buyers</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-users"></i>
                             </div>

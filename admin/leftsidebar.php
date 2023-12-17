@@ -2,7 +2,7 @@
     <div class="scroll-sidebar">
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                <li class="nav-small-cap text-center" style="font-size: 14px;color: #2c2b2e;">ADMINISTRATOR</li>
+                <li class="nav-small-cap text-center" style="margin-top:20px; font-weight:600; font-size: 16px;color: #4C644B ;">ADMINISTRATOR</li>
 
                 <li class="nav-devider" style="margin: 5px 0;"></li>
 
@@ -14,7 +14,7 @@
 
                 <li id="mainuseraccount">
                     <a href="index.php?url=customer"><i class="fas fa-user-friends"></i>
-                        <span class="hide-menu">&nbsp;&nbsp;Customers</span>
+                        <span class="hide-menu">&nbsp;&nbsp;Buyer</span>
                     </a>
                 </li>
 
@@ -35,13 +35,6 @@
                         <span class="hide-menu">&nbsp;&nbsp;Orders</span>
                     </a>
                 </li>
-
-                <li id="mainreceived">
-                    <a href="index.php?url=payments"><i class="fas fa-hand-holding-usd"></i>
-                        <span class="hide-menu">&nbsp;&nbsp;Payments</span>
-                    </a>
-                </li>
-
                 <li id="mainsold">
                     <a href="index.php?url=chats"><i class="fas fa-paper-plane"></i>
                         <span class="hide-menu">&nbsp;&nbsp;Chats</span>
@@ -53,6 +46,13 @@
                         <span class="hide-menu">&nbsp;&nbsp;Community</span>
                     </a>
                 </li>
+                <li id="mainreceived">
+                    <a href="index.php?url=payments"><i class="fas fa-hand-holding-usd"></i>
+                        <span class="hide-menu">&nbsp;&nbsp;Payments</span>
+                    </a>
+                </li>
+
+
 
                 <!-- <li id="mainreports">
                     <a class="has-arrow" href="#" aria-expanded="false"><i class="fas fa-file-alt" style="font-size: 23px;"></i>

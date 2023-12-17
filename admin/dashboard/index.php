@@ -10,11 +10,11 @@
     <div class="col-md-12">
         <div class="row" style="justify-content: center;">
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
-                <div class="card text-white" style="margin-bottom: 15px;">
+                <div class="card" style="margin-bottom: 15px;">
                     <div class="box bg-info">
                         <div class="box bg-info">
-                            <h1 class="text-white textdashboardboxes" id="txtTotsellers" style="color: #4a8670;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670 ;">Sellers</h6>
+                            <h1 class="textdashboardboxes" id="txtTotsellers" style="color: #4C644B;">0</h1>
+                            <h6 class="font-light textdashboardboxes2" style="color: #4C644B ;">Sellers</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-users"></i>
                             </div>
@@ -23,11 +23,11 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox2">
-                <div class="card text-white" style="margin-bottom: 15px;">
+                <div class="card" style="margin-bottom: 15px;">
                     <div class="box bg-info">
                         <div class="box bg-info">
-                            <h1 class="text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670 ;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670 ;">Customers</h6>
+                            <h1 class="textdashboardboxes" id="txtTotcustomer" style="color: #4C644B ;">0</h1>
+                            <h6 class="font-light textdashboardboxes2" style="color: #4C644B ;">Buyers</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-user-friends"></i>
                             </div>
@@ -36,11 +36,11 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
-                <div class="card text-white" style="margin-bottom: 15px;">
+                <div class="card" style="margin-bottom: 15px;">
                     <div class="box bg-info">
                         <div class="box bg-info">
-                            <h1 class="text-white textdashboardboxes" id="txtTotproduct" style="color:#4a8670 ;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color:#4a8670 ;">Products</h6>
+                            <h1 class="textdashboardboxes" id="txtTotproduct" style="color:#4C644B ;">0</h1>
+                            <h6 class="font-light textdashboardboxes2" style="color:#4C644B ;">Products</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-boxes"></i>
                             </div>
@@ -49,11 +49,11 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox2">
-                <div class="card text-white" style="margin-bottom: 15px;">
+                <div class="card" style="margin-bottom: 15px;">
                     <div class="box bg-info">
                         <div class="box bg-info">
-                            <h1 class="text-white textdashboardboxes" id="txtTotorders" style="color:#4a8670 ;">0</h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color:#4a8670 ;">Orders</h6>
+                            <h1 class="textdashboardboxes" id="txtTotorders" style="color:#4C644B ;">0</h1>
+                            <h6 class="font-light textdashboardboxes2" style="color:#4C644B ;">Orders</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-shopping-cart"></i>
                             </div>

@@ -58,7 +58,9 @@ if (empty($_SESSION['user_id'])) {
           if ($_GET['url'] == "harvestingcal") {
             include "harvestingcal/index.php";
           }
-
+          if ($_GET['url'] == "community") {
+            include "community/index.php";
+          }
           if ($_GET['url'] == "chats") {
             include "chat/index.php";
           }

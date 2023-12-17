@@ -100,7 +100,7 @@
                                  </li>
                                  <li class="navbar-item dropdown">
                                      <a href=""><i class="fa-solid fa-store"></i></a>
-                                     <a class="navbar-link dropdown-arrow" href="#0">Shop</a>
+                                     <a class="navbar-link dropdown-arrow" href="all-farmer-shop.php">Shop</a>
                                      <ul class="dropdown-position-list">
                                          <li><a href="all-farmer-shop.php">Farmer's Market</a></li>
                                          <li><a href="per-category.php">Category</a></li>

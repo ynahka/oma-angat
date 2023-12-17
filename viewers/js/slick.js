@@ -226,7 +226,7 @@ $('.suggest-slider').slick({
         {
             breakpoint: 768,
             settings: {
-                slidesToShow: 4,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 arrows: true,
             }
@@ -235,6 +235,14 @@ $('.suggest-slider').slick({
             breakpoint: 576,
             settings: {
                 slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+            }
+        },
+         {
+            breakpoint: 425,
+            settings: {
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 arrows: true,
             }
