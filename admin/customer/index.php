@@ -61,7 +61,7 @@
             <div class="card-body" style="padding-top: .5rem; padding-bottom: .5rem;">
                 <div class="row page-titles rowpageheaderpadd" style="padding-bottom: 0px;">
                     <div class="col-md-6 col-6 align-self-center" style="padding-left:10px;">
-                        <h3 class="mb-0 mt-0 headerfontfont text-themecolor" style="font-weight: 600;">CUSTOMERS</h3>
+                        <h3 class="mb-0 mt-0 headerfontfont text-themecolor" style="font-weight: 600;">BUYERS</h3>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
 </div>
 
 <div class="container-fluid" style="padding: 15px 15px; background-color: white; min-height: 540px; margin-top: 15px;">
-    <h4 class="mb-0 headerfontfont2" style="color: #2c2b2e;font-weight: 500;">Customers List</h4>
+    <h4 class="mb-0 headerfontfont2" style="color: #2c2b2e;font-weight: 500;">Buyers List</h4>
     <h6 class="mb-4 headerfontfont" style="font-weight: 300;font-size: 13px;">You have total of <span id="txttotcustomers">2</span> customers</h6>
 
     <div class="row" style="margin-bottom: .5rem;">
