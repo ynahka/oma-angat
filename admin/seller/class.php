@@ -20,7 +20,6 @@ switch ($_POST['form']) {
 			while ($row = mysqli_fetch_array($res)) {
 
 				$counter++;
-
 				if ($row[5] == "") {
 					$img = "assets/images/noimage5.png";
 				} else {

@@ -201,7 +201,7 @@ $('.suggest-slider').slick({
     infinite: false,
     autoplay: false,
     arrows: true,
-    speed: 800,
+    speed: 500,
     nextArrow: '<i class="icofont-arrow-right dandik"></i>',
     prevArrow: '<i class="icofont-arrow-left bamdik"></i>',
     slidesToShow: 7,
