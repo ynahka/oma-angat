@@ -20,36 +20,6 @@
             </ol> -->
         </div>
     </section>
-    <!-- 
-    <div class="examp container">
-        <div class="row gy-4 mt-5 mx-2 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-            <div class="col-xl-4 col-md-4 col-sm-4">
-                <a href="photos.html">
-                    <div class="icon-box">
-                        <i class="bx bx-photo-album"></i>
-                        <h3>Photo Highlights</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xl-4 col-md-4 col-sm-4 justify-content-center">
-                <a href="videos.html">
-                    <div class="icon-box">
-                        <i class="bx bx-video"></i>
-                        <h3>Video Highlights</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-xl-4 col-md-4 col-sm-4 justify-content-center">
-                <a href="inarihan-river.html">
-                    <div class="icon-box">
-                        <i class="bx bx-water"></i>
-                        <h3>Inahiran River</h3>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div> -->
 
 
 
@@ -156,46 +126,6 @@
                         INTRO PART END
             =======================================-->
 
-
-
-    <!--=====================================
-                   TESTIMONIAL PART START
-        =======================================-->
-    <!-- <section class="inner-section about-testimonial">
-        <div class="container">
-            <ul class="testi-slider slider-arrow">
-                <li>
-                    <div class="testi-content">
-                        <a class="testi-img" href="#">
-                            <img src="images/testimonial/01.jpg" alt="testimonial">
-                        </a>
-                        <div class="testi-quote">
-                            <i class="icofont-quote-left"></i>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ab ipsam sint dolores repellat inventore sequi temporibus natus.</p>
-                            <h4>tahmina labonno</h4>
-                            <h6>Former MD - joomtech.com</h6>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="testi-content">
-                        <a class="testi-img" href="#">
-                            <img src="images/testimonial/02.jpg" alt="testimonial">
-                        </a>
-                        <div class="testi-quote">
-                            <i class="icofont-quote-left"></i>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit neque earum sapiente vitae obcaecati magnam doloribus magni provident ab ipsam sint dolores repellat inventore sequi temporibus natus.</p>
-                            <h4>miron mahmud</h4>
-                            <h6>Senior Accountant - farmfresh.com</h6>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section> -->
-    <!--=====================================
-                   TESTIMONIAL PART END
-        =======================================-->
 
 
     <!--=====================================

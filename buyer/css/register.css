@@ -1,7 +1,8 @@
 /* Add this to your existing "register.css" file or create a new one */
 
 /* Set body and html to have full width */
-body, html {
+body,
+html {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -9,7 +10,7 @@ body, html {
     margin: 0;
     overflow-x: hidden;
     font-weight: 300;
-    color: #4C644B!important;
+    color: #4C644B !important;
     font-family: "Inter", sans-serif !important;
     line-height: 26px;
     overflow-x: hidden;
@@ -22,12 +23,12 @@ body, html {
     font-size: 1rem;
 }
 
-.contact_area{
+.contact_area {
     background-color: #4C644B;
     /* padding-top: 30px; */
 }
 
-.contact_message{
+.contact_message {
     line-height: 26px;
     font-weight: 500;
     margin-bottom: 10px;
@@ -35,26 +36,31 @@ body, html {
     font-family: "Inter", sans-serif;
 }
 
-.contact_message input{
+.contact_message input {
     padding: 0 10px !important;
-    color:#4C644B !important;
+    color: #4C644B !important;
 }
 
 
 /* Container for the two columns */
 .auth-container {
-     background: #4C644B;
+    background: #4C644B;
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    height: 100%; /* Make the container full height of the viewport */
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    /* Center the content vertically */
+    height: 100%;
+    /* Make the container full height of the viewport */
 }
 
 /* Style for each column */
 .card {
     background-color: #CFE2CE !important;
-    width: 100%; /* Make the columns full width */
-    margin: auto; /* Center the card within the container */
+    width: 100%;
+    /* Make the columns full width */
+    margin: auto;
+    /* Center the card within the container */
     border-radius: 25px !important;
     position: relative;
     display: flex;
@@ -62,7 +68,7 @@ body, html {
     min-width: 0;
     word-wrap: break-word;
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0, 0, 0, .125);
 }
 
 /* Change the font color of h4 */
@@ -70,12 +76,12 @@ body, html {
 
     color: #4C644B !important;
     text-transform: uppercase;
-    font-weight:500;
+    font-weight: 500;
     font-size: 1rem;
 
 }
 
-.reqresinfo{
+.reqresinfo {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -88,25 +94,28 @@ body, html {
     padding: 0 10px;
     width: 100%;
 }
-.card-body{
+
+.card-body {
     padding: 1.5rem 1.5rem 1rem 1.5rem !important;
 }
 
-.regtitle{
-    margin-bottom: 5px; 
-    font-weight: 500; 
+.regtitle {
+    margin-bottom: 5px;
+    font-weight: 500;
     font-size: 1.5rem;
     text-transform: uppercase;
-    
+
 }
 
 /* Add media query for responsiveness */
 @media (min-width: 768px) {
     .auth-container {
-        justify-content: space-around; /* Distribute the columns with space around on larger screens */
+        justify-content: space-around;
+        /* Distribute the columns with space around on larger screens */
     }
 
     .card {
-        width: 45%; /* Adjust the width of the columns for larger screens */
+        width: 45%;
+        /* Adjust the width of the columns for larger screens */
     }
 }

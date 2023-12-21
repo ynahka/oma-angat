@@ -54,31 +54,30 @@ include 'header.php'; ?>
                         if ($result && mysqli_num_rows($result) > 0) {
                             $row = mysqli_fetch_assoc($result);
                     ?>
-                    <article class="blog-details">
-                        <a class="blog-details-thumb" href="#">
-                            <img src="../OmaangatImages/posts/<?php echo htmlentities($row['imahe']); ?>" alt="blog"
-                                style="width: 500px; height: 350px;">
-                        </a>
-                        <div class="blog-details-content">
-                            <ul class="blog-details-meta">
-                                <li>
-                                    <i class="icofont-user-alt-3"></i>
-                                    <span><?php echo htmlentities($row['username']); ?></span>
-                                </li>
-                                <li>
-                                    <i class="icofont-ui-calendar"></i>
-                                    <span><?php echo htmlentities($row['dateadd']); ?></span>
-                                </li>
-                            </ul>
-                            <h2 class="blog-details-title"><?php echo htmlentities($row['posttitle']); ?></h2>
+                            <article class="blog-details">
+                                <a class="blog-details-thumb" href="#">
+                                    <img src="../OmaangatImages/posts/<?php echo htmlentities($row['imahe']); ?>" alt="blog" style="width: 500px; height: 350px;">
+                                </a>
+                                <div class="blog-details-content">
+                                    <ul class="blog-details-meta">
+                                        <li>
+                                            <i class="icofont-user-alt-3"></i>
+                                            <span><?php echo htmlentities($row['username']); ?></span>
+                                        </li>
+                                        <li>
+                                            <i class="icofont-ui-calendar"></i>
+                                            <span><?php echo htmlentities($row['dateadd']); ?></span>
+                                        </li>
+                                    </ul>
+                                    <h2 class="blog-details-title"><?php echo htmlentities($row['posttitle']); ?></h2>
 
 
-                            <ul class="blog-details-list">
-                                <p class="blog-details-desc"><?php echo htmlentities($row['postdesc']); ?></p>
-                                <!-- Add more content as needed -->
-                            </ul>
-                        </div>
-                    </article>
+                                    <ul class="blog-details-list">
+                                        <p class="blog-details-desc"><?php echo htmlentities($row['postdesc']); ?></p>
+                                        <!-- Add more content as needed -->
+                                    </ul>
+                                </div>
+                            </article>
                     <?php
                         } else {
                             echo "Post not found.";
@@ -95,7 +94,7 @@ include 'header.php'; ?>
                         // Assuming you have a function to handle inserting comments into the database
                         $comment = mysqli_real_escape_string($connection, $_POST['comment']); // Sanitize the input
                         $post_id = $_GET['id']; // Assuming you already have the post ID from the URL
-                        $user_id= $_SESSION['user_id'];; // Replace with the actual user ID, you may retrieve it from the session or wherever it's stored
+                        $user_id = $_SESSION['user_id'];; // Replace with the actual user ID, you may retrieve it from the session or wherever it's stored
 
                         // Insert the comment into the database
                         $insertQuery = "INSERT INTO post_details (post_id, user_id, comment, date_added) VALUES ('$post_id', '$user_id', '$comment', CURRENT_DATE)";
@@ -114,8 +113,7 @@ include 'header.php'; ?>
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <textarea class="form-control" name="comment"
-                                                placeholder="Write your comment" required></textarea>
+                                            <textarea class="form-control" name="comment" placeholder="Write your comment" required></textarea>
                                         </div>
                                     </div>
                                 </div>

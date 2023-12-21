@@ -8,6 +8,7 @@
 .shadow {
   box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.08);
 }
+
 .home-index-slider .dandik {
   right: 30px;
 }
@@ -45,70 +46,56 @@
 .banner-1 {
   /* background: linear-gradient(to right, #4C644B, #CFE2CE); */
   /* background: var(--primary); */
-  background: -webkit-linear-gradient(
-    top,
-    #cfe2ce 25%,
-    #cfe2ce 50%,
-    #80a689 75%,
-    #4c644b 100%
-  );
-  background: -moz-linear-gradient(
-    top,
-    #cfe2ce 25%,
-    #cfe2ce 50%,
-    #80a689 75%,
-    #4c644b 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    #cfe2ce 25%,
-    #80a689 50%,
-    #80a689 75%,
-    #4c644b 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    #cfe2ce 25%,
-    #80a689 50%,
-    #80a689 75%,
-    #4c644b 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#CFE2CE', endColorstr='#4C644B',GradientType=0 ); /* IE6-9 */
+  background: -webkit-linear-gradient(top,
+      #cfe2ce 25%,
+      #cfe2ce 50%,
+      #80a689 75%,
+      #4c644b 100%);
+  background: -moz-linear-gradient(top,
+      #cfe2ce 25%,
+      #cfe2ce 50%,
+      #80a689 75%,
+      #4c644b 100%);
+  background: linear-gradient(to bottom,
+      #cfe2ce 25%,
+      #80a689 50%,
+      #80a689 75%,
+      #4c644b 100%);
+  background: linear-gradient(to bottom,
+      #cfe2ce 25%,
+      #80a689 50%,
+      #80a689 75%,
+      #4c644b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFE2CE', endColorstr='#4C644B', GradientType=0);
+  /* IE6-9 */
 }
 
 .banner-2 {
   /* background: -webkit-gradient(linear, right top, left top, from(#4C644B), to(#CFE2CE)); */
   /* background: linear-gradient(to right, #4C644B, #CFE2CE); */
   /* background: var(--primary); */
-  background: -webkit-linear-gradient(
-    top,
-    #cfe2ce 25%,
-    #cfe2ce 50%,
-    #80a689 75%,
-    #4c644b 100%
-  );
-  background: -moz-linear-gradient(
-    top,
-    #cfe2ce 25%,
-    #cfe2ce 50%,
-    #80a689 75%,
-    #4c644b 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    #cfe2ce 25%,
-    #80a689 50%,
-    #80a689 75%,
-    #4c644b 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    #cfe2ce 25%,
-    #80a689 50%,
-    #80a689 75%,
-    #4c644b 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#CFE2CE', endColorstr='#4C644B',GradientType=0 ); /* IE6-9 */
+  background: -webkit-linear-gradient(top,
+      #cfe2ce 25%,
+      #cfe2ce 50%,
+      #80a689 75%,
+      #4c644b 100%);
+  background: -moz-linear-gradient(top,
+      #cfe2ce 25%,
+      #cfe2ce 50%,
+      #80a689 75%,
+      #4c644b 100%);
+  background: linear-gradient(to bottom,
+      #cfe2ce 25%,
+      #80a689 50%,
+      #80a689 75%,
+      #4c644b 100%);
+  background: linear-gradient(to bottom,
+      #cfe2ce 25%,
+      #80a689 50%,
+      #80a689 75%,
+      #4c644b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CFE2CE', endColorstr='#4C644B', GradientType=0);
+  /* IE6-9 */
 }
 
 .banner-content-1 h1 {
@@ -165,17 +152,20 @@
     line-height: 48px;
   }
 
-    .banner-content-1 h1 {
+  .banner-content-1 h1 {
     font-size: 38px;
     line-height: 48px;
     margin-left: 20px;
   }
-      .banner-content-1 p{
-      margin-left: 20px;
+
+  .banner-content-1 p {
+    margin-left: 20px;
   }
+
   .banner-btn .btn {
-  margin-left: 20px;
-}
+    margin-left: 20px;
+  }
+
   .banner-img {
     display: none;
   }
@@ -187,21 +177,25 @@
     font-size: 30px;
     line-height: 42px;
   }
+
   .banner-content-1 h1 {
     font-size: 30px;
     line-height: 42px;
   }
+
   /* .banner-btn .btn {
     padding: 14px 22px;
     margin-right: 10px;
     margin-left: 100px;
   } */
 }
+
 @media (max-width: 767px) {
   .banner-content-1 h1 {
     font-size: 38px;
     line-height: 48px;
   }
+
   .banner-btn-1 .btn {
     margin: 8px;
   }
@@ -213,7 +207,8 @@
     font-size: 30px;
     line-height: 42px;
   }
-    .banner-btn-1 .btn {
+
+  .banner-btn-1 .btn {
     padding: 14px 22px;
     margin-right: 10px;
   }
@@ -236,7 +231,7 @@
 
 .suggest-slider li {
   margin: 0px 10px;
-  
+
 }
 
 @media (max-width: 575px) {
@@ -299,6 +294,7 @@
   .promo-img {
     margin: 10px 0px;
   }
+
   .promo-image {
     margin: 10px 0px;
   }
