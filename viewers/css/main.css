@@ -7310,6 +7310,11 @@ tbody tr td:last-child {
   .promo-image {
     margin: 50px 0px;
   }
+
+  .banner-content h1,
+  p {
+    font-size: 18px;
+  }
 }
 
 .new-slider li {
@@ -7319,6 +7324,11 @@ tbody tr td:last-child {
 @media (max-width: 575px) {
   .new-slider .product-card {
     width: 220px;
+  }
+
+  .banner-content h1,
+  p {
+    font-size: 11px;
   }
 }
 
