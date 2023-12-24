@@ -1,11 +1,6 @@
-:root {
-  font-family: 'Inter', sans-serif;
-}
-
+:root { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
-  :root {
-    font-family: 'Inter var', sans-serif;
-  }
+  :root { font-family: 'Inter var', sans-serif; }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
@@ -24,17 +19,14 @@ input {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -ms-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  /* adjust the text size on smaller screens */
+  -webkit-text-size-adjust: 100%; /* adjust the text size on smaller screens */
 }
-
-.web-logo {
+.web-logo{
   width: 10vh;
   height: 10vh;
 }
-
 .container {
-  position: relative;
+  position:relative;
   width: 100%;
   background-image: url(img/bg.png);
   min-height: 100vh;
@@ -81,19 +73,17 @@ form.sign-up-form {
 form.sign-in-form {
   z-index: 2;
 
-
+  
 }
 
 .title {
   font-size: 2.2rem;
   color: #634035;
 }
-
-.tagline {
-  color: #634035;
+.tagline{
+  color:  #634035;
   margin-bottom: 20px;
 }
-
 .title2 {
   font-size: 2.2rem;
   color: #634035;
@@ -112,13 +102,13 @@ form.sign-in-form {
   grid-template-columns: 15% 85%;
   padding: 0 0.4rem;
   position: relative;
-
+  
 }
 
 .input-field i {
   text-align: center;
   line-height: 55px;
-  color: #a5c48f;
+  color:#a5c48f;
   transition: 0.5s;
   font-size: 1.1rem;
 }
@@ -165,10 +155,9 @@ form.sign-in-form {
 }
 
 .social-icon:hover {
-  color: #a5c48f;
-  border-color: #a5c48f;
+  color:  #a5c48f;
+  border-color:  #a5c48f;
 }
-
 .btn {
   width: 150px;
   background-color: #a5c48f;
@@ -183,25 +172,21 @@ form.sign-in-form {
   cursor: pointer;
   transition: 0.5s;
 }
-
-.ac1 {
+.ac1{
   font-weight: 500;
-  color: rgb(0, 188, 126);
+  color:rgb(0, 188, 126);
 }
-
-.ac1:hover {
+.ac1:hover{
   color: #634035;
 }
-
-.cta {
-  color: #634035;
+.cta{
+  color:  #634035;
   font-weight: 500;
 }
 
 .btn:hover {
-  background-color: #634035;
+  background-color:  #634035;
 }
-
 .panels-container {
   position: absolute;
   height: 100%;
@@ -276,7 +261,7 @@ form.sign-in-form {
   height: 41px;
   font-weight: 600;
   font-size: 0.8rem;
-
+ 
 }
 
 .right-panel .image,
@@ -328,7 +313,6 @@ form.sign-in-form {
     min-height: 800px;
     height: 100vh;
   }
-
   .signin-signup {
     width: 100%;
     top: 95%;
@@ -435,11 +419,9 @@ form.sign-in-form {
   .image {
     display: none;
   }
-
   .panel .content {
     padding: 0.5rem 1rem;
   }
-
   .container {
     padding: 1.5rem;
   }

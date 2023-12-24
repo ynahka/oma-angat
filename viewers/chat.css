@@ -55,7 +55,7 @@
 .chat-main-box .chat-left-aside .chat-left-inner .form-control {
 	height: 60px;
 	padding: 15px;
-
+	
 }
 
 .chat-main-box .chat-left-aside .chat-left-inner .style-none {
@@ -293,67 +293,54 @@
 		transition: 0.5s ease-in;
 		background: #ffffff
 	}
-
 	.chat-main-box .chat-left-aside.open-pnl {
 		left: 0px
 	}
-
 	.chat-main-box .chat-left-aside .open-panel {
 		display: block
 	}
-
 	.chat-main-box .chat-right-aside {
 		width: 100%
 	}
-
 	ul.timeline:before {
 		left: 40px
 	}
-
 	ul.timeline>li>.timeline-panel {
 		width: calc(100% - 90px)
 	}
-
 	ul.timeline>li>.timeline-badge {
 		top: 16px;
 		left: 15px;
 		margin-left: 0
 	}
-
 	ul.timeline>li>.timeline-panel {
 		float: right
 	}
-
 	ul.timeline>li>.timeline-panel:before {
 		right: auto;
 		left: -15px;
 		border-right-width: 15px;
 		border-left-width: 0
 	}
-
 	ul.timeline>li>.timeline-panel:after {
 		right: auto;
 		left: -14px;
 		border-right-width: 14px;
 		border-left-width: 0
 	}
-
 	.left-aside {
 		width: 100%;
 		position: relative;
 		border: 0px
 	}
-
 	.right-aside {
 		margin-left: 0px
 	}
-
 	.flex-wrap {
-		-ms-flex-wrap: wrap !important;
-		flex-wrap: wrap !important;
-		-webkit-flex-wrap: wrap !important
+		-ms-flex-wrap: wrap!important;
+		flex-wrap: wrap!important;
+		-webkit-flex-wrap: wrap!important
 	}
-
 	.chat-list li .chat-content {
 		width: calc(100% - 80px)
 	}

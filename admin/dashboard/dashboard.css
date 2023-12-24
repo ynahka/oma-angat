@@ -103,110 +103,86 @@
     margin-bottom: 15px;
 }
 
-h3,
-h3 {
+h3, h3 {
     display: inline;
 }
-
-p,
-p {
-    display: inline;
-}
-
-.bgcolormyAct {
-    background-color: #c5c3d8;
-    /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #c5c3d8, #fff);
+p, p{display: inline;}
+.bgcolormyAct{
+    background-color: #c5c3d8; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #c5c3d8,#fff);
     color: #fff;
     font-size: 24px;
 }
-
-.bgcolormyTask {
-    background-color: #94c6e4;
-    /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #94c6e4, #fff);
+.bgcolormyTask{
+    background-color: #94c6e4; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #94c6e4,#fff);
     color: #fff;
     font-size: 24px;
 }
-
-.bgcolormyIncomingReq {
-    background-color: #b3b274;
-    /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #b3b274, #fff);
+.bgcolormyIncomingReq{
+    background-color: #b3b274; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #b3b274,#fff);
     color: #fff;
     font-size: 24px;
 }
-
-.bgcolormyAppointment {
-    background-color: #66d1c4;
-    /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #66d1c4, #fff);
+.bgcolormyAppointment{
+    background-color: #66d1c4; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #66d1c4,#fff);
     color: #fff;
     font-size: 24px;
 }
-
-.bgcolormyPatients {
-    background-color: #9f9dce;
-    /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #9f9dce, #fff);
+.bgcolormyPatients{
+    background-color: #9f9dce; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #9f9dce,#fff);
     color: #fff;
     font-size: 24px;
 }
-
-.bgcolormyTopPharmacy {
-    background-color: #96d5f4;
-    /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #96d5f4, #fff);
+.bgcolormyTopPharmacy{
+    background-color: #96d5f4; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #96d5f4,#fff);
     color: #fff;
     font-size: 24px;
 }
-
-.bgcolormyBestSelling {
-    background-color: #7dddd2;
-    /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #7dddd2, #fff);
+.bgcolormyBestSelling{
+    background-color: #7dddd2; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #7dddd2,#fff);
     color: #fff;
     font-size: 24px;
 }
-
-.bgcolormyTopLab {
-    background-color: #b8b6db;
-    /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #b8b6db, #fff);
+.bgcolormyTopLab{
+    background-color: #b8b6db; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #b8b6db,#fff);
     color: #fff;
     font-size: 24px;
 }
-
-.bgcolormyTopServices {
-    background-color: #e3e2cd;
-    /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #e3e2cd, #fff);
+.bgcolormyTopServices{
+    background-color: #e3e2cd; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #e3e2cd,#fff);
     color: #fff;
     font-size: 24px;
 }
 
 .MydoctorBorder {
-    border-radius: 25px;
-    border: 2px solid #ededed;
-    padding: 20px;
-    width: 650px;
-    height: 100px;
+  border-radius: 25px;
+  border: 2px solid #ededed;
+  padding: 20px; 
+  width: 650px;
+  height: 100px;  
 }
-
 .MyCustomerBorder {
-    border-radius: 25px;
-    border: 2px solid #ededed;
-    padding: 20px;
-    width: 1150px;
-    height: 100px;
+  border-radius: 25px;
+  border: 2px solid #ededed;
+  padding: 20px; 
+  width: 1150px;
+  height: 100px;  
 }
 
 .MyOrderBorder {
-    border-radius: 25px;
-    border: 2px solid #ededed;
-    padding: 20px;
-    width: 420px;
-    height: 100px;
+  border-radius: 25px;
+  border: 2px solid #ededed;
+  padding: 20px; 
+  width: 420px;
+  height: 100px;  
 }
 
 .dashbgcolor {
@@ -231,7 +207,7 @@ p {
 }
 
 .dbox2 {
-    background-color: #e04038 !important;
+   background-color: #e04038 !important;
 }
 
 .dboxicon {
@@ -246,14 +222,12 @@ p {
     color: rgb(76 100 75 / 77%);
 }
 
-.dashmsg .slimScrollDiv,
-.dashmsg .slimScrollDiv .message-scroll {
+.dashmsg .slimScrollDiv,.dashmsg .slimScrollDiv .message-scroll {
     height: 255px !important;
     overflow: auto;
 }
 
-.dashmsg2 .slimScrollDiv,
-.dashmsg2 .slimScrollDiv .message-scroll {
+.dashmsg2 .slimScrollDiv,.dashmsg2 .slimScrollDiv .message-scroll {
     height: 300px !important;
     overflow: auto;
 }
@@ -265,8 +239,8 @@ p {
 .addressfeature {
     font-size: 13px;
     margin-bottom: 0;
-    text-overflow: ellipsis !important;
-    overflow: hidden !important;
+    text-overflow: ellipsis !important; 
+    overflow:hidden !important;
     white-space: nowrap !important;
 }
 
@@ -292,12 +266,12 @@ p {
 }
 
 .AddressClass {
-    text-overflow: ellipsis !important;
-    overflow: hidden !important;
+    text-overflow: ellipsis !important; 
+    overflow:hidden !important;
     white-space: nowrap !important;
 }
 
-.webkitlala {
+.webkitlala{
     overflow: hidden;
     /*height: 41px;*/
     /*line-height: 17px;*/
@@ -309,8 +283,8 @@ p {
 }
 
 .professional {
-    margin-bottom: 10px !important;
-    position: relative;
+  margin-bottom: 10px !important;
+  position: relative;
 }
 
 .profiletimeline3 {
@@ -337,7 +311,7 @@ p {
     -moz-box-shadow: 3px 3px 5px 2px #ccc;
     box-shadow: 3px 3px 5px 2px #ccc;
     margin-bottom: 10px;
-    background: white;
+    background: white; 
 }
 
 .shadowx .content hr {
@@ -351,13 +325,14 @@ p {
     margin-bottom: 0px;
 }
 
-.BCardShadow:hover {
+.BCardShadow:hover
+{
     box-shadow: 0px 0px 6px 0 rgb(31 135 192), 0 1px 10px 0 rgb(31 135 192);
 }
 
-.Iclass {
-    font-size: 1.3rem;
-    cursor: pointer;
+.Iclass{
+    font-size:1.3rem;
+    cursor:pointer;
     font-weight: 500;
 }
 
@@ -376,27 +351,26 @@ ul.pagination li {
     border: 1px solid #CCC;
 }
 
-.pagination li:first-child {
+.pagination li:first-child{
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
 
-.pagination li:last-child {
+.pagination li:last-child{
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
 
-ul.pagination li:hover {
+ul.pagination li:hover{
     background-color: #3a4651;
     color: white !important;
 }
 
-.pagination .active {
+.pagination .active{
     background-color: #3a4651;
     color: white !important;
 }
 
-.table thead th,
-.table th {
+.table thead th, .table th {
     background-color: #374e46 !important;
 }
