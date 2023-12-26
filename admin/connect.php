@@ -4,7 +4,7 @@
 	$mydate = date("Y-m-d");
 	error_reporting(E_ALL ^ (E_NOTICE | E_WARNING | E_DEPRECATED));
 
-	$connection = mysqli_connect("localhost", "root", "", "omaangatdata");
+	$connection = mysqli_connect("localhost", "root", "", "oma-angat-db");
 
 
 	if(mysqli_connect_errno())
