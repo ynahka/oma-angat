@@ -2,7 +2,7 @@
 include("connect.php");
 session_start();
 if (empty($_SESSION['user_id'])) {
-    echo "<script> window.location = 'index.php';</script>";
+    echo "<script> window.location = '../buyer/login.php';</script>";
 }
 ?>
 
