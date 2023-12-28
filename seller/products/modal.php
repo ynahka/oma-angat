@@ -80,6 +80,17 @@
                                     id="txtaddprodprice" maxlength="10" onkeypress="return isNumberKey(event)"
                                     style="font-size: .9rem;">
                             </div>
+                            <div class="col-md-6 mb-2">
+                                <span style="font-weight:400">Available at</span>
+                                <input type="date" class="form-control focus clearinfo reqresinfo"
+                                    id="txtaddprodavailat" style="font-size: .9rem;">
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <span style="font-weight:400">Available until</span>
+                                <input type="date" class="form-control focus clearinfo reqresinfo"
+                                    id="txtaddprodavailuntil" style="font-size: .9rem;">
+                            </div>
+
                             <div class="col-md-12 mb-2">
                                 <label for="txtaddprodunit" style="font-weight: 400;">Unit</label>
                                 <select class="form-control clearinfo reqresinfo" id="txtaddprodunit"
