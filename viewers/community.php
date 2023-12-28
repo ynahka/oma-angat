@@ -6,20 +6,10 @@ session_start();
 ?>
 
 <head>
-    <?php include 'header.php'; ?>
-    <?php
-    // Check if the user is logged in
-    $isLoggedIn = !empty($_SESSION['user_id']);;
-    if ($isLoggedIn) {
-        include 'header-nav-buyer.php'; // Include the file for logged-in users
-    } else {
-        include 'header-nav.php'; // Include the file for non-logged-in users
-    }
-    ?>
 
 
-    <!-- <link rel="stylesheet" href="css/blog-author.css"> -->
-    <!-- <link rel="stylesheet" href="community/community.css"> -->
+    <link rel="stylesheet" href="css/blog-author.css">
+    <link rel="stylesheet" href="community/community.css">
 </head>
 <style>
     .loadload {
@@ -46,6 +36,17 @@ session_start();
 </style>
 
 <body>
+    <?php include 'header.php'; ?>
+    <?php
+    // Check if the user is logged in
+    $isLoggedIn = !empty($_SESSION['user_id']);;
+    if ($isLoggedIn) {
+        include 'header-nav-buyer.php'; // Include the file for logged-in users
+    } else {
+        include 'header-nav.php'; // Include the file for non-logged-in users
+    }
+    ?>
+
     <?php include('category-sidebar.php'); ?>
     <div class="loadload">
         <div class="spinner-border text-secondary" role="status"></div>
