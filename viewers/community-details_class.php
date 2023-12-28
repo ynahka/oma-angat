@@ -1,6 +1,9 @@
 <?php
 include("connect.php");
 session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 
 switch ($_POST['form']) {
 
@@ -63,6 +66,12 @@ switch ($_POST['form']) {
         break;
 
     case 'savepostcomments':
-        $savepostcomments = mysqli_query($connection, "INSERT INTO post_details SET post_id = '" . $_POST['textpost_id'] . "', user_id = '" . $_SESSION['user_id'] . "', comment = '" . $_POST['textblogcomment'] . "', date_added = '" . date("Y-m-d") . "';");
+        $savepostcomments = mysqli_query($connection, "INSERT INTO post_details SET post_id = '" . $_POST['textpost_id'] . "', user_id = '" . $_SESSION['user_id'] . "', comment = '" . mysqli_real_escape_string($connection, $_POST['textblogcomment']) . "', date_added = '" . date("Y-m-d H:i:s") . "';");
+
+        if ($savepostcomments) {
+            echo json_encode(['success' => true, 'message' => 'Comment saved successfully!']);
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Error: ' . mysqli_error($connection)]);
+        }
         break;
 }

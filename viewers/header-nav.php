@@ -57,10 +57,6 @@
                          <!-- LOGIN PAGE -->
 
 
-                         <button class="header-widget header-cart" title="Cartlist">
-                             <i class="fas fa-shopping-basket"></i>
-                         </button>
-
                          <a href="chat.php" class="header-widget" title="chat">
                              <i class="fas fa-paper-plane"></i>
                          </a>

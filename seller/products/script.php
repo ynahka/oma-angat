@@ -198,6 +198,9 @@ function addproduct() {
     var textaddproddesc = $("#txtaddproddesc").val();
     var textaddprodqty = $("#txtaddprodqty").val();
     var textaddprodunit = $("#txtaddprodunit").val();
+
+    var textaddprodavailat = $("#txtaddprodavailat").val();
+    var textaddprodavailuntil = $("#txtaddprodavailuntil").val();
     var textaddprodprice = $("#txtaddprodprice").val().replace(/,/g, "");
 
     var textaddcategory = "";
@@ -214,8 +217,9 @@ function addproduct() {
             url: 'products/class.php',
             data: 'textseller_id=' + textseller_id + '&textaddprodname=' + textaddprodname +
                 '&textaddproddesc=' + textaddproddesc + '&textaddprodqty=' + textaddprodqty +
-                '&textaddprodunit=' + textaddprodunit +
-                '&textaddprodprice=' + textaddprodprice + '&textaddcategory=' + textaddcategory +
+                '&textaddprodunit=' + textaddprodunit + '&textaddprodavailat=' + textaddprodavailat +
+                '&textaddprodavailuntil=' + textaddprodavailuntil + '&textaddprodprice=' +
+                textaddprodprice + '&textaddcategory=' + textaddcategory +
                 '&form=addproduct',
             success: function(data) {
                 $("#mdladdproduct").modal('hide');
@@ -433,10 +437,12 @@ function modaleditproduct(product_id) {
             $('#txtaddproddesc').val(show[6]);
             $('#txtaddprodqty').val(show[7]);
             $('#txtaddprodunit').val(show[8]);
-            $('#txtaddprodprice').val(show[9]);
+            $('#txtaddprodavailat').val(show[9]);
+            $('#txtaddprodavailuntil').val(show[10]);
+            $('#txtaddprodprice').val(show[11]);
 
-            $('#hiddenwala2').val(show[10]);
-            $('#appendcategory').html(show[11]);
+            $('#hiddenwala2').val(show[12]);
+            $('#appendcategory').html(show[13]);
         }
     });
 }
@@ -466,14 +472,20 @@ function editproduct() {
     var textseller_id = $("#txtseller_id").val();
     var textaddprodname = $("#txtaddprodname").val();
     var textaddproddesc = $("#txtaddproddesc").val();
+    var textaddprodprice = $("#txtaddprodprice").val().replace(/,/g, "");
     var textaddprodqty = $("#txtaddprodqty").val();
     var textaddprodunit = $("#txtaddprodunit").val();
-    var textaddprodprice = $("#txtaddprodprice").val().replace(/,/g, "");
+    var textaddprodavailat = $("#txtaddprodavailat").val();
+    var textaddprodavailuntil = $("#txtaddprodavailuntil").val();
+
+    // Format date values
+    var formattedAvailat = new Date(textaddprodavailat).toISOString().split('T')[0];
+    var formattedAvailuntil = new Date(textaddprodavailuntil).toISOString().split('T')[0];
 
     var textaddcategory = "";
     $.each($("select[name=txtaddcategory]"), function() {
         textaddcategory += "#" + $(this).val();
-    })
+    });
 
     if (reqField1('reqresinfo') == 1) {
         if (reqField2('reqresinfofofo') == 1) {
@@ -483,8 +495,11 @@ function editproduct() {
                 url: 'products/class.php',
                 data: 'textseller_id=' + textseller_id + '&textaddprodname=' + textaddprodname +
                     '&textaddproddesc=' + textaddproddesc + '&textaddprodqty=' + textaddprodqty +
+                    '&textaddprodprice=' + textaddprodprice +
                     '&textaddprodunit=' + textaddprodunit +
-                    '&textaddprodprice=' + textaddprodprice + '&textaddcategory=' + textaddcategory +
+                    '&textaddprodavailat=' + formattedAvailat + // Use the formatted date
+                    '&textaddprodavailuntil=' + formattedAvailuntil + // Use the formatted date
+                    '&textaddcategory=' + textaddcategory +
                     '&product_id=' + product_id + '&form=editproduct',
                 success: function(data) {
                     $("#mdladdproduct").modal('hide');
@@ -497,7 +512,7 @@ function editproduct() {
                             'Success!',
                             'Product successfully updated.',
                             'success'
-                        )
+                        );
                     }, 2000);
 
                     setTimeout(function() {
@@ -510,16 +525,17 @@ function editproduct() {
                 'ALERT',
                 'Please review your entries. Ensure all required fields are filled out',
                 'warning'
-            )
+            );
         }
     } else {
         Swal.fire(
             'ALERT',
             'Please review your entries. Ensure all required fields are filled out',
             'warning'
-        )
+        );
     }
 }
+
 // EDIT PRODUCT END
 
 // DELETE PRODUCT

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include("connect.php");
+session_start();
 $pid = $_GET['id'];
 ?>
 <?php include 'header.php'; ?>
@@ -8,9 +9,16 @@ $pid = $_GET['id'];
 <link rel="stylesheet" href="css/blog-author.css">
 
 <body>
-    <?php include('header-nav.php'); ?>
     <?php include('category-sidebar.php'); ?>
-
+    <?php
+    // Check if the user is logged in
+    $isLoggedIn = !empty($_SESSION['user_id']);;
+    if ($isLoggedIn) {
+        include 'header-nav-buyer.php'; // Include the file for logged-in users
+    } else {
+        include 'header-nav.php'; // Include the file for non-logged-in users
+    }
+    ?>
 
     <!--=====================================BANNER PART END=======================================-->
 
@@ -35,16 +43,14 @@ $pid = $_GET['id'];
                                 $sellerDetails = mysqli_fetch_assoc($sellerQuery);
                                 ?>
                                 <a href="#" class="author-image">
-                                    <img src="../OmaangatImages/ProfileImage/<?= $sellerDetails['profileimage'] ?>"
-                                        alt="avatar">
+                                    <img src="../OmaangatImages/ProfileImage/<?= $sellerDetails['profileimage'] ?>" alt="avatar">
                                     <div class="author-info">
                                         <h3 class="author-name"><?= $sellerDetails['username'] ?></h3>
                                         <h6 class="author-mail"><?= $sellerDetails['email'] ?></h6>
                                         <h6 class="author-mail"><i class="fas fa-map-marker-alt"></i>
                                             <?= $sellerDetails['address'] ?></h6>
                                         <ul class="author-meta">
-                                            <li><a href="chat.php"><a href="chat.php"
-                                                        class="fas fa-comments"></a>Message
+                                            <li><a href="chat.php"><a href="chat.php" class="fas fa-comments"></a>Message
                                                     Farmer</a></li>
                                         </ul>
                                         <!-- <a href="chat.php" class="author-meta">
@@ -108,25 +114,24 @@ $pid = $_GET['id'];
                         if ($num > 0) {
                             while ($row = mysqli_fetch_array($ret)) {
                         ?>
-                        <div class="col" data-bs-toggle="modal" data-bs-target="#product-view<?php echo $row['id'] ?>">
-                            <div class="product-card">
-                                <div class="product-media">
-                                    <a class="product-image">
-                                        <img src="../OmaangatImages/Products/<?php echo htmlentities($row['imahe']); ?>"
-                                            alt="product">
-                                    </a>
+                                <div class="col" data-bs-toggle="modal" data-bs-target="#product-view<?php echo $row['id'] ?>">
+                                    <div class="product-card">
+                                        <div class="product-media">
+                                            <a class="product-image">
+                                                <img src="../OmaangatImages/Products/<?php echo htmlentities($row['imahe']); ?>" alt="product">
+                                            </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="product-name">
+                                                <a><?php echo htmlentities($row['names']); ?></a>
+                                            </h6>
+                                            <h6 class="product-price">
+                                                <span><small>Starts at ₱
+                                                        <?php echo htmlentities($row['presyo']); ?></small></span>
+                                            </h6>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="product-content">
-                                    <h6 class="product-name">
-                                        <a><?php echo htmlentities($row['names']); ?></a>
-                                    </h6>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱
-                                                <?php echo htmlentities($row['presyo']); ?></small></span>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
                         <?php
                             }
                         }
@@ -142,31 +147,31 @@ $pid = $_GET['id'];
     <?php include('footer.php'); ?>
     <?php include('js-vendor.php'); ?>
     <script>
-    function copyToClipboard() {
-        // Get the text content you want to copy
-        var linkToCopy =
-            "http://localhost/oma-angat/viewers/shop-1column.php?id=<?= $pid ?>";
+        function copyToClipboard() {
+            // Get the text content you want to copy
+            var linkToCopy =
+                "http://localhost/oma-angat/viewers/shop-1column.php?id=<?= $pid ?>";
 
-        // Create a temporary input element
-        var tempInput = document.createElement("input");
-        tempInput.value = linkToCopy;
+            // Create a temporary input element
+            var tempInput = document.createElement("input");
+            tempInput.value = linkToCopy;
 
-        // Append the input element to the document
-        document.body.appendChild(tempInput);
+            // Append the input element to the document
+            document.body.appendChild(tempInput);
 
-        // Select the text inside the input element
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); /* For mobile devices */
+            // Select the text inside the input element
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); /* For mobile devices */
 
-        // Copy the selected text
-        document.execCommand("copy");
+            // Copy the selected text
+            document.execCommand("copy");
 
-        // Remove the temporary input element
-        document.body.removeChild(tempInput);
+            // Remove the temporary input element
+            document.body.removeChild(tempInput);
 
-        // Optionally, provide user feedback (e.g., alert or change button text)
-        alert("Link copied to clipboard!");
-    }
+            // Optionally, provide user feedback (e.g., alert or change button text)
+            alert("Link copied to clipboard!");
+        }
     </script>
 
 </body>
