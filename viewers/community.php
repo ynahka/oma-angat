@@ -6,8 +6,8 @@ session_start();
 ?>
 
 <head>
-
-
+    <?php include 'header.php'; ?>
+    <?php include 'community/header.php'; ?>
     <link rel="stylesheet" href="css/blog-author.css">
     <link rel="stylesheet" href="community/community.css">
 </head>
@@ -36,7 +36,6 @@ session_start();
 </style>
 
 <body>
-    <?php include 'header.php'; ?>
     <?php
     // Check if the user is logged in
     $isLoggedIn = !empty($_SESSION['user_id']);;
