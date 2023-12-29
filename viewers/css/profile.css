@@ -27,8 +27,8 @@
   border-radius: 8px;
   text-align: center;
   text-transform: capitalize;
-  color: var(--lighter);
-  background: var(--primary);
+ color: var(--primary);
+    background: var(--secondary);
   transition: all linear .3s;
   -webkit-transition: all linear .3s;
   -moz-transition: all linear .3s;

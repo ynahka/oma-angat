@@ -6,8 +6,18 @@ session_start();
 ?>
 
 <head>
+    <?php include 'header.php'; ?>
+    <?php
+    // Check if the user is logged in
+    $isLoggedIn = !empty($_SESSION['user_id']);;
+    if ($isLoggedIn) {
+        include 'header-nav-buyer.php'; // Include the file for logged-in users
+    } else {
+        include 'header-nav.php'; // Include the file for non-logged-in users
+    }
+    ?>
 
-
+    <?php include 'community/header.php'; ?>
     <link rel="stylesheet" href="css/blog-author.css">
     <link rel="stylesheet" href="community/community.css">
 </head>
@@ -36,17 +46,6 @@ session_start();
 </style>
 
 <body>
-    <?php include 'header.php'; ?>
-    <?php
-    // Check if the user is logged in
-    $isLoggedIn = !empty($_SESSION['user_id']);;
-    if ($isLoggedIn) {
-        include 'header-nav-buyer.php'; // Include the file for logged-in users
-    } else {
-        include 'header-nav.php'; // Include the file for non-logged-in users
-    }
-    ?>
-
     <?php include('category-sidebar.php'); ?>
     <div class="loadload">
         <div class="spinner-border text-secondary" role="status"></div>
@@ -96,7 +95,7 @@ session_start();
                 <?php } ?>
             </div>
             <div class="row justify-content-center">
-                <div class="row1 col-md-7 col-lg-4">
+                <!-- <div class="row1 col-md-7 col-lg-4">
                     <div class="blog-widget">
                         <h3 class="blog-widget-title">Search Post</h3>
                         <form class="blog-widget-form">
@@ -104,7 +103,7 @@ session_start();
                             <button class="icofont-search-1"></button>
                         </form>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="col-lg-8">
                     <!-- <div class="row">
@@ -139,7 +138,7 @@ session_start();
                                 <div class="col-md-6 col-lg-6">
                                     <div class="blog-card">
                                         <div class="blog-media">
-                                            <a class="blog-img" href="#">
+                                            <a class="blog-img" href="blog-details.php?id=<?php echo $row['id']; ?>">
                                                 <img src="../OmaangatImages/posts/<?php echo htmlentities($row['imahe']); ?>" alt="blog" style="width: 300px; height: 230px;">
                                             </a>
                                         </div>
@@ -155,7 +154,7 @@ session_start();
                                                 </li>
                                             </ul>
                                             <h4 class="blog-title">
-                                                <a href="blog-details.php"><?php echo htmlentities($row['posttitle']); ?></a>
+                                                <a href="blog-details.php?id=<?php echo $row['id']; ?>"><?php echo htmlentities($row['posttitle']); ?></a>
                                             </h4>
                                             <p class="blog-desc">
                                                 <?php echo htmlentities($row['postdesc']); ?>

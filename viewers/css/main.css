@@ -3439,8 +3439,8 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   padding: 5px 15px;
   white-space: nowrap;
   text-transform: capitalize;
-  color: var(--primary);
-  background: var(--green-chalk);
+    color: var(--primary);
+    border: 1px solid;
   text-shadow: var(--primary-tshadow);
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;
@@ -3465,7 +3465,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   padding: 25px;
   border-radius: 8px;
   margin-bottom: 25px;
-  background: var(--chalk);
+  /* background: var(--chalk); */
   border: 1px solid var(--border);
   position: relative;
   cursor: pointer;
@@ -3474,6 +3474,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 .profile-card:hover ul {
   visibility: visible;
   opacity: 1;
+
 }
 
 .profile-card h6 {
@@ -3554,8 +3555,8 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   background: var(--red);
 }
 
-.profile-card.active {
-  background: var(--green-chalk);
+.profile-card.active:hover {
+  background: var(--chalk);
   border-color: var(--primary);
 }
 
@@ -4369,6 +4370,9 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
     display: flex;
   }
   .header-user i{
+    display: none;
+  }
+  .header-src i{
     display: none;
   }
 }
@@ -5883,6 +5887,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 
 .preview-slider li img {
   width: 100%;
+  height: auto;
   border-radius: 8px;
 }
 
@@ -7192,11 +7197,6 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   }
   .promo-image{
     margin: 50px 0px;
-  }
-
-  .banner-content h1,
-  p {
-    font-size: 18px;
   }
 }
 

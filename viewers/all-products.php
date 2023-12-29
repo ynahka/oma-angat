@@ -31,34 +31,31 @@
                     if ($num > 0) {
                         while ($row = mysqli_fetch_array($ret)) {
                     ?>
-                    <div class="col">
-                        <div class="product-card" data-bs-toggle="modal"
-                            data-bs-target="#product-view<?php echo $row['id'] ?>">
-                            <div class="product-media">
-                                <div class="product-label">
-                                    <label
-                                        class="label-text order"><?php echo htmlentities($row['quantity']); ?></label>
-                                </div>
-                                <a class="product-image">
-                                    <img src="../OmaangatImages/Products/<?php echo htmlentities($row['imahe']); ?>"
-                                        alt="product">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                <div class="row">
-                                    <div class="col" style="display: flex; align-items:center">
-                                        <h6 class="product-name">
-                                            <a><?php echo htmlentities($row['names']); ?></a>
-                                        </h6>
+                            <div class="col">
+                                <div class="product-card" data-bs-toggle="modal" data-bs-target="#product-view<?php echo $row['id'] ?>">
+                                    <div class="product-media">
+                                        <div class="product-label">
+                                            <label class="label-text order"><?php echo htmlentities($row['quantity']); ?></label>
+                                        </div>
+                                        <a class="product-image">
+                                            <img src="../OmaangatImages/Products/<?php echo htmlentities($row['imahe']); ?>" alt="product">
+                                        </a>
                                     </div>
-                                    <h6 class="product-price">
-                                        <span><small>Starts at ₱
-                                                <?php echo htmlentities($row['presyo']); ?></small></span>
-                                    </h6>
+                                    <div class="product-content">
+                                        <div class="row">
+                                            <div class="col" style="display: flex; align-items:center">
+                                                <h6 class="product-name">
+                                                    <a><?php echo htmlentities($row['names']); ?></a>
+                                                </h6>
+                                            </div>
+                                            <h6 class="product-price">
+                                                <span><small>Starts at ₱
+                                                        <?php echo htmlentities($row['presyo']); ?></small></span>
+                                            </h6>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
                     <?php
                         }
                     }

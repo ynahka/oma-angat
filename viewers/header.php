@@ -10,7 +10,7 @@
     <meta name="keywords" content="organic, food, shop, agri-market, market, html, agriculture, vegetables, farmers, farm, natural">
 
     <!-- WEBPAGE TITLE -->
-    <title>OMA-ANGAT</title>
+    <title>Oma-Angat</title>
 
     <!-- Logo -->
     <link rel="icon" href="images/single-logo.png">

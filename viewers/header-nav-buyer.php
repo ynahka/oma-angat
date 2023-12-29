@@ -66,7 +66,7 @@
                                 $query = mysqli_query($connection, "select * from users_table where user_id='" . $_SESSION['user_id'] . "'");
                                 while ($row = mysqli_fetch_array($query)) {
                                 ?>
-                             <span><?php echo $row['username']; ?></span>
+                                 <span><?php echo $row['username']; ?></span>
 
                              <?php
                                 }

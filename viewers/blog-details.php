@@ -67,31 +67,30 @@ include 'header.php'; ?>
                         if ($result && mysqli_num_rows($result) > 0) {
                             $row = mysqli_fetch_assoc($result);
                     ?>
-                    <article class="blog-details">
-                        <a class="blog-details-thumb" href="#">
-                            <img src="../OmaangatImages/posts/<?php echo htmlentities($row['imahe']); ?>" alt="blog"
-                                style="width: 500px; height: 350px;">
-                        </a>
-                        <div class="blog-details-content">
-                            <ul class="blog-details-meta">
-                                <li>
-                                    <i class="icofont-user-alt-3"></i>
-                                    <span><?php echo htmlentities($row['username']); ?></span>
-                                </li>
-                                <li>
-                                    <i class="icofont-ui-calendar"></i>
-                                    <span><?php echo htmlentities($row['dateadd']); ?></span>
-                                </li>
-                            </ul>
-                            <h2 class="blog-details-title"><?php echo htmlentities($row['posttitle']); ?></h2>
+                            <article class="blog-details">
+                                <a class="blog-details-thumb" href="#">
+                                    <img src="../OmaangatImages/posts/<?php echo htmlentities($row['imahe']); ?>" alt="blog" style="width: 500px; height: 350px;">
+                                </a>
+                                <div class="blog-details-content">
+                                    <ul class="blog-details-meta">
+                                        <li>
+                                            <i class="icofont-user-alt-3"></i>
+                                            <span><?php echo htmlentities($row['username']); ?></span>
+                                        </li>
+                                        <li>
+                                            <i class="icofont-ui-calendar"></i>
+                                            <span><?php echo htmlentities($row['dateadd']); ?></span>
+                                        </li>
+                                    </ul>
+                                    <h2 class="blog-details-title"><?php echo htmlentities($row['posttitle']); ?></h2>
 
 
-                            <ul class="blog-details-list">
-                                <p class="blog-details-desc"><?php echo htmlentities($row['postdesc']); ?></p>
-                                <!-- Add more content as needed -->
-                            </ul>
-                        </div>
-                    </article>
+                                    <ul class="blog-details-list">
+                                        <p class="blog-details-desc"><?php echo htmlentities($row['postdesc']); ?></p>
+                                        <!-- Add more content as needed -->
+                                    </ul>
+                                </div>
+                            </article>
                     <?php
                         } else {
                             echo "Post not found.";
@@ -105,22 +104,21 @@ include 'header.php'; ?>
                 <div class="col-lg-6">
                     <div class="row">
                         <?php if (empty($_SESSION['user_id'])) { ?>
-                        <!-- Add your code for users not logged in -->
+                            <!-- Add your code for users not logged in -->
                         <?php } else { ?>
-                        <!-- Adding a hidden input field for post_id -->
-                        <form class="blog-details-form" method="POST">
-                            <input type="hidden" id="txtpost_id" value="<?php echo htmlentities($post_id); ?>">
-                            <h3 class="details-form-title">Post Comment</h3>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control" placeholder="Write your comment"
-                                            id="txtblogcomment"></textarea>
+                            <!-- Adding a hidden input field for post_id -->
+                            <form class="blog-details-form" method="POST">
+                                <input type="hidden" id="txtpost_id" value="<?php echo htmlentities($post_id); ?>">
+                                <h3 class="details-form-title">Post Comment</h3>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="Write your comment" id="txtblogcomment"></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <button class="form-btn" onclick="savepostcomments()">Post Comment</button>
-                        </form>
+                                <button class="form-btn" onclick="savepostcomments()">Post Comment</button>
+                            </form>
                         <?php } ?>
 
                     </div>
@@ -163,74 +161,74 @@ include 'header.php'; ?>
     <?php include('js-vendor.php'); ?>
 </body>
 <script type="text/javascript">
-$(function() {
-    $("#community").addClass('active');
-    fncdsplyallcommunitypost();
-    fncdsplyallcommunitycomments();
-})
+    $(function() {
+        $("#community").addClass('active');
+        fncdsplyallcommunitypost();
+        fncdsplyallcommunitycomments();
+    })
 
-function fncdsplyallcommunitypost() {
-    var textpost_id = $("#txtpost_id").val();
-    $.ajax({
-        type: 'POST',
-        url: 'community-details_class.php',
-        data: 'textpost_id=' + textpost_id + '&form=fncdsplyallcommunitypost',
-        success: function(data) {
-            $("#displayallcommunitypost").html(data);
-        }
-    });
-}
+    function fncdsplyallcommunitypost() {
+        var textpost_id = $("#txtpost_id").val();
+        $.ajax({
+            type: 'POST',
+            url: 'community-details_class.php',
+            data: 'textpost_id=' + textpost_id + '&form=fncdsplyallcommunitypost',
+            success: function(data) {
+                $("#displayallcommunitypost").html(data);
+            }
+        });
+    }
 
-function fncdsplyallcommunitycomments() {
-    var textpost_id = $("#txtpost_id").val();
-    $.ajax({
-        type: 'POST',
-        url: 'community-details_class.php',
-        data: 'textpost_id=' + textpost_id + '&form=fncdsplyallcommunitycomments',
-        success: function(data) {
-            var show = data.split("|");
-            $("#displayallcommunitycomments").html(show[0]);
-            $("#txtnumberofcomments").text(show[1]);
-        }
-    });
-}
+    function fncdsplyallcommunitycomments() {
+        var textpost_id = $("#txtpost_id").val();
+        $.ajax({
+            type: 'POST',
+            url: 'community-details_class.php',
+            data: 'textpost_id=' + textpost_id + '&form=fncdsplyallcommunitycomments',
+            success: function(data) {
+                var show = data.split("|");
+                $("#displayallcommunitycomments").html(show[0]);
+                $("#txtnumberofcomments").text(show[1]);
+            }
+        });
+    }
 
-function savepostcomments() {
-    var textpost_id = $("#txtpost_id").val();
-    var textblogcomment = $("#txtblogcomment").val();
+    function savepostcomments() {
+        var textpost_id = $("#txtpost_id").val();
+        var textblogcomment = $("#txtblogcomment").val();
 
-    if (textpost_id == "") {
-        Swal.fire(
-            'ALERT',
-            'Cannot submit your post.',
-            'warning'
-        )
-    } else {
-        if (textblogcomment == "") {
+        if (textpost_id == "") {
             Swal.fire(
                 'ALERT',
-                'Please enter a comment.',
+                'Cannot submit your post.',
                 'warning'
             )
         } else {
-            $(".loadload").show();
-            $.ajax({
-                type: 'POST',
-                url: 'community-details_class.php',
-                data: 'textpost_id=' + textpost_id + '&textblogcomment=' + textblogcomment +
-                    '&form=savepostcomments',
-                success: function(data) {
-                    setTimeout(function() {
-                        $(".loadload").hide();
+            if (textblogcomment == "") {
+                Swal.fire(
+                    'ALERT',
+                    'Please enter a comment.',
+                    'warning'
+                )
+            } else {
+                $(".loadload").show();
+                $.ajax({
+                    type: 'POST',
+                    url: 'community-details_class.php',
+                    data: 'textpost_id=' + textpost_id + '&textblogcomment=' + textblogcomment +
+                        '&form=savepostcomments',
+                    success: function(data) {
+                        setTimeout(function() {
+                            $(".loadload").hide();
 
-                        fncdsplyallcommunitycomments();
-                        $("#txtblogcomment").val("");
-                    }, 500);
-                }
-            });
+                            fncdsplyallcommunitycomments();
+                            $("#txtblogcomment").val("");
+                        }, 500);
+                    }
+                });
+            }
         }
     }
-}
 </script>
 
 </html>
