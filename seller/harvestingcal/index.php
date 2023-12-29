@@ -94,27 +94,34 @@
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="eventModalLabel">Harvesting Schedule</h5>
+                                <h5 class="modal-title" id="eventModalLabel">Add Harvest Schedule</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
                                 <form id="eventForm">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="eventTitle" placeholder="Enter event title" style="margin-bottom: 8px;">
-                                        <input type="text" class="form-control" id="prodHarvest" placeholder="Product to Harvest" style="margin-bottom: 8px;">
-                                        <input type="text" class="form-control" id="prodQuanti" placeholder="Quantity" style="margin-bottom: 8px;">
-                                        <input type="text" class="form-control" id="prodPrice" placeholder="Price" style="margin-bottom: 8px;">
-                                        <input type="date" class="form-control" id="startDate" placeholder="Start Date" style="margin-bottom: 8px;">
-                                        <input type="date" class="form-control" id="endDate" placeholder="End Date" style="margin-bottom: 8px;">
-                                    </div>
+                                <div class="form-group">
+                                    <label for="eventTitle">Event Title</label>
+                                    <input type="text" class="form-control" id="eventTitle" placeholder="Enter event title" style="margin-bottom: 8px;">
+                                    <label for="prodHarvest">Product to Harvest</label>
+                                    <input type="text" class="form-control" id="prodHarvest" placeholder="Enter a product to harvest" style="margin-bottom: 8px;">
+                                    <label for="prodQuanti">Quantity</label>
+                                    <input type="text" class="form-control" id="prodQuanti" placeholder="Enter product quantity" style="margin-bottom: 8px;">
+                                    <label for="prodPrice">Price</label>
+                                    <input type="text" class="form-control" id="prodPrice" placeholder="Enter product price" style="margin-bottom: 8px;">
+                                    <label for="startDate">Start Date</label>
+                                    <input type="date" class="form-control" id="startDate" style="margin-bottom: 8px;">
+                                    <label for="endDate">End Date</label>
+                                    <input type="date" class="form-control" id="endDate" style="margin-bottom: 8px;">
+                                </div>
                                 </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary" id="" onclick="saveEvent()">Save
-                                    changes</button>
+                                <button type="button" class="btn btn-primary" id="" onclick="saveEvent()">
+                                    Add Event
+                                </button>
                             </div>
                         </div>
                     </div>
