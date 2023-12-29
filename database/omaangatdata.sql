@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2023 at 04:49 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Dec 29, 2023 at 03:38 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,36 +33,12 @@ CREATE TABLE `cart` (
   `customer_id` varchar(100) NOT NULL,
   `product_id` varchar(100) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `price` decimal(14,4) DEFAULT 0.0000,
+  `price` decimal(14,4) NOT NULL DEFAULT 0.0000,
   `totalamt` decimal(14,4) NOT NULL DEFAULT 0.0000,
-  `status` varchar(100) DEFAULT NULL,
-  `date_added` date DEFAULT NULL,
+  `status` varchar(100) NOT NULL,
+  `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `carts`
---
-
-CREATE TABLE `carts` (
-  `id` int(11) NOT NULL,
-  `customer_id` varchar(255) DEFAULT NULL,
-  `product_id` varchar(255) DEFAULT NULL,
-  `quantity` varchar(255) DEFAULT NULL,
-  `price` varchar(255) DEFAULT NULL,
-  `totalamt` varchar(255) DEFAULT NULL,
-  `date_added` date DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `carts`
---
-
-INSERT INTO `carts` (`id`, `customer_id`, `product_id`, `quantity`, `price`, `totalamt`, `date_added`) VALUES
-(111, '76', 'product-0000001', '1', '8.0000', '8', '2023-12-15'),
-(112, '76', 'product-0000003', '1', '3.0000', '3', '2023-12-15');
 
 -- --------------------------------------------------------
 
@@ -74,7 +50,7 @@ CREATE TABLE `categories` (
   `id` bigint(20) NOT NULL,
   `category_id` varchar(100) NOT NULL,
   `categoryname` varchar(300) NOT NULL,
-  `image` longblob NOT NULL,
+  `image` mediumblob NOT NULL,
   `date_added` date NOT NULL,
   `datetime` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -117,6 +93,14 @@ CREATE TABLE `chats` (
   `productID` text NOT NULL,
   `notif` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `chats`
+--
+
+INSERT INTO `chats` (`id`, `user_id`, `message`, `sendto`, `status`, `type`, `DATETIME_LOG`, `productID`, `notif`) VALUES
+(28, 'user-0000011', 'hi\n', 'user-0000001', 1, 'ADMIN', '2023-12-22 08:36:56', '', 1),
+(29, 'user-0000001', 'test now\n', '', 1, 'ADMIN', '2023-12-22 11:45:53', '', 1);
 
 -- --------------------------------------------------------
 
@@ -173,23 +157,6 @@ CREATE TABLE `orders` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paymentmethod`
---
-
-CREATE TABLE `paymentmethod` (
-  `id` bigint(20) NOT NULL,
-  `seller_id` varchar(100) NOT NULL,
-  `qrcodeimage` varchar(500) NOT NULL,
-  `imagename` varchar(500) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `banknumer` varchar(50) NOT NULL,
-  `date_added` date NOT NULL,
-  `DATETIME_LOG` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `payments`
 --
 
@@ -206,6 +173,51 @@ CREATE TABLE `payments` (
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `paymethod`
+--
+
+CREATE TABLE `paymethod` (
+  `id` bigint(20) NOT NULL,
+  `paymeth_id` varchar(100) NOT NULL,
+  `seller_id` varchar(100) NOT NULL,
+  `bankholdername` varchar(500) NOT NULL,
+  `banknumber` text NOT NULL,
+  `date_added` date NOT NULL,
+  `DATETIME_LOG` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `paymethod`
+--
+
+INSERT INTO `paymethod` (`id`, `paymeth_id`, `seller_id`, `bankholdername`, `banknumber`, `date_added`, `DATETIME_LOG`) VALUES
+(0, 'paymeth-0000002', 'user-0000003', 'Ann Joyce Loterte', '09767789876', '2023-12-29', '2023-12-29 21:14:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `paymethod_image`
+--
+
+CREATE TABLE `paymethod_image` (
+  `id` bigint(20) NOT NULL,
+  `paymeth_id` varchar(100) NOT NULL,
+  `image` varchar(500) NOT NULL,
+  `imagename` varchar(300) NOT NULL,
+  `date_added` date NOT NULL,
+  `DATETIME_LOG` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `paymethod_image`
+--
+
+INSERT INTO `paymethod_image` (`id`, `paymeth_id`, `image`, `imagename`, `date_added`, `DATETIME_LOG`) VALUES
+(2, 'paymeth-0000002', 'OmaangatImages/Paymethod/paymeth-0000002_1703855682_download.png', 'paymeth-0000002_1703855682_download.png', '2023-12-29', '2023-12-29 21:14:42');
 
 -- --------------------------------------------------------
 
@@ -230,9 +242,8 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `post_id`, `user_id`, `posttitle`, `postdescription`, `image`, `imagename`, `date_added`, `DATETIME_LOG`) VALUES
-(10, 'post-0000001', 'user-0000011', 'undefined', 'undefined', 'Omaangatimages/posts/post-00000011702578431_2022-12-16.png', 'post-00000011702578431_2022-12-16.png', '2023-12-15', '2023-12-15 02:27:09'),
-(11, 'post-0000002', 'user-0000011', '', '', 'Omaangatimages/posts/post-00000021702579045_2023-03-09 (1).png', 'post-00000021702579045_2023-03-09 (1).png', '2023-12-15', '2023-12-15 02:37:23'),
-(12, 'post-0000003', 'user-0000011', 'Sample3', 'Sample3', 'Omaangatimages/posts/post-00000031702579365_2023-05-08 (1).png', 'post-00000031702579365_2023-05-08 (1).png', '2023-12-15', '2023-12-15 02:42:43');
+(12, 'post-0000003', 'user-0000011', 'Sample3', 'Sample3', 'Omaangatimages/posts/post-00000031702579365_2023-05-08 (1).png', 'post-00000031702579365_2023-05-08 (1).png', '2023-12-15', '2023-12-15 02:42:43'),
+(14, 'post-0000005', 'user-0000011', 'Looking for Fresh Buko', '10-20 kls near Daraga, Albay', 'Omaangatimages/posts/post-00000051702861464_download.jpg', 'post-00000051702861464_download.jpg', '2023-12-18', '2023-12-18 09:04:21');
 
 -- --------------------------------------------------------
 
@@ -263,7 +274,9 @@ CREATE TABLE `products` (
   `productdesc` text NOT NULL,
   `price` decimal(14,4) NOT NULL DEFAULT 0.0000,
   `quantity` int(11) NOT NULL,
-  `date_added` date NOT NULL,
+  `unit` varchar(20) NOT NULL,
+  `availat` date NOT NULL,
+  `availuntil` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -271,27 +284,29 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `product_id`, `seller_id`, `productname`, `productdesc`, `price`, `quantity`, `date_added`, `DATETIME_LOG`) VALUES
-(30, 'product-0000001', 'user-0000002', 'Medium Eggs', 'Sold per piece\nMinimum of 12pcs per order\n', 8.0000, 1000, '2023-12-14', '2023-12-14 01:52:39'),
-(31, 'product-0000002', 'user-0000002', 'Pulang Itlog', 'Sold per piece\nBuy 12 free 1', 12.0000, 1000, '2023-12-14', '2023-12-14 01:56:25'),
-(32, 'product-0000003', 'user-0000002', 'Itlog Pugo', 'Minimum of 12 pcs per order', 3.0000, 670, '2023-12-14', '2023-12-14 01:58:14'),
-(33, 'product-0000004', 'user-0000003', 'Malagkit Rice', 'Minimum of 3 kilos per order', 60.0000, 190, '2023-12-14', '2023-12-14 02:00:57'),
-(34, 'product-0000005', 'user-0000003', 'Dinorado Rice', 'Minimum of 5 Kilos', 70.0000, 1000, '2023-12-14', '2023-12-14 02:02:22'),
-(35, 'product-0000006', 'user-0000003', 'Jasmin Rice', 'Minimum of 5 Kilos per order\n(Sold per kilos)', 56.0000, 500, '2023-12-14', '2023-12-14 02:03:33'),
-(36, 'product-0000007', 'user-0000004', 'Banana Chips', 'Crispier than ever. Sold per packs. Minimum of 2 packs per order', 25.0000, 670, '2023-12-14', '2023-12-14 02:06:09'),
-(37, 'product-0000008', 'user-0000004', 'Dried Mangoes', 'Sold per packs\nMinimum of 2 packs', 89.0000, 1000, '2023-12-14', '2023-12-14 02:07:19'),
-(38, 'product-0000009', 'user-0000004', 'Cocoa Powder', 'Sold per kilo', 50.0000, 1000, '2023-12-14', '2023-12-14 02:08:52'),
-(39, 'product-0000010', 'user-0000004', 'Cocoa Chocolate Bars', 'Sold per packs\nMinimum of 2 packs', 45.0000, 89, '2023-12-14', '2023-12-14 02:10:01'),
-(40, 'product-0000011', 'user-0000005', 'Vegetable Oils', 'Sold per liter\n', 180.0000, 650, '2023-12-14', '2023-12-14 02:12:30'),
-(41, 'product-0000012', 'user-0000005', 'Coconut Oil', 'Sold per Liter', 185.0000, 180, '2023-12-14', '2023-12-14 02:15:08'),
-(42, 'product-0000013', 'user-0000005', 'Olive Oil', 'Sold per Liter', 210.0000, 1000, '2023-12-14', '2023-12-14 02:16:25'),
-(43, 'product-0000014', 'user-0000006', 'Monggo', 'Sold Per Kilo\nMinimum of 1 kilo per order', 90.0000, 190, '2023-12-14', '2023-12-14 02:21:26'),
-(44, 'product-0000015', 'user-0000006', 'Langka (Hilaw)', 'Sold per Kilo ', 25.0000, 35, '2023-12-14', '2023-12-14 02:23:50'),
-(45, 'product-0000016', 'user-0000006', 'Okra', 'Minimum of 2 Kilos', 60.0000, 70, '2023-12-14', '2023-12-14 02:36:56'),
-(46, 'product-0000017', 'user-0000006', 'Kalabasa', 'Sold per Kilo\nMinimum of 2 Kilos', 20.0000, 90, '2023-12-14', '2023-12-14 02:38:41'),
-(47, 'product-0000018', 'user-0000007', 'Latundan', 'Sold Per Kilo', 30.0000, 150, '2023-12-14', '2023-12-14 03:04:03'),
-(48, 'product-0000019', 'user-0000007', 'Cacao', 'Sold per Kilo', 30.0000, 20, '2023-12-14', '2023-12-14 03:07:21'),
-(49, 'product-0000020', 'user-0000007', 'Corn/Mais', 'Sold per Kilo\nMinimum of 2-3 Kilos', 30.0000, 133, '2023-12-14', '2023-12-14 03:09:20');
+INSERT INTO `products` (`id`, `product_id`, `seller_id`, `productname`, `productdesc`, `price`, `quantity`, `unit`, `availat`, `availuntil`, `DATETIME_LOG`) VALUES
+(30, 'product-0000001', 'user-0000002', 'Medium Eggs', 'Fresh from the farm', 200.0000, 1000, 'Tray', '2023-12-29', '2024-01-24', '2023-12-14 01:52:39'),
+(31, 'product-0000002', 'user-0000002', 'Itlog Maalat', 'Sold per piece\nBuy 12 free 1', 12.0000, 1000, 'piece', '2023-12-29', '2024-02-15', '2023-12-14 01:56:25'),
+(32, 'product-0000003', 'user-0000002', 'Itlog Pugo', 'Minimum of 12 pcs per order', 3.0000, 670, 'piece', '2023-12-29', '2024-01-04', '2023-12-14 01:58:14'),
+(33, 'product-0000004', 'user-0000003', 'Malagkit Rice', 'Minimum of 3 kilos per order', 60.0000, 190, 'Kg', '2023-12-14', '2024-01-09', '2023-12-14 02:00:57'),
+(35, 'product-0000006', 'user-0000003', 'Jasmin Rice', 'Minimum of 5 Kilos per order\n(Sold per kilos)', 56.0000, 500, 'Kg', '2023-12-14', '2024-01-23', '2023-12-14 02:03:33'),
+(36, 'product-0000007', 'user-0000004', 'Banana Chips', 'Crispier than ever. Sold per packs. Minimum of 2 packs per order', 25.0000, 670, '', '2023-12-14', '0000-00-00', '2023-12-14 02:06:09'),
+(37, 'product-0000008', 'user-0000004', 'Dried Mangoes', 'Sold per packs\nMinimum of 2 packs', 89.0000, 1000, '', '2023-12-14', '0000-00-00', '2023-12-14 02:07:19'),
+(38, 'product-0000009', 'user-0000004', 'Cocoa Powder', 'Sold per kilo', 50.0000, 1000, '', '2023-12-14', '0000-00-00', '2023-12-14 02:08:52'),
+(39, 'product-0000010', 'user-0000004', 'Cocoa Chocolate Bars', 'Sold per packs\nMinimum of 2 packs', 45.0000, 89, '', '2023-12-14', '0000-00-00', '2023-12-14 02:10:01'),
+(40, 'product-0000011', 'user-0000005', 'Vegetable Oils', 'Sold per liter\n', 180.0000, 650, '', '2023-12-14', '0000-00-00', '2023-12-14 02:12:30'),
+(41, 'product-0000012', 'user-0000005', 'Coconut Oil', 'Sold per Liter', 185.0000, 180, '', '2023-12-14', '0000-00-00', '2023-12-14 02:15:08'),
+(42, 'product-0000013', 'user-0000005', 'Olive Oil', 'Sold per Liter', 210.0000, 1000, '', '2023-12-14', '0000-00-00', '2023-12-14 02:16:25'),
+(43, 'product-0000014', 'user-0000006', 'Monggo', 'Sold Per Kilo\nMinimum of 1 kilo per order', 90.0000, 190, '', '2023-12-14', '0000-00-00', '2023-12-14 02:21:26'),
+(44, 'product-0000015', 'user-0000006', 'Langka (Hilaw)', 'Sold per Kilo ', 25.0000, 35, '', '2023-12-14', '0000-00-00', '2023-12-14 02:23:50'),
+(45, 'product-0000016', 'user-0000006', 'Okra', 'Minimum of 2 Kilos', 60.0000, 70, '', '2023-12-14', '0000-00-00', '2023-12-14 02:36:56'),
+(46, 'product-0000017', 'user-0000006', 'Kalabasa', 'Sold per Kilo\nMinimum of 2 Kilos', 20.0000, 90, '', '2023-12-14', '0000-00-00', '2023-12-14 02:38:41'),
+(47, 'product-0000018', 'user-0000007', 'Latundan', 'Sold Per Kilo', 30.0000, 150, '', '2023-12-14', '0000-00-00', '2023-12-14 03:04:03'),
+(48, 'product-0000019', 'user-0000007', 'Cacao', 'Sold per Kilo', 30.0000, 20, '', '2023-12-14', '0000-00-00', '2023-12-14 03:07:21'),
+(49, 'product-0000020', 'user-0000007', 'Corn/Mais', 'Sold per Kilo\nMinimum of 2-3 Kilos', 30.0000, 133, '', '2023-12-14', '0000-00-00', '2023-12-14 03:09:20'),
+(50, 'product-0000021', 'user-0000002', 'Itlog ng Native na manok', 'Fresh from the farm', 200.0000, 1000, 'Tray', '2023-12-29', '2024-01-05', '2023-12-23 16:54:36'),
+(51, 'product-0000022', 'user-0000003', 'Jasmine Rice', 'sample', 55.0000, 1000, 'Kg', '2023-12-28', '2024-02-02', '2023-12-28 09:43:29'),
+(53, 'product-0000024', 'user-0000002', 'Itlog Maalat', 'Sample', 9.0000, 222, 'piece', '2023-12-29', '2024-02-09', '2023-12-28 14:06:36');
 
 -- --------------------------------------------------------
 
@@ -313,7 +328,15 @@ CREATE TABLE `products_category` (
 INSERT INTO `products_category` (`id`, `product_id`, `category_id`, `DATETIME_LOG`) VALUES
 (73, 'product-0000018', 'C-0000002', '2023-12-14 03:04:15'),
 (74, 'product-0000019', 'C-0000002', '2023-12-14 03:07:21'),
-(75, 'product-0000020', 'C-0000002', '2023-12-14 03:09:20');
+(75, 'product-0000020', 'C-0000002', '2023-12-14 03:09:20'),
+(102, 'product-0000001', 'C-0000004', '2023-12-28 16:27:11'),
+(103, 'product-0000002', 'C-0000004', '2023-12-28 16:38:52'),
+(104, 'product-0000003', 'C-0000004', '2023-12-28 16:39:28'),
+(105, 'product-0000021', 'C-0000004', '2023-12-28 16:39:57'),
+(106, 'product-0000024', 'C-0000004', '2023-12-28 16:40:18'),
+(107, 'product-0000004', 'C-0000003', '2023-12-28 16:41:29'),
+(108, 'product-0000006', 'C-0000003', '2023-12-28 16:41:42'),
+(110, 'product-0000022', 'C-0000003', '2023-12-28 16:44:03');
 
 -- --------------------------------------------------------
 
@@ -335,13 +358,17 @@ CREATE TABLE `products_image` (
 --
 
 INSERT INTO `products_image` (`id`, `product_id`, `image`, `imagename`, `date_added`, `DATETIME_LOG`) VALUES
+(77, 'product-0000001', 'OmaangatImages/Products/product-00000011702489961_egg 1 (3).png', 'product-00000011702489961_egg 1 (3).png', '2023-12-14', '2023-12-14 01:52:41'),
+(78, 'product-0000001', 'OmaangatImages/Products/product-00000011702489961_egg 1 (2).png', 'product-00000011702489961_egg 1 (2).png', '2023-12-14', '2023-12-14 01:52:41'),
 (79, 'product-0000001', 'OmaangatImages/Products/product-00000011702489961_egg 1.png', 'product-00000011702489961_egg 1.png', '2023-12-14', '2023-12-14 01:52:41'),
+(80, 'product-0000002', 'OmaangatImages/Products/product-00000021702490188_egg 4 (3).png', 'product-00000021702490188_egg 4 (3).png', '2023-12-14', '2023-12-14 01:56:28'),
+(81, 'product-0000002', 'OmaangatImages/Products/product-00000021702490188_egg 4.png', 'product-00000021702490188_egg 4.png', '2023-12-14', '2023-12-14 01:56:28'),
 (82, 'product-0000002', 'OmaangatImages/Products/product-00000021702490188_egg 4 (2).png', 'product-00000021702490188_egg 4 (2).png', '2023-12-14', '2023-12-14 01:56:28'),
+(83, 'product-0000003', 'OmaangatImages/Products/product-00000031702490296_egg 2 (2).png', 'product-00000031702490296_egg 2 (2).png', '2023-12-14', '2023-12-14 01:58:16'),
+(84, 'product-0000003', 'OmaangatImages/Products/product-00000031702490296_egg 2 (3).png', 'product-00000031702490296_egg 2 (3).png', '2023-12-14', '2023-12-14 01:58:16'),
 (85, 'product-0000003', 'OmaangatImages/Products/product-00000031702490296_egg 2 (4).png', 'product-00000031702490296_egg 2 (4).png', '2023-12-14', '2023-12-14 01:58:16'),
 (86, 'product-0000004', 'OmaangatImages/Products/product-00000041702490459_rice 3 (2).png', 'product-00000041702490459_rice 3 (2).png', '2023-12-14', '2023-12-14 02:00:59'),
 (87, 'product-0000004', 'OmaangatImages/Products/product-00000041702490459_rice 3 (3).png', 'product-00000041702490459_rice 3 (3).png', '2023-12-14', '2023-12-14 02:00:59'),
-(88, 'product-0000005', 'OmaangatImages/Products/product-00000051702490544_rice 1 (2).png', 'product-00000051702490544_rice 1 (2).png', '2023-12-14', '2023-12-14 02:02:24'),
-(89, 'product-0000005', 'OmaangatImages/Products/product-00000051702490544_rice 1 (3).png', 'product-00000051702490544_rice 1 (3).png', '2023-12-14', '2023-12-14 02:02:24'),
 (90, 'product-0000006', 'OmaangatImages/Products/product-00000061702490615_rice 1.png', 'product-00000061702490615_rice 1.png', '2023-12-14', '2023-12-14 02:03:35'),
 (91, 'product-0000006', 'OmaangatImages/Products/product-00000061702490615_rice 2 (3).png', 'product-00000061702490615_rice 2 (3).png', '2023-12-14', '2023-12-14 02:03:35'),
 (92, 'product-0000006', 'OmaangatImages/Products/product-00000061702490615_rice 2.png', 'product-00000061702490615_rice 2.png', '2023-12-14', '2023-12-14 02:03:35'),
@@ -379,8 +406,15 @@ INSERT INTO `products_image` (`id`, `product_id`, `image`, `imagename`, `date_ad
 (124, 'product-0000017', 'OmaangatImages/Products/product-00000171702492723_veggie 2 (3).png', 'product-00000171702492723_veggie 2 (3).png', '2023-12-14', '2023-12-14 02:38:43'),
 (125, 'product-0000017', 'OmaangatImages/Products/product-00000171702492723_veggie 2.png', 'product-00000171702492723_veggie 2.png', '2023-12-14', '2023-12-14 02:38:43'),
 (126, 'product-0000018', 'OmaangatImages/Products/product-00000181702494245_fruit 5 (2).png', 'product-00000181702494245_fruit 5 (2).png', '2023-12-14', '2023-12-14 03:04:05'),
+(127, 'product-0000018', 'OmaangatImages/Products/product-00000181702494245_fruit 5 (4).png', 'product-00000181702494245_fruit 5 (4).png', '2023-12-14', '2023-12-14 03:04:05'),
+(128, 'product-0000018', 'OmaangatImages/Products/product-00000181702494245_fruit 5.png', 'product-00000181702494245_fruit 5.png', '2023-12-14', '2023-12-14 03:04:05'),
 (129, 'product-0000019', 'OmaangatImages/Products/product-00000191702494443_fruit 1 (2).png', 'product-00000191702494443_fruit 1 (2).png', '2023-12-14', '2023-12-14 03:07:23'),
-(131, 'product-0000020', 'OmaangatImages/Products/product-00000201702494562_fruit 2 (2).png', 'product-00000201702494562_fruit 2 (2).png', '2023-12-14', '2023-12-14 03:09:22');
+(130, 'product-0000019', 'OmaangatImages/Products/product-00000191702494443_fruit 1 (3).png', 'product-00000191702494443_fruit 1 (3).png', '2023-12-14', '2023-12-14 03:07:23'),
+(131, 'product-0000020', 'OmaangatImages/Products/product-00000201702494562_fruit 2 (2).png', 'product-00000201702494562_fruit 2 (2).png', '2023-12-14', '2023-12-14 03:09:22'),
+(132, 'product-0000020', 'OmaangatImages/Products/product-00000201702494562_fruit 2.png', 'product-00000201702494562_fruit 2.png', '2023-12-14', '2023-12-14 03:09:22'),
+(133, 'product-0000021', 'OmaangatImages/Products/product-00000211703321678_egg 3.png', 'product-00000211703321678_egg 3.png', '2023-12-23', '2023-12-23 16:54:38'),
+(134, 'product-0000022', 'OmaangatImages/Products/product-00000221703753046_rice 1 (3).png', 'product-00000221703753046_rice 1 (3).png', '2023-12-28', '2023-12-28 09:43:31'),
+(137, 'product-0000024', 'OmaangatImages/Products/product-00000241703743598_egg 4 (2).png', 'product-00000241703743598_egg 4 (2).png', '2023-12-28', '2023-12-28 14:06:38');
 
 -- --------------------------------------------------------
 
@@ -446,7 +480,8 @@ INSERT INTO `users_table` (`id`, `user_id`, `username`, `password`, `usertype`, 
 (73, 'user-0000008', 'CruzTuyuan', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Juan', 'Dela', 'Cruz', 'APPROVED', '2023-12-13', '2023-12-13 14:37:06', ''),
 (74, 'user-0000009', 'AkapaVeges', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Crispin', 'Basilio', 'Sisa', 'APPROVED', '2023-12-13', '2023-12-13 14:38:33', ''),
 (75, 'user-0000010', 'JevaH', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Jevah', 'Blancaflor', 'Montas', 'PENDING', '2023-12-13', '2023-12-13 19:59:24', ''),
-(76, 'user-0000011', 'joyce', '$2y$10$5w6PlHD8uBv3BAjnpwTDqO32JH1zk2mL0x97wgfThM2p55ll.bYw2', 'CUSTOMER', 'Joyce', 'Llamera', 'Loterte', 'APPROVED', '2023-12-15', '2023-12-15 02:24:45', '3657b486da5e6d');
+(76, 'user-0000011', 'joyce', '$2y$10$5w6PlHD8uBv3BAjnpwTDqO32JH1zk2mL0x97wgfThM2p55ll.bYw2', 'CUSTOMER', 'Joyce', 'Llamera', 'Loterte', 'APPROVED', '2023-12-15', '2023-12-15 02:24:45', '3657b486da5e6d'),
+(77, 'user-0000012', 'Kkerropiii', '$2y$10$zmmVUnK6YT449.4HDmmtMOWbqKb2ZMq6u5UyeBT6dLxvbHlT5OZF.', 'CUSTOMER', 'Juan', 'Dela', 'Cruz', 'APPROVED', '2023-12-17', '2023-12-17 14:35:14', '3657e96a258a8b');
 
 -- --------------------------------------------------------
 
@@ -492,7 +527,8 @@ INSERT INTO `user_details` (`id`, `user_id`, `contactnum`, `email`, `address`, `
 (70, 'user-0000008', '+63 988-876-6676', 'juanjd@gmail.com', '4, P7, 0, Sagpon, Daraga, 4501, Albay', '4', 'P7', '0', 'Sagpon', 'Daraga', 4501, 'Albay', '123.7196388', '13.1454808', 'user-00000081702449428_403411465_880108440523950_4264575778187205943_n.png', 'user-00000081702449428_403411465_880108440523950_4264575778187205943_n.png', 'user-00000081702449428_dried.svg', 'user-00000081702449428_dried.svg', '2023-12-13', '2023-12-13 14:37:06'),
 (71, 'user-0000009', '+63 900-099-9999', 'sisajuna@gmail.com', '9, 8, 0, Kimantong, Daraga, 4501, Albay', '9', '8', '0', 'Kimantong', 'Daraga', 4501, 'Albay', '123.7056643', '13.1425535', 'user-00000091702449515_403411465_880108440523950_4264575778187205943_n.png', 'user-00000091702449515_403411465_880108440523950_4264575778187205943_n.png', 'user-00000091702449515_Veges.svg', 'user-00000091702449515_Veges.svg', '2023-12-13', '2023-12-13 14:38:33'),
 (72, 'user-0000010', '+63 999-889-9999', 'Jevah@gmail.com', '12, P1, 0, Binitayan, Daraga, 4501, Albay', '12', 'P1', '0', 'Binitayan', 'Daraga', 4501, 'Albay', '123.7161454', '13.1566058', 'user-00000101702468768_hello grace.png', 'user-00000101702468768_hello grace.png', 'user-00000101702468768_hello grace.png', 'user-00000101702468768_hello grace.png', '2023-12-13', '2023-12-13 19:59:24'),
-(73, 'user-0000011', '+63 938-521-6348', 'annjoycellamera.loterte@bicol-u.edu.ph', '1, purok 7, 0, Binitayan, Daraga, 4501, Albay', '1', 'purok 7', '0', 'Binitayan', 'Daraga', 4501, 'Albay', '123.7166382', '13.1548361', '', '', '', '', '2023-12-15', '2023-12-15 02:24:45');
+(73, 'user-0000011', '+63 938-521-6348', 'annjoycellamera.loterte@bicol-u.edu.ph', '1, purok 7, 0, Binitayan, Daraga, 4501, Albay', '1', 'purok 7', '0', 'Binitayan', 'Daraga', 4501, 'Albay', '123.7166382', '13.1548361', '', '', '', '', '2023-12-15', '2023-12-15 02:24:45'),
+(74, 'user-0000012', '+63 900-990-0000', 'omaangatph@gmail.com', 'P7, Danlog, Pilar, 4714, Sorsogon', '', 'P7', '', 'Danlog', 'Pilar', 4714, 'Sorsogon', '123.7028692', '13.0257109', '', '', '', '', '2023-12-17', '2023-12-17 14:35:14');
 
 --
 -- Indexes for dumped tables
@@ -506,12 +542,6 @@ ALTER TABLE `cart`
   ADD UNIQUE KEY `cart_id_UNIQUE` (`cart_id`),
   ADD KEY `FKCartUserid_idx` (`customer_id`),
   ADD KEY `FKCartProductid_idx` (`product_id`);
-
---
--- Indexes for table `carts`
---
-ALTER TABLE `carts`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `categories`
@@ -545,19 +575,27 @@ ALTER TABLE `orders`
   ADD KEY `FKOrderProductID_idx` (`product_id`);
 
 --
--- Indexes for table `paymentmethod`
---
-ALTER TABLE `paymentmethod`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `seller_id` (`seller_id`);
-
---
 -- Indexes for table `payments`
 --
 ALTER TABLE `payments`
   ADD PRIMARY KEY (`id`,`payment_id`),
   ADD UNIQUE KEY `paymentID_UNIQUE` (`payment_id`),
   ADD KEY `FKPaymentOrderID_idx` (`order_id`);
+
+--
+-- Indexes for table `paymethod`
+--
+ALTER TABLE `paymethod`
+  ADD PRIMARY KEY (`id`,`paymeth_id`),
+  ADD UNIQUE KEY `paymethID_UNIQUE` (`paymeth_id`),
+  ADD KEY `FKSellerUserID_pay` (`seller_id`);
+
+--
+-- Indexes for table `paymethod_image`
+--
+ALTER TABLE `paymethod_image`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FKPaymethod_idx` (`paymeth_id`);
 
 --
 -- Indexes for table `post`
@@ -636,13 +674,7 @@ ALTER TABLE `user_details`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
-
---
--- AUTO_INCREMENT for table `carts`
---
-ALTER TABLE `carts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -654,7 +686,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `chats`
 --
 ALTER TABLE `chats`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `harvestsched`
@@ -669,46 +701,46 @@ ALTER TABLE `orders`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `paymentmethod`
---
-ALTER TABLE `paymentmethod`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
+-- AUTO_INCREMENT for table `paymethod_image`
+--
+ALTER TABLE `paymethod_image`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `post_details`
 --
 ALTER TABLE `post_details`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `products_category`
 --
 ALTER TABLE `products_category`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT for table `products_image`
 --
 ALTER TABLE `products_image`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
 
 --
 -- AUTO_INCREMENT for table `rate`
@@ -726,13 +758,13 @@ ALTER TABLE `tracking`
 -- AUTO_INCREMENT for table `users_table`
 --
 ALTER TABLE `users_table`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT for table `user_details`
 --
 ALTER TABLE `user_details`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- Constraints for dumped tables
@@ -759,16 +791,22 @@ ALTER TABLE `orders`
   ADD CONSTRAINT `FKOrderUserID` FOREIGN KEY (`customer_id`) REFERENCES `users_table` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `paymentmethod`
---
-ALTER TABLE `paymentmethod`
-  ADD CONSTRAINT `paymentmethod_ibfk_1` FOREIGN KEY (`seller_id`) REFERENCES `users_table` (`user_id`);
-
---
 -- Constraints for table `payments`
 --
 ALTER TABLE `payments`
   ADD CONSTRAINT `FKPaymentOrderID` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `paymethod`
+--
+ALTER TABLE `paymethod`
+  ADD CONSTRAINT `FKSellerUserID_pay` FOREIGN KEY (`seller_id`) REFERENCES `users_table` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `paymethod_image`
+--
+ALTER TABLE `paymethod_image`
+  ADD CONSTRAINT `FKPaymethod_idx` FOREIGN KEY (`paymeth_id`) REFERENCES `paymethod` (`paymeth_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `post`
@@ -780,7 +818,7 @@ ALTER TABLE `post`
 -- Constraints for table `post_details`
 --
 ALTER TABLE `post_details`
-  ADD CONSTRAINT `FKPostDetPostID` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FKPostDetPostID` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`),
   ADD CONSTRAINT `FKPostDetUserID` FOREIGN KEY (`user_id`) REFERENCES `users_table` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
