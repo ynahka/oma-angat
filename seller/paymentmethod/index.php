@@ -98,13 +98,11 @@
                             <th style="width: 2%;white-space: nowrap;text-align: center;"> # </th>
                             <th style="width: 5%;white-space: nowrap;"> Image </th>
                             <th style="width: 20%;white-space: nowrap;"> Bank Name </th>
-                            <th style="width: 15%;white-space: nowrap;"> Description </th>
-                            <th style="width: 15%;white-space: nowrap;"> Price </th>
-                            <th style="width: 10%;white-space: nowrap;"> Quantity </th>
+                            <th style="width: 15%;white-space: nowrap;"> Bank Number </th>
                             <th style="width: 6%;white-space: nowrap; text-align: center;"> Option </th>
                         </tr>
                     </thead>
-                    <tbody id="tblproductlist"></tbody>
+                    <tbody id="tblpaymethodlist"></tbody>
                 </table>
             </div>
 
