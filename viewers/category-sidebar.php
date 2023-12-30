@@ -280,7 +280,7 @@
         <i class="fas fa-shopping-basket"></i>
         <span>Cart</span>
     </button>
-    <a href="account.php" title="Notification List">
+    <a href="profile.php" title="Notification List">
         <i class="fas fa-user"></i>
         <span>Account</span>
     </a>

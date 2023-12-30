@@ -300,7 +300,8 @@
 
 @media (max-width: 768px) {
   .promo-img {
-    margin: 10px 0px;
+    margin: 0px 0px;
+    height: 100%;
   }
   .promo-image {
     margin: 10px 0px;

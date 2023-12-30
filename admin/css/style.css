@@ -2123,8 +2123,8 @@ textarea {
 .form-control {
 	color: #54667a;
 	display: initial;
-	/* background:#CFE2CE; */
-	border-bottom: 0.5px solid #4C644B;
+	background:#CFE2CE !important;
+	border-bottom: 0.5px solid #4C644B !important;
 }
 
 .form-control-sm {

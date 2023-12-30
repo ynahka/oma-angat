@@ -126,30 +126,8 @@ if (empty($_SESSION['user_id'])) {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6" style="height:fit-content;">
-                            <!-- <div class=" col-lg-12" style="height:max-content;"> -->
-                            <div class="account-card">
-                                <div class="account-title">
-                                    <h4>My Order</h4>
-                                    <!-- <button data-bs-toggle="modal" data-bs-target="#address-edit">add address</button> -->
-                                </div>
-                                <div class="account-content">
-                                    <div class="row">
-                                        <div class="col-lg-12 col-lg-6 alert fade show">
-                                            <div class="profile-card address active">
-                                                <h6>Home</h6>
-                                                <p><?php echo $row['address']; ?></p>
-                                                <ul class="user-action">
-                                                    <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#address-edit"></button></li>
-                                                    <!-- <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li> -->
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- </div> -->
-                        </div>
+
+
                     </div>
                 </div>
 

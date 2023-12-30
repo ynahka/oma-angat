@@ -78,6 +78,18 @@ include 'header.php';
         </div>
     </div>
 
+    <div class="promo-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="promo-content">
+                        <a><img src="images/how-it-works.svg" alt="promo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--=====================================
                     BANNER PART START
         =======================================-->
