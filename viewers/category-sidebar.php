@@ -206,12 +206,32 @@
         <button class="nav-close"><i class="icofont-close"></i></button>
     </div>
     <div class="nav-content">
+        <?php
+        // Check if the user is logged in (replace this condition with your actual login check)
+        if (isset($_SESSION['user_id'])) {
+            // Assuming you have a variable $username containing the logged-in user's username
+            $username = $_SESSION['username'];
+        ?>
+        <div class="nav-btn">
+            <a href="javascript:void(0)">
+                <i class="fa fa-person-alt"></i>
+                <span style="color: #39404a;">Welcome back, <?php echo $username; ?>!</span>
+            </a>
+        </div>
+        <?php
+        } else {
+            // Display the "Get Started" button if the user is not logged in
+        ?>
         <div class="nav-btn">
             <a href="../buyeraccount/index.php" class="btn btn-inline">
                 <i class="fa fa-unlock-alt"></i>
                 <span>Get Started</span>
             </a>
         </div>
+        <?php
+        }
+        ?>
+
 
         <ul class="nav-list">
             <li>
