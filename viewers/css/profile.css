@@ -38,6 +38,7 @@
 
 .profile-btn a:hover {
   background: var(--hovercolor);
+  color:  #f8fffa;
 }
 
 @media (max-width: 991px) {
