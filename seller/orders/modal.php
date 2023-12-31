@@ -180,12 +180,13 @@
                         <div class="couriercontainer">
                             <div class=" form-group" style="margin-top: 300px;">
                                 <select class="form-control courier" onchange="inputrequired()">
-                                    <option value="">Select Courier</option>
+                                    <option value="">Select Delivery Method</option>
                                     <option value="JandT EXPRESS">J&T EXPRESS</option>
+                                    <option value="Meet-up (Discuss on message)">Meet-up (Discuss on message)</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input class="form-control trackingnumber" placeholder="Tracking Number"
+                                <input class="form-control trackingnumber" placeholder="Tracking Number/Address"
                                     onkeyup="inputrequired()">
                             </div>
                         </div>
@@ -312,7 +313,8 @@
                                                     </h5>
                                                 </span>
                                                 <h5 class="fontsizepaybot"><span style="font-weight: 500;">Total</span>
-                                                    <span></span></h5>
+                                                    <span></span>
+                                                </h5>
                                             </div>
 
                                         </div>

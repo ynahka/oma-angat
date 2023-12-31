@@ -113,7 +113,7 @@ function reqField2(classN) {
 
 function openmdladdproduct() {
     $("#mdladdproduct").modal('show');
-    $('#txtopenproductheader').text("New Product");
+    $('#txtopenproductheader').text("New Payment Method");
 
     $(".btnprodsave").css("display", "block");
     $(".btnprodupdate").css("display", "none");
@@ -368,7 +368,7 @@ function clearfieldvalues() {
 // EDIT PRODUCT
 function modaleditproduct(paymeth_id) {
     $("#mdladdproduct").modal('show');
-    $('#txtopenproductheader').text("Edit Product");
+    $('#txtopenproductheader').text("Edit Payment Method");
 
     $(".btnprodsave").css("display", "none");
     $(".btnprodupdate").css("display", "block");

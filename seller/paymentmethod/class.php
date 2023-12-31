@@ -19,11 +19,11 @@ switch ($_POST['form']) {
 		$limit = ($page - 1) * 10;
 		$res = mysqli_query($connection, "SELECT a.paymeth_id, a.bankholdername, a.banknumber, CASE WHEN b.middlename = '' OR b.middlename IS NULL THEN CONCAT(b.lastname, ', ', b.firstname) ELSE CONCAT(b.lastname, ', ', b.firstname, ' ', LEFT(b.middlename, '1'), '.') END, a.id FROM paymethod AS a LEFT JOIN users_table AS b ON a.seller_id = b.user_id WHERE a.seller_id = '" . $_SESSION['user_id'] . "' " . $searchuseracc . " ORDER BY a.paymeth_id ASC LIMIT " . $limit . ",10");
 		$numrows = mysqli_num_rows($res);
+
 		$imagedisplay = ""; // Initialize the variable before the loop
 
 		if ($numrows == TRUE) {
 			while ($row = mysqli_fetch_array($res)) {
-
 				$counter++;
 
 				if ($row[4] == "PENDING") {
@@ -32,7 +32,6 @@ switch ($_POST['form']) {
 					$status = "<span class='label label-light-success'>Approved</span>";
 				}
 
-
 				$res2 = mysqli_query($connection, "SELECT image, imagename, id FROM paymethod_image WHERE paymeth_id = '" . $row[0] . "' ORDER BY id ASC LIMIT 1");
 				while ($row2 = mysqli_fetch_array($res2)) {
 					$img = "../" . $row2[0];
@@ -40,20 +39,21 @@ switch ($_POST['form']) {
 				}
 
 				echo "<tr style='cursor:pointer; vertical-align: middle;'>
-							<td style='white-space: nowrap; text-align: center;'>" . $counter . "</td>
-	                        <td>" . $imagedisplay . "</td>
-	                        <td style='white-space: nowrap;'>" . $row[1] . "</td>
-	                        <td style='white-space: nowrap;'>" . $row[2] . "</td>
-	                        <td style='white-space: nowrap; text-align: center;'>
-	                        	<i class='fas fa-edit fa-lg text-success' style='cursor:pointer;color: #3f3f3f;' onclick='modaleditproduct(\"" . $row[0] . "\")' title='Edit Branch'></i>
-	                        	<i class='fas fa-trash fa-lg text-danger' style='cursor:pointer;color: #3f3f3f;' onclick='deleteproduct(\"" . $row[1] . "\")' title='Edit Branch'></i>
-	                        </td>
-	                    </tr>";
+                    <td style='white-space: nowrap; text-align: center;'>" . $counter . "</td>
+                    <td>" . $imagedisplay . "</td>
+                    <td style='white-space: nowrap;'>" . $row[1] . "</td>
+                    <td style='white-space: nowrap;'>" . $row[2] . "</td>
+                    <td style='white-space: nowrap; text-align: center;'>
+                        <i class='fas fa-edit fa-lg text-success' style='cursor:pointer;color: #3f3f3f;' onclick='modaleditproduct(\"" . $row[0] . "\")' title='Edit Branch'></i>
+                        <i class='fas fa-trash fa-lg text-danger' style='cursor:pointer;color: #3f3f3f;' onclick='deleteproduct(\"" . $row[1] . "\")' title='Edit Branch'></i>
+                    </td>
+                </tr>";
 			}
 			echo "|" . $counter;
 		} else {
 			echo "<tr><td  colspan='12' style='text-align:center'>No Record Found . . .</td></tr>";
 		}
+
 		break;
 
 	case "loadproductlistPagination":
