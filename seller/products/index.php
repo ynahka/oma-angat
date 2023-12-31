@@ -101,8 +101,6 @@
                             <th style="width: 15%;white-space: nowrap;"> Price </th>
                             <th style="width: 10%;white-space: nowrap;"> Quantity </th>
                             <th style="width: 10%;white-space: nowrap;"> Unit </th>
-                            <th style="width: 10%;white-space: nowrap;"> Available at </th>
-                            <th style="width: 10%;white-space: nowrap;"> Available until </th>
                             <th style="width: 6%;white-space: nowrap; text-align: center;"> Option </th>
                         </tr>
                     </thead>

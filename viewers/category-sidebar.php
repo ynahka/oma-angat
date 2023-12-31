@@ -237,6 +237,9 @@
             <li>
                 <a class="nav-link" href="profile.php"><i class="icofont-ui-user"></i>my account</a>
             </li>
+            <li>
+                <a class="nav-link" href="purchases.php"><i class="icofont-ui-user"></i>My Purchases</a>
+            </li>
             <div class="nav-info-group">
                 <li><a class="nav-link" href="about.php"><i class="icofont-info-circle"></i>about us</a></li>
                 <li><a class="nav-link" href="faq.php"><i class="icofont-support-faq"></i>FAQs</a></li>
@@ -280,7 +283,7 @@
         <i class="fas fa-shopping-basket"></i>
         <span>Cart</span>
     </button>
-    <a href="account.php" title="Notification List">
+    <a href="profile.php" title="Notification List">
         <i class="fas fa-user"></i>
         <span>Account</span>
     </a>

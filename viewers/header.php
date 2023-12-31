@@ -7,10 +7,11 @@
     <!-- TEMPLATE META -->
     <meta name="name" content="Oma-Angat">
     <meta name="title" content="A Virtual Agri-Market for Local Farmers">
-    <meta name="keywords" content="organic, food, shop, agri-market, market, html, agriculture, vegetables, farmers, farm, natural">
+    <meta name="keywords"
+        content="organic, food, shop, agri-market, market, html, agriculture, vegetables, farmers, farm, natural">
 
     <!-- WEBPAGE TITLE -->
-    <title>OMA-ANGAT</title>
+    <title>Oma-Angat</title>
 
     <!-- Logo -->
     <link rel="icon" href="images/single-logo.png">

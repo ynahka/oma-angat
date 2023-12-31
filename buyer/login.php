@@ -123,7 +123,7 @@ if (isset($_GET['code'])) {
                                     <input type="password" class="form-control underlined" style="border-bottom: 0.5px solid #4C644B !important;" name="txtpassword" id="txtpassword" placeholder="" required style=" height: 40px; background: #CFE2CE;">
                                 </div>
                                 <div class="col-md-1" style="padding-left: 0px;padding-right: 0px; flex: 1%; max-width: 1%;">
-                                    <i class="fa fa-eye-slash" style="margin-left: -23px; cursor: pointer; font-size: 1.1rem; margin-top: .7rem" id="logineye" onclick="fncloginpassattribunHash()"></i>
+                                    <i class="fa fa-eye-slash" style="margin-left: -23px; cursor: pointer; font-size: 1.1rem; margin-top: .7rem" id="logineye" onclick=" fncloginpassattribHash()"></i>
                                 </div>
                             </div>
                         </div>
@@ -206,17 +206,31 @@ if (isset($_GET['code'])) {
         return isValid;
     }
 
-    function fncaddpassattribHash2() {
+    // function fncaddpassattribHash2() {
+    //     $("#txtpassword").attr("type", "password");
+    //     $("#inputaddusereye2").attr("onclick", "fncaddpassattribunHash2()");
+    //     $("#addusereye2").removeClass("fa-eye");
+    //     $("#addusereye2").addClass("fa-eye-slash");
+    // }
+
+    // function fncaddpassattribunHash2() {
+    //     $("#txtpassword").attr("type", "text");
+    //     $("#inputaddusereye2").attr("onclick", "fncaddpassattribHash2()");
+    //     $("#addusereye2").addClass("fa-eye");
+    //     $("#addusereye2").removeClass("fa-eye-slash");
+    // }
+
+    function fncloginpassattribHash() {
         $("#txtpassword").attr("type", "password");
-        $("#inputaddusereye2").attr("onclick", "fncaddpassattribunHash2()");
-        $("#addusereye2").removeClass("fa-eye");
-        $("#addusereye2").addClass("fa-eye-slash");
+        $("#logineye").attr("onclick", "fncloginpassattribunHash()");
+        $("#logineye").removeClass("fa-eye");
+        $("#logineye").addClass("fa-eye-slash");
     }
 
-    function fncaddpassattribunHash2() {
+    function fncloginpassattribunHash() {
         $("#txtpassword").attr("type", "text");
-        $("#inputaddusereye2").attr("onclick", "fncaddpassattribHash2()");
-        $("#addusereye2").addClass("fa-eye");
-        $("#addusereye2").removeClass("fa-eye-slash");
+        $("#logineye").attr("onclick", "fncloginpassattribHash()");
+        $("#logineye").addClass("fa-eye");
+        $("#logineye").removeClass("fa-eye-slash");
     }
 </script>

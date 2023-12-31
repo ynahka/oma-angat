@@ -1,4 +1,7 @@
 *.scss
 *.lock
 *.html
+OmaangatImages/
+*.min.css
+fontawesome/
 node_modules/

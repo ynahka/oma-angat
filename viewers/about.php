@@ -67,7 +67,9 @@
                 <div class="col-lg-6">
                     <div class="about-content">
                         <h2>Our Motive is to build more sustainable future for local farmers and consumers</h2>
-                        <p>Welcome to OMA-ANGAT, your premier destination for fresh, locally sourced agricultural products from the heart of Albay. We are dedicated to revolutionizing the way farmers connect with consumers, fostering a direct and transparent exchange that benefits both parties.</p>
+                        <p>Welcome to OMA-ANGAT, your premier destination for fresh, locally sourced agricultural products from the heart of Albay. <br>An all-in-one platform where farmers can receive direct orders from buyers, sell their produce online, and ship their goods at a lower cost.
+                            <br>While buyers can find direct suppliers offering competitive prices — and enjoy higher quality and fresher products to grow their business.
+                        </p>
                     </div>
                     <!-- <ul class="about-list">
                         <li>
@@ -317,7 +319,7 @@
                             </figure>
                             <div class="team-meta">
                                 <h5><a href="#">Mary Grace Ala</a></h5>
-                                <p>UI designer</p>
+                                <p>UI designer & Manuscript</p>
                             </div>
                         </li>
                         <li>
@@ -331,7 +333,7 @@
                             </figure>
                             <div class="team-meta">
                                 <h5><a href="#">Beverly Grace G. Borbe </a></h5>
-                                <p>UI designer</p>
+                                <p>UI designer & Manuscript</p>
                             </div>
                         </li>
                     </ul>

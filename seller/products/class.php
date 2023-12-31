@@ -105,11 +105,11 @@ switch ($_POST['form']) {
 	case 'fncdisplaycategories':
 		$res = mysqli_query($connection, "SELECT category_id, categoryname FROM categories;");
 ?> <option value="">- Select Category -</option>
-<?php
+		<?php
 		while ($row = mysqli_fetch_array($res)) {
 		?>
-<option value="<?php echo $row[0]; ?>"><?php echo $row[1]; ?></option>
-<?php
+			<option value="<?php echo $row[0]; ?>"><?php echo $row[1]; ?></option>
+			<?php
 		}
 		break;
 
@@ -234,12 +234,12 @@ switch ($_POST['form']) {
 				echo "<select class='form-control clearinfo mb-2 reqresinfo' name='txtaddcategory' id='txtaddcategory' style='font-size: .9rem;'>";
 				$res3 = mysqli_query($connection, "SELECT category_id, categoryname FROM categories WHERE category_id != '" . $row2[0] . "';");
 			?> <option value="<?php echo $row2[0]; ?>"><?php echo $row2[1]; ?></option>
-<?php
+				<?php
 				while ($row3 = mysqli_fetch_array($res3)) {
 				?>
-<option value="<?php echo $row3[0]; ?>">
-    <?php echo $row3[1]; ?></option>
-<?php
+					<option value="<?php echo $row3[0]; ?>">
+						<?php echo $row3[1]; ?></option>
+				<?php
 				}
 				echo "</select>";
 				$count2++;
@@ -247,12 +247,12 @@ switch ($_POST['form']) {
 				echo "<select class='form-control clearinfo mb-2 reqresinfo' name='txtaddcategory' id='txtaddcategory" . $count2 . "' style='font-size: .9rem;'>";
 				$res3 = mysqli_query($connection, "SELECT category_id, categoryname FROM categories WHERE category_id != '" . $row2[0] . "';");
 				?> <option value="<?php echo $row2[0]; ?>">
-    <?php echo $row2[1]; ?>
-</option> <?php
+					<?php echo $row2[1]; ?>
+				</option> <?php
 							while ($row3 = mysqli_fetch_array($res3)) {
 							?>
-<option value="<?php echo $row3[0]; ?>"><?php echo $row3[1]; ?>
-</option> <?php
+					<option value="<?php echo $row3[0]; ?>"><?php echo $row3[1]; ?>
+					</option> <?php
 							}
 							echo "</select>";
 							$count2++;

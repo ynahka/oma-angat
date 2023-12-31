@@ -1009,7 +1009,6 @@ html body .waves-notransition {
 .text-info {
 	color: #4C644B !important;
 	text-transform: uppercase;
-	font-weight: 500;
     font-size: 1rem;
 }
 
@@ -2123,8 +2122,8 @@ textarea {
 .form-control {
 	color: #54667a;
 	display: initial;
-	/* background:#CFE2CE; */
-	border-bottom: 0.5px solid #4C644B;
+	background:#CFE2CE !important;
+	border-bottom: 0.5px solid #4C644B !important;
 }
 
 .form-control-sm {
@@ -8528,8 +8527,10 @@ a.mytooltip {
   }
 
   .buttonproduct {
-      font-size: .7rem !important;
-      padding: 0.375rem 0.75rem !important;
+      font-weight: 200px !important;
+      font-size: 9px !important;
+      height: auto;
+      padding: 0.1rem 0.75rem !important;
   }
 
   .imagetable {
