@@ -4,7 +4,7 @@ session_start();
 ?>
 
 <head>
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="manifest.json" />
     <link href="/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/products.css">

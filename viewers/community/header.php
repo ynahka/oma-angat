@@ -11,6 +11,8 @@
 
 <!--owl carousel min css-->
 <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+<!-- Main Style CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
 
 <!--magnific popup min css-->
 <link rel="stylesheet" href="assets/css/magnific-popup.css">
