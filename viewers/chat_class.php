@@ -51,7 +51,7 @@ switch ($_POST['form']) {
 
 					if ($_POST['usertype'] == "ADMIN") {
 						echo "<li style='margin-top: 0px;margin-bottom:30px;'>
-                                <div class='chat-img'><img src='admin/assets/images/profile2.png' alt='user' /></div>
+                                <div class='chat-img'><img src='../admin/assets/images/profile2.png' alt='user' /></div>
                                 <div class='chat-content'>
                                     <div class='box bg-light-info'>" . $row[0] . "</div>
                                 </div>
@@ -59,7 +59,7 @@ switch ($_POST['form']) {
                             </li>";
 					} else {
 						echo "<li style='margin-top: 0px;margin-bottom:30px;'>
-                                <div class='chat-img'><img src='admin/assets/images/profile4.png' alt='user' /></div>
+                                <div class='chat-img'><img src='../admin/assets/images/profile4.png' alt='user' /></div>
                                 <div class='chat-content'>
                                     <div class='box bg-light-info'>" . $row[0] . "</div>";
 
@@ -76,13 +76,10 @@ switch ($_POST['form']) {
 
 
 					$res2 = mysqli_query($connection, "SELECT image FROM products_image WHERE product_id = '" . $row[3] . "' ");
-					$row2 = mysqli_fetch_array($res2);
-
-					echo "<div><img src='" . $row2[0] . "' width='200px'></div>";
 
 
 					echo "</div>
-	                            <div class='chat-img'><img src='admin/assets/images/profile4.png' alt='user' /></div>
+	                            <div class='chat-img'><img src='../admin/assets/images/profile4.png' alt='user' /></div>
 	                            <div class='chat-time'>" . date('g:i a', strtotime($row[2])) . "</div>
 	                        </li>";
 				}
@@ -107,7 +104,7 @@ switch ($_POST['form']) {
 		if ($row[0] == 1) {
 			$updateappointment = mysqli_query($connection, "UPDATE messages_admin SET status = '0' WHERE id = '" . $_POST['id'] . "';");
 
-			$addnotif = mysqli_query($connection, "INSERT INTO usernotifications SET user_id = '" . $_POST['user_id'] . "', logs = 'Admin viewed your message', username = 'admin';");
+			$addnotif = mysqli_query($connection, "INSERT INTO usernotifications SET user_id = '" . $_POST['userid'] . "', logs = 'Admin viewed your message', username = 'admin';");
 		} else {
 		}
 		break;

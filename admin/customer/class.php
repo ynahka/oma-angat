@@ -22,7 +22,7 @@ switch ($_POST['form']) {
 				$counter++;
 
 				if ($row[5] == "") {
-					$img = "assets/images/noimage5.png";
+					$img = "assets/images/profile4.png";
 				} else {
 					$img = "../" . $row[5];
 				}
@@ -96,7 +96,7 @@ switch ($_POST['form']) {
 		$custdet = mysqli_fetch_array(mysqli_query($connection, "SELECT CASE WHEN a.middlename = '' OR a.middlename IS NULL THEN CONCAT(a.lastname, ', ', a.firstname) ELSE CONCAT(a.lastname, ', ', a.firstname, ' ', LEFT(a.middlename, '1'), '.') END, b.contactnum, b.email, b.address, b.image, b.latitude, b.longitude FROM users_table AS a LEFT JOIN user_details AS b ON a.user_id = b.user_id WHERE a.id = '" . $_POST['ID'] . "';"));
 
 		if ($custdet[4] == "") {
-			$img = "assets/images/noimage5.png";
+			$img = "assets/images/profile4.png";
 		} else {
 			$img = "../" . $custdet[4];
 		}

@@ -1,5 +1,5 @@
 <div id="mdladdproduct" class="modal" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-md"style="max-width: 750px;">
+    <div class="modal-dialog modal-md" style="max-width: 750px;">
         <div class="modal-content">
 
             <div class="modal-body">
@@ -67,6 +67,28 @@
                                 <span style="font-weight:400">Price</span>
                                 <input type="text" class="form-control numonly txtAmountFields clearinfo reqresinfo focus" id="txtaddprodprice" maxlength="10" onkeypress="return isNumberKey(event)" style="font-size: .9rem;">
                             </div>
+                            <div class="col-md-12 mb-2">
+                                <span style="font-weight:400">Available at</span>
+                                <input type="date" class="form-control clearinfo reqresinfo" id="txtaddprodavailat" style="font-size: .9rem;">
+                            </div>
+                            <div class="col-md-12 mb-2">
+                                <span style="font-weight:400">Available until</span>
+                                <input type="date" class="form-control clearinfo reqresinfo" id="txtaddprodavailuntil" style="font-size: .9rem;">
+                            </div>
+
+                            <div class="col-md-12 mb-2">
+                                <label for="txtaddprodunit" style="font-weight: 400;">Unit</label>
+                                <select class="form-control clearinfo reqresinfo" id="txtaddprodunit" style="font-size: 0.9rem;">
+                                    <option value="">- Select Unit -</option>
+                                    <option value="Kg">Kg</option>
+                                    <option value="grams">grams</option>
+                                    <option value="Liters">Liters</option>
+                                    <option value="ml">ml</option>
+                                    <option value="Tray">Tray</option>
+                                    <option value="piece">piece</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
@@ -74,7 +96,7 @@
                             </div>
                             <input type="hidden" class="clearinfo" id="hiddenwala2" name="hiddenwala2">
                             <div class="col-md-9 mb-2" id="appendcategory">
-                                
+
                             </div>
                             <div class="col-md-3 mb-2 modalpaddingnew">
                                 <button class="btn waves-effect waves-light btn-secondary" style="width:100%;padding: 0.375rem 0.75rem;" onclick="fncappendcategory();"><i class="fas fa-plus"></i></button>
@@ -87,10 +109,12 @@
             <div class="modal-footer" style="padding: 10px 15px;">
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct btnprodsave" onclick="addproduct();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;">Save Product</button>
+                        <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct btnprodsave" onclick="addproduct();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;">Save
+                            Product</button>
 
-                        <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct btnprodupdate" onclick="editproduct();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;display: none;">Update Product</button>
-                    </div> 
+                        <button type="button" class="btn waves-effect waves-light btn-secondary float-right buttonproduct btnprodupdate" onclick="editproduct();" style="background-color: #79a206 !important; border: 1px solid #79a206 !important;display: none;">Update
+                            Product</button>
+                    </div>
                 </div>
             </div>
 
@@ -99,7 +123,7 @@
 </div>
 
 <div id="mdllistofseller" class="modal" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-dialog-centered modal-md"style="max-width: 800px;">
+    <div class="modal-dialog modal-dialog-centered modal-md" style="max-width: 800px;">
         <div class="modal-content">
 
             <div class="modal-body">
@@ -140,7 +164,7 @@
 </div>
 
 <div id="mdlopencustprof" class="modal" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-dialog-centered modal-md"style="max-width: 450px;">
+    <div class="modal-dialog modal-dialog-centered modal-md" style="max-width: 450px;">
         <div class="modal-content">
 
             <div class="modal-body">
@@ -156,8 +180,10 @@
                 <div class="row">
                     <div class="col-12">
                         <h6>Full Name: <span style="color: #54667a;font-weight: 300;" id="txtfullname"></span></h6>
-                        <h6>Contact Number: <span style="color: #54667a;font-weight: 300;" id="txtcontactnum"></span></h6>
-                        <h6 class="mb-4">Email: <span style="color: #54667a;font-weight: 300;" id="txtemail"></span></h6>
+                        <h6>Contact Number: <span style="color: #54667a;font-weight: 300;" id="txtcontactnum"></span>
+                        </h6>
+                        <h6 class="mb-4">Email: <span style="color: #54667a;font-weight: 300;" id="txtemail"></span>
+                        </h6>
 
                         <h6>Address: <span style="color: #54667a;font-weight: 300;" id="txtaddress"></span></h6>
                         <!-- <div class="mb-4" id="map-box"></div> -->
