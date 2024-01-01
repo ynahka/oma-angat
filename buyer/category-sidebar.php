@@ -69,135 +69,6 @@
         =======================================-->
 
 <!--=====================================
-                  CART SIDEBAR PART START
-        =======================================-->
-<aside class="cart-sidebar">
-    <div class="cart-header">
-        <div class="cart-total">
-            <i class="fas fa-shopping-basket"></i>
-            <span>total item (5)</span>
-        </div>
-        <button class="cart-close"><i class="icofont-close"></i></button>
-    </div>
-    <ul class="cart-list">
-        <li class="cart-item">
-            <div class="cart-media">
-                <a href="#"><img src="images/product/1.png" alt="product"></a>
-                <button class="cart-delete"><i class="far fa-trash-alt"></i></button>
-            </div>
-            <div class="cart-info-group">
-                <div class="cart-info">
-                    <h6><a href="product-single.php">existing product name</a></h6>
-                    <p>Unit Price - P8.75</p>
-                </div>
-                <div class="cart-action-group">
-                    <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
-                    </div>
-                    <h6>P56.98</h6>
-                </div>
-            </div>
-        </li>
-        <li class="cart-item">
-            <div class="cart-media">
-                <a href="#"><img src="images/product/1.png" alt="product"></a>
-                <button class="cart-delete"><i class="far fa-trash-alt"></i></button>
-            </div>
-            <div class="cart-info-group">
-                <div class="cart-info">
-                    <h6><a href="product-single.php">existing product name</a></h6>
-                    <p>Unit Price - P8.75</p>
-                </div>
-                <div class="cart-action-group">
-                    <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
-                    </div>
-                    <h6>P56.98</h6>
-                </div>
-            </div>
-        </li>
-        <li class="cart-item">
-            <div class="cart-media">
-                <a href="#"><img src="images/product/1.png" alt="product"></a>
-                <button class="cart-delete"><i class="far fa-trash-alt"></i></button>
-            </div>
-            <div class="cart-info-group">
-                <div class="cart-info">
-                    <h6><a href="product-single.php">existing product name</a></h6>
-                    <p>Unit Price - P8.75</p>
-                </div>
-                <div class="cart-action-group">
-                    <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
-                    </div>
-                    <h6>P56.98</h6>
-                </div>
-            </div>
-        </li>
-        <li class="cart-item">
-            <div class="cart-media">
-                <a href="#"><img src="images/product/1.png" alt="product"></a>
-                <button class="cart-delete"><i class="far fa-trash-alt"></i></button>
-            </div>
-            <div class="cart-info-group">
-                <div class="cart-info">
-                    <h6><a href="product-single.php">existing product name</a></h6>
-                    <p>Unit Price - P8.75</p>
-                </div>
-                <div class="cart-action-group">
-                    <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
-                    </div>
-                    <h6>P56.98</h6>
-                </div>
-            </div>
-        </li>
-        <li class="cart-item">
-            <div class="cart-media">
-                <a href="#"><img src="images/product/1.png" alt="product"></a>
-                <button class="cart-delete"><i class="far fa-trash-alt"></i></button>
-            </div>
-            <div class="cart-info-group">
-                <div class="cart-info">
-                    <h6><a href="product-single.php">existing product name</a></h6>
-                    <p>Unit Price - P8.75</p>
-                </div>
-                <div class="cart-action-group">
-                    <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus"><i class="icofont-minus"></i></button>
-                        <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
-                        <button class="action-plus" title="Quantity Plus"><i class="icofont-plus"></i></button>
-                    </div>
-                    <h6>P56.98</h6>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <div class="cart-footer">
-        <!-- <button class="coupon-btn">Do you have a coupon code?</button> -->
-        <!-- <form class="coupon-form">
-                    <input type="text" placeholder="Enter your coupon code">
-                    <button type="submit"><span>apply</span></button>
-                </form> -->
-        <a class="cart-checkout-btn" href="checkout.php">
-            <span class="checkout-label">Proceed to Checkout</span>
-            <span class="checkout-price">P369.78</span>
-        </a>
-    </div>
-</aside>
-<!--=====================================
-                    CART SIDEBAR PART END
-        =======================================-->
-
-<!--=====================================
                   NAV SIDEBAR PART START
         =======================================-->
 <aside class="nav-sidebar">
@@ -250,7 +121,6 @@
                 <a class="nav-link dropdown-link" href="#"><i class="fa-solid fa-store"></i>shop</a>
                 <ul class="dropdown-list">
                     <li><a href="shop-1column.php">Farmer's Market</a></li>
-                    <li><a href="shop-2column.php">Categories</a></li>
                     <li><a href="shop-2column.php">Products</a></li>
                 </ul>
             </li>
@@ -295,7 +165,7 @@
         <i class="fa-solid fa-comments"></i>
         <span>Community</span>
     </a>
-    <a href="chat.php" title="chat">
+    <a onclick="btnaddtocart()" title="chat">
         <i class="fas fa-paper-plane"></i>
         <span>Chat</span>
     </a>
