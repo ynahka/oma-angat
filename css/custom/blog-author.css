@@ -63,9 +63,8 @@
   background: var(--primary);
 }
 
-.author-address {
+.author-bio {
   margin-bottom: 30px;
-  color: var(--primary);
 }
 
 .author-meta {
