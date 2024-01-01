@@ -349,8 +349,8 @@ switch ($_POST['form']) {
 
 		$placeorder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', date_added = '" . date("Y-m-d") . "';");
 		// SAVE IN PAYMENTS
-		$genID2 = generateID($connection, 'paymentID', 'payments', 'PAY');
-		$placeorder = mysqli_query($connection, "INSERT INTO payments SET paymentID = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', order_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', status = 'PENDING', date_added = '" . date("Y-m-d") . "';");
+		$genID2 = generateID($connection, 'payment_id', 'payments', 'PAY');
+		$placeorder = mysqli_query($connection, "INSERT INTO payments SET payment_id = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', order_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', status = 'PENDING', date_added = '" . date("Y-m-d") . "';");
 		break;
 
 	case 'btnplaceordergcash':
@@ -365,8 +365,8 @@ switch ($_POST['form']) {
 
 		$placeorder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'TOPAY', deliverystat = 'PENDING', paymentstat = 'FORAPPROVAL', date_added = '" . date("Y-m-d") . "';");
 		// SAVE IN PAYMENTS
-		$genID2 = generateID($connection, 'paymentID', 'payments', 'PAY');
-		$placeorder = mysqli_query($connection, "INSERT INTO payments SET paymentID = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', order_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', refnumber = '" . $_POST['textpaymentmethrefnum'] . "', status = 'FORAPPROVAL', date_added = '" . date("Y-m-d") . "';");
+		$genID2 = generateID($connection, 'payment_id', 'payments', 'PAY');
+		$placeorder = mysqli_query($connection, "INSERT INTO payments SET payment_id = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', order_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', refnumber = '" . $_POST['textpaymentmethrefnum'] . "', status = 'FORAPPROVAL', date_added = '" . date("Y-m-d") . "';");
 
 		echo $genID2;
 		break;
@@ -374,7 +374,7 @@ switch ($_POST['form']) {
 	case 'fncloadpaymentgcashmodal':
 		$productdet = mysqli_fetch_array(mysqli_query($connection, "SELECT seller_id FROM products WHERE product_id = '" . $_POST['product_id'] . "';"));
 
-		$getseller = mysqli_fetch_array(mysqli_query($connection, "SELECT user_id, gcashname, gcashnumber, gcashQRimage FROM user_details WHERE user_id = '" . $productdet[0] . "';"));
+		$getseller = mysqli_fetch_array(mysqli_query($connection, "SELECT seller_id, bankholdername, banknumber FROM paymethod WHERE seller_id = '" . $productdet[0] . "';"));
 
 		echo $getseller[1] . "|" . $getseller[2] . "|" . $getseller[3];
 		break;

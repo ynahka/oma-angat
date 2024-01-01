@@ -589,11 +589,13 @@ if (empty($_SESSION['user_id'])) {
     <div class=" modal fade" id="modal_paymentupload" tabindex="-1" role="dialog" data-bs-backdrop="static"
         data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered modal-paymentneed">
-            <div class="modal-content" style="border: 10px solid #82a131;background-color: #eef4dd;">
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick=""
+            <div class="modal-content"
+                style="border: 2px solid #82a131; background-color: #cfe2ce; border-radius: 10px">
+                <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick=""
                     style="left: 92%;">
                     <span aria-hidden="true"><i class="icon-x"></i></span>
-                </button>
+                </button> -->
+                <button class="modal-close icofont-close" data-bs-dismiss="modal"></button>
                 <div class="modal_body" style="padding: 29px 6px 20px;">
                     <div class="container">
                         <input type="hidden" id="txtmdlorderID">
@@ -1190,6 +1192,8 @@ function submitpayment() {
                 }).then((result) => {
                     if (result.value) {
                         uploadpaymentpicture(data)
+                        window.location = "purchases.php";
+
                     }
                 });
 

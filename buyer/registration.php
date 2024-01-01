@@ -1,26 +1,35 @@
 <?php
-include("connection/connect.php");
 session_start();
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
 
 <head>
-    <link rel="manifest" href="/manifest.json" />
-    <link href="/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/registration.css">
     <link rel="stylesheet" href="css/register.css">
     <?php
     include('header.php');
     ?>
     <link rel="stylesheet" href="css/login.css">
-    <script src="/script.js"></script>
 </head>
 
 <body>
     <div class="loadload">
         <div class="spinner-border text-secondary" role="status"></div>
     </div>
+    <script type="text/javascript">
+    $(function() {
+        setTimeout(function() {
+            $(".loadload").hide();
+        }, 300);
+    })
+    </script>
+    <script>
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js");
+    }
+    </script>
+    <script src="/script.js"></script>
 
     <!--offcanvas menu area end-->
     <datalist id="mylist">
@@ -163,7 +172,7 @@ session_start();
                                     </div>
                                 </div>
                             </div>
-                            <h4 class="text-info" style="margin-top: 30px; margin-bottom: 15px;">Profile Image
+                            <!-- <h4 class="text-info" style="margin-top: 30px; margin-bottom: 15px;">Profile Image
                             </h4>
 
                             <div class="row">
@@ -185,7 +194,7 @@ session_start();
                                         </div>
                                     </form>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -333,8 +342,7 @@ var provinceInput = document.getElementById("txtregprovince2");
 provinceInput.addEventListener("change", function() {
     var province = provinceInput.value.toLowerCase();
     //    display.textContent = province;
-    if (province != "albay" && province != "camarines norte" && province != "camarines sur" &&
-        province !=
+    if (province != "albay" && province != "camarines norte" && province != "camarines sur" && province !=
         "catanduanes" && province != "masbate" && province != "sorsogon") {
         Swal.fire(
             'ALERT',
@@ -354,9 +362,8 @@ $(function() {
     $(".contactnum").inputmask("+63 999-999-9999");
 
     $(".numonly").keydown(function(event) {
-        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 190 || event
-            .keyCode ==
-            9 || event.keyCode == 188) {
+        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 190 || event.keyCode == 9 ||
+            event.keyCode == 188) {
 
         } else {
             if (event.keyCode < 48 || event.keyCode > 57 || event.keyCode == 17) {
@@ -547,16 +554,13 @@ function registeruseraccount() {
             $.ajax({
                 type: 'POST',
                 url: 'registration_class.php',
-                data: 'textregFname=' + textregFname + '&textregMname=' + textregMname +
-                    '&textregLname=' +
+                data: 'textregFname=' + textregFname + '&textregMname=' + textregMname + '&textregLname=' +
                     textregLname + '&textregcontactphone=' + encodeURIComponent(textregcontactphone) +
                     '&textregemail=' + textregemail + '&textregfulladdress=' + textregfulladdress +
                     '&textreghousenum=' + textreghousenum + '&textregstreet=' + textregstreet +
-                    '&textregsubdi=' + textregsubdi + '&textregbarangay=' + textregbarangay +
-                    '&textregcity=' + textregcity + '&textregprovince=' + textregprovince +
-                    '&textreglat=' +
-                    textreglat + '&textreglong=' + textreglong + '&textregpostalcode=' +
-                    textregpostalcode +
+                    '&textregsubdi=' + textregsubdi + '&textregbarangay=' + textregbarangay + '&textregcity=' +
+                    textregcity + '&textregprovince=' + textregprovince + '&textreglat=' + textreglat +
+                    '&textreglong=' + textreglong + '&textregpostalcode=' + textregpostalcode +
                     '&textregusername=' + textregusername + '&textadduserconfirmpass=' +
                     textadduserconfirmpass + '&form=registeruseraccount',
                 success: function(data) {
@@ -568,7 +572,7 @@ function registeruseraccount() {
                             type: "success",
                             icon: "success",
                             showCancelButton: false,
-                            confirmButtonColor: "#00fb71",
+                            confirmButtonColor: "#009efb",
                             confirmButtonText: "Okay",
                             closeOnConfirm: false
                         }).then((result) => {
@@ -582,7 +586,7 @@ function registeruseraccount() {
         } else {
             Swal.fire(
                 'ALERT',
-                'Profile image is required.',
+                'Valid ID is required.',
                 'warning'
             )
         }
@@ -608,20 +612,16 @@ function uploadvalidpicture(genid) {
     var data = new FormData($('#frmUploadvalidPic')[0]);
     $.ajax({
         type: 'POST',
-        url: 'uploadprofileImage.php',
+        url: 'uploadvalidid.php',
         data: data,
         mimeType: 'multipart/form-data',
         contentType: false,
         cache: false,
         processData: false,
         success: function(data) {
-            loginusers();
-        },
+            window.location = "login.php";
+        }
     });
-}
-
-function loginusers() {
-    window.location = "login.php";
 }
 
 function fncaddpassattribHash2() {
@@ -636,14 +636,5 @@ function fncaddpassattribunHash2() {
     $("#inputaddusereye2").attr("onclick", "fncaddpassattribHash2()");
     $("#addusereye2").addClass("fa-eye");
     $("#addusereye2").removeClass("fa-eye-slash");
-}
-
-$(function() {
-    setTimeout(function() {
-        $(".loadload").hide();
-    }, 300);
-})
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js");
 }
 </script>

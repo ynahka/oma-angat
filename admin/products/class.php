@@ -14,7 +14,7 @@ switch ($_POST['form']) {
 		$counter = 0;
 		$page = $_POST["page"];
 		$limit = ($page - 1) * 10;
-		$res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.productdesc, a.price, a.quantity, CASE WHEN b.middlename = '' OR b.middlename IS NULL THEN CONCAT(b.lastname, ', ', b.firstname) ELSE CONCAT(b.lastname, ', ', b.firstname, ' ', LEFT(b.middlename, '1'), '.') END, a.id FROM products AS a LEFT JOIN users_table AS b ON a.seller_id = b.user_id " . $searchuseracc . " ORDER BY a.product_id ASC LIMIT " . $limit . ",10");
+		$res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.productdesc, a.price, a.quantity, a.unit, a.availat, a.availuntil, CASE WHEN b.middlename = '' OR b.middlename IS NULL THEN CONCAT(b.lastname, ', ', b.firstname) ELSE CONCAT(b.lastname, ', ', b.firstname, ' ', LEFT(b.middlename, '1'), '.') END, a.id FROM products AS a LEFT JOIN users_table AS b ON a.seller_id = b.user_id " . $searchuseracc . " ORDER BY a.product_id ASC LIMIT " . $limit . ",10");
 		$numrows = mysqli_num_rows($res);
 		if ($numrows == TRUE) {
 			while ($row = mysqli_fetch_array($res)) {
@@ -42,6 +42,9 @@ switch ($_POST['form']) {
 	                        <td style='white-space: nowrap;'>" . $row[3] . "</td>
 	                        <td style='white-space: nowrap;'>" . $row[4] . "</td>
 	                        <td style='white-space: nowrap;'>" . $row[5] . "</td>
+							<td style='white-space: nowrap;'>" . $row[6] . "</td>
+							<td style='white-space: nowrap;'>" . $row[7] . "</td>
+							<td style='white-space: nowrap;'>" . $row[8] . "</td>
 	                        <td style='white-space: nowrap; text-align: center;'>
 	                        	<i class='fas fa-edit fa-lg text-success' style='cursor:pointer;color: #3f3f3f;' onclick='modaleditproduct(\"" . $row[0] . "\")' title='Edit Branch'></i>
 	                        	<i class='fas fa-trash fa-lg text-danger' style='cursor:pointer;color: #3f3f3f;' onclick='deleteproduct(\"" . $row[0] . "\")' title='Edit Branch'></i>
@@ -101,7 +104,7 @@ switch ($_POST['form']) {
 		break;
 
 	case 'fncdisplaycategories':
-		$res = mysqli_query($connection, "SELECT categoryID, categoryname FROM categories;");
+		$res = mysqli_query($connection, "SELECT category_id, categoryname FROM categories;");
 ?> <option value="">- Select Category -</option> <?php
 													while ($row = mysqli_fetch_array($res)) {
 													?> <option value="<?php echo $row[0]; ?>"><?php echo $row[1]; ?></option> <?php
@@ -110,11 +113,11 @@ switch ($_POST['form']) {
 
 																														case 'addproduct':
 																															$generateID = generateID($connection, 'product_id', 'products', 'product');
-																															$addproduct = mysqli_query($connection, "INSERT INTO products SET product_id = '" . $generateID . "', seller_id = '" . $_POST['textseller_id'] . "', productname = '" . $_POST['textaddprodname'] . "', productdesc = '" . $_POST['textaddproddesc'] . "', price = '" . $_POST['textaddprodprice'] . "', quantity = '" . $_POST['textaddprodqty'] . "', date_added = '" . date("Y-m-d") . "';");
+																															$addproduct = mysqli_query($connection, "INSERT INTO products SET product_id = '" . $generateID . "', seller_id = '" . $_POST['textseller_id'] . "', productname = '" . $_POST['textaddprodname'] . "', productdesc = '" . $_POST['textaddproddesc'] . "', price = '" . $_POST['textaddprodprice'] . "', quantity = '" . $_POST['textaddprodqty'] . "', unit = '" . $_POST['textaddprodunit'] . "', availat = '" . $_POST['textaddprodavailat'] . "', availuntil = '" . $_POST['textaddprodavailuntil'] . "';");
 
 																															foreach (explode('#', $_POST['textaddcategory']) as $key => $value) {
 																																if ($value != '') {
-																																	$listofcategories = mysqli_query($connection, "INSERT INTO products_category SET product_id = '" . $generateID . "', categoryID = '" . $value . "';");
+																																	$listofcategories = mysqli_query($connection, "INSERT INTO products_category SET product_id = '" . $generateID . "', category_id = '" . $value . "';");
 																																}
 																															}
 
@@ -216,83 +219,84 @@ switch ($_POST['form']) {
 																																}
 																															}
 
-																															$productdet = mysqli_fetch_array(mysqli_query($connection, "SELECT a.seller_id, CASE WHEN b.middlename = '' OR b.middlename IS NULL THEN CONCAT(b.lastname, ', ', b.firstname) ELSE CONCAT(b.lastname, ', ', b.firstname, ' ', LEFT(b.middlename, '1'), '.') END, a.productname, a.productdesc, a.quantity, a.price FROM products AS a LEFT JOIN users_table AS b ON a.seller_id = b.user_id WHERE a.product_id = '" . $_POST['product_id'] . "';"));
+																															$productdet = mysqli_fetch_array(mysqli_query($connection, "SELECT a.seller_id, CASE WHEN b.middlename = '' OR b.middlename IS NULL THEN CONCAT(b.lastname, ', ', b.firstname) ELSE CONCAT(b.lastname, ', ', b.firstname, ' ', LEFT(b.middlename, '1'), '.') END, a.productname, a.productdesc, a.quantity, a.unit, a.availat, a.availuntil, a.price FROM products AS a LEFT JOIN users_table AS b ON a.seller_id = b.user_id WHERE a.product_id = '" . $_POST['product_id'] . "';"));
 
-																															echo "|" . $productdet[0] . "|" . $productdet[1] . "|" . $productdet[2] . "|" . $productdet[3] . "|" . $productdet[4] . "|" . number_format($productdet[5], "2", ".", ",") . "|";
-
+																															echo "|" . $productdet[0] . "|" . $productdet[1] . "|" . $productdet[2] . "|" . $productdet[3] . "|" . $productdet[4] . "|" . $productdet[5] . "|" . $productdet[6] . "|" . $productdet[7] . "|" . number_format($productdet[8], "2", ".", ",") . "|";
 																															$count2 = 0;
-																															$res2 = mysqli_query($connection, "SELECT a.categoryID, b.categoryname FROM products_category AS a LEFT JOIN categories AS b ON a.categoryID = b.categoryID WHERE a.product_id = '" . $_POST['product_id'] . "';");
+																															$res2 = mysqli_query($connection, "SELECT a.category_id, b.categoryname FROM products_category AS a LEFT JOIN categories AS b ON a.category_id = b.category_id WHERE a.product_id = '" . $_POST['product_id'] . "';");
 																															$numrows2 = mysqli_num_rows($res2);
 																															echo $numrows2 . "|";
 																															while ($row2 = mysqli_fetch_array($res2)) {
 																																if ($count2 == 0) {
 																																	echo "<select class='form-control clearinfo mb-2 reqresinfo' name='txtaddcategory' id='txtaddcategory' style='font-size: .9rem;'>";
-																																	$res3 = mysqli_query($connection, "SELECT categoryID, categoryname FROM categories WHERE categoryID != '" . $row2[0] . "';");
+																																	$res3 = mysqli_query($connection, "SELECT category_id, categoryname FROM categories WHERE category_id != '" . $row2[0] . "';");
 																																?> <option value="<?php echo $row2[0]; ?>"><?php echo $row2[1]; ?></option> <?php
-																																																						while ($row3 = mysqli_fetch_array($res3)) {
-																																																						?> <option value="<?php echo $row3[0]; ?>"><?php echo $row3[1]; ?></option> <?php
-																																																												}
-																																																												echo "</select>";
-																																																												$count2++;
-																																																											} else {
-																																																												echo "<select class='form-control clearinfo mb-2 reqresinfo' name='txtaddcategory' id='txtaddcategory" . $count2 . "' style='font-size: .9rem;'>";
-																																																												$res3 = mysqli_query($connection, "SELECT categoryID, categoryname FROM categories WHERE categoryID != '" . $row2[0] . "';");
-																																																													?> <option value="<?php echo $row2[0]; ?>"><?php echo $row2[1]; ?>
+																																																			while ($row3 = mysqli_fetch_array($res3)) {
+																																																			?> <option value="<?php echo $row3[0]; ?>">
+						<?php echo $row3[1]; ?></option> <?php
+																																																			}
+																																																			echo "</select>";
+																																																			$count2++;
+																																																		} else {
+																																																			echo "<select class='form-control clearinfo mb-2 reqresinfo' name='txtaddcategory' id='txtaddcategory" . $count2 . "' style='font-size: .9rem;'>";
+																																																			$res3 = mysqli_query($connection, "SELECT category_id, categoryname FROM categories WHERE category_id != '" . $row2[0] . "';");
+															?> <option value="<?php echo $row2[0]; ?>">
+					<?php echo $row2[1]; ?>
 				</option> <?php
-																																																												while ($row3 = mysqli_fetch_array($res3)) {
+																																																			while ($row3 = mysqli_fetch_array($res3)) {
 							?> <option value="<?php echo $row3[0]; ?>"><?php echo $row3[1]; ?>
 					</option> <?php
-																																																												}
-																																																												echo "</select>";
-																																																												$count2++;
-																																																											}
-																																																										}
+																																																			}
+																																																			echo "</select>";
+																																																			$count2++;
+																																																		}
+																																																	}
 
-																																																										echo "|" . $productdet[6] . "|" . $productdet[7] . "|" . $productdet[8] . "|" . $productdet[9] . "|" . $productdet[10] . "|" . $productdet[11] . "|" . $productdet[12] . "|" . $productdet[13] . "|" . $productdet[14] . "|" . $productdet[15];
-																																																										break;
+																																																	echo "|" . $productdet[6] . "|" . $productdet[7] . "|" . $productdet[8] . "|" . $productdet[9] . "|" . $productdet[10] . "|" . $productdet[11] . "|" . $productdet[12] . "|" . $productdet[13] . "|" . $productdet[14] . "|" . $productdet[15];
+																																																	break;
 
-																																																									case 'editproduct':
-																																																										$editproduct = mysqli_query($connection, "UPDATE products SET seller_id = '" . $_POST['textseller_id'] . "', productname = '" . $_POST['textaddprodname'] . "', productdesc = '" . $_POST['textaddproddesc']  . "', price = '" . $_POST['textaddprodprice'] . "', quantity = '" . $_POST['textaddprodqty'] . "' WHERE product_id = '" . $_POST['product_id'] . "';");
+																																																case 'editproduct':
+																																																	$editproduct = mysqli_query($connection, "UPDATE products SET seller_id = '" . $_POST['textseller_id'] . "', productname = '" . $_POST['textaddprodname'] . "', productdesc = '" . $_POST['textaddproddesc']  . "', price = '" . $_POST['textaddprodprice'] . "', quantity = '" . $_POST['textaddprodqty'] . "', availat = '" . $_POST['textaddprodavailat'] . "', availuntil = '" . $_POST['textaddprodavailuntil'] . "', unit = '" . $_POST['textaddprodunit'] . "' WHERE product_id = '" . $_POST['product_id'] . "';");
 
-																																																										$deleteprod = mysqli_query($connection, "DELETE FROM products_category WHERE product_id = '" . $_POST['product_id'] . "'");
-																																																										if ($deleteprod == TRUE) {
-																																																											foreach (explode('#', $_POST['textaddcategory']) as $key => $value) {
-																																																												if ($value != '') {
-																																																													$sqlcat = "SELECT id FROM products_category WHERE categoryID = '" . $value . "' AND product_id = '" . $_POST['product_id'] . "' ";
-																																																													$rescat = mysqli_query($connection, $sqlcat);
-																																																													$numcat = mysqli_num_rows($rescat);
+																																																	$deleteprod = mysqli_query($connection, "DELETE FROM products_category WHERE product_id = '" . $_POST['product_id'] . "'");
+																																																	if ($deleteprod == TRUE) {
+																																																		foreach (explode('#', $_POST['textaddcategory']) as $key => $value) {
+																																																			if ($value != '') {
+																																																				$sqlcat = "SELECT id FROM products_category WHERE category_id = '" . $value . "' AND product_id = '" . $_POST['product_id'] . "' ";
+																																																				$rescat = mysqli_query($connection, $sqlcat);
+																																																				$numcat = mysqli_num_rows($rescat);
 
-																																																													if ($numcat == 0) {
-																																																														$listofcategories = mysqli_query($connection, "INSERT INTO products_category SET product_id = '" . $_POST['product_id'] . "', categoryID = '" . $value . "';");
-																																																													} else {
-																																																													}
-																																																												}
-																																																											}
-																																																										}
-																																																										break;
+																																																				if ($numcat == 0) {
+																																																					$listofcategories = mysqli_query($connection, "INSERT INTO products_category SET product_id = '" . $_POST['product_id'] . "', category_id = '" . $value . "';");
+																																																				} else {
+																																																				}
+																																																			}
+																																																		}
+																																																	}
+																																																	break;
 
-																																																									case 'deleteproduct':
-																																																										$deleteproduct1 = mysqli_query($connection, "DELETE FROM products WHERE product_id = '" . $_POST['product_id'] . "'");
-																																																										$deleteproduct2 = mysqli_query($connection, "DELETE FROM products_category WHERE product_id = '" . $_POST['product_id'] . "'");
-																																																										$deleteproduct3 = mysqli_query($connection, "DELETE FROM products_image WHERE product_id = '" . $_POST['product_id'] . "'");
-																																																										break;
+																																																case 'deleteproduct':
+																																																	$deleteproduct1 = mysqli_query($connection, "DELETE FROM products WHERE product_id = '" . $_POST['product_id'] . "'");
+																																																	$deleteproduct2 = mysqli_query($connection, "DELETE FROM products_category WHERE product_id = '" . $_POST['product_id'] . "'");
+																																																	$deleteproduct3 = mysqli_query($connection, "DELETE FROM products_image WHERE product_id = '" . $_POST['product_id'] . "'");
+																																																	break;
 
-																																																									case 'editproductsample':
-																																																										$deleteprod = mysqli_query($connection, "DELETE FROM products_category WHERE product_id = '" . $_POST['product_id'] . "'");
-																																																										if ($deleteprod == TRUE) {
-																																																											foreach (explode('#', $_POST['textaddcategory']) as $key => $value) {
-																																																												if ($value != '') {
-																																																													$sqlcat = "SELECT id FROM products_category WHERE categoryID = '" . $value . "' AND product_id = '" . $_POST['product_id'] . "' ";
-																																																													$rescat = mysqli_query($connection, $sqlcat);
-																																																													$numcat = mysqli_num_rows($rescat);
+																																																case 'editproductsample':
+																																																	$deleteprod = mysqli_query($connection, "DELETE FROM products_category WHERE product_id = '" . $_POST['product_id'] . "'");
+																																																	if ($deleteprod == TRUE) {
+																																																		foreach (explode('#', $_POST['textaddcategory']) as $key => $value) {
+																																																			if ($value != '') {
+																																																				$sqlcat = "SELECT id FROM products_category WHERE category_id = '" . $value . "' AND product_id = '" . $_POST['product_id'] . "' ";
+																																																				$rescat = mysqli_query($connection, $sqlcat);
+																																																				$numcat = mysqli_num_rows($rescat);
 
-																																																													if ($numcat == 0) {
-																																																														$listofcategories = mysqli_query($connection, "INSERT INTO products_category SET product_id = '" . $_POST['product_id'] . "', categoryID = '" . $value . "';");
-																																																													} else {
-																																																													}
-																																																												}
-																																																											}
-																																																										}
-																																																										break;
-																																																								}
+																																																				if ($numcat == 0) {
+																																																					$listofcategories = mysqli_query($connection, "INSERT INTO products_category SET product_id = '" . $_POST['product_id'] . "', category_id = '" . $value . "';");
+																																																				} else {
+																																																				}
+																																																			}
+																																																		}
+																																																	}
+																																																	break;
+																																															}
 								?>

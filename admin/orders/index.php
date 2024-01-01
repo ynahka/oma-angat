@@ -1,7 +1,7 @@
 <style type="text/css">
-    .Iclass {
-        font-size: 1.3rem;
-        cursor: pointer;
+    .Iclass{
+        font-size:1.3rem;
+        cursor:pointer;
         font-weight: 500;
     }
 
@@ -20,28 +20,27 @@
         border: 1px solid #CCC;
     }
 
-    .pagination li:first-child {
+    .pagination li:first-child{
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
     }
 
-    .pagination li:last-child {
+    .pagination li:last-child{
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
     }
 
-    ul.pagination li:hover {
+    ul.pagination li:hover{
         background-color: #3a4651;
         color: white !important;
     }
 
-    .pagination .active {
+    .pagination .active{
         background-color: #3a4651;
         color: white !important;
     }
 
-    .table thead th,
-    .table th {
+    .table thead th, .table th {
         background-color: #9e9e9e !important;
     }
 
@@ -62,6 +61,12 @@
                 <div class="row page-titles rowpageheaderpadd" style="padding-bottom: 0px;">
                     <div class="col-md-6 col-6 align-self-center" style="padding-left:10px;">
                         <h3 class="mb-0 mt-0 headerfontfont text-themecolor" style="font-weight: 600;">ORDERS</h3>
+                    </div>
+                    <div class="col-md-6 col-6 align-self-center" style="padding-right:10px;">
+                        <ol class="breadcrumb float-right headerfontfont">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                            <li class="breadcrumb-item active">Orders</li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -135,7 +140,7 @@
     </div>
 </div>
 
-<?php
-include("orders/modal.php");
-include("orders/script.php");
+<?php 
+    include("orders/modal.php"); 
+    include("orders/script.php"); 
 ?>
