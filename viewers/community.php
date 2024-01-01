@@ -94,7 +94,7 @@ session_start();
                     </div>
                 <?php } ?>
             </div>
-            <div class="row justify-content-center">
+            <div class="row">
                 <!-- <div class="row1 col-md-7 col-lg-4">
                     <div class="blog-widget">
                         <h3 class="blog-widget-title">Search Post</h3>
@@ -105,19 +105,7 @@ session_start();
                     </div>
                 </div> -->
 
-                <div class="col-lg-8">
-                    <!-- <div class="row">
-                        <div class="col-lg-12">
-                            <div class="top-filter">
-                                <button class="filter-show">
-                                    <a href="#">
-                                        <i class="icofont-plus"></i>
-                                        <span>ADD POST</span>
-                                    </a>
-                                </button>
-                            </div>
-                        </div>
-                    </div> -->
+                <div class="col-lg-12">
                     <div class="row">
                         <?php
                         $ret = mysqli_query($connection, "SELECT po.id as id,
@@ -135,7 +123,7 @@ session_start();
                         if ($num > 0) {
                             while ($row = mysqli_fetch_array($ret)) {
                         ?>
-                                <div class="col-md-6 col-lg-6">
+                                <div class="col-sm-4 col-lg-4">
                                     <div class="blog-card">
                                         <div class="blog-media">
                                             <a class="blog-img" href="blog-details.php?id=<?php echo $row['id']; ?>">
@@ -323,7 +311,7 @@ session_start();
             cache: false,
             processData: false,
             success: function(data) {
-                window.location = "index.php?url=community";
+                window.location = "community.php";
             }
         });
     }

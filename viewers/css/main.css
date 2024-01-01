@@ -7001,12 +7001,12 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align:end;
-  -ms-flex-align: end;
-  align-items: end;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
+  -webkit-box-align:start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .filter-label {
@@ -7165,7 +7165,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   /* margin: 0px 2.5px 30px; */
   /* padding: 10px; */
   background: var(--secondary);
-  border-bottom: 8px solid var(--primary);
+  /* border-bottom: 8px solid var(--primary); */
   /* box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4); */
 
 }
