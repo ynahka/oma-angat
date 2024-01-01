@@ -1134,7 +1134,7 @@ html body .waves-notransition {
 .btn-custom.disabled {
 	background: #009efb;
 	border: 1px solid #009efb;
-	color: #ffffff
+	color: #ffffff;
 }
 
 .btn-custom.disabled:hover,
@@ -1142,55 +1142,55 @@ html body .waves-notransition {
 	background: #009efb;
 	opacity: 0.8;
 	color: #ffffff;
-	border: 1px solid #009efb
+	border: 1px solid #009efb;
 }
 
 .btn-secondary,
 .btn-secondary.disabled {
 	background: #868e96!important;
 	border: 1px solid #868e96;
-	color: #ffffff!important
+	color: #ffffff!important;
 }
 
 .btn-secondary.disabled:hover,
 .btn-secondary:hover {
 	background: #868e96;
 	opacity: 0.7;
-	border: 1px solid #868e96
+	border: 1px solid #868e96;
 }
 
 .btn-secondary.active,
 .btn-secondary.disabled.active,
 .btn-secondary.disabled:focus,
 .btn-secondary:focus {
-	background: #868e96
+	background: #868e96;
 }
 
 .btn-primary,
 .btn-primary.disabled {
-	background: #7460ee;
-	border: 1px solid #7460ee
+	background: #4C644B;
+	border: 1px solid #4C644B;
 }
 
 .btn-primary.disabled:hover,
 .btn-primary:hover {
-	background: #7460ee;
+	background: #4C644B;
 	opacity: 0.7;
-	border: 1px solid #7460ee
+	border: 1px solid #4C644B;
 }
 
 .btn-primary.active,
 .btn-primary.disabled.active,
 .btn-primary.disabled:focus,
 .btn-primary:focus {
-	background: #6352ce
+	background: #4C644B;
 }
 
 .btn-themecolor,
 .btn-themecolor.disabled {
-	background: #009efb;
+	background: #4C644B;
 	color: #ffffff;
-	border: 1px solid #009efb
+	border: 1px solid #4C644B
 }
 
 .btn-themecolor.disabled:hover,

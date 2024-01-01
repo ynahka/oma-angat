@@ -2,7 +2,8 @@
     <div class="scroll-sidebar">
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                <li class="nav-small-cap text-center" style="margin-top:20px; font-weight:600; font-size: 16px;color: #4C644B ;">SELLERBOARD</li>
+                <li class="nav-small-cap text-center"
+                    style="margin-top:20px; font-weight:600; font-size: 16px;color: #4C644B ;">SELLERBOARD</li>
                 <li class="nav-devider" style="margin: 5px 0;"></li>
 
 
