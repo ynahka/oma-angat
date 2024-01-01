@@ -69,6 +69,7 @@ if (empty($_SESSION['user_id'])) {
                                         </div>
                                         <div class="col-lg-2">
                                             <div class="profile-btn">
+
                                                 <a href="change-password.php">change password</a>
                                             </div>
                                         </div>

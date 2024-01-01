@@ -299,10 +299,10 @@
         <i class="fas fa-paper-plane"></i>
         <span>Chat</span>
     </a>
-    <button class="cart-btn" title="Cartlist">
+    <a href="cart.php" title="cart">
         <i class="fas fa-shopping-basket"></i>
         <span>Cart</span>
-    </button>
+    </a>
     <a href="profile.php" title="Notification List">
         <i class="fas fa-user"></i>
         <span>Account</span>

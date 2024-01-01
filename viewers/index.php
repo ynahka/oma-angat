@@ -92,22 +92,22 @@ include 'header.php';
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-6">
                             <div class="promo-img">
-                                <a href=""><img src="images/why1.svg" alt="promo"></a>
+                                <a href="javascript:void(0)"><img src="images/why1.svg" alt="promo"></a>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-6">
                             <div class="promo-img">
-                                <a href=""><img src="images/why2.svg" alt="promo"></a>
+                                <a href="javascript:void(0)"><img src="images/why2.svg" alt="promo"></a>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-6">
                             <div class="promo-img">
-                                <a href=""><img src="images/why3.svg" alt="promo"></a>
+                                <a href="javascript:void(0)"><img src="images/why3.svg" alt="promo"></a>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-6">
                             <div class="promo-img">
-                                <a href=""><img src="images/why4.svg" alt="promo"></a>
+                                <a href="javascript:void(0)"><img src="images/why4.svg" alt="promo"></a>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ include 'header.php';
             <div class="row" style="margin-top: 30px;">
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="promo-img">
-                        <a><img src="images/works.svg" alt="banner"></a>
+                        <a href="javascript:void(0)"><img src="images/works.svg" alt="banner"></a>
                     </div>
                 </div>
                 <!-- <div class="col-lg-12">
@@ -143,7 +143,7 @@ include 'header.php';
             <div class="row">
                 <div class="col-lg-12">
                     <div class="promo-img">
-                        <a href=""><img src="images/flow.svg" alt="promo"></a>
+                        <a href="javascript:void(0)"><img src="images/flow.svg" alt="promo"></a>
                     </div>
                 </div>
             </div>
