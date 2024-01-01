@@ -102,10 +102,14 @@ if (empty($_SESSION['user_id'])) {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
                                 <div class="col-lg-12">
                                     <div class="account-card">
                                         <div class="account-title">
-                                            <h4>delivery address</h4>
+                                            <h4>address</h4>
                                             <!-- <button data-bs-toggle="modal" data-bs-target="#address-edit">add address</button> -->
                                         </div>
                                         <div class="account-content">
@@ -126,11 +130,8 @@ if (empty($_SESSION['user_id'])) {
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
-
             </section>
         <?php
         }
@@ -158,11 +159,11 @@ if (empty($_SESSION['user_id'])) {
                         </div>
                         <div class="form-group">
                             <label class="form-label">name</label>
-                            <input class="form-control" type="text" value="Miron Mahmud">
+                            <input class="form-control" type="text" placeholder="Enter Name">
                         </div>
                         <div class="form-group">
                             <label class="form-label">email</label>
-                            <input class="form-control" type="text" value="mironcoder@gmail.com">
+                            <input class="form-control" type="text" placeholder="Enter Email">
                         </div>
                         <button class="form-btn" type="submit">save profile info</button>
                     </form>

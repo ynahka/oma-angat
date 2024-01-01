@@ -101,10 +101,10 @@
                                  </li>
                                  <li class="navbar-item dropdown">
                                      <a href=""><i class="fa-solid fa-store"></i></a>
-                                     <a class="navbar-link dropdown-arrow" href="javascript:void(0)">Shop</a>
+                                     <a class="navbar-link dropdown-arrow" href="products.php">Shop</a>
                                      <ul class="dropdown-position-list">
                                          <li><a href="all-farmer-shop.php">Farmer's Market</a></li>
-                                         <li><a href="products.php">All product</a></li>
+                                         <li><a href="products.php">All products</a></li>
                                      </ul>
                                  </li>
                              </ul>

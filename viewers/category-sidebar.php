@@ -212,22 +212,22 @@
             // Assuming you have a variable $username containing the logged-in user's username
             $username = $_SESSION['username'];
         ?>
-        <div class="nav-btn">
-            <a href="javascript:void(0)">
-                <i class="fa fa-person-alt"></i>
-                <span style="color: #39404a;">Welcome back, <?php echo $username; ?>!</span>
-            </a>
-        </div>
+            <div class="nav-btn">
+                <a href="javascript:void(0)">
+                    <i class="fa fa-person-alt"></i>
+                    <span style="color: #39404a;">Welcome back, <?php echo $username; ?>!</span>
+                </a>
+            </div>
         <?php
         } else {
             // Display the "Get Started" button if the user is not logged in
         ?>
-        <div class="nav-btn">
-            <a href="../buyeraccount/index.php" class="btn btn-inline">
-                <i class="fa fa-unlock-alt"></i>
-                <span>Get Started</span>
-            </a>
-        </div>
+            <div class="nav-btn">
+                <a href="../buyeraccount/index.php" class="btn btn-inline">
+                    <i class="fa fa-unlock-alt"></i>
+                    <span>Get Started</span>
+                </a>
+            </div>
         <?php
         }
         ?>
@@ -258,7 +258,7 @@
                 <a class="nav-link" href="profile.php"><i class="icofont-ui-user"></i>my account</a>
             </li>
             <li>
-                <a class="nav-link" href="purchases.php"><i class="icofont-ui-user"></i>My Purchases</a>
+                <a class="nav-link" href="purchases.php"><i class="fas fa-shopping-basket"></i>My Purchases</a>
             </li>
             <div class="nav-info-group">
                 <li><a class="nav-link" href="about.php"><i class="icofont-info-circle"></i>about us</a></li>
