@@ -2,8 +2,7 @@
     <div class="scroll-sidebar">
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                <li class="nav-small-cap text-center"
-                    style="margin-top:20px; font-weight:600; font-size: 16px;color: #4C644B ;">SELLERBOARD</li>
+                <li class="nav-small-cap text-center" style="margin-top:20px; font-weight:600; font-size: 16px;color: #4C644B ;">SELLERBOARD</li>
                 <li class="nav-devider" style="margin: 5px 0;"></li>
 
 
@@ -25,7 +24,7 @@
                     </a>
                 </li>
                 <li id="maincommunity">
-                    <a href="index.php?url=community"><i class="fas fa-blog"></i>
+                    <a href="../viewers/community.php"><i class="fas fa-blog"></i>
                         <span class="hide-menu">&nbsp;&nbsp;Community</span>
                     </a>
                 </li>
