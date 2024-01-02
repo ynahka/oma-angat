@@ -1,11 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include("connect.php");
+session_start();
+?>
 
-<?php include 'header.php'; ?>
-<link rel="stylesheet" href="css/contact.css">
+<head>
+    <?php include 'header.php'; ?>
+    <?php include 'community/header.php'; ?>
+    <link rel="manifest" href="manifest.json" />
+    <link href="/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
 
 <body>
-    <?php include('header-nav.php'); ?>
+
+    <div class="loadload">
+        <div class="spinner-border text-secondary" role="status"></div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            setTimeout(function() {
+                $(".loadload").hide();
+            }, 300);
+        })
+    </script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+    </script>
+    <script src="/script.js"></script>
+    <!--breadcrumbs area start-->
+    <?php
+    // Check if the user is logged in
+    $isLoggedIn = !empty($_SESSION['user_id']);;
+    if ($isLoggedIn) {
+        include 'header-nav-buyer.php'; // Include the file for logged-in users
+    } else {
+        include 'header-nav.php'; // Include the file for non-logged-in users
+    }
+    ?>
     <?php include('category-sidebar.php'); ?>
 
 
