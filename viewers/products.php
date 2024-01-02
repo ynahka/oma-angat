@@ -626,6 +626,32 @@ $(function() {
 
     dsplylistoffiltercategory();
 })
+// products.php
+$(function() {
+    var searchParam = new URLSearchParams(window.location.search).get('search');
+    if (searchParam) {
+        // Handle search term, e.g., update the search input field
+        $("#txtsearchspecproduct").val(searchParam);
+        // Call the function to display products based on the search term
+        fncdisplaylistofproducts();
+    }
+
+});
+
+function fncdisplaylistofproducts() {
+    var srchprod = $("#txtsearchspecproduct").val();
+    var filteracc = $("#filteraccomodation").val();
+    $.ajax({
+        type: 'POST',
+        url: 'products_class.php',
+        data: 'srchprod=' + srchprod + '&filteracc=' + filteracc + '&form=fncdisplaylistofproducts',
+        success: function(data) {
+            $("#displaylistofrooms").html(data);
+        }
+    });
+}
+
+
 
 function fncdisplaylistofproducts() {
     var srchprod = $("#txtsearchspecproduct").val();

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'header.php'; ?>
+
+<?php include 'header.php';
+include('connect.php') ?>
 <link rel="stylesheet" href="css/all-category.css">
 
 <body>
@@ -23,138 +25,66 @@
     <!--=====================================
                     CATEGORY PART START
         =======================================-->
-    <section class="inner-section">
-        <div class="container">
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 justify-content-center">
-                <div class="col">
-                    <div class="category-wrap">
-                        <div class="category-media">
-                            <img src="images/category/dairy.jpg" alt="category">
-                            <div class="category-overlay">
-                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="category-meta">
-                            <h4>dairy items</h4>
-                            <p>(25 items)</p>
-                        </div>
+    <?php
+    // Your SQL query to retrieve store information
+    $sql = "SELECT users_table.*, user_details.profileimage FROM users_table 
+       INNER JOIN user_details ON users_table.user_id = user_details.user_id 
+       WHERE users_table.usertype= 'SELLER' AND users_table.status= 'APPROVED'";
+    $result = mysqli_query($connection, $sql);
+
+    $Pitems = [];
+
+    // Check if the query was successful
+    if ($result) {
+        // Fetch the result row by row
+        while ($row = mysqli_fetch_assoc($result)) {
+            // Retrieve the image filename from the database
+            $imageFilename = $row['profileimage'];
+
+            $Pitem = [
+                "id" => $row['user_id'],
+                "name" => $row['username'],
+                "img" => "../OmaangatImages/ProfileImage/{$imageFilename}", // Use the image filename from the database
+                "url" => "shop-1column.php", // You may want to customize this based on your requirements
+                "title" => $row['username'],
+                // Add more fields as needed
+            ];
+
+            // Add the store item to the array
+            $Pitems[] = $Pitem;
+        }
+
+        // Free the result set
+        mysqli_free_result($result);
+    } else {
+        // Handle the case where the query was not successful
+        echo 'Error executing query: ' . mysqli_error($connection);
+    }
+
+    ?>
+
+
+
+
+    <!-- By Farmer's Market -->
+    <section class="section suggest-part">
+        <div class="container suggest">
+            <ul class="suggest-slider slider-arrow">
+                <?php foreach ($Pitems as $Pitem) : ?>
+                <li>
+                    <a class="suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
+                        <img src="<?php echo $Pitem['img'] ?>">
+                    </a>
+                    <div class="suggest-info" style="text-align: center; font-weight:500; ">
+                        <p><?php echo $Pitem['title'] ?></p>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="category-wrap">
-                        <div class="category-media">
-                            <img src="images/category/drinks.jpg" alt="category">
-                            <div class="category-overlay">
-                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="category-meta">
-                            <h4>coffe & drinks</h4>
-                            <p>(25 items)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="category-wrap">
-                        <div class="category-media">
-                            <img src="images/category/fish.jpg" alt="category">
-                            <div class="category-overlay">
-                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="category-meta">
-                            <h4>fish items</h4>
-                            <p>(25 items)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="category-wrap">
-                        <div class="category-media">
-                            <img src="images/category/groceries.jpg" alt="category">
-                            <div class="category-overlay">
-                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="category-meta">
-                            <h4>grocery items</h4>
-                            <p>(25 items)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="category-wrap">
-                        <div class="category-media">
-                            <img src="images/category/meat.jpg" alt="category">
-                            <div class="category-overlay">
-                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="category-meta">
-                            <h4>meat items</h4>
-                            <p>(25 items)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="category-wrap">
-                        <div class="category-media">
-                            <img src="images/category/fruits.jpg" alt="category">
-                            <div class="category-overlay">
-                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="category-meta">
-                            <h4>fresh fruits</h4>
-                            <p>(25 items)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="category-wrap">
-                        <div class="category-media">
-                            <img src="images/category/seafoods.jpg" alt="category">
-                            <div class="category-overlay">
-                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="category-meta">
-                            <h4>seafoods</h4>
-                            <p>(25 items)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="category-wrap">
-                        <div class="category-media">
-                            <img src="images/category/fastfoods.jpg" alt="category">
-                            <div class="category-overlay">
-                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="category-meta">
-                            <h4>fastfoods</h4>
-                            <p>(25 items)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="category-wrap">
-                        <div class="category-media">
-                            <img src="images/category/fastfoods.jpg" alt="category">
-                            <div class="category-overlay">
-                                <a href="shop-3column.html"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="category-meta">
-                            <h4>fastfoods</h4>
-                            <p>(25 items)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </li>
+                <?php endforeach; ?>
+
+            </ul>
         </div>
     </section>
+
     <!--=====================================
                     CATEGORY PART END
         =======================================-->
@@ -171,7 +101,8 @@
                 <div class="col-lg-6 mx-auto">
                     <div class="countdown-content">
                         <h2>Are you a Farmer?</h2>
-                        <p>Join and watch your fields grow to ensures fair compensation for your dedication. Your hard work nourishes not just the land but also the community.</p>
+                        <p>Join and watch your fields grow to ensures fair compensation for your dedication. Your hard
+                            work nourishes not just the land but also the community.</p>
                         <a href="login.php" class="btn btn-outline">
                             <i class="fa-solid fa-store"></i>
                             <span>Start Selling</span>

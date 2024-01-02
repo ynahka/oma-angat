@@ -47,10 +47,12 @@
                          <span>Account</span>
                      </button> -->
 
-                     <form class="header-form">
-                         <button><i class="fas fa-search"></i></button>
-                         <input type="text" placeholder="Search for products" id="txtsearchspecproduct">
+                     <!-- Update the search form in the header -->
+                     <form class="header-form" action="products.php" method="GET">
+                         <button type="submit"><i class="fas fa-search"></i></button>
+                         <input type="text" name="search" placeholder="Search for products" id="txtsearchspecproduct">
                      </form>
+
 
                      <div class="header-widget-group">
                          <a href="cart.php" class="header-widget" title="cart">
