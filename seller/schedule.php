@@ -74,6 +74,19 @@
                                     <input type="text" class="form-control form-control-sm rounded-0" name="price" id="price" required>
                                 </div>
                                 <div class="form-group mb-2">
+                                    <label for="unit" class="control-label">Unit</label>
+                                    <select name="unit" id="unit" style="font-size: 0.9rem;">
+                                        <option value="">- Select Unit -</option>
+                                        <option value="Kg">Kg</option>
+                                        <option value="grams">grams</option>
+                                        <option value="Liters">Liters</option>
+                                        <option value="ml">ml</option>
+                                        <option value="Tray">Tray</option>
+                                        <option value="piece">piece</option>
+                                        <!-- Add more options as needed -->
+                                    </select>
+                                </div>
+                                <div class="form-group mb-2">
                                     <label for="start_datetime" class="control-label">Start</label>
                                     <input type="datetime-local" class="form-control form-control-sm rounded-0" name="start_datetime" id="start_datetime" required>
                                 </div>
@@ -113,6 +126,8 @@
                             <dd id="quantity" class=""></dd>
                             <dt class="text-muted">Price</dt>
                             <dd id="price" class=""></dd>
+                            <dt class="text-muted">Unit</dt>
+                            <dd id="unit" class=""></dd>
                             <dt class="text-muted">Start</dt>
                             <dd id="start" class=""></dd>
                             <dt class="text-muted">End</dt>
@@ -193,6 +208,7 @@
                         _details.find('#description').text(scheds[id].description)
                         _details.find('#quantity').text(scheds[id].quantity)
                         _details.find('#price').text(scheds[id].price)
+                        _details.find('#unit').text(scheds[id].unit)
                         _details.find('#start').text(scheds[id].sdate)
                         _details.find('#end').text(scheds[id].edate)
                         _details.find('#edit,#delete').attr('data-id', id)
@@ -232,6 +248,7 @@
                 _form.find('[name="description"]').val(scheds[id].description)
                 _form.find('[name="quantity"]').val(scheds[id].quantity)
                 _form.find('[name="price"]').val(scheds[id].price)
+                _form.find('[name="unit"]').val(scheds[id].unit)
                 _form.find('[name="start_datetime"]').val(String(scheds[id].start_datetime).replace(" ",
                     "T"))
                 _form.find('[name="end_datetime"]').val(String(scheds[id].end_datetime).replace(" ", "T"))

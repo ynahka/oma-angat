@@ -70,9 +70,9 @@ if ($result->num_rows == 0) {
 
 if (empty($id)) {
     $generateID = generateID($connection, 'harvest_id', 'harvestsched', 'harv');
-    $sql = "INSERT INTO `harvestsched` (`harvest_id`,`title`,`description`,`quantity`,`price`,`start_datetime`,`end_datetime`,`date_added`,`DATETIME_LOG`, `seller_id`) VALUES ('$generateID','$title','$description','$quantity','$price','$start_datetime','$end_datetime',CURDATE(),CURRENT_TIMESTAMP(), '$user_id')";
+    $sql = "INSERT INTO `harvestsched` (`harvest_id`,`title`,`description`,`quantity`,`price`, `unit`,`start_datetime`,`end_datetime`,`date_added`,`DATETIME_LOG`, `seller_id`) VALUES ('$generateID','$title','$description','$quantity','$price', '$unit', '$start_datetime','$end_datetime',CURDATE(),CURRENT_TIMESTAMP(), '$user_id')";
 } else {
-    $sql = "UPDATE `harvestsched` set `title` = '{$title}', `description` = '{$description}', `quantity` = '{$quantity}', `price` = '{$price}', `start_datetime` = '{$start_datetime}', `end_datetime` = '{$end_datetime}', `date_added` = CURDATE(), `DATETIME_LOG` = CURRENT_TIMESTAMP(), `seller_id` = '$user_id' where `id` = '{$id}'";
+    $sql = "UPDATE `harvestsched` set `title` = '{$title}', `description` = '{$description}', `quantity` = '{$quantity}', `price` = '{$price}', `unit` = '{$unit}', `start_datetime` = '{$start_datetime}', `end_datetime` = '{$end_datetime}', `date_added` = CURDATE(), `DATETIME_LOG` = CURRENT_TIMESTAMP(), `seller_id` = '$user_id' where `id` = '{$id}'";
 }
 $save = $connection->query($sql);
 if ($save) {
