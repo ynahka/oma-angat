@@ -1,69 +1,7 @@
 <!--=====================================
                 CATEGORY SIDEBAR PART START
         =======================================-->
-<aside class="category-sidebar">
-    <div class="category-header">
-        <h4 class="category-title">
-            <i class="fas fa-align-left"></i>
-            <span>categories</span>
-        </h4>
-        <button class="category-close"><i class="icofont-close"></i></button>
-    </div>
-    <ul class="category-list">
-        <li class="category-item">
-            <a class="category-link dropdown-link" href="faq.php">
-                <i class="flaticon-vegetable"></i>
-                <span>vegetables</span>
-            </a>
-            <!-- <ul class="dropdown-list">
-                        <li><a href="#">Sitaw</a></li>
-                        <li><a href="#">Cabbage</a></li>
-                        <li><a href="#">Potato</a></li>
-                    </ul> -->
-        </li>
 
-        <li class="category-item">
-            <a class="category-link dropdown-link" href="#">
-                <i class="flaticon-fruit"></i>
-                <span>fruits</span>
-            </a>
-            <!-- <ul class="dropdown-list">
-                        <li><a href="#">Berries</a></li>
-                        <li><a href="#">Banana</a></li>
-                        <li><a href="#">Mango</a></li>
-                        <li><a href="#">Coconut</a></li>
-                    </ul> -->
-        </li>
-        <li class="category-item">
-            <a class="category-link dropdown-link" href="#">
-                <i class="flaticon-dairy-products"></i>
-                <span>Dairy farm</span>
-            </a>
-            <!-- <ul class="dropdown-list">
-                        <li><a href="#">Eggs</a></li>
-                        <li><a href="#">Itlog na Pula</a></li>
-                        <li><a href="#">Organic Eggs</a></li>
-                    </ul> -->
-        </li>
-
-
-        <li class="category-item">
-            <a class="category-link dropdown-link" href="#">
-                <i class="flaticon-dried-fruit"></i>
-                <span>dried fish</span>
-            </a>
-            <!-- <ul class="dropdown-list">
-                        <li><a href="#">Tuyo</a></li>
-                        <li><a href="#">Dilis</a></li>
-                        <li><a href="#">Danggit</a></li>
-                    </ul> -->
-        </li>
-
-    </ul>
-    <div class="category-footer">
-        <p>All rights reserved by <a href="index.php">Oma-Angat</a></p>
-    </div>
-</aside>
 <!--=====================================
                 CATEGORY SIDEBAR PART END
         =======================================-->
@@ -71,7 +9,7 @@
 <!--=====================================
                   CART SIDEBAR PART START
         =======================================-->
-<aside class="cart-sidebar">
+<!-- <aside class="cart-sidebar">
     <div class="cart-header">
         <div class="cart-total">
             <i class="fas fa-shopping-basket"></i>
@@ -182,17 +120,12 @@
         </li>
     </ul>
     <div class="cart-footer">
-        <!-- <button class="coupon-btn">Do you have a coupon code?</button> -->
-        <!-- <form class="coupon-form">
-                    <input type="text" placeholder="Enter your coupon code">
-                    <button type="submit"><span>apply</span></button>
-                </form> -->
         <a class="cart-checkout-btn" href="checkout.php">
             <span class="checkout-label">Proceed to Checkout</span>
             <span class="checkout-price">P369.78</span>
         </a>
     </div>
-</aside>
+</aside> -->
 <!--=====================================
                     CART SIDEBAR PART END
         =======================================-->
@@ -247,11 +180,10 @@
                         </ul> -->
             </li>
             <li>
-                <a class="nav-link dropdown-link" href="#"><i class="fa-solid fa-store"></i>shop</a>
+                <a class="nav-link dropdown-link" href="products.php"><i class="fa-solid fa-store"></i>shop</a>
                 <ul class="dropdown-list">
-                    <li><a href="shop-1column.php">Farmer's Market</a></li>
-                    <li><a href="shop-2column.php">Categories</a></li>
-                    <li><a href="shop-2column.php">Products</a></li>
+                    <li><a href="all-farmer-shop.php">Farmer's Market</a></li>
+                    <li><a href="products.php">Products</a></li>
                 </ul>
             </li>
             <li>
@@ -299,11 +231,11 @@
         <i class="fas fa-paper-plane"></i>
         <span>Chat</span>
     </a>
-    <a onclick="btnaddtocart()" title="cart">
+    <a onclick="cart.php" title="cart">
         <i class="fas fa-shopping-basket"></i>
         <span>Cart</span>
     </a>
-    <a onclick="btnaddtocart()" title="Notification List">
+    <a onclick="profile.php" title="Notification List">
         <i class="fas fa-user"></i>
         <span>Account</span>
     </a>

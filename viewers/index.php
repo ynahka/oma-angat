@@ -1266,5 +1266,4 @@ include 'header.php';
         })
     }
 </script>
-</php>pt>
 </php>
