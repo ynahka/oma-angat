@@ -71,14 +71,14 @@ include('connect.php') ?>
         <div class="container suggest">
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
-                <li>
-                    <a class="suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
-                        <img src="<?php echo $Pitem['img'] ?>">
-                    </a>
-                    <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                        <p><?php echo $Pitem['title'] ?></p>
-                    </div>
-                </li>
+                    <li>
+                        <a class="suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
+                            <img src="<?php echo $Pitem['img'] ?>">
+                        </a>
+                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
+                            <p><?php echo $Pitem['title'] ?></p>
+                        </div>
+                    </li>
                 <?php endforeach; ?>
 
             </ul>
@@ -103,7 +103,7 @@ include('connect.php') ?>
                         <h2>Are you a Farmer?</h2>
                         <p>Join and watch your fields grow to ensures fair compensation for your dedication. Your hard
                             work nourishes not just the land but also the community.</p>
-                        <a href="login.php" class="btn btn-outline">
+                        <a href="../seller/login.php" class="btn btn-outline">
                             <i class="fa-solid fa-store"></i>
                             <span>Start Selling</span>
                         </a>
