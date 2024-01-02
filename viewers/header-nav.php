@@ -70,7 +70,7 @@
                              <button>Get Started</button>
 
                          </a>
-                         <a href="get-started.php" class="header-widget-login" title="Join">
+                         <a href="login-btn.php" class="header-widget-login" title="Join">
                              <button>Login</button>
 
                          </a>

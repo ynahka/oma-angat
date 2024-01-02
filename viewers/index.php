@@ -76,8 +76,7 @@ include 'header.php';
     </section>
 
 
-
-    <div class="section promo-part">
+    <section class="banner-part-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -86,69 +85,39 @@ include 'header.php';
                     </div>
                 </div>
             </div>
-            <!-- <div class="promo-part"> -->
-            <div class="section promo-part">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                            <div class="promo-img">
-                                <a href="javascript:void(0)"><img src="images/why1.svg" alt="promo"></a>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                            <div class="promo-img">
-                                <a href="javascript:void(0)"><img src="images/why2.svg" alt="promo"></a>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                            <div class="promo-img">
-                                <a href="javascript:void(0)"><img src="images/why3.svg" alt="promo"></a>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                            <div class="promo-img">
-                                <a href="javascript:void(0)"><img src="images/why4.svg" alt="promo"></a>
-                            </div>
-                        </div>
+            <div class="row">
+                <!-- <div class="col-lg-12"> -->
+                <!-- <div class="col-lg-12"> -->
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="home-grid-promo">
+                        <a href="all-farmer-shop.php"><img src="images/why1.svg" alt="referral"></a>
                     </div>
                 </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="home-grid-promo">
+                        <a href="all-farmer-shop.php"><img src="images/why2.svg" alt="donate"></a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="home-grid-promo">
+                        <a href="all-farmer-shop.php"><img src="images/why3.svg" alt="donate"></a>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <!-- </div> -->
             </div>
-            <!-- </div> -->
             <div class="row" style="margin-top: 30px;">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="promo-img">
-                        <a href="javascript:void(0)"><img src="images/works.svg" alt="banner"></a>
-                    </div>
-                </div>
-                <!-- <div class="col-lg-12">
-                    <div class="home-category-slider slider-arrow slider-dots">
-                        <a href="#"><img src="images/works.svg" alt="banner"></a>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="section promo-part">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-heading">
-                        <h2>How to Order?</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="promo-img">
-                        <a href="javascript:void(0)"><img src="images/flow.svg" alt="promo"></a>
+                <div class="col-lg-12 order-0 order-lg-1 order-xl-1">
+                    <div class="home-grid-slider slider-arrow slider-dots">
+                        <a href="javascript:void(0)"><img src="images/workss.svg" alt=""></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+
+
     <!--=====================================
                     BANNER PART START
         =======================================-->
@@ -190,7 +159,24 @@ include 'header.php';
     <!--=====================================
                     BANNER PART END
         =======================================-->
-
+    <div class="section promo-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>How to Order?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="promo-img">
+                        <a href="javascript:void(0)"><img src="images/flow.svg" alt="promo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <?php
     error_reporting(0);
