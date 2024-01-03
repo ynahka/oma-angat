@@ -1,16 +1,18 @@
 <?php
 include("connect.php");
 session_start();
-if (empty($_SESSION['user_id'])) {
+
+if (empty($_SESSION['user_id']) || $_SESSION['usertype'] !== 'SELLER') {
   echo "<script> window.location = 'login.php';</script>";
+  exit(); // Add exit to stop further execution of the script
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <?php
-  session_start();
   include('header.php');
   ?>
 </head>

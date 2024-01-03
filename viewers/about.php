@@ -34,7 +34,7 @@ session_start();
     <!--breadcrumbs area start-->
     <?php
     // Check if the user is logged in
-    $isLoggedIn = !empty($_SESSION['user_id']);;
+    $isLoggedIn = !empty($_SESSION['user_id']) && $_SESSION['usertype'] === 'CUSTOMER';
     if ($isLoggedIn) {
         include 'header-nav-buyer.php'; // Include the file for logged-in users
     } else {
@@ -103,8 +103,11 @@ session_start();
                 <div class="col-lg-6">
                     <div class="about-content">
                         <h2>Our Motive is to build more sustainable future for local farmers and consumers</h2>
-                        <p>Welcome to OMA-ANGAT, your premier destination for fresh, locally sourced agricultural products from the heart of Albay. <br>An all-in-one platform where farmers can receive direct orders from buyers, sell their produce online, and ship their goods at a lower cost.
-                            <br>While buyers can find direct suppliers offering competitive prices — and enjoy higher quality and fresher products to grow their business.
+                        <p>Welcome to OMA-ANGAT, your premier destination for fresh, locally sourced agricultural
+                            products from the heart of Albay. <br>An all-in-one platform where farmers can receive
+                            direct orders from buyers, sell their produce online, and ship their goods at a lower cost.
+                            <br>While buyers can find direct suppliers offering competitive prices — and enjoy higher
+                            quality and fresher products to grow their business.
                         </p>
                     </div>
                     <!-- <ul class="about-list">
@@ -150,7 +153,8 @@ session_start();
                         </div> -->
                         <div class="intro-content">
                             <h3>Empower Local Farmers</h3>
-                            <p> Provide a digital marketplace where farmers in the Albay Area and the Bicol Region can directly showcase and sell their produce to a diverse consumer base.</p>
+                            <p> Provide a digital marketplace where farmers in the Albay Area and the Bicol Region can
+                                directly showcase and sell their produce to a diverse consumer base.</p>
                         </div>
                     </div>
                 </div>
@@ -161,7 +165,8 @@ session_start();
                         </div> -->
                         <div class="intro-content">
                             <h3>Enhance Accessibility</h3>
-                            <p>Create a seamless and reliable online platform that enables consumers to easily browse and purchase fresh agricultural products based on geography and categories.</p>
+                            <p>Create a seamless and reliable online platform that enables consumers to easily browse
+                                and purchase fresh agricultural products based on geography and categories.</p>
                         </div>
                     </div>
                 </div>
@@ -172,7 +177,9 @@ session_start();
                         </div> -->
                         <div class="intro-content">
                             <h3>Eliminate Middlemen</h3>
-                            <p>Facilitate direct transactions between farmers and consumers, cutting out unnecessary intermediaries and ensuring that farmers receive fair compensation for their hard work.</p>
+                            <p>Facilitate direct transactions between farmers and consumers, cutting out unnecessary
+                                intermediaries and ensuring that farmers receive fair compensation for their hard work.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -183,7 +190,8 @@ session_start();
                         </div> -->
                         <div class="intro-content">
                             <h3>Promote Sustainable Agriculture</h3>
-                            <p>Encourage and support practices that contribute to the long-term health of the environment and the local agricultural industry.</p>
+                            <p>Encourage and support practices that contribute to the long-term health of the
+                                environment and the local agricultural industry.</p>
                         </div>
                     </div>
                 </div>
@@ -252,7 +260,12 @@ session_start();
                         </div> -->
                         <div class="choose-text">
 
-                            <p>At OMA-ANGAT, our mission is to develop a user-friendly Web-based Agri-Market tailored for the unique needs of local farmers in the Bicol Region. We aim to streamline the process of selling and buying agricultural products by eliminating unnecessary intermediaries. Through our platform, we seek to empower farmers, enhance consumer access to fresh produce, and contribute to the growth of a sustainable and resilient local food ecosystem.
+                            <p>At OMA-ANGAT, our mission is to develop a user-friendly Web-based Agri-Market tailored
+                                for the unique needs of local farmers in the Bicol Region. We aim to streamline the
+                                process of selling and buying agricultural products by eliminating unnecessary
+                                intermediaries. Through our platform, we seek to empower farmers, enhance consumer
+                                access to fresh produce, and contribute to the growth of a sustainable and resilient
+                                local food ecosystem.
                             </p>
                         </div>
                     </div>
@@ -267,7 +280,11 @@ session_start();
                         </div> -->
                         <div class="choose-text">
 
-                            <p>Our vision at OMA-ANGAT is to create a thriving online community that empowers local farmers in the Albay Area and the Bicol Region, providing them with a dynamic platform to showcase and sell their produce directly to consumers. We aspire to bridge the gap between farmers and buyers, promoting sustainable agriculture and fostering a deeper connection between the people who cultivate our food and those who enjoy it.</p>
+                            <p>Our vision at OMA-ANGAT is to create a thriving online community that empowers local
+                                farmers in the Albay Area and the Bicol Region, providing them with a dynamic platform
+                                to showcase and sell their produce directly to consumers. We aspire to bridge the gap
+                                between farmers and buyers, promoting sustainable agriculture and fostering a deeper
+                                connection between the people who cultivate our food and those who enjoy it.</p>
                         </div>
                     </div>
                 </div>

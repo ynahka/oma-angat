@@ -1,6 +1,10 @@
 <?php
 include("connect.php");
 session_start();
+if (empty($_SESSION['user_id']) || $_SESSION['usertype'] !== 'CUSTOMER') {
+    echo "<script> window.location = '../buyer/login.php';</script>";
+    exit(); // Add exit to stop further execution of the script
+}
 ?>
 
 <head>

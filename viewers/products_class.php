@@ -239,10 +239,10 @@ switch ($_POST['form']) {
 																															break;
 
 																														case 'checkifloggedin':
-																															if ($_SESSION['user_id'] == "") {
-																																echo 1;
+																															if ($_SESSION['user_id'] == "" || $_SESSION['usertype'] !== "CUSTOMER") {
+																																echo 1; // User not logged in or not a customer
 																															} else {
-																																echo 2;
+																																echo 2; // Customer is logged in
 																															}
 																															break;
 

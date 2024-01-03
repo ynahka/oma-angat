@@ -9,6 +9,29 @@ session_start();
     <link rel="manifest" href="manifest.json" />
     <link href="/style.css" rel="stylesheet" />
 </head>
+<style>
+.loadload {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    position: fixed;
+    z-index: 99999;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.2s;
+}
+
+.spinner-border {
+    height: 50px;
+    transform-origin: center center;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+</style>
 
 <body>
 
@@ -17,22 +40,22 @@ session_start();
     </div>
 
     <script type="text/javascript">
-        $(function() {
-            setTimeout(function() {
-                $(".loadload").hide();
-            }, 300);
-        })
+    $(function() {
+        setTimeout(function() {
+            $(".loadload").hide();
+        }, 300);
+    })
     </script>
     <script>
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("service-worker.js");
-        }
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js");
+    }
     </script>
     <script src="/script.js"></script>
     <!--breadcrumbs area start-->
     <?php
     // Check if the user is logged in
-    $isLoggedIn = !empty($_SESSION['user_id']);;
+    $isLoggedIn = !empty($_SESSION['user_id']) && $_SESSION['usertype'] === 'CUSTOMER';
     if ($isLoggedIn) {
         include 'header-nav-buyer.php'; // Include the file for logged-in users
     } else {
@@ -68,7 +91,9 @@ session_start();
                                 <button>What is OMA-ANGAT?</button>
                             </div>
                             <div class="faq-ans">
-                                <p>Oma-Angat is a web-based agricultural market specifically designed for local farmers in Albay. It serves as a platform to connect farmers with buyers, facilitating the sale of fresh produce and other agricultural products.</p>
+                                <p>Oma-Angat is a web-based agricultural market specifically designed for local farmers
+                                    in Albay. It serves as a platform to connect farmers with buyers, facilitating the
+                                    sale of fresh produce and other agricultural products.</p>
                             </div>
                         </div>
                         <div class="faq-child">
@@ -76,7 +101,9 @@ session_start();
                                 <button>How does Oma-Angat benefit local farmers?</button>
                             </div>
                             <div class="faq-ans">
-                                <p>Oma-Angat provides local farmers with a direct channel to reach consumers, ensuring fair prices. It also offers a convenient way for farmers to showcase and sell their products online.</p>
+                                <p>Oma-Angat provides local farmers with a direct channel to reach consumers, ensuring
+                                    fair prices. It also offers a convenient way for farmers to showcase and sell their
+                                    products online.</p>
                             </div>
                         </div>
                         <div class="faq-child">
@@ -84,7 +111,9 @@ session_start();
                                 <button>Who can use Oma-Angat?</button>
                             </div>
                             <div class="faq-ans">
-                                <p>Oma-Angat is tailored for local farmers in Albay who want to expand their market reach and connect with consumers interested in buying fresh, locally sourced agricultural products.</p>
+                                <p>Oma-Angat is tailored for local farmers in Albay who want to expand their market
+                                    reach and connect with consumers interested in buying fresh, locally sourced
+                                    agricultural products.</p>
                             </div>
                         </div>
                         <div class="faq-child">
@@ -92,15 +121,19 @@ session_start();
                                 <button>What are the payment options available?</button>
                             </div>
                             <div class="faq-ans">
-                                <p>Payment options may depends on the availability of payment methods of the farmers or may be based on the agreement between the seller and buyer.</p>
+                                <p>Payment options may depends on the availability of payment methods of the farmers or
+                                    may be based on the agreement between the seller and buyer.</p>
                             </div>
                         </div>
                         <div class="faq-child">
                             <div class="faq-que">
-                                <button>What measures are in place to ensure the quality of products on Oma-Angat?</button>
+                                <button>What measures are in place to ensure the quality of products on
+                                    Oma-Angat?</button>
                             </div>
                             <div class="faq-ans">
-                                <p>Oma-Angat encourages farmers to provide accurate and detailed information about their products. Additionally, the platform has implemented a review and rating system to help maintain product quality and transparency.</p>
+                                <p>Oma-Angat encourages farmers to provide accurate and detailed information about their
+                                    products. Additionally, the platform has implemented a review and rating system to
+                                    help maintain product quality and transparency.</p>
                             </div>
                         </div>
                         <div class="faq-child">
@@ -108,7 +141,9 @@ session_start();
                                 <button>What types products can I sell on Oma-Angat?</button>
                             </div>
                             <div class="faq-ans">
-                                <p>Oma-Angat welcomes a wide range of products categorized as Vegetables, Fruits, Rice, Dairy items, and Dried Products. However, Oma-Angat does not include meats and fish, as their freshness may not be guaranteed during the delivery period.</p>
+                                <p>Oma-Angat welcomes a wide range of products categorized as Vegetables, Fruits, Rice,
+                                    Dairy items, and Dried Products. However, Oma-Angat does not include meats and fish,
+                                    as their freshness may not be guaranteed during the delivery period.</p>
                             </div>
                         </div>
                         <div class="faq-child">
@@ -116,28 +151,40 @@ session_start();
                                 <button>How does Oma-Angat works?</button>
                             </div>
                             <div class="faq-ans">
-                                <p>Oma-Angat operates as a user-friendly online marketplace designed for local farmers in Albay. <br> Here's an overview of how the platform functions:
+                                <p>Oma-Angat operates as a user-friendly online marketplace designed for local farmers
+                                    in Albay. <br> Here's an overview of how the platform functions:
 
 
                                 </p>
                                 <ol>
                                     <li><strong>Registration and Product Listing</strong>
-                                        <p>Farmers sign up on the platform and create profiles, showcasing their farm and available products. They list their produce with detailed descriptions, photos, and prices.</p>
+                                        <p>Farmers sign up on the platform and create profiles, showcasing their farm
+                                            and available products. They list their produce with detailed descriptions,
+                                            photos, and prices.</p>
                                     </li>
                                     <li><strong>Consumer Interaction</strong>
-                                        <p>Buyers visit the Oma-Angat website or app, browse through the listed products, and place orders directly with the farmers.</p>
+                                        <p>Buyers visit the Oma-Angat website or app, browse through the listed
+                                            products, and place orders directly with the farmers.</p>
                                     </li>
                                     <li><strong>Order Processing and Delivery</strong>
-                                        <p>Once an order is placed, the farmer receives a notification. They prepare the products for delivery or pickup based on the arrangement with the buyer. Delivery logistics however are not handled by Oma-Angat</p>
+                                        <p>Once an order is placed, the farmer receives a notification. They prepare the
+                                            products for delivery or pickup based on the arrangement with the buyer.
+                                            Delivery logistics however are not handled by Oma-Angat</p>
                                     </li>
                                     <li><strong>Payment and Transactions</strong>
-                                        <p>Payment methods, agreed upon between the seller and buyer, are utilized for the transactions. These might include cash on delivery, online transfers, or other arrangements.</p>
+                                        <p>Payment methods, agreed upon between the seller and buyer, are utilized for
+                                            the transactions. These might include cash on delivery, online transfers, or
+                                            other arrangements.</p>
                                     </li>
                                     <li><strong>Review and Feedback</strong>
-                                        <p>Buyers have the opportunity to rate and review the products and services received, contributing to maintaining quality standards and building trust within the community.</p>
+                                        <p>Buyers have the opportunity to rate and review the products and services
+                                            received, contributing to maintaining quality standards and building trust
+                                            within the community.</p>
                                     </li>
                                     <li><strong>Continuous Support</strong>
-                                        <p>Oma-Angat offers ongoing support to both farmers and buyers, facilitating communication and addressing any concerns that may arise during the process.</p>
+                                        <p>Oma-Angat offers ongoing support to both farmers and buyers, facilitating
+                                            communication and addressing any concerns that may arise during the process.
+                                        </p>
                                     </li>
                                 </ol>
                             </div>

@@ -144,7 +144,7 @@ if (isset($_GET['code'])) {
 </body>
 
 </html>
-
+<?php include('jscripts.php'); ?>
 <script type="text/javascript">
     $(document).keyup(function(e) {
         var e = e || window.event; // for IE to cover IEs window event-object

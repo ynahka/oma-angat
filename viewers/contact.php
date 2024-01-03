@@ -2,6 +2,15 @@
 include("connect.php");
 session_start();
 ?>
+<?php
+// Check if the user is logged in
+$isLoggedIn = !empty($_SESSION['user_id']) && $_SESSION['usertype'] === 'CUSTOMER';
+if ($isLoggedIn) {
+    include 'header-nav-buyer.php'; // Include the file for logged-in users
+} else {
+    include 'header-nav.php'; // Include the file for non-logged-in users
+}
+?>
 
 <head>
     <?php include 'header.php'; ?>
@@ -11,7 +20,29 @@ session_start();
 
     <link rel="stylesheet" href="css/contact.css">
 </head>
+<style>
+    .loadload {
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        position: fixed;
+        z-index: 99999;
+        background: rgba(255, 255, 255, 0.5);
+        transition: all 0.2s;
+    }
 
+    .spinner-border {
+        height: 50px;
+        transform-origin: center center;
+        width: 50px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+</style>
 
 <body>
 
@@ -33,15 +64,6 @@ session_start();
     </script>
     <script src="/script.js"></script>
     <!--breadcrumbs area start-->
-    <?php
-    // Check if the user is logged in
-    $isLoggedIn = !empty($_SESSION['user_id']);;
-    if ($isLoggedIn) {
-        include 'header-nav-buyer.php'; // Include the file for logged-in users
-    } else {
-        include 'header-nav.php'; // Include the file for non-logged-in users
-    }
-    ?>
     <?php include('category-sidebar.php'); ?>
 
 
