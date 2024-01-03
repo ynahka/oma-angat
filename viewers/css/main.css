@@ -39,7 +39,7 @@
   /* --orange: #e86121; */
   /* --yellow: #ffab10; */
   --body: #cfe2ce;
-  --border: #e8e8e8;
+  --border: rgb(120 130 140 / 13%);
   --heading: #39404a;
   --primary: #4c644b;
   --secondary: #cfe2ce;
@@ -5980,7 +5980,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 }
 
 .countdown-part {
-  padding: 10px 0px;
+  margin-top: 150px;
   background: #cfe2ce;
 
   /* background: linear-gradient(to right, #4C644B, #CFE2CE); */

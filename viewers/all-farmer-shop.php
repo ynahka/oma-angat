@@ -77,7 +77,7 @@ include('connect.php') ?>
         <ul class="suggest-slider slider-arrow">
             <?php foreach ($Pitems as $Pitem) : ?>
                 <li>
-                    <div class="product-card">
+                    <div class="product-card" style="height: 230px;">
                         <a class="product-media" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
                             <img src="<?php echo $Pitem['img'] ?>">
                         </a>
