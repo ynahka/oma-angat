@@ -21,53 +21,17 @@ if (empty($_SESSION['user_id']) || $_SESSION['usertype'] !== 'CUSTOMER') {
     <?php include('category-sidebar.php'); ?>
     <?php include('product-view.php'); ?>
 
-    <section class="banner-part-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-heading">
-                        <h2>Why and How to Support Farmers?</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 order-1 order-lg-0 order-xl-0">
-                    <div class="row">
-                        <div class="col-sm-6 col-lg-12">
-                            <div class="home-grid-promo">
-                                <a href="all-farmer-shop.php"><img src="images/promo/features/referral.svg" alt="referral"></a>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-12">
-                            <div class="home-grid-promo">
-                                <a href="all-farmer-shop.php"><img src="images/promo/features/donation.svg" alt="donate"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 order-0 order-lg-1 order-xl-1">
-                    <div class="home-grid-slider slider-arrow slider-dots">
-                        <!-- <a href="chat.php"><img src="images/promo/features/messaging-system.svg" alt=""></a>
-                        <a href="#"><img src="images/promo/features/harvesting-calendar.svg" alt=""></a> -->
-                        <iframe width="1263" height="480" src="https://www.youtube.com/embed/owXzG8gFfXI" title="Support Family Farming - Help Local Farmers, Achieve Zero Hunger [Advocacy Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jzx3M7G9bns" title="Support Filipino Farmers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <?php
     error_reporting(0);
     session_start();
-
+    define('DEFAULT_IMAGE', 'shoplogo.png');
     $sql = "SELECT users_table.*, user_details.profileimage, user_details.barangay, user_details.city FROM users_table
     INNER JOIN user_details ON users_table.user_id = user_details.user_id
     WHERE users_table.usertype= 'SELLER' AND users_table.status= 'APPROVED'";
-
     $result = mysqli_query($connection, $sql);
-    define('DEFAULT_IMAGE', 'shoplogo.png');
+
     $Pitems = [];
 
     // Check if the query was successful
@@ -75,8 +39,8 @@ if (empty($_SESSION['user_id']) || $_SESSION['usertype'] !== 'CUSTOMER') {
         // Fetch the result row by row
         while ($row = mysqli_fetch_assoc($result)) {
             // Retrieve the image filename from the database
+            $imageFilename = $row['profileimage'];
             $imageFilename = !empty($row['profileimage']) ? $row['profileimage'] : DEFAULT_IMAGE;
-
             $Pitem = [
                 "id" => $row['user_id'],
                 "name" => $row['username'],
@@ -114,16 +78,8 @@ if (empty($_SESSION['user_id']) || $_SESSION['usertype'] !== 'CUSTOMER') {
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
                     <li>
-                        <a class="suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
-                            <img src="<?php echo $Pitem['img'] ?>">
-                        </a>
-                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                            <p><?php echo $Pitem['title'] ?></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="product-card" style="height: 230px;">
-                            <a class="product-media" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
+                        <div class="product-card">
+                            <a class="suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
                                 <img src="<?php echo $Pitem['img'] ?>">
                             </a>
                             <div class="product-content" style=" font-weight:500; ">
