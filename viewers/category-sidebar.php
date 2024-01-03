@@ -148,7 +148,7 @@
             <div class="nav-btn">
                 <a href="javascript:void(0)">
                     <i class="fa fa-person-alt"></i>
-                    <span style="color: #39404a;">Welcome back, <?php echo $username; ?>!</span>
+                    <span style="color: #39404a;">WELCOME, <?php echo $username; ?>!</span>
                 </a>
             </div>
         <?php
@@ -156,7 +156,7 @@
             // Display the "Get Started" button if the user is not logged in
         ?>
             <div class="nav-btn">
-                <a href="../buyeraccount/index.php" class="btn btn-inline">
+                <a href="../buyer/login.php" class="btn btn-inline">
                     <i class="fa fa-unlock-alt"></i>
                     <span>Get Started</span>
                 </a>
@@ -168,23 +168,7 @@
 
         <ul class="nav-list">
             <li>
-                <a class="nav-link" href="index.php"><i class="fa fa-house"></i>Home</a>
-                <!-- <ul class="dropdown-list">
-                            <li><a href="home-standard.php">Home standard</a></li>
-                        </ul> -->
-            </li>
-            <li>
-                <a class="nav-link" href="community.php"><i class="fa-solid fa-comments"></i>Community</a>
-                <!-- <ul class="dropdown-list">
-                            <li><a href="home-standard.php">Home standard</a></li>
-                        </ul> -->
-            </li>
-            <li>
-                <a class="nav-link dropdown-link" href="products.php"><i class="fa-solid fa-store"></i>shop</a>
-                <ul class="dropdown-list">
-                    <li><a href="all-farmer-shop.php">Farmer's Market</a></li>
-                    <li><a href="products.php">Products</a></li>
-                </ul>
+                <a class="nav-link" href="products.php"><i class="fa-solid fa-store"></i>shop</a>
             </li>
             <li>
                 <a class="nav-link" href="profile.php"><i class="icofont-ui-user"></i>my account</a>
@@ -235,7 +219,7 @@
         <i class="fas fa-shopping-basket"></i>
         <span>Cart</span>
     </a>
-    <a onclick="profile.php" title="Notification List">
+    <a onclick="profile.php" class="header-user-1" title="profile">
         <i class="fas fa-user"></i>
         <span>Account</span>
     </a>
