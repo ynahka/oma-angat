@@ -1831,6 +1831,10 @@ tbody tr td:last-child {
 .product-marg {
   margin: none;
 }
+.product-card img{
+  width: 160px;
+  height: 120px;
+}
 .product-card {
   width: 100%;
   overflow: hidden;
@@ -1980,9 +1984,8 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 }
 
 .product-content {
-  padding-top: 12px;
-  padding-left: 12px;
-  text-align: center;
+  padding-left: 8px;
+  /* text-align: center; */
   /* border-top: 1px solid var(--border); */
 }
 
@@ -2042,7 +2045,6 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 .product-name span {
   color: var(--sub-heading);
   text-align: right;
-  margin-left: 80px;
   /* white-space: nowrap; */
 }
 
@@ -2072,7 +2074,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 
 .product-price span {
   color: var(--primary);
-      margin-left: 30px;
+      /* margin-left: 30px; */
 
   /* white-space: nowrap; */
 }

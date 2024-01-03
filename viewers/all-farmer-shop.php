@@ -25,11 +25,15 @@ include('connect.php') ?>
     <!--=====================================
                     CATEGORY PART START
         =======================================-->
+
     <?php
-    // Your SQL query to retrieve store information
-    $sql = "SELECT users_table.*, user_details.profileimage FROM users_table 
-       INNER JOIN user_details ON users_table.user_id = user_details.user_id 
-       WHERE users_table.usertype= 'SELLER' AND users_table.status= 'APPROVED'";
+    error_reporting(0);
+    session_start();
+
+    $sql = "SELECT users_table.*, user_details.profileimage, user_details.barangay, user_details.city FROM users_table
+    INNER JOIN user_details ON users_table.user_id = user_details.user_id
+    WHERE users_table.usertype= 'SELLER' AND users_table.status= 'APPROVED'";
+
     $result = mysqli_query($connection, $sql);
 
     $Pitems = [];
@@ -47,6 +51,8 @@ include('connect.php') ?>
                 "img" => "../OmaangatImages/ProfileImage/{$imageFilename}", // Use the image filename from the database
                 "url" => "shop-1column.php", // You may want to customize this based on your requirements
                 "title" => $row['username'],
+                "brgy" => $row['barangay'],
+                "cy" => $row['city'],
                 // Add more fields as needed
             ];
 
@@ -67,24 +73,29 @@ include('connect.php') ?>
 
 
     <!-- By Farmer's Market -->
-    <section class="section suggest-part">
-        <div class="container suggest">
-            <ul class="suggest-slider slider-arrow">
-                <?php foreach ($Pitems as $Pitem) : ?>
-                    <li>
-                        <a class="suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
+    <div class="container suggest">
+        <ul class="suggest-slider slider-arrow">
+            <?php foreach ($Pitems as $Pitem) : ?>
+                <li>
+                    <div class="product-card">
+                        <a class="product-media" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
                             <img src="<?php echo $Pitem['img'] ?>">
                         </a>
-                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                            <p><?php echo $Pitem['title'] ?></p>
+                        <div class="product-content" style=" font-weight:500; ">
+                            <h6 class="product-name">
+                                <p><?php echo $Pitem['title'] ?></p>
+                                <p style="font-size: 12px; font-weight: 400;"> <i class=" fas fa-map-marker-alt"></i> <span><?php echo $Pitem['brgy'] ?></span>, <?php echo  $Pitem['cy'] ?> </p>
+                                <!-- <p style="font-size: 12px; font-weight: 400; margin-left:13px"></i> <?php echo  $Pitem['cy'] ?></p> -->
+                            </h6>
+
+
                         </div>
-                    </li>
-                <?php endforeach; ?>
 
-            </ul>
-        </div>
-    </section>
-
+                    </div>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
     <!--=====================================
                     CATEGORY PART END
         =======================================-->
