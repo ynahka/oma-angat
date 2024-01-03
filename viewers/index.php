@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <?php
 include("connect.php");
@@ -58,7 +59,7 @@ include 'header.php';
 
                     <div class="col-md-6 col-lg-6">
                         <div class="banner-content">
-                            <h1><span class="highlight">Are you a Farmer? </span>Sell your crops now<br>
+                            <h1><span class="highlight">Are you a Farmer? </span><br>Sell your crops now<br>
                             </h1>
                             <p>Join and watch your fields grow. <br>We ensure your fair compensation for your
                                 dedication.</p>
@@ -90,17 +91,17 @@ include 'header.php';
                 <!-- <div class="col-lg-12"> -->
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="home-grid-promo">
-                        <a href="all-farmer-shop.php"><img src="images/why1.svg" alt="referral"></a>
+                        <a href="javascript:void(0)"><img src="images/why1.svg" alt="referral"></a>
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="home-grid-promo">
-                        <a href="all-farmer-shop.php"><img src="images/why2.svg" alt="donate"></a>
+                        <a href="javascript:void(0)"><img src="images/why2.svg" alt="donate"></a>
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <div class="home-grid-promo">
-                        <a href="all-farmer-shop.php"><img src="images/why3.svg" alt="donate"></a>
+                        <a href="javascript:void(0)"><img src="images/why3.svg" alt="donate"></a>
                     </div>
                 </div>
                 <!-- </div> -->
@@ -149,8 +150,8 @@ include 'header.php';
                     <div class="home-grid-slider slider-arrow slider-dots">
                         <!-- <a href="chat.php"><img src="images/promo/features/messaging-system.svg" alt=""></a>
                         <a href="#"><img src="images/promo/features/harvesting-calendar.svg" alt=""></a> -->
-                        <iframe width="1263" height="480" src="https://www.youtube.com/embed/owXzG8gFfXI" title="Support Family Farming - Help Local Farmers, Achieve Zero Hunger [Advocacy Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jzx3M7G9bns" title="Support Filipino Farmers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/owXzG8gFfXI" title="Support Family Farming - Help Local Farmers, Achieve Zero Hunger [Advocacy Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/jzx3M7G9bns" title="Support Filipino Farmers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
