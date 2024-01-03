@@ -136,6 +136,7 @@
   margin-bottom: 30px;
   color: var(--lighter);
   font-weight: bolder;
+  line-height: 72px;
   font-size: 60px;
 }
 
@@ -161,14 +162,16 @@
 
 @media (max-width: 768px) {
   .banner-content h1 {
-    font-size: 38px;
-    line-height: 48px;
+    font-size: 30px;
+    line-height: 42px;
     margin-left: 8px;
   }
 
     .banner-content p {
     margin-left: 8px;
+     font-size: 16px;
   }
+
 
       .banner-content-1 p{
       margin-left: 20px;
@@ -184,11 +187,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .banner-content h1 {
-    font-size: 30px;
-    line-height: 42px;
-
-  }
+  
   .banner-content-1 h1 {
     font-size: 30px;
     line-height: 42px;
@@ -201,7 +200,7 @@
 }
 @media (max-width: 768px) {
   .banner-content-1 h1 {
-    font-size: 38px;
+    font-size: 30px;
     line-height: 48px;
      margin-left: 20px;
   }

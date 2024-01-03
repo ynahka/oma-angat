@@ -39,7 +39,7 @@
   /* --orange: #e86121; */
   /* --yellow: #ffab10; */
   --body: #cfe2ce;
-  --border: #e8e8e8;
+  --border: rgb(120 130 140 / 13%);
   --heading: #39404a;
   --primary: #4c644b;
   --secondary: #cfe2ce;
@@ -276,7 +276,7 @@ button:focus {
     margin-bottom: 30px;
   }
   .section-heading h2 {
-    font-size: 16px;
+    font-size: 12px;
     line-height: 36px;
   }
 }
@@ -1831,6 +1831,10 @@ tbody tr td:last-child {
 .product-marg {
   margin: none;
 }
+.product-card img{
+  width: 160px;
+  height: 120px;
+}
 .product-card {
   width: 100%;
   overflow: hidden;
@@ -1980,9 +1984,8 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 }
 
 .product-content {
-  padding-top: 12px;
-  padding-left: 12px;
-  text-align: center;
+  padding-left: 8px;
+  /* text-align: center; */
   /* border-top: 1px solid var(--border); */
 }
 
@@ -2042,7 +2045,6 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 .product-name span {
   color: var(--sub-heading);
   text-align: right;
-  margin-left: 80px;
   /* white-space: nowrap; */
 }
 
@@ -2072,7 +2074,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 
 .product-price span {
   color: var(--primary);
-      margin-left: 30px;
+      /* margin-left: 30px; */
 
   /* white-space: nowrap; */
 }
@@ -2139,10 +2141,23 @@ color: #4c644b !important;
   background: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 500px) {
+ .col-lg-8 {
+   width: 100%;
+ }
+}
+iframe {
+ width: 100%;
+ height: auto;
+}
+
+
 @media (max-width: 575px) {
   .product-card {
+
     padding: 8px;
     margin-bottom: 8px;
+
   }
   .product-name {
     font-size: 15px;
@@ -4736,7 +4751,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 
 .nav-btn {
   width: 100%;
-  padding: 50px 0px;
+  padding: 25px 0px;
   margin-bottom: 20px;
   text-align: center;
   background: var(--secondary);
@@ -5511,7 +5526,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100px;
-  padding: 8px 0px;
+  padding: 12px 0px;
   /* border-radius: 8px; */
   position: relative;
 }
@@ -5965,7 +5980,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 }
 
 .countdown-part {
-  padding: 10px 0px;
+  margin-top: 150px;
   background: #cfe2ce;
 
   /* background: linear-gradient(to right, #4C644B, #CFE2CE); */

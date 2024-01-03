@@ -67,12 +67,12 @@
                                         </div>
                                     </a>
                                     <!-- Message -->
-                                    <a href="index.php?url=orders">
+                                    <!-- <a href="index.php?url=orders">
                                         <div class="btn btn-success btn-circle"><i class="fas fa-file-alt"></i></div>
                                         <div class="mail-contnet">
                                             <h5>New Orders</h5> <span class="mail-desc">"You have a new order"</span>
                                         </div>
-                                    </a>
+                                    </a> -->
                                 </div>
                             </li>
                         </ul>

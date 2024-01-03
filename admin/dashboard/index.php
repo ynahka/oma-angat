@@ -10,56 +10,64 @@
     <div class="col-md-12">
         <div class="row" style="justify-content: center;">
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
-                <div class="card" style="margin-bottom: 15px;">
-                    <div class="box bg-info">
+                <a href="index.php?url=seller">
+                    <div class="card" style="margin-bottom: 15px;">
                         <div class="box bg-info">
-                            <h1 class="textdashboardboxes" id="txtTotsellers" style="color: #4C644B;">0</h1>
-                            <h6 class="font-light textdashboardboxes2" style="color: #4C644B ;">Sellers</h6>
-                            <div class="dboxicon">
-                                <i class="fas fa-users"></i>
+                            <div class="box bg-info">
+                                <h1 class="textdashboardboxes" id="txtTotsellers" style="color: #4C644B;">0</h1>
+                                <h6 class="font-light textdashboardboxes2" style="color: #4C644B ;">Sellers</h6>
+                                <div class="dboxicon">
+                                    <i class="fas fa-users"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox2">
-                <div class="card" style="margin-bottom: 15px;">
-                    <div class="box bg-info">
+                <a href="index.php?url=customer">
+                    <div class="card" style="margin-bottom: 15px;">
                         <div class="box bg-info">
-                            <h1 class="textdashboardboxes" id="txtTotcustomer" style="color: #4C644B ;">0</h1>
-                            <h6 class="font-light textdashboardboxes2" style="color: #4C644B ;">Buyers</h6>
-                            <div class="dboxicon">
-                                <i class="fas fa-user-friends"></i>
+                            <div class="box bg-info">
+                                <h1 class="textdashboardboxes" id="txtTotcustomer" style="color: #4C644B ;">0</h1>
+                                <h6 class="font-light textdashboardboxes2" style="color: #4C644B ;">Buyers</h6>
+                                <div class="dboxicon">
+                                    <i class="fas fa-user-friends"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
-                <div class="card" style="margin-bottom: 15px;">
-                    <div class="box bg-info">
+                <a href="index.php?url=products">
+                    <div class="card" style="margin-bottom: 15px;">
                         <div class="box bg-info">
-                            <h1 class="textdashboardboxes" id="txtTotproduct" style="color:#4C644B ;">0</h1>
-                            <h6 class="font-light textdashboardboxes2" style="color:#4C644B ;">Products</h6>
-                            <div class="dboxicon">
-                                <i class="fas fa-boxes"></i>
+                            <div class="box bg-info">
+                                <h1 class="textdashboardboxes" id="txtTotproduct" style="color:#4C644B ;">0</h1>
+                                <h6 class="font-light textdashboardboxes2" style="color:#4C644B ;">Products</h6>
+                                <div class="dboxicon">
+                                    <i class="fas fa-boxes"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox2">
-                <div class="card" style="margin-bottom: 15px;">
-                    <div class="box bg-info">
+                <a href="index.php?url=orders">
+                    <div class="card" style="margin-bottom: 15px;">
                         <div class="box bg-info">
-                            <h1 class="textdashboardboxes" id="txtTotorders" style="color:#4C644B ;">0</h1>
-                            <h6 class="font-light textdashboardboxes2" style="color:#4C644B ;">Orders</h6>
-                            <div class="dboxicon">
-                                <i class="fas fa-shopping-cart"></i>
+                            <div class="box bg-info">
+                                <h1 class="textdashboardboxes" id="txtTotorders" style="color:#4C644B ;">0</h1>
+                                <h6 class="font-light textdashboardboxes2" style="color:#4C644B ;">Orders</h6>
+                                <div class="dboxicon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
