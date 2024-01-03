@@ -75,6 +75,7 @@ switch ($_POST['form']) {
 			$prevpage = $page - 1;
 			echo "<li style='width:70px !important;' onclick='productlistPageFunc(" . $prevpage . ")'>< </li>";
 		}
+		$ex = 0;
 		for ($x = ($page - $range); $x < (($page + $range) + 1); $x++) {
 			if (($x > 0) && ($x <= $totalpages)) {
 				if ($x == $page) {

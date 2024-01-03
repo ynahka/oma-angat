@@ -31,7 +31,8 @@
                 <div class="card text-white" style="margin-bottom: 15px;">
                     <div class="box bg-info">
                         <div class="box bg-info">
-                            <h1 class=" text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670;">0</h1>
+                            <h1 class=" text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670;">0
+                            </h1>
                             <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Buyers</h6>
                             <div class="dboxicon">
                                 <i class="fas fa-users"></i>
@@ -95,10 +96,17 @@
                     <h3 style="color: #4C644B; margin-left:10px;">WEEKLY ORDERS</h3>
                     <canvas id="chart3" height="100"></canvas>
                 </div>
+                <div class="d-flex justify-content-end mb-3">
+                    <button class="btn btn-primary mr-2" onclick="exportToImage()" id="export-image"><i class="fas fa-file"></i> Export Now</button>
+                </div>
             </div>
+
         </div>
     </div>
 </div>
+<!-- Add these script tags for html2canvas and jsPDF libraries -->
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
 <script src="../admin/assets/plugins/Chart.js/Chart.min.js"></script>
 <?php
@@ -121,4 +129,15 @@ include("dashboard/dashboardscript.php");
             $('.monthly').css('display', 'none')
         }
     })
+
+    function exportToImage() {
+        var chartElement = document.getElementById('chart1'); // Replace 'chart1' with the ID of your chart canvas
+        html2canvas(chartElement).then(function(canvas) {
+            var imgData = canvas.toDataURL('image/png');
+            var link = document.createElement('a');
+            link.href = imgData;
+            link.download = 'chart_image.png';
+            link.click();
+        });
+    }
 </script>

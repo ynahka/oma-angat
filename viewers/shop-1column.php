@@ -35,15 +35,18 @@ $pid = $_GET['id'];
                         <div class="author-single">
                             <div class="author-content">
                                 <?php
+                                define('DEFAULT_IMAGE', 'shoplogo.png');
+
                                 // Retrieve author details from user_details
                                 $sellerQuery = mysqli_query($connection, "SELECT ud.*, u.username 
                                                             FROM users_table u
                                                             INNER JOIN user_details ud ON u.user_id = ud.user_id
                                                             WHERE u.user_id='$pid'");
                                 $sellerDetails = mysqli_fetch_assoc($sellerQuery);
+                                $imageFilename = !empty($sellerDetails['profileimage']) ? $sellerDetails['profileimage'] : DEFAULT_IMAGE;
                                 ?>
                                 <a href="#" class="author-image">
-                                    <img src="../OmaangatImages/ProfileImage/<?= $sellerDetails['profileimage'] ?>" alt="avatar">
+                                    <img src="../OmaangatImages/ProfileImage/<?= $imageFilename ?>" alt="avatar">
                                     <div class="author-info">
                                         <h3 class="author-name"><?= $sellerDetails['username'] ?></h3>
                                         <h6 class="author-mail"><?= $sellerDetails['email'] ?></h6>

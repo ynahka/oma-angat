@@ -82,13 +82,13 @@
                             </div>
                             <div class="col-md-12 mb-2">
                                 <span style="font-weight:400">Available at</span>
-                                <input type="date" class="form-control clearinfo reqresinfo" id="txtaddprodavailat"
-                                    style="font-size: .9rem;">
+                                <input type="datetime-local" class="form-control clearinfo reqresinfo"
+                                    id="txtaddprodavailat" style="font-size: .9rem;">
                             </div>
                             <div class="col-md-12 mb-2">
                                 <span style="font-weight:400">Available until</span>
-                                <input type="date" class="form-control clearinfo reqresinfo" id="txtaddprodavailuntil"
-                                    style="font-size: .9rem;">
+                                <input type="datetime-local" class="form-control clearinfo reqresinfo"
+                                    id="txtaddprodavailuntil" style="font-size: .9rem;">
                             </div>
 
                             <div class="col-md-12 mb-2">

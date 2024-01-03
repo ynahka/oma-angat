@@ -2,7 +2,8 @@
     <div class="scroll-sidebar">
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                <li class="nav-small-cap text-center" style="margin-top:20px; font-weight:600; font-size: 16px;color: #4C644B ;">SELLERBOARD</li>
+                <li class="nav-small-cap text-center"
+                    style="margin-top:20px; font-weight:600; font-size: 16px;color: #4C644B ;">SELLERBOARD</li>
                 <li class="nav-devider" style="margin: 5px 0;"></li>
 
 
@@ -21,6 +22,11 @@
                 <li id="maincategories">
                     <a href="index.php?url=orders"><i class="fas fa-shopping-cart"></i>
                         <span class="hide-menu">&nbsp;&nbsp;Orders</span>
+                    </a>
+                </li>
+                <li id="maincategories">
+                    <a href="index.php?url=reservation"><i class="fas fa-address-book"></i>
+                        <span class="hide-menu">&nbsp;&nbsp;Reservation</span>
                     </a>
                 </li>
                 <li id="maincommunity">

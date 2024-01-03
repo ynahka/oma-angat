@@ -4,9 +4,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<!-- Favicon icon -->
 <link rel="icon" type="image/png" sizes="16x16" href="../admin/assets/images/single-logo.png">
 <title>OMA-ANGAT AGRI-MARKET FOR ALBAYANO FARMERS</title>
+<link rel="stylesheet" href="../viewers/fonts/icofont/icofont.min.css">
+
 <!-- Bootstrap Core CSS -->
 <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->

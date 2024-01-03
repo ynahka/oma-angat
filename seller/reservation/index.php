@@ -61,12 +61,12 @@ ul.pagination li:hover {
             <div class="card-body" style="padding-top: .5rem; padding-bottom: .5rem;">
                 <div class="row page-titles rowpageheaderpadd" style="padding-bottom: 0px;">
                     <div class="col-md-6 col-6 align-self-center" style="padding-left:10px;">
-                        <h3 class="mb-0 mt-0 headerfontfont text-themecolor" style="font-weight: 600;">ORDERS</h3>
+                        <h3 class="mb-0 mt-0 headerfontfont text-themecolor" style="font-weight: 600;">RESERVATIONS</h3>
                     </div>
                     <div class="col-md-6 col-6 align-self-center" style="padding-right:10px;">
                         <ol class="breadcrumb float-right headerfontfont">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Orders</li>
+                            <li class="breadcrumb-item active">Reservation</li>
                         </ol>
                     </div>
                 </div>
@@ -76,9 +76,9 @@ ul.pagination li:hover {
 </div>
 
 <div class="container-fluid" style="padding: 15px 15px; background-color: white; min-height: 540px; margin-top: 15px;">
-    <h4 class="mb-0 headerfontfont2" style="color: #2c2b2e;font-weight: 500;">Orders List</h4>
+    <h4 class="mb-0 headerfontfont2" style="color: #2c2b2e;font-weight: 500;">Reservation List</h4>
     <h6 class="mb-4 headerfontfont" style="font-weight: 300;font-size: 13px;">You have total of <span
-            id="txttotorders"></span> Orders</h6>
+            id="txttotorders"></span> Reservation</h6>
 
     <div class="row" style="margin-bottom: .5rem;">
         <div class="col-md-4 coldashboardbox3" style="margin-bottom: 10px; padding-right: 0px;">
@@ -93,7 +93,7 @@ ul.pagination li:hover {
         <div class="col-md-2 coldashboardbox3" style="padding-right: 0px;">
             <select class="form-control" id="filterselectorderstat" onchange="displayorderslist();"
                 style="cursor: pointer; padding: .375rem .60rem;">
-                <option value="">- Order Status -</option>
+                <option value="">- Reservation Status -</option>
                 <option value="PENDING">Pending</option>
                 <option value="TOPAY">To Pay</option>
                 <option value="TOSHIP">To Ship</option>
@@ -128,13 +128,13 @@ ul.pagination li:hover {
                     <thead class="bg-success text-white">
                         <tr>
                             <th style="width: 2%;white-space: nowrap;text-align: center;"> # </th>
-                            <th style="width: 8%;white-space: nowrap;"> Order Code </th>
+                            <th style="width: 8%;white-space: nowrap;"> Reservation Code </th>
                             <th style="width: 15%;white-space: nowrap;"> Customer </th>
                             <th style="width: 15%;white-space: nowrap;"> Seller </th>
                             <th style="width: 15%;white-space: nowrap;"> Product </th>
                             <th style="width: 8%;white-space: nowrap;"> Price </th>
                             <th style="width: 8%;white-space: nowrap;"> Total Amount </th>
-                            <th style="width: 5%;white-space: nowrap;"> Order Stat </th>
+                            <th style="width: 5%;white-space: nowrap;"> Reservation Stat </th>
                             <th style="width: 5%;white-space: nowrap;"> Payment Stat </th>
                             <th style="width: 3%;white-space: nowrap; text-align: center;"> Option </th>
                         </tr>
@@ -154,8 +154,8 @@ ul.pagination li:hover {
 </div>
 
 <?php
-include("orders/modal.php");
-include("orders/script.php");
+include("reservation/modal.php");
+include("reservation/script.php");
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.full.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -243,7 +243,7 @@ async function exportToExcel() {
                 cell.type = ExcelJS.ValueType.Number; // Set data type to Number
                 if (typeof cell.value === 'string') {
                     cell.value = parseFloat(cell.value.replace(/,/g,
-                    '')); // Convert string to number
+                        '')); // Convert string to number
                 }
             });
         }

@@ -6,7 +6,7 @@ switch ($_POST['form']) {
 
 	case 'displayorderslist':
 		if ($_POST['srchprod'] != '') {
-			$searchuseracc = "AND (a.order_id LIKE '%" . $_POST['srchprod'] . "%')";
+			$searchuseracc = "AND (a.reservation_id LIKE '%" . $_POST['srchprod'] . "%')";
 		} else {
 			$searchuseracc = "";
 		}
@@ -30,7 +30,7 @@ switch ($_POST['form']) {
 		$counter = 0;
 		$page = $_POST["page"];
 		$limit = ($page - 1) * 10;
-		$res = mysqli_query($connection, "SELECT a.order_id, CASE WHEN b.middlename = '' OR b.middlename IS NULL THEN CONCAT(b.firstname, ' ', b.lastname) ELSE CONCAT(b.firstname, ' ', LEFT(b.middlename, '1'), '. ', b.lastname, '') END, CASE WHEN d.middlename = '' OR d.middlename IS NULL THEN CONCAT(d.firstname, ' ', d.lastname) ELSE CONCAT(d.firstname, ' ', LEFT(d.middlename, '1'), '. ',d.lastname , '') END, c.productname, a.quantity, a.price, a.totalamt, a.orderstatus, a.paymentstat, a.product_id, a.customer_id FROM orders AS a LEFT JOIN users_table AS b ON a.customer_id = b.user_id LEFT JOIN products AS c ON a.product_id = c.product_id LEFT JOIN users_table AS d ON c.seller_id = d.user_id WHERE c.seller_id = '" . $_SESSION['user_id'] . "' " . $searchuseracc . " " . $orderstat . " " . $DateFilter . " ORDER BY a.order_id ASC LIMIT " . $limit . ",10");
+		$res = mysqli_query($connection, "SELECT a.reservation_id, CASE WHEN b.middlename = '' OR b.middlename IS NULL THEN CONCAT(b.firstname, ' ', b.lastname) ELSE CONCAT(b.firstname, ' ', LEFT(b.middlename, '1'), '. ', b.lastname, '') END, CASE WHEN d.middlename = '' OR d.middlename IS NULL THEN CONCAT(d.firstname, ' ', d.lastname) ELSE CONCAT(d.firstname, ' ', LEFT(d.middlename, '1'), '. ',d.lastname , '') END, c.productname, a.quantity, a.price, a.totalamt, a.orderstatus, a.paymentstat, a.product_id, a.customer_id FROM reservation AS a LEFT JOIN users_table AS b ON a.customer_id = b.user_id LEFT JOIN products AS c ON a.product_id = c.product_id LEFT JOIN users_table AS d ON c.seller_id = d.user_id WHERE c.seller_id = '" . $_SESSION['user_id'] . "' " . $searchuseracc . " " . $orderstat . " " . $DateFilter . " ORDER BY a.reservation_id ASC LIMIT " . $limit . ",10");
 		$numrows = mysqli_num_rows($res);
 		if ($numrows == TRUE) {
 			while ($row = mysqli_fetch_array($res)) {
@@ -80,7 +80,7 @@ switch ($_POST['form']) {
 
 	case "loadorderslistPagination":
 		if ($_POST['srchprod'] != '') {
-			$searchuseracc = "AND (a.order_id LIKE '%" . $_POST['srchprod'] . "%')";
+			$searchuseracc = "AND (a.reservation_id LIKE '%" . $_POST['srchprod'] . "%')";
 		} else {
 			$searchuseracc = "";
 		}
@@ -102,7 +102,7 @@ switch ($_POST['form']) {
 		}
 
 		$page = $_POST["page"];
-		$rowCount = mysqli_fetch_row(mysqli_query($connection, "SELECT COUNT(a.id) FROM orders AS a LEFT JOIN users_table AS b ON a.customer_id = b.user_id LEFT JOIN products AS c ON a.product_id = c.product_id LEFT JOIN users_table AS d ON c.seller_id = d.user_id WHERE c.seller_id = '" . $_SESSION['user_id'] . "' " . $searchuseracc . " " . $orderstat . " " . $DateFilter . ";"));
+		$rowCount = mysqli_fetch_row(mysqli_query($connection, "SELECT COUNT(a.id) FROM reservation AS a LEFT JOIN users_table AS b ON a.customer_id = b.user_id LEFT JOIN products AS c ON a.product_id = c.product_id LEFT JOIN users_table AS d ON c.seller_id = d.user_id WHERE c.seller_id = '" . $_SESSION['user_id'] . "' " . $searchuseracc . " " . $orderstat . " " . $DateFilter . ";"));
 		$rowsperpage = 10;
 		$range = 1;
 		$totalpages = ceil($rowCount[0] / $rowsperpage);
@@ -165,7 +165,7 @@ switch ($_POST['form']) {
 
 		echo "|" . $proddetails[0] . "|" . $proddetails[1] . "|" . $proddetails[2] . "|" . $proddetails[3] . "|" . $proddetails[4];
 
-		$orderdetails = mysqli_fetch_array(mysqli_query($connection, "SELECT quantity, price, shipfee, totalamt, paymenttype, orderstatus, paymentstat FROM orders WHERE order_id = '" . $_POST['order_id'] . "';"));
+		$orderdetails = mysqli_fetch_array(mysqli_query($connection, "SELECT quantity, price, shipfee, totalamt, paymenttype, orderstatus, paymentstat FROM reservation WHERE reservation_id = '" . $_POST['reservation_id'] . "';"));
 
 		echo "|" . $orderdetails[0] . "|" . number_format($orderdetails[1], "2", ".", ",") . "|" . number_format($orderdetails[2], "2", ".", ",") . "|" . number_format($orderdetails[3], "2", ".", ",") . "|" . $orderdetails[4];
 
@@ -181,19 +181,19 @@ switch ($_POST['form']) {
 		echo "|";
 
 		if ($orderdetails[5] == "PENDING" && $orderdetails[4] == "CASH") {
-			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='pendingapprove(\"" . $_POST['order_id'] . "\")'>APPROVE ORDER</button>";
+			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='pendingapprove(\"" . $_POST['reservation_id'] . "\")'>APPROVE ORDER</button>";
 		} elseif ($orderdetails[5] == "TOPAY") {
-			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='topayapprove(\"" . $_POST['order_id'] . "\", \"" . $orderdetails[6] . "\")'>APPROVE ORDER</button>";
+			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='topayapprove(\"" . $_POST['reservation_id'] . "\", \"" . $orderdetails[6] . "\")'>APPROVE ORDER</button>";
 		} elseif ($orderdetails[5] == "TOSHIP") {
 
-			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='toshipapprove(\"" . $_POST['order_id'] . "\")'>READY TO DELIVER</button>";
+			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='toshipapprove(\"" . $_POST['reservation_id'] . "\")'>READY TO DELIVER</button>";
 		} elseif ($orderdetails[5] == "TODELIVER") {
-			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='todeliverapprove(\"" . $_POST['order_id'] . "\")'>COMPLETE ORDER</button>";
+			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='todeliverapprove(\"" . $_POST['reservation_id'] . "\")'>COMPLETE ORDER</button>";
 		}
 
 		echo "|";
 
-		$paymentdetails = mysqli_fetch_array(mysqli_query($connection, "SELECT refnumber, image FROM payments WHERE order_id = '" . $_POST['order_id'] . "';"));
+		$paymentdetails = mysqli_fetch_array(mysqli_query($connection, "SELECT refnumber, image FROM payments WHERE reservation_id = '" . $_POST['reservation_id'] . "';"));
 		echo $paymentdetails[0] . "|";
 
 		$image2 = "../" . $paymentdetails[1];
@@ -201,7 +201,7 @@ switch ($_POST['form']) {
                         <img class='card-img-top img-responsive' src='" . $image2 . "' alt='Card image cap' style='border: 1px solid #f3efea !important;cursor:pointer' onclick='viewvalidIDphoto(\"" . $image2 . "\")'>
                     </div>";
 
-		$orderdetails2 = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus, orderstatus2, paymenttype, courier, trackingnumber FROM orders WHERE order_id = '" . $_POST['order_id'] . "';"));
+		$orderdetails2 = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus, orderstatus2, paymenttype, courier, trackingnumber FROM reservation WHERE reservation_id = '" . $_POST['reservation_id'] . "';"));
 
 		$explode = explode(',', $orderdetails2[1]);
 
@@ -215,27 +215,27 @@ switch ($_POST['form']) {
 	case 'pendingapprove':
 
 		$orderstatus2 = ',' . date('Y-m-d h:i:s');
-		$row = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus2 FROM orders WHERE order_id = '" . $_POST['order_id'] . "';"));
+		$row = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus2 FROM reservation WHERE reservation_id = '" . $_POST['reservation_id'] . "';"));
 
 		$orderstatus2 = $row['orderstatus2'] . $orderstatus2;
 
-		$pendingapprove = mysqli_query($connection, "UPDATE orders SET orderstatus = 'TOSHIP', orderstatus2 = '" . $orderstatus2 . "' WHERE order_id = '" . $_POST['order_id'] . "'");
+		$pendingapprove = mysqli_query($connection, "UPDATE reservation SET orderstatus = 'TOSHIP', orderstatus2 = '" . $orderstatus2 . "' WHERE reservation_id = '" . $_POST['reservation_id'] . "'");
 		break;
 
 	case 'topayapprove':
 
 		$orderstatus2 = ',' . date('Y-m-d h:i:s');
-		$row = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus2 FROM orders WHERE order_id = '" . $_POST['order_id'] . "';"));
+		$row = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus2 FROM reservation WHERE reservation_id = '" . $_POST['reservation_id'] . "';"));
 
 		$orderstatus2 = $row['orderstatus2'] . $orderstatus2;
 
-		$topayapprove = mysqli_query($connection, "UPDATE orders SET orderstatus = 'TOSHIP', orderstatus2 = '" . $orderstatus2 . "' WHERE order_id = '" . $_POST['order_id'] . "'");
+		$topayapprove = mysqli_query($connection, "UPDATE reservation SET orderstatus = 'TOSHIP', orderstatus2 = '" . $orderstatus2 . "' WHERE reservation_id = '" . $_POST['reservation_id'] . "'");
 		break;
 
 	case 'toshipapprove':
 
 		$orderstatus2 = ',' . date('Y-m-d h:i:s');
-		$row = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus2 FROM orders WHERE order_id = '" . $_POST['order_id'] . "';"));
+		$row = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus2 FROM reservation WHERE reservation_id = '" . $_POST['reservation_id'] . "';"));
 
 		$orderstatus2 = $row['orderstatus2'] . $orderstatus2;
 
@@ -244,17 +244,17 @@ switch ($_POST['form']) {
 		$courier = $_POST['courier'];
 		$trackingnumber = $_POST['trackingnumber'];
 
-		$toshipapprove = mysqli_query($connection, "UPDATE orders SET orderstatus = 'TODELIVER', deliverystat = 'TODELIVER', orderstatus2 = '" . $orderstatus2 . "', courier = '" . $courier . "', trackingnumber = '" . $trackingnumber . "' WHERE order_id = '" . $_POST['order_id'] . "'");
+		$toshipapprove = mysqli_query($connection, "UPDATE reservation SET orderstatus = 'TODELIVER', deliverystat = 'TODELIVER', orderstatus2 = '" . $orderstatus2 . "', courier = '" . $courier . "', trackingnumber = '" . $trackingnumber . "' WHERE reservation_id = '" . $_POST['reservation_id'] . "'");
 		break;
 
 	case 'todeliverapprove':
 
 		$orderstatus2 = ',' . date('Y-m-d h:i:s');
-		$row = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus2 FROM orders WHERE order_id = '" . $_POST['order_id'] . "';"));
+		$row = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus2 FROM reservation WHERE reservation_id = '" . $_POST['reservation_id'] . "';"));
 
 		$orderstatus2 = $row['orderstatus2'] . $orderstatus2;
 
-		$todeliverapprove = mysqli_query($connection, "UPDATE orders SET orderstatus = 'COMPLETED', deliverystat = 'COMPLETED', paymentstat = 'PAID', orderstatus2 = '" . $orderstatus2 . "' WHERE order_id = '" . $_POST['order_id'] . "'");
-		$todeliverapprove2 = mysqli_query($connection, "UPDATE payments SET status = 'PAID' WHERE order_id = '" . $_POST['order_id'] . "'");
+		$todeliverapprove = mysqli_query($connection, "UPDATE reservation SET orderstatus = 'COMPLETED', deliverystat = 'COMPLETED', paymentstat = 'PAID', orderstatus2 = '" . $orderstatus2 . "' WHERE reservation_id = '" . $_POST['reservation_id'] . "'");
+		$todeliverapprove2 = mysqli_query($connection, "UPDATE payments SET status = 'PAID' WHERE reservation_id = '" . $_POST['reservation_id'] . "'");
 		break;
 }

@@ -1,5 +1,5 @@
 <?php
-require_once('connecT.php');
+require_once('connect.php');
 if (!isset($_GET['id'])) {
     echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@9'></script>";
     echo "<script>
