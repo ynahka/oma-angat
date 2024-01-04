@@ -50,7 +50,7 @@ session_start();
         </div>
     </section>
     <div class="shop_area shop_fullwidth mt-30">
-        <div class="container">
+        <div class="container" style="margin-top: -50px;">
             <div class="row mt-2">
                 <!-- <div class="col-4">
                     <div class="search_container" style="margin-right: 0px;">
@@ -63,10 +63,10 @@ session_start();
                     </div>
                 </div> -->
 
-                <div class="col-lg-5 col-md-5">
+                <div class="col-lg-6 col-md-6">
                     <!--shop toolbar start-->
-                    <div class="shop_toolbar_wrapper" style="border: 2px solid #4c644b;padding: 0px 0px;float: right;">
-                        <select class="nice-select" name="orderby" id="filteraccomodation" onchange="fncdisplaylistofproducts();" style="height: 47px;border-radius: 0px;line-height: 47px;">
+                    <div class="shop_toolbar_wrapper" style="border: 1px solid rgb(120 130 140 / 50%);;padding: 0px 0px;float: left; width: 90%;  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.1);">
+                        <select class="nice-select" name="orderby" id="filteraccomodation" onchange="fncdisplaylistofproducts();" style="height: 47px;border-radius: 0px;line-height: 47px; width: 100%; text-align: center !important;">
                             <option selected value="">- Category -</option>
 
                         </select>
@@ -74,10 +74,10 @@ session_start();
                     <!--shop toolbar end-->
                 </div>
 
-                <div class="col-lg-5 col-md-5">
+                <div class="col-lg-6 col-md-6">
                     <!--shop toolbar start-->
-                    <div class="shop_toolbar_wrapper" style="border: 2px solid #4c644b;padding: 0px 0px;float: right;">
-                        <select class="nice-select" name="orderby" id="pricerange" onchange="fncdisplaylistofproducts();" style="height: 47px;border-radius: 0px;line-height: 47px;">
+                    <div class="shop_toolbar_wrapper" style="border: 1px solid rgb(120 130 140 / 50%);;padding: 0px 0px;float: right;  width: 90%;  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.1);">
+                        <select class="nice-select" name="orderby" id="pricerange" onchange="fncdisplaylistofproducts();" style="height: 47px;border-radius: 0px;line-height: 47px; width: 100%; text-align: center !important;">
                             <option selected value="">- Price Range -</option>
                             <option value="Highest to Lowest">Highest to Lowest</option>
                             <option value="Lowest to Highest">Lowest to Highest</option>
