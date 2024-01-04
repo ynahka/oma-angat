@@ -31,54 +31,45 @@ switch ($_POST['form']) {
 		break;
 
 	case 'displaychats':
-		$res = mysqli_query($connection, "SELECT message, user_id, DATETIME_LOG FROM chats WHERE (user_id = '" . $_POST['user_id'] . "' AND sendto = '" . $_POST['sendtoID'] . "') OR (user_id = '" . $_POST['sendtoID'] . "' AND sendto = '" . $_POST['user_id'] . "') ");
+		$res = mysqli_query($connection, "SELECT message, user_id, image_path, DATETIME_LOG FROM chats WHERE (user_id = '" . $_POST['user_id'] . "' AND sendto = '" . $_POST['sendtoID'] . "') OR (user_id = '" . $_POST['sendtoID'] . "' AND sendto = '" . $_POST['user_id'] . "') ");
 		$numrows = mysqli_num_rows($res);
-		if ($numrows == TRUE) {
+
+		if ($numrows > 0) {
 			while ($row = mysqli_fetch_array($res)) {
-				if ($row[1] != $_SESSION['user_id']) {
+				$userIsAdmin = ($_POST['usertype'] == "ADMIN");
+				$isCurrentUser = ($row['user_id'] == $_SESSION['user_id']);
 
-					if ($_POST['usertype'] == "ADMIN") {
-						echo "<li style='margin-top: 0px;margin-bottom:30px;'>
-                                <div class='chat-img'><img src='../admin/assets/images/profile2.png' alt='user' /></div>
-                                <div class='chat-content'>
-                                    <div class='box bg-light-info'>" . $row[0] . "</div>
-                                </div>
-                                <div class='chat-time'>" . date('g:i a', strtotime($row[2])) . "</div>
-                            </li>";
-					} else {
-						echo "<li style='margin-top: 0px;margin-bottom:30px;'>
-                                <div class='chat-img'><img src='../admin/assets/images/profile4.png' alt='user' /></div>
-                                <div class='chat-content'>
-                                    <div class='box bg-light-info'>" . $row[0] . "</div>";
+				echo "<li class='" . ($isCurrentUser ? 'reverse' : '') . "' style='margin-top: 0px;margin-bottom:30px;'>";
+				echo "<div class='chat-content'>";
 
+				// Display message box based on user type
+				echo "<div class='box " . ($userIsAdmin ? 'bg-light-info' : 'bg-light-inverse') . "'>" . $row['message'] . "</div>";
 
-						$res2 = mysqli_query($connection, "SELECT image FROM products_image WHERE product_id = '" . $row[3] . "' ");
-						$row2 = mysqli_fetch_array($res2);
-
-						if ($row[3] == '') {
-						} else {
-							echo "<div><img src='../" . $row2[0] . "' width='200px'></div>";
-						}
-
-
-						echo "</div>
-                                <div class='chat-time'>" . date('g:i a', strtotime($row[2])) . "</div>
-                            </li>";
-					}
-				} else {
-					echo "<li class='reverse' style='margin-top: 0px;margin-bottom:30px;'>
-	                            <div class='chat-content'>
-	                                <div class='box bg-light-inverse'>" . $row[0] . "</div>
-	                            </div>
-	                            <div class='chat-img'><img src='../admin/assets/images/profile4.png' alt='user' /></div>
-	                            <div class='chat-time'>" . date('g:i a', strtotime($row[2])) . "</div>
-	                        </li>";
+				// Check if there is an image associated with the message
+				if (!empty($row['image_path'])) {
+					echo "<div><img src='" . $row['image_path'] . "' width='200px'></div>";
 				}
+
+				echo "</div>";
+
+				// Display user image and timestamp
+				if ($isCurrentUser) {
+					// Display your profile image and timestamp on the right
+					echo "<div class='chat-img' style='float: right;'><img src='../admin/assets/images/profile4.png' alt='user' /></div>";
+				} else {
+					// Display chatmate's profile image and timestamp on the left
+					echo "<div class='chat-img' style='float: left;'><img src='../admin/assets/images/profile2.png' alt='user' /></div>";
+				}
+
+				echo "<div class='chat-time'>" . date('g:i a', strtotime($row['DATETIME_LOG'])) . "</div>";
+				echo "</li>";
 			}
 		} else {
 			echo "<h5 style='margin-top: 20px; font-weight: 300; color:#afafaf; text-align:center;'><i> No Conversation Found . . .  </i></h5>";
 		}
 		break;
+
+
 
 	case 'sendbutton':
 		if ($_POST['textsendtoID'] == $_SESSION['user_id']) {
