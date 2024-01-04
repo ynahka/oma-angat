@@ -242,11 +242,22 @@ include 'header.php';
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
                     <li>
-                        <a class="suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
-                            <img src="<?php echo $Pitem['img'] ?>">
-                        </a>
-                        <div class="suggest-info" style="text-align: center; font-weight:500; ">
-                            <p><?php echo $Pitem['title'] ?></p>
+                        <div class="product-card" style="height: 230px;">
+                            <a class=" suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
+                                <img src="<?php echo $Pitem['img'] ?>">
+                            </a>
+                            <div class="product-content" style=" font-weight:500; ">
+                                <h6 class="product-name">
+                                    <p><?php echo $Pitem['title'] ?></p>
+                                    <p style="font-size: 12px; font-weight: 400;"> <i class=" fas fa-map-marker-alt"></i>
+                                        <span><?php echo $Pitem['brgy'] ?></span>, <?php echo  $Pitem['cy'] ?>
+                                    </p>
+                                    <!-- <p style="font-size: 12px; font-weight: 400; margin-left:13px"></i> <?php echo  $Pitem['cy'] ?></p> -->
+                                </h6>
+
+
+                            </div>
+
                         </div>
                     </li>
                 <?php endforeach; ?>

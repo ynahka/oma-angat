@@ -78,8 +78,8 @@ if (empty($_SESSION['user_id']) || $_SESSION['usertype'] !== 'CUSTOMER') {
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
                     <li>
-                        <div class="product-card">
-                            <a class="suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
+                        <div class="product-card" style="height: 230px;">
+                            <a class=" suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
                                 <img src="<?php echo $Pitem['img'] ?>">
                             </a>
                             <div class="product-content" style=" font-weight:500; ">
