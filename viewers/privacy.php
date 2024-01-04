@@ -61,37 +61,109 @@ session_start();
         =======================================-->
     <section class="inner-section privacy-part">
         <div class="container">
+            <p style="justify-content:justify; margin-bottom: 50px; margin-top: -20px; margin-left:50px; margin-right:20px;">Dear Valued Customer, <br><br>
+
+                Welcome to our commitment in safeguarding your privacy and ensuring a secure experience with our platform. We highly value the trust you place in us, and transparency is at the core of our data protection practices. This brief overview aims to outline our dedication to maintaining the security and privacy of your personal data as we strive to deliver an exceptional customer experience through our websites, applications, and related services. <br><br>Thank you for choosing us, and rest assured that your privacy is a top priority for us.
+            </p>
             <div class="row">
-                <div class="col-lg-3 sidebar">
-                    <nav class="nav nav-pills flex-column" id="scrollspy">
-                        <a class="nav-link" href="#item-1">How to contact with Customer Service?</a>
-                        <a class="nav-link" href="#item-2">App installation failed, how to update system information?</a>
-                        <a class="nav-link" href="#item-3">Website reponse taking time, how to improve?</a>
-                        <a class="nav-link" href="#item-4">How do I create a account?</a>
-                        <a class="nav-link" href="#item-5">I cannot find an answer to my question!</a>
-                    </nav>
-                </div>
-                <div class="col-lg-9">
+                <div class="col-lg-12">
+
                     <div data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0" tabindex="0">
                         <div class="scrollspy-content" id="item-1">
-                            <h3>How to contact with Customer Service?</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia expedita beatae tempore facilis ex maiores, assumenda nostrum minus. Autem nemo corrupti consequuntur incidunt quibusdam dicta. Quasi atque deserunt totam hic voluptatibus veritatis. Ducimus dicta esse praesentium tenetur obcaecati reprehenderit, recusandae ab explicabo maxime deserunt mollitia. Aliquid distinctio tenetur dolore!</p>
+                            <h3>1. Your privacy, your right</h3>
+                            <p>As a customer, you have the freedom to decide what information you share with us. It's important to note that when signing up on our platform, acceptance of our terms of use is mandatory. This legal agreement establishes a contract, granting you the right to utilize the platform according to these terms. While we require certain information to fulfill our obligations under this contract, the decision to provide such information is entirely yours. The power of choice is in your hands to engage with us and provide a required information or rather not use our platform based on your preferences.</p>
                         </div>
                         <div class="scrollspy-content" id="item-2">
-                            <h3>App installation failed, how to update system information?</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia expedita beatae tempore facilis ex maiores, assumenda nostrum minus. Autem nemo corrupti consequuntur incidunt quibusdam dicta. Quasi atque deserunt totam hic voluptatibus veritatis. Ducimus dicta esse praesentium tenetur obcaecati reprehenderit, recusandae ab explicabo maxime deserunt mollitia. Aliquid distinctio tenetur dolore!</p>
+                            <h3>2. Your Legal Rights</h3>
+                            <ul>
+                                <li>Right to Access:
+                                    <ul>
+                                        <li>You have the right to be informed about the data we retain regarding you and the manner in which we handle this information.</li>
+                                    </ul>
+                                </li>
+                                <li>Right to Rectification:
+                                    <ul>
+                                        <li>Should you identify inaccuracies in stored data, you have the option to request corrections.</li>
+                                    </ul>
+                                </li>
+                                <li>Right to Erasure:
+                                    <ul>
+                                        <li>At any point, you can request the deletion of the data we have on record about you.</li>
+                                    </ul>
+                                </li>
+                                <li>Right to Data Portability:
+                                    <ul>
+                                        <li>You have the right to request the transmission of the data stored about you in a machine-readable format, either to yourself or to another responsible party.</li>
+                                    </ul>
+                                </li>
+                                <li>Right to Object:
+                                    <ul>
+                                        <li>You are at liberty to object to the receipt of newsletters or any other direct marketing communications at any given time.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <br>
+                            <p>Additionally, you possess the right, based on reasons specific to your circumstances, to object at any time to the processing of your personal data, conducted under the provisions of Sec. 34 (b) DPA IRR. This also applies to any profiling carried out for the purposes outlined in Sec. 34 (b) DPA IRR. If you raise an objection, we will cease processing your personal data in the future unless we can demonstrate compelling grounds for the processing that outweigh your interests, rights, and freedoms.
+                            </p>
                         </div>
                         <div class="scrollspy-content" id="item-3">
-                            <h3>Website reponse taking time, how to improve?</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia expedita beatae tempore facilis ex maiores, assumenda nostrum minus. Autem nemo corrupti consequuntur incidunt quibusdam dicta. Quasi atque deserunt totam hic voluptatibus veritatis. Ducimus dicta esse praesentium tenetur obcaecati reprehenderit, recusandae ab explicabo maxime deserunt mollitia. Aliquid distinctio tenetur dolore!</p>
-                        </div>
-                        <div class="scrollspy-content" id="item-4">
-                            <h3>How do I create a account?</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia expedita beatae tempore facilis ex maiores, assumenda nostrum minus. Autem nemo corrupti consequuntur incidunt quibusdam dicta. Quasi atque deserunt totam hic voluptatibus veritatis. Ducimus dicta esse praesentium tenetur obcaecati reprehenderit, recusandae ab explicabo maxime deserunt mollitia. Aliquid distinctio tenetur dolore!</p>
-                        </div>
-                        <div class="scrollspy-content" id="item-5">
-                            <h3>I cannot find an answer to my question!</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officia expedita beatae tempore facilis ex maiores, assumenda nostrum minus. Autem nemo corrupti consequuntur incidunt quibusdam dicta. Quasi atque deserunt totam hic voluptatibus veritatis. Ducimus dicta esse praesentium tenetur obcaecati reprehenderit, recusandae ab explicabo maxime deserunt mollitia. Aliquid distinctio tenetur dolore!</p>
+                            <h3>3. Overview of Processed Personal Data</h3>
+                            <p>This section provides general insights into the types of personal data we handle in relation to you. Personal data refers to information that either directly identifies you (like your name or photo) or enables indirect identification (such as a user ID linked to personal information in your profile).
+                            </p><br>
+                            <p>For more detailed information on our processing activities, please refer to the subsequent section. Our data processing on the platform can be summarized by referencing the main categories of personal data:</p>
+                            <ul>
+                                <li>a. Profile Data (Master Data)</li>
+                                <li>This encompasses essential information like your name, email address, password, telephone number, delivery addresses.
+                                    <ul>
+                                        <li>Why do we process this category?</li>
+                                        <li>This data, constituting your master data, is crucial for our services. Creating a profile requires an email address/telephone number and a password.</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li>b. Purchase History Data</li>
+                                <li>This covers your purchase history, selected shops, invoices, order ID, comments, payment method, delivery address, successful, and cancelled orders.
+                                    <ul>
+                                        <li>Why do we process this category?</li>
+                                        <li>Your purchase's information is stored in your profile, accessible at any time. We utilize this data to enhance our services and tailor the platform to your interests.</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li>c. Location Data</li>
+                                <li>This involves your address, postcode, city, country, and device coordinates.
+                                    <ul>
+                                        <li>Why do we process this category?</li>
+                                        <li>We require this data for order delivery and automatically generate coordinates to process your address in linked systems, aiding riders.</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li>d. Device Information and Access Data
+                                </li>
+                                <li>This encompasses device ID, device identification, operating system details, access time, configuration settings, and IP address.
+                                    <ul>
+                                        <li>Why do we process this category?</li>
+                                        <li> Stored for technical reasons, this information helps detect suspicious behavior and safeguards our platform.</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li>e. Customer Care Data</li>
+                                <li>
+                                    <ul>This includes your name, address, telephone number and email address.
+                                        <li>Why do we process this category?</li>
+                                        <li>Collected when you contact us, this data ensures we can assist you effectively and is not combined with your platform profile data.</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li>f. Marketing Contact and Communications Data</li>
+                                <li>
+                                    <ul>This includes your name, email address, telephone number.
+                                        <li>Why do we process this category?</li>
+                                        <li>To send communications, we use this data. Personalization improves customer interaction, and the information is also used to contact you regarding order-related matters.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
                         </div>
                     </div>
                 </div>
