@@ -107,15 +107,17 @@ include 'header.php';
                 <!-- </div> -->
                 <!-- </div> -->
             </div>
-            <div class="row" style="margin-top: 30px;">
-                <div class="col-lg-12 order-0 order-lg-1 order-xl-1">
-                    <div class="home-grid-slider slider-arrow slider-dots">
-                        <a href="javascript:void(0)"><img src="images/workss.svg" alt=""></a>
-                    </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row" style="margin-top: -70px;">
+            <div class="col-lg-12 order-0 order-lg-1 order-xl-1">
+                <div class="home-grid-slider slider-arrow slider-dots">
+                    <a href="javascript:void(0)"><img src="images/workss.svg" alt=""></a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
 
 
@@ -169,11 +171,13 @@ include 'header.php';
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="promo-img">
-                        <a href="javascript:void(0)"><img src="images/flow.svg" alt="promo"></a>
-                    </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: -70px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="promo-img">
+                    <a href="javascript:void(0)"><img src="images/flow.svg" alt="promo"></a>
                 </div>
             </div>
         </div>
@@ -238,32 +242,32 @@ include 'header.php';
                 </div>
             </div>
         </div>
-        <div class="container suggest">
-            <ul class="suggest-slider slider-arrow">
-                <?php foreach ($Pitems as $Pitem) : ?>
-                    <li>
-                        <div class="product-card" style="height: 230px;">
-                            <a class=" suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
-                                <img src="<?php echo $Pitem['img'] ?>">
-                            </a>
-                            <div class="product-content" style=" font-weight:500; ">
-                                <h6 class="product-name">
-                                    <p><?php echo $Pitem['title'] ?></p>
-                                    <p style="font-size: 12px; font-weight: 400;"> <i class=" fas fa-map-marker-alt"></i>
-                                        <span><?php echo $Pitem['brgy'] ?></span>, <?php echo  $Pitem['cy'] ?>
-                                    </p>
-                                    <!-- <p style="font-size: 12px; font-weight: 400; margin-left:13px"></i> <?php echo  $Pitem['cy'] ?></p> -->
-                                </h6>
+    </section>
+    <div class="container suggest" style="margin-top: -70px;">
+        <ul class="suggest-slider slider-arrow">
+            <?php foreach ($Pitems as $Pitem) : ?>
+                <li>
+                    <div class="product-card" style="height: 230px;">
+                        <a class=" suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
+                            <img src="<?php echo $Pitem['img'] ?>">
+                        </a>
+                        <div class="product-content" style=" font-weight:500; ">
+                            <h6 class="product-name">
+                                <p><?php echo $Pitem['title'] ?></p>
+                                <p style="font-size: 12px; font-weight: 400;"> <i class=" fas fa-map-marker-alt"></i>
+                                    <span><?php echo $Pitem['brgy'] ?></span>, <?php echo  $Pitem['cy'] ?>
+                                </p>
+                                <!-- <p style="font-size: 12px; font-weight: 400; margin-left:13px"></i> <?php echo  $Pitem['cy'] ?></p> -->
+                            </h6>
 
-
-                            </div>
 
                         </div>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-    </section>
+
+                    </div>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
 
 
     <!--=====================================

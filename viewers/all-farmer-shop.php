@@ -2,11 +2,23 @@
 <html lang="en">
 
 <?php include 'header.php';
-include('connect.php') ?>
+include('connect.php');
+session_start();
+?>
+
 <link rel="stylesheet" href="css/all-category.css">
 
 <body>
-    <?php include('header-nav.php'); ?>
+    <?php
+    // Check if the user is logged in
+    $isLoggedIn = !empty($_SESSION['user_id']) && $_SESSION['usertype'] === 'CUSTOMER';
+    if ($isLoggedIn) {
+        include 'header-nav-buyer.php'; // Include the file for logged-in users
+    } else {
+        include 'header-nav.php'; // Include the file for non-logged-in users
+    }
+    ?>
+
     <?php include('category-sidebar.php'); ?>
 
     <!--=====================================

@@ -10,46 +10,42 @@ session_start();
     <link href="/style.css" rel="stylesheet" />
 </head>
 <style>
-.loadload {
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    position: fixed;
-    z-index: 99999;
-    background: rgba(255, 255, 255, 0.5);
-    transition: all 0.2s;
-}
+    .loadload {
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        position: fixed;
+        z-index: 99999;
+        background: rgba(255, 255, 255, 0.5);
+        transition: all 0.2s;
+    }
 
-.spinner-border {
-    height: 50px;
-    transform-origin: center center;
-    width: 50px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
+    .spinner-border {
+        height: 50px;
+        transform-origin: center center;
+        width: 50px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
 </style>
 
 <body>
 
-    <div class="loadload">
-        <div class="spinner-border text-secondary" role="status"></div>
-    </div>
-
     <script type="text/javascript">
-    $(function() {
-        setTimeout(function() {
-            $(".loadload").hide();
-        }, 300);
-    })
+        $(function() {
+            setTimeout(function() {
+                $(".loadload").hide();
+            }, 300);
+        })
     </script>
     <script>
-    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("service-worker.js");
-    }
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
     </script>
     <script src="/script.js"></script>
     <!--breadcrumbs area start-->
