@@ -136,7 +136,7 @@ ORDER BY MAX(a.DATETIME_LOG) DESC");
 					echo "<div class='chat-img' style='float: right;'><img src='../admin/assets/images/profile4.png' alt='user' /></div>";
 				} else {
 					// Display chatmate's profile image and timestamp on the left
-					echo "<div class='chat-img' style='float: left;'><img src='../admin/assets/images/profile2.png' alt='user' /></div>";
+					echo "<div class='chat-img' style='float: left;'><img src='../admin/assets/images/profile3.png' alt='user' /></div>";
 				}
 
 				echo "<div class='chat-time'>" . date('g:i a', strtotime($row['DATETIME_LOG'])) . "</div>";

@@ -149,7 +149,6 @@ if ($isLoggedIn) {
         </div>
     </div>
     <?php include('jscripts.php'); ?>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!--blog area end-->
 
     <script type="text/javascript">
@@ -217,52 +216,78 @@ if ($isLoggedIn) {
         //         alert("Please select a conversation.");
         //     }
         // }
-
-        $(document).ready(function() {
-            // When the paper clip icon is clicked, trigger the file input
-            $('.input-group-append').on('click', function() {
-                $('#imageAttachment').click();
-            });
-
-            // When a file is selected, update the label text and trigger sendImage function
-            $('#imageAttachment').on('change', function() {
-                var fileName = $(this).val().split('\\').pop();
-                $(this).next('.input-group-append').find('label').text(fileName);
-
-                // Trigger sendImage function immediately after selecting a file
-                sendbutton();
-            });
+        // Attach a change event to the file input
+        $('#imageAttachment').on('change', function() {
+            previewImage();
         });
 
+        // Function to preview the selected image
+        function previewImage() {
+            // Get the image file
+            var imageFile = $('#imageAttachment')[0].files[0];
+
+            // Check if an image is selected
+            if (imageFile) {
+                // Preview the selected image
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    // Display the image preview
+                    $('#imagePreview').attr('src', e.target.result);
+                    $('#imagePreview').css('display', 'block');
+                }
+                reader.readAsDataURL(imageFile);
+            } else {
+                // If no image selected, hide the preview
+                $('#imagePreview').attr('src', '');
+                $('#imagePreview').css('display', 'none');
+            }
+        }
+
+        // Function to show success message with Swal
+        function showSuccessMessage(message) {
+            Swal.fire({
+                title: 'Success!',
+                text: message,
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+        }
+
+        // Function to show error message with Swal
+        function showErrorMessage(message) {
+            Swal.fire({
+                title: 'Error!',
+                text: message,
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        }
+
+        // Function to handle the send button click
         function sendbutton() {
-            var textmessage = $("#txtmessage").val();
+            var textMessage = $("#txtmessage").val();
             var textuser_id = $("#txtuser_id").val();
-            var textsendtoID = $("#txtsendtoID").val();
-            var textadmin = $("#txtadmin").val();
+            var textSendToID = $("#txtsendtoID").val();
+            var textAdmin = $("#txtadmin").val();
 
             // Get the image file
             var imageFile = $('#imageAttachment')[0].files[0];
 
-            // Preview the selected image
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                // Display the image preview
-                $('#imagePreview').attr('src', e.target.result);
-                $('#imagePreview').css('display', 'block');
-            }
-            reader.readAsDataURL(imageFile);
-
             // Create FormData to send image and additional data
             var formData = new FormData();
-            formData.append('textmessage', textmessage);
+            formData.append('textmessage', textMessage);
             formData.append('textuser_id', textuser_id);
-            formData.append('textsendtoID', textsendtoID);
-            formData.append('textadmin', textadmin);
+            formData.append('textsendtoID', textSendToID);
+            formData.append('textadmin', textAdmin);
             formData.append('imageFile', imageFile);
             formData.append('form', 'sendbutton');
 
-            if (textuser_id != "") {
-                if (textmessage != "" || imageFile !== undefined) {
+            if (textuser_id !== "") {
+                if (textMessage !== "" || imageFile !== undefined) {
+                    // Clear the image preview before making the AJAX request
+                    $('#imagePreview').attr('src', '');
+                    $('#imagePreview').css('display', 'none');
+
                     $.ajax({
                         type: 'POST',
                         url: 'chat_class.php',
@@ -270,16 +295,29 @@ if ($isLoggedIn) {
                         contentType: false,
                         processData: false,
                         success: function(data) {
-                            displaychats(textuser_id, textsendtoID, textadmin);
-                            displaychatusers();
+                            displaychats(textuser_id, textSendToID, textAdmin);
+                            displayChatUsers();
                             $("#txtmessage").val("");
+                            // Show success message with Swal
+                            showSuccessMessage("Message sent successfully");
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("Error sending message:", error);
+                            // Show error message with Swal
+                            showErrorMessage("Failed to send message. Please try again.");
+                        },
+                        complete: function() {
+                            // Clear the input value after the request completes
+                            $('#imageAttachment').val('');
                         }
-                    })
+                    });
                 } else {
-                    alert("Please enter a message or select an image");
+                    // Show error message with Swal
+                    showErrorMessage("Please enter a message or select an image");
                 }
             } else {
-                alert("Please select a conversation.");
+                // Show error message with Swal
+                showErrorMessage("Please select a conversation.");
             }
         }
     </script>
