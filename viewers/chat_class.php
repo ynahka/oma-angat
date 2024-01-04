@@ -5,16 +5,48 @@ session_start();
 switch ($_POST['form']) {
 
 	case 'displaychatusers':
-		$getadmin = mysqli_fetch_array(mysqli_query($connection, "SELECT user_id, CASE WHEN middlename = '' OR middlename IS NULL THEN CONCAT(lastname, ', ', firstname) ELSE CONCAT(lastname, ', ', firstname, ' ', LEFT(middlename, '1'), '.') END, usertype FROM users_table WHERE usertype = 'ADMIN'"));
+		if (isset($_SESSION['user_id'])) {
+			// Escape the session variable
+			$escapedUserId = mysqli_real_escape_string($connection, $_SESSION['user_id']);
+
+			// Create the update query
+			$updateLastActivityQuery = "UPDATE users_table SET last_activity_time = NOW() WHERE user_id = '$escapedUserId'";
+
+			// Execute the query
+			$updateResult = mysqli_query($connection, $updateLastActivityQuery);
+
+			// Check for errors
+			if (!$updateResult) {
+				die("Error updating last_activity_time: " . mysqli_error($connection));
+			}
+		}
+
+		// Fetch admin data
+		$getadmin = mysqli_fetch_array(mysqli_query($connection, "SELECT user_id, CASE WHEN middlename = '' OR middlename IS NULL THEN CONCAT(firstname, ' ', lastname) ELSE CONCAT(firstname, ' ', LEFT(middlename, '1'), '. ',lastname , '') END, usertype, last_activity_time FROM users_table WHERE usertype = 'ADMIN'"));
+
+		$adminIsActive = false;
+
+		if (!empty($getadmin['last_activity_time'])) {
+			$adminIsActive = (time() - strtotime($getadmin['last_activity_time']) < 300); // 5 minutes threshold
+		}
+
+		// Display the user with the active indicator and active dot if applicable
 		echo "<div class='post_wrapper' onclick='displaychats(\"" . $_SESSION['user_id'] . "\", \"" . $getadmin[0] . "\", \"" . $getadmin[2] . "\")' style='cursor:pointer'>
-                            <div class='post_thumb'>
-                                <a href='javascript:void(0)'><img src='../admin/assets/images/profile2.png'></a>
-                            </div>
-                            <div class='post_info'>
-                                <h4><a href='javascript:void(0)'>" . $getadmin[1] . "</a></h4>
-                                <span>Admin </span>
-                            </div>
-                        </div>";
+   <div class='post_thumb'>
+       <a href='javascript:void(0)'><img src='../admin/assets/images/profile2.png'></a>
+   </div>
+   <div class='post_info'>
+       <h4><a href='javascript:void(0)'>" . $getadmin[1];
+		// Display green dot if the admin is active
+		if ($adminIsActive) {
+			echo "<span class='active-dot'></span>";
+		}
+		echo "</a></h4>
+       <span>Admin</span>
+   </div>
+</div>";
+
+
 
 		if ($_POST['srchprod'] != '') {
 			$searchcontact = "AND (CASE WHEN b.middlename = '' OR b.middlename IS NULL THEN CONCAT(b.lastname, ', ', b.firstname) ELSE CONCAT(b.lastname, ', ', b.firstname, ' ', LEFT(b.middlename, '1'), '.') END LIKE '%" . $_POST['srchprod'] . "%')";
@@ -22,28 +54,61 @@ switch ($_POST['form']) {
 			$searchcontact = "";
 		}
 
-		$res = mysqli_query($connection, "SELECT CASE WHEN b.middlename = '' OR b.middlename IS NULL THEN CONCAT(b.lastname, ', ', b.firstname) ELSE CONCAT(b.lastname, ', ', b.firstname, ' ', LEFT(b.middlename, '1'), '.') END, a.DATETIME_LOG, a.user_id, a.sendto FROM chats AS a LEFT JOIN users_table AS b ON a.sendto = b.user_id WHERE a.user_id = '" . $_SESSION['user_id'] . "' AND type != 'ADMIN' " . $searchcontact . " GROUP BY a.sendto ORDER BY a.DATETIME_LOG DESC");
+		// ... existing code ...
+
+		$res = mysqli_query($connection, "SELECT 
+    CASE WHEN b.middlename = '' OR b.middlename IS NULL THEN CONCAT(b.firstname, ' ', b.lastname) 
+    ELSE CONCAT(b.firstname, ' ',  LEFT(b.middlename, '1'), '. ',b.lastname , '') END AS full_name, 
+    b.last_activity_time AS user_last_activity, 
+    a.DATETIME_LOG AS chat_datetime, 
+    a.user_id, 
+    a.sendto 
+FROM chats AS a 
+LEFT JOIN users_table AS b ON a.sendto = b.user_id 
+WHERE a.user_id = '" . $_SESSION['user_id'] . "' AND type != 'ADMIN' " . $searchcontact . " 
+GROUP BY a.sendto 
+ORDER BY MAX(a.DATETIME_LOG) DESC");
+
 		$numrows = mysqli_num_rows($res);
+
 		if ($numrows == TRUE) {
 			$blank = "";
 			while ($row = mysqli_fetch_array($res)) {
-				echo "<div class='post_wrapper' onclick='displaychats(\"" . $row[2] . "\", \"" . $row[3] . "\", \"" . $blank . "\")' style='cursor:pointer'>
-                            <div class='post_thumb'>
-                                <a href='javascript:void(0)'><img src='../admin/assets/images/profile4.png'></a>
-                            </div>
-                            <div class='post_info'>
-                                <h4><a href='javascript:void(0)'>" . $row[0] . "</a></h4>
-                                <span>Seller </span>
-                            </div>
-                        </div>";
+				// Fetch and display last activity time for each user (seller)
+				$sellerIsActive = false;
+
+				if (!empty($row['user_last_activity'])) {
+					$sellerIsActive = (time() - strtotime($row['user_last_activity']) < 300); // 5 minutes threshold
+				}
+
+				// Display the seller with the active indicator and active dot if applicable
+				echo "<div class='post_wrapper' onclick='displaychats(\"" . $row['user_id'] . "\", \"" . $row['sendto'] . "\", \"" . $blank . "\")' style='cursor:pointer'>
+                    <div class='post_thumb'>
+                        <a href='javascript:void(0)'><img src='../admin/assets/images/profile4.png'></a>
+                    </div>
+                    <div class='post_info'>
+                        <h4><a href='javascript:void(0)'>" . $row['full_name'];
+
+				// Display the active dot if the seller is active
+				if ($sellerIsActive) {
+					echo "<span class='active-dot'></span>";
+				}
+
+				echo "</a></h4>
+                        <span>Seller </span>
+                    </div>
+                </div>";
 			}
 		} else {
-			// echo "<h6 style='margin-top: 20px; font-weight: 300; color:#afafaf; text-align:center;'><i> No Customer Conversation Found . . .  </i></h6>";
+			// Handle case where no conversations are found
+			echo "<h6 style='margin-top: 20px; font-weight: 300; color:#afafaf; text-align:center;'><i> No Seller Conversation Found . . .  </i></h6>";
 		}
+
+
 		break;
 
 	case 'displaychats':
-		$res = mysqli_query($connection, "SELECT message, user_id, DATETIME_LOG FROM chats WHERE (user_id = '" . $_POST['user_id'] . "' AND sendto = '" . $_POST['sendtoID'] . "') OR (user_id = '" . $_POST['sendtoID'] . "' AND sendto = '" . $_POST['user_id'] . "') ");
+		$res = mysqli_query($connection, "SELECT message, user_id, image_path, DATETIME_LOG FROM chats WHERE (user_id = '" . $_POST['user_id'] . "' AND sendto = '" . $_POST['sendtoID'] . "') OR (user_id = '" . $_POST['sendtoID'] . "' AND sendto = '" . $_POST['user_id'] . "') ");
 		$numrows = mysqli_num_rows($res);
 		if ($numrows == TRUE) {
 			while ($row = mysqli_fetch_array($res)) {
@@ -55,7 +120,7 @@ switch ($_POST['form']) {
                                 <div class='chat-content'>
                                     <div class='box bg-light-info'>" . $row[0] . "</div>
                                 </div>
-                                <div class='chat-time'>" . date('g:i a', strtotime($row[2])) . "</div>
+                                <div class='chat-time'>" . date('g:i a', strtotime($row[3])) . "</div>
                             </li>";
 					} else {
 						echo "<li style='margin-top: 0px;margin-bottom:30px;'>
@@ -63,10 +128,14 @@ switch ($_POST['form']) {
                                 <div class='chat-content'>
                                     <div class='box bg-light-info'>" . $row[0] . "</div>";
 
+						// Check if an image path is available
+						if (!empty($row['image_path'])) {
+							echo "<div><img src='../seller/chat/" . $row['image_path'] . "' width='200px'></div>";
+						}
 
 
 						echo "</div>
-                                <div class='chat-time'>" . date('g:i a', strtotime($row[2])) . "</div>
+                                <div class='chat-time'>" . date('g:i a', strtotime($row[3])) . "</div>
                             </li>";
 					}
 				} else {
@@ -80,7 +149,7 @@ switch ($_POST['form']) {
 
 					echo "</div>
 	                            <div class='chat-img'><img src='../admin/assets/images/profile4.png' alt='user' /></div>
-	                            <div class='chat-time'>" . date('g:i a', strtotime($row[2])) . "</div>
+	                            <div class='chat-time'>" . date('g:i a', strtotime($row[3])) . "</div>
 	                        </li>";
 				}
 			}
@@ -104,7 +173,7 @@ switch ($_POST['form']) {
 		if ($row[0] == 1) {
 			$updateappointment = mysqli_query($connection, "UPDATE messages_admin SET status = '0' WHERE id = '" . $_POST['id'] . "';");
 
-			$addnotif = mysqli_query($connection, "INSERT INTO usernotifications SET user_id = '" . $_POST['userid'] . "', logs = 'Admin viewed your message', username = 'admin';");
+			$addnotif = mysqli_query($connection, "INSERT INTO usernotifications SET user_id = '" . $_POST['user_id'] . "', logs = 'Admin viewed your message', username = 'admin';");
 		} else {
 		}
 		break;

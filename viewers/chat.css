@@ -163,6 +163,13 @@
 	font-size: 13px;
 	color: #90a4ae
 }
+.chat-list li .chat-time2 {
+	
+	text-align: right;
+	width: 80px;
+	font-size: 13px;
+	color: #90a4ae
+}
 
 .chat-list li.odd .chat-content {
 	text-align: right;
@@ -344,5 +351,13 @@
 	.chat-list li .chat-content {
 		width: calc(100% - 80px)
 	}
+	 span .active-dot {
+       display: inline-block;
+       width: 10px;
+       height: 10px;
+       background-color: green;
+       border-radius: 50%;
+       margin-left: 5px;
+   }
 
 }

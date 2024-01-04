@@ -7,6 +7,24 @@ if (empty($_SESSION['user_id']) || $_SESSION['usertype'] !== 'ADMIN') {
   exit(); // Add exit to stop further execution of the script
 }
 ?>
+<?php
+if (isset($_SESSION['user_id'])) {
+  // Escape the session variable
+  $escapedUserId = mysqli_real_escape_string($connection, $_SESSION['user_id']);
+
+  // Create the update query
+  $updateLastActivityQuery = "UPDATE users_table SET last_activity_time = NOW() WHERE user_id = '$escapedUserId'";
+
+  // Execute the query
+  $updateResult = mysqli_query($connection, $updateLastActivityQuery);
+
+  // Check for errors
+  if (!$updateResult) {
+    die("Error updating last_activity_time: " . mysqli_error($connection));
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
