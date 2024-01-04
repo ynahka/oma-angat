@@ -14,10 +14,6 @@ session_start();
 
 <body>
 
-    <div class="loadload">
-        <div class="spinner-border text-secondary" role="status"></div>
-    </div>
-
     <script type="text/javascript">
         $(function() {
             setTimeout(function() {
