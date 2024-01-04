@@ -94,8 +94,8 @@ if (isset($_SESSION['user_id'])) {
             <ul class="suggest-slider slider-arrow">
                 <?php foreach ($Pitems as $Pitem) : ?>
                     <li>
-                        <div class="product-card">
-                            <a class="suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
+                        <div class="product-card" style="height: 230px;">
+                            <a class=" suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
                                 <img src="<?php echo $Pitem['img'] ?>">
                             </a>
                             <div class="product-content" style=" font-weight:500; ">

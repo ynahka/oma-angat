@@ -44,10 +44,7 @@ if (isset($_SESSION['user_id'])) {
 
   <div id="main-wrapper">
     <?php include('topbar.php'); ?>
-
-    <?php
-    include('leftsidebar.php');
-    ?>
+    <?php include('leftsidebar.php'); ?>
 
     <div class="page-wrapper">
       <div class="container-fluid containerfluidneed" style="padding: 20px 20px;">

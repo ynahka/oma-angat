@@ -156,7 +156,7 @@
             // Display the "Get Started" button if the user is not logged in
         ?>
             <div class="nav-btn">
-                <a href="../buyer/login.php" class="btn btn-inline">
+                <a href="get-started.php" class="btn btn-inline">
                     <i class="fa fa-unlock-alt"></i>
                     <span>Get Started</span>
                 </a>
@@ -215,7 +215,7 @@
         <i class="fas fa-paper-plane"></i>
         <span>Chat</span>
     </a>
-    <a onclick="cart.php" title="cart">
+    <a href="chat.php" title="cart">
         <i class="fas fa-shopping-basket"></i>
         <span>Cart</span>
     </a>

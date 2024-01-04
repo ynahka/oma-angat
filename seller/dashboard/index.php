@@ -27,21 +27,6 @@
 <div class="row">
     <div class="col-md-12">
         <div class="row" style="justify-content: center;">
-            <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
-
-                <div class="card text-white" style="margin-bottom: 15px;">
-                    <div class="box bg-info">
-                        <div class="box bg-info">
-                            <h1 class=" text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670;">0
-                            </h1>
-                            <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Buyers</h6>
-                            <div class="dboxicon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox2">
                 <a href="index.php?url=products">
                     <div class="card text-white" style="margin-bottom: 15px;">
@@ -66,6 +51,40 @@
                                 <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Orders</h6>
                                 <div class="dboxicon">
                                     <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
+                <a href="index.php?url=reservation">
+                    <div class="card text-white" style="margin-bottom: 15px;">
+                        <div class="box bg-info">
+                            <div class="box bg-info">
+
+                                <!-- pa edit ako nito mhieee, yung number of reservation -->
+                                <h1 class=" text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670;">0
+                                </h1>
+                                <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Reservation</h6>
+                                <div class="dboxicon">
+                                    <i class="fas fa-address-book"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-12 col-md-4 col-lg-3 col-xlg-3 coldashboardbox">
+                <a href="index.php?url=harvestingcal">
+                    <div class="card text-white" style="margin-bottom: 15px;">
+                        <div class="box bg-info">
+                            <div class="box bg-info">
+                                <h1 class=" text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670; font-size: 30px !important;">View
+                                </h1>
+                                <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Harvesting Calendar</h6>
+                                <div class="dboxicon">
+                                    <i class="far fa-calendar-alt"></i>
                                 </div>
                             </div>
                         </div>
