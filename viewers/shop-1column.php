@@ -155,7 +155,7 @@ $pid = $_GET['id'];
         function copyToClipboard() {
             // Get the text content you want to copy
             var linkToCopy =
-                "http://localhost/oma-angat/viewers/shop-1column.php?id=<?= $pid ?>";
+                "http://oma-angat.online/viewers/shop-1column.php?id=<?= $pid ?>";
 
             // Create a temporary input element
             var tempInput = document.createElement("input");

@@ -133,3 +133,73 @@
          <!--=====================================
                     NAVBAR PART END
         =======================================-->
+
+         <script type="text/javascript">
+             $(function() {
+                 $("#products").addClass('active');
+                 fncdisplaylistofproducts();
+
+                 $(".wawa").click(function() {
+                     $(".wawa").css("color", "#79a206");
+                     $(this).css("color", "#FEB954");
+                 })
+
+                 $(".numonly").keydown(function(event) {
+                     if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 190 || event.keyCode ==
+                         9 ||
+                         event.keyCode == 188) {
+
+                     } else {
+                         if (event.keyCode < 48 || event.keyCode > 57 || event.keyCode == 17) {
+                             event.preventDefault();
+                         }
+                     }
+                 });
+
+                 $(".focus").focus(function() {
+                     this.select();
+                 });
+
+                 $("#txtsearchspecproduct").keyup(function(e) {
+                     if ($('#txtsearchspecproduct').val() == "") {
+                         fncdisplaylistofproducts();
+                     } else {
+                         fncdisplaylistofproducts();
+                     }
+                 });
+
+                 dsplylistoffiltercategory();
+             })
+
+             function fncdisplaylistofproducts() {
+                 var srchprod = $("#txtsearchspecproduct").val();
+                 var filteracc = $("#filteraccomodation").val();
+                 // alert("wawa");
+                 $.ajax({
+                     type: 'POST',
+                     url: 'products_class.php',
+                     data: 'srchprod=' + srchprod + '&filteracc=' + filteracc + '&form=fncdisplaylistofproducts',
+                     success: function(data) {
+                         $("#displaylistofrooms").html(data);
+                     }
+                 });
+             }
+
+             function fncdisplaylistofproducts() {
+                 var pricerange = $("#pricerange").val();
+                 var srchprod = $("#txtsearchspecproduct").val();
+                 var filteracc = $("#filteraccomodation").val();
+                 // alert("wawa");
+                 $.ajax({
+                     type: 'POST',
+                     url: 'products_class.php',
+                     data: 'srchprod=' + srchprod + '&filteracc=' + filteracc + '&pricerange=' + pricerange +
+                         '&form=fncdisplaylistofproducts',
+                     success: function(data) {
+                         $("#displaylistofrooms").html(data);
+                     }
+                 });
+
+
+             }
+         </script>
