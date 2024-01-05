@@ -69,7 +69,6 @@ switch ($_POST['form']) {
 			echo "<h5 style='margin-top: 20px; font-weight: 300; color:#afafaf; text-align:center;'><i> No Conversation Found . . .  </i></h5>";
 		}
 		break;
-
 	case 'sendbutton':
 		// Determine the recipient based on the session and posted data
 		if ($_POST['textsendtoID'] == $_SESSION['user_id']) {
@@ -85,7 +84,7 @@ switch ($_POST['form']) {
 		if (!empty($_FILES['imageFile'])) {
 			$uploadDirectory = '../OmaangatImages/messageFile/'; // Set your upload directory
 			$fileName = $_FILES['imageFile']['name'];
-			$targetFilePath = '$uploadDirectory' . basename($fileName);
+			$targetFilePath = $uploadDirectory . basename($fileName);
 
 			// Check if the uploaded file is a valid image
 			$check = getimagesize($_FILES['imageFile']['tmp_name']);
