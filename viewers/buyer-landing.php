@@ -145,7 +145,7 @@ if (isset($_SESSION['user_id'])) {
                                 <div class="col-lg-5 col-md-5">
                                     <div class="product-details-tab">
                                         <div id="img-1" class="zoomWrapper single-zoom" style="position: relative;">
-                                            <a href="javascript:void(0)" id="mdlprodimage1"></a>
+                                            <a id="mdlprodimage1"></a>
                                             <div class="soldout">Sold out</div>
                                         </div>
                                         <div class="single-zoom-thumb" id="mdlprodimage2">
@@ -155,40 +155,40 @@ if (isset($_SESSION['user_id'])) {
                                 </div>
                                 <div class="col-lg-7 col-md-7">
                                     <div class="product_d_right">
-                                        <h1 style="margin-bottom: 5px;"><a href="javascript:void(0)" id="txtmdlprodname"></a></h1>
-                                        <div class="product_ratting" id="txtmdlprodrates"></div>
+                                        <h1 style="margin-bottom: 5px; font-size: 30px;"><a id="txtmdlprodname"></a></h1>
+                                        <!-- <div class="product_ratting" style="color:#4C644B !important" id="txtmdlprodrates"></div> -->
                                         <div class="price_box">
-                                            <span class="current_price" style="color: #252525">₱ <span id="txtmdlprodprice">0.00</span></span>/<span id="txtmdlprodunit"></span>
+                                            <span style="color:#4C644B" class="current_price">₱ <span id="txtmdlprodprice">0.00</span>/<span id="txtmdlprodunit"></span>
                                         </div>
                                         <div class="product_desc">
                                             <p id="txtmdlproddesc"></p>
                                         </div>
                                         <div class="product_variant quantity">
                                             <label>quantity</label>
-                                            <input min="1" max="100" value="1" type="number" class="focus" id="txtmdlprodquantity" onchange="quantityvalidation()">
+                                            <input style="border: 1px solid #4C644B !important;" min="1" max="100" value="1" type="number" class="focus" id="txtmdlprodquantity" onchange="quantityvalidation()" onkeyup="quantityvalidation()">
                                         </div>
                                         <div>
-                                            <span>Available Stock: <a href="javascript:void(0)" id="txtstock"></a></span><br>
+                                            <span>Stock: <a id="txtstock"></a></span><br>
                                         </div>
                                         <div class="product_meta">
-                                            <span>Category: <a href="javascript:void(0)" id="txtmdlprodcategory"></a></span><br>
-                                            <span>Available at: <a href="javascript:void(0)" id="txtmdlprodavailat"></a></span><br>
-                                            <span>Available until: <a href="javascript:void(0)" id="txtmdlprodavailuntil"></a></span><br>
+                                            <span>Category: <a id="txtmdlprodcategory"></a></span><br>
+                                            <span>Available at: <a id="txtmdlprodavailat"></a></span><br>
+                                            <span>Available until: <a id="txtmdlprodavailuntil"></a></span><br>
                                             <input type="hidden" id="txtmdlprodsellerID">
-                                            <!--<span>Seller: -->
-                                            <!-- <a href="javascript:void(0)" id="txtmdlprodseller"></a> -->
+                                            <!-- <a href="javascript:void(0)" id="txtmdlprodsellername"></a>  -->
                                             <form method="POST" action="findshop.php">
                                                 <span>Seller:
-                                                    <input type="hidden" name="shopsellerID" id="shopsellerID">
+                                                    <input type="hidden" name="shopseller_id" id="shopseller_id">
                                                     <input type="hidden" name="txtmdlprodsellername2" id="txtmdlprodsellername2">
                                                     <button id="txtmdlprodsellername" name="findshop" type="submit" style="border:unset;background-color: unset;"></button>
                                             </form>
-                                            <?php if (empty($_SESSION['user_id'])) { ?>
+
+                                            <?php if (empty($_SESSION['user_id']) || $_SESSION['usertype'] !== 'CUSTOMER') { ?>
 
                                             <?php } else { ?>
-                                                <a href="javascript:void(0)" style="color:#77baff;"><i class='fa fa-comment' onclick="openproductsellerchat();"></i></a>
-                                            <?php } ?>
-                                            </span>
+                                                <br><a onclick="openproductsellerchat();" style="margin-left: 0px !important; color:#4C644B; border: 1px solid #4C644B !important; padding: 8px 10px; border-radius: 4px; margin-top:10px;"><span>Chat Seller:</span> <i class='fa fa-comment'></i></a>
+
+                                            <?php } ?></span>
                                         </div>
 
                                         <div class="view-add-group">
@@ -203,69 +203,69 @@ if (isset($_SESSION['user_id'])) {
                                                 <span>Buy Now</span>
                                             </button>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!--product info start-->
-                        <div class="product_d_info">
+                        <div class="product_d_info" style="border: 1px solid rgb(120 130 140 / 20%);">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="product_d_inner">
                                         <div class="product_info_button">
                                             <ul class="nav" role="tablist" id="nav-tab">
-                                                <a data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false" id="tabreviews">Reviews</a>
+                                                <li>
+                                                    <a data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false" id="tabreviews">Reviews</a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="tab-content">
-                                            <div class="tab-pane fade" id="reviews" role="tabpanel">
-                                                <div class="reviews_wrapper">
-                                                    <h2></h2>
-                                                    <div id="txtmdlprodcomment"></div>
 
-                                                    <?php if (empty($_SESSION['user_id'])) { ?>
+                                        </div>
 
-                                                    <?php } else { ?>
-                                                        <div class="product_ratting mb-10">
-                                                            <h3 style="margin-bottom:0px;">Your rating</h3>
-                                                            <ul>
-                                                                <li><a href="javascript:void(0)" onclick="fncselectrating(1)"><i class="fa fa-star wawa starhover"></i></a>
-                                                                </li>
-                                                                <li><a href="javascript:void(0)" onclick="fncselectrating(2)"><i class="fa fa-star wawa starhover"></i></a>
-                                                                </li>
-                                                                <li><a href="javascript:void(0)" onclick="fncselectrating(3)"><i class="fa fa-star wawa starhover"></i></a>
-                                                                </li>
-                                                                <li><a href="javascript:void(0)" onclick="fncselectrating(4)"><i class="fa fa-star wawa starhover"></i></a>
-                                                                </li>
-                                                                <li><a href="javascript:void(0)" onclick="fncselectrating(5)"><i class="fa fa-star wawa starhover"></i></a>
-                                                                </li>
-                                                            </ul>
-                                                            <input type="hidden" id="txtmdlprodnumberofrating">
-                                                        </div>
-                                                        <div class="product_review_form">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <label for="review_comment" style="font-weight:600">Your
-                                                                        Review </label>
-                                                                    <textarea name="comment" id="txtmdlprodinputcomment" style="margin-bottom: 0px;"></textarea>
-                                                                </div>
+
+                                        <div class="tab-pane fade" id="reviews" role="tabpanel" >
+                                            <div class="reviews_wrapper">
+                                                <h2></h2>
+                                                <div id="txtmdlprodcomment"></div>
+
+                                                <?php if (empty($_SESSION['user_id'])) { ?>
+
+                                                <?php } else { ?>
+                                                    <div class="product_ratting mb-10">
+                                                        <h3 style="margin-bottom:0px;">Your rating</h3>
+                                                        <ul>
+                                                            <li><a href="javascript:void(0)" onclick="fncselectrating(1)"><i class="fa fa-star wawa starhover"></i></a></li>
+                                                            <li><a href="javascript:void(0)" onclick="fncselectrating(2)"><i class="fa fa-star wawa starhover"></i></a></li>
+                                                            <li><a href="javascript:void(0)" onclick="fncselectrating(3)"><i class="fa fa-star wawa starhover"></i></a></li>
+                                                            <li><a href="javascript:void(0)" onclick="fncselectrating(4)"><i class="fa fa-star wawa starhover"></i></a></li>
+                                                            <li><a href="javascript:void(0)" onclick="fncselectrating(5)"><i class="fa fa-star wawa starhover"></i></a></li>
+                                                        </ul>
+                                                        <input type="hidden" id="txtmdlprodnumberofrating">
+                                                    </div>
+                                                    <div class="product_review_form" style="border: 1px solid rgb(120 130 140 / 13%);">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <label for="review_comment" style="font-weight:600">Your
+                                                                    Review </label>
+                                                                <textarea placeholder="enter review..." name="comment" id="txtmdlprodinputcomment" style="margin-bottom: 0px;"></textarea>
                                                             </div>
-                                                            <button style="margin-top: 10px;" onclick="btnsubmitcomment();">Submit</button>
                                                         </div>
-                                                    <?php } ?>
+                                                        <button style="margin-top: 10px;" onclick="btnsubmitcomment();">Submit</button>
+                                                    </div>
+                                                <?php } ?>
 
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!--product info end-->
-
                     </div>
+                    <!--product info end-->
+
                 </div>
             </div>
         </div>

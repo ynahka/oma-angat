@@ -425,7 +425,7 @@
     
 .product_review_form{
     & button{
-        border: none;
+      border: 1px solid rgb(120 130 140 / 20%);
         background: $fonts_color;
         color: $white;
         text-transform: uppercase;
@@ -475,9 +475,10 @@
 
 .product_d_inner{
     padding: 20px 30px 27px;
-    border: 1px solid $grey_color;
+    border: 1px solid rgb(120 130 140 / 13%);
     @media #{$large-mobile}{
         padding: 20px 20px 27px;
+         border: 1px solid rgb(120 130 140 / 13%);
     }
 }
 .product_info_inner {
@@ -487,7 +488,7 @@
 	margin-top: 15px;
     & .product_ratting{
         margin-bottom: 10px;
-        & p{
+        & 
            margin-bottom: 5px; 
         }
         & strong{
@@ -529,14 +530,14 @@
 }
 .product_review_form  {
     & input{
-        border: 1px solid #ddd;
+       border: 1px solid rgb(120 130 140 / 20%);
 	    background: none;
         width: 100%;
         height: 40px;
         padding: 0 20px;
     }
     & textarea{
-        border: 1px solid #ddd;
+        border: 1px solid rgb(120 130 140 / 20%);
         background: none;
         height: 120px;
         resize: none;

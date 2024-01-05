@@ -115,7 +115,7 @@ session_start();
                                 <div class="col-lg-5 col-md-5">
                                     <div class="product-details-tab">
                                         <div id="img-1" class="zoomWrapper single-zoom" style="position: relative;">
-                                            <a href="javascript:void(0)" id="mdlprodimage1"></a>
+                                            <a id="mdlprodimage1"></a>
                                             <div class="soldout">Sold out</div>
                                         </div>
                                         <div class="single-zoom-thumb" id="mdlprodimage2">
@@ -125,25 +125,25 @@ session_start();
                                 </div>
                                 <div class="col-lg-7 col-md-7">
                                     <div class="product_d_right">
-                                        <h1 style="margin-bottom: 5px;"><a href="javascript:void(0)" id="txtmdlprodname"></a></h1>
-                                        <div class="product_ratting" id="txtmdlprodrates"></div>
+                                        <h1 style="margin-bottom: 5px; font-size: 30px;"><a id="txtmdlprodname"></a></h1>
+                                        <!-- <div class="product_ratting" style="color:#4C644B !important" id="txtmdlprodrates"></div> -->
                                         <div class="price_box">
-                                            <span class="current_price">₱ <span id="txtmdlprodprice">0.00</span>/<span id="txtmdlprodunit"></span>
+                                            <span style="color:#4C644B" class="current_price">₱ <span id="txtmdlprodprice">0.00</span>/<span id="txtmdlprodunit"></span>
                                         </div>
                                         <div class="product_desc">
-                                            <p id="txtmdlproddesc"></p>
+                                            <p id="txtmdlproddesc"></p> 
                                         </div>
                                         <div class="product_variant quantity">
                                             <label>quantity</label>
-                                            <input min="1" max="100" value="1" type="number" class="focus" id="txtmdlprodquantity" onchange="quantityvalidation()" onkeyup="quantityvalidation()">
+                                            <input style="border: 1px solid #4C644B !important;" min="1" max="100" value="1" type="number" class="focus" id="txtmdlprodquantity" onchange="quantityvalidation()" onkeyup="quantityvalidation()">
                                         </div>
                                         <div>
-                                            <span>Stock: <a href="javascript:void(0)" id="txtstock"></a></span><br>
+                                            <span>Stock: <a id="txtstock"></a></span><br>
                                         </div>
                                         <div class="product_meta">
-                                            <span>Category: <a href="javascript:void(0)" id="txtmdlprodcategory"></a></span><br>
-                                            <span>Available at: <a href="javascript:void(0)" id="txtmdlprodavailat"></a></span><br>
-                                            <span>Available until: <a href="javascript:void(0)" id="txtmdlprodavailuntil"></a></span><br>
+                                            <span>Category: <a id="txtmdlprodcategory"></a></span><br>
+                                            <span>Available at: <a id="txtmdlprodavailat"></a></span><br>
+                                            <span>Available until: <a id="txtmdlprodavailuntil"></a></span><br>
                                             <input type="hidden" id="txtmdlprodsellerID">
                                             <!-- <a href="javascript:void(0)" id="txtmdlprodsellername"></a>  -->
                                             <form method="POST" action="findshop.php">
@@ -156,7 +156,7 @@ session_start();
                                             <?php if (empty($_SESSION['user_id']) || $_SESSION['usertype'] !== 'CUSTOMER') { ?>
 
                                             <?php } else { ?>
-                                                <a href="javascript:void(0)" style="color:#77baff;"><i class='fa fa-comment' onclick="openproductsellerchat();"></i></a>
+                                                <br><a onclick="openproductsellerchat();" style="margin-left: 0px !important; color:#4C644B; border: 1px solid #4C644B !important; padding: 8px 10px; border-radius: 4px; margin-top:10px;"><span>Chat Seller:</span> <i class='fa fa-comment'></i></a>
 
                                             <?php } ?></span>
                                         </div>
@@ -180,7 +180,7 @@ session_start();
                         </div>
 
                         <!--product info start-->
-                        <div class="product_d_info">
+                        <div class="product_d_info" style="border: 1px solid rgb(120 130 140 / 20%);">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="product_d_inner">
@@ -196,7 +196,7 @@ session_start();
                                         </div>
 
 
-                                        <div class="tab-pane fade" id="reviews" role="tabpanel">
+                                        <div class="tab-pane fade" id="reviews" role="tabpanel" >
                                             <div class="reviews_wrapper">
                                                 <h2></h2>
                                                 <div id="txtmdlprodcomment"></div>
@@ -215,12 +215,12 @@ session_start();
                                                         </ul>
                                                         <input type="hidden" id="txtmdlprodnumberofrating">
                                                     </div>
-                                                    <div class="product_review_form">
+                                                    <div class="product_review_form" style="border: 1px solid rgb(120 130 140 / 13%);">
                                                         <div class="row">
                                                             <div class="col-12">
                                                                 <label for="review_comment" style="font-weight:600">Your
                                                                     Review </label>
-                                                                <textarea name="comment" id="txtmdlprodinputcomment" style="margin-bottom: 0px;"></textarea>
+                                                                <textarea placeholder="enter review..." name="comment" id="txtmdlprodinputcomment" style="margin-bottom: 0px;"></textarea>
                                                             </div>
                                                         </div>
                                                         <button style="margin-top: 10px;" onclick="btnsubmitcomment();">Submit</button>
@@ -509,12 +509,12 @@ session_start();
                     <span aria-hidden="true"><i class="icon-x"></i></span>
                 </button> -->
                 <button class="modal-close icofont-close" data-bs-dismiss="modal"></button>
-                <div class="modal_body" style="padding: 29px 6px 20px;">
+                <div class="modal_body" style="padding: 29px 6px 20px; background-color:#CFE2CE !important;">
                     <div class="container">
 
                         <div class="row">
-                            <div class="col-lg-12 col-md-12">
-                                <div class="contact_message form">
+                            <div class="col-lg-12 col-md-12" >
+                                <div class="contact_message form" >
                                     <p style="margin-bottom: 10px;">
                                         <label>Message to seller</label>
                                         <textarea id="txtsendchatmessage" style="height: 150px;margin-bottom: 0px;"></textarea>
