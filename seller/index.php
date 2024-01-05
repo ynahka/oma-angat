@@ -29,26 +29,26 @@ if (isset($_SESSION['user_id'])) {
 <html lang="en">
 
 <head>
-  <?php
+    <?php
   include('header.php');
   ?>
 </head>
 
 <body class="fix-header fix-sidebar card-no-border">
 
-  <div class="preloader">
-    <svg class="circular" viewBox="25 25 50 50">
-      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
-    </svg>
-  </div>
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
 
-  <div id="main-wrapper">
-    <?php include('topbar.php'); ?>
-    <?php include('leftsidebar.php'); ?>
+    <div id="main-wrapper">
+        <?php include('topbar.php'); ?>
+        <?php include('leftsidebar.php'); ?>
 
-    <div class="page-wrapper">
-      <div class="container-fluid containerfluidneed" style="padding: 20px 20px;">
-        <?php
+        <div class="page-wrapper">
+            <div class="container-fluid containerfluidneed" style="padding: 20px 20px;">
+                <?php
         if (!isset($_GET['url'])) {
           echo "<script>window.location='index.php?url=dashboard';</script>";
         } else {
@@ -81,19 +81,19 @@ if (isset($_SESSION['user_id'])) {
             include "../viewers/community.php";
           }
           if ($_GET['url'] == "chats") {
-            include "chat/index.php";
+            include "chat.php";
           }
         }
         ?>
-      </div>
+            </div>
 
-      <?php include('footer.php'); ?>
+            <?php include('footer.php'); ?>
+        </div>
+
     </div>
 
-  </div>
-
-  <?php include('jscripts.php'); ?>
-  <script src="schedule/js/script.js"></script>
+    <?php include('jscripts.php'); ?>
+    <script src="schedule/js/script.js"></script>
 </body>
 
 </html>
