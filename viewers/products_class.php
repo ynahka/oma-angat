@@ -121,7 +121,7 @@ switch ($_POST['form']) {
 ?> <option value="">- Select Category -</option> <?php
                                                   while ($row = mysqli_fetch_array($res)) {
                                                   ?> <option value="<?php echo $row[0]; ?>"><?php echo $row[1]; ?>
-      </option> <?php
+</option> <?php
                                                   }
                                                   break;
 

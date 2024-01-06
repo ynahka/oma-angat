@@ -127,7 +127,8 @@ session_start();
                                 </div>
                                 <div class="col-lg-7 col-md-7">
                                     <div class="product_d_right">
-                                        <h1 style="margin-bottom: 5px; font-size: 30px;"><a id="txtmdlprodname"></a></h1>
+                                        <h1 style="margin-bottom: 5px; font-size: 30px;"><a id="txtmdlprodname"></a>
+                                        </h1>
                                         <!-- <div class="product_ratting" style="color:#4C644B !important" id="txtmdlprodrates"></div> -->
                                         <div class="price_box">
                                             <span style="color:#4C644B" class="current_price">₱ <span id="txtmdlprodprice">0.00</span>/<span id="txtmdlprodunit"></span>
@@ -138,7 +139,7 @@ session_start();
                                         <div class="product_variant quantity">
                                             <label>quantity</label>
                                             <input style="border: 1px solid #4C644B !important;" min="1" max="100" value="1" type="number" class="focus" id="txtmdlprodquantity" onchange="quantityvalidation()" onkeyup="quantityvalidation()">
-                                            <input min="1" max="100" value="1" type="number" class="focus" id="txtmdlprodquantity" onchange="quantityvalidation()" onkeyup="quantityvalidation()">
+                                            <!-- <input min="1" max="100" value="1" type="number" class="focus" id="txtmdlprodquantity" onchange="quantityvalidation()" onkeyup="quantityvalidation()"> -->
                                         </div>
                                         <div>
                                             <span>Stock: <a id="txtstock"></a></span><br>
@@ -159,7 +160,8 @@ session_start();
                                             <?php if (empty($_SESSION['user_id']) || $_SESSION['usertype'] !== 'CUSTOMER') { ?>
 
                                             <?php } else { ?>
-                                                <br><a onclick="openproductsellerchat();" style="margin-left: 0px !important; color:#4C644B; border: 1px solid #4C644B !important; padding: 8px 10px; border-radius: 4px; margin-top:10px;"><span>Chat Seller:</span> <i class='fa fa-comment'></i></a>
+                                                <br><a onclick="openproductsellerchat();" style="margin-left: 0px !important; color:#4C644B; border: 1px solid #4C644B !important; padding: 8px 10px; border-radius: 4px; margin-top:10px;"><span>Chat
+                                                        Seller:</span> <i class='fa fa-comment'></i></a>
 
                                             <?php } ?></span>
                                         </div>
