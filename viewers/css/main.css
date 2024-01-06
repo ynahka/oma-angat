@@ -2055,15 +2055,8 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 .product-price {
   display: -webkit-box;
   display: -ms-flexbox;
-  -webkit-box-align: left;
-  -ms-flex-align: left;
-  align-items: left;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  justify-content: left;
-  -webkit-box-align: left;
-  -ms-flex-align: left;
-  align-items: center;
+   margin-left: 80px !important;
+   text-align:center;
   
 }
 
@@ -2074,14 +2067,15 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 
 .product-price span {
   color: var(--primary);
-      /* margin-left: 30px; */
+      text-align: center !important;
+
 
   /* white-space: nowrap; */
 }
 
-.price_box span{
-/* margin-left:50px !important; */
-}
+/* .price_box span{
+margin-left:50px !important;
+} */
 
 .product_rating lu li{
 color: #4c644b !important;
