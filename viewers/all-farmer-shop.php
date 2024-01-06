@@ -90,13 +90,15 @@ session_start();
             <?php foreach ($Pitems as $Pitem) : ?>
                 <li>
                     <div class="product-card" style="height: 230px;">
-                        <a class="product-media" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
+                        <a class="suggest-card" href="shop-1column.php?shopseller_id=<?php echo $Pitem['id']; ?>">
                             <img src="<?php echo $Pitem['img'] ?>">
                         </a>
                         <div class="product-content" style=" font-weight:500; ">
                             <h6 class="product-name">
                                 <p><?php echo $Pitem['title'] ?></p>
-                                <p style="font-size: 12px; font-weight: 400;"> <i class=" fas fa-map-marker-alt"></i> <span><?php echo $Pitem['brgy'] ?></span>, <?php echo  $Pitem['cy'] ?> </p>
+                                <p style="font-size: 12px; font-weight: 400;"> <i class=" fas fa-map-marker-alt"></i>
+                                    <span><?php echo $Pitem['brgy'] ?></span>, <?php echo  $Pitem['cy'] ?>
+                                </p>
                                 <!-- <p style="font-size: 12px; font-weight: 400; margin-left:13px"></i> <?php echo  $Pitem['cy'] ?></p> -->
                             </h6>
 

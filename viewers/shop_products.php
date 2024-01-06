@@ -31,78 +31,7 @@ session_start();
     }
     </script>
     <script src="/script.js"></script>
-    <!--breadcrumbs area start-->
-    <?php
-    // Check if the user is logged in
-    $isLoggedIn = !empty($_SESSION['user_id']) && $_SESSION['usertype'] === 'CUSTOMER';
-    if ($isLoggedIn) {
-        include 'header-nav-buyer.php'; // Include the file for logged-in users
-    } else {
-        include 'header-nav.php'; // Include the file for non-logged-in users
-    }
-    ?>
-    <?php include('category-sidebar.php'); ?>
-    <!--breadcrumbs area end-->
-
     <!--shop  area start-->
-    <section class="inner-section single-banner" style="background: url(images/banner.svg) no-repeat center;">
-        <div class="container">
-            <h2>Shop by Products</h2>
-        </div>
-    </section>
-    <div class="shop_area shop_fullwidth mt-30">
-        <div class="container" style="margin-top: -50px;">
-            <div class="row mt-2">
-                <!-- <div class="col-4">
-                    <div class="search_container" style="margin-right: 0px;">
-                        <div class="searchproductneed">
-                            <div class="search_box">
-                                <input placeholder="Search product . . ." type="text" style="height: 45px;" id="txtsearchspecproduct">
-                                <button type="submit"><i class="icon-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-                <div class="col-lg-6 col-md-6">
-                    <!--shop toolbar start-->
-                    <div class="shop_toolbar_wrapper"
-                        style="border: 1px solid rgb(120 130 140 / 50%);;padding: 0px 0px;float: left; width: 90%;  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.1);">
-                        <select class="nice-select" name="orderby" id="filteraccomodation"
-                            onchange="fncdisplaylistofproducts();"
-                            style="height: 47px;border-radius: 0px;line-height: 47px; width: 100%; text-align: center !important;">
-                            <option selected value="">- Category -</option>
-
-                        </select>
-                    </div>
-                    <!--shop toolbar end-->
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                    <!--shop toolbar start-->
-                    <div class="shop_toolbar_wrapper"
-                        style="border: 1px solid rgb(120 130 140 / 50%);;padding: 0px 0px;float: right;  width: 90%;  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.1);">
-                        <select class="nice-select" name="orderby" id="pricerange"
-                            onchange="fncdisplaylistofproducts();"
-                            style="height: 47px;border-radius: 0px;line-height: 47px; width: 100%; text-align: center !important;">
-                            <option selected value="">- Price Range -</option>
-                            <option value="Highest to Lowest">Highest to Lowest</option>
-                            <option value="Lowest to Highest">Lowest to Highest</option>
-                        </select>
-                    </div>
-                    <!--shop toolbar end-->
-                </div>
-
-            </div>
-
-            <div class="row mt-2">
-                <div class="col-12">
-                    <div class="row shop_wrapper grid_4" id="displaylistofrooms">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!--shop  area end-->
 
     <!-- PRODUCT DETAILS start-->
@@ -125,7 +54,6 @@ session_start();
                                         <div id="img-1" class="zoomWrapper single-zoom" style="position: relative;">
                                             <a href="javascript:void(0)" id="mdlprodimage1"></a>
                                             <div class="soldout">Sold out</div>
-                                            <div class="notavailable">Not Available</div>
                                         </div>
                                         <div class="single-zoom-thumb" id="mdlprodimage2">
 
@@ -588,7 +516,6 @@ session_start();
             </div>
         </div>
     </div>
-    <?php include('footer.php'); ?>
     <?php include('js-vendor.php'); ?>
     <?php include('jscripts.php'); ?>
 
@@ -720,64 +647,6 @@ function reqField1(classN) {
     return isValid;
 }
 
-// function openproductdetails(product_id) {
-//     $("#modal_productdet").modal('show');
-
-//     $("#txtmdlprodID").val(product_id);
-//     $.ajax({
-//         type: 'POST',
-//         url: 'products_class.php',
-//         data: 'product_id=' + product_id + '&form=fncdisplayproddet',
-//         success: function(data) {
-//             var show = data.split("|");
-//             $("#mdlprodimage1").html(show[4]);
-//             $("#mdlprodimage2").html(show[5]);
-
-//             $("#txtmdlprodname").text(show[0]);
-//             $("#txtmdlprodrates").html(show[1]);
-//             $("#txtmdlprodprice").text(show[2]);
-//             $("#txtmdlproddesc").text(show[3]);
-//             $("#txtmdlprodcategory").text(show[6]);
-
-//             $("#txtmdlprodunit").text(show[7]);
-//             $("#txtmdlprodavailat").text(show[8]);
-//             $("#txtmdlprodavailuntil").text(show[9]);
-//             $("#txtmdlprodfamily").text(show[10]);
-
-//             $("#txtmdlprodlight").text(show[11]);
-//             $("#txtmdlprodfrost").text(show[12]);
-//             $("#txtmdlprodsoil").text(show[13]);
-//             $("#txtmdlprodwater").text(show[14]);
-//             $("#txtmdlprodfulldimen").text(show[15]);
-//             $("#txtmdlprodsource").text(show[16]);
-//             $("#txtmdlprodcomment").html(show[17]);
-
-//             $("#txtmdlprodsellerID").val(show[18]);
-//             $("#txtmdlprodsellername").text(show[19]);
-//             $('#shopseller_id').val(show[18])
-//             $("#txtmdlprodsellername2").val(show[19]);
-
-//             // if (show[20] <= 0) {
-//             //     $("#txtstock").text('Out Of Stock');
-//             //     $('.contact_message button').attr('disabled', true)
-//             // }else{
-//             //     $("#txtstock").text(show[20]);
-//             //     $('.contact_message button').attr('disabled', false)
-//             // }
-//             if (show[20] <= 0) {
-//                 $("#txtstock").text('Out Of Stock');
-//                 $('.contact_message button').attr('disabled', true)
-//                 $('.soldout').addClass('soldout_show')
-//             } else {
-//                 $("#txtstock").text(show[20]);
-//                 $('.contact_message button').attr('disabled', false)
-//                 $('.soldout').removeClass('soldout_show')
-//             }
-
-//         }
-//     });
-// }
-
 function openproductdetails(product_id) {
     $("#modal_productdet").modal('show');
 
@@ -788,7 +657,6 @@ function openproductdetails(product_id) {
         data: 'product_id=' + product_id + '&form=fncdisplayproddet',
         success: function(data) {
             var show = data.split("|");
-
             $("#mdlprodimage1").html(show[4]);
             $("#mdlprodimage2").html(show[5]);
 
@@ -816,45 +684,26 @@ function openproductdetails(product_id) {
             $('#shopseller_id').val(show[18])
             $("#txtmdlprodsellername2").val(show[19]);
 
-            var availableUntilDate = new Date(show[9]);
-            var currentDate = new Date();
-
-            // Check if the available until date has passed
-            if (availableUntilDate < currentDate) {
-                $("#txtmdlprodavailuntil").text('Not Available');
-                $('.contact_message button').attr('disabled', true);
-                $('.notavailable').addClass('notavailable_show');
-
-                // Show the not available content
-                $('.notavailable').show();
-                $('.product-add').prop('disabled', true);
+            // if (show[20] <= 0) {
+            //     $("#txtstock").text('Out Of Stock');
+            //     $('.contact_message button').attr('disabled', true)
+            // }else{
+            //     $("#txtstock").text(show[20]);
+            //     $('.contact_message button').attr('disabled', false)
+            // }
+            if (show[20] <= 0) {
+                $("#txtstock").text('Out Of Stock');
+                $('.contact_message button').attr('disabled', true)
+                $('.soldout').addClass('soldout_show')
             } else {
-                $("#txtmdlprodavailuntil").text(show[9]);
-                $('.contact_message button').attr('disabled', false);
-                $('product-add').attr('disabled', false);
-                $('.notavailable').removeClass('notavailable_show');
-                // Show the available content
-                $('.notavailable').hide();
-                $('.product-add').prop('disabled', false);
-
-                // Stock checking
-                if (show[20] <= 0) {
-                    $("#txtstock").text('Out Of Stock');
-                    $('.contact_message button').attr('disabled', true);
-                    $('.soldout').addClass('soldout_show');
-                    $('.product-add').prop('disabled', true);
-                } else {
-                    $("#txtstock").text(show[20]);
-                    $('.product-add').prop('disabled', false);
-                    $('.soldout').removeClass('soldout_show');
-                    $('.contact_message button').attr('disabled', false);
-                }
+                $("#txtstock").text(show[20]);
+                $('.contact_message button').attr('disabled', false)
+                $('.soldout').removeClass('soldout_show')
             }
+
         }
     });
 }
-
-
 
 function clearmdl_productdet() {
     $("#txtmdlprodnumberofrating").val("");
@@ -1256,7 +1105,7 @@ function clearchat() {
 function sendChatToSeller() {
     var textmdlprodsellerID = $("#txtmdlprodsellerID").val();
     var textsendchatmessage = $("#txtsendchatmessage").val();
-
+    console.log("Sending message to seller with ID: " + textmdlprodsellerID);
     $(".loadload").show();
 
     $.ajax({

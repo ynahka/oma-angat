@@ -96,7 +96,7 @@ if (isset($_SESSION['user_id'])) {
             <?php foreach ($Pitems as $Pitem) : ?>
                 <li>
                     <div class="product-card" style="height: 230px;">
-                        <a class=" suggest-card" href="<?php echo $Pitem['url'] . '?id=' . $Pitem['id']; ?>">
+                        <a class="suggest-card" href="shop-1column.php?shopseller_id=<?php echo $Pitem['id']; ?>">
                             <img src="<?php echo $Pitem['img'] ?>">
                         </a>
                         <div class="product-content" style=" font-weight:500; ">

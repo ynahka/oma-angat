@@ -9,14 +9,14 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Include database connection code or use your existing connection
-include("connection.php");
+include("connect.php");
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Extract form data
     $userId = $_SESSION['user_id'];
     $name = $_POST['name'];
-    $email = $_POST['email'];
+    $email = $_POST['email']; // This is the email to be updated in the user_details table
 
     // Handle profile image upload (if provided)
     $profileImageName = ""; // Initialize variable to store the image file name
@@ -35,16 +35,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Update user details in the users_table
-    $updateUsersTableQuery = "UPDATE users_table SET username = '$name', email = '$email' WHERE user_id = '$userId'";
+    // Update user name in the users_table
+    $updateUsersTableQuery = "UPDATE users_table SET username = '$name' WHERE user_id = '$userId'";
     if (!mysqli_query($connection, $updateUsersTableQuery)) {
         // Handle database error
         echo "Error updating users_table: " . mysqli_error($connection);
         exit();
     }
 
-    // Update profile image in the user_details table
-    $updateUserDetailsQuery = "UPDATE user_details SET profile_image = '$profileImageName' WHERE user_id = '$userId'";
+    // Update profile image and email in the user_details table
+    $updateUserDetailsQuery = "UPDATE user_details SET profile_image = '$profileImageName', email = '$email' WHERE user_id = '$userId'";
     if (mysqli_query($connection, $updateUserDetailsQuery)) {
         // Update successful
         echo "Profile information updated successfully.";

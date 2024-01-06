@@ -254,7 +254,30 @@
     opacity: 1;
     visibility: visible;
 }
-
+.notavailable_show {
+    opacity: 1;
+    visibility: visible;
+}
+.notavailable, 
+.notavailableshow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100px;
+    height: 100px;
+    place-items: center;
+    display: grid;
+    border-radius: 50%;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+}
+.notavailable {
+    opacity: 1;
+    visibility: visible;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .search_container {
         display: block;

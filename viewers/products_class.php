@@ -68,6 +68,7 @@ switch ($_POST['form']) {
         if ($row['quantity'] <= 0) {
           echo "<div class='soldoutshow'>Sold out</div>";
         }
+
         echo "</a>
 	                                    <div class='action_links'>
 	                                        <ul>
