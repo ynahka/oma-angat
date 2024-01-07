@@ -100,7 +100,7 @@ if (isset($_SESSION['user_id'])) {
                             <img src="<?php echo $Pitem['img'] ?>">
                         </a>
                         <div class="product-content" style=" font-weight:500; ">
-                            <h6 class="product-name">
+                            <h6 class="product-name" style=" color: var(--heading) !important;">
                                 <p><?php echo $Pitem['title'] ?></p>
                                 <p style="font-size: 12px; font-weight: 400;"> <i class=" fas fa-map-marker-alt"></i>
                                     <span><?php echo $Pitem['brgy'] ?></span>, <?php echo  $Pitem['cy'] ?>
@@ -226,7 +226,7 @@ if (isset($_SESSION['user_id'])) {
                                         </div>
 
 
-                                        <div class="tab-pane fade" id="reviews" role="tabpanel" >
+                                        <div class="tab-pane fade" id="reviews" role="tabpanel">
                                             <div class="reviews_wrapper">
                                                 <h2></h2>
                                                 <div id="txtmdlprodcomment"></div>

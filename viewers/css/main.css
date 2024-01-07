@@ -2034,7 +2034,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
 }
 
 .product-name a {
-  color: var(--heading);
+  color: var(--heading) !important;
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s;
   -moz-transition: all linear 0.3s;
@@ -2042,6 +2042,9 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   -o-transition: all linear 0.3s;
 }
 
+.product_content h4{
+  color: var(--heading) !important;
+}
 .product-name span {
   color: var(--sub-heading);
   text-align: right;
@@ -2080,7 +2083,9 @@ margin-left:50px !important;
 .product_rating lu li{
 color: #4c644b !important;
 }
-
+.product_rating{
+  margin-bottom:10px !important;
+}
 .product-price span small {
   font-weight: 400;
 }
@@ -6709,6 +6714,7 @@ box-shadow: 0px 8px 20px 0px rgb(85, 115, 95, 0.4);
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+
 
 .shop-filter .nice-select {
   border-radius: 6px;

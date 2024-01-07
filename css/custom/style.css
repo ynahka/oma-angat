@@ -3436,6 +3436,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .product_content {
   margin-top: 22px;
   text-align: center;
+  color: #39404a !important;
 }
 .product_content h4 {
   font-size: 14px;
@@ -3443,13 +3444,14 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-weight: 400;
   text-transform: capitalize;
   margin: 0;
+  color: #39404a !important;
 }
 .product_content h4 a:hover {
   color: #79a206;
 }
 
 .product_rating {
-  margin-bottom: 2px;
+  margin-bottom: 10px;
 }
 .product_rating ul li {
   line-height: 16px;
@@ -10634,4 +10636,4 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   }
 }
 
-/*privacy policy css end*//*# sourceMappingURL=style.css.map *//
+/*privacy policy css end*//*# sourceMappingURL=style.css.map */

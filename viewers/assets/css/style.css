@@ -3518,7 +3518,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .product_rating ul li a {
   font-size: 17px;
-  color: #FEB954;
+  color: #4C644B !important;
 }
 .product_rating ul li a:hover {
   color: #79a206;
@@ -3539,7 +3539,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .price_box span.current_price {
   font-weight: 500;
   font-size: 15px;
-  color: #79a206;
+  color: #4C644B !important;
 }
 @media only screen and (max-width: 767px) {
   .price_box span.current_price {

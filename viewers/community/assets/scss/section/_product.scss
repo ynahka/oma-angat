@@ -238,12 +238,14 @@
 .product_content {
     margin-top: 22px;
     text-align: center;
+    color: #39404a !important;
     & h4{
         font-size: 14px;
         line-height: 16px;
         font-weight: 400;
         text-transform: capitalize;
         margin: 0;
+        color: #39404a !important;
         & a{
             &:hover{
                 color: $secondary_color;
@@ -253,7 +255,7 @@
 }
 
 .product_rating{
-    margin-bottom: 2px;
+    margin-bottom: 10px;
     & ul{
         & li{
             line-height: 16px;
