@@ -43,7 +43,7 @@ switch ($_POST['form']) {
 			echo "<span class='active-dot'></span>";
 		}
 		echo "</a></h4>
-       <span>Admin</span>
+       <span>Customer Service</span>
    </div>
 </div>";
 

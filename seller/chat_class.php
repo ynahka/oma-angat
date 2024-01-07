@@ -33,7 +33,7 @@ switch ($_POST['form']) {
 		if ($adminIsActive) {
 			echo "<span class='active-dot'></span>";
 		}
-		echo "</b><small class='text-success'>Admin</small></span></a>
+		echo "</b><small class='text-success'>Customer Service</small></span></a>
 	                    </li>";
 
 		if ($_POST['srchprod'] != '') {
