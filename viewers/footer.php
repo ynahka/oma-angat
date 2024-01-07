@@ -9,7 +9,7 @@
                             <a class="footer-logo" href="#">
                                 <img src="images/oma-angat-logo-solo.svg" alt="logo">
                             </a>
-                            <p class="footer-desc">A Virtual Agri-Market</p>
+                            <!-- <p class="footer-desc">A Virtual Agri-Market</p> -->
                             <ul class="footer-social">
                                 <li><a class="icofont-facebook" href="#"></a></li>
                                 <li><a class="icofont-instagram" href="#"></a></li>
@@ -24,7 +24,7 @@
                                 <li>
                                     <i class="fa-solid fa-envelope" href="#"></i>
                                     <p>
-                                        <span>oma-angat@gmail.com</span>
+                                        <span>omaangatph@gmail.com</span>
                                     </p>
                                 </li>
                                 <li>
@@ -79,7 +79,8 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="col-sm-12">
-                        <p class="footer-copytext"> &copy; 2023 <a target="_blank" href="index.php">Oma-Angat. All Rights Reserved.</a></p>
+                        <p class="footer-copytext"> &copy; 2023 <a target="_blank" href="index.php">Oma-Angat. All
+                                Rights Reserved.</a></p>
                     </div>
                 </div>
             </div>

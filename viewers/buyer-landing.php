@@ -94,25 +94,25 @@ if (isset($_SESSION['user_id'])) {
     <div class="container suggest" style="margin-top: -70px;">
         <ul class="suggest-slider slider-arrow">
             <?php foreach ($Pitems as $Pitem) : ?>
-                <li>
-                    <div class="product-card" style="height: 230px;">
-                        <a class="suggest-card" href="shop-1column.php?shopseller_id=<?php echo $Pitem['id']; ?>">
-                            <img src="<?php echo $Pitem['img'] ?>">
-                        </a>
-                        <div class="product-content" style=" font-weight:500; ">
-                            <h6 class="product-name" style=" color: var(--heading) !important;">
-                                <p><?php echo $Pitem['title'] ?></p>
-                                <p style="font-size: 12px; font-weight: 400;"> <i class=" fas fa-map-marker-alt"></i>
-                                    <span><?php echo $Pitem['brgy'] ?></span>, <?php echo  $Pitem['cy'] ?>
-                                </p>
-                                <!-- <p style="font-size: 12px; font-weight: 400; margin-left:13px"></i> <?php echo  $Pitem['cy'] ?></p> -->
-                            </h6>
+            <li>
+                <div class="product-card" style="height: 230px;">
+                    <a class="suggest-card" href="shop-1column.php?shopseller_id=<?php echo $Pitem['id']; ?>">
+                        <img src="<?php echo $Pitem['img'] ?>">
+                    </a>
+                    <div class="product-content" style=" font-weight:500; ">
+                        <h6 class="product-name" style=" color: var(--heading) !important;">
+                            <p><?php echo $Pitem['title'] ?></p>
+                            <p style="font-size: 12px; font-weight: 400;"> <i class=" fas fa-map-marker-alt"></i>
+                                <span><?php echo $Pitem['brgy'] ?></span>, <?php echo  $Pitem['cy'] ?>
+                            </p>
+                            <!-- <p style="font-size: 12px; font-weight: 400; margin-left:13px"></i> <?php echo  $Pitem['cy'] ?></p> -->
+                        </h6>
 
-
-                        </div>
 
                     </div>
-                </li>
+
+                </div>
+            </li>
             <?php endforeach; ?>
         </ul>
     </div>
@@ -128,7 +128,8 @@ if (isset($_SESSION['user_id'])) {
     <div id="homelistofproducts">
     </div>
     <!-- PRODUCT DETAILS start-->
-    <div class="modal fade" id="modal_productdet" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal fade" id="modal_productdet" tabindex="-1" role="dialog" data-bs-backdrop="static"
+        data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content" style="background-color: #cfe2ce; border-radius: 10px">
                 <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"
@@ -155,17 +156,21 @@ if (isset($_SESSION['user_id'])) {
                                 </div>
                                 <div class="col-lg-7 col-md-7">
                                     <div class="product_d_right">
-                                        <h1 style="margin-bottom: 5px; font-size: 30px;"><a id="txtmdlprodname"></a></h1>
+                                        <h1 style="margin-bottom: 5px; font-size: 30px;"><a id="txtmdlprodname"></a>
+                                        </h1>
                                         <!-- <div class="product_ratting" style="color:#4C644B !important" id="txtmdlprodrates"></div> -->
                                         <div class="price_box">
-                                            <span style="color:#4C644B" class="current_price">₱ <span id="txtmdlprodprice">0.00</span>/<span id="txtmdlprodunit"></span>
+                                            <span style="color:#4C644B" class="current_price">₱ <span
+                                                    id="txtmdlprodprice">0.00</span>/<span id="txtmdlprodunit"></span>
                                         </div>
                                         <div class="product_desc">
                                             <p id="txtmdlproddesc"></p>
                                         </div>
                                         <div class="product_variant quantity">
                                             <label>quantity</label>
-                                            <input style="border: 1px solid #4C644B !important;" min="1" max="100" value="1" type="number" class="focus" id="txtmdlprodquantity" onchange="quantityvalidation()" onkeyup="quantityvalidation()">
+                                            <input style="border: 1px solid #4C644B !important;" min="1" max="100"
+                                                value="1" type="number" class="focus" id="txtmdlprodquantity"
+                                                onchange="quantityvalidation()" onkeyup="quantityvalidation()">
                                         </div>
                                         <div>
                                             <span>Stock: <a id="txtstock"></a></span><br>
@@ -179,14 +184,18 @@ if (isset($_SESSION['user_id'])) {
                                             <form method="POST" action="findshop.php">
                                                 <span>Seller:
                                                     <input type="hidden" name="shopseller_id" id="shopseller_id">
-                                                    <input type="hidden" name="txtmdlprodsellername2" id="txtmdlprodsellername2">
-                                                    <button id="txtmdlprodsellername" name="findshop" type="submit" style="border:unset;background-color: unset;"></button>
+                                                    <input type="hidden" name="txtmdlprodsellername2"
+                                                        id="txtmdlprodsellername2">
+                                                    <button id="txtmdlprodsellername" name="findshop" type="submit"
+                                                        style="border:unset;background-color: unset;"></button>
                                             </form>
 
                                             <?php if (empty($_SESSION['user_id']) || $_SESSION['usertype'] !== 'CUSTOMER') { ?>
 
                                             <?php } else { ?>
-                                                <br><a onclick="openproductsellerchat();" style="margin-left: 0px !important; color:#4C644B; border: 1px solid #4C644B !important; padding: 8px 10px; border-radius: 4px; margin-top:10px;"><span>Chat Seller:</span> <i class='fa fa-comment'></i></a>
+                                            <br><a onclick="openproductsellerchat();"
+                                                style="margin-left: 0px !important; color:#4C644B; border: 1px solid #4C644B !important; padding: 8px 10px; border-radius: 4px; margin-top:10px;"><span>Chat
+                                                    Seller:</span> <i class='fa fa-comment'></i></a>
 
                                             <?php } ?></span>
                                         </div>
@@ -217,7 +226,9 @@ if (isset($_SESSION['user_id'])) {
                                         <div class="product_info_button">
                                             <ul class="nav" role="tablist" id="nav-tab">
                                                 <li>
-                                                    <a data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false" id="tabreviews">Reviews</a>
+                                                    <a data-bs-toggle="tab" href="#reviews" role="tab"
+                                                        aria-controls="reviews" aria-selected="false"
+                                                        id="tabreviews">Reviews</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -234,27 +245,36 @@ if (isset($_SESSION['user_id'])) {
                                                 <?php if (empty($_SESSION['user_id'])) { ?>
 
                                                 <?php } else { ?>
-                                                    <div class="product_ratting mb-10">
-                                                        <h3 style="margin-bottom:0px;">Your rating</h3>
-                                                        <ul>
-                                                            <li><a href="javascript:void(0)" onclick="fncselectrating(1)"><i class="fa fa-star wawa starhover"></i></a></li>
-                                                            <li><a href="javascript:void(0)" onclick="fncselectrating(2)"><i class="fa fa-star wawa starhover"></i></a></li>
-                                                            <li><a href="javascript:void(0)" onclick="fncselectrating(3)"><i class="fa fa-star wawa starhover"></i></a></li>
-                                                            <li><a href="javascript:void(0)" onclick="fncselectrating(4)"><i class="fa fa-star wawa starhover"></i></a></li>
-                                                            <li><a href="javascript:void(0)" onclick="fncselectrating(5)"><i class="fa fa-star wawa starhover"></i></a></li>
-                                                        </ul>
-                                                        <input type="hidden" id="txtmdlprodnumberofrating">
-                                                    </div>
-                                                    <div class="product_review_form" style="border: 1px solid rgb(120 130 140 / 13%);">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <label for="review_comment" style="font-weight:600">Your
-                                                                    Review </label>
-                                                                <textarea placeholder="enter review..." name="comment" id="txtmdlprodinputcomment" style="margin-bottom: 0px;"></textarea>
-                                                            </div>
+                                                <div class="product_ratting mb-10">
+                                                    <h3 style="margin-bottom:0px;">Your rating</h3>
+                                                    <ul>
+                                                        <li><a href="javascript:void(0)" onclick="fncselectrating(1)"><i
+                                                                    class="fa fa-star wawa starhover"></i></a></li>
+                                                        <li><a href="javascript:void(0)" onclick="fncselectrating(2)"><i
+                                                                    class="fa fa-star wawa starhover"></i></a></li>
+                                                        <li><a href="javascript:void(0)" onclick="fncselectrating(3)"><i
+                                                                    class="fa fa-star wawa starhover"></i></a></li>
+                                                        <li><a href="javascript:void(0)" onclick="fncselectrating(4)"><i
+                                                                    class="fa fa-star wawa starhover"></i></a></li>
+                                                        <li><a href="javascript:void(0)" onclick="fncselectrating(5)"><i
+                                                                    class="fa fa-star wawa starhover"></i></a></li>
+                                                    </ul>
+                                                    <input type="hidden" id="txtmdlprodnumberofrating">
+                                                </div>
+                                                <div class="product_review_form"
+                                                    style="border: 1px solid rgb(120 130 140 / 13%);">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <label for="review_comment" style="font-weight:600">Your
+                                                                Review </label>
+                                                            <textarea placeholder="enter review..." name="comment"
+                                                                id="txtmdlprodinputcomment"
+                                                                style="margin-bottom: 0px;"></textarea>
                                                         </div>
-                                                        <button style="margin-top: 10px;" onclick="btnsubmitcomment();">Submit</button>
                                                     </div>
+                                                    <button style="margin-top: 10px;"
+                                                        onclick="btnsubmitcomment();">Submit</button>
+                                                </div>
                                                 <?php } ?>
 
                                             </div>
@@ -273,7 +293,8 @@ if (isset($_SESSION['user_id'])) {
     <!-- PRODUCT DETAILS end-->
 
     <!-- BUY NOW MODAL -->
-    <div class="modal fade" id="modal_productbuynow" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal fade" id="modal_productbuynow" tabindex="-1" role="dialog" data-bs-backdrop="static"
+        data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content" style="border: 0px solid #82a131;">
                 <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"
@@ -281,7 +302,8 @@ if (isset($_SESSION['user_id'])) {
                     <span aria-hidden="true"><i class="icon-x"></i></span>
                 </button> -->
                 <button class="modal-close icofont-close" data-bs-dismiss="modal"></button>
-                <div class="modal_body" style="padding: 29px 6px 20px;background-color: #cfe2ce; border-radius: 40px; border: 1px solid #82a131;">
+                <div class="modal_body"
+                    style="padding: 29px 6px 20px;background-color: #cfe2ce; border-radius: 40px; border: 1px solid #82a131;">
                     <div class="container">
                         <input type="hidden" id="txtmdlprodID2">
 
@@ -292,9 +314,12 @@ if (isset($_SESSION['user_id'])) {
                                     <div class="coupon_code left">
                                         <h3 style="background-color: #4c644b;">Delivery Address</h3>
                                         <div class=" coupon_inner" style="padding: 10px 20px 10px;">
-                                            <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-user" aria-hidden="true"></i> <span id="txtmdlcheckoutname"></span></h4>
-                                            <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-phone" aria-hidden="true"></i> <span id="txtmdlcheckoutphone"></span></h4>
-                                            <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-user"
+                                                    aria-hidden="true"></i> <span id="txtmdlcheckoutname"></span></h4>
+                                            <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-phone"
+                                                    aria-hidden="true"></i> <span id="txtmdlcheckoutphone"></span></h4>
+                                            <h4 style="font-weight:400"><i style="color: #79a206;"
+                                                    class="fa fa-map-marker" aria-hidden="true"></i>
                                                 <span id="txtmdlcheckoutaddress"></span> &nbsp;&nbsp;&nbsp;
                                                 <!-- <span style="cursor:pointer;color: #0089ff;font-size: 13px;" onclick="">Change</span> -->
                                             </h4>
@@ -334,19 +359,24 @@ if (isset($_SESSION['user_id'])) {
                                                                     <tbody>
                                                                         <tr>
                                                                             <td style="width: 80%;text-align: left;">
-                                                                                <img src="" style="width:50px" id="txtmdlbuynowproductimage">
-                                                                                <a href="#"><span id="txtmdlbuynowproductname"></span></a>
+                                                                                <img src="" style="width:50px"
+                                                                                    id="txtmdlbuynowproductimage">
+                                                                                <a href="#"><span
+                                                                                        id="txtmdlbuynowproductname"></span></a>
                                                                             </td>
                                                                             <td style="width: 3%;text-align: left;">
-                                                                                <span id="txtmdlbuynowproductquantity"></span>
+                                                                                <span
+                                                                                    id="txtmdlbuynowproductquantity"></span>
                                                                             </td>
                                                                             <td style="width: 3%;text-align: left;">
                                                                                 ₱
-                                                                                <span id="txtmdlbuynowproductprice">0.00</span>
+                                                                                <span
+                                                                                    id="txtmdlbuynowproductprice">0.00</span>
                                                                             </td>
                                                                             <td style="width: 3%;text-align: left;">
                                                                                 ₱
-                                                                                <span id="txtmdlbuynowproductsubtotal">0.00</span>
+                                                                                <span
+                                                                                    id="txtmdlbuynowproductsubtotal">0.00</span>
                                                                             </td>
                                                                         </tr>
                                                                     </tbody>
@@ -377,7 +407,9 @@ if (isset($_SESSION['user_id'])) {
 
                                             <div class="row">
                                                 <div class="col-lg-6 col-md-12">
-                                                    <div class="paymentmethcash hoverpaymentmeth marginebottomforpaymeth" style="padding: 10px 15px 10px; border-radius: 5px;cursor: pointer;" onclick="paymentcash();">
+                                                    <div class="paymentmethcash hoverpaymentmeth marginebottomforpaymeth"
+                                                        style="padding: 10px 15px 10px; border-radius: 5px;cursor: pointer;"
+                                                        onclick="paymentcash();">
                                                         <div class="services_item" style="margin-bottom: 0px;">
                                                             <div class="services_icone">
                                                                 <i class="fa fa-money"></i>
@@ -393,7 +425,9 @@ if (isset($_SESSION['user_id'])) {
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-12">
-                                                    <div class="paymentmethgcash hoverpaymentmeth" style="padding: 10px 15px 10px; border-radius: 5px;cursor: pointer;" onclick="paymentgcash();">
+                                                    <div class="paymentmethgcash hoverpaymentmeth"
+                                                        style="padding: 10px 15px 10px; border-radius: 5px;cursor: pointer;"
+                                                        onclick="paymentgcash();">
                                                         <div class="services_item" style="margin-bottom: 0px;">
                                                             <div class="services_icone">
                                                                 <i class="fa fa-credit-card"></i>
@@ -428,17 +462,20 @@ if (isset($_SESSION['user_id'])) {
                                         <div class="coupon_inner" style="padding: 10px 10px 10px;">
                                             <div class="cart_subtotal">
                                                 <p>Subtotal</p>
-                                                <p class="cart_amount" style="">₱ <span id="txtmdlbuynowsubtotal">0.00</span></p>
+                                                <p class="cart_amount" style="">₱ <span
+                                                        id="txtmdlbuynowsubtotal">0.00</span></p>
                                             </div>
 
                                             <div class="cart_subtotal">
                                                 <p>Shipping</p>
-                                                <p class="cart_amount" style="">₱ <span id="txtmdlbuynowshiptotal">0.00</span></p>
+                                                <p class="cart_amount" style="">₱ <span
+                                                        id="txtmdlbuynowshiptotal">0.00</span></p>
                                             </div>
 
                                             <div class="cart_subtotal" style="border-top: 1px solid #e1e1e1;">
                                                 <p style="margin-top:10px">Payment Total</p>
-                                                <p style="margin-top:10px" class="cart_amount">₱ <span id="txtmdlbuynowpaymenttotamt">0.00</span></p>
+                                                <p style="margin-top:10px" class="cart_amount">₱ <span
+                                                        id="txtmdlbuynowpaymenttotamt">0.00</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -460,9 +497,11 @@ if (isset($_SESSION['user_id'])) {
     <!-- BUY NOW MODAL end-->
 
     <!-- PAYMENT UPLOAD start-->
-    <div class=" modal fade" id="modal_paymentupload" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class=" modal fade" id="modal_paymentupload" tabindex="-1" role="dialog" data-bs-backdrop="static"
+        data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered modal-paymentneed">
-            <div class="modal-content" style="border: 2px solid #82a131; background-color: #cfe2ce; border-radius: 10px">
+            <div class="modal-content"
+                style="border: 2px solid #82a131; background-color: #cfe2ce; border-radius: 10px">
                 <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick=""
                     style="left: 92%;">
                     <span aria-hidden="true"><i class="icon-x"></i></span>
@@ -474,7 +513,7 @@ if (isset($_SESSION['user_id'])) {
 
                         <div class="row" style="justify-content: center;text-align: center; margin-top: 20px;">
                             <div class="col-lg-6 col-md-12">
-                                <h4 style="font-weight: 400">Scan to pay</h4>
+                                <h4 style="font-weight: 400"><img src="images/gcashLogo.png" alt=""></h4>
                                 <div class="blog_thumb mb-2">
                                     <a href="javascript:void(0)"><img src="" id="txtsellergcashimage"></a>
                                 </div>
@@ -505,14 +544,21 @@ if (isset($_SESSION['user_id'])) {
                                 <div class="contact_message form">
                                     <div class="contact_textarea">
                                         <label>Upload screenshot of payment *</label>
-                                        <form method="post" action="#" enctype="multipart/form-data" id="frmUploadvalidPic">
+                                        <form method="post" action="#" enctype="multipart/form-data"
+                                            id="frmUploadvalidPic">
                                             <div class="row">
                                                 <div class="col-md-12" style="display: none;">
-                                                    <img src="assets/images/noimage5.png" width="200" height="250" style="border: 2px solid #bdc3c7; margin-bottom: 10px;" id="updatevalidImage"><br>
+                                                    <img src="assets/images/noimage5.png" width="200" height="250"
+                                                        style="border: 2px solid #bdc3c7; margin-bottom: 10px;"
+                                                        id="updatevalidImage"><br>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <input type="file" class="dropify clearinfo reqresinfo" id="txtvalidImagefile" name="txtvalidImagefile" onchange="fncShowvalidPic();" accept="image/*" data-height="300">
-                                                    <input type="hidden" class="clearinfo" name="txtvalidimageID" id="txtvalidimageID">
+                                                    <input type="file" class="dropify clearinfo reqresinfo"
+                                                        id="txtvalidImagefile" name="txtvalidImagefile"
+                                                        onchange="fncShowvalidPic();" accept="image/*"
+                                                        data-height="300">
+                                                    <input type="hidden" class="clearinfo" name="txtvalidimageID"
+                                                        id="txtvalidimageID">
                                                 </div>
                                             </div>
                                         </form>
@@ -533,10 +579,12 @@ if (isset($_SESSION['user_id'])) {
     <!-- PAYMENT UPLOAD end-->
 
     <!-- CHAT start-->
-    <div class="modal fade" id="modal_chat" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal fade" id="modal_chat" tabindex="-1" role="dialog" data-bs-backdrop="static"
+        data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered modal-paymentneed">
             <div class="modal-content" style="border: 10px solid #82a131;background-color: #eef4dd;">
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="clearchat()" style="left: 92%;">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="clearchat()"
+                    style="left: 92%;">
                     <span aria-hidden="true"><i class="icon-x"></i></span>
                 </button>
                 <div class="modal_body" style="padding: 29px 6px 20px;">
@@ -547,7 +595,8 @@ if (isset($_SESSION['user_id'])) {
                                 <div class="contact_message form">
                                     <p style="margin-bottom: 10px;">
                                         <label>Message to seller</label>
-                                        <textarea id="txtsendchatmessage" style="height: 150px;margin-bottom: 0px;"></textarea>
+                                        <textarea id="txtsendchatmessage"
+                                            style="height: 150px;margin-bottom: 0px;"></textarea>
                                     </p>
                                 </div>
                             </div>
@@ -578,12 +627,14 @@ if (isset($_SESSION['user_id'])) {
                     <div class="row">
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="all-farmer-shop.php"><img src="images/promo/features/referral.svg" alt="referral"></a>
+                                <a href="all-farmer-shop.php"><img src="images/promo/features/referral.svg"
+                                        alt="referral"></a>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="all-farmer-shop.php"><img src="images/promo/features/donation.svg" alt="donate"></a>
+                                <a href="all-farmer-shop.php"><img src="images/promo/features/donation.svg"
+                                        alt="donate"></a>
                             </div>
                         </div>
                     </div>
@@ -592,8 +643,15 @@ if (isset($_SESSION['user_id'])) {
                     <div class="home-grid-slider slider-arrow slider-dots">
                         <!-- <a href="chat.php"><img src="images/promo/features/messaging-system.svg" alt=""></a>
                         <a href="#"><img src="images/promo/features/harvesting-calendar.svg" alt=""></a> -->
-                        <iframe width="1263" height="480" src="https://www.youtube.com/embed/owXzG8gFfXI" title="Support Family Farming - Help Local Farmers, Achieve Zero Hunger [Advocacy Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jzx3M7G9bns" title="Support Filipino Farmers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="1263" height="480" src="https://www.youtube.com/embed/owXzG8gFfXI"
+                            title="Support Family Farming - Help Local Farmers, Achieve Zero Hunger [Advocacy Video]"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jzx3M7G9bns"
+                            title="Support Filipino Farmers" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -607,132 +665,243 @@ if (isset($_SESSION['user_id'])) {
 </body>
 
 <script type="text/javascript">
-    $(function() {
-        $("#homeclass").addClass('active');
-        fncdisplaylistofproducts();
+$(function() {
+    $("#homeclass").addClass('active');
+    fncdisplaylistofproducts();
 
-        $(".wawa").click(function() {
-            $(".wawa").css("color", "#79a206");
-            $(this).css("color", "#FEB954");
-        })
-
-        $(".numonly").keydown(function(event) {
-            if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 190 || event.keyCode == 9 ||
-                event.keyCode == 188) {
-
-            } else {
-                if (event.keyCode < 48 || event.keyCode > 57 || event.keyCode == 17) {
-                    event.preventDefault();
-                }
-            }
-        });
-
-        $(".focus").focus(function() {
-            this.select();
-        });
+    $(".wawa").click(function() {
+        $(".wawa").css("color", "#79a206");
+        $(this).css("color", "#FEB954");
     })
 
-    function reqField1(classN) {
-        var isValid = 1;
-        $('.' + classN).each(function() {
-            if ($(this).val() == '') {
-                $(this).css('border', '1px #a94442 solid');
-                $(this).addClass('lala');
-                isValid = 0;
+    $(".numonly").keydown(function(event) {
+        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 190 || event.keyCode == 9 ||
+            event.keyCode == 188) {
+
+        } else {
+            if (event.keyCode < 48 || event.keyCode > 57 || event.keyCode == 17) {
+                event.preventDefault();
+            }
+        }
+    });
+
+    $(".focus").focus(function() {
+        this.select();
+    });
+})
+
+function reqField1(classN) {
+    var isValid = 1;
+    $('.' + classN).each(function() {
+        if ($(this).val() == '') {
+            $(this).css('border', '1px #a94442 solid');
+            $(this).addClass('lala');
+            isValid = 0;
+        } else {
+            $(this).css('border', '');
+            $(this).removeClass('lala');
+        }
+    });
+
+    return isValid;
+}
+
+function fncdisplaylistofproducts() {
+    $.ajax({
+        type: 'POST',
+        url: 'home_class.php',
+        data: 'form=fncdisplaylistofproducts',
+        success: function(data) {
+            $("#homelistofproducts").html(data);
+        }
+    });
+}
+
+function openproductdetails(product_id) {
+    $("#modal_productdet").modal('show');
+
+    $("#txtmdlprodID").val(product_id);
+    $.ajax({
+        type: 'POST',
+        url: 'home_class.php',
+        data: 'product_id=' + product_id + '&form=fncdisplayproddet',
+        success: function(data) {
+            var show = data.split("|");
+            $("#mdlprodimage1").html(show[4]);
+            $("#mdlprodimage2").html(show[5]);
+
+            $("#txtmdlprodname").text(show[0]);
+            $("#txtmdlprodrates").html(show[1]);
+            $("#txtmdlprodprice").text(show[2]);
+            $("#txtmdlproddesc").text(show[3]);
+            $("#txtmdlprodcategory").text(show[6]);
+
+            $("#txtmdlprodunit").text(show[7]);
+            $("#txtmdlprodavailat").text(show[8]);
+            $("#txtmdlprodavailuntil").text(show[9]);
+            $("#txtmdlprodfamily").text(show[10]);
+            $("#txtmdlprodfamily").text(show[10]);
+
+            $("#txtmdlprodlight").text(show[11]);
+            $("#txtmdlprodfrost").text(show[12]);
+            $("#txtmdlprodsoil").text(show[13]);
+            $("#txtmdlprodwater").text(show[14]);
+            $("#txtmdlprodfulldimen").text(show[15]);
+            $("#txtmdlprodsource").text(show[16]);
+            $("#txtmdlprodcomment").html(show[17]);
+
+            $("#txtmdlprodsellerID").val(show[18]);
+            $("#txtmdlprodsellername").text(show[19]);
+            $('#shopsellerID').val(show[18])
+            $("#txtmdlprodsellername2").val(show[19]);
+
+
+            if (show[20] <= 0) {
+                $("#txtstock").text('Out Of Stock');
+                $('.contact_message button').attr('disabled', true)
+                $('.soldout').addClass('soldout_show')
             } else {
-                $(this).css('border', '');
-                $(this).removeClass('lala');
+                $("#txtstock").text(show[20]);
+                $('.contact_message button').attr('disabled', false)
+                $('.soldout').removeClass('soldout_show')
             }
-        });
+        }
+    });
+}
 
-        return isValid;
-    }
+function clearmdl_productdet() {
+    $("#txtmdlprodnumberofrating").val("");
+    $("#txtmdlprodquantity").val("1");
+    $("#txtmdlprodinputcomment").val("");
+    $(".wawa").css("color", "#79a206");
 
-    function fncdisplaylistofproducts() {
-        $.ajax({
-            type: 'POST',
-            url: 'home_class.php',
-            data: 'form=fncdisplaylistofproducts',
-            success: function(data) {
-                $("#homelistofproducts").html(data);
-            }
-        });
-    }
+    $("#tabdesc").addClass("active");
+    $("#tabplantcare").removeClass("active");
+    $("#tabreviews").removeClass("active");
+    $("#info").addClass("show active");
+    $("#sheet").removeClass("show active");
+    $("#reviews").removeClass("show active");
+}
 
-    function openproductdetails(product_id) {
-        $("#modal_productdet").modal('show');
+function fncselectrating(rate) {
+    $("#txtmdlprodnumberofrating").val(rate);
+}
 
-        $("#txtmdlprodID").val(product_id);
-        $.ajax({
-            type: 'POST',
-            url: 'home_class.php',
-            data: 'product_id=' + product_id + '&form=fncdisplayproddet',
-            success: function(data) {
-                var show = data.split("|");
-                $("#mdlprodimage1").html(show[4]);
-                $("#mdlprodimage2").html(show[5]);
+function quantityvalidation() {
+    var textmdlprodquantity = $("#txtmdlprodquantity").val();
+    var textmdlprodID = $("#txtmdlprodID").val();
 
-                $("#txtmdlprodname").text(show[0]);
-                $("#txtmdlprodrates").html(show[1]);
-                $("#txtmdlprodprice").text(show[2]);
-                $("#txtmdlproddesc").text(show[3]);
-                $("#txtmdlprodcategory").text(show[6]);
+    $.ajax({
+        type: 'POST',
+        url: 'home_class.php',
+        data: 'textmdlprodquantity=' + textmdlprodquantity + '&textmdlprodID=' + textmdlprodID +
+            '&form=checkquantityindb',
+        success: function(data) {
 
-                $("#txtmdlprodunit").text(show[7]);
-                $("#txtmdlprodavailat").text(show[8]);
-                $("#txtmdlprodavailuntil").text(show[9]);
-                $("#txtmdlprodfamily").text(show[10]);
-                $("#txtmdlprodfamily").text(show[10]);
+            if (data == 1) {
+                if (textmdlprodquantity <= 30) {
 
-                $("#txtmdlprodlight").text(show[11]);
-                $("#txtmdlprodfrost").text(show[12]);
-                $("#txtmdlprodsoil").text(show[13]);
-                $("#txtmdlprodwater").text(show[14]);
-                $("#txtmdlprodfulldimen").text(show[15]);
-                $("#txtmdlprodsource").text(show[16]);
-                $("#txtmdlprodcomment").html(show[17]);
-
-                $("#txtmdlprodsellerID").val(show[18]);
-                $("#txtmdlprodsellername").text(show[19]);
-                $('#shopsellerID').val(show[18])
-                $("#txtmdlprodsellername2").val(show[19]);
-
-
-                if (show[20] <= 0) {
-                    $("#txtstock").text('Out Of Stock');
-                    $('.contact_message button').attr('disabled', true)
-                    $('.soldout').addClass('soldout_show')
                 } else {
-                    $("#txtstock").text(show[20]);
-                    $('.contact_message button').attr('disabled', false)
-                    $('.soldout').removeClass('soldout_show')
+                    Swal.fire(
+                        'ALERT',
+                        'Quantity exceeded 30.',
+                        'warning'
+                    )
+                    $("#txtmdlprodquantity").val(1);
                 }
+            } else {
+                Swal.fire(
+                    'ALERT',
+                    'Out of stock.',
+                    'warning'
+                )
+                $("#txtmdlprodquantity").val(1);
             }
-        });
+
+        }
+    })
+}
+
+// SUBMIT COMMENT
+function btnsubmitcomment() {
+    $.ajax({
+        type: 'POST',
+        url: 'home_class.php',
+        data: 'form=checkifloggedin',
+        success: function(data) {
+            if (data == 1) {
+                window.location = "../buyer/login.php";
+            } else {
+                btnsubmitsavecomment();
+            }
+        }
+    });
+}
+
+function btnsubmitsavecomment() {
+    var textmdlprodID = $("#txtmdlprodID").val();
+    var textmdlprodnumberofrating = $("#txtmdlprodnumberofrating").val();
+    var textmdlprodinputcomment = $("#txtmdlprodinputcomment").val();
+
+    if (textmdlprodnumberofrating != "") {
+        if (textmdlprodinputcomment != "") {
+            $.ajax({
+                type: 'POST',
+                url: 'home_class.php',
+                data: 'textmdlprodnumberofrating=' + textmdlprodnumberofrating + '&textmdlprodinputcomment=' +
+                    textmdlprodinputcomment + '&textmdlprodID=' + textmdlprodID + '&form=btnsubmitsavecomment',
+                success: function(data) {
+                    var show = data.split("|");
+                    $("#txtmdlprodrates").html(show[0]);
+                    $("#txtmdlprodcomment").html(show[1]);
+                    $("#txtmdlprodnumberofrating").val("");
+                    $("#txtmdlprodinputcomment").val("");
+                }
+            })
+        } else {
+            Swal.fire(
+                'ALERT',
+                'Please enter your comment.',
+                'warning'
+            )
+        }
+    } else {
+        Swal.fire(
+            'ALERT',
+            'Please enter your rate.',
+            'warning'
+        )
     }
+}
 
-    function clearmdl_productdet() {
-        $("#txtmdlprodnumberofrating").val("");
-        $("#txtmdlprodquantity").val("1");
-        $("#txtmdlprodinputcomment").val("");
-        $(".wawa").css("color", "#79a206");
+// ADD TO CART
+function btnaddtocart() {
+    $.ajax({
+        type: 'POST',
+        url: 'home_class.php',
+        data: 'form=checkifloggedin',
+        success: function(data) {
+            if (data == 1) {
+                window.location = "../buyer/login.php";
+            } else {
+                btnsaveaddtocart();
+            }
+        }
+    });
+}
 
-        $("#tabdesc").addClass("active");
-        $("#tabplantcare").removeClass("active");
-        $("#tabreviews").removeClass("active");
-        $("#info").addClass("show active");
-        $("#sheet").removeClass("show active");
-        $("#reviews").removeClass("show active");
-    }
+function btnsaveaddtocart() {
+    var textmdlprodID = $("#txtmdlprodID").val();
+    var textmdlprodquantity = $("#txtmdlprodquantity").val();
+    var textmdlprodprice = ($("#txtmdlprodprice").text()).replace(/,/g, "");
 
-    function fncselectrating(rate) {
-        $("#txtmdlprodnumberofrating").val(rate);
-    }
-
-    function quantityvalidation() {
-        var textmdlprodquantity = $("#txtmdlprodquantity").val();
-        var textmdlprodID = $("#txtmdlprodID").val();
-
+    if (textmdlprodquantity == 0 || textmdlprodquantity == "") {
+        Swal.fire(
+            'ALERT',
+            'Please enter a quantity.',
+            'warning'
+        )
+    } else {
         $.ajax({
             type: 'POST',
             url: 'home_class.php',
@@ -742,11 +911,39 @@ if (isset($_SESSION['user_id'])) {
 
                 if (data == 1) {
                     if (textmdlprodquantity <= 30) {
+                        $(".loadload").show();
+                        $.ajax({
+                            type: 'POST',
+                            url: 'home_class.php',
+                            data: 'textmdlprodID=' + textmdlprodID + '&textmdlprodquantity=' +
+                                textmdlprodquantity + '&textmdlprodprice=' + textmdlprodprice +
+                                '&form=btnsaveaddtocart',
+                            success: function(data) {
+                                setTimeout(function() {
+                                    $(".loadload").hide();
+                                    Swal.fire({
+                                        title: "Success!",
+                                        text: "Successfully added to cart.",
+                                        type: "success",
+                                        icon: "success",
+                                        showCancelButton: false,
+                                        confirmButtonColor: "#2778c4",
+                                        confirmButtonText: "Okay",
+                                        closeOnConfirm: false
+                                    }).then((result) => {
+                                        if (result.value) {
+                                            window.location =
+                                                "cart.php";
+                                        }
+                                    });
+                                }, 500);
 
+                            }
+                        })
                     } else {
                         Swal.fire(
                             'ALERT',
-                            'Quantity exceeded 30.',
+                            'Quantity cannot exceed 30.',
                             'warning'
                         )
                         $("#txtmdlprodquantity").val(1);
@@ -764,409 +961,270 @@ if (isset($_SESSION['user_id'])) {
         })
     }
 
-    // SUBMIT COMMENT
-    function btnsubmitcomment() {
-        $.ajax({
-            type: 'POST',
-            url: 'home_class.php',
-            data: 'form=checkifloggedin',
-            success: function(data) {
-                if (data == 1) {
-                    window.location = "../buyer/login.php";
-                } else {
-                    btnsubmitsavecomment();
-                }
-            }
-        });
-    }
+}
 
-    function btnsubmitsavecomment() {
-        var textmdlprodID = $("#txtmdlprodID").val();
-        var textmdlprodnumberofrating = $("#txtmdlprodnumberofrating").val();
-        var textmdlprodinputcomment = $("#txtmdlprodinputcomment").val();
+// BUY NOW BUTTON
+function btnbuynow() {
+    var textmdlprodquantity = $("#txtmdlprodquantity").val();
 
-        if (textmdlprodnumberofrating != "") {
-            if (textmdlprodinputcomment != "") {
-                $.ajax({
-                    type: 'POST',
-                    url: 'home_class.php',
-                    data: 'textmdlprodnumberofrating=' + textmdlprodnumberofrating + '&textmdlprodinputcomment=' +
-                        textmdlprodinputcomment + '&textmdlprodID=' + textmdlprodID + '&form=btnsubmitsavecomment',
-                    success: function(data) {
-                        var show = data.split("|");
-                        $("#txtmdlprodrates").html(show[0]);
-                        $("#txtmdlprodcomment").html(show[1]);
-                        $("#txtmdlprodnumberofrating").val("");
-                        $("#txtmdlprodinputcomment").val("");
-                    }
-                })
+    $.ajax({
+        type: 'POST',
+        url: 'home_class.php',
+        data: 'form=checkifloggedin',
+        success: function(data) {
+            if (data == 1) {
+                window.location = "../buyer/login.php";
             } else {
-                Swal.fire(
-                    'ALERT',
-                    'Please enter your comment.',
-                    'warning'
-                )
-            }
-        } else {
-            Swal.fire(
-                'ALERT',
-                'Please enter your rate.',
-                'warning'
-            )
-        }
-    }
-
-    // ADD TO CART
-    function btnaddtocart() {
-        $.ajax({
-            type: 'POST',
-            url: 'home_class.php',
-            data: 'form=checkifloggedin',
-            success: function(data) {
-                if (data == 1) {
-                    window.location = "../buyer/login.php";
+                if (textmdlprodquantity == "" || textmdlprodquantity == 0) {
+                    Swal.fire(
+                        'ALERT',
+                        'Please enter a quantity.',
+                        'warning'
+                    )
                 } else {
-                    btnsaveaddtocart();
+                    openproductbuynowdet();
                 }
             }
-        });
-    }
+        }
+    });
+}
 
-    function btnsaveaddtocart() {
-        var textmdlprodID = $("#txtmdlprodID").val();
-        var textmdlprodquantity = $("#txtmdlprodquantity").val();
-        var textmdlprodprice = ($("#txtmdlprodprice").text()).replace(/,/g, "");
+function openproductbuynowdet() {
+    $("#modal_productbuynow").modal('show');
 
-        if (textmdlprodquantity == 0 || textmdlprodquantity == "") {
-            Swal.fire(
-                'ALERT',
-                'Please enter a quantity.',
-                'warning'
-            )
-        } else {
+    var textmdlprodID = $("#txtmdlprodID").val();
+    var textmdlprodquantity = $("#txtmdlprodquantity").val();
+
+    $("#txtmdlprodID2").val(textmdlprodID);
+    $("#txtmdlbuynowproductquantity").text(textmdlprodquantity);
+
+    $.ajax({
+        type: 'POST',
+        url: 'home_class.php',
+        data: 'textmdlprodID=' + textmdlprodID + '&textmdlprodquantity=' + textmdlprodquantity +
+            '&form=fncdisplaybuynowproddet',
+        success: function(data) {
+            var show = data.split("|");
+            $("#txtmdlcheckoutname").text(show[0]);
+            $("#txtmdlcheckoutphone").text(show[1]);
+            $("#txtmdlcheckoutaddress").text(show[2]);
+
+            $("#txtmdlbuynowproductname").text(show[3]);
+            $("#txtmdlbuynowproductprice").text(show[4]);
+            $("#txtmdlbuynowproductsubtotal").text(show[5]);
+
+            $("#txtmdlbuynowsubtotal").text(show[5]);
+            $("#txtmdlbuynowshiptotal").text(show[6]);
+            $("#txtmdlbuynowpaymenttotamt").text(show[7]);
+            $("#txtmdlbuynowproductimage").attr("src", show[8]);
+        }
+    });
+}
+
+function clearbuynowmodal() {
+    $("#txtmdlbuynowpaymentmethod").val("");
+    $("#txtmdlprodID2").val("");
+    $(".paymentmethcash").addClass('hoverpaymentmeth');
+    $(".paymentmethcash").removeClass('hoverpaymentmeth2');
+    $(".paymentmethgcash").addClass('hoverpaymentmeth');
+    $(".paymentmethgcash").removeClass('hoverpaymentmeth2');
+}
+
+function paymentcash() {
+    $("#txtmdlbuynowpaymentmethod").val("CASH");
+    $(".paymentmethcash").addClass('hoverpaymentmeth2');
+    $(".paymentmethcash").removeClass('hoverpaymentmeth');
+
+    $(".paymentmethgcash").removeClass('hoverpaymentmeth2');
+    $(".paymentmethgcash").addClass('hoverpaymentmeth');
+}
+
+function paymentgcash() {
+    $("#txtmdlbuynowpaymentmethod").val("GCASH");
+    $(".paymentmethgcash").addClass('hoverpaymentmeth2');
+    $(".paymentmethgcash").removeClass('hoverpaymentmeth');
+
+    $(".paymentmethcash").removeClass('hoverpaymentmeth2');
+    $(".paymentmethcash").addClass('hoverpaymentmeth');
+}
+
+function btnplaceorder() {
+    var product_id = $("#txtmdlprodID2").val();
+    var productQuantity = $("#txtmdlbuynowproductquantity").text();
+    var productPrice = ($("#txtmdlbuynowproductprice").text()).replace(/,/g, "");
+    var ProductShipping = ($("#txtmdlbuynowshiptotal").text()).replace(/,/g, "");
+    var Producttotalamount = ($("#txtmdlbuynowpaymenttotamt").text()).replace(/,/g, "");
+    var productpaymentmeth = $("#txtmdlbuynowpaymentmethod").val();
+
+    if (productpaymentmeth != "") {
+        if (productpaymentmeth == "CASH") {
+            $(".loadload").show();
             $.ajax({
                 type: 'POST',
                 url: 'home_class.php',
-                data: 'textmdlprodquantity=' + textmdlprodquantity + '&textmdlprodID=' + textmdlprodID +
-                    '&form=checkquantityindb',
+                data: 'product_id=' + product_id + '&productQuantity=' + productQuantity + '&productPrice=' +
+                    productPrice + '&ProductShipping=' + ProductShipping + '&Producttotalamount=' +
+                    Producttotalamount + '&productpaymentmeth=' + productpaymentmeth +
+                    '&form=btnplaceordercash',
                 success: function(data) {
-
-                    if (data == 1) {
-                        if (textmdlprodquantity <= 30) {
-                            $(".loadload").show();
-                            $.ajax({
-                                type: 'POST',
-                                url: 'home_class.php',
-                                data: 'textmdlprodID=' + textmdlprodID + '&textmdlprodquantity=' +
-                                    textmdlprodquantity + '&textmdlprodprice=' + textmdlprodprice +
-                                    '&form=btnsaveaddtocart',
-                                success: function(data) {
-                                    setTimeout(function() {
-                                        $(".loadload").hide();
-                                        Swal.fire({
-                                            title: "Success!",
-                                            text: "Successfully added to cart.",
-                                            type: "success",
-                                            icon: "success",
-                                            showCancelButton: false,
-                                            confirmButtonColor: "#2778c4",
-                                            confirmButtonText: "Okay",
-                                            closeOnConfirm: false
-                                        }).then((result) => {
-                                            if (result.value) {
-                                                window.location =
-                                                    "cart.php";
-                                            }
-                                        });
-                                    }, 500);
-
-                                }
-                            })
-                        } else {
-                            Swal.fire(
-                                'ALERT',
-                                'Quantity cannot exceed 30.',
-                                'warning'
-                            )
-                            $("#txtmdlprodquantity").val(1);
-                        }
-                    } else {
-                        Swal.fire(
-                            'ALERT',
-                            'Out of stock.',
-                            'warning'
-                        )
-                        $("#txtmdlprodquantity").val(1);
-                    }
+                    setTimeout(function() {
+                        $(".loadload").hide();
+                        Swal.fire({
+                            title: "Success!",
+                            text: "Successfully ordered.",
+                            type: "success",
+                            icon: "success",
+                            showCancelButton: false,
+                            confirmButtonColor: "#2778c4",
+                            confirmButtonText: "Okay",
+                            closeOnConfirm: false
+                        }).then((result) => {
+                            if (result.value) {
+                                window.location = "purchases.php";
+                            }
+                        });
+                    }, 500);
 
                 }
             })
-        }
-
-    }
-
-    // BUY NOW BUTTON
-    function btnbuynow() {
-        var textmdlprodquantity = $("#txtmdlprodquantity").val();
-
-        $.ajax({
-            type: 'POST',
-            url: 'home_class.php',
-            data: 'form=checkifloggedin',
-            success: function(data) {
-                if (data == 1) {
-                    window.location = "../buyer/login.php";
-                } else {
-                    if (textmdlprodquantity == "" || textmdlprodquantity == 0) {
-                        Swal.fire(
-                            'ALERT',
-                            'Please enter a quantity.',
-                            'warning'
-                        )
-                    } else {
-                        openproductbuynowdet();
-                    }
-                }
-            }
-        });
-    }
-
-    function openproductbuynowdet() {
-        $("#modal_productbuynow").modal('show');
-
-        var textmdlprodID = $("#txtmdlprodID").val();
-        var textmdlprodquantity = $("#txtmdlprodquantity").val();
-
-        $("#txtmdlprodID2").val(textmdlprodID);
-        $("#txtmdlbuynowproductquantity").text(textmdlprodquantity);
-
-        $.ajax({
-            type: 'POST',
-            url: 'home_class.php',
-            data: 'textmdlprodID=' + textmdlprodID + '&textmdlprodquantity=' + textmdlprodquantity +
-                '&form=fncdisplaybuynowproddet',
-            success: function(data) {
-                var show = data.split("|");
-                $("#txtmdlcheckoutname").text(show[0]);
-                $("#txtmdlcheckoutphone").text(show[1]);
-                $("#txtmdlcheckoutaddress").text(show[2]);
-
-                $("#txtmdlbuynowproductname").text(show[3]);
-                $("#txtmdlbuynowproductprice").text(show[4]);
-                $("#txtmdlbuynowproductsubtotal").text(show[5]);
-
-                $("#txtmdlbuynowsubtotal").text(show[5]);
-                $("#txtmdlbuynowshiptotal").text(show[6]);
-                $("#txtmdlbuynowpaymenttotamt").text(show[7]);
-                $("#txtmdlbuynowproductimage").attr("src", show[8]);
-            }
-        });
-    }
-
-    function clearbuynowmodal() {
-        $("#txtmdlbuynowpaymentmethod").val("");
-        $("#txtmdlprodID2").val("");
-        $(".paymentmethcash").addClass('hoverpaymentmeth');
-        $(".paymentmethcash").removeClass('hoverpaymentmeth2');
-        $(".paymentmethgcash").addClass('hoverpaymentmeth');
-        $(".paymentmethgcash").removeClass('hoverpaymentmeth2');
-    }
-
-    function paymentcash() {
-        $("#txtmdlbuynowpaymentmethod").val("CASH");
-        $(".paymentmethcash").addClass('hoverpaymentmeth2');
-        $(".paymentmethcash").removeClass('hoverpaymentmeth');
-
-        $(".paymentmethgcash").removeClass('hoverpaymentmeth2');
-        $(".paymentmethgcash").addClass('hoverpaymentmeth');
-    }
-
-    function paymentgcash() {
-        $("#txtmdlbuynowpaymentmethod").val("GCASH");
-        $(".paymentmethgcash").addClass('hoverpaymentmeth2');
-        $(".paymentmethgcash").removeClass('hoverpaymentmeth');
-
-        $(".paymentmethcash").removeClass('hoverpaymentmeth2');
-        $(".paymentmethcash").addClass('hoverpaymentmeth');
-    }
-
-    function btnplaceorder() {
-        var product_id = $("#txtmdlprodID2").val();
-        var productQuantity = $("#txtmdlbuynowproductquantity").text();
-        var productPrice = ($("#txtmdlbuynowproductprice").text()).replace(/,/g, "");
-        var ProductShipping = ($("#txtmdlbuynowshiptotal").text()).replace(/,/g, "");
-        var Producttotalamount = ($("#txtmdlbuynowpaymenttotamt").text()).replace(/,/g, "");
-        var productpaymentmeth = $("#txtmdlbuynowpaymentmethod").val();
-
-        if (productpaymentmeth != "") {
-            if (productpaymentmeth == "CASH") {
-                $(".loadload").show();
-                $.ajax({
-                    type: 'POST',
-                    url: 'home_class.php',
-                    data: 'product_id=' + product_id + '&productQuantity=' + productQuantity + '&productPrice=' +
-                        productPrice + '&ProductShipping=' + ProductShipping + '&Producttotalamount=' +
-                        Producttotalamount + '&productpaymentmeth=' + productpaymentmeth +
-                        '&form=btnplaceordercash',
-                    success: function(data) {
-                        setTimeout(function() {
-                            $(".loadload").hide();
-                            Swal.fire({
-                                title: "Success!",
-                                text: "Successfully ordered.",
-                                type: "success",
-                                icon: "success",
-                                showCancelButton: false,
-                                confirmButtonColor: "#2778c4",
-                                confirmButtonText: "Okay",
-                                closeOnConfirm: false
-                            }).then((result) => {
-                                if (result.value) {
-                                    window.location = "purchases.php";
-                                }
-                            });
-                        }, 500);
-
-                    }
-                })
-            } else {
-                loadpaymentgcashmodal();
-            }
         } else {
-            Swal.fire(
-                'ALERT',
-                'Please select payment method.',
-                'warning'
-            )
+            loadpaymentgcashmodal();
         }
+    } else {
+        Swal.fire(
+            'ALERT',
+            'Please select payment method.',
+            'warning'
+        )
     }
+}
 
-    function loadpaymentgcashmodal() {
-        $("#modal_paymentupload").modal('show');
-        var product_id = $("#txtmdlprodID2").val();
+function loadpaymentgcashmodal() {
+    $("#modal_paymentupload").modal('show');
+    var product_id = $("#txtmdlprodID2").val();
 
-        $.ajax({
-            type: 'POST',
-            url: 'home_class.php',
-            data: 'product_id=' + product_id + '&form=fncloadpaymentgcashmodal',
-            success: function(data) {
-                var show = data.split("|");
-                $("#txtsellergcashname").text(show[0]);
-                $("#txtsellergcashnumber").text(show[1]);
-                $("#txtsellergcashimage").attr("src", show[2]);
-            }
-        });
-    }
+    $.ajax({
+        type: 'POST',
+        url: 'home_class.php',
+        data: 'product_id=' + product_id + '&form=fncloadpaymentgcashmodal',
+        success: function(data) {
+            var show = data.split("|");
+            $("#txtsellergcashname").text(show[0]);
+            $("#txtsellergcashnumber").text(show[1]);
+            $("#txtsellergcashimage").attr("src", show[2]);
+        }
+    });
+}
 
-    function submitpayment() {
-        var product_id = $("#txtmdlprodID2").val();
-        var productQuantity = $("#txtmdlbuynowproductquantity").text();
-        var productPrice = ($("#txtmdlbuynowproductprice").text()).replace(/,/g, "");
-        var ProductShipping = ($("#txtmdlbuynowshiptotal").text()).replace(/,/g, "");
-        var Producttotalamount = ($("#txtmdlbuynowpaymenttotamt").text()).replace(/,/g, "");
-        var productpaymentmeth = $("#txtmdlbuynowpaymentmethod").val();
-        var textpaymentmethrefnum = $("#txtpaymentmethrefnum").val();
+function submitpayment() {
+    var product_id = $("#txtmdlprodID2").val();
+    var productQuantity = $("#txtmdlbuynowproductquantity").text();
+    var productPrice = ($("#txtmdlbuynowproductprice").text()).replace(/,/g, "");
+    var ProductShipping = ($("#txtmdlbuynowshiptotal").text()).replace(/,/g, "");
+    var Producttotalamount = ($("#txtmdlbuynowpaymenttotamt").text()).replace(/,/g, "");
+    var productpaymentmeth = $("#txtmdlbuynowpaymentmethod").val();
+    var textpaymentmethrefnum = $("#txtpaymentmethrefnum").val();
 
-        $(".loadload").show();
-        $.ajax({
-            type: 'POST',
-            url: 'home_class.php',
-            data: 'product_id=' + product_id + '&productQuantity=' + productQuantity + '&productPrice=' +
-                productPrice + '&ProductShipping=' + ProductShipping + '&Producttotalamount=' + Producttotalamount +
-                '&productpaymentmeth=' + productpaymentmeth + '&textpaymentmethrefnum=' + textpaymentmethrefnum +
-                '&form=btnplaceordergcash',
-            success: function(data) {
-                setTimeout(function() {
-                    $(".loadload").hide();
+    $(".loadload").show();
+    $.ajax({
+        type: 'POST',
+        url: 'home_class.php',
+        data: 'product_id=' + product_id + '&productQuantity=' + productQuantity + '&productPrice=' +
+            productPrice + '&ProductShipping=' + ProductShipping + '&Producttotalamount=' + Producttotalamount +
+            '&productpaymentmeth=' + productpaymentmeth + '&textpaymentmethrefnum=' + textpaymentmethrefnum +
+            '&form=btnplaceordergcash',
+        success: function(data) {
+            setTimeout(function() {
+                $(".loadload").hide();
 
-                    Swal.fire({
-                        title: "Success!",
-                        text: "Successfully ordered.",
-                        type: "success",
-                        icon: "success",
-                        showCancelButton: false,
-                        confirmButtonColor: "#2778c4",
-                        confirmButtonText: "Okay",
-                        closeOnConfirm: false
-                    }).then((result) => {
-                        if (result.value) {
-                            uploadpaymentpicture(data)
-                            window.location = "purchases.php";
+                Swal.fire({
+                    title: "Success!",
+                    text: "Successfully ordered.",
+                    type: "success",
+                    icon: "success",
+                    showCancelButton: false,
+                    confirmButtonColor: "#2778c4",
+                    confirmButtonText: "Okay",
+                    closeOnConfirm: false
+                }).then((result) => {
+                    if (result.value) {
+                        uploadpaymentpicture(data)
+                        window.location = "purchases.php";
 
-                        }
-                    });
+                    }
+                });
 
-                }, 500);
-            }
-        })
-    }
+            }, 500);
+        }
+    })
+}
 
-    function fncShowvalidPic() {
-        var oFReader = new FileReader();
-        oFReader.readAsDataURL(document.getElementById("txtvalidImagefile").files[0]);
-        oFReader.onload = function(oFREvent) {
-            document.getElementById("updatevalidImage").src = oFREvent.target.result;
-        };
-    }
+function fncShowvalidPic() {
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(document.getElementById("txtvalidImagefile").files[0]);
+    oFReader.onload = function(oFREvent) {
+        document.getElementById("updatevalidImage").src = oFREvent.target.result;
+    };
+}
 
-    function uploadpaymentpicture(genid) {
-        $("#txtvalidimageID").val(genid);
-        var data = new FormData($('#frmUploadvalidPic')[0]);
-        $.ajax({
-            type: 'POST',
-            url: 'uploadpaymentimage.php',
-            data: data,
-            mimeType: 'multipart/form-data',
-            contentType: false,
-            cache: false,
-            processData: false,
-            success: function(data) {
-                window.location = "purchases.php";
-            }
-        });
-    }
+function uploadpaymentpicture(genid) {
+    $("#txtvalidimageID").val(genid);
+    var data = new FormData($('#frmUploadvalidPic')[0]);
+    $.ajax({
+        type: 'POST',
+        url: 'uploadpaymentimage.php',
+        data: data,
+        mimeType: 'multipart/form-data',
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function(data) {
+            window.location = "purchases.php";
+        }
+    });
+}
 
-    function openproductsellerchat() {
-        $("#modal_chat").modal('show');
-    }
+function openproductsellerchat() {
+    $("#modal_chat").modal('show');
+}
 
-    function clearchat() {
-        $("#txtsendchatmessage").val("");
-    }
+function clearchat() {
+    $("#txtsendchatmessage").val("");
+}
 
-    function sendchattoseller() {
-        var textmdlprodsellerID = $("#txtmdlprodsellerID").val();
-        var textsendchatmessage = $("#txtsendchatmessage").val();
+function sendchattoseller() {
+    var textmdlprodsellerID = $("#txtmdlprodsellerID").val();
+    var textsendchatmessage = $("#txtsendchatmessage").val();
 
-        $(".loadload").show();
-        $.ajax({
-            type: 'POST',
-            url: 'home_class.php',
-            data: 'textmdlprodsellerID=' + textmdlprodsellerID + '&textsendchatmessage=' + textsendchatmessage +
-                '&form=sendchattoseller',
-            success: function(data) {
-                setTimeout(function() {
-                    $(".loadload").hide();
+    $(".loadload").show();
+    $.ajax({
+        type: 'POST',
+        url: 'home_class.php',
+        data: 'textmdlprodsellerID=' + textmdlprodsellerID + '&textsendchatmessage=' + textsendchatmessage +
+            '&form=sendchattoseller',
+        success: function(data) {
+            setTimeout(function() {
+                $(".loadload").hide();
 
-                    Swal.fire({
-                        title: "Success!",
-                        text: "Successfully sent message.",
-                        type: "success",
-                        icon: "success",
-                        showCancelButton: false,
-                        confirmButtonColor: "#2778c4",
-                        confirmButtonText: "Okay",
-                        closeOnConfirm: false
-                    }).then((result) => {
-                        if (result.value) {
-                            $("#modal_chat").modal('hide');
-                            clearchat();
-                        }
-                    });
+                Swal.fire({
+                    title: "Success!",
+                    text: "Successfully sent message.",
+                    type: "success",
+                    icon: "success",
+                    showCancelButton: false,
+                    confirmButtonColor: "#2778c4",
+                    confirmButtonText: "Okay",
+                    closeOnConfirm: false
+                }).then((result) => {
+                    if (result.value) {
+                        $("#modal_chat").modal('hide');
+                        clearchat();
+                    }
+                });
 
-                }, 500);
-            }
-        })
-    }
+            }, 500);
+        }
+    })
+}
 </script>
 </php>
