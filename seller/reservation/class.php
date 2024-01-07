@@ -181,9 +181,9 @@ switch ($_POST['form']) {
 		echo "|";
 
 		if ($orderdetails[5] == "PENDING" && $orderdetails[4] == "CASH") {
-			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='pendingapprove(\"" . $_POST['reservation_id'] . "\")'>APPROVE ORDER</button>";
+			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='pendingapprove(\"" . $_POST['reservation_id'] . "\")'>APPROVE RESERVATION</button>";
 		} elseif ($orderdetails[5] == "TOPAY") {
-			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='topayapprove(\"" . $_POST['reservation_id'] . "\", \"" . $orderdetails[6] . "\")'>APPROVE ORDER</button>";
+			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='topayapprove(\"" . $_POST['reservation_id'] . "\", \"" . $orderdetails[6] . "\")'>APPROVE RESERVATION</button>";
 		} elseif ($orderdetails[5] == "TOSHIP") {
 
 			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='toshipapprove(\"" . $_POST['reservation_id'] . "\")'>READY TO DELIVER</button>";
@@ -205,7 +205,7 @@ switch ($_POST['form']) {
 
 		$explode = explode(',', $orderdetails2[1]);
 
-		echo "|" . $orderdetails2[0] . "|" . $explode[0] . "|" . $explode[1] . "|" . $explode[2] . "|" . $explode[3] . "|" . 'Courier: ' . $orderdetails2[3] . "|" . 'Tracking Number: ' . $orderdetails2[4];
+		echo "|" . $orderdetails2[0] . "|" . $explode[0] . "|" . $explode[1] . "|" . $explode[2] . "|" . $explode[3] . "|" . 'Courier/Delivery Method: ' . $orderdetails2[3] . "|" . 'Tracking Number/Address/Phone No.: ' . $orderdetails2[4];
 
 
 

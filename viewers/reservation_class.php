@@ -38,18 +38,15 @@ switch ($_POST['form']) {
 
 
         if ($_POST['pricerange'] != '') {
-
             if ($_POST['pricerange'] == 'Highest to Lowest') {
-
-                $res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.price, quantity FROM products AS a LEFT JOIN products_category AS b ON a.product_id = b.product_id WHERE a.id != '' " . $searchproduct . " " . $searchcategory . "GROUP BY b.product_id ORDER BY a.price DESC");
+                $res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.price, quantity FROM products AS a LEFT JOIN products_category AS b ON a.product_id = b.product_id WHERE a.id != '' AND a.availat >= DATE_ADD(CURDATE(), INTERVAL 2 DAY) " . $searchproduct . " " . $searchcategory . " GROUP BY b.product_id ORDER BY a.price DESC");
             } else if ($_POST['pricerange'] == 'Lowest to Highest') {
-
-                $res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.price, quantity FROM products AS a LEFT JOIN products_category AS b ON a.product_id = b.product_id WHERE a.id != '' " . $searchproduct . " " . $searchcategory . " GROUP BY b.product_id ORDER BY a.price ASC");
+                $res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.price, quantity FROM products AS a LEFT JOIN products_category AS b ON a.product_id = b.product_id WHERE a.id != '' AND a.availat >= DATE_ADD(CURDATE(), INTERVAL 2 DAY) " . $searchproduct . " " . $searchcategory . " GROUP BY b.product_id ORDER BY a.price ASC");
             }
         } else {
-
-            $res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.price, quantity FROM products AS a LEFT JOIN products_category AS b ON a.product_id = b.product_id WHERE a.id != '' " . $searchproduct . " " . $searchcategory . " GROUP BY b.product_id ORDER BY a.id ASC");
+            $res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.price, quantity FROM products AS a LEFT JOIN products_category AS b ON a.product_id = b.product_id WHERE a.id != '' AND a.availat >= DATE_ADD(CURDATE(), INTERVAL 2 DAY) " . $searchproduct . " " . $searchcategory . " GROUP BY b.product_id ORDER BY a.id ASC");
         }
+
 
 
         $numrows = mysqli_num_rows($res);
@@ -392,7 +389,7 @@ switch ($_POST['form']) {
                                                     echo $productimage[0];
                                                     break;
 
-                                                case 'btnplaceordercash':
+                                                case 'btnplacereservationcash':
                                                     // UPDATE QUANTITY IN PRODUCTS
                                                     $getquantity = mysqli_fetch_array(mysqli_query($connection, "SELECT quantity FROM products WHERE product_id = '" . $_POST['product_id'] . "';"));
                                                     $totalquantity = $getquantity[0] - $_POST['productQuantity'];
@@ -400,15 +397,15 @@ switch ($_POST['form']) {
                                                     $updateproductqty = mysqli_query($connection, "UPDATE products SET quantity = '" . $totalquantity . "' WHERE product_id = '" . $_POST['product_id'] . "';");
 
                                                     // SAVE IN ORDERS
-                                                    $genID = generateID($connection, 'reservation_id', 'reservation', 'OR');
+                                                    $genID = generateID($connection, 'reservation_id', 'reservation', 'RES');
 
-                                                    $placeorder = mysqli_query($connection, "INSERT INTO reservation SET reservation_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', date_added = '" . date("Y-m-d") . "';");
+                                                    $placereservation = mysqli_query($connection, "INSERT INTO reservation SET reservation_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', date_added = '" . date("Y-m-d") . "';");
                                                     //SAVE IN PAYMENT
                                                     $genID2 = generateID($connection, 'payment_id', 'payments', 'PAY');
-                                                    $placeorder = mysqli_query($connection, "INSERT INTO payments SET payment_id = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', reservation_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', status = 'PENDING', date_added = '" . date("Y-m-d") . "';");
+                                                    $placereservation = mysqli_query($connection, "INSERT INTO payments SET payment_id = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', reservation_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', status = 'PENDING', date_added = '" . date("Y-m-d") . "';");
                                                     break;
 
-                                                case 'btnplaceordergcash':
+                                                case 'btnplacereservationgcash':
                                                     // UPDATE QUANTITY IN PRODUCTS
                                                     $getquantity = mysqli_fetch_array(mysqli_query($connection, "SELECT quantity FROM products WHERE product_id = '" . $_POST['product_id'] . "';"));
                                                     $totalquantity = $getquantity[0] - $_POST['productQuantity'];
@@ -420,10 +417,10 @@ switch ($_POST['form']) {
 
                                                     $orderstatus2 = date('Y-m-d h:i:s');
 
-                                                    $placeorder = mysqli_query($connection, "INSERT INTO reservation SET reservation_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'TOPAY', deliverystat = 'PENDING', paymentstat = 'FORAPPROVAL', date_added = '" . date("Y-m-d") . "', orderstatus2 = '" . $orderstatus2 . "';");
+                                                    $placereservation = mysqli_query($connection, "INSERT INTO reservation SET reservation_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'TOPAY', deliverystat = 'PENDING', paymentstat = 'FORAPPROVAL', date_added = '" . date("Y-m-d") . "', orderstatus2 = '" . $orderstatus2 . "';");
                                                     //SAVE IN PAYMENT
                                                     $genID2 = generateID($connection, 'payment_id', 'payments', 'PAY');
-                                                    $placeorder = mysqli_query($connection, "INSERT INTO payments SET payment_id = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', reservation_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', refnumber = '" . $_POST['textpaymentmethrefnum'] . "', status = 'FORAPPROVAL', date_added = '" . date("Y-m-d") . "';");
+                                                    $placereservation = mysqli_query($connection, "INSERT INTO payments SET payment_id = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', reservation_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', refnumber = '" . $_POST['textpaymentmethrefnum'] . "', status = 'FORAPPROVAL', date_added = '" . date("Y-m-d") . "';");
 
                                                     echo $genID2;
                                                     break;

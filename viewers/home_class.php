@@ -20,7 +20,7 @@ switch ($_POST['form']) {
 			            <div class='row'>
 			                <div class='product_carousel product_column4 owl-carousel'>";
 
-		$res = mysqli_query($connection, "SELECT product_id, productname, price, quantity FROM products ORDER BY id ASC");
+		$res = mysqli_query($connection, "SELECT product_id, productname, price, quantity FROM products WHERE availat <= CURDATE() AND availuntil > CURDATE() ORDER BY id ASC");
 		$numrows = mysqli_num_rows($res);
 		if ($numrows == TRUE) {
 			while ($row = mysqli_fetch_array($res)) {
@@ -206,7 +206,7 @@ switch ($_POST['form']) {
 ?> <option value="">- Select Category -</option> <?php
 													while ($row = mysqli_fetch_array($res)) {
 													?> <option value="<?php echo $row[0]; ?>"><?php echo $row[1]; ?>
-</option> <?php
+			</option> <?php
 													}
 													break;
 												case 'fncdisplayproddet':

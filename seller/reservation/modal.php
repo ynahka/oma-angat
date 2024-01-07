@@ -114,7 +114,8 @@
                 <div class="row">
                     <div class="col-md-12 mb-3">
                         <div style="display: flex;justify-content: space-between !important;">
-                            <h4 class="headerfontfont2" style="color: #2c2b2e;font-weight: 500;">Order Information</h4>
+                            <h4 class="headerfontfont2" style="color: #2c2b2e;font-weight: 500;">Reservation Information
+                            </h4>
                             <button type="button" class="close closebtn" data-dismiss="modal" aria-hidden="true"
                                 onclick="clearuseracc()"
                                 style="padding: 1rem 1rem;margin: -1.6rem -1rem -1rem auto;">×</button>
@@ -182,7 +183,9 @@
                                 <select class="form-control courier" onchange="inputrequired()">
                                     <option value="">Select Delivery Method</option>
                                     <option value="JandT EXPRESS">J&T EXPRESS</option>
-                                    <option value="Meet-up (Discuss on message)">Meet-up (Discuss on message)</option>
+                                    <option value="PICK-UP">PICK-UP (Discuss on Message)</option>
+                                    <option value="MEET-UP">MEET-UP(Discuss on Message)</option>
+                                    <option value="DROP-OFF">DROP-OFF (Discuss on Message)</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -278,7 +281,7 @@
 
                         <div class="card" style="margin-bottom: 20px;">
                             <div class="card-header" style="background-color: #baca91; border-bottom: 0px;">
-                                <h4 class="" style="margin-bottom:0px; font-weight: 400;">Order Summary</h4>
+                                <h4 class="" style="margin-bottom:0px; font-weight: 400;">Reservation Summary</h4>
                             </div>
                             <div class="card-body">
                                 <div class="row">
