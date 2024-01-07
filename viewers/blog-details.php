@@ -14,7 +14,7 @@ include 'header.php'; ?>
 <body>
     <?php
     // Check if the user is logged in
-    $isLoggedIn = !empty($_SESSION['user_id']);;
+    $isLoggedIn = !empty($_SESSION['user_id']) && $_SESSION['usertype'] === 'CUSTOMER';
     if ($isLoggedIn) {
         include 'header-nav-buyer.php'; // Include the file for logged-in users
     } else {

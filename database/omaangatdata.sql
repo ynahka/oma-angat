@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2024 at 07:25 PM
+-- Generation Time: Jan 07, 2024 at 02:20 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -197,11 +197,11 @@ INSERT INTO `orders` (`id`, `order_id`, `customer_id`, `product_id`, `cart_id`, 
 (30, 'OR-0000008', 'user-0000011', 'product-0000004', '', 4, 60.0000, 0.0000, 240.0000, 'COMPLETED', 'COMPLETED', 'GCASH', 'PAID', '2023-12-31', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2023-12-31 19:57:23', ',2023-12-31 07:59:08,2023-12-31 07:59:25,2023-12-31 07:59:36', 'Meet-up (Discuss on message)', 'Salvacion', 0),
 (31, 'OR-0000009', 'user-0000011', 'product-0000004', '', 1, 60.0000, 0.0000, 60.0000, 'TOPAY', 'PENDING', 'GCASH', 'FORAPPROVAL', '2023-12-31', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2023-12-31 20:02:18', '', '', '', 0),
 (32, 'OR-0000010', 'user-0000011', 'product-0000003', '', 1, 3.0000, 0.0000, 3.0000, 'TOPAY', 'PENDING', 'GCASH', 'FORAPPROVAL', '2023-12-31', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2023-12-31 20:05:50', '', '', '', 0),
-(33, 'OR-0000011', 'user-0000011', 'product-0000002', 'CART-0000009', 1, 12.0000, 0.0000, 12.0000, 'PENDING', 'PENDING', 'CASH', 'PENDING', '2023-12-31', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2023-12-31 20:06:23', '2023-12-31 08:06:23', '', '', 0),
 (34, 'OR-0000012', 'user-0000011', 'product-0000004', '', 1, 60.0000, 0.0000, 60.0000, 'TOPAY', 'PENDING', 'GCASH', 'PAID', '2023-12-31', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2023-12-31 20:21:58', '', '', '', 0),
 (35, 'OR-0000013', 'user-0000011', 'product-0000006', '', 4, 56.0000, 0.0000, 224.0000, 'TOPAY', 'PENDING', 'GCASH', 'FORAPPROVAL', '2023-12-31', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2023-12-31 22:40:44', '', '', '', 0),
 (36, 'OR-0000014', 'user-0000011', 'product-0000002', '', 1, 12.0000, 0.0000, 12.0000, 'TOSHIP', 'PENDING', 'CASH', 'PENDING', '2024-01-04', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2024-01-04 01:59:12', ',2024-01-04 02:02:54', '', '', 0),
-(37, 'OR-0000015', 'user-0000011', 'product-0000002', '', 7, 12.0000, 0.0000, 84.0000, 'PENDING', 'PENDING', 'CASH', 'PENDING', '2024-01-04', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2024-01-04 02:28:22', '', '', '', 0);
+(38, 'OR-0000015', 'user-0000011', 'product-0000006', '', 1, 56.0000, 0.0000, 56.0000, 'TOPAY', 'PENDING', 'GCASH', 'FORAPPROVAL', '2024-01-07', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2024-01-07 10:49:13', '2024-01-07 10:49:13', '', '', 0),
+(39, 'OR-0000016', 'user-0000011', 'product-0000006', '', 1, 56.0000, 0.0000, 56.0000, 'TOPAY', 'PENDING', 'GCASH', 'FORAPPROVAL', '2024-01-07', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2024-01-07 11:20:02', '2024-01-07 11:20:02', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -213,7 +213,8 @@ CREATE TABLE `payments` (
   `id` bigint(20) NOT NULL,
   `payment_id` varchar(150) NOT NULL,
   `paymenttype` varchar(100) NOT NULL,
-  `order_id` varchar(100) NOT NULL,
+  `order_id` varchar(100) DEFAULT NULL,
+  `reservation_id` varchar(100) DEFAULT NULL,
   `amount` decimal(14,4) NOT NULL DEFAULT 0.0000,
   `refnumber` varchar(200) NOT NULL,
   `image` varchar(500) NOT NULL,
@@ -227,18 +228,11 @@ CREATE TABLE `payments` (
 -- Dumping data for table `payments`
 --
 
-INSERT INTO `payments` (`id`, `payment_id`, `paymenttype`, `order_id`, `amount`, `refnumber`, `image`, `imagename`, `status`, `date_added`, `DATETIME_LOG`) VALUES
-(27, 'PAY-0000002', 'CASH', 'OR-0000002', 30.0000, '', '', '', 'PENDING', '2023-12-30', '2023-12-30 19:05:21'),
-(28, 'PAY-0000003', 'CASH', 'OR-0000004', 240.0000, '', '', '', 'PENDING', '2023-12-31', '2023-12-31 13:27:37'),
-(29, 'PAY-0000004', 'GCASH', 'OR-0000007', 60.0000, '4776774779999038', '', '', 'FORAPPROVAL', '2023-12-31', '2023-12-31 19:56:47'),
-(30, 'PAY-0000005', 'GCASH', 'OR-0000008', 240.0000, '8388888847474774', '', '', 'PAID', '2023-12-31', '2023-12-31 19:57:23'),
-(31, 'PAY-0000006', 'GCASH', 'OR-0000009', 60.0000, '4776774779999038777', '', '', 'FORAPPROVAL', '2023-12-31', '2023-12-31 20:02:18'),
-(32, 'PAY-0000007', 'GCASH', 'OR-0000010', 3.0000, '47767747799990385544', '', '', 'FORAPPROVAL', '2023-12-31', '2023-12-31 20:05:50'),
-(33, 'PAY-0000008', 'CASH', 'OR-0000011', 12.0000, '', '', '', 'PENDING', '2023-12-31', '2023-12-31 20:06:23'),
-(34, 'PAY-0000009', 'GCASH', 'OR-0000012', 60.0000, '477677477999903899', 'OmaangatImages/payments/PAY-00000091704025320_download.png', 'PAY-00000091704025320_download.png', 'PAID', '2023-12-31', '2023-12-31 20:21:58'),
-(35, 'PAY-0000010', 'GCASH', 'OR-0000013', 224.0000, '12222333444', 'OmaangatImages/payments/PAY-00000101704033646_download.png', 'PAY-00000101704033646_download.png', 'FORAPPROVAL', '2023-12-31', '2023-12-31 22:40:44'),
-(36, 'PAY-0000011', 'CASH', 'OR-0000014', 12.0000, '', '', '', 'PENDING', '2024-01-04', '2024-01-04 01:59:12'),
-(37, 'PAY-0000012', 'CASH', 'OR-0000015', 84.0000, '', '', '', 'PENDING', '2024-01-04', '2024-01-04 02:28:22');
+INSERT INTO `payments` (`id`, `payment_id`, `paymenttype`, `order_id`, `reservation_id`, `amount`, `refnumber`, `image`, `imagename`, `status`, `date_added`, `DATETIME_LOG`) VALUES
+(43, 'PAY-0000001', 'GCASH', NULL, 'RES-0000001', 55.0000, '09994998884884', 'OmaangatImages/payments/PAY-00000011704597299_download.png', 'PAY-00000011704597299_download.png', 'FORAPPROVAL', '2024-01-07', '2024-01-07 11:14:57'),
+(44, 'PAY-0000002', 'GCASH', 'OR-0000016', NULL, 56.0000, '223456789876543', 'OmaangatImages/payments/PAY-00000021704597604_download.png', 'PAY-00000021704597604_download.png', 'FORAPPROVAL', '2024-01-07', '2024-01-07 11:20:02'),
+(45, 'PAY-0000003', 'CASH', NULL, 'RES-0000002', 220.0000, '', '', '', 'PENDING', '2024-01-07', '2024-01-07 17:16:33'),
+(46, 'PAY-0000004', 'CASH', NULL, 'RES-0000003', 55.0000, '', '', '', 'PENDING', '2024-01-07', '2024-01-07 21:09:20');
 
 -- --------------------------------------------------------
 
@@ -315,7 +309,7 @@ CREATE TABLE `post` (
 
 INSERT INTO `post` (`id`, `post_id`, `user_id`, `posttitle`, `postdescription`, `image`, `imagename`, `date_added`, `DATETIME_LOG`) VALUES
 (14, 'post-0000005', 'user-0000011', 'Looking for Fresh Buko', '10-20 kls near Daraga, Albay', 'Omaangatimages/posts/post-00000051702861464_download.jpg', 'post-00000051702861464_download.jpg', '2023-12-18', '2023-12-18 09:04:21'),
-(15, 'post-0000006', 'user-0000025', 'Dried Mango', 'Per pack', 'Omaangatimages/posts/post-00000061704168703_product-00000081702490841_Processed 1 (2).png', 'post-00000061704168703_product-00000081702490841_Processed 1 (2).png', '2024-01-02', '2024-01-02 12:11:41');
+(15, 'post-0000006', 'user-0000025', 'Dried Mango', 'Sold per pack. 50 pesos only. You can call me or message me at 09898976789. Daraga Area only. Thank You!', 'Omaangatimages/posts/post-00000061704168703_product-00000081702490841_Processed 1 (2).png', 'post-00000061704168703_product-00000081702490841_Processed 1 (2).png', '2024-01-02', '2024-01-02 12:11:41');
 
 -- --------------------------------------------------------
 
@@ -331,6 +325,21 @@ CREATE TABLE `post_details` (
   `date_added` date NOT NULL,
   `DATETIME_LOG` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `post_details`
+--
+
+INSERT INTO `post_details` (`id`, `post_id`, `user_id`, `comment`, `date_added`, `DATETIME_LOG`) VALUES
+(59, 'post-0000005', 'user-0000011', '', '2024-01-07', '2024-01-07 14:57:31'),
+(60, 'post-0000005', 'user-0000011', '', '2024-01-07', '2024-01-07 15:01:34'),
+(61, 'post-0000005', 'user-0000011', '', '2024-01-07', '2024-01-07 15:02:00'),
+(62, 'post-0000005', 'user-0000011', '', '2024-01-07', '2024-01-07 15:02:30'),
+(63, 'post-0000005', 'user-0000011', 'ok', '2024-01-07', '2024-01-07 15:10:17'),
+(64, 'post-0000005', 'user-0000011', 'Meron po kami', '2024-01-07', '2024-01-07 15:22:34'),
+(65, 'post-0000005', 'user-0000011', 'Meron po kami', '2024-01-07', '2024-01-07 15:25:16'),
+(66, 'post-0000005', 'user-0000011', 'ok', '2024-01-07', '2024-01-07 15:33:21'),
+(67, 'post-0000006', 'user-0000011', 'Pabili po, nagmessage po ako sainyo. ', '2024-01-07', '2024-01-07 16:20:47');
 
 -- --------------------------------------------------------
 
@@ -360,9 +369,9 @@ INSERT INTO `products` (`id`, `product_id`, `seller_id`, `productname`, `product
 (30, 'product-0000001', 'user-0000002', 'Medium Eggs', 'Fresh from the farm', 200.0000, 1000, 'Tray', '2023-12-29', '2024-01-24', '2023-12-14 01:52:39'),
 (31, 'product-0000002', 'user-0000002', 'Itlog Maalat', 'Sold per piece\nBuy 12 free 1', 12.0000, 970, 'piece', '2023-12-29', '2024-02-15', '2023-12-14 01:56:25'),
 (32, 'product-0000003', 'user-0000002', 'Itlog Pugo', 'Minimum of 12 pcs per order', 3.0000, 669, 'piece', '2023-12-29', '2024-01-04', '2023-12-14 01:58:14'),
-(33, 'product-0000004', 'user-0000003', 'Malagkit Rice', 'Minimum of 3 kilos per order', 60.0000, 172, 'Kg', '2023-12-14', '2024-01-09', '2023-12-14 02:00:57'),
-(35, 'product-0000006', 'user-0000003', 'Jasmin Rice', 'Minimum of 5 Kilos per order\n(Sold per kilos)', 56.0000, 496, 'Kg', '2023-12-14', '2024-01-23', '2023-12-14 02:03:33'),
-(36, 'product-0000007', 'user-0000004', 'Banana Chips', 'Crispier than ever. Sold per packs. Minimum of 2 packs per order', 25.0000, 670, '', '2023-12-14', '0000-00-00', '2023-12-14 02:06:09'),
+(33, 'product-0000004', 'user-0000003', 'Glutinous Rice/Malagkit/Pulutan', 'Grown in Fresh environment', 55.0000, 146, 'Kg', '2024-01-20', '2024-02-22', '2023-12-14 02:00:57'),
+(35, 'product-0000006', 'user-0000003', 'Jasmin Rice', 'Minimum of 5 Kilos per order\n(Sold per kilos)', 56.0000, 494, 'Kg', '2023-12-14', '2024-01-23', '2023-12-14 02:03:33'),
+(36, 'product-0000007', 'user-0000004', 'Banana Chips', 'Crispier than ever. Sold per packs. Minimum of 2 packs per order', 25.0000, 670, '', '2023-12-14', '2024-01-22', '2023-12-14 02:06:09'),
 (37, 'product-0000008', 'user-0000004', 'Dried Mangoes', 'Sold per packs\nMinimum of 2 packs', 89.0000, 1000, '', '2023-12-14', '0000-00-00', '2023-12-14 02:07:19'),
 (38, 'product-0000009', 'user-0000004', 'Cocoa Powder', 'Sold per kilo', 50.0000, 1000, '', '2023-12-14', '0000-00-00', '2023-12-14 02:08:52'),
 (39, 'product-0000010', 'user-0000004', 'Cocoa Chocolate Bars', 'Sold per packs\nMinimum of 2 packs', 45.0000, 89, '', '2023-12-14', '0000-00-00', '2023-12-14 02:10:01'),
@@ -411,7 +420,6 @@ INSERT INTO `products_category` (`id`, `product_id`, `category_id`, `DATETIME_LO
 (104, 'product-0000003', 'C-0000004', '2023-12-28 16:39:28'),
 (105, 'product-0000021', 'C-0000004', '2023-12-28 16:39:57'),
 (106, 'product-0000024', 'C-0000004', '2023-12-28 16:40:18'),
-(107, 'product-0000004', 'C-0000003', '2023-12-28 16:41:29'),
 (108, 'product-0000006', 'C-0000003', '2023-12-28 16:41:42'),
 (110, 'product-0000022', 'C-0000003', '2023-12-28 16:44:03'),
 (111, 'product-0000014', 'C-0000001', '2023-12-31 14:30:34'),
@@ -420,7 +428,8 @@ INSERT INTO `products_category` (`id`, `product_id`, `category_id`, `DATETIME_LO
 (114, 'product-0000026', 'C-0000004', '2024-01-02 15:22:12'),
 (115, 'product-0000027', 'C-0000001', '2024-01-02 19:58:36'),
 (116, 'product-0000028', 'C-0000001', '2024-01-02 20:00:24'),
-(117, 'product-0000029', 'C-0000001', '2024-01-02 20:01:15');
+(117, 'product-0000029', 'C-0000001', '2024-01-02 20:01:15'),
+(125, 'product-0000004', 'C-0000003', '2024-01-07 10:33:09');
 
 -- --------------------------------------------------------
 
@@ -566,6 +575,16 @@ CREATE TABLE `reservation` (
   `notif` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `reservation`
+--
+
+INSERT INTO `reservation` (`id`, `reservation_id`, `customer_id`, `product_id`, `cart_id`, `quantity`, `price`, `shipfee`, `totalamt`, `orderstatus`, `deliverystat`, `paymenttype`, `paymentstat`, `date_added`, `date_shipped`, `date_received`, `date_completed`, `rated`, `DATETIME_LOG`, `orderstatus2`, `courier`, `trackingnumber`, `notif`) VALUES
+(4, 'OR-0000004', 'user-0000011', 'product-0000004', '', 4, 55.0000, 0.0000, 220.0000, 'TOSHIP', 'PENDING', 'CASH', 'PENDING', '2024-01-07', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2024-01-07 10:38:33', ',2024-01-07 10:44:54', '', '', 0),
+(5, 'RES-0000001', 'user-0000011', 'product-0000004', '', 1, 55.0000, 0.0000, 55.0000, 'TOPAY', 'PENDING', 'GCASH', 'FORAPPROVAL', '2024-01-07', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2024-01-07 11:14:57', '2024-01-07 11:14:57', '', '', 0),
+(6, 'RES-0000002', 'user-0000011', 'product-0000004', '', 4, 55.0000, 0.0000, 220.0000, 'TODELIVER', 'TODELIVER', 'CASH', 'PENDING', '2024-01-07', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2024-01-07 17:16:33', ',2024-01-07 05:32:36,2024-01-07 05:33:05', 'PICK-UP', '1212, Salvacion, Salvacion, Pilar, 4714, Sorsogon', 0),
+(7, 'RES-0000003', 'user-0000011', 'product-0000004', '', 1, 55.0000, 0.0000, 55.0000, 'TOSHIP', 'PENDING', 'CASH', 'PENDING', '2024-01-07', '0000-00-00', '0000-00-00', '0000-00-00', 0, '2024-01-07 21:09:20', ',2024-01-07 09:18:20', '', '', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -607,14 +626,14 @@ CREATE TABLE `users_table` (
 INSERT INTO `users_table` (`id`, `user_id`, `username`, `password`, `usertype`, `firstname`, `middlename`, `lastname`, `status`, `date_added`, `DATETIME_LOG`, `code`, `last_activity_time`) VALUES
 (64, 'user-0000001', 'OmaangatAdmin', '$2y$10$qnQZ1QxwNZ3nxAqG0eYth.MBfW3YI89NpY0TN..PWkKZzQxYDUI8e', 'ADMIN', 'Oma-Angat', 'Agri', 'Market', 'APPROVED', '2023-12-13', '2023-12-13 10:56:32', '365791d6086a3f', '2024-01-05 01:53:39'),
 (67, 'user-0000002', 'AlaDairies', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Greys', 'Rolan', 'Ala', 'APPROVED', '2023-12-13', '2024-01-04 20:18:51', '', '2024-01-05 02:20:22'),
-(68, 'user-0000003', 'LotertePalay', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Joyce', 'Llamera', 'Loterte', 'APPROVED', '2023-12-13', '2023-12-13 14:21:18', '', '2024-01-04 16:06:00'),
+(68, 'user-0000003', 'LotertePalay', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Nel', 'Llomera', 'Loterte', 'APPROVED', '2023-12-13', '2023-12-13 14:21:18', '', '2024-01-07 21:19:22'),
 (69, 'user-0000004', 'AguilarGoods', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Ynah', 'Segubiense', 'Aguilar', 'APPROVED', '2023-12-13', '2023-12-13 14:25:55', '', '2024-01-04 16:06:00'),
 (70, 'user-0000005', 'BorbeOils', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Beverlygrace', 'Garcera', 'Borbe', 'APPROVED', '2023-12-13', '2023-12-13 14:28:18', '', '2024-01-04 16:06:00'),
 (71, 'user-0000006', 'IbarraVeges', '38083c7ee9121e17401883566a148aa5c2e2d55dc53bc4a94a026517dbff3c6b', 'SELLER', 'Ibarra', 'Cons', 'Crisostomo', 'APPROVED', '2023-12-13', '2023-12-13 14:31:20', '', '2024-01-04 16:06:00'),
 (72, 'user-0000007', 'ClaraFruitasan', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Maria', 'Clara', 'Berdin', 'APPROVED', '2023-12-13', '2023-12-13 14:35:12', '', '2024-01-04 16:06:00'),
 (73, 'user-0000008', 'CruzTuyuan', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Juan', 'Dela', 'Cruz', 'APPROVED', '2023-12-13', '2023-12-13 14:37:06', '', '2024-01-04 16:06:00'),
 (74, 'user-0000009', 'AkapaVeges', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'SELLER', 'Crispin', 'Basilio', 'Sisa', 'APPROVED', '2023-12-13', '2023-12-13 14:38:33', '', '2024-01-04 16:06:00'),
-(76, 'user-0000011', 'joyce', '$2y$10$5w6PlHD8uBv3BAjnpwTDqO32JH1zk2mL0x97wgfThM2p55ll.bYw2', 'CUSTOMER', 'Joyce', 'Llamera', 'Loterte', 'APPROVED', '2023-12-15', '2023-12-15 02:24:45', '3657b486da5e6d', '2024-01-05 02:23:57'),
+(76, 'user-0000011', 'joyce', '$2y$10$5w6PlHD8uBv3BAjnpwTDqO32JH1zk2mL0x97wgfThM2p55ll.bYw2', 'CUSTOMER', 'Joyce', 'Llamera', 'Loterte', 'APPROVED', '2023-12-15', '2023-12-15 02:24:45', '3657b486da5e6d', '2024-01-07 21:06:06'),
 (77, 'user-0000012', 'Kkerropiii', '$2y$10$zmmVUnK6YT449.4HDmmtMOWbqKb2ZMq6u5UyeBT6dLxvbHlT5OZF.', 'CUSTOMER', 'Juan', 'Dela', 'Cruz', 'APPROVED', '2023-12-17', '2023-12-17 14:35:14', '3657e96a258a8b', '2024-01-04 16:06:00'),
 (93, 'user-0000023', 'mikelorenzo', '$2y$10$Ng0X8VrrSlvn8vj/iiiMg.XdIDcTHuNCujigKhRbfE2nel9Eb0aw.', 'CUSTOMER', 'Mike', 'Sala', 'Lorejo', 'APPROVED', '2024-01-01', '2024-01-01 20:33:35', '36592b11fd17ea', '2024-01-04 16:06:00'),
 (95, 'user-0000024', 'annjoyce', '$2y$10$BRFI9bth6GoXAmhNmyUNQu5Uc1Q6gsL.wLxgypJDDfShjXmStcv5m', 'CUSTOMER', 'Ann Joyce', 'Llamera', 'Loterte', 'APPROVED', '2024-01-01', '2024-01-01 20:52:56', '36592b5a8356ae', '2024-01-04 16:06:00'),
@@ -724,7 +743,8 @@ ALTER TABLE `orders`
 ALTER TABLE `payments`
   ADD PRIMARY KEY (`id`,`payment_id`),
   ADD UNIQUE KEY `paymentID_UNIQUE` (`payment_id`),
-  ADD KEY `FKPaymentOrderID_idx` (`order_id`);
+  ADD KEY `FKPaymentOrderID_idx` (`order_id`),
+  ADD KEY `FKPaymentResID` (`reservation_id`);
 
 --
 -- Indexes for table `paymethod`
@@ -851,13 +871,13 @@ ALTER TABLE `harvestsched`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `paymethod_image`
@@ -875,7 +895,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `post_details`
 --
 ALTER TABLE `post_details`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -887,7 +907,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `products_category`
 --
 ALTER TABLE `products_category`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 
 --
 -- AUTO_INCREMENT for table `products_image`
@@ -905,7 +925,7 @@ ALTER TABLE `rate`
 -- AUTO_INCREMENT for table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tracking`
@@ -953,7 +973,8 @@ ALTER TABLE `orders`
 -- Constraints for table `payments`
 --
 ALTER TABLE `payments`
-  ADD CONSTRAINT `FKPaymentOrderID` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `FKPaymentOrderID` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FKPaymentResID` FOREIGN KEY (`reservation_id`) REFERENCES `reservation` (`reservation_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `paymethod`
