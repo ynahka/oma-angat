@@ -182,7 +182,7 @@
                             <div class=" form-group" style="margin-top: 300px;">
                                 <select class="form-control courier" onchange="inputrequired()">
                                     <option value="">Select Delivery Method</option>
-                                    <option value="JandT EXPRESS">J&T EXPRESS</option>
+                                    <option value="Courier/Logistics">Courier/Logistics(Discuss on Message)</option>
                                     <option value="PICK-UP">PICK-UP (Discuss on Message)</option>
                                     <option value="MEET-UP">MEET-UP(Discuss on Message)</option>
                                     <option value="DROP-OFF">DROP-OFF (Discuss on Message)</option>

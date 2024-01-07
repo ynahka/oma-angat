@@ -168,7 +168,10 @@
 
         <ul class="nav-list">
             <li>
-                <a class="nav-link" href="products.php"><i class="fa-solid fa-store"></i>shop</a>
+                <a class="nav-link" href="all-farmer-shop.php"><i class="fa-solid fa-store"></i>shop</a>
+            </li>
+            <li>
+                <a class="nav-link" href="all-farmer-shop.php"><i class="fas fa-seed"></i>Coming Soon</a>
             </li>
             <li>
                 <a class="nav-link" href="profile.php"><i class="icofont-ui-user"></i>my account</a>
