@@ -1,8 +1,9 @@
 <?php include '../connect2.php'; ?>
+<?php include '../header.php'; ?>
 <style type="text/css">
-    .Iclass{
-        font-size:1.3rem;
-        cursor:pointer;
+    .Iclass {
+        font-size: 1.3rem;
+        cursor: pointer;
         font-weight: 500;
     }
 
@@ -21,27 +22,28 @@
         border: 1px solid #CCC;
     }
 
-    .pagination li:first-child{
+    .pagination li:first-child {
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
     }
 
-    .pagination li:last-child{
+    .pagination li:last-child {
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
     }
 
-    ul.pagination li:hover{
+    ul.pagination li:hover {
         background-color: #3a4651;
         color: white !important;
     }
 
-    .pagination .active{
+    .pagination .active {
         background-color: #3a4651;
         color: white !important;
     }
 
-    .table thead th, .table th {
+    .table thead th,
+    .table th {
         background-color: #9e9e9e !important;
     }
 
@@ -77,7 +79,7 @@
 
 <div class="container-fluid" style="padding: 15px 15px; background-color: white; min-height: 540px; margin-top: 15px;">
     <h4 class="mb-0 headerfontfont2" style="color: #2c2b2e;font-weight: 500;">Community List</h4>
-    <h6 class="mb-4 headerfontfont" style="font-weight: 300;font-size: 13px;">You have total of <span id="txttotproduct">2</span> Blog</h6>
+    <!-- <h6 class="mb-4 headerfontfont" style="font-weight: 300;font-size: 13px;">You have total of <span id="txttotproduct">2</span> Blog</h6> -->
 
     <div class="row" style="margin-bottom: .5rem;">
         <div class="col-md-4 coldashboardbox3" style="margin-bottom: 10px; padding-right: 0px;">
@@ -89,7 +91,7 @@
             </div>
         </div>
 
-        
+
     </div>
 
     <div class="row">
@@ -107,23 +109,24 @@
                     </thead>
                     <tbody>
                         <?php
-                            $res = mysqli_query($connection, "SELECT * FROM blog");
-                            $counter = 1;
-                while($row = mysqli_fetch_array($res)){
-                    
-                   
+                        $res = mysqli_query($connection, "SELECT * FROM blog");
+                        $counter = 1;
+                        while ($row = mysqli_fetch_array($res)) {
+
+
                         ?>
 
-                        <tr>
-                            <td><?php echo $counter; ?></td>
-                            <td><img src="../<?php echo $row['image']; ?>" width="100px"></td>
-                            <td><?php echo $row['blogtitle']; ?></td>
-                            <td><?php echo $row['blogdescription']; ?></td>
-                            <td style="white-space: nowrap; text-align: center;">
-                                <button class="delete" value="<?php echo $row['id'] ?>" style="border: unset;background-color: unset;"><i class="fas fa-trash fa-lg text-danger" style="cursor:pointer;color: #3f3f3f;" title='Edit Branch'></i></button>
-                            </td>
-                        </tr>
-                    <?php $counter++; }
+                            <tr>
+                                <td><?php echo $counter; ?></td>
+                                <td><img src="../<?php echo $row['image']; ?>" width="100px"></td>
+                                <td><?php echo $row['blogtitle']; ?></td>
+                                <td><?php echo $row['blogdescription']; ?></td>
+                                <td style="white-space: nowrap; text-align: center;">
+                                    <button class="delete" value="<?php echo $row['id'] ?>" style="border: unset;background-color: unset;"><i class="fas fa-trash fa-lg text-danger" style="cursor:pointer;color: #3f3f3f;" title='Edit Branch'></i></button>
+                                </td>
+                            </tr>
+                        <?php $counter++;
+                        }
                         ?>
                         <tr>
                             <td></td>
@@ -132,54 +135,53 @@
                 </table>
             </div>
 
-           
-            
+
+
         </div>
     </div>
 </div>
 
-<?php 
-    include("community/modal.php"); 
-    include("community/script.php"); 
-  
+<?php
+include("community/modal.php");
+include("community/script.php");
+
 ?>
 
 <script>
-$('.delete').click(function(){
-   id = $(this).val()
+    $('.delete').click(function() {
+        id = $(this).val()
 
-       Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonColor: '#3085d6',
-          cancelButtonColor: '#d33',
-          confirmButtonText: 'Yes, Delete it!'
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Delete it!'
         }).then((result) => {
             if (result.value) {
-                $(".preloader").show().css('background','rgba(255,255,255,0.5)');
+                $(".preloader").show().css('background', 'rgba(255,255,255,0.5)');
                 $.ajax({
                     type: 'POST',
                     url: 'community/class.php',
                     data: 'id=' + id + '&form=deleteblog',
-                    success: function(data){
-                        setTimeout(function(){
-                        $(".preloader").hide().css('background','');
+                    success: function(data) {
+                        setTimeout(function() {
+                            $(".preloader").hide().css('background', '');
                             Swal.fire(
-                              'Success!',
-                              'Product successfully deleted.',
-                              'success'
+                                'Success!',
+                                'Product successfully deleted.',
+                                'success'
                             )
                             displayproductlist();
-                        },1000);
-                        setTimeout(function(){
+                        }, 1000);
+                        setTimeout(function() {
                             location.reload()
-                        },2000)
+                        }, 2000)
                     }
                 })
             }
         })
-    }) 
-   
+    })
 </script>
