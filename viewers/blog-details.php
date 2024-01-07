@@ -119,9 +119,9 @@ include 'header.php'; ?>
                                         <textarea class="form-control" placeholder="Write your comment"
                                             id="txtblogcomment"></textarea>
                                     </div>
-                                </div>
+                                </div>d
                             </div>
-                            <button class="form-btn" onclick="savepostcomments()">Post Comment</button>
+                            <button type="button" class="form-btn" onclick="savepostcomments()">Post Comment</button>
                         </form>
                         <?php } ?>
 
@@ -168,7 +168,6 @@ include 'header.php'; ?>
 </body>
 
 </html>
-
 <script type="text/javascript">
 $(function() {
     $("#community").addClass('active');

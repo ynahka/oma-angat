@@ -159,7 +159,8 @@ if (isset($_GET['shopseller_id'])) {
                 </div>
             </section> -->
             <div class="container">
-                <h2 style="color:#4c644b; text-align:center; margin-bottom: 10px; font-weight: 800;"><i class="fa-regular fa-calendar-days"></i> Harvesting
+                <h2 style="color:#4c644b; text-align:center; margin-bottom: 10px; font-weight: 800;"><i
+                        class="fa-regular fa-calendar-days"></i> Harvesting
                     Calendar</h2>
             </div>
             <div class="fullcalendar">
@@ -174,9 +175,11 @@ if (isset($_GET['shopseller_id'])) {
         </div>
         </div>
     </section>
-    <div class="modal fade" id="modal_chat" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal fade" id="modal_chat" tabindex="-1" role="dialog" data-bs-backdrop="static"
+        data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered modal-paymentneed">
-            <div class="modal-content" style="border: 0px solid #82a131;background-color: #eef4dd; border-radius: 10px;">
+            <div class="modal-content"
+                style="border: 0px solid #82a131;background-color: #eef4dd; border-radius: 10px;">
                 <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="clearchat()"
                     style="left: 92%;">
                     <span aria-hidden="true"><i class="icon-x"></i></span>
@@ -191,7 +194,8 @@ if (isset($_GET['shopseller_id'])) {
                                     <p style="margin-bottom: 10px;">
                                         <input type="hidden" id="shopseller_id" value="<?= $shopseller_id ?>">
                                         <label>Message to seller</label>
-                                        <textarea id="txtsendchatmessage" style="height: 150px;margin-bottom: 0px;"></textarea>
+                                        <textarea id="txtsendchatmessage"
+                                            style="height: 150px;margin-bottom: 0px;"></textarea>
                                     </p>
                                 </div>
                             </div>
@@ -215,7 +219,8 @@ if (isset($_GET['shopseller_id'])) {
             </div> -->
         </div>
         <!-- Event Details Modal -->
-        <div class="modal fade" id="modal_productdetails" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal fade" id="modal_productdetails" tabindex="-1" role="dialog" data-bs-backdrop="static"
+            data-bs-keyboard="false">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content" style="background-color: #cfe2ce">
                     <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="clearmdl_productdet();" style="left: 95%;">
@@ -228,27 +233,32 @@ if (isset($_GET['shopseller_id'])) {
                             <div class="product_details mb-4">
                                 <div class="col-lg-7 col-md-7">
                                     <div class="product_d_right">
-                                        <h1 style="margin-bottom: 5px;"><a href="javascript:void(0)" id="productname"></a></h1>
+                                        <h1 style="margin-bottom: 5px;"><a href="javascript:void(0)"
+                                                id="productname"></a></h1>
                                         <div class="product_ratting" id="txtmdlprodrates"></div>
                                         <div class="price_box">
-                                            <span class="current_price">₱ <span id="price">0.00</span>/<span id="unit"></span>
+                                            <span class="current_price">₱ <span id="price">0.00</span>/<span
+                                                    id="unit"></span>
                                         </div>
                                         <div class="product_desc">
                                             <p id="productdesc"></p>
                                         </div>
                                         <div>
-                                            <span>Quantity: <a href="javascript:void(0)" id="quantity"></a><span id="unit"></span></span><br>
+                                            <span>Quantity: <a href="javascript:void(0)" id="quantity"></a><span
+                                                    id="unit"></span></span><br>
                                         </div>
                                         <div class="product_meta">
-                                            <span>Available at: <a href="javascript:void(0)" id="availat"></a></span><br>
-                                            <span>Available until: <a href="javascript:void(0)" id="availuntil"></a></span><br>
+                                            <span>Available at: <a href="javascript:void(0)"
+                                                    id="availat"></a></span><br>
+                                            <span>Available until: <a href="javascript:void(0)"
+                                                    id="availuntil"></a></span><br>
                                             <input type="hidden" id="txtmdlprodsellerID">
                                             <!-- <a href="javascript:void(0)" id="txtmdlprodsellername"></a>  -->
 
                                         </div>
 
                                         <div class="view-add-group">
-                                            <button class="product-add" onclick="btnaddtocart()" title="Add to Cart">
+                                            <button class="product-add" onclick="btnbuynow()" title="Add to Cart">
                                                 <!-- <i class="fas fa-shopping-basket"></i> -->
                                                 <span>Reserve Now</span>
                                             </button>
@@ -318,227 +328,227 @@ if (isset($connection)) {
 ?>
 
 <script type="text/javascript">
-    function copyToClipboard() {
-        // Get the text content you want to copy
-        var linkToCopy =
-            "http://localhost/oma-angat/viewers/shop-1column.php?shopseller_id=<?= $shopseller_id ?>";
+function copyToClipboard() {
+    // Get the text content you want to copy
+    var linkToCopy =
+        "http://localhost/oma-angat/viewers/shop-1column.php?shopseller_id=<?= $shopseller_id ?>";
 
-        // Create a temporary input element
-        var tempInput = document.createElement("input");
-        tempInput.value = linkToCopy;
+    // Create a temporary input element
+    var tempInput = document.createElement("input");
+    tempInput.value = linkToCopy;
 
-        // Append the input element to the document
-        document.body.appendChild(tempInput);
+    // Append the input element to the document
+    document.body.appendChild(tempInput);
 
-        // Select the text inside the input element
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); /* For mobile devices */
+    // Select the text inside the input element
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); /* For mobile devices */
 
-        // Copy the selected text
-        document.execCommand("copy");
+    // Copy the selected text
+    document.execCommand("copy");
 
-        // Remove the temporary input element
-        document.body.removeChild(tempInput);
+    // Remove the temporary input element
+    document.body.removeChild(tempInput);
 
-        Swal.fire({
-            title: 'Success!',
-            text: 'Link copied to clipboard!',
-            icon: 'success',
-            confirmButtonText: 'OK'
-        }).then(() => {
-            window.location.href =
-                'shop-1column.php?shopseller_id=<?= $shopseller_id ?>'; // Replace 'farmer.php' with your target URL
-        });
+    Swal.fire({
+        title: 'Success!',
+        text: 'Link copied to clipboard!',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    }).then(() => {
+        window.location.href =
+            'shop-1column.php?shopseller_id=<?= $shopseller_id ?>'; // Replace 'farmer.php' with your target URL
+    });
 
-    }
-    $(function() {
-        $("#homeclass").addClass('active');
-        fncdisplaylistofproducts();
+}
+$(function() {
+    $("#homeclass").addClass('active');
+    fncdisplaylistofproducts();
 
-        $(".wawa").click(function() {
-            $(".wawa").css("color", "#79a206");
-            $(this).css("color", "#FEB954");
-        })
-
-        $(".numonly").keydown(function(event) {
-            if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 190 || event.keyCode == 9 ||
-                event.keyCode == 188) {
-
-            } else {
-                if (event.keyCode < 48 || event.keyCode > 57 || event.keyCode == 17) {
-                    event.preventDefault();
-                }
-            }
-        });
-
-        $(".focus").focus(function() {
-            this.select();
-        });
+    $(".wawa").click(function() {
+        $(".wawa").css("color", "#79a206");
+        $(this).css("color", "#FEB954");
     })
 
-    function reqField1(classN) {
-        var isValid = 1;
-        $('.' + classN).each(function() {
-            if ($(this).val() == '') {
-                $(this).css('border', '1px #a94442 solid');
-                $(this).addClass('lala');
-                isValid = 0;
-            } else {
-                $(this).css('border', '');
-                $(this).removeClass('lala');
+    $(".numonly").keydown(function(event) {
+        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 190 || event.keyCode == 9 ||
+            event.keyCode == 188) {
+
+        } else {
+            if (event.keyCode < 48 || event.keyCode > 57 || event.keyCode == 17) {
+                event.preventDefault();
             }
-        });
+        }
+    });
 
-        return isValid;
-    }
+    $(".focus").focus(function() {
+        this.select();
+    });
+})
 
-    function fncdisplaylistofproducts() {
-        $.ajax({
-            type: 'POST',
-            url: 'shop-1column_class.php',
-            data: {
-                form: 'fncdisplaylistofproducts',
-                shopseller_id: '<?= $shopseller_id ?>'
-            },
-            success: function(data) {
-                $("#homelistofproducts").html(data);
-            }
-        });
-    }
+function reqField1(classN) {
+    var isValid = 1;
+    $('.' + classN).each(function() {
+        if ($(this).val() == '') {
+            $(this).css('border', '1px #a94442 solid');
+            $(this).addClass('lala');
+            isValid = 0;
+        } else {
+            $(this).css('border', '');
+            $(this).removeClass('lala');
+        }
+    });
 
-    function opensellerchat() {
-        $("#modal_chat").modal('show');
-    }
+    return isValid;
+}
 
-    function clearchat() {
-        $("#txtsendchatmessage").val("");
-    }
+function fncdisplaylistofproducts() {
+    $.ajax({
+        type: 'POST',
+        url: 'shop-1column_class.php',
+        data: {
+            form: 'fncdisplaylistofproducts',
+            shopseller_id: '<?= $shopseller_id ?>'
+        },
+        success: function(data) {
+            $("#homelistofproducts").html(data);
+        }
+    });
+}
 
-    function sendChatToSeller() {
-        var textmdlprodsellerID = $("#shopseller_id").val();
-        var textsendchatmessage = $("#txtsendchatmessage").val();
+function opensellerchat() {
+    $("#modal_chat").modal('show');
+}
 
-        $.ajax({
-            type: 'POST',
-            url: 'shop-1column_class.php',
-            data: {
-                textmdlprodsellerID: shopseller_id,
-                textsendchatmessage: textsendchatmessage,
-                form: 'sendchattoseller'
-            },
-            success: function(data) {
-                setTimeout(function() {
-                    $(".loadload").hide();
+function clearchat() {
+    $("#txtsendchatmessage").val("");
+}
 
-                    Swal.fire({
-                        title: "Success!",
-                        text: "Successfully sent message.",
-                        type: "success",
-                        icon: "success",
-                        showCancelButton: false,
-                        confirmButtonColor: "#2778c4",
-                        confirmButtonText: "Okay",
-                        closeOnConfirm: false
-                    }).then((result) => {
-                        if (result.value) {
-                            $("#modal_chat").modal('hide');
-                            clearchat();
-                        }
-                    });
+function sendChatToSeller() {
+    var textmdlprodsellerID = $("#shopseller_id").val();
+    var textsendchatmessage = $("#txtsendchatmessage").val();
 
-                }, 500);
-            },
-            error: function(xhr, textStatus, errorThrown) {
+    $.ajax({
+        type: 'POST',
+        url: 'shop-1column_class.php',
+        data: {
+            textmdlprodsellerID: shopseller_id,
+            textsendchatmessage: textsendchatmessage,
+            form: 'sendchattoseller'
+        },
+        success: function(data) {
+            setTimeout(function() {
                 $(".loadload").hide();
-                console.error("Error sending chat:", errorThrown);
-                // Handle the error as needed
-            }
-        });
-    }
-    // var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
-    var scheds = <?= json_encode($sched_res) ?>;
-    $(document).ready(function() {
-        var calendar;
-        var Calendar = FullCalendar.Calendar;
-        var events = [];
-        // Define an array of colors
-        var eventColors = ['#AFE1AF', '#50C878', '#90EE90', '#98FB98', '#C1E1C1', '#8A9A5B'];
-        $(function() {
-            if (!!scheds) {
-                Object.keys(scheds).map(k => {
-                    var row = scheds[k]
-                    events.push({
-                        id: row.id,
-                        title: 'Available Now:  ' + row
-                            .productname,
-                        start: row.availat,
-                        end: row.availuntil,
-                        className: 'left-aligned-title'
-                    });
-                })
-            }
-            events.forEach(function(event, index) {
-                event.backgroundColor = eventColors[index % eventColors.length];
-                event.textColor = '#000000'; // Set text color to black
-            });
-            var date = new Date()
-            var d = date.getDate(),
-                m = date.getMonth(),
-                y = date.getFullYear()
 
-            calendar = new Calendar(document.getElementById('calendar'), {
-                headerToolbar: {
-                    left: 'prev,next today',
-                    right: 'dayGridMonth,dayGridWeek,list',
-                    center: 'title',
-                },
-                selectable: true,
-                themeSystem: 'bootstrap',
-                //Random default events
-                events: events,
-                eventClick: function(info) {
-                    var _details = $('#modal_productdetails')
-                    var id = info.event.id
-                    if (!!scheds[id]) {
-                        // Format the price to two decimal places
-                        var formattedPrice = parseFloat(scheds[id].price).toFixed(2);
-
-                        _details.find('#productname').text(scheds[id].productname);
-                        _details.find('#productdesc').text(scheds[id].productdesc);
-                        _details.find('#quantity').text(scheds[id].quantity);
-                        _details.find('#price').text(formattedPrice);
-                        _details.find('#unit').text(scheds[id].unit);
-                        _details.find('#availat').text(scheds[id].sdate);
-                        _details.find('#availuntil').text(scheds[id].edate);
-                        _details.find('#edit,#delete').attr('data-id', id);
-
-
-                        // Show the modal
-                        _details.modal('show');
-                    } else {
-                        Swal.fire(
-                            'Error!',
-                            'Event is undefined',
-                            'error'
-                        )
+                Swal.fire({
+                    title: "Success!",
+                    text: "Successfully sent message.",
+                    type: "success",
+                    icon: "success",
+                    showCancelButton: false,
+                    confirmButtonColor: "#2778c4",
+                    confirmButtonText: "Okay",
+                    closeOnConfirm: false
+                }).then((result) => {
+                    if (result.value) {
+                        $("#modal_chat").modal('hide');
+                        clearchat();
                     }
-                    console.log('Events:', events);
+                });
 
-                },
-                eventDidMount: function(info) {
-                    // Do Something after events mounted
-                },
-                editable: true
-            });
+            }, 500);
+        },
+        error: function(xhr, textStatus, errorThrown) {
+            $(".loadload").hide();
+            console.error("Error sending chat:", errorThrown);
+            // Handle the error as needed
+        }
+    });
+}
+// var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
+var scheds = <?= json_encode($sched_res) ?>;
+$(document).ready(function() {
+    var calendar;
+    var Calendar = FullCalendar.Calendar;
+    var events = [];
+    // Define an array of colors
+    var eventColors = ['#AFE1AF', '#50C878', '#90EE90', '#98FB98', '#C1E1C1', '#8A9A5B'];
+    $(function() {
+        if (!!scheds) {
+            Object.keys(scheds).map(k => {
+                var row = scheds[k]
+                events.push({
+                    id: row.id,
+                    title: 'Available Now:  ' + row
+                        .productname,
+                    start: row.availat,
+                    end: row.availuntil,
+                    className: 'left-aligned-title'
+                });
+            })
+        }
+        events.forEach(function(event, index) {
+            event.backgroundColor = eventColors[index % eventColors.length];
+            event.textColor = '#000000'; // Set text color to black
+        });
+        var date = new Date()
+        var d = date.getDate(),
+            m = date.getMonth(),
+            y = date.getFullYear()
 
-            calendar.render();
+        calendar = new Calendar(document.getElementById('calendar'), {
+            headerToolbar: {
+                left: 'prev,next today',
+                right: 'dayGridMonth,dayGridWeek,list',
+                center: 'title',
+            },
+            selectable: true,
+            themeSystem: 'bootstrap',
+            //Random default events
+            events: events,
+            eventClick: function(info) {
+                var _details = $('#modal_productdetails')
+                var id = info.event.id
+                if (!!scheds[id]) {
+                    // Format the price to two decimal places
+                    var formattedPrice = parseFloat(scheds[id].price).toFixed(2);
+
+                    _details.find('#productname').text(scheds[id].productname);
+                    _details.find('#productdesc').text(scheds[id].productdesc);
+                    _details.find('#quantity').text(scheds[id].quantity);
+                    _details.find('#price').text(formattedPrice);
+                    _details.find('#unit').text(scheds[id].unit);
+                    _details.find('#availat').text(scheds[id].sdate);
+                    _details.find('#availuntil').text(scheds[id].edate);
+                    _details.find('#edit,#delete').attr('data-id', id);
+
+
+                    // Show the modal
+                    _details.modal('show');
+                } else {
+                    Swal.fire(
+                        'Error!',
+                        'Event is undefined',
+                        'error'
+                    )
+                }
+                console.log('Events:', events);
+
+            },
+            eventDidMount: function(info) {
+                // Do Something after events mounted
+            },
+            editable: true
         });
 
-        // Form reset listener
-        $('#schedule-form').on('reset', function() {
-            $(this).find('input:hidden').val('')
-            $(this).find('input:visible').first().focus()
-        })
+        calendar.render();
+    });
 
+    // Form reset listener
+    $('#schedule-form').on('reset', function() {
+        $(this).find('input:hidden').val('')
+        $(this).find('input:visible').first().focus()
     })
+
+})
 </script>
