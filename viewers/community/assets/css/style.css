@@ -3496,6 +3496,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   text-align: center;
 }
 .product_content h4 {
+      color: var(--heading) !important;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -3507,7 +3508,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .product_rating {
-  margin-bottom: 2px;
+  margin-bottom: 10px;
 }
 .product_rating ul li {
   line-height: 16px;
@@ -3517,8 +3518,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   margin-right: 0;
 }
 .product_rating ul li a {
-  font-size: 17px;
-  color: #FEB954;
+ 
+  font-size: 15px;
+  color: #4C644B !important;
 }
 .product_rating ul li a:hover {
   color: #79a206;
@@ -3539,7 +3541,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .price_box span.current_price {
   font-weight: 500;
   font-size: 15px;
-  color: #79a206;
+  color: #4C644B !important; 
 }
 @media only screen and (max-width: 767px) {
   .price_box span.current_price {

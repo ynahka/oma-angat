@@ -508,7 +508,7 @@ session_start();
     <!-- CHAT start-->
     <div class="modal fade" id="modal_chat" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered modal-paymentneed">
-            <div class="modal-content" style="border: 0px solid #82a131;background-color: #eef4dd; border-radius: 10px;">
+            <div class="modal-content" style="width:50%; border: 1px solid #4C644B;background-color: #CFE2CE; border-radius: 10px;">
                 <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="clearchat()"
                     style="left: 92%;">
                     <span aria-hidden="true"><i class="icon-x"></i></span>

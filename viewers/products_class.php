@@ -61,7 +61,7 @@ switch ($_POST['form']) {
 		                        <figure>
 		                            <div class='product_thumb'>
 	                                    <a class='primary_img' href='javascript:void(0)' title='quick view' onclick='openproductdetails(\"" . $row[0] . "\")'>
-	                                    	<img src='../" . $productimage[0] . "' style='height: 275px; width: 100% !important;'>";
+	                                    	<img src='../" . $productimage[0] . "' style='height: 275px; width: 320px !important;'>";
         if ($row['quantity'] <= 0) {
           echo "<div class='soldoutshow'>Sold out</div>";
         }
@@ -77,7 +77,7 @@ switch ($_POST['form']) {
 	                                        </ul>
 	                                    </div>
 	                                </div>
-	                                <div class='product_content grid_content'>
+	                                <div class='product_content grid_content' style='  color: #39404a !important;'>
 	                                	<div class='product_price_rating'>
 		                                    <div class='product_rating'>
 		                                        <ul>";
@@ -96,7 +96,7 @@ switch ($_POST['form']) {
         }
         echo "</ul>
 		                                    </div>
-		                                    <h4 class='product_name' style=''><a href='javascript:void(0)' title='$row[1]' onclick='openproductdetails(\"" . $row[0] . "\")'>" . $row[1] . "</a></h4>
+		                                    <h4 class='product_name' style='color: #39404a !important;'><a href='javascript:void(0)' title='$row[1]' onclick='openproductdetails(\"" . $row[0] . "\")'>" . $row[1] . "</a></h4>
 		                                    <div class='price_box'>
 		                                        <span class='current_price'>₱ " . number_format($row[2], "2", ".", ",") . "</span>
 		                                    </div>

@@ -61,7 +61,7 @@ switch ($_POST['form']) {
 		                        <figure>
 		                            <div class='product_thumb'>
 	                                    <a class='primary_img' href='javascript:void(0)' title='quick view' onclick='openproductdetails(\"" . $row[0] . "\")'>
-	                                    	<img src='../" . $productimage[0] . "' style='height: 275px; width: 100% !important;'>";
+	                                    	<img src='../" . $productimage[0] . "' style='height: 275px; width: 320px !important;'>";
                 if ($row['quantity'] <= 0) {
                     echo "<div class='soldoutshow'>Sold out</div>";
                 }
@@ -118,7 +118,7 @@ switch ($_POST['form']) {
 ?> <option value="">- Select Category -</option> <?php
                                                     while ($row = mysqli_fetch_array($res)) {
                                                     ?> <option value="<?php echo $row[0]; ?>"><?php echo $row[1]; ?>
-</option> <?php
+            </option> <?php
                                                     }
                                                     break;
 

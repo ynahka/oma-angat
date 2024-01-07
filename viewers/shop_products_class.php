@@ -64,7 +64,7 @@ switch ($_POST['form']) {
 		                        <figure>
 		                            <div class='product_thumb'>
 	                                    <a class='primary_img' href='javascript:void(0)' title='quick view' onclick='openproductdetails(\"" . $row[0] . "\")'>
-	                                    	<img src='../" . $productimage[0] . "' style='height: 275px; width: 100% !important;'>";
+	                                    	<img src='../" . $productimage[0] . "' style='height: 275px; width: 320px!important;'>";
                 if ($row['quantity'] <= 0) {
                     echo "<div class='soldoutshow'>Sold out</div>";
                 }
