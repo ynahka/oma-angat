@@ -108,16 +108,17 @@ session_start();
                 <div class="col-lg-12">
                     <div class="row">
                         <?php
-                        $ret = mysqli_query($connection, "SELECT po.id as id,
-                                    po.imagename AS imahe, 
-                                    po.date_added AS dateadd, 
-                                    po.postdescription AS postdesc, 
-                                    po.posttitle AS posttitle, 
-                                    u.username
-                                FROM 
-                                    post AS po
-                                INNER JOIN 
-                                    users_table AS u ON po.user_id = u.user_id");
+                        $ret = mysqli_query($connection, "SELECT po.post_id as post_id,
+               po.imagename AS imahe, 
+               po.date_added AS dateadd, 
+               po.postdescription AS postdesc, 
+               po.posttitle AS posttitle, 
+               u.username
+           FROM 
+               post AS po
+           INNER JOIN 
+               users_table AS u ON po.user_id = u.user_id");
+
 
                         $num = mysqli_num_rows($ret);
                         if ($num > 0) {
@@ -126,7 +127,8 @@ session_start();
                                 <div class="col-sm-3 col-md-3 col-lg-3">
                                     <div class="blog-card">
                                         <div class="blog-media">
-                                            <a class="blog-img" href="blog-details.php?id=<?php echo $row['id']; ?>">
+                                            <a class="blog-img" href="blog-details.php?post_id=<?php echo $row['post_id']; ?>">
+
                                                 <img src="../OmaangatImages/posts/<?php echo htmlentities($row['imahe']); ?>" alt="blog" style="width: 300px; height: 230px;">
                                             </a>
                                         </div>
@@ -142,7 +144,7 @@ session_start();
                                                 </li>
                                             </ul>
                                             <h4 class="blog-title">
-                                                <a href="blog-details.php?id=<?php echo $row['id']; ?>"><?php echo htmlentities($row['posttitle']); ?></a>
+                                                <a href="blog-details.php?post_id=<?php echo $row['post_id']; ?>"><?php echo htmlentities($row['posttitle']); ?></a>
                                             </h4>
                                             <p class="blog-desc">
                                                 <?php echo htmlentities($row['postdesc']); ?>

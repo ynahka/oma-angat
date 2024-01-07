@@ -47,7 +47,7 @@ session_start();
     <!--shop  area start-->
     <section class="inner-section single-banner" style="background: url(images/banner.svg) no-repeat center;">
         <div class="container">
-            <h2>Shop by Products</h2>
+            <h2>COMING SOON PRODUCTS</h2>
         </div>
     </section>
     <div class="shop_area shop_fullwidth mt-30">
@@ -118,7 +118,6 @@ session_start();
                                         <div id="img-1" class="zoomWrapper single-zoom" style="position: relative;">
                                             <a id="mdlprodimage1"></a>
                                             <div class="soldout">Sold out</div>
-                                            <div class="notavailable">Not Available</div>
                                         </div>
                                         <div class="single-zoom-thumb" id="mdlprodimage2">
 
@@ -142,7 +141,7 @@ session_start();
                                             <!-- <input min="1" max="100" value="1" type="number" class="focus" id="txtmdlprodquantity" onchange="quantityvalidation()" onkeyup="quantityvalidation()"> -->
                                         </div>
                                         <div>
-                                            <span>Stock: <a id="txtstock"></a></span><br>
+                                            <span>Quantity: <a id="txtstock"></a></span><br>
                                         </div>
                                         <div class="product_meta">
                                             <span>Category: <a id="txtmdlprodcategory"></a></span><br>
@@ -168,17 +167,16 @@ session_start();
 
                                         <div class="view-add-group">
                                             <button class="product-add" onclick="btnaddtocart()" title="Add to Cart">
-                                                <!-- <i class="fas fa-shopping-basket"></i> -->
+                                                <i class="fas fa-shopping-basket"></i>
                                                 <span>add to cart</span>
                                             </button>
                                         </div>
                                         <div class="view-action-group">
-                                            <button class="product-add" onclick="btnbuynow()" title="Buy Now">
+                                            <button class="product-add" onclick="btnreservenow()" title="Reserve Now">
                                                 <!-- <i class="fas fa-shopping-basket"></i> -->
-                                                <span>Buy Now</span>
+                                                <span>Reserve Now</span>
                                             </button>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -248,12 +246,12 @@ session_start();
     </div>
     <!-- PRODUCT DETAILS end-->
 
-    <!-- BUY NOW MODAL -->
-    <div class="modal fade" id="modal_productbuynow" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <!-- RESERVE NOW MODAL -->
+    <div class="modal fade" id="modal_productreservenow" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"
-                    onclick="clearbuynowmodal();" style="left: 95%;">
+                    onclick="clearreservenowmodal();" style="left: 95%;">
                     <span aria-hidden="true"><i class="icon-x"></i></span>
                 </button> -->
                 <button class="modal-close icofont-close" data-bs-dismiss="modal"></button>
@@ -264,19 +262,22 @@ session_start();
                         <!--Delivery Address Details start-->
                         <div class="coupon_area" style="margin-top: 30px;margin-bottom: 20px;">
                             <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="coupon_code left">
-                                        <h3 style="background-color: #4c644b;">Delivery Address</h3>
-                                        <div class=" coupon_inner" style="padding: 10px 20px 10px;">
-                                            <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-user" aria-hidden="true"></i> <span id="txtmdlcheckoutname"></span></h4>
-                                            <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-phone" aria-hidden="true"></i> <span id="txtmdlcheckoutphone"></span></h4>
-                                            <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-map-marker" aria-hidden="true"></i>
-                                                <span id="txtmdlcheckoutaddress"></span> &nbsp;&nbsp;&nbsp;
-                                                <!-- <span style="cursor:pointer;color: #0089ff;font-size: 13px;" onclick="">Change</span> -->
-                                            </h4>
+                                <h4 style="background-color: #cfe2ce;">Note: Reservations may take 5-7 days for seller
+                                    confirmation and an additional 7-14 days for delivery, depending on product
+                                    availability. Feel free to message the seller for more information.</h3>
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="coupon_code left">
+                                            <h3 style="background-color: #4c644b;">Delivery Address</h3>
+                                            <div class=" coupon_inner" style="padding: 10px 20px 10px;">
+                                                <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-user" aria-hidden="true"></i> <span id="txtmdlcheckoutname"></span></h4>
+                                                <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-phone" aria-hidden="true"></i> <span id="txtmdlcheckoutphone"></span></h4>
+                                                <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    <span id="txtmdlcheckoutaddress"></span> &nbsp;&nbsp;&nbsp;
+                                                    <!-- <span style="cursor:pointer;color: #0089ff;font-size: 13px;" onclick="">Change</span> -->
+                                                </h4>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                         <!--Delivery Address Details end-->
@@ -286,7 +287,7 @@ session_start();
                             <div class="row">
                                 <div class="col-lg-12 col-md-12">
                                     <div class="coupon_code left">
-                                        <h3 style="background-color: #4c644b;">Products Ordered</h3>
+                                        <h3 style="background-color: #4c644b;">Products Reserved</h3>
 
                                         <div class=" shopping_cart_area">
                                             <div class="container" style="padding-right: 10px;padding-left: 10px;">
@@ -314,17 +315,17 @@ session_start();
                                                                     <tbody>
                                                                         <tr>
                                                                             <td style="width: 100%;text-align: left;">
-                                                                                <img src="../" style="width:50px" id="txtmdlbuynowproductimage">
-                                                                                <a href="#"><span id="txtmdlbuynowproductname"></span></a>
+                                                                                <img src="../" style="width:50px" id="txtmdlreservenowproductimage">
+                                                                                <a href="#"><span id="txtmdlreservenowproductname"></span></a>
                                                                             </td>
                                                                             <td style="width: 3%;text-align: left;">
-                                                                                <span id="txtmdlbuynowproductquantity"></span>
+                                                                                <span id="txtmdlreservenowproductquantity"></span>
                                                                             </td>
                                                                             <td style="width: 3%;text-align: left;">₱
-                                                                                <span id="txtmdlbuynowproductprice">0.00</span>
+                                                                                <span id="txtmdlreservenowproductprice">0.00</span>
                                                                             </td>
                                                                             <td style="width: 3%;text-align: left;">₱
-                                                                                <span id="txtmdlbuynowproductsubtotal">0.00</span>
+                                                                                <span id="txtmdlreservenowproductsubtotal">0.00</span>
                                                                             </td>
                                                                         </tr>
                                                                     </tbody>
@@ -350,7 +351,7 @@ session_start();
                                         <h3 style="margin-bottom: 0rem; background-color: #4c644b;">Payment Method</h3>
                                         <div class="coupon_inner" style="padding: 10px 10px 10px;">
 
-                                            <input type="hidden" id="txtmdlbuynowpaymentmethod">
+                                            <input type="hidden" id="txtmdlreservenowpaymentmethod">
 
                                             <div class="row">
                                                 <div class="col-lg-6 col-md-12">
@@ -399,21 +400,22 @@ session_start();
 
                                 <div class="col-lg-6 col-md-12">
                                     <div class="coupon_code left">
-                                        <h3 style="margin-bottom: 0rem; background-color: #4c644b;">Order Summary</h3>
+                                        <h3 style="margin-bottom: 0rem; background-color: #4c644b;">Reservation Summary
+                                        </h3>
                                         <div class="coupon_inner" style="padding: 10px 10px 10px;">
                                             <div class="cart_subtotal">
                                                 <p>Subtotal</p>
-                                                <p class="cart_amount" style="">₱ <span id="txtmdlbuynowsubtotal">0.00</span></p>
+                                                <p class="cart_amount" style="">₱ <span id="txtmdlreservenowsubtotal">0.00</span></p>
                                             </div>
 
                                             <div class="cart_subtotal">
                                                 <p>Shipping</p>
-                                                <p class="cart_amount" style="">₱ <span id="txtmdlbuynowshiptotal">0.00</span></p>
+                                                <p class="cart_amount" style="">₱ <span id="txtmdlreservenowshiptotal">0.00</span></p>
                                             </div>
 
                                             <div class="cart_subtotal" style="border-top: 1px solid #e1e1e1;">
                                                 <p style="margin-top:10px">Payment Total</p>
-                                                <p style="margin-top:10px" class="cart_amount">₱ <span id="txtmdlbuynowpaymenttotamt">0.00</span></p>
+                                                <p style="margin-top:10px" class="cart_amount">₱ <span id="txtmdlreservenowpaymenttotamt">0.00</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -423,7 +425,7 @@ session_start();
                         <!--Order summary end-->
 
                         <div class="cart_submit" style="padding: 0px;">
-                            <button onclick="btnplaceorder()">place order</button>
+                            <button onclick="btnplacereservation()">Confirm Reservation</button>
                         </div>
 
                     </div>
@@ -431,7 +433,7 @@ session_start();
             </div>
         </div>
     </div>
-    <!-- BUY NOW MODAL end-->
+    <!-- RESERVE NOW MODAL end-->
 
     <!-- PAYMENT UPLOAD start-->
     <div class="modal fade" id="modal_paymentupload" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
@@ -597,7 +599,7 @@ session_start();
         var filteracc = $("#filteraccomodation").val();
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: 'srchprod=' + srchprod + '&filteracc=' + filteracc + '&form=fncdisplaylistofproducts',
             success: function(data) {
                 $("#displaylistofrooms").html(data);
@@ -613,7 +615,7 @@ session_start();
         // alert("wawa");
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: 'srchprod=' + srchprod + '&filteracc=' + filteracc + '&form=fncdisplaylistofproducts',
             success: function(data) {
                 $("#displaylistofrooms").html(data);
@@ -628,7 +630,7 @@ session_start();
         // alert("wawa");
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: 'srchprod=' + srchprod + '&filteracc=' + filteracc + '&pricerange=' + pricerange +
                 '&form=fncdisplaylistofproducts',
             success: function(data) {
@@ -645,7 +647,7 @@ session_start();
     function dsplylistoffiltercategory() {
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: 'form=dsplylistoffiltercategory',
             success: function(data) {
                 $("#filteraccomodation").html(data);
@@ -675,7 +677,7 @@ session_start();
     //     $("#txtmdlprodID").val(product_id);
     //     $.ajax({
     //         type: 'POST',
-    //         url: 'products_class.php',
+    //         url: 'reservation_class.php',
     //         data: 'product_id=' + product_id + '&form=fncdisplayproddet',
     //         success: function(data) {
     //             var show = data.split("|");
@@ -727,12 +729,88 @@ session_start();
     //     });
     // }
 
+    // function openproductdetails(product_id) {
+    //     $("#modal_productdet").modal('show');
+
+    //     $("#txtmdlprodID").val(product_id);
+    //     $.ajax({
+    //         type: 'POST',
+    //         url: 'reservation_class.php',
+    //         data: 'product_id=' + product_id + '&form=fncdisplayproddet',
+    //         success: function(data) {
+    //             var show = data.split("|");
+
+    //             $("#mdlprodimage1").html(show[4]);
+    //             $("#mdlprodimage2").html(show[5]);
+
+    //             $("#txtmdlprodname").text(show[0]);
+    //             $("#txtmdlprodrates").html(show[1]);
+    //             $("#txtmdlprodprice").text(show[2]);
+    //             $("#txtmdlproddesc").text(show[3]);
+    //             $("#txtmdlprodcategory").text(show[6]);
+
+    //             $("#txtmdlprodunit").text(show[7]);
+    //             $("#txtmdlprodavailat").text(show[8]);
+    //             $("#txtmdlprodavailuntil").text(show[9]);
+    //             $("#txtmdlprodfamily").text(show[10]);
+
+    //             $("#txtmdlprodlight").text(show[11]);
+    //             $("#txtmdlprodfrost").text(show[12]);
+    //             $("#txtmdlprodsoil").text(show[13]);
+    //             $("#txtmdlprodwater").text(show[14]);
+    //             $("#txtmdlprodfulldimen").text(show[15]);
+    //             $("#txtmdlprodsource").text(show[16]);
+    //             $("#txtmdlprodcomment").html(show[17]);
+
+    //             $("#txtmdlprodsellerID").val(show[18]);
+    //             $("#txtmdlprodsellername").text(show[19]);
+    //             $('#shopseller_id').val(show[18])
+    //             $("#txtmdlprodsellername2").val(show[19]);
+
+    //             var availableUntilDate = new Date(show[9]);
+    //             var currentDate = new Date();
+
+    //             // Check if the available until date has passed
+    //             if (availableUntilDate < currentDate) {
+    //                 $("#txtmdlprodavailuntil").text('Not Available');
+    //                 $('.contact_message button').attr('disabled', true);
+    //                 $('.notavailable').addClass('notavailable_show');
+
+    //                 // Show the not available content
+    //                 $('.notavailable').show();
+    //                 $('.product-add').prop('disabled', true);
+    //             } else {
+    //                 $("#txtmdlprodavailuntil").text(show[9]);
+    //                 $('.contact_message button').attr('disabled', false);
+    //                 $('product-add').attr('disabled', false);
+    //                 $('.notavailable').removeClass('notavailable_show');
+    //                 // Show the available content
+    //                 $('.notavailable').hide();
+    //                 $('.product-add').prop('disabled', false);
+
+    //                 // Stock checking
+    //                 if (show[20] <= 0) {
+    //                     $("#txtstock").text('Out Of Stock');
+    //                     $('.contact_message button').attr('disabled', true);
+    //                     $('.soldout').addClass('soldout_show');
+    //                     $('.product-add').prop('disabled', true);
+    //                 } else {
+    //                     $("#txtstock").text(show[20]);
+    //                     $('.product-add').prop('disabled', false);
+    //                     $('.soldout').removeClass('soldout_show');
+    //                     $('.contact_message button').attr('disabled', false);
+    //                 }
+    //             }
+    //         }
+    //     });
+    // }
+
     function openproductdetails(product_id) {
         $("#modal_productdet").modal('show');
         $("#txtmdlprodID").val(product_id);
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: 'product_id=' + product_id + '&form=fncdisplayproddet',
             success: function(data) {
                 var show = data.split("|");
@@ -769,7 +847,7 @@ session_start();
                 // var availAtDateText = $("#txtmdlprodavailat").text();
                 // var availAtDate = new Date(availAtDateText);
                 // var currentDate = new Date();
-                // var soonThreshold = 7; // Number of days to consider as 'soon'
+                // var soonThreshold = 31; // Number of days to consider as 'soon'
                 // var timeDiff = availAtDate.getTime() - currentDate.getTime();
                 // var daysDiff = timeDiff / (1000 * 3600 * 24);
 
@@ -846,7 +924,7 @@ session_start();
 
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: 'textmdlprodquantity=' + textmdlprodquantity + '&textmdlprodID=' + textmdlprodID +
                 '&form=checkquantityindb',
             success: function(data) {
@@ -879,7 +957,7 @@ session_start();
     function btnsubmitcomment() {
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: 'form=checkifloggedin',
             success: function(data) {
                 if (data == 1) {
@@ -900,7 +978,7 @@ session_start();
             if (textmdlprodinputcomment != "") {
                 $.ajax({
                     type: 'POST',
-                    url: 'products_class.php',
+                    url: 'reservation_class.php',
                     data: 'textmdlprodnumberofrating=' + textmdlprodnumberofrating +
                         '&textmdlprodinputcomment=' +
                         textmdlprodinputcomment + '&textmdlprodID=' + textmdlprodID +
@@ -933,7 +1011,7 @@ session_start();
     function btnaddtocart() {
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: 'form=checkifloggedin',
             success: function(data) {
                 if (data == 1) {
@@ -960,7 +1038,7 @@ session_start();
             $(".loadload").show();
             $.ajax({
                 type: 'POST',
-                url: 'products_class.php',
+                url: 'reservation_class.php',
                 data: 'textmdlprodID=' + textmdlprodID + '&textmdlprodquantity=' + textmdlprodquantity +
                     '&textmdlprodprice=' + textmdlprodprice + '&form=btnsaveaddtocart',
                 success: function(data) {
@@ -988,13 +1066,13 @@ session_start();
 
     }
 
-    // BUY NOW BUTTON
-    function btnbuynow() {
+    // RESERVE NOW BUTTON
+    function btnreservenow() {
         var textmdlprodquantity = $("#txtmdlprodquantity").val();
 
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: 'form=checkifloggedin',
             success: function(data) {
                 if (data == 1) {
@@ -1007,47 +1085,47 @@ session_start();
                             'warning'
                         )
                     } else {
-                        openproductbuynowdet();
+                        openproductreservenowdet();
                     }
                 }
             }
         });
     }
 
-    function openproductbuynowdet() {
-        $("#modal_productbuynow").modal('show');
+    function openproductreservenowdet() {
+        $("#modal_productreservenow").modal('show');
 
         var textmdlprodID = $("#txtmdlprodID").val();
         var textmdlprodquantity = $("#txtmdlprodquantity").val();
 
         $("#txtmdlprodID2").val(textmdlprodID);
-        $("#txtmdlbuynowproductquantity").text(textmdlprodquantity);
+        $("#txtmdlreservenowproductquantity").text(textmdlprodquantity);
 
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: 'textmdlprodID=' + textmdlprodID + '&textmdlprodquantity=' + textmdlprodquantity +
-                '&form=fncdisplaybuynowproddet',
+                '&form=fncdisplayreservenowproddet',
             success: function(data) {
                 var show = data.split("|");
                 $("#txtmdlcheckoutname").text(show[0]);
                 $("#txtmdlcheckoutphone").text(show[1]);
                 $("#txtmdlcheckoutaddress").text(show[2]);
 
-                $("#txtmdlbuynowproductname").text(show[3]);
-                $("#txtmdlbuynowproductprice").text(show[4]);
-                $("#txtmdlbuynowproductsubtotal").text(show[5]);
+                $("#txtmdlreservenowproductname").text(show[3]);
+                $("#txtmdlreservenowproductprice").text(show[4]);
+                $("#txtmdlreservenowproductsubtotal").text(show[5]);
 
-                $("#txtmdlbuynowsubtotal").text(show[5]);
-                $("#txtmdlbuynowshiptotal").text(show[6]);
-                $("#txtmdlbuynowpaymenttotamt").text(show[7]);
-                $("#txtmdlbuynowproductimage").attr("src", show[8]);
+                $("#txtmdlreservenowsubtotal").text(show[5]);
+                $("#txtmdlreservenowshiptotal").text(show[6]);
+                $("#txtmdlreservenowpaymenttotamt").text(show[7]);
+                $("#txtmdlreservenowproductimage").attr("src", show[8]);
             }
         });
     }
 
-    function clearbuynowmodal() {
-        $("#txtmdlbuynowpaymentmethod").val("");
+    function clearreservenowmodal() {
+        $("#txtmdlreservenowpaymentmethod").val("");
         $("#txtmdlprodID2").val("");
         $(".paymentmethcash").addClass('hoverpaymentmeth');
         $(".paymentmethcash").removeClass('hoverpaymentmeth2');
@@ -1056,7 +1134,7 @@ session_start();
     }
 
     function paymentcash() {
-        $("#txtmdlbuynowpaymentmethod").val("CASH");
+        $("#txtmdlreservenowpaymentmethod").val("CASH");
         $(".paymentmethcash").addClass('hoverpaymentmeth2');
         $(".paymentmethcash").removeClass('hoverpaymentmeth');
 
@@ -1065,7 +1143,7 @@ session_start();
     }
 
     function paymentgcash() {
-        $("#txtmdlbuynowpaymentmethod").val("GCASH");
+        $("#txtmdlreservenowpaymentmethod").val("GCASH");
         $(".paymentmethgcash").addClass('hoverpaymentmeth2');
         $(".paymentmethgcash").removeClass('hoverpaymentmeth');
 
@@ -1073,31 +1151,31 @@ session_start();
         $(".paymentmethcash").addClass('hoverpaymentmeth');
     }
 
-    function btnplaceorder() {
+    function btnplacereservation() {
         var product_id = $("#txtmdlprodID2").val();
-        var productQuantity = $("#txtmdlbuynowproductquantity").text();
-        var productPrice = ($("#txtmdlbuynowproductprice").text()).replace(/,/g, "");
-        var ProductShipping = ($("#txtmdlbuynowshiptotal").text()).replace(/,/g, "");
-        var Producttotalamount = ($("#txtmdlbuynowpaymenttotamt").text()).replace(/,/g, "");
-        var productpaymentmeth = $("#txtmdlbuynowpaymentmethod").val();
+        var productQuantity = $("#txtmdlreservenowproductquantity").text();
+        var productPrice = ($("#txtmdlreservenowproductprice").text()).replace(/,/g, "");
+        var ProductShipping = ($("#txtmdlreservenowshiptotal").text()).replace(/,/g, "");
+        var Producttotalamount = ($("#txtmdlreservenowpaymenttotamt").text()).replace(/,/g, "");
+        var productpaymentmeth = $("#txtmdlreservenowpaymentmethod").val();
 
         if (productpaymentmeth != "") {
             if (productpaymentmeth == "CASH") {
                 $(".loadload").show();
                 $.ajax({
                     type: 'POST',
-                    url: 'products_class.php',
+                    url: 'reservation_class.php',
                     data: 'product_id=' + product_id + '&productQuantity=' + productQuantity +
                         '&productPrice=' +
                         productPrice + '&ProductShipping=' + ProductShipping + '&Producttotalamount=' +
                         Producttotalamount + '&productpaymentmeth=' + productpaymentmeth +
-                        '&form=btnplaceordercash',
+                        '&form=btnplacereservationcash',
                     success: function(data) {
                         setTimeout(function() {
                             $(".loadload").hide();
                             Swal.fire({
                                 title: "Success!",
-                                text: "Successfully ordered.",
+                                text: "Successfully Reserved.",
                                 type: "success",
                                 icon: "success",
                                 showCancelButton: false,
@@ -1106,7 +1184,7 @@ session_start();
                                 closeOnConfirm: false
                             }).then((result) => {
                                 if (result.value) {
-                                    window.location = "purchases.php";
+                                    window.location = "my_reservation.php";
                                 }
                             });
                         }, 500);
@@ -1131,7 +1209,7 @@ session_start();
 
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: 'product_id=' + product_id + '&form=fncloadpaymentgcashmodal',
             success: function(data) {
                 var show = data.split("|");
@@ -1144,23 +1222,23 @@ session_start();
 
     function submitpayment() {
         var product_id = $("#txtmdlprodID2").val();
-        var productQuantity = $("#txtmdlbuynowproductquantity").text();
-        var productPrice = ($("#txtmdlbuynowproductprice").text()).replace(/,/g, "");
-        var ProductShipping = ($("#txtmdlbuynowshiptotal").text()).replace(/,/g, "");
-        var Producttotalamount = ($("#txtmdlbuynowpaymenttotamt").text()).replace(/,/g, "");
-        var productpaymentmeth = $("#txtmdlbuynowpaymentmethod").val();
+        var productQuantity = $("#txtmdlreservenowproductquantity").text();
+        var productPrice = ($("#txtmdlreservenowproductprice").text()).replace(/,/g, "");
+        var ProductShipping = ($("#txtmdlreservenowshiptotal").text()).replace(/,/g, "");
+        var Producttotalamount = ($("#txtmdlreservenowpaymenttotamt").text()).replace(/,/g, "");
+        var productpaymentmeth = $("#txtmdlreservenowpaymentmethod").val();
         var textpaymentmethrefnum = $("#txtpaymentmethrefnum").val();
 
         $(".loadload").show();
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: 'product_id=' + product_id + '&productQuantity=' + productQuantity + '&productPrice=' +
                 productPrice + '&ProductShipping=' + ProductShipping + '&Producttotalamount=' +
                 Producttotalamount +
                 '&productpaymentmeth=' + productpaymentmeth + '&textpaymentmethrefnum=' +
                 textpaymentmethrefnum +
-                '&form=btnplaceordergcash',
+                '&form=btnplacereservationgcash',
             success: function(data) {
                 setTimeout(function() {
                     $(".loadload").hide();
@@ -1205,7 +1283,7 @@ session_start();
             cache: false,
             processData: false,
             success: function(data) {
-                window.location = "purchases.php";
+                window.location = "my_reservation.php";
             }
         });
     }
@@ -1227,7 +1305,7 @@ session_start();
 
         $.ajax({
             type: 'POST',
-            url: 'products_class.php',
+            url: 'reservation_class.php',
             data: {
                 textmdlprodsellerID: textmdlprodsellerID,
                 textsendchatmessage: textsendchatmessage,

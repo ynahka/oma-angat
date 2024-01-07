@@ -38,18 +38,15 @@ switch ($_POST['form']) {
 
 
     if ($_POST['pricerange'] != '') {
-
       if ($_POST['pricerange'] == 'Highest to Lowest') {
-
-        $res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.price, quantity FROM products AS a LEFT JOIN products_category AS b ON a.product_id = b.product_id WHERE a.id != '' " . $searchproduct . " " . $searchcategory . "GROUP BY b.product_id ORDER BY a.price DESC");
+        $res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.price, quantity FROM products AS a LEFT JOIN products_category AS b ON a.product_id = b.product_id WHERE a.id != '' AND a.availat <= CURDATE() AND a.availuntil > CURDATE() " . $searchproduct . " " . $searchcategory . " GROUP BY b.product_id ORDER BY a.price DESC");
       } else if ($_POST['pricerange'] == 'Lowest to Highest') {
-
-        $res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.price, quantity FROM products AS a LEFT JOIN products_category AS b ON a.product_id = b.product_id WHERE a.id != '' " . $searchproduct . " " . $searchcategory . " GROUP BY b.product_id ORDER BY a.price ASC");
+        $res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.price, quantity FROM products AS a LEFT JOIN products_category AS b ON a.product_id = b.product_id WHERE a.id != '' AND a.availat <= CURDATE() AND a.availuntil > CURDATE() " . $searchproduct . " " . $searchcategory . " GROUP BY b.product_id ORDER BY a.price ASC");
       }
     } else {
-
-      $res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.price, quantity FROM products AS a LEFT JOIN products_category AS b ON a.product_id = b.product_id WHERE a.id != '' " . $searchproduct . " " . $searchcategory . " GROUP BY b.product_id ORDER BY a.id ASC");
+      $res = mysqli_query($connection, "SELECT a.product_id, a.productname, a.price, quantity FROM products AS a LEFT JOIN products_category AS b ON a.product_id = b.product_id WHERE a.id != '' AND a.availat <= CURDATE() AND a.availuntil > CURDATE() " . $searchproduct . " " . $searchcategory . " GROUP BY b.product_id ORDER BY a.id ASC");
     }
+
 
 
     $numrows = mysqli_num_rows($res);
@@ -121,7 +118,7 @@ switch ($_POST['form']) {
 ?> <option value="">- Select Category -</option> <?php
                                                   while ($row = mysqli_fetch_array($res)) {
                                                   ?> <option value="<?php echo $row[0]; ?>"><?php echo $row[1]; ?>
-</option> <?php
+      </option> <?php
                                                   }
                                                   break;
 
