@@ -6,6 +6,7 @@ $(function() {
     dsplytotalcustomer();
     dsplytotalproduct();
     dsplytotalorders();
+    dsplytotalreservation();
 
     setTimeout(function() {
         new Chart(document.getElementById("chart1"), {
@@ -163,6 +164,17 @@ function dsplytotalorders() {
         data: 'form=dsplytotalorders',
         success: function(data) {
             $("#txtTotorders").text(data);
+        }
+    })
+}
+
+function dsplytotalreservation() {
+    $.ajax({
+        type: 'POST',
+        url: 'dashboard/dashboardclass.php',
+        data: 'form=dsplytotalreservation',
+        success: function(data) {
+            $("#txtToreservation").text(data);
         }
     })
 }

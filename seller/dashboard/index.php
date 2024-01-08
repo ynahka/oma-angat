@@ -32,8 +32,10 @@
                     <div class="card text-white" style="margin-bottom: 15px;">
                         <div class="box bg-info">
                             <div class="box bg-info">
-                                <h1 class="text-white textdashboardboxes" id="txtTotproduct" style="color: #4a8670;">0</h1>
-                                <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Products</h6>
+                                <h1 class="text-white textdashboardboxes" id="txtTotproduct" style="color: #4a8670;">0
+                                </h1>
+                                <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Products
+                                </h6>
                                 <div class="dboxicon">
                                     <i class="fas fa-boxes"></i>
                                 </div>
@@ -47,8 +49,10 @@
                     <div class="card text-white" style="margin-bottom: 15px;">
                         <div class="box bg-info">
                             <div class="box bg-info">
-                                <h1 class="text-white textdashboardboxes" id="txtTotorders" style="color: #4a8670;">0</h1>
-                                <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Orders</h6>
+                                <h1 class="text-white textdashboardboxes" id="txtTotorders" style="color: #4a8670;">0
+                                </h1>
+                                <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Orders
+                                </h6>
                                 <div class="dboxicon">
                                     <i class="fas fa-shopping-cart"></i>
                                 </div>
@@ -63,10 +67,11 @@
                         <div class="box bg-info">
                             <div class="box bg-info">
 
-                                <!-- pa edit ako nito mhieee, yung number of reservation -->
-                                <h1 class=" text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670;">0
+                                <!-- pa edit ako nito mhieee, yung number of reservation (Ok na mhie HAHAHA) -->
+                                <h1 class=" text-white textdashboardboxes" id="txtToreservation" style="color: #4a8670;">0
                                 </h1>
-                                <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Reservation</h6>
+                                <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">
+                                    Reservation</h6>
                                 <div class="dboxicon">
                                     <i class="fas fa-address-book"></i>
                                 </div>
@@ -82,7 +87,8 @@
                             <div class="box bg-info">
                                 <h1 class=" text-white textdashboardboxes" id="txtTotcustomer" style="color: #4a8670; font-size: 30px !important;">View
                                 </h1>
-                                <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Harvesting Calendar</h6>
+                                <h6 class="font-light text-white textdashboardboxes2" style="color: #4a8670;">Harvesting
+                                    Calendar</h6>
                                 <div class="dboxicon">
                                     <i class="far fa-calendar-alt"></i>
                                 </div>

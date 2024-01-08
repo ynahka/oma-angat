@@ -45,6 +45,7 @@ if (isset($_GET['shopseller_id'])) {
 
 <body>
     <?php include('category-sidebar.php'); ?>
+
     <?php include('shop_products.php'); ?>
     <?php
     // Check if the user is logged in
@@ -94,7 +95,8 @@ if (isset($_GET['shopseller_id'])) {
                                             <?= $sellerDetails['address'] ?></h6>
                                         <ul class="author-meta">
                                             <li>
-                                                <a onclick="opensellerchat();" class=" fas fa-comments">
+                                                <a onclick="opensellerchatnow(('<?= $shopseller_id ?>'));"
+                                                    class=" fas fa-comments">
                                                 </a>Message
                                                 Farmer
                                 </a></li>
@@ -122,9 +124,10 @@ if (isset($_GET['shopseller_id'])) {
                 <div class="shop-widget-promo">
                     <a><img src="images/promo/features/donation.svg" alt="promo"></a>
                     <div class="offer-div">
-                        <input type="hidden" id="shopseller_id">
+                        <input type="hidden" id="shopseller_id" value="<?= $shopseller_id ?>">
                         <!-- <button class="offer-select"><a href="chat.php">Click to Chat Farmer</a></button> -->
-                        <a class="blog-btn" href="javascript:void(0)" onclick="opensellerchat();">
+                        <a class="blog-btn" href="javascript:void(0)"
+                            onclick="opensellerchatnow('<?= $shopseller_id ?>');">
                             <span>Click here to Chat Farmer</span>
                             <i class=" icofont-arrow-right"></i>
                         </a>
@@ -159,7 +162,8 @@ if (isset($_GET['shopseller_id'])) {
                 </div>
             </section> -->
             <div class="container" style="margin-top: 50px;">
-                <h2 style="color:#4c644b; text-align:center; margin-bottom: 10px; font-weight: 800;"><i class="fa-regular fa-calendar-days"></i> Harvesting
+                <h2 style="color:#4c644b; text-align:center; margin-bottom: 10px; font-weight: 800;"><i
+                        class="fa-regular fa-calendar-days"></i> Harvesting
                     Calendar</h2>
             </div>
             <div class="fullcalendar">
@@ -174,9 +178,11 @@ if (isset($_GET['shopseller_id'])) {
         </div>
         </div>
     </section>
-    <div class="modal fade" id="modal_chat" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal fade" id="modal_chatseller" tabindex="-1" role="dialog" data-bs-backdrop="static"
+        data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered modal-paymentneed">
-            <div class="modal-content" style="border: 0px solid #82a131;background-color: #eef4dd; border-radius: 10px;">
+            <div class="modal-content"
+                style="border: 0px solid #82a131;background-color: #eef4dd; border-radius: 10px;">
                 <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="clearchat()"
                     style="left: 92%;">
                     <span aria-hidden="true"><i class="icon-x"></i></span>
@@ -184,21 +190,20 @@ if (isset($_GET['shopseller_id'])) {
                 <button class="modal-close icofont-close" data-bs-dismiss="modal"></button>
                 <div class="modal_body" style="padding: 29px 6px 20px;">
                     <div class="container">
-
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
                                 <div class="contact_message form">
                                     <p style="margin-bottom: 10px;">
-                                        <input type="hidden" id="shopseller_id" value="<?= $shopseller_id ?>">
+                                        <input type="hidden" id="shopSellerId" value="<?= $shopseller_id ?>">
                                         <label>Message to seller</label>
-                                        <textarea id="txtsendchatmessage" style="height: 150px;margin-bottom: 0px;"></textarea>
+                                        <textarea id="txtSendMessage"
+                                            style="height: 150px;margin-bottom: 0px;"></textarea>
                                     </p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="cart_submit" style="padding: 0px;text-align: left;">
-                            <button onclick="sendchattoseller()" style="padding: 10px 20px;">Send</button>
+                            <button onclick="sendChatToSeller1()" style="padding: 10px 20px;">Send Message</button>
                         </div>
 
                     </div>
@@ -215,7 +220,8 @@ if (isset($_GET['shopseller_id'])) {
             </div> -->
         </div>
         <!-- Event Details Modal -->
-        <div class="modal fade" id="modal_productdetails" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal fade" id="modal_productdetails" tabindex="-1" role="dialog" data-bs-backdrop="static"
+            data-bs-keyboard="false">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content" style="background-color: #cfe2ce; width:70% !important;">
                     <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="clearmdl_productdet();" style="left: 95%;">
@@ -228,22 +234,27 @@ if (isset($_GET['shopseller_id'])) {
                             <!-- <div class="product_details mb-4"> -->
                             <div class="col-lg-12 col-md-12">
                                 <div class="product_d_right">
-                                    <h1 style="margin-bottom: 5px;"><a href="javascript:void(0)" id="productname"></a></h1>
+                                    <h1 style="margin-bottom: 5px;"><a href="javascript:void(0)" id="productname"></a>
+                                    </h1>
                                     <div class="product_ratting" id="txtmdlprodrates"></div>
                                     <div class="price_box">
-                                        <span class="current_price">₱ <span id="price">0.00</span>/<span id="txtmdlprodunit"></span>
+                                        <span class="current_price">₱ <span id="price">0.00</span>/<span
+                                                id="txtmdlprodunit"></span>
                                     </div>
                                     <div class="product_desc">
                                         <p id="productdesc"></p>
                                     </div>
                                     <div class="product_variant quantity">
                                         <label>quantity</label>
-                                        <input style="border: 1px solid #4C644B !important;" min="1" max="100" value="1" type="number" class="focus" id="quantity" onchange="quantityvalidation()" onkeyup="quantityvalidation()">
+                                        <input style="border: 1px solid #4C644B !important;" min="1" max="100" value="1"
+                                            type="number" class="focus" id="quantity" onchange="quantityvalidation()"
+                                            onkeyup="quantityvalidation()">
                                         <!-- <input min="1" max="100" value="1" type="number" class="focus" id="txtmdlprodquantity" onchange="quantityvalidation()" onkeyup="quantityvalidation()"> -->
                                     </div>
                                     <div class="product_meta">
                                         <span>Available at: <a href="javascript:void(0)" id="availat"></a></span><br>
-                                        <span>Available until: <a href="javascript:void(0)" id="availuntil"></a></span><br>
+                                        <span>Available until: <a href="javascript:void(0)"
+                                                id="availuntil"></a></span><br>
                                         <input type="hidden" id="txtmdlprodsellerID">
                                         <!-- <a href="javascript:void(0)" id="txtmdlprodsellername"></a>  -->
 
@@ -313,227 +324,267 @@ if (isset($connection)) {
 ?>
 
 <script type="text/javascript">
-    function copyToClipboard() {
-        // Get the text content you want to copy
-        var linkToCopy =
-            "http://localhost/oma-angat/viewers/shop-1column.php?shopseller_id=<?= $shopseller_id ?>";
+function copyToClipboard() {
+    // Get the text content you want to copy
+    var linkToCopy =
+        "http://localhost/oma-angat/viewers/shop-1column.php?shopseller_id=<?= $shopseller_id ?>";
 
-        // Create a temporary input element
-        var tempInput = document.createElement("input");
-        tempInput.value = linkToCopy;
+    // Create a temporary input element
+    var tempInput = document.createElement("input");
+    tempInput.value = linkToCopy;
 
-        // Append the input element to the document
-        document.body.appendChild(tempInput);
+    // Append the input element to the document
+    document.body.appendChild(tempInput);
 
-        // Select the text inside the input element
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); /* For mobile devices */
+    // Select the text inside the input element
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); /* For mobile devices */
 
-        // Copy the selected text
-        document.execCommand("copy");
+    // Copy the selected text
+    document.execCommand("copy");
 
-        // Remove the temporary input element
-        document.body.removeChild(tempInput);
+    // Remove the temporary input element
+    document.body.removeChild(tempInput);
 
-        Swal.fire({
-            title: 'Success!',
-            text: 'Link copied to clipboard!',
-            icon: 'success',
-            confirmButtonText: 'OK'
-        }).then(() => {
-            window.location.href =
-                'shop-1column.php?shopseller_id=<?= $shopseller_id ?>'; // Replace 'farmer.php' with your target URL
-        });
+    Swal.fire({
+        title: 'Success!',
+        text: 'Link copied to clipboard!',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    }).then(() => {
+        window.location.href =
+            'shop-1column.php?shopseller_id=<?= $shopseller_id ?>'; // Replace 'farmer.php' with your target URL
+    });
 
-    }
-    $(function() {
-        $("#homeclass").addClass('active');
-        fncdisplaylistofproducts();
+}
+$(function() {
+    $("#homeclass").addClass('active');
+    fncdisplaylistofproducts();
 
-        $(".wawa").click(function() {
-            $(".wawa").css("color", "#79a206");
-            $(this).css("color", "#FEB954");
-        })
+    $(".wawa").click(function() {
+        $(".wawa").css("color", "#79a206");
+        $(this).css("color", "#FEB954");
+    })
 
-        $(".numonly").keydown(function(event) {
-            if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 190 || event.keyCode == 9 ||
-                event.keyCode == 188) {
+    $(".numonly").keydown(function(event) {
+        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 190 || event.keyCode == 9 ||
+            event.keyCode == 188) {
 
-            } else {
-                if (event.keyCode < 48 || event.keyCode > 57 || event.keyCode == 17) {
-                    event.preventDefault();
+        } else {
+            if (event.keyCode < 48 || event.keyCode > 57 || event.keyCode == 17) {
+                event.preventDefault();
+            }
+        }
+    });
+
+    $(".focus").focus(function() {
+        this.select();
+    });
+})
+
+function reqField1(classN) {
+    var isValid = 1;
+    $('.' + classN).each(function() {
+        if ($(this).val() == '') {
+            $(this).css('border', '1px #a94442 solid');
+            $(this).addClass('lala');
+            isValid = 0;
+        } else {
+            $(this).css('border', '');
+            $(this).removeClass('lala');
+        }
+    });
+
+    return isValid;
+}
+
+function fncdisplaylistofproducts() {
+    $.ajax({
+        type: 'POST',
+        url: 'shop-1column_class.php',
+        data: {
+            form: 'fncdisplaylistofproducts',
+            shopseller_id: '<?= $shopseller_id ?>'
+        },
+        success: function(data) {
+            $("#homelistofproducts").html(data);
+        }
+    });
+}
+
+function opensellerchatnow() {
+    $("#modal_chatseller").modal('show');
+}
+
+function clearchat() {
+    $("#txtsendchatmessage").val("");
+}
+
+// function sendChatToSeller() {
+//     var textmdlprodsellerID = $("#shopseller_id").val();
+//     var textsendchatmessage = $("#txtsendchatmessage").val();
+
+//     $.ajax({
+//         type: 'POST',
+//         url: 'shop-1column_class.php',
+//         data: {
+//             textmdlprodsellerID: shopseller_id,
+//             textsendchatmessage: textsendchatmessage,
+//             form: 'sendchattoseller'
+//         },
+//         success: function(data) {
+//             setTimeout(function() {
+//                 $(".loadload").hide();
+
+//                 Swal.fire({
+//                     title: "Success!",
+//                     text: "Successfully sent message.",
+//                     type: "success",
+//                     icon: "success",
+//                     showCancelButton: false,
+//                     confirmButtonColor: "#2778c4",
+//                     confirmButtonText: "Okay",
+//                     closeOnConfirm: false
+//                 }).then((result) => {
+//                     if (result.value) {
+//                         $("#modal_chat").modal('hide');
+//                         clearchat();
+//                     }
+//                 });
+
+//             }, 500);
+//         },
+//         error: function(xhr, textStatus, errorThrown) {
+//             $(".loadload").hide();
+//             console.error("Error sending chat:", errorThrown);
+//             // Handle the error as needed
+//         }
+//     });
+// }
+
+
+function sendChatToSeller1() {
+    // You'll need to implement the logic to send the message to the seller.
+    // This might involve making an AJAX request to a backend PHP script.
+    var message = $('#txtSendMessage').val();
+    var sellerId = $('#shopSellerId').val();
+
+    // Example AJAX request
+    $.ajax({
+        type: 'POST',
+        url: 'send_message.php', // Update with your backend script
+        data: {
+            message: message,
+            sellerId: sellerId
+        },
+        success: function(response) {
+            Swal.fire({
+                title: "Success!",
+                text: "Successfully sent message.",
+                type: "success",
+                icon: "success",
+                showCancelButton: false,
+                confirmButtonColor: "#2778c4",
+                confirmButtonText: "Okay",
+                closeOnConfirm: false
+            }).then((result) => {
+                if (result.value) {
+                    $("#modal_chatseller").modal('hide');
+                    clearchat();
                 }
-            }
+            }); // Close the modal after sending
+        },
+        error: function(xhr, textStatus, errorThrown) {
+            $(".loadload").hide();
+            console.error("Error sending chat:", errorThrown);
+            // Handle the error as needed
+        }
+    });
+}
+// var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
+var scheds = <?= json_encode($sched_res) ?>;
+$(document).ready(function() {
+    var calendar;
+    var Calendar = FullCalendar.Calendar;
+    var events = [];
+    // Define an array of colors
+    var eventColors = ['#AFE1AF', '#50C878', '#90EE90', '#98FB98', '#C1E1C1', '#8A9A5B'];
+    $(function() {
+        if (!!scheds) {
+            Object.keys(scheds).map(k => {
+                var row = scheds[k]
+                events.push({
+                    id: row.id,
+                    title: 'Available Now:  ' + row
+                        .productname,
+                    start: row.availat,
+                    end: row.availuntil,
+                    className: 'left-aligned-title'
+                });
+            })
+        }
+        events.forEach(function(event, index) {
+            event.backgroundColor = eventColors[index % eventColors.length];
+            event.textColor = '#000000'; // Set text color to black
+        });
+        var date = new Date()
+        var d = date.getDate(),
+            m = date.getMonth(),
+            y = date.getFullYear()
+
+        calendar = new Calendar(document.getElementById('calendar'), {
+            headerToolbar: {
+                left: 'prev,next today',
+                right: 'dayGridMonth,dayGridWeek,list',
+                center: 'title',
+            },
+            selectable: true,
+            themeSystem: 'bootstrap',
+            //Random default events
+            events: events,
+            eventClick: function(info) {
+                var _details = $('#modal_productdetails')
+                var id = info.event.id
+                if (!!scheds[id]) {
+                    // Format the price to two decimal places
+                    var formattedPrice = parseFloat(scheds[id].price).toFixed(2);
+
+                    _details.find('#productname').text(scheds[id].productname);
+                    _details.find('#productdesc').text(scheds[id].productdesc);
+                    _details.find('#quantity').text(scheds[id].quantity);
+                    _details.find('#price').text(formattedPrice);
+                    _details.find('#txtmdlprodunit').text(scheds[id].unit);
+                    _details.find('#availat').text(scheds[id].sdate);
+                    _details.find('#availuntil').text(scheds[id].edate);
+                    _details.find('#edit,#delete').attr('data-id', id);
+
+
+                    // Show the modal
+                    _details.modal('show');
+                } else {
+                    Swal.fire(
+                        'Error!',
+                        'Event is undefined',
+                        'error'
+                    )
+                }
+                console.log('Events:', events);
+
+            },
+            eventDidMount: function(info) {
+                // Do Something after events mounted
+            },
+            editable: true
         });
 
-        $(".focus").focus(function() {
-            this.select();
-        });
+        calendar.render();
+    });
+
+    // Form reset listener
+    $('#schedule-form').on('reset', function() {
+        $(this).find('input:hidden').val('')
+        $(this).find('input:visible').first().focus()
     })
 
-    function reqField1(classN) {
-        var isValid = 1;
-        $('.' + classN).each(function() {
-            if ($(this).val() == '') {
-                $(this).css('border', '1px #a94442 solid');
-                $(this).addClass('lala');
-                isValid = 0;
-            } else {
-                $(this).css('border', '');
-                $(this).removeClass('lala');
-            }
-        });
-
-        return isValid;
-    }
-
-    function fncdisplaylistofproducts() {
-        $.ajax({
-            type: 'POST',
-            url: 'shop-1column_class.php',
-            data: {
-                form: 'fncdisplaylistofproducts',
-                shopseller_id: '<?= $shopseller_id ?>'
-            },
-            success: function(data) {
-                $("#homelistofproducts").html(data);
-            }
-        });
-    }
-
-    function opensellerchat() {
-        $("#modal_chat").modal('show');
-    }
-
-    function clearchat() {
-        $("#txtsendchatmessage").val("");
-    }
-
-    function sendChatToSeller() {
-        var textmdlprodsellerID = $("#shopseller_id").val();
-        var textsendchatmessage = $("#txtsendchatmessage").val();
-
-        $.ajax({
-            type: 'POST',
-            url: 'shop-1column_class.php',
-            data: {
-                textmdlprodsellerID: shopseller_id,
-                textsendchatmessage: textsendchatmessage,
-                form: 'sendchattoseller'
-            },
-            success: function(data) {
-                setTimeout(function() {
-                    $(".loadload").hide();
-
-                    Swal.fire({
-                        title: "Success!",
-                        text: "Successfully sent message.",
-                        type: "success",
-                        icon: "success",
-                        showCancelButton: false,
-                        confirmButtonColor: "#2778c4",
-                        confirmButtonText: "Okay",
-                        closeOnConfirm: false
-                    }).then((result) => {
-                        if (result.value) {
-                            $("#modal_chat").modal('hide');
-                            clearchat();
-                        }
-                    });
-
-                }, 500);
-            },
-            error: function(xhr, textStatus, errorThrown) {
-                $(".loadload").hide();
-                console.error("Error sending chat:", errorThrown);
-                // Handle the error as needed
-            }
-        });
-    }
-    // var scheds = $.parseJSON('<?= json_encode($sched_res) ?>')
-    var scheds = <?= json_encode($sched_res) ?>;
-    $(document).ready(function() {
-        var calendar;
-        var Calendar = FullCalendar.Calendar;
-        var events = [];
-        // Define an array of colors
-        var eventColors = ['#AFE1AF', '#50C878', '#90EE90', '#98FB98', '#C1E1C1', '#8A9A5B'];
-        $(function() {
-            if (!!scheds) {
-                Object.keys(scheds).map(k => {
-                    var row = scheds[k]
-                    events.push({
-                        id: row.id,
-                        title: 'Available Now:  ' + row
-                            .productname,
-                        start: row.availat,
-                        end: row.availuntil,
-                        className: 'left-aligned-title'
-                    });
-                })
-            }
-            events.forEach(function(event, index) {
-                event.backgroundColor = eventColors[index % eventColors.length];
-                event.textColor = '#000000'; // Set text color to black
-            });
-            var date = new Date()
-            var d = date.getDate(),
-                m = date.getMonth(),
-                y = date.getFullYear()
-
-            calendar = new Calendar(document.getElementById('calendar'), {
-                headerToolbar: {
-                    left: 'prev,next today',
-                    right: 'dayGridMonth,dayGridWeek,list',
-                    center: 'title',
-                },
-                selectable: true,
-                themeSystem: 'bootstrap',
-                //Random default events
-                events: events,
-                eventClick: function(info) {
-                    var _details = $('#modal_productdetails')
-                    var id = info.event.id
-                    if (!!scheds[id]) {
-                        // Format the price to two decimal places
-                        var formattedPrice = parseFloat(scheds[id].price).toFixed(2);
-
-                        _details.find('#productname').text(scheds[id].productname);
-                        _details.find('#productdesc').text(scheds[id].productdesc);
-                        _details.find('#quantity').text(scheds[id].quantity);
-                        _details.find('#price').text(formattedPrice);
-                        _details.find('#txtmdlprodunit').text(scheds[id].unit);
-                        _details.find('#availat').text(scheds[id].sdate);
-                        _details.find('#availuntil').text(scheds[id].edate);
-                        _details.find('#edit,#delete').attr('data-id', id);
-
-
-                        // Show the modal
-                        _details.modal('show');
-                    } else {
-                        Swal.fire(
-                            'Error!',
-                            'Event is undefined',
-                            'error'
-                        )
-                    }
-                    console.log('Events:', events);
-
-                },
-                eventDidMount: function(info) {
-                    // Do Something after events mounted
-                },
-                editable: true
-            });
-
-            calendar.render();
-        });
-
-        // Form reset listener
-        $('#schedule-form').on('reset', function() {
-            $(this).find('input:hidden').val('')
-            $(this).find('input:visible').first().focus()
-        })
-
-    })
+})
 </script>
