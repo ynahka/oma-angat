@@ -21,12 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Handle profile image upload (if provided)
     $profileImageName = ""; // Initialize variable to store the image file name
 
-    if ($_FILES['profile_image']['name']) {
-        $targetDir = "uploads/"; // Specify the directory to store uploaded files
-        $profileImageName = $targetDir . basename($_FILES['profile_image']['name']);
+    if ($_FILES['profileimage']['name']) {
+        $targetDir = "../OmaangatImages/ProfileImage/"; // Specify the directory to store uploaded files
+        $profileImageName = $targetDir . basename($_FILES['profileimage']['name']);
 
         // Move uploaded file to the specified directory
-        if (move_uploaded_file($_FILES['profile_image']['tmp_name'], $profileImageName)) {
+        if (move_uploaded_file($_FILES['profileimage']['tmp_name'], $profileImageName)) {
             // File uploaded successfully
         } else {
             // Handle file upload error
@@ -35,23 +35,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Update user name in the users_table
-    $updateUsersTableQuery = "UPDATE users_table SET username = '$name' WHERE user_id = '$userId'";
-    if (!mysqli_query($connection, $updateUsersTableQuery)) {
+    // Update username in the users_table
+    $updateUsernameQuery = "UPDATE users_table SET username = '$name' WHERE user_id = '$userId'";
+    if (!mysqli_query($connection, $updateUsernameQuery)) {
         // Handle database error
-        echo "Error updating users_table: " . mysqli_error($connection);
+        echo "Error updating username: " . mysqli_error($connection);
         exit();
     }
 
-    // Update profile image and email in the user_details table
-    $updateUserDetailsQuery = "UPDATE user_details SET profile_image = '$profileImageName', email = '$email' WHERE user_id = '$userId'";
-    if (mysqli_query($connection, $updateUserDetailsQuery)) {
-        // Update successful
-        echo "Profile information updated successfully.";
-    } else {
+    // Update email in the user_details table
+    $updateEmailQuery = "UPDATE user_details SET email = '$email' WHERE user_id = '$userId'";
+    if (!mysqli_query($connection, $updateEmailQuery)) {
         // Handle database error
-        echo "Error updating user_details: " . mysqli_error($connection);
+        echo "Error updating email: " . mysqli_error($connection);
+        exit();
     }
+
+    // Update profile image in the user_details table
+    if ($profileImageName) {
+        $updateProfileImageQuery = "UPDATE user_details SET profileimage = '$profileImageName' WHERE user_id = '$userId'";
+        if (!mysqli_query($connection, $updateProfileImageQuery)) {
+            // Handle database error
+            echo "Error updating profile image: " . mysqli_error($connection);
+            exit();
+        }
+    }
+
+    // Update successful
+    echo "Profile information updated successfully.";
 } else {
     // Redirect or handle unauthorized access if the form is not submitted
     header("Location: login.php");

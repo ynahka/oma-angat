@@ -97,6 +97,8 @@
                             <li><a href="javascript:void(0)" onclick="opensettingmod();" class="settinghover"><i
                                         class="ti-settings" style=" margin-right: 5px;"></i> Account Settings</a></li>
                             <li role="separator" class="divider"></li>
+                            <li><a href="../viewers/seller_profile.php" class="settinghover"><i class="ti-profile"
+                                        style="margin-right: 5px;"></i>Profile</a></li>
                             <li><a href="javascript:void(0)" onclick="logoutuser();" class="settinghover"><i
                                         class="fas fa-lock"
                                         style="margin-left: 10px; margin-right: 10px;"></i>Logout</a></li>
