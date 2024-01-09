@@ -35,70 +35,72 @@ session_start();
           WHERE u.user_id='" . $_SESSION['user_id'] . "'");
     while ($row = mysqli_fetch_array($query)) {
     ?>
-        <section class="inner-section profile-part">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="account-card">
-                            <div class="account-title">
-                                <h4>Account Information</h4>
-                                <button data-bs-toggle="modal" data-bs-target="#profile-edit">edit
-                                    profile</button>
+    <section class="inner-section profile-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="account-card">
+                        <div class="account-title">
+                            <h4>Account Information</h4>
+                            <button data-bs-toggle="modal" data-bs-target="#profile-edit">edit
+                                profile</button>
 
-                            </div>
-                            <div class="account-content">
-                                <div class="row">
-                                    <div class="col-lg-2">
-                                        <div class="profile-image">
-                                            <a href="#">
-                                                <button data-bs-toggle="modal" data-bs-target="#profile-image-edit">
-                                                    <img src="<?php echo !empty($row['profileimage']) ? $Target_dir . $row['profileimage'] : '../admin/assets/images/profile2.png'; ?>" alt="user">
-                                                </button>
-                                            </a>
-                                        </div>
+                        </div>
+                        <div class="account-content">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="profile-image">
+                                        <a href="#">
+                                            <button data-bs-toggle="modal" data-bs-target="#profile-image-edit">
+                                                <img src="<?php echo !empty($row['profileimage']) ? $Target_dir . $row['profileimage'] : '../admin/assets/images/profile2.png'; ?>"
+                                                    alt="user">
+                                            </button>
+                                        </a>
                                     </div>
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="form-group">
-                                            <label class="form-label">username</label>
-                                            <input class="form-control" type="text" value="<?php echo $row['username']; ?>">
-                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-label">username</label>
+                                        <input class="form-control" type="text" value="<?php echo $row['username']; ?>">
                                     </div>
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="form-group">
-                                            <label class="form-label">Email</label>
-                                            <input class="form-control" type="email" value="<?php echo $row['email']; ?>">
-                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Email</label>
+                                        <input class="form-control" type="email" value="<?php echo $row['email']; ?>">
                                     </div>
-                                    <div class="col-lg-2">
-                                        <div class="profile-btn">
-                                            <a href="reset_password.php">change password</a>
-                                        </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="profile-btn">
+                                        <a href="reset_password.php">change password</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="account-card">
-                                    <div class="account-title">
-                                        <h4>contact number</h4>
-                                        <!-- <button data-bs-toggle="modal" data-bs-target="#contact-edit">add contact</button> -->
-                                    </div>
-                                    <div class="account-content">
-                                        <div class="row">
-                                            <div class="col-lg-12 col-lg-6 alert fade show">
-                                                <div class="profile-card contact active">
-                                                    <h6>primary</h6>
-                                                    <p><?php echo $row['contactnum']; ?></p>
-                                                    <ul>
-                                                        <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#contact-edit"></button></li>
-                                                        <!-- <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li> -->
-                                                    </ul>
-                                                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="account-card">
+                                <div class="account-title">
+                                    <h4>contact number</h4>
+                                    <!-- <button data-bs-toggle="modal" data-bs-target="#contact-edit">add contact</button> -->
+                                </div>
+                                <div class="account-content">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-lg-6 alert fade show">
+                                            <div class="profile-card contact active">
+                                                <h6>primary</h6>
+                                                <p><?php echo $row['contactnum']; ?></p>
+                                                <ul>
+                                                    <li><button class="edit icofont-edit" title="Edit This"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#contact-edit"></button></li>
+                                                    <!-- <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li> -->
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -106,25 +108,27 @@ session_start();
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="account-card">
-                                    <div class="account-title">
-                                        <h4>address</h4>
-                                        <!-- <button data-bs-toggle="modal" data-bs-target="#address-edit">add address</button> -->
-                                    </div>
-                                    <div class="account-content">
-                                        <div class="row">
-                                            <div class="col-lg-12 col-lg-6 alert fade show">
-                                                <div class="profile-card address active">
-                                                    <h6>Home</h6>
-                                                    <p><?php echo $row['address']; ?></p>
-                                                    <ul class="user-action">
-                                                        <li><button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal" data-bs-target="#address-edit"></button></li>
-                                                        <!-- <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li> -->
-                                                    </ul>
-                                                </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="account-card">
+                                <div class="account-title">
+                                    <h4>address</h4>
+                                    <!-- <button data-bs-toggle="modal" data-bs-target="#address-edit">add address</button> -->
+                                </div>
+                                <div class="account-content">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-lg-6 alert fade show">
+                                            <div class="profile-card address active">
+                                                <h6>Home</h6>
+                                                <p><?php echo $row['address']; ?></p>
+                                                <ul class="user-action">
+                                                    <li><button class="edit icofont-edit" title="Edit This"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#address-edit"></button></li>
+                                                    <!-- <li><button class="trash icofont-ui-delete" title="Remove This" data-bs-dismiss="alert"></button></li> -->
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -134,7 +138,8 @@ session_start();
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     <?php
     }
     ?>
@@ -260,57 +265,57 @@ session_start();
 
 </body>
 
-</html>
+</html>WWW
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
-    // function saveProfileInfo() {
-    //     // Get form data
-    //     var formData = new FormData(document.getElementById('edit-profile-form'));
+// function saveProfileInfo() {
+//     // Get form data
+//     var formData = new FormData(document.getElementById('edit-profile-form'));
 
-    //     // Perform AJAX request to handle form submission
-    //     $.ajax({
-    //         type: 'POST',
-    //         url: 'save_profile_info.php', // Replace with the actual backend script to handle the form submission
-    //         data: formData,
-    //         contentType: false,
-    //         processData: false,
-    //         success: function(response) {
-    //             // Handle the response from the server (e.g., show success message or update UI)
-    //             console.log(response);
-    //             // Close the modal after successful submission
-    //             $('#profile-edit').modal('hide');
-    //         },
-    //         error: function(error) {
-    //             // Handle errors, if any
-    //             console.error(error);
-    //         }
-    //     });
-    // }
+//     // Perform AJAX request to handle form submission
+//     $.ajax({
+//         type: 'POST',
+//         url: 'save_profile_info.php', // Replace with the actual backend script to handle the form submission
+//         data: formData,
+//         contentType: false,
+//         processData: false,
+//         success: function(response) {
+//             // Handle the response from the server (e.g., show success message or update UI)
+//             console.log(response);
+//             // Close the modal after successful submission
+//             $('#profile-edit').modal('hide');
+//         },
+//         error: function(error) {
+//             // Handle errors, if any
+//             console.error(error);
+//         }
+//     });
+// }
 
-    document.getElementById('edit-profile-form').addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent the default form submission
+document.getElementById('edit-profile-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the default form submission
 
-        // Get form data
-        var formData = new FormData(this);
+    // Get form data
+    var formData = new FormData(this);
 
-        // Perform AJAX request to handle form submission
-        $.ajax({
-            type: 'POST',
-            url: 'save_profile_info.php', // Replace with the actual backend script to handle the form submission
-            data: formData,
-            contentType: false,
-            processData: false,
-            success: function(response) {
-                // Handle the response from the server (e.g., show success message or update UI)
-                console.log(response);
-                // Close the modal after successful submission
-                $('#profile-edit').modal('hide');
-            },
-            error: function(error) {
-                // Handle errors, if any
-                console.error(error);
-            }
-        });
+    // Perform AJAX request to handle form submission
+    $.ajax({
+        type: 'POST',
+        url: 'save_profile_info.php', // Replace with the actual backend script to handle the form submission
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function(response) {
+            // Handle the response from the server (e.g., show success message or update UI)
+            console.log(response);
+            // Close the modal after successful submission
+            $('#profile-edit').modal('hide');
+        },
+        error: function(error) {
+            // Handle errors, if any
+            console.error(error);
+        }
     });
+});
 </script>

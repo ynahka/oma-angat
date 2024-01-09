@@ -491,6 +491,8 @@ function sendChatToSeller1() {
                 if (result.value) {
                     $("#modal_chatseller").modal('hide');
                     clearchat();
+                    window.location.href = 'chat.php'; // Redirect to chat.php
+
                 }
             }); // Close the modal after sending
         },

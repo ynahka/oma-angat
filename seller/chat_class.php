@@ -5,35 +5,9 @@ session_start();
 switch ($_POST['form']) {
 
 	case 'displaychatusers':
-		if (isset($_SESSION['user_id'])) {
-			// Escape the session variable
-			$escapedUserId = mysqli_real_escape_string($connection, $_SESSION['user_id']);
-
-			// Create the update query
-			$updateLastActivityQuery = "UPDATE users_table SET last_activity_time = NOW() WHERE user_id = '$escapedUserId'";
-
-			// Execute the query
-			$updateResult = mysqli_query($connection, $updateLastActivityQuery);
-
-			// Check for errors
-			if (!$updateResult) {
-				die("Error updating last_activity_time: " . mysqli_error($connection));
-			}
-		}
-		$getadmin = mysqli_fetch_array(mysqli_query($connection, "SELECT user_id, username, usertype, last_activity_time FROM users_table WHERE usertype = 'ADMIN'"));
-		$adminIsActive = false;
-
-		if (!empty($getadmin['last_activity_time'])) {
-			$adminIsActive = (time() - strtotime($getadmin['last_activity_time']) < 300); // 5 minutes threshold
-		}
-
+		$getadmin = mysqli_fetch_array(mysqli_query($connection, "SELECT user_id, CASE WHEN middlename = '' OR middlename IS NULL THEN CONCAT(lastname, ', ', firstname) ELSE CONCAT(lastname, ', ', firstname, ' ', LEFT(middlename, '1'), '.') END, usertype FROM users_table WHERE usertype = 'ADMIN'"));
 		echo "<li onclick='displaychats(\"" . $_SESSION['user_id'] . "\", \"" . $getadmin[0] . "\", \"" . $getadmin[2] . "\")'>
-	                        <a href='javascript:void(0)'><img src='../admin/assets/images/profile2.png' alt='user-img' class='img-circle'> <span><b>" . $getadmin[1];
-		// Display green dot if the admin is active
-		if ($adminIsActive) {
-			echo "<span class='active-dot'></span>";
-		}
-		echo "</b><small class='text-success'>Customer Service</small></span></a>
+	                        <a href='javascript:void(0)'><img src='../admin/assets/images/profile2.png' alt='user-img' class='img-circle'> <span><b>" . $getadmin[1] . "</b><small class='text-success'>Admin</small></span></a>
 	                    </li>";
 
 		if ($_POST['srchprod'] != '') {
@@ -42,34 +16,13 @@ switch ($_POST['form']) {
 			$searchcontact = "";
 		}
 
-
-		$res = mysqli_query($connection, "SELECT username, 
-    b.last_activity_time AS user_last_activity, 
-    a.DATETIME_LOG AS chat_datetime, 
-    a.user_id, 
-    a.sendto 
-FROM chats AS a 
-LEFT JOIN users_table AS b ON a.sendto = b.user_id 
-WHERE a.user_id = '" . $_SESSION['user_id'] . "' AND type != 'ADMIN' " . $searchcontact . " 
-GROUP BY a.sendto 
-ORDER BY MAX(a.DATETIME_LOG) DESC");
+		$res = mysqli_query($connection, "SELECT CASE WHEN b.middlename = '' OR b.middlename IS NULL THEN CONCAT(b.lastname, ', ', b.firstname) ELSE CONCAT(b.lastname, ', ', b.firstname, ' ', LEFT(b.middlename, '1'), '.') END, a.DATETIME_LOG, a.user_id, a.sendto FROM chats AS a LEFT JOIN users_table AS b ON a.user_id = b.user_id WHERE a.sendto = '" . $_SESSION['user_id'] . "' AND type != 'ADMIN' " . $searchcontact . " GROUP BY a.user_id ORDER BY a.DATETIME_LOG DESC");
 		$numrows = mysqli_num_rows($res);
 		if ($numrows == TRUE) {
 			$blank = "";
 			while ($row = mysqli_fetch_array($res)) {
-				$customerActive = false;
-
-				if (!empty($row['user_last_activity'])) {
-					$customerActive = (time() - strtotime($row['user_last_activity']) < 300); // 5 minutes threshold
-				}
-
-				echo "<li onclick='displaychats(\"" . $row['user_id'] . "\", \"" . $row['sendto'] . "\", \"" . $blank . "\")'>
-	                        <a href='javascript:void(0)'><img src='../admin/assets/images/profile4.png' alt='user-img' class='img-circle'> <span><b>" . $row['username'];
-				// Display the active dot if the seller is active
-				if ($customerActive) {
-					echo "<span class='active-dot'></span>";
-				}
-				echo "</b><small class='text-success'>Customer</small></span></a>
+				echo "<li onclick='displaychats(\"" . $row[2] . "\", \"" . $row[3] . "\", \"" . $blank . "\")'>
+	                        <a href='javascript:void(0)'><img src='../admin/assets/images/profile4.png' alt='user-img' class='img-circle'> <span><b>" . $row[0] . "</b><small class='text-success'>Customer</small></span></a>
 	                    </li>";
 			}
 		} else {
@@ -105,7 +58,7 @@ ORDER BY MAX(a.DATETIME_LOG) DESC");
 					echo "<div class='chat-img' style='float: right;'><img src='../admin/assets/images/profile4.png' alt='user' /></div>";
 				} else {
 					// Display chatmate's profile image and timestamp on the left
-					echo "<div class='chat-img' style='float: left;'><img src='../admin/assets/images/profile2.png' alt='user' /></div>";
+					echo "<div class='chat-img' style='float: left;'><img src='../admin/assets/images/profile4.png' alt='user' /></div>";
 				}
 
 				echo "<div class='chat-time'>" . date('g:i a', strtotime($row['DATETIME_LOG'])) . "</div>";
@@ -115,19 +68,6 @@ ORDER BY MAX(a.DATETIME_LOG) DESC");
 			echo "<h5 style='margin-top: 20px; font-weight: 300; color:#afafaf; text-align:center;'><i> No Conversation Found . . .  </i></h5>";
 		}
 		break;
-
-
-
-		// case 'sendbutton':
-		// 	if ($_POST['textsendtoID'] == $_SESSION['user_id']) {
-		// 		$sendto = $_POST['textuser_id'];
-		// 	} else {
-		// 		$sendto = $_POST['textsendtoID'];
-		// 	}
-
-		// 	$send = mysqli_query($connection, "INSERT INTO chats SET user_id = '" . $_SESSION['user_id'] . "', message = '" . $_POST['textmessage'] . "', sendto = '" . $sendto . "', type = '" . $_POST['textadmin'] . "';");
-		// 	break;
-
 
 	case 'sendbutton':
 		// Determine the recipient based on the session and posted data
@@ -144,7 +84,48 @@ ORDER BY MAX(a.DATETIME_LOG) DESC");
 		if (!empty($_FILES['imageFile'])) {
 			$uploadDirectory = '../OmaangatImages/messageFile/'; // Set your upload directory
 			$fileName = $_FILES['imageFile']['name'];
-			$targetFilePath = '$uploadDirectory' . basename($fileName);
+			$targetFilePath = $uploadDirectory . basename($fileName);
+
+			// Check if the uploaded file is a valid image
+			$check = getimagesize($_FILES['imageFile']['tmp_name']);
+			if ($check !== false) {
+				// Upload the image
+				if (move_uploaded_file($_FILES['imageFile']['tmp_name'], $targetFilePath)) {
+					$imagePath = $targetFilePath;
+				} else {
+					echo "Error uploading image";
+				}
+			} else {
+				echo "Invalid image format";
+			}
+		}
+
+		// Insert chat record with message and image file path
+		$send = mysqli_query($connection, "INSERT INTO chats SET user_id = '" . $_SESSION['user_id'] . "', message = '" . $message . "', image_path = '" . $imagePath . "', sendto = '" . $sendto . "', type = '" . $_POST['textadmin'] . "';");
+
+		if ($send) {
+			echo "Message and image sent successfully";
+		} else {
+			echo "Error sending message and image";
+		}
+		break;
+
+	case 'sendbutton':
+		// Determine the recipient based on the session and posted data
+		if ($_POST['textsendtoID'] == $_SESSION['user_id']) {
+			$sendto = $_POST['textuser_id'];
+		} else {
+			$sendto = $_POST['textsendtoID'];
+		}
+
+		$message = !empty($_POST['textmessage']) ? $_POST['textmessage'] : null;
+		$imagePath = '';
+
+		// Check if an image was uploaded
+		if (!empty($_FILES['imageFile'])) {
+			$uploadDirectory = '../OmaangatImages/messageFile/'; // Set your upload directory
+			$fileName = $_FILES['imageFile']['name'];
+			$targetFilePath = $uploadDirectory . basename($fileName);
 
 			// Check if the uploaded file is a valid image
 			$check = getimagesize($_FILES['imageFile']['tmp_name']);
