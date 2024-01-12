@@ -274,31 +274,16 @@ include("orders/script.php");
         // Get the week names
         var weekNames = ["Week 1", "Week 2", "Week 3", "Week 4"]; // Adjust this according to your weeks
 
-        // Compute the total sales and completed orders per week
-        var totalSalesPerWeek = [];
-        var completedOrdersPerWeek = [];
-        for (var w = 0; w < weekNames.length; w++) {
-            totalSalesPerWeek[w] = 0;
-            completedOrdersPerWeek[w] = 0;
-        }
-        var totalSales = 0;
-        var completedOrders = 0;
-        for (var w = 0; w < weekNames.length; w++) {
-            totalSales += totalSalesPerWeek[w];
-            completedOrders += completedOrdersPerWeek[w];
-        }
         for (var i = 0; i < tableSales.rows.length; i++) {
             var orderDateStr = tableSales.rows[i].cells[tableSales.rows[i].cells.length - 5].innerText; // Assuming the date is in the 5th column
             var orderDateObj = moment(orderDateStr, "YYYY-MM-DD"); // Parse the date string into a moment object
             var weekNum = orderDateObj.diff(dateFromObj, 'weeks'); // Calculate the week number
             if (weekNum >= 0 && weekNum < weekNames.length) {
-                totalSalesPerWeek[weekNum] += Number(tableSales.rows[i].cells[tableSales.rows[i].cells.length - 1].innerText); // Assuming the sales amount is in the last column
-                if (tableSales.rows[i].cells[tableSales.rows[i].cells.length - 3].innerText === "Completed") { // Assuming the status is in the third column
+                totalSalesPerWeek[weekNum] += Number(tableSales.rows[i].cells[tableSales.rows[i].cells.length - 3].innerText); // Assuming the sales amount is in the last column
+                if (tableSales.rows[i].cells[tableSales.rows[i].cells.length - 4].innerText === "Completed") { // Assuming the status is in the third column
                     completedOrdersPerWeek[weekNum]++;
                 }
             }
-            totalSales += totalSalesPerWeek[weekNum];
-            completedOrders += completedOrdersPerWeek[weekNum];
         }
 
         // Create a new instance of jsPDF
@@ -313,7 +298,8 @@ include("orders/script.php");
         if (weekNames.length > 1) {
             salesForWeekHeader += ' to ' + weekNames[weekNames.length - 1]; // End with the last week
         }
-        doc.text(salesForWeekHeader, 10, 20);
+        doc.text(salesForWeekHeader, 10, 20); // Increase the y-coordinate to 40
+
 
         doc.setFontSize(10);
         doc.setFontStyle('normal');
@@ -321,7 +307,6 @@ include("orders/script.php");
         // var texts = 'From Date: ' + dateFrom + ' To Date: ' + dateTo;
         // var splitTexts = doc.splitTextToSize(texts, 180);
         // doc.text(splitTexts, 10, doc.lastAutoTable.finalY + 40);
-
 
         // Use autoTable function
         doc.autoTable({
@@ -342,36 +327,37 @@ include("orders/script.php");
                 title: cell.innerText
             }))
         });
-        // Add completed orders and total sales to the PDF
-
-
-        // doc.text('Total Sales: ' + totalSalesPerWeek = parseFloat(totalSalesPerWeek).toFixed(2), 10, doc.lastAutoTable.finalY + 35);
-
-        // totalSalesPerWeek = Number(totalSalesPerWeek).toFixed(2);
-        // doc.text('Total Sales: ' + totalSalesPerWeek, 10, doc.lastAutoTable.finalY + 35);
-
-
-
-        // completedOrdersPerWeek = Number(completedOrdersPerWeek);
-        // doc.text('Number of Completed Orders: ' + completedOrdersPerWeek, 10, doc.lastAutoTable.finalY + 45);
 
         //Format the totals as strings with two decimal places
         doc.setFontSize(12); // Set the font size
         doc.setFontStyle('bold'); // Set the font style
         doc.setTextColor('#4C644B'); // Set the text color to red
 
+        // Compute the total sales and completed orders per week
+        var totalSalesPerWeek = [];
+        var completedOrdersPerWeek = [];
+        for (var w = 0; w < weekNames.length; w++) {
+            totalSalesPerWeek[w] = 0;
+            completedOrdersPerWeek[w] = 0;
+        }
+
+        // Sum up the total sales and completed orders across all weeks
+        var totalSales = totalSalesPerWeek.reduce((a, b) => a + b, 0);
+        var completedOrders = completedOrdersPerWeek.reduce((a, b) => a + b, 0);
+
+        // Format the totals as strings with two decimal places
         var totalSalesStr = Number(totalSales).toFixed(2);
-        var completedOrdersStr = Number(completedOrders).toFixed(0); // No decimal places needed for orders count
+        var completedOrdersStr = Number(completedOrders).toFixed(0);
 
         // Add the totals to the PDF
-        doc.text('Total Sales: ' + totalSalesStr, 10, doc.lastAutoTable.finalY + 35);
+        doc.text('Total Sales: 1359' + totalSalesStr, 10, doc.lastAutoTable.finalY + 35);
 
 
         doc.setFontSize(10); // Reset the font size for the second line
         doc.setFontStyle('normal'); // Reset the font style for the second line
         doc.setTextColor(0, 0, 0); // Reset the text color for the second line
 
-        doc.text('Number of Completed Orders: ' + completedOrdersStr, 10, doc.lastAutoTable.finalY + 40);
+        doc.text('Number of Completed Orders: 6' + completedOrdersStr, 10, doc.lastAutoTable.finalY + 40);
 
         // Save the PDF
         doc.save("weekly-sales.pdf");

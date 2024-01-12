@@ -127,7 +127,7 @@
                     <canvas id="chart3" height="100"></canvas>
                 </div>
                 <div class="d-flex justify-content-end mb-3">
-                    <button class="btn btn-primary mr-2" onclick="exportToPdf()"><i class=" fas fa-file"></i> Export Sale Now</button>
+                    <button class="btn btn-primary mr-2" onclick="exportToImage()" id="export-image"><i class="fas fa-file"></i> Export Now</button>
                 </div>
             </div>
 
@@ -168,84 +168,68 @@ include("dashboard/dashboardscript.php");
         }
     })
 
-    var totalSales = 0;
-    var completedOrders = 0;
-    for (var i = 0; i < tableSales.rows.length; i++) {
-        var orderStatus = tableSales.rows[i].cells[tableSales.rows[i].cells.length - 3].innerText;
-        if (orderStatus === 'Completed') {
-            var salesAmount = parseFloat(tableSales.rows[i].cells[tableSales.rows[i].cells.length - 4].innerText.replace(/,/g, ''));
-            totalSales += salesAmount;
-            completedOrders++;
-        }
+    function exportToImage() {
+        var chartElement = document.getElementById('chart1'); // Replace 'chart1' with the ID of your chart canvas
+        html2canvas(chartElement, {
+            useCORS: true
+        }).then(function(canvas) {
+            var imgData = canvas.toDataURL('image/png');
+            var link = document.createElement('a');
+            link.href = imgData;
+            link.download = 'reports.png'; // Ensure the file extension matches the MIME type
+            link.click();
+        });
     }
 
-    function exportToPdf() {
-        var doc = new jsPDF();
-        var chartElementId = '';
 
-        // Get the selected option from the dropdown
-        var selectedOption = $('#selectchart').val();
 
-        // Determine the ID of the chart canvas based on the selected option
-        switch (selectedOption) {
-            case 'weekly':
-                chartElementId = 'chart3';
-                break;
-            case 'monthly':
-                chartElementId = 'chart1';
-                break;
-            case 'yearly':
-                chartElementId = 'chart2';
-                break;
-        }
+    // var totalSales = 0;
+    // var completedOrders = 0;
+    // for (var i = 0; i < tableSales.rows.length; i++) {
+    //     var orderStatus = tableSales.rows[i].cells[tableSales.rows[i].cells.length - 3].innerText;
+    //     if (orderStatus === 'Completed') {
+    //         var salesAmount = parseFloat(tableSales.rows[i].cells[tableSales.rows[i].cells.length - 4].innerText.replace(/,/g, ''));
+    //         totalSales += salesAmount;
+    //         completedOrders++;
+    //     }
+    // }
 
-        // Get the chart canvas element
-        var chartElement = document.getElementById(chartElementId);
+    // window.exportToPdf = function() {
+    //     var doc = new jsPDF();
+    //     var chartElementId = '';
 
-        function exportToPdf() {
-            var doc = new jsPDF();
-            var chartElementId = '';
+    //     // Get the selected option from the dropdown
+    //     var selectedOption = $('#selectchart').val();
 
-            // Get the selected option from the dropdown
-            var selectedOption = $('#selectchart').val();
+    //     // Determine the ID of the chart canvas based on the selected option
+    //     switch (selectedOption) {
+    //         case 'weekly':
+    //             chartElementId = 'chart3';
+    //             break;
+    //         case 'monthly':
+    //             chartElementId = 'chart1';
+    //             break;
+    //         case 'yearly':
+    //             chartElementId = 'chart2';
+    //             break;
+    //     }
 
-            // Determine the ID of the chart canvas based on the selected option
-            switch (selectedOption) {
-                case 'weekly':
-                    chartElementId = 'chart3';
-                    break;
-                case 'monthly':
-                    chartElementId = 'chart1';
-                    break;
-                case 'yearly':
-                    chartElementId = 'chart2';
-                    break;
-            }
+    //     // Get the chart canvas element
+    //     var chartElement = document.getElementById(chartElementId);
 
-            // Get the chart canvas element
-            var chartElement = document.getElementById(chartElementId);
+    //     // Adjust the scale of the canvas to fit the width
+    //     var originalWidth = chartElement.offsetWidth;
+    //     var originalHeight = chartElement.offsetHeight;
+    //     var scale = 1;
+    //     while ((originalWidth * scale / 2) > 200) { // Set the maximum width of the image in the PDF to 500
+    //         scale -= 0.1;
+    //     }
 
-            // Adjust the scale of the canvas to fit the width
-            var originalWidth = chartElement.width;
-            var originalHeight = chartElement.height;
-            var scale = 1;
-            while ((originalWidth * scale / 2) > 500) { // Set the maximum width of the image in the PDF to 500
-                scale -= 0.1;
-            }
-            chartElement.width = originalWidth * scale;
-            chartElement.height = originalHeight * scale;
-
-            // Convert the chart canvas to an image and add it to the PDF
-            html2canvas(chartElement).then(function(canvas) {
-                var imgData = canvas.toDataURL('image/png');
-                doc.addImage(imgData, 'PNG', 10, 10);
-                doc.save("chart_image.pdf");
-
-                // Restore the original dimensions of the canvas
-                chartElement.width = originalWidth;
-                chartElement.height = originalHeight;
-            });
-        }
-
-    }
+    //     // Convert the chart canvas to an image and add it to the PDF
+    //     html2canvas(chartElement).then(function(canvas) {
+    //         var imgData = canvas.toDataURL('image/png');
+    //         doc.addImage(imgData, 'PNG', 10, 20);
+    //         doc.save("chart_image.pdf");
+    //     });
+    // }
 </script>
