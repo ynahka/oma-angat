@@ -68,7 +68,6 @@ switch ($_POST['form']) {
 	case 'loadchartappointment2':
 		$array = array();
 		$sql = "SELECT
-					  SUM(CASE WHEN YEAR(a.date_added) = 2023  THEN 1 ELSE 0 END) AS y2023,
 					  SUM(CASE WHEN YEAR(a.date_added) = 2024  THEN 1 ELSE 0 END) AS y2024,
 					  SUM(CASE WHEN YEAR(a.date_added) = 2025  THEN 1 ELSE 0 END) AS y2025,
 					  SUM(CASE WHEN YEAR(a.date_added) = 2026  THEN 1 ELSE 0 END) AS y2026,
