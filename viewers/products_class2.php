@@ -1,7 +1,6 @@
 <?php
 include("connect.php");
 session_start();
-
 switch ($_POST['form']) {
 
   case 'fncdisplaylistofproducts':
@@ -399,23 +398,7 @@ switch ($_POST['form']) {
                                                   // SAVE IN ORDERS
                                                   $genID = generateID($connection, 'order_id', 'orders', 'OR');
 
-                                                  $placeorder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', courier = '" . $_POST['courier'] . "', trackingnumber = '"  . $_POST['tracking'] . "', date_added = '" . date("Y-m-d") . "';");
-                                                  //SAVE IN PAYMENT
-                                                  $genID2 = generateID($connection, 'payment_id', 'payments', 'PAY');
-                                                  $placeorder = mysqli_query($connection, "INSERT INTO payments SET payment_id = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', order_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', status = 'PENDING', date_added = '" . date("Y-m-d") . "';");
-                                                  break;
-
-                                                case 'btnplaceordercop':
-                                                  // UPDATE QUANTITY IN PRODUCTS
-                                                  $getquantity = mysqli_fetch_array(mysqli_query($connection, "SELECT quantity FROM products WHERE product_id = '" . $_POST['product_id'] . "';"));
-                                                  $totalquantity = $getquantity[0] - $_POST['productQuantity'];
-
-                                                  $updateproductqty = mysqli_query($connection, "UPDATE products SET quantity = '" . $totalquantity . "' WHERE product_id = '" . $_POST['product_id'] . "';");
-
-                                                  // SAVE IN ORDERS
-                                                  $genID = generateID($connection, 'order_id', 'orders', 'OR');
-                                                  $placeorder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', courier = '" . $_POST['courier'] . "', trackingnumber = '"  . $_POST['tracking'] . "', date_added = '" . date("Y-m-d") . "';");
-
+                                                  $placeorder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', date_added = '" . date("Y-m-d") . "';");
                                                   //SAVE IN PAYMENT
                                                   $genID2 = generateID($connection, 'payment_id', 'payments', 'PAY');
                                                   $placeorder = mysqli_query($connection, "INSERT INTO payments SET payment_id = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', order_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', status = 'PENDING', date_added = '" . date("Y-m-d") . "';");
@@ -432,7 +415,6 @@ switch ($_POST['form']) {
                                                   $genID = generateID($connection, 'order_id', 'orders', 'OR');
 
                                                   $orderstatus2 = date('Y-m-d h:i:s');
-
 
                                                   $placeorder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'TOPAY', deliverystat = 'PENDING', paymentstat = 'FORAPPROVAL', date_added = '" . date("Y-m-d") . "', orderstatus2 = '" . $orderstatus2 . "';");
                                                   //SAVE IN PAYMENT

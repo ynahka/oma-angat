@@ -110,7 +110,27 @@ switch ($_POST['form']) {
 
 		$orderstatus2 = date('Y-m-d h:i:s');
 
-		$placeorder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', cart_id = '" . $_POST['cart_id'] . "', date_added = '" . date("Y-m-d") . "', orderstatus2 = '" . $orderstatus2 . "';");
+		$placeorder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', cart_id = '" . $_POST['cart_id'] . "',courier = '" . $_POST['courier'] . "', trackingnumber = '"  . $_POST['tracking'] . "',  date_added = '" . date("Y-m-d") . "', orderstatus2 = '" . $orderstatus2 . "';");
+
+		$genID2 = generateID($connection, 'payment_id', 'payments', 'PAY');
+		$placeorder = mysqli_query($connection, "INSERT INTO payments SET payment_id = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', order_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', status = 'PENDING', date_added = '" . date("Y-m-d") . "';");
+
+		$updatecart = mysqli_query($connection, "UPDATE cart SET status = '1' WHERE cart_id = '" . $_POST['cart_id'] . "';");
+		break;
+
+	case 'btnplaceordercop':
+		// UPDATE QUANTITY IN PRODUCTS
+		$getquantity = mysqli_fetch_array(mysqli_query($connection, "SELECT quantity FROM products WHERE product_id = '" . $_POST['product_id'] . "';"));
+		$totalquantity = $getquantity[0] - $_POST['productQuantity'];
+
+		$updateproductqty = mysqli_query($connection, "UPDATE products SET quantity = '" . $totalquantity . "' WHERE product_id = '" . $_POST['product_id'] . "';");
+
+		$genID = generateID($connection, 'order_id', 'orders', 'OR');
+
+
+		$orderstatus2 = date('Y-m-d h:i:s');
+
+		$placeorder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', cart_id = '" . $_POST['cart_id'] . "',courier = '" . $_POST['courier'] . "', trackingnumber = '"  . $_POST['tracking'] . "',  date_added = '" . date("Y-m-d") . "', orderstatus2 = '" . $orderstatus2 . "';");
 
 		$genID2 = generateID($connection, 'payment_id', 'payments', 'PAY');
 		$placeorder = mysqli_query($connection, "INSERT INTO payments SET payment_id = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', order_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', status = 'PENDING', date_added = '" . date("Y-m-d") . "';");
@@ -129,7 +149,7 @@ switch ($_POST['form']) {
 
 		$orderstatus2 = date('Y-m-d h:i:s');
 
-		$placeorder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'TOPAY', deliverystat = 'PENDING', paymentstat = 'FORAPPROVAL', cart_id = '" . $_POST['cart_id'] . "', date_added = '" . date("Y-m-d") . "', , orderstatus2 = '" . $orderstatus2 . "';");
+		$placeorder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $_POST['product_id'] . "', quantity = '" . $_POST['productQuantity'] . "', price = '" . $_POST['productPrice'] . "', shipfee = '" . $_POST['ProductShipping'] . "', totalamt = '" . $_POST['Producttotalamount'] . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', orderstatus = 'TOPAY', deliverystat = 'PENDING', paymentstat = 'FORAPPROVAL', cart_id = '" . $_POST['cart_id'] . "', courier = '" . $_POST['courier'] . "', trackingnumber = '"  . $_POST['tracking'] . "', date_added = '" . date("Y-m-d") . "', , orderstatus2 = '" . $orderstatus2 . "';");
 
 		$genID2 = generateID($connection, 'payment_id', 'payments', 'PAY');
 		$placeorder = mysqli_query($connection, "INSERT INTO payments SET payment_id = '" . $genID2 . "', paymenttype = '" . $_POST['productpaymentmeth'] . "', order_id = '" . $genID . "', amount = '" . $_POST['Producttotalamount'] . "', refnumber = '" . $_POST['textpaymentmethrefnum'] . "', status = 'FORAPPROVAL', date_added = '" . date("Y-m-d") . "';");
@@ -161,11 +181,88 @@ switch ($_POST['form']) {
 		}
 		break;
 
+		// case 'buyAllInCart':
+		// 	// Start a transaction
+		// 	mysqli_begin_transaction($connection);
 
+		// 	try {
+		// 		// Fetch all cart items for the user
+		// 		$cartItems = mysqli_query($connection, "SELECT cart_id, product_id, quantity, price FROM cart WHERE customer_id = '" . $_SESSION['user_id'] . "' AND status = '0'");
 
+		// 		while ($item = mysqli_fetch_assoc($cartItems)) {
+		// 			// Update product quantity
+		// 			$getquantity = mysqli_fetch_array(mysqli_query($connection, "SELECT quantity FROM products WHERE product_id = '" . $item['product_id'] . "';"));
+		// 			$totalquantity = $getquantity[0] - $item['quantity'];
+		// 			$updateproductqty = mysqli_query($connection, "UPDATE products SET quantity = '" . $totalquantity . "' WHERE product_id = '" . $item['product_id'] . "';");
 
-		// Inside the switch statement
-	case 'buyallproducts':
+		// 			// Generate order ID
+		// 			$genID = generateID($connection, 'order_id', 'orders', 'OR');
+
+		// 			// Calculate shipping fee and total amount (you may need to adjust this logic)
+		// 			$shippingfee = calculateShippingFee($item['quantity']);
+		// 			$totalamt = $item['price'] * $item['quantity'] + $shippingfee;
+
+		// 			// Create order record
+		// 			$placeorder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $item['product_id'] . "', quantity = '" . $item['quantity'] . "', price = '" . $item['price'] . "', shipfee = '" . $shippingfee . "', totalamt = '" . $totalamt . "', paymenttype = 'CASH', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', cart_id = '" . $item['cart_id'] . "', date_added = '" . date("Y-m-d") . "';");
+
+		// 			// Update cart status
+		// 			$updatecart = mysqli_query($connection, "UPDATE cart SET status = '1' WHERE cart_id = '" . $item['cart_id'] . "';");
+		// 		}
+
+		// 		// If all goes well, commit the transaction
+		// 		mysqli_commit($connection);
+		// 		echo "success";
+		// 	} catch (Exception $e) {
+		// 		// If an error occurs, roll back the transaction
+		// 		mysqli_rollback($connection);
+		// 		echo "error";
+		// 	}
+		// 	break;
+
+	case 'fncdsplylistofcartall':
+		$count = 0;
+		$res = mysqli_query($connection, "SELECT c.cart_id, c.product_id, c.quantity, c.price, c.totalamt, p.productname FROM cart c INNER JOIN products p ON c.product_id = p.product_id WHERE c.customer_id = '" . $_SESSION['user_id'] . "' AND c.status = '0'");
+		$numrows = mysqli_num_rows($res);
+		if ($numrows > 0) {
+			while ($row = mysqli_fetch_assoc($res)) {
+				$count++;
+				$getproductimage = mysqli_fetch_array(mysqli_query($connection, "SELECT image FROM products_image WHERE product_id = '" . $row['product_id'] . "' LIMIT 1;"));
+
+				echo "<tr>
+              <td class='product_name'>
+                <a href='javascript:void(0)'><img src='../" . $getproductimage['image'] . "' alt='' style='width:50px;'></a>
+                " . $row['productname'] . "
+              </td>
+              <td class='product-price'>₱ " . number_format($row['price'], 2) . "</td>
+              <td class='product_quantity'>" . $row['quantity'] . "</td>
+              <td class='product_total'>₱ " . number_format($row['totalamt'], 2) . "</td>
+          </tr>";
+			}
+		} else {
+			echo "<tr><td colspan='4' style='text-align:center'>No items in your cart.</td></tr>";
+		}
+
+		// Fetch delivery address and order summary for the current user
+		$userRes = mysqli_query($connection, "SELECT CASE 
+                    WHEN ut.middlename = '' OR ut.middlename IS NULL 
+                    THEN CONCAT(ut.lastname, ', ', ut.firstname) 
+                    ELSE CONCAT(ut.lastname, ', ', ut.firstname, ' ', LEFT(ut.middlename, 1), '.') 
+                 END AS full_name, u.contactnum, u.address 
+          FROM user_details u
+          INNER JOIN users_table ut ON u.user_id = ut.user_id
+          WHERE u.user_id = '" . $_SESSION['user_id'] . "';");
+		$userRow = mysqli_fetch_assoc($userRes);
+
+		// Calculate the total amount of all items in the cart
+		$totalAmount = mysqli_query($connection, "SELECT SUM(totalamt) FROM cart WHERE customer_id = '" . $_SESSION['user_id'] . "' AND status = '0';");
+		$totalAmountRow = mysqli_fetch_assoc($totalAmount);
+
+		// Return delivery address and order summary
+		echo "|" . $userRow['full_name'] . "|" . $userRow['contactnum'] . "|" . $userRow['address'] . "|" . $totalAmountRow['SUM(totalamt)'];
+
+		break;
+
+	case 'fncplaceorderall':
 		$cartItems = mysqli_query($connection, "SELECT cart_id, product_id, quantity FROM cart WHERE customer_id = '" . $_SESSION['user_id']  . "' AND status = '0'");
 		$totalAmount = 0;
 
@@ -187,7 +284,7 @@ switch ($_POST['form']) {
 			// Insert order record
 			$genID = generateID($connection, 'order_id', 'orders', 'OR');
 			$orderStatus2 = date('Y-m-d h:i:s');
-			$placeOrder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $cartItem['product_id'] . "', quantity = '" . $cartItem['quantity'] . "', price = '" . $productDetails['price'] . "', shipfee = '0', totalamt = '" . $subTotal . "', paymenttype = 'CASH', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', cart_id = '" . $cartItem['cart_id'] . "', date_added = '" . date("Y-m-d") . "', orderstatus2 = '" . $orderStatus2 . "';");
+			$placeOrder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $cartItem['product_id'] . "', quantity = '" . $cartItem['quantity'] . "', price = '" . $productDetails['price'] . "', shipfee = '0', totalamt = '" . $subTotal . "', paymenttype = 'CASH', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', cart_id = '" . $cartItem['cart_id'] . "', courier = '" . $_POST['courier'] . "', trackingnumber = '"  . $_POST['tracking'] . "', date_added = '" . date("Y-m-d") . "', orderstatus2 = '" . $orderStatus2 . "';");
 
 			// Insert payment record
 			$genID2 = generateID($connection, 'payment_id', 'payments', 'PAY');
@@ -199,25 +296,5 @@ switch ($_POST['form']) {
 
 		// Echo the total amount for confirmation or further processing
 		echo $totalAmount;
-		break;
-
-	case 'fetchallcartitems':
-		$count = 0;
-		$res = mysqli_query($connection, "SELECT product_id, quantity, price, totalamt FROM cart WHERE customer_id = '" . $_SESSION['user_id'] . "' AND status = '0'");
-		$numrows = mysqli_num_rows($res);
-		$cartItems = array();
-
-		if ($numrows == TRUE) {
-			while ($row = mysqli_fetch_array($res)) {
-				$count++;
-				$getproduct = mysqli_fetch_array(mysqli_query($connection, "SELECT productname FROM products WHERE product_id = '" . $row[0] . "';"));
-
-				// Add necessary details to the $cartItems array
-				$cartItems[] = $getproduct[0] . "," . $row['quantity'] . ",₱ " . number_format($row['price'], 2, ".", ",") . ",₱ " . number_format($row['totalamt'], 2, ".", ",");
-			}
-		}
-
-		// Return the cart items as a pipe-separated string
-		echo implode("|", $cartItems);
 		break;
 }

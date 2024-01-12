@@ -46,7 +46,7 @@ if (isset($_GET['shopseller_id'])) {
 <body>
     <?php include('category-sidebar.php'); ?>
 
-    <?php include('shop_products.php'); ?>
+    <?php include('products1.php'); ?>
     <?php
     // Check if the user is logged in
     $isLoggedIn = !empty($_SESSION['user_id']) && $_SESSION['usertype'] === 'CUSTOMER';

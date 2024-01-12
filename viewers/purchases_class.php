@@ -82,7 +82,7 @@ switch ($_POST['form']) {
 
 		$subprodtotal = $getorderdet[0] * $getorderdet[1];
 
-		echo $getproductdet[0] . "|" . $getorderdet[0] . "|" . number_format($getorderdet[1], "2", ".", ",") . "|" . number_format($subprodtotal, "2", ".", ",") . "|" . $getorderdet[4] . "|" . number_format($getorderdet[2], "2", ".", ",") . "|" . number_format($getorderdet[3], "2", ".", ",") . "|" . $getorderdet[5] . "|" . $explode[0] . "|" . $explode[1] . "|" . $explode[2] . "|" . $explode[3] . "|" . 'Courier: ' . $getorderdet[7] . "|" . 'Tracking Number: ' . $getorderdet[8];
+		echo $getproductdet[0] . "|" . $getorderdet[0] . "|" . number_format($getorderdet[1], "2", ".", ",") . "|" . number_format($subprodtotal, "2", ".", ",") . "|" . $getorderdet[4] . "|" . number_format($getorderdet[2], "2", ".", ",") . "|" . number_format($getorderdet[3], "2", ".", ",") . "|" . $getorderdet[5] . "|" . $explode[0] . "|" . $explode[1] . "|" . $explode[2] . "|" . $explode[3] . "|" . 'Delivery Method/Pick-Up Location: ' . $getorderdet[7] . "|" . 'Schedule: ' . $getorderdet[8];
 
 
 

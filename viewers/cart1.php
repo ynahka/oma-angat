@@ -189,10 +189,12 @@ if ($isLoggedIn) {
             <form action="#">
                 <div class="row">
                     <div class="col-12">
+                        <!-- Add this button at the end of your modal content -->
                         <div class="cart_submit" style="padding: 0px;">
-                            <button onclick="openBuyAllProductsModal()" style="background-color: #4c644b;">Buy All
+                            <button onclick="openproductbuynowdetall()" style="background-color: #4c644b;">Buy All
                                 Products</button>
                         </div>
+
                         <div class="table_desc" style="margin-bottom: 50px;">
                             <div class="cart_page table-responsive">
                                 <table>
@@ -501,40 +503,137 @@ if ($isLoggedIn) {
             </div>
         </div>
     </div>
-    <!-- PAYMENT UPLOAD end-->
 
-    <!-- Add this HTML for the modal at an appropriate location in your HTML file -->
-    <div class="modal fade" id="modal_buyallproducts" tabindex="-1" role="dialog"
-        aria-labelledby="modal_buyallproductsLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal_buyallproductsLabel">Buy All Products</h5>
-                    <button class="modal-close icofont-close" data-bs-dismiss="modal"></button>
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" style="padding: 29px 6px 20px; background-color: #cfe2ce;">
-                    <!-- Display cart items and total amount here -->
-                    <table>
-                        <!-- Add table rows dynamically using JavaScript when fetching cart items -->
-                        <tbody id="buyallproducts_table_body">
-                            <!-- Display cart items here -->
-                        </tbody>
-                    </table>
-                    <div>
-                        <!-- Display total amount and other relevant information -->
-                        Total Amount: ₱<span id="buyallproducts_totalamount">0.00</span>
+    <div class="modal fade" id="modal_productbuynowall" tabindex="-1" role="dialog" data-bs-backdrop="static"
+        data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border: 1px solid #82a131;">
+                <button class="modal-close icofont-close" data-bs-dismiss="modal"></button>
+                <div class="modal_body" style="padding: 29px 6px 20px; background-color: #cfe2ce;">
+                    <div class="container">
+                        <!--Delivery Address Details start-->
+                        <div class="coupon_area" style="margin-top: 30px;margin-bottom: 20px;">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="coupon_code left">
+                                        <h3 style="background-color: #4c644b;">Delivery Address</h3>
+                                        <div class="coupon_inner" style="padding: 10px 20px 10px;">
+                                            <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-user"
+                                                    aria-hidden="true"></i> <span id="txtmdlcheckoutname"></span></h4>
+                                            <h4 style="font-weight:400"><i style="color: #79a206;" class="fa fa-phone"
+                                                    aria-hidden="true"></i> <span id="txtmdlcheckoutphone"></span></h4>
+                                            <h4 style="font-weight:400"><i style="color: #79a206;"
+                                                    class="fa fa-map-marker" aria-hidden="true"></i>
+                                                <span id="txtmdlcheckoutaddress"></span> &nbsp;&nbsp;&nbsp;
+                                                <!-- <span style="cursor:pointer;color: #0089ff;font-size: 13px;" onclick="">Change</span> -->
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Delivery Address Details END-->
+
+                        <!-- Additional code for handling multiple products -->
+                        <div id="productsContainer">
+                            <!-- Product details will be dynamically added here -->
+                        </div>
+                        <!--PAYMENT  Details start-->
+                        <div class="coupon_area" style="margin-bottom: 20px;">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="coupon_code left">
+                                        <h3 style="margin-bottom: 0rem; background-color: #4c644b;">Payment Method</h3>
+                                        <div class="coupon_inner" style="padding: 10px 10px 10px;">
+
+                                            <input type="hidden" id="txtmdlbuynowpaymentmethod">
+
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="paymentmethcash hoverpaymentmeth marginebottomforpaymeth"
+                                                        style="padding: 10px 15px 10px; border-radius: 5px;cursor: pointer;"
+                                                        onclick="paymentcash();">
+                                                        <div class="services_item" style="margin-bottom: 0px;">
+                                                            <div class="services_icone">
+                                                                <i class="fa fa-money"></i>
+                                                            </div>
+                                                            <div class="services_desc">
+                                                                <h4 style="margin-bottom: 0rem;">CASH ON DELIVERY</h4>
+
+                                                                <p>Pay when you receive.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="paymentmethgcash hoverpaymentmeth"
+                                                        style="padding: 10px 15px 10px; border-radius: 5px;cursor: pointer;"
+                                                        onclick="paymentgcash();">
+                                                        <div class="services_item" style="margin-bottom: 0px;">
+                                                            <div class="services_icone">
+                                                                <i class="fa fa-credit-card"></i>
+                                                            </div>
+                                                            <div class="services_desc">
+                                                                <h4 style="margin-bottom: 0rem;">GCASH</h4>
+
+                                                                <p>Pay via gcash.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--order summary  Details start-->
+                        <div class="coupon_area" style="margin-bottom: 20px;">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                </div>
+
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="coupon_code left">
+                                        <h3 style="margin-bottom: 0rem; background-color: #4c644b;">Order Summary</h3>
+                                        <div class="coupon_inner" style="padding: 10px 10px 10px;">
+                                            <div class="cart_subtotal">
+                                                <p>Subtotal</p>
+                                                <p class="cart_amount" style="">₱ <span
+                                                        id="txtmdlbuynowsubtotal">0.00</span></p>
+                                            </div>
+
+                                            <div class="cart_subtotal">
+                                                <p>Shipping</p>
+                                                <p class="cart_amount" style="">₱ <span
+                                                        id="txtmdlbuynowshiptotal">0.00</span></p>
+                                            </div>
+
+                                            <div class="cart_subtotal" style="border-top: 1px solid #e1e1e1;">
+                                                <p style="margin-top:10px">Payment Total</p>
+                                                <p style="margin-top:10px" class="cart_amount">₱ <span
+                                                        id="txtmdlbuynowpaymenttotamt">0.00</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Order summary end-->
+                        <!-- Button to place order for all products -->
+                        <div class="cart_submit" style="padding: 0px;">
+                            <button onclick="btnplaceorder()" style="background-color: #4c644b;">Place Order for
+                                All</button>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="btnbuyallproducts()">Buy All</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- PAYMENT UPLOAD end-->
     <?php include('footer.php'); ?>
     <?php include('js-vendor.php'); ?>
     <?php include('jscripts.php'); ?>
@@ -559,7 +658,6 @@ $(function() {
         this.select();
     });
 })
-
 
 function fncdsplylistofcart() {
     $.ajax({
@@ -867,63 +965,94 @@ function deletecart(cart_id) {
 }
 // DELETE CART END
 
-function openBuyAllProductsModal() {
-    // Fetch all cart items and update the Buy All Products modal content
-    updateBuyAllProductsModal();
 
-    // Open the modal
-    $("#modal_buyallproducts").modal('show');
-}
+function openproductbuynowdetall(count, textmdlprodID, cart_id) {
+    $("#modal_productbuynowall").modal('show');
 
-function fncdsplylistofcart() {
-    $.ajax({
-        type: 'POST',
-        url: 'cart_class.php',
-        data: 'form=fncdsplylistofcart',
-        success: function(data) {
-            var show = data.split("|");
-            $("#listofcarts").html(show[0]);
+    var products = [];
+    var totalPayment = 0;
 
-            // Update the buy-all-products modal content
-            updateBuyAllProductsModal();
-        }
+    // Loop through each product in the cart
+    $('[id^="txtcartquantity"]').each(function(index) {
+        var count = index + 1;
+        var textmdlprodID = $(this).data('product_id'); // Assuming a data attribute holds the product ID
+        var textmdlprodquantity = $(this).val();
+
+        // Add product details to the array
+        products.push({
+            count: count,
+            textmdlprodID: textmdlprodID,
+            textmdlprodquantity: textmdlprodquantity
+        });
+
+        // Accumulate total payment (you might need to modify this based on your logic)
+        totalPayment += parseFloat($('#txtmdlbuynowpaymenttotamt' + count).text().replace(/,/g, ''));
     });
-}
 
-// New function to update buy-all-products modal content
-function updateBuyAllProductsModal() {
-    // Clear existing table rows
-    $("#buyallproducts_table_body").empty();
+    // Empty the container before adding new content
+    $("#productsContainer").empty();
 
-    // Fetch cart items and update the buy-all-products modal content
-    $.ajax({
-        type: 'POST',
-        url: 'cart_class.php',
-        data: 'form=fetchallcartitems',
-        success: function(data) {
-            var cartItems = data.split("|");
+    // Send AJAX request for each product in the array
+    for (let i = 0; i < products.length; i++) {
+        $.ajax({
+            type: 'POST',
+            url: 'cart_class1.php',
+            data: {
+                'textmdlprodID': products[i].textmdlprodID,
+                'textmdlprodquantity': products[i].textmdlprodquantity,
+                'form': 'fncdisplaybuynowproddetall'
+            },
+            success: function(data) {
+                // Process data and update the modal content here
+                var productDetails = data.split("|");
+                var productHTML = `
+                    <div class="col-12">
+                        <div class="table_desc" style="margin-bottom: 10px;">
+                            <div class="cart_page table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 80%;text-align: left;">Product</th>
+                                            <th style="width: 3%;text-align: left;">Quantity</th>
+                                            <th style="width: 3%;text-align: left;">Price</th>
+                                            <th style="width: 3%;text-align: left;">Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 80%;text-align: left;">
+                                                <img src="${productDetails[8]}" style="width:50px">
+                                                <a href="#"><span>${productDetails[3]}</span></a>
+                                            </td>
+                                            <td style="width: 3%;text-align: left;">
+                                                <span>${products[i].textmdlprodquantity}</span>
+                                            </td>
+                                            <td style="width: 3%; text-align: center;">₱
+                                                <span>${productDetails[4]}</span>
+                                            </td>
+                                            <td style="width: 3%;text-align: left;">₱
+                                                <span>${productDetails[5]}</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                `;
 
-            for (var i = 0; i < cartItems.length; i++) {
-                // Parse each cart item data and add a new row to the table
-                var itemData = cartItems[i].split(",");
-                var newRow = "<tr>" +
-                    "<td>" + itemData[0] + "</td>" +
-                    "<td>" + itemData[1] + "</td>" +
-                    "<td>" + itemData[2] + "</td>" +
-                    "<td>" + itemData[3] + "</td>" +
-                    "</tr>";
+                // Append the product HTML to the container
+                $("#productsContainer").append(productHTML);
 
-                $("#buyallproducts_table_body").append(newRow);
+                // Update customer details
+                $("#productname").text(productDetails[0]);
+                $("#price").text(productDetails[1]);
+                $("#subprodtotal").text(productDetails[2]);
             }
-        }
-    });
-}
+        });
+    }
 
-
-// Add a new function to handle the "Buy All" button click
-function btnbuyallproducts() {
-    // Implement the logic to handle buying all products in the cart
-    // This can be similar to the existing btnplaceorder function
-    // You may need to modify the server-side code accordingly
+    // Update the total payment in the modal
+    $("#txtmdlbuynowpaymenttotamt").text(totalPayment.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'));
 }
 </script>

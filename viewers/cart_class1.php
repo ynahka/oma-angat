@@ -6,6 +6,13 @@ if (empty($_SESSION['user_id']) || $_SESSION['usertype'] !== 'CUSTOMER') {
 	exit(); // Add exit to stop further execution of the script
 }
 
+function calculateShippingFee($quantity)
+{
+	// Replace this logic with your actual shipping fee calculation
+	// For this example, charge 3 pesos per quantity
+	$shippingFeePerQuantity = 3;
+	return $quantity * $shippingFeePerQuantity;
+}
 switch ($_POST['form']) {
 
 	case 'fncdsplylistofcart':
@@ -161,63 +168,47 @@ switch ($_POST['form']) {
 		}
 		break;
 
+	case 'fncdisplaybuynowproddetall':
+		$products = $_POST['products'];
 
+		$overallTotal = 0;
+		$output = '';
 
+		// Fetch customer details
+		$getcustomer = mysqli_fetch_array(mysqli_query($connection, "SELECT CASE WHEN middlename = '' OR middlename IS NULL THEN CONCAT(lastname, ', ', firstname) ELSE CONCAT(lastname, ', ', firstname, ' ', LEFT(middlename, '1'), '.') END FROM users_table WHERE user_id = '" . $_SESSION['user_id'] . "';"));
+		$getcustomerdet = mysqli_fetch_array(mysqli_query($connection, "SELECT contactnum, address FROM user_details WHERE user_id = '" . $_SESSION['user_id'] . "';"));
+		echo "Customer Query: " . "SELECT CASE WHEN middlename = '' OR middlename IS NULL THEN CONCAT(lastname, ', ', firstname) ELSE CONCAT(lastname, ', ', firstname, ' ', LEFT(middlename, '1'), '.') END FROM users_table WHERE user_id = '" . $_SESSION['user_id'] . "';";
+		echo "Customer Details: " . $getcustomer[0] . "|" . $getcustomerdet[0] . "|" . $getcustomerdet[1] . "|";
 
-		// Inside the switch statement
-	case 'buyallproducts':
-		$cartItems = mysqli_query($connection, "SELECT cart_id, product_id, quantity FROM cart WHERE customer_id = '" . $_SESSION['user_id']  . "' AND status = '0'");
-		$totalAmount = 0;
+		// Escape user input to prevent SQL injection
+		$output .= mysqli_real_escape_string($connection, $getcustomer[0]) . "|" . mysqli_real_escape_string($connection, $getcustomerdet[0]) . "|" . mysqli_real_escape_string($connection, $getcustomerdet[1]) . "|";
 
-		while ($cartItem = mysqli_fetch_array($cartItems)) {
+		foreach ($products as $product) {
+
 			// Fetch product details
-			$productDetails = mysqli_fetch_array(mysqli_query($connection, "SELECT productname, price FROM products WHERE product_id = '" . $cartItem['product_id'] . "';"));
+			$getproductdet = mysqli_fetch_array(mysqli_query($connection, "SELECT c.cart_id, c.product_id, c.quantity, c.price, c.totalamt, p.productname FROM cart c INNER JOIN products p ON c.product_id = p.product_id AND p.product_id=  '" . $product['textmdlprodID'] . "' WHERE c.customer_id = '" . $_SESSION['user_id'] . "' AND c.status = '0'"));
+			echo "Product Query: " . "SELECT c.cart_id, c.product_id, c.quantity, c.price, c.totalamt, p.productname FROM cart c INNER JOIN products p ON c.product_id = p.product_id AND p.product_id=  '" . $product['textmdlprodID'] . "' WHERE c.customer_id = '" . $_SESSION['user_id'] . "' AND c.status = '0'";
 
-			// Calculate subtotal for each item
-			$subTotal = $cartItem['quantity'] * $productDetails['price'];
+			// $getproductdet = mysqli_fetch_array(mysqli_query($connection, "SELECT productname, price FROM products WHERE product_id = '" . $product['textmdlprodID'] . "';"));
 
-			// Update product quantity in the database
-			$getQuantity = mysqli_fetch_array(mysqli_query($connection, "SELECT quantity FROM products WHERE product_id = '" . $cartItem['product_id'] . "';"));
-			$totalQuantity = $getQuantity['quantity'] - $cartItem['quantity'];
-			$updateProductQty = mysqli_query($connection, "UPDATE products SET quantity = '" . $totalQuantity . "' WHERE product_id = '" . $cartItem['product_id'] . "';");
+			// Calculate shipping fee using the calculateShippingFee function
+			$shippingfee = calculateShippingFee($product['textmdlprodquantity']);
 
-			// Update total amount
-			$totalAmount += $subTotal;
+			$subprodtotal = $product['textmdlprodquantity'] * $getproductdet['price'];
+			$paymentoveralltotal = $subprodtotal + $shippingfee;
+			$overallTotal += $paymentoveralltotal;
 
-			// Insert order record
-			$genID = generateID($connection, 'order_id', 'orders', 'OR');
-			$orderStatus2 = date('Y-m-d h:i:s');
-			$placeOrder = mysqli_query($connection, "INSERT INTO orders SET order_id = '" . $genID . "', customer_id = '" . $_SESSION['user_id'] . "', product_id = '" . $cartItem['product_id'] . "', quantity = '" . $cartItem['quantity'] . "', price = '" . $productDetails['price'] . "', shipfee = '0', totalamt = '" . $subTotal . "', paymenttype = 'CASH', orderstatus = 'PENDING', deliverystat = 'PENDING', paymentstat = 'PENDING', cart_id = '" . $cartItem['cart_id'] . "', date_added = '" . date("Y-m-d") . "', orderstatus2 = '" . $orderStatus2 . "';");
+			// Escape user input to prevent SQL injection
+			$output .= mysqli_real_escape_string($connection, $getproductdet['productname']) . "|" . number_format($getproductdet['price'], 2, '.', ',') . "|" . number_format($subprodtotal, 2, '.', ',') . "|";
+			$output .= number_format($shippingfee, 2, '.', ',') . "|" . number_format($paymentoveralltotal, 2, '.', ',') . "|";
+			echo "Product Details: " . mysqli_real_escape_string($connection, $getproductdet['productname']) . "|" . number_format($getproductdet['price'], 2, '.', ',') . "|" . number_format($subprodtotal, 2, '.', ',') . "|";
 
-			// Insert payment record
-			$genID2 = generateID($connection, 'payment_id', 'payments', 'PAY');
-			$placeOrder = mysqli_query($connection, "INSERT INTO payments SET payment_id = '" . $genID2 . "', paymenttype = 'CASH', order_id = '" . $genID . "', amount = '" . $subTotal . "', status = 'PENDING', date_added = '" . date("Y-m-d") . "';");
-
-			// Update cart status
-			$updateCart = mysqli_query($connection, "UPDATE cart SET status = '1' WHERE cart_id = '" . $cartItem['cart_id'] . "';");
+			// Fetch product image details
+			$productimage = mysqli_fetch_array(mysqli_query($connection, "SELECT image, imagename FROM products_image WHERE product_id = '" . $product['textmdlprodID'] . "' ORDER BY id ASC;"));
+			$output .= mysqli_real_escape_string($connection, $productimage['image']) . "|";
 		}
 
-		// Echo the total amount for confirmation or further processing
-		echo $totalAmount;
-		break;
-
-	case 'fetchallcartitems':
-		$count = 0;
-		$res = mysqli_query($connection, "SELECT product_id, quantity, price, totalamt FROM cart WHERE customer_id = '" . $_SESSION['user_id'] . "' AND status = '0'");
-		$numrows = mysqli_num_rows($res);
-		$cartItems = array();
-
-		if ($numrows == TRUE) {
-			while ($row = mysqli_fetch_array($res)) {
-				$count++;
-				$getproduct = mysqli_fetch_array(mysqli_query($connection, "SELECT productname FROM products WHERE product_id = '" . $row[0] . "';"));
-
-				// Add necessary details to the $cartItems array
-				$cartItems[] = $getproduct[0] . "," . $row['quantity'] . ",₱ " . number_format($row['price'], 2, ".", ",") . ",₱ " . number_format($row['totalamt'], 2, ".", ",");
-			}
-		}
-
-		// Return the cart items as a pipe-separated string
-		echo implode("|", $cartItems);
+		// Echo the overall total and other details
+		echo $output . number_format($overallTotal, 2, '.', ',');
 		break;
 }

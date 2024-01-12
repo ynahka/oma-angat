@@ -303,6 +303,10 @@ session_start();
                                                 <span id="txtmdlcheckoutaddress"></span> &nbsp;&nbsp;&nbsp;
                                                 <!-- <span style="cursor:pointer;color: #0089ff;font-size: 13px;" onclick="">Change</span> -->
                                             </h4>
+                                            <span></span><br>
+                                            <button class="btn btn-primary reqresinfo" id="btnregfulladdress"
+                                                style="cursor:pointer;" onclick="openmdladdress();">Edit
+                                                Address</button>
                                         </div>
                                     </div>
                                 </div>
@@ -405,6 +409,23 @@ session_start();
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-12">
+                                                    <div class="paymentmethcop hoverpaymentmeth marginebottomforpaymeth"
+                                                        style="padding: 10px 15px 10px; border-radius: 5px;cursor: pointer;"
+                                                        onclick="paymentcop();">
+                                                        <div class="services_item" style="margin-bottom: 0px;">
+                                                            <div class="services_icone">
+                                                                <i class="fa fa-money"></i>
+                                                            </div>
+                                                            <div class="services_desc">
+                                                                <h4 style="margin-bottom: 0rem;">CASH ON PICK-UP</h4>
+
+                                                                <p>Pay when you pick-up.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12">
                                                     <div class="paymentmethgcash hoverpaymentmeth"
                                                         style="padding: 10px 15px 10px; border-radius: 5px;cursor: pointer;"
                                                         onclick="paymentgcash();">
@@ -421,6 +442,116 @@ session_start();
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="couriercontainer">
+                                                        <div class=" form-group" style="margin-top: 300px;">
+                                                            <select class="form-control courier"
+                                                                id="txtmdlbuynowcourier">
+                                                                onchange="inputrequired()">
+                                                                <option value="">Select Delivery/Pick-up Method</option>
+                                                                <option value="Courier/Logistics">
+                                                                    Courier/Logistics(Discuss
+                                                                    on Message)</option>
+                                                                <option value="Albay Public Market">
+                                                                    Albay Public Market
+                                                                </option>
+                                                                <option value="Bacacay Public Market">
+                                                                    Bacacay Public Market
+                                                                </option>
+                                                                <option value="Daraga Public Market">
+                                                                    Daraga Public Market
+                                                                </option>
+                                                                <option value="Guinobatan Public Market">
+                                                                    Guinobatan Public Market
+                                                                </option>
+                                                                <option value="Jovellar Public Market">
+                                                                    Jovellar Public Market
+                                                                </option>
+                                                                <option value="Legazpi City Public Market">
+                                                                    Legazpi Public Market
+                                                                </option>
+                                                                <option value="Libon Public Market">
+                                                                    Libon Public Market
+                                                                </option>
+                                                                <option value="Ligao Public Market">
+                                                                    Ligao Public Market
+                                                                </option>
+                                                                <option value="Malilipot Public Market">
+                                                                    Malilipot Public Market
+                                                                </option>
+                                                                <option value="Manito Public Market">
+                                                                    Manito Public Market
+                                                                </option>
+                                                                <option value="Malinao Public Market">
+                                                                    Malinao Public Market
+                                                                </option>
+                                                                <option value="Oas Public Market">
+                                                                    Oas Public Market
+                                                                </option>
+                                                                <option value="Pioduran Public Market">
+                                                                    Piouduran Public Market
+                                                                </option>
+                                                                <option value="Polangui Public Market">
+                                                                    Polangui Public Market
+                                                                </option>
+                                                                <option value="Rapu-Rapu Public Market">
+                                                                    Rapu-Rapu Public Market
+                                                                </option>
+                                                                <option value="Sto.Domingo Public Market">
+                                                                    Sto.Domingo Public Market
+                                                                </option>
+                                                                <option value="Tabaco City Public Market">
+                                                                    Tabaco City Public Market
+                                                                </option>
+                                                                <option value="Tiwi Public Market">
+                                                                    Tiwi Public Market
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <select class="form-control courier"
+                                                                id="txtmdlbuynowtracking">
+                                                                onchange="inputrequired()">
+                                                                <option value="">Select Schedule</option>
+                                                                <option value="Sunday Market Day 8:00am-12:00pm">
+                                                                    Sunday Market Day 8:00am-12:00pm</option>
+                                                                <option value="Sunday Market Day 1:00pm-4:00pm">
+                                                                    Sunday Market Day 1:00pm-4:00pm
+                                                                </option>
+                                                                <option value="Monday Market Day 8:00am-12:00pm">
+                                                                    Monday Market Day 8:00am-12:00pm</option>
+                                                                <option value="Monday Market Day 1:00pm-4:00pm">
+                                                                    Monday Market Day 1:00pm-4:00pm
+                                                                </option>
+                                                                <option value="Tuesday Market Day 8:00am-12:00pm">
+                                                                    Tuesday Market Day 8:00am-12:00pm</option>
+                                                                <option value="Tuesday Market Day 1:00pm-4:00pm">
+                                                                    Tuesday Market Day 1:00pm-4:00pm
+                                                                </option>
+                                                                <option value="Wednesday Market Day 8:00am-12:00pm">
+                                                                    Wednesday Market Day 8:00am-12:00pm</option>
+                                                                <option value="Monday Market Day 1:00pm-4:00pm">
+                                                                    Wednesday Market Day 1:00pm-4:00pm
+                                                                </option>
+                                                                <option value="Thursday Market Day 8:00am-12:00pm">
+                                                                    Thursday Market Day 8:00am-12:00pm</option>
+                                                                <option value="Thursday Market Day 1:00pm-4:00pm">
+                                                                    Thursday Market Day 1:00pm-4:00pm
+                                                                </option>
+                                                                <option value="Friday Market Day 8:00am-12:00pm">
+                                                                    Friday Market Day 8:00am-12:00pm</option>
+                                                                <option value="Friday Market Day 1:00pm-4:00pm">
+                                                                    Friday Market Day 1:00pm-4:00pm
+                                                                </option>
+                                                                <option value="Saturday Market Day 8:00am-12:00pm">
+                                                                    Saturday Market Day 8:00am-12:00pm</option>
+                                                                <option value="Saturday Market Day 1:00pm-4:00pm">
+                                                                    Saturday Market Day 1:00pm-4:00pm
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -428,7 +559,6 @@ session_start();
                             </div>
                         </div>
                         <!--Payment method end-->
-
                         <!--Order summary start-->
                         <div class="coupon_area" style="margin-bottom: 20px;">
                             <div class="row">
@@ -589,6 +719,171 @@ session_start();
             </div>
         </div>
     </div>
+
+    <!-- ADDRESS start-->
+
+    <div class="modal fade" id="modal_address" tabindex="-1" role="dialog" data-bs-backdrop="static"
+        data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border: 2px solid #82a131;background-color: #cfe2ce; border-radius: 10px">
+                <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="" style="left: 92%;">
+                    <span aria-hidden="true"><i class="icon-x"></i></span>
+                </button> -->
+                <button class="modal-close icofont-close" data-bs-dismiss="modal"></button>
+                <div class="modal_body" style="padding: 29px 6px 20px;">
+                    <div class="container">
+                        <label class="mt-2" for="txtregcontactphone"
+                            style="margin-bottom: 0px; font-weight: 500;">Contact No.</label>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control reqresinfo contactnum" name="txtregcontactphone"
+                                    id="txtregcontactphone" style="height: 40px;">
+                            </div>
+                        </div>
+                        <label class="mt-2" for="txtregaddresstype"
+                            style="margin-bottom: 0px; font-weight: 500;">Address Title</label>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <select class="form-control courier" id="txtregaddresstype">
+                                    <option value="Home">Home</option>
+                                    <option value="Office">Office</option>
+                                    <option value="School">School</option>
+                                    <option value="Business">Business</option>
+                            </div>
+                        </div>
+
+                        <label class="mt-2" for="txtregfulladdress"
+                            style="margin-bottom: 0px; font-weight: 500;">Address</label>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <textarea class="form-control" name="txtregfulladdress" id="txtregfulladdress" rows="2"
+                                    readonly style="cursor:pointer;" onclick="openmdlsearchaddress();"></textarea><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="map_canvas"
+                                    style="height: 250px; width:100% !important; border-radius: 0px !important;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="txtreghousenum">
+                        <input type="hidden" id="txtregstreet">
+                        <input type="hidden" id="txtregsubdi">
+                        <input type="hidden" id="txtregbarangay">
+                        <input type="hidden" id="txtregcity">
+                        <input type="hidden" id="txtregpostalcode">
+                        <input type="hidden" id="txtregprovince">
+                        <input type="hidden" id="txtreglat">
+                        <input type="hidden" id="txtreglong">
+                        <span></span><br>
+                        <button class="btn btn-success btn-md btn-block text-uppercase waves-effect waves-light"
+                            onclick="updateaddressnowna();"
+                            style="padding: 10px 10px; font-weight: 500; background-color: #4C644B; border: #4C644B 1px solid">Update
+                            Address</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mdlsearchaddress" class="modal" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-md" style="max-width: 400px;">
+            <div class="modal-content" style="border: 2px solid #82a131;background-color: #cfe2ce; border-radius: 10px">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <div style="display: flex;justify-content: space-between !important;">
+                                <h4 class="headerfontfont2" style="color: #2c2b2e;font-weight: 500;">Address</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                    onclick="clearsearchaddress()"
+                                    style="padding: 1rem 1rem;margin: -1.6rem -1rem -1rem auto; border:0">×</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="" for="txtreghousenum2" style="margin-bottom: 0px; font-weight: 500;">House
+                                Number</label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" name="txtreghousenum2" id="txtreghousenum2"
+                                        style="height: 40px;">
+                                </div>
+                            </div>
+
+                            <label class="mt-2" for="txtregstreet2" style="margin-bottom: 0px; font-weight: 500;">Street
+                                Name</label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control reqresinfo2" name="txtregstreet2"
+                                        id="txtregstreet2" style="height: 40px;">
+                                </div>
+                            </div>
+
+                            <label class="mt-2" for="txtregsubdi2"
+                                style="margin-bottom: 0px; font-weight: 500;">Subdivision/Village</label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" name="txtregsubdi2" id="txtregsubdi2"
+                                        style="height: 40px;">
+                                </div>
+                            </div>
+                            <label class="mt-2" for="txtregbarangay2"
+                                style="margin-bottom: 0px; font-weight: 500;">Barangay</label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control reqresinfo2" name="txtregbarangay2"
+                                        id="txtregbarangay2" style="height: 40px;">
+                                </div>
+                            </div>
+
+                            <label class="mt-2" for="txtregcity2"
+                                style="margin-bottom: 0px; font-weight: 500;">City/Municipality</label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control reqresinfo2" name="txtregcity2"
+                                        id="txtregcity2" style="height: 40px;">
+                                </div>
+                            </div>
+
+                            <label class="mt-2" for="txtregpostalcode2"
+                                style="margin-bottom: 0px; font-weight: 500;">Postal Code/Zip Code</label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control reqresinfo2" name="txtregpostalcode2"
+                                        id="txtregpostalcode2" style="height: 40px;">
+                                </div>
+                            </div>
+
+                            <label class="mt-2" for="txtregprovince2"
+                                style="margin-bottom: 0px; font-weight: 500;">Province</label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control reqresinfo2" name="txtregprovince2"
+                                        id="txtregprovince2" style="height: 40px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer mt-2" style="padding: 10px 15px;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="button"
+                                class="btn waves-effect waves-light btn-secondary float-right buttonproduct"
+                                onclick="btnsearchaddress();"
+                                style="background-color: #4C644B !important; border: 1px solid #4C644B !important;">Search</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <?php include('footer.php'); ?>
     <?php include('js-vendor.php'); ?>
     <?php include('jscripts.php'); ?>
@@ -643,6 +938,173 @@ $(function() {
     }
 
 });
+$(function() {
+    $(".contactnum").inputmask("+63 999-999-9999");
+
+    $(".numonly").keydown(function(event) {
+        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 190 || event.keyCode == 9 ||
+            event.keyCode == 188) {
+
+        } else {
+            if (event.keyCode < 48 || event.keyCode > 57 || event.keyCode == 17) {
+                event.preventDefault();
+            }
+        }
+    });
+
+    $(".date-picker1").datepicker({
+        autoHide: true,
+        format: 'mm/dd/yyyy',
+        todayHighlight: true
+    });
+
+    geocodesearching();
+});
+
+function reqField1(classN) {
+    var isValid = 1;
+    $('.' + classN).each(function() {
+        console.log('Field value:', $(this).val());
+        if ($(this).val() == '') {
+            $(this).css('border', '1px #a94442 solid');
+            $(this).addClass('lala');
+            isValid = 0;
+        } else {
+            $(this).css('border', '');
+            $(this).removeClass('lala');
+        }
+    });
+
+    return isValid;
+}
+
+function geocodesearching() {
+    var geocoder = new google.maps.Geocoder();
+    if ($("#txtregfulladdress").val() == "" || $("#txtregfulladdress").val() == null) {
+        var address = "";
+    } else {
+        var address = $("#txtregfulladdress").val();
+    }
+    var lat = document.getElementById("txtreglat").value;
+    var lng = document.getElementById("txtreglong").value;
+    geocoder.geocode({
+        'address': address
+    }, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            var latitude = results[0].geometry.location.lat();
+            var longitude = results[0].geometry.location.lng();
+            initialize(latitude, longitude);
+            $("#txtreglat").val(latitude);
+            $("#txtreglong").val(longitude);
+        } else {
+            console.error('Geocoding failed:', status);
+            initialize(lat, lng);
+        }
+    });
+}
+
+function initialize(latitude, longitude) {
+    var latlng = new google.maps.LatLng(latitude, longitude);
+    var myOptions = {
+        zoom: 16,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeControl: false
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        draggable: true
+    });
+
+    google.maps.event.addListener(marker, 'dragend', function(evt) {
+        $("#txtreglat").val(evt.latLng.lat());
+        $("#txtreglong").val(evt.latLng.lng());
+    });
+
+    google.maps.event.addListener(marker, 'drag', function(evt) {
+        console.log("marker is being dragged");
+    });
+}
+
+function openmdladdress() {
+    $("#modal_productbuynow").modal('hide');
+    $("#modal_address").modal('show');
+}
+
+function openmdlsearchaddress() {
+    $("#modal_productbuynow").modal('hide');
+    $("#mdlsearchaddress").modal('show');
+
+    var textreghousenum = $("#txtreghousenum").val();
+    var textregstreet = $("#txtregstreet").val();
+    var textregsubdi = $("#txtregsubdi").val();
+    var textregbarangay = $("#txtregbarangay").val();
+    var textregcity = $("#txtregcity").val();
+    var textregpostalcode = $("#txtregpostalcode").val();
+    var textregprovince = $("#txtregprovince").val();
+
+    $("#txtreghousenum2").val(textreghousenum);
+    $("#txtregstreet2").val(textregstreet);
+    $("#txtregsubdi2").val(textregsubdi);
+    $("#txtregbarangay2").val(textregbarangay);
+    $("#txtregcity2").val(textregcity);
+    $("#txtregpostalcode2").val(textregpostalcode);
+    $("#txtregprovince2").val(textregprovince);
+}
+
+function btnsearchaddress() {
+    if (reqField1('reqresinfo2') == 1) {
+        var textreghousenum = $("#txtreghousenum2").val();
+        var textregstreet = $("#txtregstreet2").val();
+        var textregsubdi = $("#txtregsubdi2").val();
+        var textregbarangay = $("#txtregbarangay2").val();
+        var textregcity = $("#txtregcity2").val();
+        var textregpostalcode = $("#txtregpostalcode2").val();
+        var textregprovince = $("#txtregprovince2").val();
+        var housenum = "";
+        var subdivision = "";
+
+        $("#txtreghousenum").val(textreghousenum);
+        $("#txtregstreet").val(textregstreet);
+        $("#txtregsubdi").val(textregsubdi);
+        $("#txtregbarangay").val(textregbarangay);
+        $("#txtregcity").val(textregcity);
+        $("#txtregpostalcode").val(textregpostalcode);
+        $("#txtregprovince").val(textregprovince);
+
+        if (textreghousenum == "") {
+            housenum = "";
+        } else {
+            housenum = textreghousenum + ", ";
+        }
+
+        if (textregsubdi == "") {
+            subdivision = "";
+        } else {
+            subdivision = textregsubdi + ", ";
+        }
+
+        $("#txtregfulladdress").val(housenum + textregstreet + ", " + subdivision + textregbarangay + ", " +
+            textregcity + ", " + textregpostalcode + ", " + textregprovince);
+
+        geocodesearching();
+
+        $("#mdlsearchaddress").modal('hide');
+    } else {
+        Swal.fire(
+            'ALERT',
+            'Please review your entries. Ensure all required fields are filled out',
+            'warning'
+        )
+    }
+}
+
+function clearsearchaddress() {
+    $('.reqresinfo2').css('border', '');
+    $('.reqresinfo2').val("");
+}
 
 function fncdisplaylistofproducts() {
     var srchprod = $("#txtsearchspecproduct").val();
@@ -1103,6 +1565,8 @@ function clearbuynowmodal() {
     $("#txtmdlprodID2").val("");
     $(".paymentmethcash").addClass('hoverpaymentmeth');
     $(".paymentmethcash").removeClass('hoverpaymentmeth2');
+    $(".paymentmethcop").addClass('hoverpaymentmeth');
+    $(".paymentmethcop").removeClass('hoverpaymentmeth2');
     $(".paymentmethgcash").addClass('hoverpaymentmeth');
     $(".paymentmethgcash").removeClass('hoverpaymentmeth2');
 }
@@ -1111,7 +1575,21 @@ function paymentcash() {
     $("#txtmdlbuynowpaymentmethod").val("CASH");
     $(".paymentmethcash").addClass('hoverpaymentmeth2');
     $(".paymentmethcash").removeClass('hoverpaymentmeth');
+    // $('.couriercontainer').css('display', 'unset')
 
+    $(".paymentmethcop").removeClass('hoverpaymentmeth2');
+    $(".paymentmethcop").addClass('hoverpaymentmeth');
+    $(".paymentmethgcash").removeClass('hoverpaymentmeth2');
+    $(".paymentmethgcash").addClass('hoverpaymentmeth');
+}
+
+function paymentcop() {
+    $("#txtmdlbuynowpaymentmethod").val("COP");
+    $(".paymentmethcop").addClass('hoverpaymentmeth2');
+    $(".paymentmethcop").removeClass('hoverpaymentmeth');
+
+    $(".paymentmethcash").removeClass('hoverpaymentmeth2');
+    $(".paymentmethgcash").addClass('hoverpaymentmeth');
     $(".paymentmethgcash").removeClass('hoverpaymentmeth2');
     $(".paymentmethgcash").addClass('hoverpaymentmeth');
 }
@@ -1121,6 +1599,8 @@ function paymentgcash() {
     $(".paymentmethgcash").addClass('hoverpaymentmeth2');
     $(".paymentmethgcash").removeClass('hoverpaymentmeth');
 
+    $(".paymentmethcop").removeClass('hoverpaymentmeth2');
+    $(".paymentmethcop").addClass('hoverpaymentmeth');
     $(".paymentmethcash").removeClass('hoverpaymentmeth2');
     $(".paymentmethcash").addClass('hoverpaymentmeth');
 }
@@ -1132,9 +1612,11 @@ function btnplaceorder() {
     var ProductShipping = ($("#txtmdlbuynowshiptotal").text()).replace(/,/g, "");
     var Producttotalamount = ($("#txtmdlbuynowpaymenttotamt").text()).replace(/,/g, "");
     var productpaymentmeth = $("#txtmdlbuynowpaymentmethod").val();
+    var courier = $("#txtmdlbuynowcourier").val();
+    var tracking = $("#txtmdlbuynowtracking").val();
 
     if (productpaymentmeth != "") {
-        if (productpaymentmeth == "CASH") {
+        if (productpaymentmeth == "CASH" || productpaymentmeth == "COP") { // Check for both CASH and COP
             $(".loadload").show();
             $.ajax({
                 type: 'POST',
@@ -1143,7 +1625,9 @@ function btnplaceorder() {
                     '&productPrice=' +
                     productPrice + '&ProductShipping=' + ProductShipping + '&Producttotalamount=' +
                     Producttotalamount + '&productpaymentmeth=' + productpaymentmeth +
-                    '&form=btnplaceordercash',
+                    '&form=btnplaceorder' + productpaymentmeth.toLowerCase() + '&courier=' + courier +
+                    '&tracking=' + tracking,
+                // Use the payment method to determine the form value
                 success: function(data) {
                     setTimeout(function() {
                         $(".loadload").hide();
@@ -1162,7 +1646,6 @@ function btnplaceorder() {
                             }
                         });
                     }, 500);
-
                 }
             })
         } else {
@@ -1176,6 +1659,7 @@ function btnplaceorder() {
         )
     }
 }
+
 
 function loadpaymentgcashmodal() {
     $("#modal_paymentupload").modal('show');
@@ -1311,6 +1795,60 @@ function sendChatToSeller() {
             $(".loadload").hide();
             console.error("Error sending chat:", errorThrown);
             // Handle the error as needed
+        }
+    });
+}
+
+function updateaddressnowna() {
+    $(".preloader").show().css('background', 'rgba(255,255,255,0.5)');
+
+    var textregfulladdress = $("#txtregfulladdress").val();
+    var textreghousenum = $("#txtreghousenum").val();
+    var textregstreet = $("#txtregstreet").val();
+    var textregsubdi = $("#txtregsubdi").val();
+    var textregbarangay = $("#txtregbarangay").val();
+    var textregcity = $("#txtregcity").val();
+    var textregpostalcode = $("#txtregpostalcode").val();
+    var textregprovince = $("#txtregprovince").val();
+    var textreglat = $("#txtreglat").val();
+    var textreglong = $("#txtreglong").val();
+
+    // No need for the reqField1 function
+
+    $.ajax({
+        type: 'POST',
+        url: 'products_class2.php',
+        data: {
+            'textregfulladdress': textregfulladdress,
+            'textreghousenum': textreghousenum,
+            'textregstreet': textregstreet,
+            'textregsubdi': textregsubdi,
+            'textregbarangay': textregbarangay,
+            'textregcity': textregcity,
+            'textregpostalcode': textregpostalcode,
+            'textregprovince': textregprovince,
+            'textreglat': textreglat,
+            'textreglong': textreglong,
+            'form': 'updateaddressnowna'
+        },
+        success: function(data) {
+            setTimeout(function() {
+                $(".preloader").hide().css('background', '');
+                Swal.fire({
+                    title: "Success!",
+                    text: "Address successfully updated!",
+                    type: "success",
+                    icon: "success",
+                    showCancelButton: false,
+                    confirmButtonColor: "#00fb71",
+                    confirmButtonText: "Okay",
+                    closeOnConfirm: false
+                }).then((result) => {
+                    if (result.value) {
+                        $("#modal_address").modal('hide');
+                    }
+                });
+            }, 500);
         }
     });
 }

@@ -180,7 +180,7 @@ switch ($_POST['form']) {
 
 		echo "|";
 
-		if ($orderdetails[5] == "PENDING" && $orderdetails[4] == "CASH") {
+		if ($orderdetails[5] == "PENDING" && $orderdetails[4] == "CASH" || $orderdetails[5] == "PENDING" && $orderdetails[4] == "COP") {
 			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='pendingapprove(\"" . $_POST['order_id'] . "\")'>APPROVE ORDER</button>";
 		} elseif ($orderdetails[5] == "TOPAY") {
 			echo "<button type='button' class='btn waves-effect waves-light btn-dark float-right' onclick='topayapprove(\"" . $_POST['order_id'] . "\", \"" . $orderdetails[6] . "\")'>APPROVE ORDER</button>";
@@ -232,20 +232,67 @@ switch ($_POST['form']) {
 		$topayapprove = mysqli_query($connection, "UPDATE orders SET orderstatus = 'TOSHIP', orderstatus2 = '" . $orderstatus2 . "' WHERE order_id = '" . $_POST['order_id'] . "'");
 		break;
 
-	case 'toshipapprove':
+		// case 'toshipapprove':
 
+		// 	$orderstatus2 = ',' . date('Y-m-d h:i:s');
+		// 	$row = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus2 FROM orders WHERE order_id = '" . $_POST['order_id'] . "';"));
+
+		// 	$orderstatus2 = $row['orderstatus2'] . $orderstatus2;
+
+		// 	$trackingnumber = uniqid(10);
+
+		// 	$courier = $_POST['courier'];
+		// 	$trackingnumber = $_POST['trackingnumber'];
+
+		// 	$toshipapprove = mysqli_query($connection, "UPDATE orders SET orderstatus = 'TODELIVER', deliverystat = 'TODELIVER', orderstatus2 = '" . $orderstatus2 . "', courier = '" . $courier . "', trackingnumber = '" . $trackingnumber . "' WHERE order_id = '" . $_POST['order_id'] . "'");
+		// 	break;
+
+		// case 'toshipapprove':
+		// 	$orderstatus2 = ',' . date('Y-m-d h:i:s');
+		// 	$row = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus2, courier, trackingnumber FROM orders WHERE order_id = '" . $_POST['order_id'] . "';"));
+
+		// 	$orderstatus2 = $row['orderstatus2'] . $orderstatus2;
+
+		// 	// Check if courier and tracking number are already present
+		// 	if (empty($row['courier']) && empty($row['trackingnumber'])) {
+		// 		// If not present, proceed with adding courier and tracking number
+		// 		$trackingnumber = uniqid(10);
+		// 		$courier = $_POST['courier'];
+		// 		$trackingnumber = $_POST['trackingnumber'];
+
+		// 		$toshipapprove = mysqli_query($connection, "UPDATE orders SET orderstatus = 'TODELIVER', deliverystat = 'TODELIVER', orderstatus2 = '" . $orderstatus2 . "', courier = '" . $courier . "', trackingnumber = '" . $trackingnumber . "' WHERE order_id = '" . $_POST['order_id'] . "'");
+		// 	} else {
+		// 		// If already present, proceed to the next step (complete order)
+		// 		$todeliverapprove = mysqli_query($connection, "UPDATE orders SET orderstatus = 'COMPLETED', deliverystat = 'COMPLETED', paymentstat = 'PAID', orderstatus2 = '" . $orderstatus2 . "' WHERE order_id = '" . $_POST['order_id'] . "'");
+		// 		$todeliverapprove2 = mysqli_query($connection, "UPDATE payments SET status = 'PAID' WHERE order_id = '" . $_POST['order_id'] . "'");
+		// 	}
+		// 	break;
+
+	case 'toshipapprove':
 		$orderstatus2 = ',' . date('Y-m-d h:i:s');
-		$row = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus2 FROM orders WHERE order_id = '" . $_POST['order_id'] . "';"));
+		$row = mysqli_fetch_array(mysqli_query($connection, "SELECT orderstatus2, courier, trackingnumber FROM orders WHERE order_id = '" . $_POST['order_id'] . "';"));
 
 		$orderstatus2 = $row['orderstatus2'] . $orderstatus2;
 
-		$trackingnumber = uniqid(10);
+		// Check if courier and tracking number are already present
+		if (empty($row['courier']) && empty($row['trackingnumber'])) {
+			// If not present, proceed with adding courier and tracking number
+			$trackingnumber = uniqid(10);
+			$courier = $_POST['courier'];
+			$trackingnumber = $_POST['trackingnumber'];
 
-		$courier = $_POST['courier'];
-		$trackingnumber = $_POST['trackingnumber'];
+			$toshipapprove = mysqli_query($connection, "UPDATE orders SET orderstatus = 'TOSHIP', deliverystat = 'TOSHIP', orderstatus2 = '" . $orderstatus2 . "', courier = '" . $courier . "', trackingnumber = '" . $trackingnumber . "' WHERE order_id = '" . $_POST['order_id'] . "'");
 
-		$toshipapprove = mysqli_query($connection, "UPDATE orders SET orderstatus = 'TODELIVER', deliverystat = 'TODELIVER', orderstatus2 = '" . $orderstatus2 . "', courier = '" . $courier . "', trackingnumber = '" . $trackingnumber . "' WHERE order_id = '" . $_POST['order_id'] . "'");
+			// Approve the payment here
+			$paymentapprove = mysqli_query($connection, "UPDATE payments SET status = 'PAID' WHERE order_id = '" . $_POST['order_id'] . "'");
+		} else {
+			// If already present, proceed to the next step (complete order)
+			$todeliverapprove = mysqli_query($connection, "UPDATE orders SET orderstatus = 'COMPLETED', deliverystat = 'COMPLETED', paymentstat = 'PAID', orderstatus2 = '" . $orderstatus2 . "' WHERE order_id = '" . $_POST['order_id'] . "'");
+			$todeliverapprove2 = mysqli_query($connection, "UPDATE payments SET status = 'PAID' WHERE order_id = '" . $_POST['order_id'] . "'");
+		}
 		break;
+
+
 
 	case 'todeliverapprove':
 
