@@ -61,8 +61,8 @@ switch ($_POST['form']) {
 							<td style='white-space: nowrap; text-align: center;'>" . $counter . "</td>
 							<td style='white-space: nowrap;'>" . $row[0] . "</td>
 	                        <td style='white-space: nowrap;'>" . $row[1] . "</td>
-	                        <td style='white-space: nowrap;'>" . $row[3] . "</td>
-	                        <td style='white-space: nowrap;'>" . $row[4] . "<span style='font-size:11px'>X</span> " . "</td>
+				        	<td style='white-space: nowrap;'>" . $row[3] . "<span style='font-size:11px'>X</span> " . "</td>
+							<td style='white-space: nowrap;'>" . $row[4] . "<span style='font-size:11px'>X</span> " . "</td>
 	                        <td style='white-space: nowrap;'>" . number_format($row[5], "2", ".", ",") . "</td>
 	                        <td style='white-space: nowrap;'>" . number_format($row[6], "2", ".", ",") . "</td>
 	                        <td style='white-space: nowrap;'>" . $orderstatus . "</td>

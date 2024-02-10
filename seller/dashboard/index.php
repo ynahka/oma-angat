@@ -134,6 +134,7 @@
         </div>
     </div>
 </div>
+
 <!-- Add these script tags for html2canvas and jsPDF libraries -->
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
@@ -143,7 +144,14 @@
 include("dashboard/modal.php");
 include("dashboard/dashboardscript.php");
 ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+
 <script>
+    var tableSales = document.getElementById("tblmdlitemoutlist");
+
     $('#selectchart').change(function() {
         if ($(this).val() == 'weekly') {
             $('.weekly').css('display', 'block')
@@ -162,12 +170,66 @@ include("dashboard/dashboardscript.php");
 
     function exportToImage() {
         var chartElement = document.getElementById('chart1'); // Replace 'chart1' with the ID of your chart canvas
-        html2canvas(chartElement).then(function(canvas) {
+        html2canvas(chartElement, {
+            useCORS: true
+        }).then(function(canvas) {
             var imgData = canvas.toDataURL('image/png');
             var link = document.createElement('a');
             link.href = imgData;
-            link.download = 'chart_image.png';
+            link.download = 'reports.png'; // Ensure the file extension matches the MIME type
             link.click();
         });
     }
+
+
+
+    // var totalSales = 0;
+    // var completedOrders = 0;
+    // for (var i = 0; i < tableSales.rows.length; i++) {
+    //     var orderStatus = tableSales.rows[i].cells[tableSales.rows[i].cells.length - 3].innerText;
+    //     if (orderStatus === 'Completed') {
+    //         var salesAmount = parseFloat(tableSales.rows[i].cells[tableSales.rows[i].cells.length - 4].innerText.replace(/,/g, ''));
+    //         totalSales += salesAmount;
+    //         completedOrders++;
+    //     }
+    // }
+
+    // window.exportToPdf = function() {
+    //     var doc = new jsPDF();
+    //     var chartElementId = '';
+
+    //     // Get the selected option from the dropdown
+    //     var selectedOption = $('#selectchart').val();
+
+    //     // Determine the ID of the chart canvas based on the selected option
+    //     switch (selectedOption) {
+    //         case 'weekly':
+    //             chartElementId = 'chart3';
+    //             break;
+    //         case 'monthly':
+    //             chartElementId = 'chart1';
+    //             break;
+    //         case 'yearly':
+    //             chartElementId = 'chart2';
+    //             break;
+    //     }
+
+    //     // Get the chart canvas element
+    //     var chartElement = document.getElementById(chartElementId);
+
+    //     // Adjust the scale of the canvas to fit the width
+    //     var originalWidth = chartElement.offsetWidth;
+    //     var originalHeight = chartElement.offsetHeight;
+    //     var scale = 1;
+    //     while ((originalWidth * scale / 2) > 200) { // Set the maximum width of the image in the PDF to 500
+    //         scale -= 0.1;
+    //     }
+
+    //     // Convert the chart canvas to an image and add it to the PDF
+    //     html2canvas(chartElement).then(function(canvas) {
+    //         var imgData = canvas.toDataURL('image/png');
+    //         doc.addImage(imgData, 'PNG', 10, 20);
+    //         doc.save("chart_image.pdf");
+    //     });
+    // }
 </script>
