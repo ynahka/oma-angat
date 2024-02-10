@@ -55,7 +55,7 @@
 
 
                      <div class="header-widget-group">
-                         <a href="cart.php" class="header-widget" title="cart">
+                         <a href="cart2.php" class="header-widget" title="cart">
                              <i class="fas fa-shopping-basket"></i>
                          </a>
 
@@ -446,7 +446,7 @@ function btnsaveaddtocart() {
                         closeOnConfirm: false
                     }).then((result) => {
                         if (result.value) {
-                            window.location = "cart.php";
+                            window.location = "cart2.php";
                         }
                     });
                 }, 500);

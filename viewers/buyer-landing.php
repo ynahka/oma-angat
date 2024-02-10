@@ -933,7 +933,7 @@ function btnsaveaddtocart() {
                                     }).then((result) => {
                                         if (result.value) {
                                             window.location =
-                                                "cart.php";
+                                                "cart2.php";
                                         }
                                     });
                                 }, 500);

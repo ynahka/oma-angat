@@ -1491,7 +1491,7 @@ function btnsaveaddtocart() {
                         closeOnConfirm: false
                     }).then((result) => {
                         if (result.value) {
-                            window.location = "cart.php";
+                            window.location = "cart2.php";
                         }
                     });
                 }, 500);
